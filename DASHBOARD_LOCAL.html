@@ -147,6 +147,7 @@
     let dashboardData = null;
     let currentMonthIndex = 0;
     const AUTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQp3xmjVpjlQTcHdHxM69Jju6ZOJuE2jm58gWU7owObfGoL0PTzHAgWiDR2i8ri-anb0c7j_p4ffjJb/pub?gid=1955078176&single=true&output=csv";
+    let autoLoadIntentado = false;
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
     const ETIQUETAS_REGION = {"NIVEL CENTRAL":"NIVEL CENTRAL","ARICA Y PARINACOTA":"ARICA Y PARINACOTA","TARAPACA":"TARAPACA","ANTOFAGASTA":"ANTOFAGASTA","ATACAMA":"ATACAMA","COQUIMBO":"COQUIMBO","VALPARAISO":"VALPARAISO","METROPOLITANA":"METROPOLITANA","OHIGGINS":"O'HIGGINS","MAULE":"MAULE","NUBLE":"ÑUBLE","BIO BIO":"BIO BIO","LA ARAUCANIA":"LA ARAUCANIA","LOS RIOS":"LOS RIOS","LOS LAGOS":"LOS LAGOS","AYSEN":"AYSEN","MAGALLANES":"MAGALLANES"};
     function norm(str) { return String(str || "").replace(/^\uFEFF/, "").toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
@@ -421,6 +422,16 @@
             mostrarError("Error al cargar desde URL: " + error.message);
         }
     }
+    function intentarCargaAutomatica() {
+        if (autoLoadIntentado) return;
+        const urlInicial = obtenerCsvUrlInicial();
+        const input = document.getElementById("csvUrl");
+        if (input && urlInicial) input.value = transformarUrlCsv(urlInicial);
+        if (!urlInicial) return;
+        autoLoadIntentado = true;
+        mostrarInfo("Cargando datos automáticamente desde la fuente publicada...");
+        cargarDesdeUrl(urlInicial);
+    }
     async function handleFile(event) {
         const file = event.target.files[0];
         if (!file) return;
@@ -447,10 +458,11 @@
         if (chartTendencia) { chartTendencia.destroy(); chartTendencia = null; }
     }
     window.addEventListener("DOMContentLoaded", () => {
-        const urlInicial = obtenerCsvUrlInicial();
-        const input = document.getElementById("csvUrl");
-        if (input && urlInicial) input.value = transformarUrlCsv(urlInicial);
-        if (urlInicial) cargarDesdeUrl(urlInicial);
+        intentarCargaAutomatica();
+        setTimeout(intentarCargaAutomatica, 500);
+    });
+    window.addEventListener("load", () => {
+        setTimeout(intentarCargaAutomatica, 300);
     });
 </script>
 </body>
