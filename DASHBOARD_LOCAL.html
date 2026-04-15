@@ -146,7 +146,7 @@
     let chartTendencia = null;
     let dashboardData = null;
     let currentMonthIndex = 0;
-    const AUTO_CSV_URL = "";
+    const AUTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQp3xmjVpjlQTcHdHxM69Jju6ZOJuE2jm58gWU7owObfGoL0PTzHAgWiDR2i8ri-anb0c7j_p4ffjJb/pub?gid=1955078176&single=true&output=csv";
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
     const ETIQUETAS_REGION = {"NIVEL CENTRAL":"NIVEL CENTRAL","ARICA Y PARINACOTA":"ARICA Y PARINACOTA","TARAPACA":"TARAPACA","ANTOFAGASTA":"ANTOFAGASTA","ATACAMA":"ATACAMA","COQUIMBO":"COQUIMBO","VALPARAISO":"VALPARAISO","METROPOLITANA":"METROPOLITANA","OHIGGINS":"O'HIGGINS","MAULE":"MAULE","NUBLE":"ÑUBLE","BIO BIO":"BIO BIO","LA ARAUCANIA":"LA ARAUCANIA","LOS RIOS":"LOS RIOS","LOS LAGOS":"LOS LAGOS","AYSEN":"AYSEN","MAGALLANES":"MAGALLANES"};
     function norm(str) { return String(str || "").replace(/^\uFEFF/, "").toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
