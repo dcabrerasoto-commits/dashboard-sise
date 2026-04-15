@@ -118,30 +118,10 @@
             <div class="meta-value">Seguimiento mensual de estados de acreditación</div>
         </div>
     </header>
-    <div class="upload-section" id="uploadSection">
-        <div class="upload-zone" onclick="document.getElementById('csvFile').click()">
-            <p>Seleccionar archivo CSV (.csv)</p>
-            <small>El panel detecta columnas de estado por mes, consolida regiones y construye un resumen ejecutivo. También puede cargar automáticamente desde una URL pública CSV.</small>
-        </div>
-        <input type="file" id="csvFile" accept=".csv,.txt" onchange="handleFile(event)">
-        <div class="source-box">
-            <label for="csvUrl">URL pública del CSV</label>
-            <input type="text" id="csvUrl" placeholder="https://.../archivo.csv o enlace publicado de Google Sheets">
-            <div class="source-actions">
-                <button class="upload-btn" onclick="cargarDesdeUrl()">Cargar desde URL</button>
-                <button class="upload-btn secundario" onclick="document.getElementById('csvFile').click()">Abrir archivo local</button>
-            </div>
-        </div>
-        <div class="error-msg" id="errorMsg"></div>
-        <div class="info-msg" id="infoMsg"></div>
-    </div>
-    <div id="dashboardSection" class="hidden">
-        <button class="btn-volver" onclick="volver()">&#8592; Cargar otro archivo</button>
+    <div class="info-msg" id="infoMsg" style="display:block; margin-bottom:16px;">Cargando datos automáticamente desde la fuente publicada...</div><div class="error-msg" id="errorMsg"></div><div id="dashboardSection">
         <div id="content"></div>
     </div>
-    <div class="error-msg" id="errorMsg"></div>
-    <div class="info-msg" id="infoMsg"></div>
-</div>
+    </div>
 <script>
     let chartEstado = null;
     let chartRegion = null;
@@ -149,7 +129,7 @@
     let dashboardData = null;
     let currentMonthIndex = 0;
     const AUTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQp3xmjVpjlQTcHdHxM69Jju6ZOJuE2jm58gWU7owObfGoL0PTzHAgWiDR2i8ri-anb0c7j_p4ffjJb/pub?gid=1955078176&single=true&output=csv";
-    let autoLoadIntentado = false;
+    
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
     const ETIQUETAS_REGION = {"NIVEL CENTRAL":"NIVEL CENTRAL","ARICA Y PARINACOTA":"ARICA Y PARINACOTA","TARAPACA":"TARAPACA","ANTOFAGASTA":"ANTOFAGASTA","ATACAMA":"ATACAMA","COQUIMBO":"COQUIMBO","VALPARAISO":"VALPARAISO","METROPOLITANA":"METROPOLITANA","OHIGGINS":"O'HIGGINS","MAULE":"MAULE","NUBLE":"ÑUBLE","BIO BIO":"BIO BIO","LA ARAUCANIA":"LA ARAUCANIA","LOS RIOS":"LOS RIOS","LOS LAGOS":"LOS LAGOS","AYSEN":"AYSEN","MAGALLANES":"MAGALLANES"};
     function norm(str) { return String(str || "").replace(/^\uFEFF/, "").toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
@@ -216,23 +196,6 @@
     function fmt(n) { return Number(n || 0).toLocaleString("es-CL"); }
     function pct(n, total) { return total > 0 ? ((n / total) * 100).toFixed(1) + "%" : "-"; }
     function obtenerDelta(actual, previo) { const diff = actual - previo; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} vs mes anterior` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} vs mes anterior` }; return { className: "delta-flat", label: "Sin variación vs mes anterior" }; }
-    function obtenerCsvUrlInicial() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get("csv") || AUTO_CSV_URL || "";
-    }
-    function transformarGoogleSheetsACsv(url) {
-        if (!url) return url;
-        const match = url.match(/docs\\.google\\.com\\/spreadsheets\\/d\\/([a-zA-Z0-9-_]+)/);
-        if (!match) return url;
-        const gidMatch = url.match(/[?&]gid=(\\d+)/);
-        const gid = gidMatch ? gidMatch[1] : "0";
-        return `https://docs.google.com/spreadsheets/d/${match[1]}/export?format=csv&gid=${gid}`;
-    }
-    function transformarUrlCsv(url) {
-        const limpia = String(url || "").trim();
-        if (!limpia) return "";
-        return transformarGoogleSheetsACsv(limpia);
-    }
     function procesarDatos(datos, cols) {
         const { colRegion, columnasEstado } = cols;
         const meses = columnasEstado.map((columna) => ({ key: columna, label: extraerMesDesdeColumna(columna) }));
@@ -360,8 +323,6 @@
         }
         dashboardData = procesarDatos(datos, { colRegion, columnasEstado });
         currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
-        document.getElementById("uploadSection").classList.add("hidden");
-        document.getElementById("dashboardSection").classList.remove("hidden");
         renderDashboard();
         if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
     }
@@ -404,68 +365,26 @@
         });
     }
     function seleccionarMes(index) { currentMonthIndex = index; renderDashboard(); }
-    async function cargarDesdeUrl(urlManual) {
+    async function cargarDatosPublicados() {
         mostrarError("");
-        const input = document.getElementById("csvUrl");
-        const urlFuente = transformarUrlCsv(urlManual || (input ? input.value : ""));
-        if (!urlFuente) {
-            mostrarError("Ingresa una URL pública de CSV.");
-            return;
-        }
+        mostrarInfo("Cargando datos automáticamente desde la fuente publicada...");
         try {
-            if (input) input.value = urlFuente;
-            const response = await fetch(urlFuente, { cache: "no-store" });
+            const response = await fetch(AUTO_CSV_URL, { cache: "no-store" });
             if (!response.ok) {
-                throw new Error(`No fue posible descargar el CSV (${response.status}). Revisa permisos y que la URL sea pública.`);
+                throw new Error(`No fue posible descargar el CSV (${response.status}).`);
             }
             const text = await response.text();
-            procesarTextoCsv(text, urlFuente);
+            procesarTextoCsv(text, AUTO_CSV_URL);
+            mostrarInfo("");
         } catch (error) {
-            mostrarError("Error al cargar desde URL: " + error.message);
+            mostrarError("Error al cargar la fuente publicada: " + error.message);
         }
     }
-    function intentarCargaAutomatica() {
-        if (autoLoadIntentado) return;
-        const urlInicial = obtenerCsvUrlInicial();
-        const input = document.getElementById("csvUrl");
-        if (input && urlInicial) input.value = transformarUrlCsv(urlInicial);
-        if (!urlInicial) return;
-        autoLoadIntentado = true;
-        mostrarInfo("Cargando datos automáticamente desde la fuente publicada...");
-        cargarDesdeUrl(urlInicial);
-    }
-    async function handleFile(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-        mostrarError("");
-        mostrarInfo("");
-        try {
-            const text = await file.text();
-            procesarTextoCsv(text, file.name);
-        } catch (error) {
-            mostrarError("Error al procesar el archivo: " + error.message);
-        }
-    }
-    function volver() {
-        document.getElementById("dashboardSection").classList.add("hidden");
-        document.getElementById("uploadSection").classList.remove("hidden");
-        document.getElementById("csvFile").value = "";
-        document.getElementById("content").innerHTML = "";
-        dashboardData = null;
-        currentMonthIndex = 0;
-        mostrarError("");
-        mostrarInfo("");
-        if (chartEstado) { chartEstado.destroy(); chartEstado = null; }
-        if (chartRegion) { chartRegion.destroy(); chartRegion = null; }
-        if (chartTendencia) { chartTendencia.destroy(); chartTendencia = null; }
-    }
+
     window.addEventListener("DOMContentLoaded", () => {
-        intentarCargaAutomatica();
-        setTimeout(intentarCargaAutomatica, 500);
-    });
-    window.addEventListener("load", () => {
-        setTimeout(intentarCargaAutomatica, 300);
+        cargarDatosPublicados();
     });
 </script>
 </body>
 </html>
+
