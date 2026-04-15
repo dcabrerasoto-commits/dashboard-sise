@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard SISE 2026</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --azul-sise: #1a4080;
+            --azul-secundario: #2c5aa0;
+            --verde: #1a7a4a;
+            --ambar: #b45309;
+            --rojo: #b91c1c;
+            --gris-texto: #334155;
+            --borde: #d6dbe4;
+            --sombra: 0 10px 24px rgba(26, 64, 128, 0.08);
+        }
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top right, rgba(44, 90, 160, 0.10), transparent 22%), linear-gradient(180deg, #f4f7fb 0%, #edf2f8 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--gris-texto);
+        }
+        .container { max-width: 1480px; margin: 0 auto; }
+        header, .panel, .upload-section, .chart-card, .table-section, .insight-card, .map-card, .footer-card, .kpi-card { background: white; border: 1px solid var(--borde); border-radius: 10px; box-shadow: var(--sombra); }
+        header {
+            background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%);
+            color: white; padding: 24px 30px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+        }
+        .header-left { display: flex; align-items: center; gap: 20px; }
+        .logo-strip { width: 6px; height: 58px; background: #f59e0b; border-radius: 3px; flex-shrink: 0; }
+        h1 { font-size: 24px; font-weight: 700; letter-spacing: 0.2px; }
+        .subtitle { font-size: 13px; opacity: 0.88; margin-top: 4px; }
+        .header-meta { min-width: 240px; padding: 14px 16px; border-radius: 10px; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.14); }
+        .meta-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; opacity: 0.8; margin-bottom: 4px; }
+        .meta-value { font-size: 14px; font-weight: 600; line-height: 1.5; }
+        .upload-section { padding: 40px 30px; margin-bottom: 24px; text-align: center; }
+        .upload-zone { padding: 30px; border: 2px dashed var(--azul-secundario); border-radius: 10px; cursor: pointer; transition: background 0.2s ease; margin-bottom: 16px; background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%); }
+        .upload-zone:hover { background: #f0f5fc; }
+        .upload-zone p { margin-bottom: 8px; font-size: 16px; font-weight: 600; }
+        .upload-zone small { color: #64748b; }
+        .source-box { margin-top: 16px; padding: 12px 14px; border: 1px solid #d7e0ee; border-radius: 8px; background: #f8fbff; text-align: left; }
+        .source-box label { display: block; font-size: 12px; font-weight: 700; color: var(--azul-sise); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.4px; }
+        .source-box input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; }
+        .source-actions { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+        input[type="file"] { display: none; }
+        .upload-btn, .btn-volver, .month-btn { border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
+        .upload-btn { background: var(--azul-sise); color: white; padding: 11px 28px; font-size: 15px; }
+        .upload-btn.secundario { background: #eef3fb; color: var(--azul-sise); border: 1px solid #d7e0ee; }
+        .btn-volver { background: white; border: 1px solid var(--azul-sise); color: var(--azul-sise); padding: 8px 18px; font-size: 13px; margin-bottom: 20px; }
+        .btn-volver:hover, .upload-btn:hover { filter: brightness(1.05); }
+        .error-msg, .info-msg { display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; text-align: left; white-space: pre-line; font-size: 14px; }
+        .error-msg { background: #fef2f2; border: 1px solid #fca5a5; color: var(--rojo); }
+        .info-msg { background: #eff6ff; border: 1px solid #93c5fd; color: var(--azul-sise); }
+        .hidden { display: none; }
+        .executive-band, .charts-section, .mid-section, .footer-grid, .kpi-section { display: grid; gap: 16px; }
+        .executive-band { grid-template-columns: 2fr 1fr; margin-bottom: 20px; }
+        .charts-section { grid-template-columns: 1.25fr 0.75fr; margin-bottom: 22px; }
+        .mid-section { grid-template-columns: 1.45fr 0.55fr; margin-bottom: 22px; align-items: start; }
+        .footer-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .kpi-section { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 22px; }
+        .executive-main, .executive-side, .chart-card, .table-section, .insight-card, .map-card, .footer-card, .kpi-card { padding: 18px 20px; }
+        .executive-title, .toolbar-title, .section-title, .kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; color: var(--azul-secundario); }
+        .executive-title, .toolbar-title, .section-title { margin-bottom: 8px; }
+        .executive-text { font-size: 20px; line-height: 1.45; color: #17396f; font-weight: 600; }
+        .executive-side .executive-text { font-size: 15px; font-weight: 500; color: var(--gris-texto); }
+        .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; margin-bottom: 20px; }
+        .month-group { display: flex; flex-wrap: wrap; gap: 8px; }
+        .month-btn { padding: 10px 14px; background: #f3f6fb; color: var(--azul-sise); border: 1px solid #d7e0ee; font-size: 13px; }
+        .month-btn.active { background: var(--azul-sise); color: white; border-color: var(--azul-sise); }
+        .toolbar-meta, .section-note, .footer-item, .kpi-percent { font-size: 13px; color: #64748b; line-height: 1.5; }
+        .kpi-card { border-top: 4px solid var(--azul-sise); }
+        .kpi-card.verde { border-top-color: var(--verde); }
+        .kpi-card.ambar { border-top-color: var(--ambar); }
+        .kpi-card.rojo { border-top-color: var(--rojo); }
+        .kpi-value { font-size: 34px; font-weight: 700; color: var(--azul-sise); margin: 6px 0 4px; }
+        .kpi-card.verde .kpi-value { color: var(--verde); }
+        .kpi-card.ambar .kpi-value { color: var(--ambar); }
+        .kpi-card.rojo .kpi-value { color: var(--rojo); }
+        .kpi-delta, .badge { display: inline-block; padding: 4px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+        .delta-up, .badge-verde { background: #dcfce7; color: #166534; }
+        .delta-down, .badge-rojo { background: #fee2e2; color: #991b1b; }
+        .delta-flat, .badge-ambar { background: #fef3c7; color: #92400e; }
+        .chart-canvas-wrap { position: relative; height: 280px; }
+        .chart-canvas-wrap.compact { height: 200px; max-width: 320px; margin: 0 auto; }
+        .insight-list { display: grid; gap: 10px; }
+        .insight-item { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 8px; padding: 12px 14px; line-height: 1.5; font-size: 14px; }
+        .table-section { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
+        td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
+        tr:hover td { background: #f7faff; }
+        .percent-cell { min-width: 180px; }
+        .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
+        .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
+        .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 2px; }
+        @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
+        @media (max-width: 760px) { header { flex-direction: column; align-items: flex-start; } .header-meta { width: 100%; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="header-left">
+            <div class="logo-strip"></div>
+            <div>
+                <h1>Dashboard Acreditaciones SISE 2026</h1>
+                <p class="subtitle">Sistema de Información Social en Emergencias - Ministerio de Desarrollo Social y Familia</p>
+            </div>
+        </div>
+        <div class="header-meta">
+            <div class="meta-label">Unidad de análisis</div>
+            <div class="meta-value">Personas registradas en el sistema</div>
+            <div class="meta-label" style="margin-top:10px;">Enfoque</div>
+            <div class="meta-value">Seguimiento mensual de estados de acreditación</div>
+        </div>
+    </header>
+    <div class="upload-section" id="uploadSection">
+        <div class="upload-zone" onclick="document.getElementById('csvFile').click()">
+            <p>Seleccionar archivo CSV (.csv)</p>
+            <small>El panel detecta columnas de estado por mes, consolida regiones y construye un resumen ejecutivo. También puede cargar automáticamente desde una URL pública CSV.</small>
+        </div>
+        <input type="file" id="csvFile" accept=".csv,.txt" onchange="handleFile(event)">
+        <div class="source-box">
+            <label for="csvUrl">URL pública del CSV</label>
+            <input type="text" id="csvUrl" placeholder="https://.../archivo.csv o enlace publicado de Google Sheets">
+            <div class="source-actions">
+                <button class="upload-btn" onclick="cargarDesdeUrl()">Cargar desde URL</button>
+                <button class="upload-btn secundario" onclick="document.getElementById('csvFile').click()">Abrir archivo local</button>
+            </div>
+        </div>
+        <div class="error-msg" id="errorMsg"></div>
+        <div class="info-msg" id="infoMsg"></div>
+    </div>
+    <div id="dashboardSection" class="hidden">
+        <button class="btn-volver" onclick="volver()">&#8592; Cargar otro archivo</button>
+        <div id="content"></div>
+    </div>
+</div>
+<script>
+    let chartEstado = null;
+    let chartRegion = null;
+    let chartTendencia = null;
+    let dashboardData = null;
+    let currentMonthIndex = 0;
+    const AUTO_CSV_URL = "";
+    const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
+    const ETIQUETAS_REGION = {"NIVEL CENTRAL":"NIVEL CENTRAL","ARICA Y PARINACOTA":"ARICA Y PARINACOTA","TARAPACA":"TARAPACA","ANTOFAGASTA":"ANTOFAGASTA","ATACAMA":"ATACAMA","COQUIMBO":"COQUIMBO","VALPARAISO":"VALPARAISO","METROPOLITANA":"METROPOLITANA","OHIGGINS":"O'HIGGINS","MAULE":"MAULE","NUBLE":"ÑUBLE","BIO BIO":"BIO BIO","LA ARAUCANIA":"LA ARAUCANIA","LOS RIOS":"LOS RIOS","LOS LAGOS":"LOS LAGOS","AYSEN":"AYSEN","MAGALLANES":"MAGALLANES"};
+    function norm(str) { return String(str || "").replace(/^\uFEFF/, "").toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
+    function limpiarHeader(str) { return String(str || "").replace(/^\uFEFF/, "").trim(); }
+    function detectarSeparador(primeraLinea) { const semicolons = (primeraLinea.match(/;/g) || []).length; const commas = (primeraLinea.match(/,/g) || []).length; return semicolons > commas ? ";" : ","; }
+    function parsearCSV(csv) {
+        const lineas = csv.replace(/\r\n/g, "\n").replace(/\r/g, "\n").trim().split("\n");
+        if (lineas.length < 2) return { datos: [], headers: [] };
+        const sep = detectarSeparador(lineas[0]);
+        function splitLinea(linea) {
+            const cols = []; let inQuote = false; let current = "";
+            for (let i = 0; i < linea.length; i++) {
+                const c = linea[i];
+                if (c === '"') {
+                    if (inQuote && linea[i + 1] === '"') { current += '"'; i++; } else { inQuote = !inQuote; }
+                } else if (c === sep && !inQuote) { cols.push(current.trim()); current = ""; } else { current += c; }
+            }
+            cols.push(current.trim());
+            return cols.map((valor) => valor.replace(/^"|"$/g, "").trim());
+        }
+        const headers = splitLinea(lineas[0]).map(limpiarHeader);
+        const datos = [];
+        for (let i = 1; i < lineas.length; i++) {
+            if (!lineas[i].trim()) continue;
+            const valores = splitLinea(lineas[i]);
+            const fila = {};
+            headers.forEach((h, j) => { fila[h] = (valores[j] || "").trim(); });
+            datos.push(fila);
+        }
+        return { datos, headers };
+    }
+    function buscarColumna(headers, candidatos) { const headersNorm = headers.map(norm); for (const cand of candidatos) { const idx = headersNorm.indexOf(norm(cand)); if (idx !== -1) return headers[idx]; } return null; }
+    function buscarColumnaAproximada(headers, matcher) { for (const header of headers) { if (matcher(norm(header), header)) return header; } return null; }
+    function buscarColumnasEstado(headers) { return headers.filter((header) => norm(header).startsWith("ESTADO")); }
+    function extraerMesDesdeColumna(nombre) { return norm(nombre).replace(/^ESTADO_?/, "").trim(); }
+    function normalizarEstado(valor) { const estado = norm(valor); if (!estado) return "SIN ESTADO"; if (estado.includes("NO VIGENTE")) return "NO VIGENTE"; if (estado.includes("NO ACREDITADO")) return "NO ACREDITADO"; if (estado === "ACREDITADO") return "ACREDITADO"; return estado; }
+    function normalizarRegion(valor) {
+        const texto = String(valor || "").trim();
+        if (!texto) return "NIVEL CENTRAL";
+        const normalizado = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s]/g, " ").replace(/\s+/g, " ").trim().toUpperCase();
+        if (!normalizado || normalizado === "0" || normalizado === "SIN REGION") return "NIVEL CENTRAL";
+        if (normalizado.includes("NIVEL CENTRAL")) return "NIVEL CENTRAL";
+        if (normalizado.includes("ARICA")) return "ARICA Y PARINACOTA";
+        if (normalizado.includes("TARAPACA")) return "TARAPACA";
+        if (normalizado.includes("ANTOFAGASTA")) return "ANTOFAGASTA";
+        if (normalizado.includes("ATACAMA")) return "ATACAMA";
+        if (normalizado.includes("COQUIMBO")) return "COQUIMBO";
+        if (normalizado.includes("VALPARAISO")) return "VALPARAISO";
+        if (normalizado.includes("METROPOLITANA")) return "METROPOLITANA";
+        if (normalizado.includes("OHIGGINS")) return "OHIGGINS";
+        if (normalizado.includes("MAULE")) return "MAULE";
+        if (normalizado === "UBLE" || normalizado.endsWith(" UBLE") || normalizado.includes("NUBLE") || normalizado.includes("ÑUBLE") || normalizado.includes("ÃUBLE")) return "NUBLE";
+        if (normalizado.includes("BIO") && normalizado.includes("BIO")) return "BIO BIO";
+        if (normalizado.includes("ARAUCANIA")) return "LA ARAUCANIA";
+        if (normalizado.includes("LOS RIOS")) return "LOS RIOS";
+        if (normalizado.includes("LOS LAGOS")) return "LOS LAGOS";
+        if (normalizado.includes("AYSEN")) return "AYSEN";
+        if (normalizado.includes("MAGALLANES")) return "MAGALLANES";
+        return normalizado;
+    }
+    function obtenerOrdenRegion(region) { const idx = ORDEN_REGIONES.indexOf(region); return idx === -1 ? ORDEN_REGIONES.length + 1 : idx; }
+    function mostrarError(msg) { const el = document.getElementById("errorMsg"); el.style.display = msg ? "block" : "none"; el.textContent = msg || ""; }
+    function mostrarInfo(msg) { const el = document.getElementById("infoMsg"); el.style.display = msg ? "block" : "none"; el.textContent = msg || ""; }
+    function fmt(n) { return Number(n || 0).toLocaleString("es-CL"); }
+    function pct(n, total) { return total > 0 ? ((n / total) * 100).toFixed(1) + "%" : "-"; }
+    function obtenerDelta(actual, previo) { const diff = actual - previo; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} vs mes anterior` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} vs mes anterior` }; return { className: "delta-flat", label: "Sin variación vs mes anterior" }; }
+    function obtenerCsvUrlInicial() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("csv") || AUTO_CSV_URL || "";
+    }
+    function transformarGoogleSheetsACsv(url) {
+        if (!url) return url;
+        const match = url.match(/docs\\.google\\.com\\/spreadsheets\\/d\\/([a-zA-Z0-9-_]+)/);
+        if (!match) return url;
+        const gidMatch = url.match(/[?&]gid=(\\d+)/);
+        const gid = gidMatch ? gidMatch[1] : "0";
+        return `https://docs.google.com/spreadsheets/d/${match[1]}/export?format=csv&gid=${gid}`;
+    }
+    function transformarUrlCsv(url) {
+        const limpia = String(url || "").trim();
+        if (!limpia) return "";
+        return transformarGoogleSheetsACsv(limpia);
+    }
+    function procesarDatos(datos, cols) {
+        const { colRegion, columnasEstado } = cols;
+        const meses = columnasEstado.map((columna) => ({ key: columna, label: extraerMesDesdeColumna(columna) }));
+        const monthly = meses.map((mes) => {
+            const resumen = { key: mes.key, label: mes.label, acreditado: 0, noVigente: 0, noAcreditado: 0, sinEstado: 0, total: datos.length, porRegion: {} };
+            datos.forEach((fila) => {
+                const estado = normalizarEstado(fila[mes.key]);
+                const region = normalizarRegion(colRegion ? fila[colRegion] : "");
+                if (!resumen.porRegion[region]) {
+                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0 };
+                }
+                resumen.porRegion[region].Total++;
+                if (estado === "ACREDITADO") { resumen.acreditado++; resumen.porRegion[region].Acreditado++; }
+                else if (estado === "NO VIGENTE") { resumen.noVigente++; resumen.porRegion[region].NoVigente++; }
+                else if (estado === "NO ACREDITADO") { resumen.noAcreditado++; resumen.porRegion[region].NoAcreditado++; }
+                else { resumen.sinEstado++; resumen.porRegion[region].SinEstado++; }
+            });
+            resumen.porRegion = Object.values(resumen.porRegion).map((fila) => ({ ...fila, TasaAcreditado: fila.Total > 0 ? (fila.Acreditado / fila.Total) * 100 : 0 })).sort((a, b) => a.OrdenRegion - b.OrdenRegion);
+            return resumen;
+        });
+        return { totalPersonas: datos.length, meses, monthly, fechaCarga: new Date().toLocaleDateString("es-CL") };
+    }
+    function obtenerHallazgos(monthData, prevMonthData) {
+        const regiones = monthData.porRegion.filter((r) => r.Total > 0);
+        const topNumero = [...regiones].sort((a, b) => b.Total - a.Total)[0];
+        const topAcreditacion = [...regiones].filter((r) => r.Total >= 200).sort((a, b) => b.TasaAcreditado - a.TasaAcreditado)[0];
+        const topNoVigente = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
+        const diffAcreditado = prevMonthData ? monthData.acreditado - prevMonthData.acreditado : 0;
+        return [
+            `${monthData.label}: número de personas no vigentes ${fmt(monthData.noVigente)}, número de personas no acreditadas ${fmt(monthData.noAcreditado)} y número de personas acreditadas ${fmt(monthData.acreditado)}.`,
+            topNumero ? `${topNumero.RegionEtiqueta} concentra el mayor número de registros del mes, con ${fmt(topNumero.Total)} registros.` : "No hay información regional disponible.",
+            topAcreditacion ? `${topAcreditacion.RegionEtiqueta} presenta el mayor porcentaje de acreditación entre regiones con al menos 200 registros, alcanzando ${topAcreditacion.TasaAcreditado.toFixed(1)}%.` : "No hay suficiente base para comparar porcentajes regionales.",
+            topNoVigente ? `${topNoVigente.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(topNoVigente.NoVigente)} registros.` : "No se identificaron concentraciones relevantes de no vigencia.",
+            prevMonthData ? `La variación mensual del número de personas acreditadas es ${diffAcreditado > 0 ? "+" : ""}${fmt(diffAcreditado)} respecto de ${prevMonthData.label}.` : "No existe un mes previo informado para calcular variación mensual."
+        ];
+    }
+    function obtenerAlertas(monthData, prevMonthData) {
+        const alertas = [];
+        const regiones = monthData.porRegion.filter((r) => r.Total > 0);
+        const altaNoVigencia = [...regiones].filter((r) => r.NoVigente / r.Total >= 0.45).sort((a, b) => (b.NoVigente / b.Total) - (a.NoVigente / a.Total))[0];
+        const bajaAcreditacion = [...regiones].filter((r) => r.Total >= 200 && r.TasaAcreditado < 12).sort((a, b) => a.TasaAcreditado - b.TasaAcreditado)[0];
+        const altaNoAcreditacion = [...regiones].filter((r) => r.NoAcreditado / r.Total >= 0.35).sort((a, b) => (b.NoAcreditado / b.Total) - (a.NoAcreditado / a.Total))[0];
+        if (altaNoVigencia) {
+            alertas.push(`Seguimiento sugerido: ${altaNoVigencia.RegionEtiqueta} presenta un porcentaje de no vigencia de ${((altaNoVigencia.NoVigente / altaNoVigencia.Total) * 100).toFixed(1)}%.`);
+        }
+        if (bajaAcreditacion) {
+            alertas.push(`Atención: ${bajaAcreditacion.RegionEtiqueta} registra un porcentaje de acreditación de ${bajaAcreditacion.TasaAcreditado.toFixed(1)}%, bajo el umbral de referencia de 12,0%.`);
+        }
+        if (altaNoAcreditacion) {
+            alertas.push(`Revisión prioritaria: ${altaNoAcreditacion.RegionEtiqueta} concentra ${((altaNoAcreditacion.NoAcreditado / altaNoAcreditacion.Total) * 100).toFixed(1)}% de personas no acreditadas dentro de su total regional.`);
+        }
+        if (prevMonthData) {
+            const deltaNoVigente = monthData.noVigente - prevMonthData.noVigente;
+            if (deltaNoVigente > 500) {
+                alertas.push(`Variación mensual relevante: el número de personas no vigentes aumenta en ${fmt(deltaNoVigente)} respecto de ${prevMonthData.label}.`);
+            }
+            const deltaAcreditado = monthData.acreditado - prevMonthData.acreditado;
+            if (deltaAcreditado < -500) {
+                alertas.push(`Variación mensual relevante: el número de personas acreditadas disminuye en ${fmt(deltaAcreditado)} respecto de ${prevMonthData.label}.`);
+            }
+        }
+        if (alertas.length === 0) {
+            alertas.push("No se detectan alertas prioritarias para el mes seleccionado según los umbrales definidos.");
+        }
+        return alertas;
+    }
+    function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
+    function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mes.label}</button>`).join(""); }
+    function renderDashboard() {
+        const monthData = dashboardData.monthly[currentMonthIndex];
+        const prevMonthData = currentMonthIndex > 0 ? dashboardData.monthly[currentMonthIndex - 1] : null;
+        const hallazgos = obtenerHallazgos(monthData, prevMonthData);
+        const alertas = obtenerAlertas(monthData, prevMonthData);
+        const deltaAcreditado = obtenerDelta(monthData.acreditado, prevMonthData ? prevMonthData.acreditado : monthData.acreditado);
+        const deltaNoVigente = obtenerDelta(monthData.noVigente, prevMonthData ? prevMonthData.noVigente : monthData.noVigente);
+        const deltaNoAcreditado = obtenerDelta(monthData.noAcreditado, prevMonthData ? prevMonthData.noAcreditado : monthData.noAcreditado);
+        const deltaTotal = obtenerDelta(monthData.total, prevMonthData ? prevMonthData.total : monthData.total);
+        const filasRegion = monthData.porRegion.map((r) => `
+            <tr>
+                <td>${r.RegionEtiqueta}</td>
+                <td>${fmt(r.Acreditado)}</td>
+                <td>${fmt(r.NoVigente)}</td>
+                <td>${fmt(r.NoAcreditado)}</td>
+                <td>${fmt(r.SinEstado)}</td>
+                <td>${fmt(r.Total)}</td>
+                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
+            </tr>
+        `).join("");
+        document.getElementById("content").innerHTML = `
+            <div class="executive-band">
+                <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${hallazgos[0]}</div></div>
+                <div class="panel executive-side"><div class="executive-title">Contexto del corte</div><div class="executive-text">Mes visualizado: <strong>${monthData.label}</strong><br>N° de registros: <strong>${fmt(monthData.total)}</strong><br>Comparación: <strong>${prevMonthData ? prevMonthData.label : "Sin mes previo"}</strong></div></div>
+            </div>
+            <div class="panel toolbar">
+                <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
+                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div><div><strong>Fecha de carga:</strong> ${dashboardData.fechaCarga}</div></div>
+            </div>
+            <div class="kpi-section">
+                <div class="kpi-card"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(monthData.total)}</div><div class="kpi-percent">${pct(monthData.total, dashboardData.totalPersonas)} de la base cargada</div></div>
+                <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${pct(monthData.acreditado, monthData.total)} del mes</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
+                <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${pct(monthData.noVigente, monthData.total)} del mes</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
+                <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${pct(monthData.noAcreditado, monthData.total)} del mes</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
+            </div>
+            <div class="charts-section">
+                <div class="chart-card"><div class="section-title">Tendencia mensual por estado</div><div class="section-note">Permite comparar la evolución del número de personas acreditadas, no vigentes y no acreditadas entre meses informados.</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
+                <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
+            </div>
+            <div class="mid-section">
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">Orden geográfico fijo desde nivel central hacia el extremo sur. La última columna incorpora una barra visual para lectura rápida del porcentaje acreditado.</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}</tbody></table></div>
+                <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
+            </div>
+            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Unidad de análisis</strong>Número de personas registradas en la base cargada por el usuario.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, 0 o sin clasificación se consolidan en Nivel Central.</div></div></div>
+        `;
+        crearGraficos(monthData);
+    }
+    function procesarTextoCsv(text, origenLabel) {
+        const { datos, headers } = parsearCSV(text);
+        if (datos.length === 0) {
+            throw new Error("El archivo está vacío o no tiene filas de datos.");
+        }
+        const colRegion = buscarColumna(headers, ["REGION", "REGIÓN", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
+        const columnasEstado = buscarColumnasEstado(headers).filter((h) => datos.some((fila) => String(fila[h] || "").trim() !== ""));
+        if (columnasEstado.length === 0) {
+            throw new Error("No se encontraron columnas de estado válidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
+        }
+        dashboardData = procesarDatos(datos, { colRegion, columnasEstado });
+        currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
+        document.getElementById("uploadSection").classList.add("hidden");
+        document.getElementById("dashboardSection").classList.remove("hidden");
+        renderDashboard();
+        if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
+    }
+    function crearGraficos(monthData) {
+        const ctxEstado = document.getElementById("estadoChart");
+        const ctxTrend = document.getElementById("trendChart");
+        if (!ctxEstado || !ctxTrend) return;
+        if (chartEstado) chartEstado.destroy();
+        if (chartTendencia) chartTendencia.destroy();
+        if (chartRegion) chartRegion.destroy();
+        chartEstado = new Chart(ctxEstado, {
+            type: "doughnut",
+            data: {
+                labels: ["ACREDITADO", "NO VIGENTE", "NO ACREDITADO", "SIN ESTADO"],
+                datasets: [{ data: [monthData.acreditado, monthData.noVigente, monthData.noAcreditado, monthData.sinEstado], backgroundColor: ["#1a7a4a", "#b45309", "#b91c1c", "#64748b"], borderColor: "#ffffff", borderWidth: 2 }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: "bottom", labels: { font: { size: 11 }, boxWidth: 12 } } },
+                cutout: "64%"
+            }
+        });
+        chartTendencia = new Chart(ctxTrend, {
+            type: "line",
+            data: {
+                labels: dashboardData.monthly.map((m) => m.label),
+                datasets: [
+                    { label: "ACREDITADO", data: dashboardData.monthly.map((m) => m.acreditado), borderColor: "#1a7a4a", backgroundColor: "rgba(26,122,74,0.12)", pointBackgroundColor: "#1a7a4a", pointRadius: 4, tension: 0.25, fill: false },
+                    { label: "NO VIGENTE", data: dashboardData.monthly.map((m) => m.noVigente), borderColor: "#b45309", backgroundColor: "rgba(180,83,9,0.12)", pointBackgroundColor: "#b45309", pointRadius: 4, tension: 0.25, fill: false },
+                    { label: "NO ACREDITADO", data: dashboardData.monthly.map((m) => m.noAcreditado), borderColor: "#b91c1c", backgroundColor: "rgba(185,28,28,0.12)", pointBackgroundColor: "#b91c1c", pointRadius: 4, tension: 0.25, fill: false }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: "bottom", labels: { font: { size: 12 } } } },
+                scales: { x: { ticks: { font: { size: 11 } }, grid: { display: false } }, y: { beginAtZero: true, ticks: { font: { size: 11 } } } }
+            }
+        });
+    }
+    function seleccionarMes(index) { currentMonthIndex = index; renderDashboard(); }
+    async function cargarDesdeUrl(urlManual) {
+        mostrarError("");
+        const input = document.getElementById("csvUrl");
+        const urlFuente = transformarUrlCsv(urlManual || (input ? input.value : ""));
+        if (!urlFuente) {
+            mostrarError("Ingresa una URL pública de CSV.");
+            return;
+        }
+        try {
+            if (input) input.value = urlFuente;
+            const response = await fetch(urlFuente, { cache: "no-store" });
+            if (!response.ok) {
+                throw new Error(`No fue posible descargar el CSV (${response.status}). Revisa permisos y que la URL sea pública.`);
+            }
+            const text = await response.text();
+            procesarTextoCsv(text, urlFuente);
+        } catch (error) {
+            mostrarError("Error al cargar desde URL: " + error.message);
+        }
+    }
+    async function handleFile(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        mostrarError("");
+        mostrarInfo("");
+        try {
+            const text = await file.text();
+            procesarTextoCsv(text, file.name);
+        } catch (error) {
+            mostrarError("Error al procesar el archivo: " + error.message);
+        }
+    }
+    function volver() {
+        document.getElementById("dashboardSection").classList.add("hidden");
+        document.getElementById("uploadSection").classList.remove("hidden");
+        document.getElementById("csvFile").value = "";
+        document.getElementById("content").innerHTML = "";
+        dashboardData = null;
+        currentMonthIndex = 0;
+        mostrarError("");
+        mostrarInfo("");
+        if (chartEstado) { chartEstado.destroy(); chartEstado = null; }
+        if (chartRegion) { chartRegion.destroy(); chartRegion = null; }
+        if (chartTendencia) { chartTendencia.destroy(); chartTendencia = null; }
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+        const urlInicial = obtenerCsvUrlInicial();
+        const input = document.getElementById("csvUrl");
+        if (input && urlInicial) input.value = transformarUrlCsv(urlInicial);
+        if (urlInicial) cargarDesdeUrl(urlInicial);
+    });
+</script>
+</body>
+</html>
