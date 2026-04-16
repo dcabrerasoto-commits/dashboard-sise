@@ -112,9 +112,7 @@
             </div>
         </div>
         <div class="header-meta">
-            <div class="meta-label">Unidad de análisis</div>
-            <div class="meta-value">Personas registradas en el sistema</div>
-            <div class="meta-label" style="margin-top:10px;">Enfoque</div>
+            <div class="meta-label">Enfoque</div>
             <div class="meta-value">Seguimiento mensual de estados de acreditación</div>
         </div>
     </header>
@@ -324,7 +322,7 @@
                 <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">Orden geográfico fijo desde nivel central hacia el extremo sur. La última columna incorpora una barra visual para lectura rápida del porcentaje acreditado.</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
-            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Unidad de análisis</strong>Número de personas registradas en la base cargada por el usuario.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, cero o sin clasificación se consolidan en Nivel Central.</div></div></div>
+            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, cero o sin clasificación se consolidan en Nivel Central.</div></div></div>
         `;
         crearGraficos(monthData);
     }
