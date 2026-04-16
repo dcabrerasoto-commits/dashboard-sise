@@ -290,6 +290,17 @@
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
         `).join("");
+        const filaTotales = `
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>${fmt(monthData.acreditado)}</strong></td>
+                <td><strong>${fmt(monthData.noVigente)}</strong></td>
+                <td><strong>${fmt(monthData.noAcreditado)}</strong></td>
+                <td><strong>${fmt(monthData.sinEstado)}</strong></td>
+                <td><strong>${fmt(monthData.total)}</strong></td>
+                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0, 100).toFixed(1)}%"></div></div><strong>${badgeTasa(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0)}</strong></td>
+            </tr>
+        `;
         document.getElementById("content").innerHTML = `
             <div class="executive-band">
                 <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${hallazgos[0]}</div></div>
@@ -310,10 +321,10 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">Orden geográfico fijo desde nivel central hacia el extremo sur. La última columna incorpora una barra visual para lectura rápida del porcentaje acreditado.</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">Orden geográfico fijo desde nivel central hacia el extremo sur. La última columna incorpora una barra visual para lectura rápida del porcentaje acreditado.</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
-            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Unidad de análisis</strong>Número de personas registradas en la base cargada por el usuario.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, 0 o sin clasificación se consolidan en Nivel Central.</div></div></div>
+            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Unidad de análisis</strong>Número de personas registradas en la base cargada por el usuario.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, cero o sin clasificación se consolidan en Nivel Central.</div></div></div>
         `;
         crearGraficos(monthData);
     }
@@ -348,7 +359,19 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { position: "bottom", labels: { font: { size: 11 }, boxWidth: 12 } } },
+                plugins: {
+                    legend: { position: "bottom", labels: { font: { size: 11 }, boxWidth: 12 } } ,
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const total = context.dataset.data.reduce((acc, value) => acc + Number(value || 0), 0);
+                                const valor = Number(context.raw || 0);
+                                const porcentaje = total > 0 ? ((valor / total) * 100).toFixed(1) : "0.0";
+                                return `${context.label}: ${porcentaje}%`;
+                            }
+                        }
+                    }
+                },
                 cutout: "64%"
             }
         });
