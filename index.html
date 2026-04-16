@@ -166,6 +166,12 @@
     function buscarColumnasEstado(headers) { return headers.filter((header) => norm(header).startsWith("ESTADO")); }
     function extraerMesDesdeColumna(nombre) { return norm(nombre).replace(/^ESTADO_?/, "").trim(); }
     function normalizarEstado(valor) { const estado = norm(valor); if (!estado) return "SIN ESTADO"; if (estado.includes("NO VIGENTE")) return "NO VIGENTE"; if (estado.includes("NO ACREDITADO")) return "NO ACREDITADO"; if (estado === "ACREDITADO") return "ACREDITADO"; return estado; }
+    function construirUrlSinCache(url) {
+        const limpia = String(url || "").trim();
+        if (!limpia) return "";
+        const separador = limpia.includes("?") ? "&" : "?";
+        return `${limpia}${separador}_ts=${Date.now()}`;
+    }
     function normalizarRegion(valor) {
         const texto = String(valor || "").trim();
         if (!texto) return "NIVEL CENTRAL";
@@ -369,7 +375,8 @@
         mostrarError("");
         mostrarInfo("Cargando datos automáticamente desde la fuente publicada...");
         try {
-            const response = await fetch(AUTO_CSV_URL, { cache: "no-store" });
+            const urlDescarga = construirUrlSinCache(AUTO_CSV_URL);
+            const response = await fetch(urlDescarga, { cache: "no-store" });
             if (!response.ok) {
                 throw new Error(`No fue posible descargar el CSV (${response.status}).`);
             }
