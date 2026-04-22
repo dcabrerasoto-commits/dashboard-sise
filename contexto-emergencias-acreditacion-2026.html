@@ -307,8 +307,12 @@
             .impact-card { grid-template-columns: 1fr; text-align: center; }
             .impact-icon { margin: 0 auto; }
             .progress-bar { width: 100%; }
-            .nav-controls { padding: 12px 14px; }
-            .nav-controls .nav-btn { padding: 12px 20px; }
+            .nav-controls { padding: 8px 10px; grid-template-columns: 1fr 1fr; gap: 8px 10px; align-items: center; }
+            .nav-controls .nav-btn { padding: 10px 12px; font-size: 15px; line-height: 1; min-height: 42px; }
+            .nav-controls .nav-btn.prev, .nav-controls .nav-btn.next { justify-self: stretch; }
+            .progress-panel { grid-column: 1 / -1; min-width: 0; order: 3; }
+            .progress-count { margin-bottom: 4px; font-size: 15px; }
+            .progress-bar { height: 6px; }
         }
     </style>
 </head>
