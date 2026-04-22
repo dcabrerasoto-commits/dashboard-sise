@@ -259,12 +259,12 @@
         .module-glow { animation: moduleGlow 1.6s ease-in-out infinite; }
 
         @media (max-width: 1180px) {
-            body { overflow: auto; }
-            .app-shell { height: auto; }
+            body { overflow: hidden; }
+            .app-shell { height: calc(100dvh - 18px); }
             .workspace { grid-template-columns: 1fr; }
-            .main-panel { grid-template-rows: minmax(760px, auto) auto; }
-            .slide { position: relative; min-height: 760px; }
-            .slide-stage { min-height: 760px; }
+            .main-panel { grid-template-rows: 1fr auto; min-height: 0; }
+            .slide { position: absolute; min-height: 0; }
+            .slide-stage { min-height: 0; height: 100%; }
             .hero-top, .nav-controls, .three-col, .needs-grid, .benefits-grid, .norm-icons {
                 grid-template-columns: 1fr;
             }
@@ -279,7 +279,15 @@
         }
 
         @media (max-width: 760px) {
-            .app-shell { width: min(100% - 18px, 1460px); margin: 9px auto; }
+            body { overflow: hidden; }
+            .app-shell { width: min(100% - 18px, 1460px); margin: 9px auto; height: calc(100dvh - 18px); gap: 10px; }
+            .hero { padding: 14px 16px; }
+            .workspace { gap: 10px; min-height: 0; }
+            .sidebar { padding: 12px; gap: 10px; grid-template-rows: auto auto auto; }
+            .nav-list { grid-auto-flow: column; grid-auto-columns: minmax(180px, 78vw); overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; }
+            .nav-item { min-height: 56px; }
+            .main-panel { gap: 10px; min-height: 0; }
+            .slide-stage { min-height: 0; height: 100%; }
             .slide { padding: 18px; }
             .slide-title { font-size: 24px; }
             .hero-title { font-size: clamp(1.25rem, 6.5vw, 1.75rem); white-space: normal; }
@@ -293,6 +301,7 @@
             .tall-svg svg { min-height: 130px; max-height: 165px; }
             .impact-card { grid-template-columns: 1fr; text-align: center; }
             .impact-icon { margin: 0 auto; }
+            .progress-bar { width: 100%; }
         }
     </style>
 </head>
