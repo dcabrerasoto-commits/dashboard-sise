@@ -200,6 +200,97 @@
         .benefit-icon { width: 50px; height: 50px; margin: 0 auto 12px; border-radius: 14px; background: rgba(255,255,255,.08); color: #E8540A; display: flex; align-items: center; justify-content: center; }
         .benefit-card p { font-weight: 400; font-size: 18px; line-height: 1.4; color: #FFFFFF; }
 
+        .cases-slide { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; justify-content: center; }
+        .cases-head { display: grid; gap: 6px; }
+        .cases-subtitle { font-size: 18px; color: var(--gris-suave); line-height: 1.35; }
+        .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; min-height: 0; }
+        .case-card {
+            background: linear-gradient(180deg, #FFFFFF, #F7FAFE);
+            border: 1px solid #D8E4F2;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            display: grid;
+            gap: 14px;
+            min-height: 0;
+        }
+        .case-card.featured { background: linear-gradient(180deg, #F9FBFF, #EEF4FB); }
+        .case-head { display: grid; gap: 4px; }
+        .case-title { font-size: 24px; font-weight: 900; color: var(--azul-profundo); line-height: 1.08; }
+        .case-kicker { font-size: 16px; color: var(--gris-suave); line-height: 1.3; }
+        .case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .metric-card {
+            background: #EEF4FB;
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: grid;
+            gap: 4px;
+            border: 1px solid #D9E6F4;
+        }
+        .metric-card.primary { background: linear-gradient(135deg, #1B3A6B, #2E6DA4); color: #FFFFFF; }
+        .metric-value { font-size: 34px; font-weight: 900; line-height: 1; color: inherit; }
+        .metric-label { font-size: 15px; line-height: 1.25; color: inherit; }
+        .metric-note { font-size: 13px; line-height: 1.25; opacity: .82; color: inherit; }
+        .territory-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+        .territory-strip.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .territory-chip {
+            background: #F3F7FC;
+            border: 1px solid #DCE7F4;
+            border-radius: 12px;
+            padding: 12px 12px;
+            display: grid;
+            gap: 2px;
+        }
+        .territory-name { font-size: 14px; font-weight: 700; color: var(--azul-profundo); }
+        .territory-data { font-size: 13px; color: var(--gris-texto); line-height: 1.35; }
+        .case-highlight {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            align-items: center;
+            background: linear-gradient(135deg, #EAF2FB, #F6FAFF);
+            border-radius: 14px;
+            padding: 14px 16px;
+            border-left: 4px solid #2E6DA4;
+        }
+        .case-highlight strong { display: block; font-size: 17px; color: var(--azul-profundo); line-height: 1.3; }
+        .case-highlight span { display: block; font-size: 14px; color: var(--gris-texto); line-height: 1.35; }
+        .case-highlight .ring {
+            width: 58px; height: 58px; border-radius: 50%;
+            background: conic-gradient(#2E6DA4 0deg, #2E6DA4 255deg, #DDEAF7 255deg, #DDEAF7 360deg);
+            display: grid; place-items: center;
+        }
+        .case-highlight .ring::after {
+            content: attr(data-label);
+            width: 42px; height: 42px; border-radius: 50%;
+            background: #FFFFFF; display: grid; place-items: center;
+            font-size: 14px; font-weight: 900; color: var(--azul-profundo);
+        }
+        .focus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .focus-pill {
+            background: #F3F8FD;
+            border: 1px solid #D8E6F5;
+            border-radius: 12px;
+            padding: 12px 12px;
+            display: grid;
+            grid-template-columns: 22px 1fr;
+            gap: 10px;
+            align-items: start;
+        }
+        .focus-pill i { color: #2E6DA4; width: 20px; height: 20px; }
+        .focus-pill strong { display: block; font-size: 14px; color: var(--azul-profundo); line-height: 1.25; }
+        .focus-pill span { display: block; font-size: 13px; color: var(--gris-texto); line-height: 1.35; }
+        .cases-footer {
+            background: linear-gradient(135deg, #EAF2FB, #F6FAFF);
+            border: 1px solid #D8E4F2;
+            border-radius: 16px;
+            padding: 16px 18px;
+            font-size: 18px;
+            line-height: 1.42;
+            color: var(--azul-profundo);
+            box-shadow: var(--shadow);
+        }
+
         .slide-image-wrap { width: 100%; display: flex; align-items: center; justify-content: center; animation: fadeInSoft .6s ease both; }
         .slide-image-wrap.bottom { margin-top: 4px; }
         .slide-image { width: 100%; display: block; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.12); object-fit: cover; }
@@ -272,6 +363,7 @@
             .hero-top, .nav-controls, .three-col, .needs-grid, .benefits-grid, .norm-icons {
                 grid-template-columns: 1fr;
             }
+            .cases-grid, .case-metrics, .focus-grid, .territory-strip, .territory-strip.two { grid-template-columns: 1fr; }
             .split-60-40, .split-70-30, .split-40-60, .split-visual { flex-direction: column; gap: 18px; }
             .split-60-40 > :first-child, .split-70-30 > :first-child, .split-40-60 > :first-child, .split-visual > :first-child,
             .split-60-40 > :last-child, .split-70-30 > :last-child, .split-40-60 > :last-child, .split-visual > :last-child { width: 100%; min-height: auto; }
@@ -306,6 +398,9 @@
             .hero-logos img { height: 24px; }
             .hero-kicker, .sidebar-copy, .item-text, .impact-card p, .benefit-card p, .need-card p, .statement-banner, .progress-count, .visual-title { font-size: 15px; }
             .hero-subtitle, .splash-subtitle, .final-subtitle { font-size: 13px; }
+            .cases-subtitle, .cases-footer { font-size: 15px; }
+            .case-title { font-size: 20px; }
+            .metric-value { font-size: 28px; }
             .qr-side { padding: 18px; }
             .qr-side img { width: min(220px, 72vw) !important; height: auto !important; aspect-ratio: 1 / 1; }
             .visual-panel, .visual-panel-light { padding: 12px; min-height: 180px; }
@@ -984,6 +1079,30 @@
             `;
         }
 
+        function svgTeamSoftBlue() {
+            return `
+                <div class="team-fallback">
+                    <svg viewBox="0 0 720 210" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="softBlueVest" x1="0" x2="1">
+                                <stop offset="0%" stop-color="#BFD7EE"></stop>
+                                <stop offset="100%" stop-color="#DDEAF7"></stop>
+                            </linearGradient>
+                            <linearGradient id="softBlueAccent" x1="0" x2="1">
+                                <stop offset="0%" stop-color="#7FB2DD"></stop>
+                                <stop offset="100%" stop-color="#AFCFEA"></stop>
+                            </linearGradient>
+                        </defs>
+                        <g fill="#D7E7F6"><circle cx="92" cy="50" r="22"></circle><path d="M64 78h56l10 84H54Z"></path><rect x="77" y="92" width="30" height="24" rx="6" fill="url(#softBlueAccent)"></rect></g>
+                        <g fill="#CFE2F4"><circle cx="218" cy="50" r="22"></circle><path d="M190 78h56l10 84H180Z"></path><rect x="203" y="92" width="30" height="24" rx="6" fill="url(#softBlueVest)"></rect></g>
+                        <g fill="#E5F0FA"><circle cx="344" cy="50" r="22"></circle><path d="M316 78h56l10 84H306Z"></path><rect x="329" y="92" width="30" height="24" rx="6" fill="url(#softBlueAccent)"></rect></g>
+                        <g fill="#C7DDF2"><circle cx="470" cy="50" r="22"></circle><path d="M442 78h56l10 84H432Z"></path><rect x="455" y="92" width="30" height="24" rx="6" fill="url(#softBlueVest)"></rect></g>
+                        <g fill="#DCEBFA"><circle cx="596" cy="50" r="22"></circle><path d="M568 78h56l10 84H558Z"></path><rect x="581" y="92" width="30" height="24" rx="6" fill="url(#softBlueAccent)"></rect></g>
+                    </svg>
+                </div>
+            `;
+        }
+
         const benefits = [
             ["01", "nodes", "Entrega información social estandarizada para la toma de decisiones."],
             ["02", "flow", "Fortalece la coordinación entre instituciones con un lenguaje común."],
@@ -1074,6 +1193,7 @@
             ]},
             { id: "modulo-6", title: "Módulo 6, Redes y Firma", navIcon: "signature", layout: "signatures", items: [] },
             { id: "importancia-beneficios", title: "Importancia y Beneficios", navIcon: "star", layout: "benefits", items: [] },
+            { id: "fibe-emergencias-recientes", title: "FIBE en emergencias recientes", navIcon: "flow", layout: "recent-cases", items: [] },
             { id: "por-que-acreditarte", title: "¿Por qué acreditarte?", navIcon: "medal", layout: "reason", items: [
                 { icon: "medal", text: "La acreditación entrega herramientas para aplicar correctamente la FIBE y resguardar la calidad del levantamiento." },
                 { icon: "checkSmall", text: "Fortalece la capacidad institucional para responder con equipos preparados para el catastro social." },
@@ -1245,7 +1365,7 @@
                         ${slides.find((s) => s.id === "por-que-acreditarte").items.map((item, index) => renderItem(item, index)).join("")}
                     </div>
                     <div class="slide-image-wrap bottom">
-                        ${svgTeamFallback()}
+                        ${svgTeamSoftBlue()}
                     </div>
                 </div>
             `;
@@ -1287,8 +1407,8 @@
                     <div class="item-grid orange-list">
                         ${slides.find((s) => s.id === "equipo-cierre").items.map((item, index) => renderItem(item, index, true).replace('<div class="item-card">','<div class="item-card" style="padding:18px">').replace('font-size: 15px','font-size: 16px')).join("")}
                     </div>
-                    <div class="slide-image-wrap bottom" style="align-self:end;opacity:.035;filter:saturate(.38) brightness(1.1)">
-                        ${svgTeamFallback()}
+                    <div class="slide-image-wrap bottom" style="align-self:end">
+                        ${svgTeamSoftBlue()}
                     </div>
                 </div>
             `;
@@ -1333,6 +1453,7 @@
             if (slide.layout === "damage") return renderDamage();
             if (slide.layout === "signatures") return renderSignatures();
             if (slide.layout === "benefits") return renderBenefits();
+            if (slide.layout === "recent-cases") return renderRecentCases();
             if (slide.layout === "reason") return renderReason();
             if (slide.layout === "how") return renderHow();
             if (slide.layout === "team") return renderTeamClose();
@@ -1354,15 +1475,15 @@
                         </div>
                         <div style="position:absolute;left:18px;top:24px;width:120px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
                             <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="file-text" style="width:32px;height:32px"></i></div>
-                            <div style="font-size:16px;font-weight:700">FIBE Papel</div>
+                            <div style="font-size:18px;font-weight:700">FIBE Papel</div>
                         </div>
                         <div style="position:absolute;right:18px;top:24px;width:120px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
                             <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="smartphone" style="width:32px;height:32px"></i></div>
-                            <div style="font-size:16px;font-weight:700">APP SISE</div>
+                            <div style="font-size:18px;font-weight:700">APP SISE</div>
                         </div>
                         <div style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:140px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
                             <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="monitor" style="width:32px;height:32px"></i></div>
-                            <div style="font-size:16px;font-weight:700">Plataforma Web</div>
+                            <div style="font-size:18px;font-weight:700">Plataforma Web</div>
                         </div>
                         <div style="position:absolute;left:132px;top:100px;width:68px;height:3px;background:#2E6DA4"></div>
                         <div style="position:absolute;right:132px;top:100px;width:68px;height:3px;background:#2E6DA4"></div>
@@ -1468,7 +1589,7 @@
                         ${basicNeeds.map(([icon, label], index) => `
                             <div class="need-card" style="background:${colors[index]};min-height:120px">
                                 <div class="need-icon" style="background:transparent;color:#FFFFFF">${iconSet[icon].replace('stroke="currentColor"', 'stroke="currentColor"')}</div>
-                                <p style="color:#FFFFFF;font-size:16px">${label}</p>
+                                <p style="color:#FFFFFF;font-size:18px">${label}</p>
                             </div>
                         `).join("")}
                     </div>
@@ -1482,18 +1603,18 @@
                     <div class="item-card sign-col" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-height:100%">
                         <div class="item-media" style="margin:0 auto">${svgRedes()}</div>
                         <div class="visual-title" style="text-align:center;width:100%">Redes</div>
-                        <div class="item-text" style="text-align:left;font-size:16px">Recoge redes de apoyo y antecedentes de participación comunitaria relevantes para la respuesta en emergencia.</div>
+                        <div class="item-text" style="text-align:left;font-size:18px">Recoge redes de apoyo y antecedentes de participación comunitaria relevantes para la respuesta en emergencia.</div>
                     </div>
                     <div class="item-card sign-col" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-height:100%">
                         <div class="item-media" style="margin:0 auto">${svgFirma()}</div>
                         <div class="visual-title" style="text-align:center;width:100%">Firma del informante</div>
-                        <div class="item-text" style="text-align:left;font-size:16px">Incluye la firma del o la informante y la declaración de veracidad de los antecedentes entregados.</div>
+                        <div class="item-text" style="text-align:left;font-size:18px">Incluye la firma del o la informante y la declaración de veracidad de los antecedentes entregados.</div>
                         <div class="statement-banner">Al firmar, el/la informante declara que los datos son verídicos. La entrega de información falsa tiene implicancias legales.</div>
                     </div>
                     <div class="item-card sign-col" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-height:100%">
                         <div class="item-media" style="margin:0 auto">${svgCredencial()}</div>
                         <div class="visual-title" style="text-align:center;width:100%">Firma del encuestador/a</div>
-                        <div class="item-text" style="text-align:left;font-size:16px">Incorpora la firma del encuestador/a acreditado/a como respaldo del levantamiento realizado en terreno.</div>
+                        <div class="item-text" style="text-align:left;font-size:18px">Incorpora la firma del encuestador/a acreditado/a como respaldo del levantamiento realizado en terreno.</div>
                     </div>
                 </div>
             `;
@@ -1505,9 +1626,87 @@
                     <div class="item-grid" style="margin-top:16px;margin-bottom:16px">
                         ${slides.find((s) => s.id === "por-que-acreditarte").items.map((item, index) => renderItem(item, index)).join("")}
                     </div>
-                    <div class="slide-image-wrap bottom" style="opacity:.04;filter:saturate(.42) brightness(1.08)">
-                        ${svgTeamFallback()}
+                    <div class="slide-image-wrap bottom">
+                        ${svgTeamSoftBlue()}
                     </div>
+                </div>
+            `;
+        }
+
+        function renderRecentCases() {
+            return `
+                <div class="cases-slide">
+                    <div class="cases-head">
+                        <div class="cases-subtitle">Focalización de ayudas con información levantada en terreno</div>
+                    </div>
+                    <div class="cases-grid">
+                        <article class="case-card featured">
+                            <div class="case-head">
+                                <div class="case-title">Valparaíso 2024</div>
+                                <div class="case-kicker">Incendios en Viña del Mar, Quilpué y Villa Alemana</div>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-card primary">
+                                    <div class="metric-value">8.542</div>
+                                    <div class="metric-label">fichas terminadas</div>
+                                    <div class="metric-note">22.066 personas catastradas</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value" style="color:#1B3A6B">35,2%</div>
+                                    <div class="metric-label" style="color:#1B3A6B">cobertura del Bono de Uniforme Escolar</div>
+                                    <div class="metric-note" style="color:#5A6A79">2.987 hogares, $427.600.000, 4.276 NNA</div>
+                                </div>
+                            </div>
+                            <div class="territory-strip">
+                                <div class="territory-chip"><div class="territory-name">Quilpué</div><div class="territory-data">2.407 fichas, 6.397 personas</div></div>
+                                <div class="territory-chip"><div class="territory-name">Villa Alemana</div><div class="territory-data">120 fichas, 310 personas</div></div>
+                                <div class="territory-chip"><div class="territory-name">Viña del Mar</div><div class="territory-data">6.015 fichas, 15.359 personas</div></div>
+                            </div>
+                            <div class="focus-grid">
+                                <div class="focus-pill"><i data-lucide="shirt"></i><div><strong>Bono de Uniforme Escolar</strong><span>2.987 hogares beneficiados, $427.600.000 y 4.276 NNA.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="heart-pulse"></i><div><strong>Ayudas tempranas sectoriales</strong><span>SENADIS 561 ayudas técnicas, Niñez 3.059 kits, FOSIS 381 prestaciones, SENAMA 153 talleres.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="stethoscope"></i><div><strong>Prestaciones de salud y educación</strong><span>FONASA 55.017 prestaciones y JUNAEB 4.975 apoyos por $1.546.186.730.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="house-plus"></i><div><strong>Habitabilidad y reconstrucción</strong><span>MINVU 1.340 subsidios y SENAPRED 1.673 viviendas de emergencia.</span></div></div>
+                            </div>
+                            <div class="case-highlight">
+                                <div class="ring" data-label="24K"></div>
+                                <div><strong>La FIBE permitió dimensionar la afectación y orientar ayudas monetarias, apoyos sociales y soluciones habitacionales en gran escala.</strong><span>SENAPRED movilizó $12.547.500.000 en viviendas de emergencia y múltiples servicios activaron apoyos focalizados.</span></div>
+                            </div>
+                        </article>
+                        <article class="case-card">
+                            <div class="case-head">
+                                <div class="case-title">Ñuble – Biobío 2026</div>
+                                <div class="case-kicker">Incendios forestales</div>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-card primary">
+                                    <div class="metric-value">4.971</div>
+                                    <div class="metric-label">fichas terminadas</div>
+                                    <div class="metric-note">12.833 personas catastradas</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value" style="color:#1B3A6B">95%</div>
+                                    <div class="metric-label" style="color:#1B3A6B">cobertura del Bono de Recuperación</div>
+                                    <div class="metric-note" style="color:#5A6A79">4.713 hogares, $6.810.000.000</div>
+                                </div>
+                            </div>
+                            <div class="territory-strip two">
+                                <div class="territory-chip"><div class="territory-name">Ñuble</div><div class="territory-data">642 hogares terminados, 1.583 personas</div></div>
+                                <div class="territory-chip"><div class="territory-name">Biobío</div><div class="territory-data">4.329 hogares terminados, 11.250 personas</div></div>
+                            </div>
+                            <div class="focus-grid">
+                                <div class="focus-pill"><i data-lucide="wallet"></i><div><strong>Bono de Recuperación</strong><span>4.713 hogares beneficiados por $6.810.000.000.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="home"></i><div><strong>SENAPRED y habitabilidad</strong><span>522 viviendas de emergencia asignadas y apoyos para reconstrucción desde MINVU.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="accessibility"></i><div><strong>Apoyos focalizados</strong><span>SENADIS identificó 172 personas con necesidad de ayuda técnica y activó compras iniciales cercanas a $13.000.000.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="graduation-cap"></i><div><strong>Salud y educación</strong><span>FONASA 788 prestaciones, JUNAEB 460 sets, 1.827 becas escolares y 661 apoyos en educación superior.</span></div></div>
+                            </div>
+                            <div class="case-highlight">
+                                <div class="ring" data-label="95%"></div>
+                                <div><strong>La FIBE permitió identificar con rapidez a los hogares afectados y activar transferencias, apoyos sectoriales y soluciones transitorias de habitabilidad.</strong><span>También orientó la focalización de FOSIS y otros servicios en proceso de respuesta productiva y social.</span></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="cases-footer">La FIBE transforma el levantamiento en terreno en focalización efectiva: identifica hogares afectados, prioriza la respuesta y articula ayudas concretas entre múltiples servicios del Estado.</div>
                 </div>
             `;
         }
@@ -1599,7 +1798,7 @@
                         <div class="item-head">
                             <span class="item-number">${item.number || index + 1}</span>
                             <span class="item-icon" style="color:${index % 2 === 0 ? "#E8540A" : "#2E6DA4"}">${iconSet[item.icon] || iconSet.document}</span>
-                            <div class="item-text" style="font-size:16px;line-height:1.4">${item.text}</div>
+                            <div class="item-text" style="font-size:18px;line-height:1.4">${item.text}</div>
                         </div>
                         ${item.badge ? `<div style="display:inline-block;background:#E8540A;color:#FFFFFF;border-radius:6px;padding:5px 8px;font-size:11px;font-weight:700">${item.badge}</div>` : ""}
                         <div class="item-media">${mediaByIndex[index] || ""}</div>
@@ -1694,7 +1893,7 @@
                         <div class="item-head">
                             <span class="item-number">1</span>
                             <span class="item-icon" style="color:#E8540A">${iconSet.home.replace('width="24" height="24"', 'width="32" height="32"')}</span>
-                            <div class="item-text" style="font-size:16px"><strong>Vivienda</strong>, escala de daño: no afectada, poco afectada, medianamente afectada, muy afectada, destruida.</div>
+                            <div class="item-text" style="font-size:18px"><strong>Vivienda</strong>, escala de daño: no afectada, poco afectada, medianamente afectada, muy afectada, destruida.</div>
                         </div>
                         <div class="item-media">
                             <svg class="scale-svg" viewBox="0 0 640 94" height="94" aria-hidden="true">
@@ -1715,7 +1914,7 @@
                         <div class="item-head">
                             <span class="item-number">2</span>
                             <span class="item-icon" style="color:#E8540A">${iconSet.sofa.replace('width="24" height="24"', 'width="40" height="40"')}</span>
-                            <div class="item-text" style="font-size:16px"><strong>Enseres del hogar</strong>, escala de daño: no afectados, poco afectados, medianamente afectados y muy afectados.</div>
+                            <div class="item-text" style="font-size:18px"><strong>Enseres del hogar</strong>, escala de daño: no afectados, poco afectados, medianamente afectados y muy afectados.</div>
                         </div>
                         <div class="item-media">
                             <svg class="scale-svg" viewBox="0 0 640 94" height="94" aria-hidden="true">
@@ -1733,7 +1932,7 @@
                     <div class="item-card" style="padding:18px">
                         <div class="item-head no-number">
                             <span class="item-icon" style="color:#E8540A">${iconSet.checkSmall.replace('width="24" height="24"', 'width="32" height="32"')}</span>
-                            <div class="item-text" style="font-size:16px">La evaluación debe realizarse conforme a la Guía de Aplicación FIBE, con criterios diferenciados según cada nivel de afectación.</div>
+                            <div class="item-text" style="font-size:18px">La evaluación debe realizarse conforme a la Guía de Aplicación FIBE, con criterios diferenciados según cada nivel de afectación.</div>
                         </div>
                     </div>
                 </div>
