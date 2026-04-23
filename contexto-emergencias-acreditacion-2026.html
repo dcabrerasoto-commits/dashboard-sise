@@ -208,14 +208,27 @@
         .case-card {
             background: linear-gradient(180deg, #FFFFFF 0%, #F7FAFE 100%);
             border: 1px solid #D8E4F2;
+            border-top: 5px solid #2E6DA4;
             border-radius: 20px;
             box-shadow: 0 8px 24px rgba(27,58,107,.08);
             padding: 22px;
             display: grid;
             gap: 16px;
             align-content: start;
+            position: relative;
+            overflow: hidden;
         }
+        .case-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 86px;
+            background: linear-gradient(135deg, rgba(46,109,164,.10), rgba(232,84,10,.07));
+            pointer-events: none;
+        }
+        .case-card > * { position: relative; z-index: 1; }
         .case-card.featured { background: linear-gradient(180deg, #FBFDFF 0%, #EEF4FB 100%); }
+        .case-card.secondary { border-top-color: #E8540A; }
         .case-head { display: grid; gap: 4px; }
         .case-title { font-size: 25px; font-weight: 900; color: var(--azul-profundo); line-height: 1.05; }
         .case-kicker { font-size: 15px; color: var(--gris-suave); line-height: 1.3; }
@@ -229,12 +242,14 @@
             gap: 4px;
         }
         .hero-metric.primary { background: linear-gradient(135deg, #1B3A6B, #2E6DA4); color: #FFFFFF; border-color: transparent; }
+        .case-card.secondary .hero-metric.primary { background: linear-gradient(135deg, #2E6DA4, #E8540A); }
         .hero-number { font-size: 42px; font-weight: 900; line-height: .95; color: inherit; letter-spacing: -.5px; }
         .hero-label { font-size: 15px; line-height: 1.25; color: inherit; }
+        .hero-note { font-size: 13px; line-height: 1.3; color: rgba(255,255,255,.88); }
         .territory-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
         .territory-strip.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .territory-chip {
-            background: #F4F8FC;
+            background: linear-gradient(180deg, #F4F8FC 0%, #F9FBFE 100%);
             border: 1px solid #DEE8F3;
             border-radius: 12px;
             padding: 10px 11px;
@@ -245,8 +260,9 @@
         .territory-data { font-size: 13px; color: var(--gris-texto); line-height: 1.3; }
         .help-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .help-card {
-            background: #F5F9FD;
+            background: linear-gradient(180deg, #F8FBFE 0%, #F1F7FD 100%);
             border: 1px solid #DCE8F4;
+            border-left: 3px solid #2E6DA4;
             border-radius: 14px;
             padding: 12px 12px;
             display: grid;
@@ -254,6 +270,8 @@
             gap: 10px;
             align-items: start;
         }
+        .case-card.secondary .help-card:nth-child(odd) { border-left-color: #E8540A; }
+        .case-card.featured .help-card:nth-child(even) { border-left-color: #E8540A; }
         .help-card i { color: #2E6DA4; width: 20px; height: 20px; }
         .help-card strong { display: block; font-size: 14px; color: var(--azul-profundo); line-height: 1.25; }
         .help-card span { display: block; font-size: 13px; color: var(--gris-texto); line-height: 1.32; }
@@ -265,11 +283,16 @@
             display: grid;
             gap: 4px;
         }
+        .case-card.secondary .case-result {
+            background: linear-gradient(135deg, rgba(232,84,10,.09), #F7FBFF);
+            border-left-color: #E8540A;
+        }
         .case-result strong { font-size: 16px; color: var(--azul-profundo); line-height: 1.28; }
         .case-result span { font-size: 13px; color: var(--gris-texto); line-height: 1.32; }
         .cases-footer {
             background: linear-gradient(135deg, #EAF2FB, #F6FAFF);
             border: 1px solid #D8E4F2;
+            border-left: 5px solid #E8540A;
             border-radius: 18px;
             padding: 16px 20px;
             font-size: 20px;
@@ -1472,27 +1495,30 @@
 
         function htmlSiseNetwork() {
             return `
-                <div style="width:100%;height:100%;min-height:320px;background:#F0F4FF;border-radius:16px;padding:18px;display:flex;align-items:center;justify-content:center">
-                    <div style="position:relative;width:100%;max-width:420px;height:320px">
-                        <div style="position:absolute;left:50%;top:50%;width:100px;height:100px;margin-left:-50px;margin-top:-50px;border-radius:50%;background:#1B3A6B;color:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 0 0 rgba(46,109,164,0.4);animation:pulseNode 2s infinite">
+                <div style="width:100%;height:100%;min-height:320px;background:#F0F4FF;border-radius:16px;padding:14px 16px;display:flex;align-items:center;justify-content:center;overflow:hidden">
+                    <div style="position:relative;width:100%;max-width:430px;height:286px;isolation:isolate">
+                        <svg viewBox="0 0 430 286" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;overflow:visible">
+                            <path d="M120 72 L186 120" stroke="#2E6DA4" stroke-width="4" stroke-linecap="round"></path>
+                            <path d="M310 72 L244 120" stroke="#2E6DA4" stroke-width="4" stroke-linecap="round"></path>
+                            <path d="M215 192 L215 170" stroke="#2E6DA4" stroke-width="4" stroke-linecap="round"></path>
+                            <path d="M215 170 L215 142" stroke="#2E6DA4" stroke-width="4" stroke-linecap="round"></path>
+                        </svg>
+                        <div style="position:absolute;left:50%;top:50%;width:100px;height:100px;margin-left:-50px;margin-top:-50px;border-radius:50%;background:#1B3A6B;color:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 0 0 rgba(46,109,164,0.4);animation:pulseNode 2s infinite;z-index:2">
                             <strong style="font-size:22px;line-height:1">SISE</strong>
                             <span style="font-size:12px;font-weight:300">Sistema integral</span>
                         </div>
-                        <div style="position:absolute;left:18px;top:24px;width:120px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
+                        <div style="position:absolute;left:12px;top:18px;width:124px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45;z-index:2;box-shadow:0 6px 16px rgba(27,58,107,.08)">
                             <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="file-text" style="width:32px;height:32px"></i></div>
                             <div style="font-size:18px;font-weight:700">FIBE Papel</div>
                         </div>
-                        <div style="position:absolute;right:18px;top:24px;width:120px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
+                        <div style="position:absolute;right:12px;top:18px;width:124px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45;z-index:2;box-shadow:0 6px 16px rgba(27,58,107,.08)">
                             <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="smartphone" style="width:32px;height:32px"></i></div>
                             <div style="font-size:18px;font-weight:700">APP SISE</div>
                         </div>
-                        <div style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:140px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
+                        <div style="position:absolute;left:50%;bottom:10px;transform:translateX(-50%);width:148px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45;z-index:2;box-shadow:0 6px 16px rgba(27,58,107,.08)">
                             <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="monitor" style="width:32px;height:32px"></i></div>
                             <div style="font-size:18px;font-weight:700">Plataforma Web</div>
                         </div>
-                        <div style="position:absolute;left:132px;top:100px;width:68px;height:3px;background:#2E6DA4"></div>
-                        <div style="position:absolute;right:132px;top:100px;width:68px;height:3px;background:#2E6DA4"></div>
-                        <div style="position:absolute;left:50%;top:182px;width:3px;height:46px;transform:translateX(-50%);background:#2E6DA4"></div>
                     </div>
                 </div>
             `;
@@ -1648,17 +1674,19 @@
                     <div class="cases-grid">
                         <article class="case-card featured">
                             <div class="case-head">
-                                <div class="case-title">Valparaíso 2024</div>
-                                <div class="case-kicker">Incendios en Viña del Mar, Quilpué y Villa Alemana</div>
+                                <div class="case-title">Región de Valparaíso</div>
+                                <div class="case-kicker">Incendios forestales</div>
                             </div>
                             <div class="case-hero-metrics">
                                 <div class="hero-metric primary">
                                     <div class="hero-number">8.542</div>
                                     <div class="hero-label">fichas terminadas</div>
+                                    <div class="hero-note">22.066 personas catastradas</div>
                                 </div>
                                 <div class="hero-metric">
                                     <div class="hero-number" style="color:#1B3A6B">22.066</div>
                                     <div class="hero-label" style="color:#1B3A6B">personas catastradas</div>
+                                    <div class="hero-note" style="color:#5A6A79">Viña del Mar, Quilpué y Villa Alemana</div>
                                 </div>
                             </div>
                             <div class="territory-strip">
@@ -1667,9 +1695,9 @@
                                 <div class="territory-chip"><div class="territory-name">Viña del Mar</div><div class="territory-data">6.015 fichas, 15.359 personas</div></div>
                             </div>
                             <div class="help-grid">
-                                <div class="help-card"><i data-lucide="shirt"></i><div><strong>Uniforme escolar</strong><span>2.987 hogares, 4.276 NNA, $427.600.000.</span></div></div>
-                                <div class="help-card"><i data-lucide="heart-pulse"></i><div><strong>Ayudas tempranas</strong><span>SENADIS 561, Niñez 3.059 kits, FOSIS 381, SENAMA 153 talleres.</span></div></div>
-                                <div class="help-card"><i data-lucide="stethoscope"></i><div><strong>Salud y educación</strong><span>FONASA 55.017 prestaciones, JUNAEB 4.975 apoyos.</span></div></div>
+                                <div class="help-card"><i data-lucide="wallet"></i><div><strong>Transferencias</strong><span>Bono de Uniforme Escolar, 2.987 hogares, $427.600.000 y 4.276 NNA.</span></div></div>
+                                <div class="help-card"><i data-lucide="heart-pulse"></i><div><strong>Salud y cuidados</strong><span>SENADIS 561 ayudas técnicas y SENAMA 153 talleres focalizados.</span></div></div>
+                                <div class="help-card"><i data-lucide="graduation-cap"></i><div><strong>Educación y apoyos</strong><span>Niñez 3.059 kits, FOSIS 381 prestaciones, FONASA 55.017 y JUNAEB 4.975 apoyos.</span></div></div>
                                 <div class="help-card"><i data-lucide="house-plus"></i><div><strong>Habitabilidad</strong><span>MINVU 1.340 subsidios, SENAPRED 1.673 viviendas de emergencia.</span></div></div>
                             </div>
                             <div class="case-result">
@@ -1677,19 +1705,21 @@
                                 <span>La FIBE permitió dimensionar la afectación y orientar ayudas monetarias, apoyos sociales y soluciones habitacionales en gran escala.</span>
                             </div>
                         </article>
-                        <article class="case-card">
+                        <article class="case-card secondary">
                             <div class="case-head">
-                                <div class="case-title">Ñuble – Biobío 2026</div>
+                                <div class="case-title">Región de Ñuble y Biobío</div>
                                 <div class="case-kicker">Incendios forestales</div>
                             </div>
                             <div class="case-hero-metrics">
                                 <div class="hero-metric primary">
                                     <div class="hero-number">4.971</div>
                                     <div class="hero-label">fichas terminadas</div>
+                                    <div class="hero-note">12.833 personas catastradas</div>
                                 </div>
                                 <div class="hero-metric">
                                     <div class="hero-number" style="color:#1B3A6B">12.833</div>
                                     <div class="hero-label" style="color:#1B3A6B">personas catastradas</div>
+                                    <div class="hero-note" style="color:#5A6A79">Ñuble 642 hogares, Biobío 4.329 hogares</div>
                                 </div>
                             </div>
                             <div class="territory-strip two">
@@ -1697,10 +1727,10 @@
                                 <div class="territory-chip"><div class="territory-name">Biobío</div><div class="territory-data">4.329 hogares terminados, 11.250 personas</div></div>
                             </div>
                             <div class="help-grid">
-                                <div class="help-card"><i data-lucide="wallet"></i><div><strong>Bono de Recuperación</strong><span>4.713 hogares, $6.810.000.000, cobertura del 95%.</span></div></div>
-                                <div class="help-card"><i data-lucide="home"></i><div><strong>Habitabilidad</strong><span>SENAPRED 522 viviendas de emergencia y apoyos MINVU.</span></div></div>
-                                <div class="help-card"><i data-lucide="accessibility"></i><div><strong>Ayudas técnicas</strong><span>SENADIS 172 personas identificadas, primera compra cercana a $13.000.000.</span></div></div>
-                                <div class="help-card"><i data-lucide="graduation-cap"></i><div><strong>Salud y educación</strong><span>FONASA 788 prestaciones, JUNAEB sets y becas escolares y superiores.</span></div></div>
+                                <div class="help-card"><i data-lucide="wallet"></i><div><strong>Transferencias</strong><span>Bono de Recuperación, 4.713 hogares, $6.810.000.000 y cobertura del 95%.</span></div></div>
+                                <div class="help-card"><i data-lucide="heart-pulse"></i><div><strong>Salud y cuidados</strong><span>SENADIS 172 personas con ayudas técnicas y FONASA 788 prestaciones, 276 códigos.</span></div></div>
+                                <div class="help-card"><i data-lucide="graduation-cap"></i><div><strong>Educación y apoyos</strong><span>JUNAEB sets y becas, FOSIS en focalización de apoyos productivos o sociales.</span></div></div>
+                                <div class="help-card"><i data-lucide="house-plus"></i><div><strong>Habitabilidad</strong><span>SENAPRED 522 viviendas de emergencia y apoyos MINVU para reconstrucción.</span></div></div>
                             </div>
                             <div class="case-result">
                                 <strong>Resultado clave</strong>
