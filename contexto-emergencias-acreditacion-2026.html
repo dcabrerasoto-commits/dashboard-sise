@@ -132,7 +132,7 @@
         .item-number { width: 28px; height: 28px; border-radius: 50%; background: #1B3A6B; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; margin-top: 1px; }
         .item-icon { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
         .item-icon svg, .benefit-icon svg, .impact-icon svg, .need-icon svg, .big-icon svg, .splash-big-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
-        .item-text { font-weight: 400; font-size: 16px; line-height: 1.7; color: var(--gris-texto); }
+        .item-text { font-weight: 400; font-size: 17px; line-height: 1.72; color: var(--gris-texto); }
         .item-media { margin-top: 8px; }
         .item-media svg { width: 100%; display: block; animation: fadeInSoft .4s ease; }
         .item-media text { font-family: "gobCL", sans-serif; }
@@ -141,6 +141,9 @@
         .visual-panel { background: linear-gradient(180deg, #FFFFFF, #F8FAFD); }
         .visual-panel-light { background: #F0F4FF; }
         .visual-title { font-weight: 700; color: var(--azul-profundo); font-size: 18px; margin-bottom: 0; line-height: 1.2; }
+        .split-visual .item-grid { flex: 1.12; }
+        .split-visual .visual-panel-light { flex: .88; }
+        .split-visual .item-card { padding: 18px 18px; }
 
         .sise-svg text, .app-flow-svg text, .pyramid-svg text, .timeline-svg text, .scale-svg text, .form-svg text, .module-svg text { font-family: "gobCL", sans-serif; }
         .sise-node { animation: pulseNode 2s ease-in-out infinite; transform-origin: center; }
@@ -428,7 +431,7 @@
             tent: iconWrap('<path d="m4.5 18 7.5-11 7.5 11"/><path d="M12 7v11"/><path d="M7.5 18h9"/>'),
             box: iconWrap('<path d="m4.5 8 7.5-4 7.5 4-7.5 4-7.5-4Z"/><path d="M4.5 8v8l7.5 4 7.5-4V8"/><path d="M12 12v8"/>'),
             wheelchair: iconWrap('<circle cx="10" cy="6.5" r="2"/><circle cx="10" cy="16.5" r="3.5"/><path d="M10 8.5v4h4"/><path d="M14 12.5 16 18"/><path d="M8 12.5h6"/>'),
-            support: iconWrap('<path d="M4 14c2.5-3 5.2-4.5 8-4.5 2.8 0 5.5 1.5 8 4.5"/><path d="M6 16.5 9.5 19c1.5 1 3.5 1 5 0l3.5-2.5"/><path d="M7 12.5 10 15"/><path d="M17 12.5 14 15"/>'),
+            support: iconWrap('<path d="M5 15h5l2-3 3 6 2-3h2"/><path d="M7 11.5a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4Z"/><path d="M17 11.5a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4Z"/>'),
             mind: iconWrap('<path d="M12 4a6 6 0 0 0-6 6c0 2 .8 3.1 1.8 4.1.7.6 1.2 1.4 1.2 2.4V18h6v-1.5c0-1 .5-1.8 1.2-2.4 1-1 1.8-2.1 1.8-4.1a6 6 0 0 0-6-6Z"/><path d="m12 10-1.7 1.5a1.5 1.5 0 0 0 2 2.2l1.7-1.6"/>'),
             sofa: iconWrap('<path d="M6 13h12v5H6z"/><path d="M7 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4"/><path d="M12 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4"/><path d="M5 18h14"/>'),
             handSign: iconWrap('<path d="M8 16V8.5a1 1 0 1 1 2 0V13"/><path d="M10 13V7.5a1 1 0 1 1 2 0V13"/><path d="M12 13V8.5a1 1 0 1 1 2 0V13"/><path d="M14 13v-2a1 1 0 1 1 2 0v4c0 2.2-1.8 4-4 4H9c-2.2 0-4-1.8-4-4v-2.5"/>'),
@@ -964,7 +967,7 @@
         }
 
         function svgHands() {
-            return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 78c10-12 20-18 31-18 9 0 16 6 22 14l7 10c3 4 8 6 13 6s10-2 13-6l7-10c6-8 13-14 22-14 11 0 21 6 31 18" stroke="#2E6DA4" stroke-width="4.5"></path><path d="M54 82 72 96c6 5 14 5 20 0l8-7c3-3 8-3 11 0l8 7c6 5 14 5 20 0l18-14" stroke="#E8540A" stroke-width="5"></path><path d="M38 92h32" stroke="#2E6DA4" stroke-width="4"></path><path d="M110 92h32" stroke="#2E6DA4" stroke-width="4"></path></g></svg>`;
+            return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="44" r="13" stroke="#2E6DA4" stroke-width="4"></circle><circle cx="120" cy="44" r="13" stroke="#2E6DA4" stroke-width="4"></circle><path d="M46 80c7-12 16-18 27-18 10 0 17 6 22 14" stroke="#E8540A" stroke-width="5"></path><path d="M134 80c-7-12-16-18-27-18-10 0-17 6-22 14" stroke="#E8540A" stroke-width="5"></path><path d="M76 88h28" stroke="#2E6DA4" stroke-width="4"></path><path d="M90 74v28" stroke="#2E6DA4" stroke-width="4"></path></g></svg>`;
         }
 
         function svgTeamFallback() {
@@ -1284,7 +1287,7 @@
                     <div class="item-grid orange-list">
                         ${slides.find((s) => s.id === "equipo-cierre").items.map((item, index) => renderItem(item, index, true).replace('<div class="item-card">','<div class="item-card" style="padding:18px">').replace('font-size: 15px','font-size: 16px')).join("")}
                     </div>
-                    <div class="slide-image-wrap bottom" style="align-self:end;opacity:.16;filter:saturate(.68)">
+                    <div class="slide-image-wrap bottom" style="align-self:end;opacity:.08;filter:saturate(.56)">
                         ${svgTeamFallback()}
                     </div>
                 </div>
@@ -1502,7 +1505,7 @@
                     <div class="item-grid" style="margin-top:16px;margin-bottom:16px">
                         ${slides.find((s) => s.id === "por-que-acreditarte").items.map((item, index) => renderItem(item, index)).join("")}
                     </div>
-                    <div class="slide-image-wrap bottom" style="opacity:.18;filter:saturate(.72)">
+                    <div class="slide-image-wrap bottom" style="opacity:.09;filter:saturate(.58)">
                         ${svgTeamFallback()}
                     </div>
                 </div>
@@ -1533,12 +1536,12 @@
         }
 
         function renderVisual(name) {
-            if (name === "fibe") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Instrumento oficial del SISE</div><div class="tall-svg" style="min-height:170px">${svgFichaStroke()}</div></div>`;
-            if (name === "risk") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en contexto de emergencia</div><div class="tall-svg" style="min-height:170px">${svgEmergencyHouse()}</div></div>`;
-            if (name === "door") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en el hogar afectado</div><div class="tall-svg" style="min-height:170px">${svgDoorSurvey()}</div></div>`;
-            if (name === "modules") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Módulos de registro</div><div class="tall-svg" style="min-height:170px">${svgModulesGlow()}</div></div>`;
-            if (name === "map") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Ubicación del hogar</div><div class="tall-svg" style="min-height:170px">${svgMapPinBounce()}</div></div>`;
-            if (name === "family") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Integrantes del hogar</div><div class="tall-svg" style="min-height:170px">${svgFamilyAppear()}</div></div>`;
+            if (name === "fibe") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Instrumento oficial del SISE</div><div class="tall-svg" style="min-height:154px">${svgFichaStroke()}</div></div>`;
+            if (name === "risk") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en contexto de emergencia</div><div class="tall-svg" style="min-height:154px">${svgEmergencyHouse()}</div></div>`;
+            if (name === "door") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en el hogar afectado</div><div class="tall-svg" style="min-height:154px">${svgDoorSurvey()}</div></div>`;
+            if (name === "modules") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Módulos de registro</div><div class="tall-svg" style="min-height:154px">${svgModulesGlow()}</div></div>`;
+            if (name === "map") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Ubicación del hogar</div><div class="tall-svg" style="min-height:154px">${svgMapPinBounce()}</div></div>`;
+            if (name === "family") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Integrantes del hogar</div><div class="tall-svg" style="min-height:154px">${svgFamilyAppear()}</div></div>`;
             return "";
         }
 
@@ -1581,7 +1584,7 @@
                 return `<div class="impact-body">${slide.items.map((item, index) => `<div class="impact-card delay-${index + 1}" style="padding:18px"><div class="impact-icon">${iconSet[item.icon]}</div><p style="font-size:17px">${item.text}</p></div>`).join("")}${svgPeopleRow()}</div>`;
             }
             if (slide.layout === "visual-right") {
-                return `<div class="split-visual"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index)).join("")}</div>${renderVisual(slide.visual)}</div>`;
+                return `<div class="split-visual"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:18px 18px">').replace('font-size: 16px','font-size: 18px')).join("")}</div>${renderVisual(slide.visual)}</div>`;
             }
             if (slide.layout === "needs-special") {
                 const items = slides.find((s) => s.id === "modulo-3").items;
@@ -1596,7 +1599,7 @@
                         <div class="item-head">
                             <span class="item-number">${item.number || index + 1}</span>
                             <span class="item-icon" style="color:${index % 2 === 0 ? "#E8540A" : "#2E6DA4"}">${iconSet[item.icon] || iconSet.document}</span>
-                            <div class="item-text" style="font-size:15px;line-height:1.35">${item.text}</div>
+                            <div class="item-text" style="font-size:16px;line-height:1.4">${item.text}</div>
                         </div>
                         ${item.badge ? `<div style="display:inline-block;background:#E8540A;color:#FFFFFF;border-radius:6px;padding:5px 8px;font-size:11px;font-weight:700">${item.badge}</div>` : ""}
                         <div class="item-media">${mediaByIndex[index] || ""}</div>
