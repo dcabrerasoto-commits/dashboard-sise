@@ -49,7 +49,7 @@
         @keyframes aparecer { 0%,10% { opacity: 0; transform: translateY(20px); } 28%,100% { opacity: 1; transform: translateY(0); } }
 
         html, body { width: 100%; height: 100%; }
-        body { background: var(--gris-fondo); color: var(--azul-profundo); min-height: 100vh; overflow: hidden; padding: 8px; }
+        body { background: var(--gris-fondo); color: var(--azul-profundo); width: 100vw; height: 100dvh; min-height: 100dvh; overflow: hidden; padding: 0; }
 
         .splash-screen {
             position: fixed; inset: 0; z-index: 50; background: linear-gradient(135deg, #1B3A6B, #2E6DA4);
@@ -68,11 +68,11 @@
         }
         .splash-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.22); }
 
-        .app-shell { width: 100%; height: 100%; margin: 0; display: grid; grid-template-rows: auto 1fr; gap: 12px; }
+        .app-shell { width: 100vw; height: 100dvh; margin: 0; padding: 8px; display: grid; grid-template-rows: auto 1fr; gap: 12px; }
 
         .hero { background: linear-gradient(135deg, #1B3A6B 0%, #2E6DA4 60%, #ffffff 100%); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 20px; overflow: hidden; }
         .hero-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: center; }
-        .hero-copy { display: grid; gap: 6px; max-width: 840px; color: var(--blanco); }
+        .hero-copy { display: grid; gap: 6px; max-width: none; color: var(--blanco); }
         .hero-kicker { font-weight: 300; font-size: .86rem; line-height: 1.3; }
         .hero-title { font-weight: 900; font-size: clamp(1.55rem, 2.2vw, 2.2rem); line-height: 1.05; white-space: normal; }
         .hero-subtitle { font-weight: 300; font-size: 1.02rem; line-height: 1.2; font-style: italic; }
@@ -82,7 +82,7 @@
         }
         .hero-logos img { height: 52px; width: auto; display: block; }
 
-        .workspace { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 14px; min-height: 0; }
+        .workspace { display: grid; grid-template-columns: minmax(268px, 18vw) minmax(0, 1fr); gap: 12px; min-height: 0; }
         .sidebar, .slide-stage, .nav-controls, .benefit-card { background: var(--blanco); border-radius: var(--radius); box-shadow: var(--shadow); transition: transform var(--ease), box-shadow var(--ease), background var(--ease); }
         .sidebar { padding: 16px; display: grid; grid-template-rows: auto auto 1fr; gap: 12px; min-height: 0; }
         .sidebar-title { font-weight: 900; font-size: 1.18rem; color: var(--azul-profundo); }
@@ -97,7 +97,7 @@
         .slide-stage { overflow: hidden; min-height: 0; }
         .slide-track { position: relative; width: 100%; height: 100%; }
         .slide {
-            position: absolute; inset: 0; padding: 22px 24px 20px; display: flex; flex-direction: column; gap: 16px;
+            position: absolute; inset: 0; padding: 18px 20px; display: flex; flex-direction: column; gap: 14px;
             opacity: 0; transform: translateX(34px); pointer-events: none; transition: opacity .4s ease, transform .4s ease;
             background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,253,.98)); overflow: auto;
         }
@@ -114,7 +114,7 @@
         .slide.impact-slide .slide-title, .slide.final-slide .slide-title { color: #FFFFFF; text-align: center; }
         .slide.final-slide .slide-title { font-size: 32px; }
 
-        .slide-body { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; justify-content: center; }
+        .slide-body { display: flex; flex-direction: column; gap: 12px; flex: 1; min-height: 0; justify-content: center; }
         .slide-body.with-bottom-image { justify-content: center; align-items: center; gap: 16px; }
         .split-60-40, .split-70-30, .split-visual, .split-40-60 { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 24px; flex: 1; min-height: 0; }
         .split-60-40 > :first-child, .split-70-30 > :first-child, .split-visual > :first-child, .split-40-60 > :first-child { display: flex; flex-direction: column; justify-content: center; gap: 10px; flex: 1; min-height: 100%; align-self: stretch; }
@@ -137,7 +137,7 @@
         .item-media svg { width: 100%; display: block; animation: fadeInSoft .4s ease; }
         .item-media text { font-family: "gobCL", sans-serif; }
 
-        .visual-panel, .visual-panel-light { border-radius: 16px; padding: 16px; box-shadow: var(--shadow); height: 100%; display:flex; flex-direction:column; min-height: 280px; justify-content: center; gap: 6px; }
+        .visual-panel, .visual-panel-light { border-radius: 16px; padding: 16px; box-shadow: var(--shadow); height: 100%; display:flex; flex-direction:column; min-height: 280px; justify-content: center; gap: 4px; }
         .visual-panel { background: linear-gradient(180deg, #FFFFFF, #F8FAFD); }
         .visual-panel-light { background: #F0F4FF; }
         .visual-title { font-weight: 700; color: var(--azul-profundo); font-size: 18px; margin-bottom: 0; line-height: 1.2; }
@@ -280,46 +280,47 @@
         }
 
         @media (max-width: 760px) {
-            body { overflow: hidden; padding: 4px; }
-            .app-shell { width: 100%; margin: 0; height: 100%; gap: 8px; }
-            .hero { padding: 12px 14px; border-radius: 14px; }
+            body { overflow: hidden; padding: 0; }
+            .app-shell { width: 100vw; margin: 0; height: 100dvh; padding: 4px; gap: 8px; }
+            .hero { padding: 10px 12px; border-radius: 12px; }
             .hero-top { gap: 10px; align-items: start; }
             .workspace { gap: 8px; min-height: 0; grid-template-rows: auto 1fr; }
             .sidebar { padding: 10px 12px; gap: 8px; grid-template-rows: auto auto; }
             .sidebar-title { font-size: 1rem; }
             .sidebar-copy { display: none; }
             .nav-list { display: flex; gap: 8px; overflow-x: auto; overflow-y: hidden; padding-bottom: 2px; }
-            .nav-item { min-height: auto; min-width: max-content; padding: 8px 12px; border-radius: 999px; grid-template-columns: 18px auto; gap: 8px; font-size: 15px; line-height: 1.1; white-space: nowrap; background: #F3F7FC; }
+            .nav-item { min-height: auto; min-width: max-content; padding: 8px 11px; border-radius: 999px; grid-template-columns: 18px auto; gap: 8px; font-size: 14px; line-height: 1.1; white-space: nowrap; background: #F3F7FC; }
             .nav-item svg { width: 18px; height: 18px; }
             .main-panel { gap: 10px; min-height: 0; }
             .slide-stage { min-height: 0; height: 100%; }
-            .slide { padding: 16px; }
-            .slide-title { font-size: 20px; line-height: 1.08; }
-            .slide.final-slide .slide-title { font-size: 18px; line-height: 1.08; }
-            .hero-kicker { font-size: 12px; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-            .hero-title { font-size: clamp(1.05rem, 5.6vw, 1.45rem); line-height: 1.02; white-space: normal; max-width: 92%; }
+            .slide { padding: 14px 14px 12px; }
+            .slide-title { font-size: 18px; line-height: 1.08; }
+            .slide.final-slide .slide-title { font-size: 17px; line-height: 1.08; }
+            .hero-kicker { font-size: 11px; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .hero-title { font-size: clamp(.95rem, 4.8vw, 1.2rem); line-height: 1.02; white-space: normal; max-width: 100%; }
             .splash-title { font-size: clamp(1.35rem, 6vw, 2rem); white-space: normal; }
-            .hero-logos { justify-content: center; align-self: start; width: fit-content; min-height: 0; padding: 8px 12px; border-radius: 14px; gap: 10px; }
-            .hero-logos img { height: 28px; }
-            .hero-kicker, .sidebar-copy, .nav-item, .item-text, .impact-card p, .benefit-card p, .need-card p, .statement-banner, .progress-count, .visual-title { font-size: 16px; }
-            .hero-subtitle, .splash-subtitle, .final-subtitle { font-size: 14px; }
+            .hero-logos { justify-content: center; align-self: start; width: fit-content; min-height: 0; padding: 6px 10px; border-radius: 12px; gap: 8px; }
+            .hero-logos img { height: 24px; }
+            .hero-kicker, .sidebar-copy, .item-text, .impact-card p, .benefit-card p, .need-card p, .statement-banner, .progress-count, .visual-title { font-size: 15px; }
+            .hero-subtitle, .splash-subtitle, .final-subtitle { font-size: 13px; }
             .qr-side { padding: 18px; }
             .qr-side img { width: min(220px, 72vw) !important; height: auto !important; aspect-ratio: 1 / 1; }
-            .visual-panel, .visual-panel-light { padding: 14px; min-height: 210px; }
-            .tall-svg { min-height: 140px; }
-            .tall-svg svg { min-height: 130px; max-height: 165px; }
+            .visual-panel, .visual-panel-light { padding: 12px; min-height: 180px; }
+            .tall-svg { min-height: 124px; }
+            .tall-svg svg { min-height: 116px; max-height: 146px; }
             .impact-card { grid-template-columns: 1fr; text-align: center; }
             .impact-icon { margin: 0 auto; }
             .progress-bar { width: 100%; }
-            .nav-controls { padding: 8px 10px; grid-template-columns: 1fr 1fr; gap: 8px 10px; align-items: center; }
-            .nav-controls .nav-btn { padding: 10px 12px; font-size: 15px; line-height: 1; min-height: 42px; }
+            .nav-controls { padding: 6px 8px; grid-template-columns: 1fr 1fr; gap: 6px 8px; align-items: center; }
+            .nav-controls .nav-btn { padding: 9px 12px; font-size: 14px; line-height: 1; min-height: 38px; }
             .nav-controls .nav-btn.prev, .nav-controls .nav-btn.next { justify-self: stretch; }
             .progress-panel { grid-column: 1 / -1; min-width: 0; order: 3; }
             .progress-count { margin-bottom: 4px; font-size: 15px; }
             .progress-bar { height: 6px; }
-            .final-wrap { gap: 10px; }
+            .final-wrap { gap: 8px; }
             .final-wrap > div, .final-wrap p { max-width: 100%; }
-            .final-btn { padding: 8px 18px; font-size: 13px; }
+            .final-btn { padding: 8px 16px; font-size: 12px; }
+            .final-meta { font-size: 12px; }
         }
     </style>
 </head>
@@ -427,7 +428,7 @@
             tent: iconWrap('<path d="m4.5 18 7.5-11 7.5 11"/><path d="M12 7v11"/><path d="M7.5 18h9"/>'),
             box: iconWrap('<path d="m4.5 8 7.5-4 7.5 4-7.5 4-7.5-4Z"/><path d="M4.5 8v8l7.5 4 7.5-4V8"/><path d="M12 12v8"/>'),
             wheelchair: iconWrap('<circle cx="10" cy="6.5" r="2"/><circle cx="10" cy="16.5" r="3.5"/><path d="M10 8.5v4h4"/><path d="M14 12.5 16 18"/><path d="M8 12.5h6"/>'),
-            support: iconWrap('<path d="M6 13c1.5 0 2.5 1 3 2.5.7 2 2 2.5 3 2.5 2 0 3-2 3.8-3.3.6-1 1.4-1.7 2.7-1.7"/><path d="M4.5 12.5c0-1.5 1-2.5 2.5-2.5 1.7 0 2.8 1.4 3.5 2.5"/><path d="M19.5 12.5c0-1.5-1-2.5-2.5-2.5-1.7 0-2.8 1.4-3.5 2.5"/>'),
+            support: iconWrap('<path d="M4 14c2.5-3 5.2-4.5 8-4.5 2.8 0 5.5 1.5 8 4.5"/><path d="M6 16.5 9.5 19c1.5 1 3.5 1 5 0l3.5-2.5"/><path d="M7 12.5 10 15"/><path d="M17 12.5 14 15"/>'),
             mind: iconWrap('<path d="M12 4a6 6 0 0 0-6 6c0 2 .8 3.1 1.8 4.1.7.6 1.2 1.4 1.2 2.4V18h6v-1.5c0-1 .5-1.8 1.2-2.4 1-1 1.8-2.1 1.8-4.1a6 6 0 0 0-6-6Z"/><path d="m12 10-1.7 1.5a1.5 1.5 0 0 0 2 2.2l1.7-1.6"/>'),
             sofa: iconWrap('<path d="M6 13h12v5H6z"/><path d="M7 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4"/><path d="M12 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4"/><path d="M5 18h14"/>'),
             handSign: iconWrap('<path d="M8 16V8.5a1 1 0 1 1 2 0V13"/><path d="M10 13V7.5a1 1 0 1 1 2 0V13"/><path d="M12 13V8.5a1 1 0 1 1 2 0V13"/><path d="M14 13v-2a1 1 0 1 1 2 0v4c0 2.2-1.8 4-4 4H9c-2.2 0-4-1.8-4-4v-2.5"/>'),
@@ -963,7 +964,7 @@
         }
 
         function svgHands() {
-            return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g stroke="#E8540A" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M38 84c8-18 18-28 30-28 8 0 13 5 18 12 4 6 8 11 14 11 6 0 10-5 14-11 5-7 10-12 18-12 12 0 22 10 30 28"></path><path d="M48 90h84"></path><path d="M60 98h60"></path><path d="M138 84c6-8 10-16 10-24 0-9-6-14-14-14-8 0-12 5-18 13"></path></g></svg>`;
+            return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30 78c10-12 20-18 31-18 9 0 16 6 22 14l7 10c3 4 8 6 13 6s10-2 13-6l7-10c6-8 13-14 22-14 11 0 21 6 31 18" stroke="#2E6DA4" stroke-width="4.5"></path><path d="M54 82 72 96c6 5 14 5 20 0l8-7c3-3 8-3 11 0l8 7c6 5 14 5 20 0l18-14" stroke="#E8540A" stroke-width="5"></path><path d="M38 92h32" stroke="#2E6DA4" stroke-width="4"></path><path d="M110 92h32" stroke="#2E6DA4" stroke-width="4"></path></g></svg>`;
         }
 
         function svgTeamFallback() {
@@ -1283,7 +1284,7 @@
                     <div class="item-grid orange-list">
                         ${slides.find((s) => s.id === "equipo-cierre").items.map((item, index) => renderItem(item, index, true).replace('<div class="item-card">','<div class="item-card" style="padding:18px">').replace('font-size: 15px','font-size: 16px')).join("")}
                     </div>
-                    <div class="slide-image-wrap bottom" style="align-self:end;opacity:.24;filter:saturate(.78)">
+                    <div class="slide-image-wrap bottom" style="align-self:end;opacity:.16;filter:saturate(.68)">
                         ${svgTeamFallback()}
                     </div>
                 </div>
@@ -1501,7 +1502,7 @@
                     <div class="item-grid" style="margin-top:16px;margin-bottom:16px">
                         ${slides.find((s) => s.id === "por-que-acreditarte").items.map((item, index) => renderItem(item, index)).join("")}
                     </div>
-                    <div class="slide-image-wrap bottom" style="opacity:.28;filter:saturate(.82)">
+                    <div class="slide-image-wrap bottom" style="opacity:.18;filter:saturate(.72)">
                         ${svgTeamFallback()}
                     </div>
                 </div>
@@ -1586,7 +1587,7 @@
                 const items = slides.find((s) => s.id === "modulo-3").items;
                 const mediaByIndex = [
                     `<div style="margin-top:4px">${svgWheelchair().replace('height="120"', 'height="62"')}</div>`,
-                    `<div style="margin-top:4px">${svgHands().replace('height="120"', 'height="62"')}</div>`,
+                    `<div style="margin-top:2px">${svgHands().replace('height="120"', 'height="54"')}</div>`,
                     `<div style="margin-top:2px"><svg viewBox="0 0 180 120" height="68" aria-hidden="true"><g stroke="#2E6DA4" fill="none" stroke-width="3"><path d="M90 18a36 36 0 0 0-36 36c0 12 5 20 11 26 4 4 7 9 7 15v3h36v-3c0-6 3-11 7-15 6-6 11-14 11-26A36 36 0 0 0 90 18Z"></path></g><path d="m90 78-14-12a9 9 0 0 1 12.5-12.8A9 9 0 0 1 103 66l-13 12Z" fill="#E8540A" style="animation:pulseHeart 1s infinite;transform-origin:center"></path></svg></div>`,
                     `<div style="margin-top:2px">${svgUrgencyScale().replace('height="100"', 'height="62"')}</div>`
                 ];
