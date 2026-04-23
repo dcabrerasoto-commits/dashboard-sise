@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora la Ficha Básica de Emergencia - Acreditación 2026</title>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        @font-face { font-family: "gobCL"; src: url("./fonts/gobCL_Light.otf") format("opentype"); font-weight: 300; font-style: normal; }
+        @font-face { font-family: "gobCL"; src: url("./fonts/gobCL_Regular.otf") format("opentype"); font-weight: 400; font-style: normal; }
+        @font-face { font-family: "gobCL"; src: url("./fonts/gobCL_Bold.otf") format("opentype"); font-weight: 700; font-style: normal; }
+        @font-face { font-family: "gobCL"; src: url("./fonts/gobCL_Heavy.otf") format("opentype"); font-weight: 900; font-style: normal; }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "gobCL", sans-serif; }
+
+        :root {
+            --azul-profundo: #1B3A6B;
+            --azul-medio: #2E6DA4;
+            --azul-claro: #E8F0FA;
+            --naranjo: #E8540A;
+            --blanco: #FFFFFF;
+            --gris-fondo: #F0F2F5;
+            --gris-texto: #435261;
+            --gris-suave: #6D7D8D;
+            --card-bg: #EEF3FA;
+            --shadow: 0 2px 12px rgba(0,0,0,0.08);
+            --shadow-strong: 0 4px 16px rgba(27,58,107,0.25);
+            --radius: 16px;
+            --ease: 0.25s ease;
+        }
+
+        @keyframes fadeInSoft { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes splashRise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes dashFlow { from { stroke-dashoffset: 18; } to { stroke-dashoffset: 0; } }
+        @keyframes pulseNode { 0%,100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+        @keyframes pulseRing { 0% { filter: drop-shadow(0 0 0 rgba(46,109,164,0.4)); } 70% { filter: drop-shadow(0 0 14px rgba(46,109,164,0)); } 100% { filter: drop-shadow(0 0 0 rgba(46,109,164,0)); } }
+        @keyframes pulseHeart { 0%,100% { transform: scale(1); } 50% { transform: scale(1.3); } }
+        @keyframes bouncePin { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+        @keyframes flicker { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+        @keyframes revealStroke { from { stroke-dashoffset: 120; } to { stroke-dashoffset: 0; } }
+        @keyframes moduleGlow { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+        @keyframes slideUpFade { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes figureFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes barGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+        @keyframes alertWave { 0% { opacity: .8; transform: scale(.82); } 100% { opacity: 0; transform: scale(1.42); } }
+        @keyframes sway { 0% { transform: rotate(-5deg); } 100% { transform: rotate(5deg); } }
+        @keyframes moduleCycle { 0%,18% { fill:#E0E8F0; } 28%,72% { fill:#2E6DA4; } 100% { fill:#E0E8F0; } }
+        @keyframes familyCycle { 0%,20% { opacity: 0; } 28%,72% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes aparecer { 0%,10% { opacity: 0; transform: translateY(20px); } 28%,100% { opacity: 1; transform: translateY(0); } }
+
+        html, body { width: 100%; height: 100%; }
+        body { background: var(--gris-fondo); color: var(--azul-profundo); width: 100vw; height: 100dvh; min-height: 100dvh; overflow: hidden; padding: 0; }
+
+        .splash-screen {
+            position: fixed; inset: 0; z-index: 50; background: linear-gradient(135deg, #1B3A6B, #2E6DA4);
+            display: flex; align-items: center; justify-content: center; padding: 28px; transition: opacity .45s ease, visibility .45s ease;
+        }
+        .splash-screen.fade-out { opacity: 0; visibility: hidden; }
+        .splash-card { width: min(720px, 100%); text-align: center; color: #FFFFFF; display: grid; gap: 18px; justify-items: center; }
+        .splash-logos { display: flex; align-items: center; gap: 16px; animation: splashRise .3s ease both; }
+        .splash-logos img { height: 50px; width: auto; display: block; background: rgba(255,255,255,.96); padding: 6px 10px; border-radius: 8px; }
+        .splash-title { font-weight: 900; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1.02; animation: splashRise .6s ease both; white-space: nowrap; }
+        .splash-subtitle { font-weight: 300; font-size: clamp(1.1rem, 2vw, 1.55rem); animation: splashRise .9s ease both; }
+        .splash-copy { font-weight: 300; font-size: .98rem; line-height: 1.45; max-width: 560px; animation: splashRise 1s ease both; }
+        .splash-btn {
+            margin-top: 8px; border: none; border-radius: 999px; background: #FFFFFF; color: #1B3A6B; padding: 14px 24px;
+            font-weight: 700; font-size: 1rem; cursor: pointer; box-shadow: 0 10px 24px rgba(0,0,0,.16); transition: transform var(--ease), box-shadow var(--ease); animation: splashRise 1.2s ease both;
+        }
+        .splash-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.22); }
+
+        .app-shell { width: 100vw; height: 100dvh; margin: 0; padding: 8px; display: grid; grid-template-rows: auto 1fr; gap: 12px; }
+
+        .hero { background: linear-gradient(135deg, #1B3A6B 0%, #2E6DA4 60%, #ffffff 100%); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 20px; overflow: hidden; }
+        .hero-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: center; }
+        .hero-copy { display: grid; gap: 6px; max-width: none; color: var(--blanco); }
+        .hero-kicker { font-weight: 300; font-size: .86rem; line-height: 1.3; }
+        .hero-title { font-weight: 900; font-size: clamp(1.55rem, 2.2vw, 2.2rem); line-height: 1.05; white-space: normal; }
+        .hero-subtitle { font-weight: 300; font-size: 1.02rem; line-height: 1.2; font-style: italic; }
+        .hero-logos {
+            display: flex; align-items: center; justify-content: flex-end; gap: 12px; padding: 10px; border-radius: 10px;
+            background: #FFFFFF; min-height: 72px;
+        }
+        .hero-logos img { height: 52px; width: auto; display: block; }
+
+        .workspace { display: grid; grid-template-columns: minmax(268px, 18vw) minmax(0, 1fr); gap: 12px; min-height: 0; }
+        .sidebar, .slide-stage, .nav-controls, .benefit-card { background: var(--blanco); border-radius: var(--radius); box-shadow: var(--shadow); transition: transform var(--ease), box-shadow var(--ease), background var(--ease); }
+        .sidebar { padding: 16px; display: grid; grid-template-rows: auto auto 1fr; gap: 12px; min-height: 0; }
+        .sidebar-title { font-weight: 900; font-size: 1.18rem; color: var(--azul-profundo); }
+        .sidebar-copy { font-weight: 300; color: var(--gris-texto); line-height: 1.4; font-size: .95rem; }
+        .nav-list { display: grid; gap: 8px; overflow: auto; min-height: 0; padding-right: 4px; }
+        .nav-item { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: center; padding: 11px 12px; border-radius: 12px; text-decoration: none; color: var(--azul-profundo); transition: all var(--ease); font-weight: 400; font-size: .94rem; line-height: 1.25; }
+        .nav-item:hover { background: #E8F0FA; }
+        .nav-item.active { background: linear-gradient(135deg, #1B3A6B, #2E6DA4); color: var(--blanco); }
+        .nav-item svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+
+        .main-panel { display: grid; grid-template-rows: 1fr auto; gap: 14px; min-height: 0; }
+        .slide-stage { overflow: hidden; min-height: 0; }
+        .slide-track { position: relative; width: 100%; height: 100%; }
+        .slide {
+            position: absolute; inset: 0; padding: 18px 20px; display: flex; flex-direction: column; gap: 14px;
+            opacity: 0; transform: translateX(34px); pointer-events: none; transition: opacity .4s ease, transform .4s ease;
+            background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,253,.98)); overflow: auto;
+        }
+        .slide.active { opacity: 1; transform: translateX(0); pointer-events: auto; }
+        .slide.impact-slide { background: linear-gradient(135deg, #1B3A6B, #2E6DA4); }
+        .slide.final-slide { background: linear-gradient(135deg, #1B3A6B 0%, #2E6DA4 100%); justify-items: center; align-content: center; }
+        .slide.final-slide .slide-head { display: none; }
+
+        .slide-head { padding-bottom: 12px; border-bottom: 1px solid rgba(27,58,107,.10); position: relative; }
+        .slide.impact-slide .slide-head, .slide.final-slide .slide-head { border-bottom-color: rgba(255,255,255,.18); }
+        .slide-head::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 60px; height: 3px; border-radius: 999px; background: linear-gradient(90deg, #E8540A, #2E6DA4); }
+        .slide.impact-slide .slide-head::after, .slide.final-slide .slide-head::after { left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.32)); }
+        .slide-title { font-weight: 900; color: #1B3A6B; font-size: 28px; line-height: 1.08; }
+        .slide.impact-slide .slide-title, .slide.final-slide .slide-title { color: #FFFFFF; text-align: center; }
+        .slide.final-slide .slide-title { font-size: 32px; }
+
+        .slide-body { display: flex; flex-direction: column; gap: 12px; flex: 1; min-height: 0; justify-content: center; }
+        .slide-body.with-bottom-image { justify-content: center; align-items: center; gap: 16px; }
+        .split-60-40, .split-70-30, .split-visual, .split-40-60 { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 24px; flex: 1; min-height: 0; }
+        .split-60-40 > :first-child, .split-70-30 > :first-child, .split-visual > :first-child, .split-40-60 > :first-child { display: flex; flex-direction: column; justify-content: center; gap: 10px; flex: 1; min-height: 100%; align-self: stretch; }
+        .split-60-40 > :last-child, .split-70-30 > :last-child, .split-visual > :last-child, .split-40-60 > :last-child { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 100%; align-self: stretch; }
+        .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+        .item-grid { display: grid; gap: 10px; min-height: 0; align-content: center; }
+        .item-card {
+            background: #EEF3FA; border-left: 4px solid #E8540A; border-radius: 8px; padding: 14px 15px; display: grid; gap: 8px;
+            transition: all var(--ease); animation: fadeInSoft .4s ease both;
+        }
+        .item-card:hover, .benefit-card:hover, .impact-card:hover, .need-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .item-head { display: grid; grid-template-columns: auto auto 1fr; gap: 10px; align-items: start; }
+        .item-head.no-number { grid-template-columns: auto 1fr; }
+        .item-number { width: 28px; height: 28px; border-radius: 50%; background: #1B3A6B; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; margin-top: 1px; }
+        .item-icon { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+        .item-icon svg, .benefit-icon svg, .impact-icon svg, .need-icon svg, .big-icon svg, .splash-big-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+        .item-text { font-weight: 400; font-size: 18px; line-height: 1.74; color: var(--gris-texto); }
+        .item-media { margin-top: 8px; }
+        .item-media svg { width: 100%; display: block; animation: fadeInSoft .4s ease; }
+        .item-media text { font-family: "gobCL", sans-serif; }
+
+        .visual-panel, .visual-panel-light { border-radius: 16px; padding: 16px; box-shadow: var(--shadow); height: 100%; display:flex; flex-direction:column; min-height: 280px; justify-content: center; gap: 4px; }
+        .visual-panel { background: linear-gradient(180deg, #FFFFFF, #F8FAFD); }
+        .visual-panel-light { background: #F0F4FF; }
+        .visual-title { font-weight: 700; color: var(--azul-profundo); font-size: 18px; margin-bottom: 0; line-height: 1.2; }
+        .split-visual .item-grid { flex: 1.12; }
+        .split-visual .visual-panel-light { flex: .88; }
+        .split-visual .item-card { padding: 18px 18px; }
+
+        .sise-svg text, .app-flow-svg text, .pyramid-svg text, .timeline-svg text, .scale-svg text, .form-svg text, .module-svg text { font-family: "gobCL", sans-serif; }
+        .sise-node { animation: pulseNode 2s ease-in-out infinite; transform-origin: center; }
+        .sise-node.delay-1 { animation-delay: 0s; }
+        .sise-node.delay-2 { animation-delay: .3s; }
+        .sise-node.delay-3 { animation-delay: .6s; }
+        .sise-node.delay-4 { animation-delay: .9s; }
+
+        .impact-body { display: grid; gap: 12px; align-content: start; }
+        .impact-card {
+            background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.22); border-radius: 14px; color: #FFFFFF; padding: 18px;
+            display: grid; grid-template-columns: 54px 1fr; gap: 14px; align-items: center; animation: fadeInSoft .45s ease both;
+        }
+        .impact-card.delay-1 { animation-delay: .08s; } .impact-card.delay-2 { animation-delay: .18s; } .impact-card.delay-3 { animation-delay: .28s; }
+        .impact-icon { width: 54px; height: 54px; border-radius: 16px; background: rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; color: #FFFFFF; }
+        .impact-card p { font-size: 18px; line-height: 1.48; font-weight: 400; }
+        .people-row-wrap { margin-top: 2px; text-align: center; }
+        .people-caption { font-size: 16px; font-style: italic; color: #FFFFFF; margin-bottom: 8px; }
+        .people-row svg { width: 100%; max-width: 620px; height: 132px; }
+        .person-figure { opacity: 0; animation: aparecer 3s ease infinite both; transform-origin: center bottom; }
+        .person-figure.d1 { animation-delay: 0s; } .person-figure.d2 { animation-delay: .5s; } .person-figure.d3 { animation-delay: 1s; } .person-figure.d4 { animation-delay: 1.5s; } .person-figure.d5 { animation-delay: 2s; } .person-figure.d6 { animation-delay: 2.5s; }
+
+        .need-banner {
+            display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: center; background: #1B3A6B; color: #FFFFFF;
+            border-radius: 10px; padding: 12px 14px; font-size: 15px; line-height: 1.35;
+        }
+        .need-banner svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.9; }
+        .needs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .need-card {
+            background: #EEF3FA; border-radius: 12px; padding: 20px 14px; min-height: 120px; text-align: center; box-shadow: var(--shadow); transition: all var(--ease);
+        }
+        .needs-grid .need-card:nth-child(odd):hover { background:#1B3A6B !important; }
+        .needs-grid .need-card:nth-child(even):hover { background:#E8540A !important; }
+        .needs-grid .need-card:hover p, .needs-grid .need-card:hover .need-icon { color:#FFFFFF !important; }
+        .need-icon {
+            width: 72px; height: 72px; margin: 0 auto 12px; border-radius: 18px; background: #FFFFFF; color: #E8540A; display: flex; align-items: center; justify-content: center;
+        }
+        .need-icon svg { width: 56px; height: 56px; }
+        .need-card p { font-size: 18px; line-height: 1.4; color: var(--gris-texto); }
+
+        .statement-banner {
+            background: #FFF3E0; border-left: 4px solid #E8540A; border-radius: 8px; padding: 16px; font-size: 17px; line-height: 1.58; color: var(--gris-texto);
+        }
+
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .benefit-card {
+            background: #1B3A6B; color: #FFFFFF; border: 1px solid rgba(255,255,255,.05); min-height: 160px; padding: 20px 16px; text-align: center; box-shadow: var(--shadow-strong);
+            animation: slideUpFade .45s ease both; transition: transform .25s ease;
+        }
+        .benefit-card:nth-child(1) { animation-delay: .05s; } .benefit-card:nth-child(2) { animation-delay: .15s; } .benefit-card:nth-child(3) { animation-delay: .25s; }
+        .benefit-card:nth-child(4) { animation-delay: .35s; } .benefit-card:nth-child(5) { animation-delay: .45s; } .benefit-card:nth-child(6) { animation-delay: .55s; }
+        .benefit-card:hover { transform: scale(1.05); }
+        .benefit-num { color: #E8540A; font-weight: 900; font-size: 36px; margin-bottom: 10px; }
+        .benefit-icon { width: 50px; height: 50px; margin: 0 auto 12px; border-radius: 14px; background: rgba(255,255,255,.08); color: #E8540A; display: flex; align-items: center; justify-content: center; }
+        .benefit-card p { font-weight: 400; font-size: 18px; line-height: 1.4; color: #FFFFFF; }
+
+        .cases-slide { display: flex; flex-direction: column; gap: 16px; flex: 1; min-height: 0; justify-content: center; }
+        .cases-head { display: grid; gap: 6px; }
+        .cases-subtitle { font-size: 18px; color: var(--gris-suave); line-height: 1.35; }
+        .cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; min-height: 0; }
+        .case-card {
+            background: linear-gradient(180deg, #FFFFFF, #F7FAFE);
+            border: 1px solid #D8E4F2;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            display: grid;
+            gap: 14px;
+            min-height: 0;
+        }
+        .case-card.featured { background: linear-gradient(180deg, #F9FBFF, #EEF4FB); }
+        .case-head { display: grid; gap: 4px; }
+        .case-title { font-size: 24px; font-weight: 900; color: var(--azul-profundo); line-height: 1.08; }
+        .case-kicker { font-size: 16px; color: var(--gris-suave); line-height: 1.3; }
+        .case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .metric-card {
+            background: #EEF4FB;
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: grid;
+            gap: 4px;
+            border: 1px solid #D9E6F4;
+        }
+        .metric-card.primary { background: linear-gradient(135deg, #1B3A6B, #2E6DA4); color: #FFFFFF; }
+        .metric-value { font-size: 34px; font-weight: 900; line-height: 1; color: inherit; }
+        .metric-label { font-size: 15px; line-height: 1.25; color: inherit; }
+        .metric-note { font-size: 13px; line-height: 1.25; opacity: .82; color: inherit; }
+        .territory-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+        .territory-strip.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .territory-chip {
+            background: #F3F7FC;
+            border: 1px solid #DCE7F4;
+            border-radius: 12px;
+            padding: 12px 12px;
+            display: grid;
+            gap: 2px;
+        }
+        .territory-name { font-size: 14px; font-weight: 700; color: var(--azul-profundo); }
+        .territory-data { font-size: 13px; color: var(--gris-texto); line-height: 1.35; }
+        .case-highlight {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            align-items: center;
+            background: linear-gradient(135deg, #EAF2FB, #F6FAFF);
+            border-radius: 14px;
+            padding: 14px 16px;
+            border-left: 4px solid #2E6DA4;
+        }
+        .case-highlight strong { display: block; font-size: 17px; color: var(--azul-profundo); line-height: 1.3; }
+        .case-highlight span { display: block; font-size: 14px; color: var(--gris-texto); line-height: 1.35; }
+        .case-highlight .ring {
+            width: 58px; height: 58px; border-radius: 50%;
+            background: conic-gradient(#2E6DA4 0deg, #2E6DA4 255deg, #DDEAF7 255deg, #DDEAF7 360deg);
+            display: grid; place-items: center;
+        }
+        .case-highlight .ring::after {
+            content: attr(data-label);
+            width: 42px; height: 42px; border-radius: 50%;
+            background: #FFFFFF; display: grid; place-items: center;
+            font-size: 14px; font-weight: 900; color: var(--azul-profundo);
+        }
+        .focus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .focus-pill {
+            background: #F3F8FD;
+            border: 1px solid #D8E6F5;
+            border-radius: 12px;
+            padding: 12px 12px;
+            display: grid;
+            grid-template-columns: 22px 1fr;
+            gap: 10px;
+            align-items: start;
+        }
+        .focus-pill i { color: #2E6DA4; width: 20px; height: 20px; }
+        .focus-pill strong { display: block; font-size: 14px; color: var(--azul-profundo); line-height: 1.25; }
+        .focus-pill span { display: block; font-size: 13px; color: var(--gris-texto); line-height: 1.35; }
+        .cases-footer {
+            background: linear-gradient(135deg, #EAF2FB, #F6FAFF);
+            border: 1px solid #D8E4F2;
+            border-radius: 16px;
+            padding: 16px 18px;
+            font-size: 18px;
+            line-height: 1.42;
+            color: var(--azul-profundo);
+            box-shadow: var(--shadow);
+        }
+
+        .slide-image-wrap { width: 100%; display: flex; align-items: center; justify-content: center; animation: fadeInSoft .6s ease both; }
+        .slide-image-wrap.bottom { margin-top: 4px; }
+        .slide-image { width: 100%; display: block; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,.12); object-fit: cover; }
+        .slide-image.hero-bottom { max-width: 100%; max-height: 220px; object-position: center top; -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); mask-image: linear-gradient(to bottom, black 70%, transparent 100%); }
+        .slide-image.team-wide { max-width: 100%; max-height: 240px; object-position: center 20%; -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
+
+        .team-fallback svg { width: 100%; max-width: 760px; height: 210px; display: block; }
+
+        .qr-side { display: grid; justify-items: center; align-content: center; gap: 10px; text-align: center; background:#1B3A6B; border-radius:12px; padding:20px; box-shadow:var(--shadow); min-height:100%; }
+        .qr-side img { width: 200px; height: 200px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,.12); display: block; }
+        .qr-side strong { font-size: 18px; color: #FFFFFF; line-height: 1.3; }
+        .qr-side .qr-sub { font-size: 17px; color: rgba(255,255,255,.88); font-weight:300; }
+        .qr-side a { font-size: 17px; color: #FFFFFF; text-decoration: underline; }
+
+        .orange-list .item-card { background: #E8540A; border-left-color: #E8540A; }
+        .orange-list .item-text { color: #FFFFFF; }
+        .orange-list .item-icon { color: #FFFFFF !important; }
+        .orange-list .item-card:hover { background: #1B3A6B; transition: .2s; }
+
+        .big-icon { width: 52px; height: 52px; margin: 0 auto; color: #2E6DA4; display: flex; align-items: center; justify-content: center; }
+        .norm-icons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
+        .norm-icon-card { text-align: center; padding: 12px; background: #F8FAFD; border-radius: 12px; }
+        .norm-icon-card span { display: block; margin-top: 8px; font-size: 16px; color: var(--gris-texto); }
+
+        .visual-fill { height: 100%; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:0; gap:6px; }
+        .tall-svg { min-height: 170px; display:flex; align-items:center; justify-content:center; flex:0 0 auto; margin-top:2px; }
+        .tall-svg svg { width:100%; height:100%; min-height:150px; max-height:180px; }
+        .sign-col .item-media svg { height: 100px; }
+
+        .final-wrap { display: flex; flex-direction: column; gap: 16px; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; flex:1; animation: fadeInSoft .5s ease both; }
+        .splash-big-icon { width: 60px; height: 60px; color: #FFFFFF; display: flex; align-items: center; justify-content: center; animation: pulseNode 2s ease-in-out infinite; }
+        .final-subtitle { color: rgba(255,255,255,.82); font-size: 18px; font-weight: 300; line-height: 1.4; max-width: 620px; }
+        .final-line { width: 60px; height: 4px; border-radius: 999px; background: #E8540A; }
+        .final-meta { color: #FFFFFF; font-size: 14px; line-height: 1.45; }
+        .final-btn {
+            border: none; border-radius: 999px; background: #FFFFFF; color: #1B3A6B; padding: 10px 24px; font-weight: 700; font-size: 14px; margin-top:auto;
+            cursor: pointer; box-shadow: 0 10px 24px rgba(0,0,0,.16); transition: transform var(--ease), box-shadow var(--ease);
+        }
+        .final-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,.22); }
+
+        .nav-controls { padding: 14px 18px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; }
+        .nav-btn {
+            border: none; border-radius: 999px; background: linear-gradient(135deg, #1B3A6B, #2E6DA4); color: #FFFFFF; padding: 12px 18px; font-weight: 700; font-size: .96rem;
+            box-shadow: 0 8px 18px rgba(27,58,107,.18); cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), opacity var(--ease);
+        }
+        .nav-btn.prev { justify-self: start; } .nav-btn.next { justify-self: end; }
+        .nav-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(27,58,107,.22); }
+        .nav-btn:disabled { opacity: .45; cursor: not-allowed; }
+        .progress-panel { min-width: 220px; text-align: center; }
+        .progress-count { font-weight: 700; color: var(--azul-profundo); margin-bottom: 8px; font-size: 1rem; }
+        .progress-bar { width: 240px; max-width: 100%; height: 10px; margin: 0 auto; border-radius: 999px; background: #DCE5F0; overflow: hidden; }
+        .progress-fill { height: 100%; width: 0%; border-radius: 999px; background: linear-gradient(135deg, #1B3A6B, #2E6DA4, #E8540A); transition: width .35s ease; }
+
+        .animated-dash { stroke-dasharray: 6 6; animation: dashFlow 1s linear infinite; }
+        .timeline-node { animation: pulseNode 1.2s ease-in-out infinite; transform-origin: center; }
+        .timeline-node.delay-1 { animation-delay: 0s; } .timeline-node.delay-2 { animation-delay: .15s; } .timeline-node.delay-3 { animation-delay: .3s; } .timeline-node.delay-4 { animation-delay: .45s; }
+        .heartbeat { animation: pulseHeart 1.6s ease-in-out infinite; transform-origin: center; }
+        .bouncy { animation: bouncePin 1.8s ease-in-out infinite; transform-origin: center; }
+        .flicker { animation: flicker 1.2s ease-in-out infinite; }
+        .stroke-reveal { stroke-dasharray: 120; stroke-dashoffset: 120; animation: revealStroke 1.2s ease forwards; }
+        .module-glow { animation: moduleGlow 1.6s ease-in-out infinite; }
+
+        @media (max-width: 1180px) {
+            body { overflow: hidden; }
+            .app-shell { height: calc(100dvh - 18px); }
+            .workspace { grid-template-columns: 1fr; }
+            .main-panel { grid-template-rows: 1fr auto; min-height: 0; }
+            .slide { position: absolute; min-height: 0; }
+            .slide-stage { min-height: 0; height: 100%; }
+            .hero-top, .nav-controls, .three-col, .needs-grid, .benefits-grid, .norm-icons {
+                grid-template-columns: 1fr;
+            }
+            .cases-grid, .case-metrics, .focus-grid, .territory-strip, .territory-strip.two { grid-template-columns: 1fr; }
+            .split-60-40, .split-70-30, .split-40-60, .split-visual { flex-direction: column; gap: 18px; }
+            .split-60-40 > :first-child, .split-70-30 > :first-child, .split-40-60 > :first-child, .split-visual > :first-child,
+            .split-60-40 > :last-child, .split-70-30 > :last-child, .split-40-60 > :last-child, .split-visual > :last-child { width: 100%; min-height: auto; }
+            .hero-logos { justify-content: flex-start; border-radius: 999px; padding-left: 12px; }
+            .nav-btn.prev, .nav-btn.next { justify-self: stretch; }
+            .qr-side { justify-items: center; text-align: center; min-height: 240px; }
+            .slide-image.hero-bottom, .slide-image.team-wide { max-height: 190px; }
+            .visual-panel, .visual-panel-light { min-height: 240px; }
+        }
+
+        @media (max-width: 760px) {
+            body { overflow: auto; padding: 0; }
+            .app-shell { width: 100vw; margin: 0; min-height: 100dvh; height: auto; padding: 4px; gap: 8px; }
+            .hero { padding: 10px 12px; border-radius: 12px; }
+            .hero-top { gap: 10px; align-items: start; }
+            .workspace { gap: 8px; min-height: 0; grid-template-columns: 1fr; grid-template-rows: auto auto; }
+            .sidebar { padding: 10px 12px; gap: 8px; grid-template-rows: auto auto; }
+            .sidebar-title { font-size: 1rem; }
+            .sidebar-copy { display: none; }
+            .nav-list { display: flex; gap: 8px; overflow-x: auto; overflow-y: hidden; padding-bottom: 2px; }
+            .nav-item { min-height: auto; min-width: max-content; padding: 8px 11px; border-radius: 999px; grid-template-columns: 18px auto; gap: 8px; font-size: 14px; line-height: 1.1; white-space: nowrap; background: #F3F7FC; }
+            .nav-item svg { width: 18px; height: 18px; }
+            .main-panel { gap: 10px; min-height: 0; grid-template-rows: auto auto; }
+            .slide-stage { min-height: 0; height: auto; overflow: visible; }
+            .slide-track { position: static; height: auto; }
+            .slide { padding: 14px 14px 12px; }
+            .slide {
+                position: relative;
+                inset: auto;
+                display: none;
+                opacity: 1;
+                transform: none;
+                pointer-events: none;
+                overflow: visible;
+                min-height: auto;
+                transition: none;
+            }
+            .slide.active {
+                display: flex;
+                pointer-events: auto;
+            }
+            .slide-title { font-size: 18px; line-height: 1.08; }
+            .slide.final-slide .slide-title { font-size: 17px; line-height: 1.08; }
+            .hero-kicker { font-size: 11px; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+            .hero-title { font-size: clamp(.95rem, 4.8vw, 1.2rem); line-height: 1.02; white-space: normal; max-width: 100%; }
+            .splash-title { font-size: clamp(1.35rem, 6vw, 2rem); white-space: normal; }
+            .hero-logos { justify-content: center; align-self: start; width: fit-content; min-height: 0; padding: 6px 10px; border-radius: 12px; gap: 8px; }
+            .hero-logos img { height: 24px; }
+            .hero-kicker, .sidebar-copy, .item-text, .impact-card p, .benefit-card p, .need-card p, .statement-banner, .progress-count, .visual-title { font-size: 15px; }
+            .hero-subtitle, .splash-subtitle, .final-subtitle { font-size: 13px; }
+            .cases-subtitle, .cases-footer { font-size: 15px; }
+            .case-title { font-size: 20px; }
+            .metric-value { font-size: 28px; }
+            .qr-side { padding: 18px; }
+            .qr-side img { width: min(220px, 72vw) !important; height: auto !important; aspect-ratio: 1 / 1; }
+            .visual-panel, .visual-panel-light { padding: 12px; min-height: 180px; }
+            .tall-svg { min-height: 124px; }
+            .tall-svg svg { min-height: 116px; max-height: 146px; }
+            .impact-card { grid-template-columns: 1fr; text-align: center; }
+            .impact-icon { margin: 0 auto; }
+            .progress-bar { width: 100%; }
+            .nav-controls { padding: 6px 8px; grid-template-columns: 1fr 1fr; gap: 6px 8px; align-items: center; position: sticky; bottom: 4px; z-index: 5; }
+            .nav-controls .nav-btn { padding: 9px 12px; font-size: 14px; line-height: 1; min-height: 38px; }
+            .nav-controls .nav-btn.prev, .nav-controls .nav-btn.next { justify-self: stretch; }
+            .progress-panel { grid-column: 1 / -1; min-width: 0; order: 3; }
+            .progress-count { margin-bottom: 4px; font-size: 15px; }
+            .progress-bar { height: 6px; }
+            .final-wrap { gap: 8px; }
+            .final-wrap > div, .final-wrap p { max-width: 100%; }
+            .final-btn { padding: 8px 16px; font-size: 12px; }
+            .final-meta { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-card">
+            <div class="splash-logos">
+                <img src="./logo_MDSF.png" alt="Logo Ministerio de Desarrollo Social y Familia">
+                <img src="./LOGO_SISE.png" alt="Logo SISE">
+            </div>
+            <h1 class="splash-title">Explora la Ficha B&aacute;sica de Emergencia</h1>
+            <div class="splash-subtitle">Acreditaci&oacute;n 2026</div>
+            <div class="splash-copy">Ministerio de Desarrollo Social y Familia — Unidad de Información Social en Emergencias</div>
+            <button class="splash-btn" id="startButton" type="button" onclick="startPresentation()">Comenzar →</button>
+        </div>
+    </div>
+
+    <div class="app-shell">
+        <header class="hero">
+            <div class="hero-top">
+                <div class="hero-copy">
+                    <div class="hero-kicker">Ministerio de Desarrollo Social y Familia, Subsecretaría de Servicios Sociales, División de Focalización, Unidad de Información Social en Emergencias</div>
+                    <h1 class="hero-title">Explora la Ficha B&aacute;sica de Emergencia</h1>
+                    <div class="hero-subtitle">Acreditación 2026</div>
+                </div>
+                <div class="hero-logos">
+                    <img src="./logo_MDSF.png" alt="Logo Ministerio de Desarrollo Social y Familia">
+                    <img src="./LOGO_SISE.png" alt="Logo SISE">
+                </div>
+            </div>
+        </header>
+
+        <div class="workspace">
+            <aside class="sidebar">
+                <div class="sidebar-title">Contenido</div>
+                <div class="sidebar-copy">Explora el contenido paso a paso para comprender la FIBE y avanzar hacia tu acreditación.</div>
+                <nav class="nav-list" id="navList"></nav>
+            </aside>
+
+            <section class="main-panel">
+                <div class="slide-stage">
+                    <div class="slide-track" id="slideTrack"></div>
+                </div>
+
+                <div class="nav-controls">
+                    <button class="nav-btn prev" id="prevBtn">← Anterior</button>
+                    <div class="progress-panel">
+                        <div class="progress-count" id="progressCount">1 / 20</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                    <button class="nav-btn next" id="nextBtn">Siguiente →</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const svgLibrary = {
+            homeSmall: `<g stroke-width="1.8"><path d="m2 10 8-6 8 6"/><path d="M4 9.5V19h12V9.5"/><path d="M8 19v-5h4v5"/></g>`,
+            buildingSmall: `<g stroke-width="1.8"><path d="M4 20V7l6-2v15"/><path d="M10 20V10l6-2v12"/><path d="M6 10h1"/><path d="M6 13h1"/><path d="M12 12h1"/><path d="M12 15h1"/></g>`,
+            mapSmall: `<g stroke-width="1.8"><path d="m3 6 5-2 6 2 5-2v14l-5 2-6-2-5 2Z"/><path d="M8 4v14"/><path d="M14 6v14"/><circle cx="14" cy="10" r="1.1" fill="currentColor" stroke="none"/></g>`,
+            flagSmall: `<g stroke-width="1.8"><path d="M6 21V4"/><path d="M6 5h10l-2 4 2 4H6"/></g>`
+        };
+
+        function iconWrap(svg, size = 24) {
+            return `<svg viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true">${svg}</svg>`;
+        }
+
+        const iconSet = {
+            shield: iconWrap('<path d="M12 3l7 3v5c0 4.4-2.8 8.4-7 10-4.2-1.6-7-5.6-7-10V6l7-3Z"/><path d="M9.5 11.5 11 13l3.5-3.5"/>'),
+            nodes: iconWrap('<circle cx="6" cy="12" r="2.2"/><circle cx="12" cy="6" r="2.2"/><circle cx="18" cy="12" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7.8 10.8 10.2 7.8"/><path d="M13.8 7.8 16.2 10.8"/><path d="M16.2 13.2 13.8 16.2"/><path d="M10.2 16.2 7.8 13.2"/>'),
+            flow: iconWrap('<path d="M4 7h6"/><path d="M14 7h6"/><path d="M10 7l2 2-2 2"/><path d="M4 17h10"/><path d="M18 15l2 2-2 2"/>'),
+            pyramid: iconWrap('<path d="M4 18h16"/><path d="M6 14h12"/><path d="M8 10h8"/><path d="M10 6h4"/>'),
+            gears: iconWrap('<circle cx="8" cy="14" r="2.5"/><circle cx="16" cy="10" r="2.5"/><path d="M10.2 12.8 13.8 11.2"/><path d="M8 9.5v-2"/><path d="M16 14.5v2"/><path d="M5.8 12.2 4.2 10.8"/><path d="M18.2 11.8 19.8 13.2"/>'),
+            form: iconWrap('<path d="M8 4.5h8a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 16 19.5H8A1.5 1.5 0 0 1 6.5 18V6A1.5 1.5 0 0 1 8 4.5Z"/><path d="m9.2 9.6 1.2 1.2 2.4-2.4"/><path d="M9.5 14h5"/>'),
+            calendar: iconWrap('<path d="M7 4.5v3"/><path d="M17 4.5v3"/><rect x="4.5" y="6.5" width="15" height="13" rx="2"/><path d="M4.5 10.5h15"/><path d="M12 12v-2.2"/><path d="M11 15.8h2"/><path d="m12 12 1.6 2"/>'),
+            personClipboard: iconWrap('<circle cx="8" cy="8" r="2.5"/><path d="M4.5 18a4 4 0 0 1 7 0"/><path d="M14 5.5h5v13h-5"/><path d="M15.5 9h2"/><path d="M15.5 12.5h2"/><path d="M15.5 16h1.5"/>'),
+            document: iconWrap('<path d="M8 4.5h8a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 16 19.5H8A1.5 1.5 0 0 1 6.5 18V6A1.5 1.5 0 0 1 8 4.5Z"/><path d="M9.5 8.5h5"/><path d="M9.5 12h5"/><path d="M9.5 15.5h5"/>'),
+            pin: iconWrap('<path d="M12 20s5-5 5-9a5 5 0 1 0-10 0c0 4 5 9 5 9Z"/><circle cx="12" cy="11" r="1.8"/>'),
+            family: iconWrap('<circle cx="8" cy="9" r="2.2"/><circle cx="15.5" cy="8" r="1.8"/><path d="M4.5 18a4 4 0 0 1 7 0"/><path d="M12.5 18a3 3 0 0 1 5 0"/>'),
+            health: iconWrap('<path d="m12 20-6.5-6.1a4.2 4.2 0 0 1 5.9-6 4.2 4.2 0 0 1 6 6L12 20Z"/><path d="M12 9.2v4.6"/><path d="M9.7 11.5h4.6"/>'),
+            aidBox: iconWrap('<path d="M4.5 8h15v10h-15z"/><path d="M9 8V6.5A1.5 1.5 0 0 1 10.5 5h3A1.5 1.5 0 0 1 15 6.5V8"/><path d="M12 11v4"/><path d="M10 13h4"/>'),
+            damage: iconWrap('<path d="m4.5 10 7.5-6 7.5 6"/><path d="M6.5 9.5V19h11V9.5"/><path d="M10 19v-4h4"/><path d="M15.5 12.5h3"/><path d="M15.5 15h3"/><path d="M15.5 17.5h3"/>'),
+            signature: iconWrap('<path d="M4.5 17.5c2.2 0 2.8-3.5 4.5-3.5 1.4 0 1.2 2.5 2.6 2.5 1.7 0 2-6.5 4.6-6.5 1.1 0 1.8 1 1.8 2.2 0 2.3-2.2 4.3-4.8 4.3H4.5"/><path d="M4.5 20h15"/>'),
+            star: iconWrap('<path d="m12 3 2.6 5.2 5.7.8-4.1 4 .9 5.7-5.1-2.6-5.1 2.6.9-5.7-4.1-4 5.7-.8L12 3Z"/>'),
+            medal: iconWrap('<circle cx="12" cy="10" r="3.5"/><path d="M9 13.5 7.5 20l4.5-2 4.5 2-1.5-6.5"/><path d="M9.5 4h5"/>'),
+            steps: iconWrap('<path d="M5 19h4v-4h4v-4h4V7h2"/><path d="m15 7 2-2 2 2"/>'),
+            check: iconWrap('<circle cx="12" cy="12" r="8"/><path d="m8.5 12.2 2.2 2.2 4.8-4.8"/>'),
+            checkSmall: iconWrap('<path d="m5 12 4 4 10-10"/>'),
+            arrow: iconWrap('<path d="M5 12h12"/><path d="m13 7 5 5-5 5"/>'),
+            home: iconWrap('<path d="m4.5 10 7.5-6 7.5 6"/><path d="M6.5 9.5V19h11V9.5"/><path d="M10 19v-5h4v5"/>'),
+            phone: iconWrap('<rect x="7.5" y="3.5" width="9" height="17" rx="2"/><path d="M10 6.5h4"/><path d="M11 17h2"/>'),
+            screen: iconWrap('<rect x="4.5" y="5" width="15" height="10" rx="2"/><path d="M8 19h8"/><path d="M12 15v4"/>'),
+            building: iconWrap('<path d="M6 20V7l6-2v15"/><path d="M12 20V10l6-2v12"/><path d="M8 9h1"/><path d="M8 12h1"/><path d="M14 11h1"/><path d="M14 14h1"/>'),
+            map: iconWrap('<path d="m4 6 5-2 6 2 5-2v14l-5 2-6-2-5 2Z"/><path d="M9 4v14"/><path d="M15 6v14"/>'),
+            flag: iconWrap('<path d="M6 21V4"/><path d="M6 5h10l-2 4 2 4H6"/>'),
+            personPhone: iconWrap('<circle cx="9" cy="6.5" r="2"/><path d="M6 20v-5l2-3 2 2 3-1 1.5 2.5"/><rect x="15.5" y="8" width="4" height="7" rx="1"/>'),
+            alert: iconWrap('<path d="M12 4 4.5 18h15L12 4Z"/><path d="M12 9v4"/><path d="M12 16h.01"/>'),
+            food: iconWrap('<path d="M6 4v8"/><path d="M4.5 4v4"/><path d="M7.5 4v4"/><path d="M6 12v8"/><path d="M15 4c1.7 2.3 1.7 5.7 0 8"/><path d="M15 12v8"/><path d="M11 15h8"/>'),
+            water: iconWrap('<path d="M12 4s5 5.3 5 9a5 5 0 1 1-10 0c0-3.7 5-9 5-9Z"/>'),
+            blanket: iconWrap('<rect x="5" y="7" width="14" height="10" rx="2"/><path d="M8 7v10"/><path d="M5 12h14"/>'),
+            hygiene: iconWrap('<rect x="6" y="9" width="12" height="8" rx="2"/><path d="M9 9V7.5A2.5 2.5 0 0 1 11.5 5h1A2.5 2.5 0 0 1 15 7.5V9"/><path d="M10 13h4"/>'),
+            tent: iconWrap('<path d="m4.5 18 7.5-11 7.5 11"/><path d="M12 7v11"/><path d="M7.5 18h9"/>'),
+            box: iconWrap('<path d="m4.5 8 7.5-4 7.5 4-7.5 4-7.5-4Z"/><path d="M4.5 8v8l7.5 4 7.5-4V8"/><path d="M12 12v8"/>'),
+            wheelchair: iconWrap('<circle cx="10" cy="6.5" r="2"/><circle cx="10" cy="16.5" r="3.5"/><path d="M10 8.5v4h4"/><path d="M14 12.5 16 18"/><path d="M8 12.5h6"/>'),
+            support: iconWrap('<path d="M5 15h5l2-3 3 6 2-3h2"/><path d="M7 11.5a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4Z"/><path d="M17 11.5a2.2 2.2 0 1 1 0-4.4 2.2 2.2 0 0 1 0 4.4Z"/>'),
+            mind: iconWrap('<path d="M12 4a6 6 0 0 0-6 6c0 2 .8 3.1 1.8 4.1.7.6 1.2 1.4 1.2 2.4V18h6v-1.5c0-1 .5-1.8 1.2-2.4 1-1 1.8-2.1 1.8-4.1a6 6 0 0 0-6-6Z"/><path d="m12 10-1.7 1.5a1.5 1.5 0 0 0 2 2.2l1.7-1.6"/>'),
+            sofa: iconWrap('<path d="M6 13h12v5H6z"/><path d="M7 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4"/><path d="M12 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4"/><path d="M5 18h14"/>'),
+            handSign: iconWrap('<path d="M8 16V8.5a1 1 0 1 1 2 0V13"/><path d="M10 13V7.5a1 1 0 1 1 2 0V13"/><path d="M12 13V8.5a1 1 0 1 1 2 0V13"/><path d="M14 13v-2a1 1 0 1 1 2 0v4c0 2.2-1.8 4-4 4H9c-2.2 0-4-1.8-4-4v-2.5"/>'),
+            credential: iconWrap('<rect x="7" y="6" width="10" height="13" rx="2"/><path d="M10 10h4"/><path d="M10 13h4"/><path d="M12 6V3"/>'),
+            scroll: iconWrap('<path d="M7 5.5h8a2 2 0 0 1 2 2V16a2.5 2.5 0 0 1-2.5 2.5H9A2.5 2.5 0 0 1 6.5 16V8a2.5 2.5 0 0 1 2.5-2.5Z"/><path d="M9.5 9h5"/><path d="M9.5 12h5"/>'),
+            chain: iconWrap('<path d="M9 9.5 7 11.5a2.8 2.8 0 0 0 4 4l2-2"/><path d="m15 14.5 2-2a2.8 2.8 0 1 0-4-4l-2 2"/><path d="M10 14l4-4"/>'),
+            scale: iconWrap('<path d="M7 6h10"/><path d="M12 6v11"/><path d="M8 17h8"/><path d="M9 6.5a2 2 0 1 0-4 0v5a2.5 2.5 0 0 0 5 0V8"/><path d="M15 6.5a2 2 0 1 1 4 0v5a2.5 2.5 0 0 1-5 0V8"/>'),
+            openPerson: iconWrap('<circle cx="12" cy="6" r="2.2"/><path d="M12 8.5v7"/><path d="M6 12.5 12 10l6 2.5"/><path d="M8 20l4-4 4 4"/>')
+        };
+
+        function svgNormativaVertical() {
+            return `
+                <svg viewBox="0 0 560 230" height="230" aria-hidden="true">
+                    <line x1="260" y1="42" x2="260" y2="168" stroke="#90A8C6" stroke-width="3" stroke-dasharray="6 6"></line>
+                    <rect x="120" y="18" rx="16" ry="16" width="280" height="50" fill="#1B3A6B"></rect>
+                    <rect x="120" y="92" rx="16" ry="16" width="280" height="50" fill="#E8540A"></rect>
+                    <rect x="120" y="166" rx="16" ry="16" width="280" height="50" fill="#EEF3FA" stroke="#1B3A6B" stroke-width="2"></rect>
+                    <text x="260" y="48" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">D.S. N°1.434, 2017</text>
+                    <text x="260" y="122" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">D.S. N°2.724, 2024</text>
+                    <text x="260" y="196" text-anchor="middle" font-size="14" font-weight="700" fill="#1B3A6B">Ley N°21.364</text>
+                    <text x="315" y="82" font-size="13" font-weight="700" fill="#E8540A">vincula con →</text>
+                </svg>
+            `;
+        }
+
+        function svgNormativeIcons() {
+            const items = [
+                ['scroll', "D.S. N°1.434"],
+                ['link', "D.S. N°2.724"],
+                ['scale', "Ley N°21.364"]
+            ];
+            return `
+                <div class="norm-icons">
+                    ${items.map(([icon, label]) => `
+                        <div class="norm-icon-card">
+                            <div class="big-icon" style="color:#E8540A"><i data-lucide="${icon}" style="width:36px;height:36px"></i></div>
+                            <span>${label}</span>
+                        </div>
+                    `).join("")}
+                </div>
+            `;
+        }
+
+        function svgSiseNetwork() {
+            return `
+                <svg class="sise-svg" viewBox="0 0 380 360" height="360" aria-hidden="true">
+                    <line x1="190" y1="184" x2="92" y2="98" stroke="#BED0E4" stroke-width="4"></line>
+                    <line x1="190" y1="184" x2="288" y2="98" stroke="#BED0E4" stroke-width="4"></line>
+                    <line x1="190" y1="184" x2="190" y2="306" stroke="#BED0E4" stroke-width="4"></line>
+                    <g class="sise-node delay-1">
+                        <rect x="16" y="44" rx="18" ry="18" width="132" height="86" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="2"></rect>
+                        <g transform="translate(62 70)" stroke="#E8540A">${iconSet.form.replace('width="24" height="24"', 'width="32" height="32"')}</g>
+                        <text x="90" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#1B3A6B">FIBE Papel</text>
+                    </g>
+                    <g class="sise-node delay-2">
+                        <rect x="232" y="44" rx="18" ry="18" width="132" height="86" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="2"></rect>
+                        <g transform="translate(278 70)" stroke="#E8540A">${iconSet.phone.replace('width="24" height="24"', 'width="32" height="32"')}</g>
+                        <text x="290" y="122" text-anchor="middle" font-size="15" font-weight="700" fill="#1B3A6B">APP SISE</text>
+                    </g>
+                    <g class="sise-node delay-3">
+                        <rect x="124" y="246" rx="18" ry="18" width="132" height="86" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="2"></rect>
+                        <g transform="translate(170 272)" stroke="#E8540A">${iconSet.screen.replace('width="24" height="24"', 'width="32" height="32"')}</g>
+                        <text x="190" y="320" text-anchor="middle" font-size="15" font-weight="700" fill="#1B3A6B">Plataforma Web</text>
+                    </g>
+                    <g class="sise-node delay-4">
+                        <circle cx="190" cy="184" r="50" fill="#1B3A6B" style="animation:pulseRing 2s infinite"></circle>
+                        <text x="190" y="178" text-anchor="middle" font-size="22" font-weight="900" fill="#FFFFFF">SISE</text>
+                        <text x="190" y="200" text-anchor="middle" font-size="12" font-weight="300" fill="#FFFFFF">Sistema integral</text>
+                    </g>
+                </svg>
+            `;
+        }
+
+        function svgFlujoHorizontal() {
+            return `
+                <svg class="app-flow-svg" viewBox="0 0 760 140" height="140" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="flowBlue1" x1="0%" x2="100%">
+                            <stop offset="0%" stop-color="#2E6DA4"></stop>
+                            <stop offset="100%" stop-color="#4B88C0"></stop>
+                        </linearGradient>
+                        <linearGradient id="flowBlue2" x1="0%" x2="100%">
+                            <stop offset="0%" stop-color="#1B3A6B"></stop>
+                            <stop offset="100%" stop-color="#36598B"></stop>
+                        </linearGradient>
+                        <linearGradient id="flowBlue3" x1="0%" x2="100%">
+                            <stop offset="0%" stop-color="#E8540A"></stop>
+                            <stop offset="100%" stop-color="#F1894B"></stop>
+                        </linearGradient>
+                    </defs>
+                    <rect x="16" y="36" rx="16" ry="16" width="170" height="62" fill="url(#flowBlue1)"></rect>
+                    <rect x="248" y="36" rx="16" ry="16" width="170" height="62" fill="url(#flowBlue2)"></rect>
+                    <rect x="480" y="36" rx="16" ry="16" width="170" height="62" fill="url(#flowBlue3)"></rect>
+                    <path class="animated-dash" d="M186 67h62" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <path class="animated-dash" d="M418 67h62" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <path d="m235 61 13 6-13 6" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <path d="m467 61 13 6-13 6" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <text x="101" y="61" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">ALFA</text>
+                    <text x="101" y="81" text-anchor="middle" font-size="11" font-weight="300" fill="#FFFFFF">Evaluación preliminar</text>
+                    <text x="333" y="61" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">FIBE</text>
+                    <text x="333" y="81" text-anchor="middle" font-size="11" font-weight="300" fill="#FFFFFF">Caracterización del hogar</text>
+                    <text x="565" y="61" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">SISE</text>
+                    <text x="565" y="81" text-anchor="middle" font-size="11" font-weight="300" fill="#FFFFFF">Repositorio de gestión</text>
+                    <rect x="286" y="6" rx="10" ry="10" width="94" height="22" fill="#E8540A"></rect>
+                    <text x="333" y="21" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">También por APP</text>
+                </svg>
+            `;
+        }
+
+        function svgEncuestadorPhone() {
+            return `
+                <svg viewBox="0 0 260 220" height="220" aria-hidden="true">
+                    <circle cx="130" cy="38" r="20" fill="#F2C6A5"></circle>
+                    <rect x="102" y="58" width="56" height="58" rx="14" fill="#1B3A6B"></rect>
+                    <rect x="112" y="68" width="36" height="18" rx="4" fill="#2E6DA4"></rect>
+                    <line x1="130" y1="86" x2="130" y2="120" stroke="#1B3A6B" stroke-width="8"></line>
+                    <line x1="130" y1="88" x2="92" y2="122" stroke="#1B3A6B" stroke-width="8" stroke-linecap="round"></line>
+                    <line x1="130" y1="88" x2="172" y2="110" stroke="#1B3A6B" stroke-width="8" stroke-linecap="round"></line>
+                    <line x1="130" y1="120" x2="106" y2="182" stroke="#253f6d" stroke-width="8" stroke-linecap="round"></line>
+                    <line x1="130" y1="120" x2="154" y2="182" stroke="#253f6d" stroke-width="8" stroke-linecap="round"></line>
+                    <rect x="175" y="95" width="24" height="40" rx="4" fill="#2E6DA4"></rect>
+                    <circle cx="187" cy="101" r="1.4" fill="#FFFFFF"></circle>
+                    <text x="187" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">SISE</text>
+                    <line x1="130" y1="72" x2="130" y2="104" stroke="#E0E8F5" stroke-width="2"></line>
+                    <rect x="118" y="104" width="24" height="28" rx="4" fill="#FFFFFF"></rect>
+                    <line x1="130" y1="104" x2="130" y2="95" stroke="#E0E8F5" stroke-width="2"></line>
+                </svg>
+            `;
+        }
+
+        function svgPiramideNiveles() {
+            return `
+                <div class="split-40-60">
+                    <svg class="pyramid-svg" viewBox="0 0 380 240" height="240" aria-hidden="true">
+                        <polygon points="24,216 356,216 306,170 74,170" fill="#4CAF50"></polygon>
+                        <polygon points="74,170 306,170 266,124 114,124" fill="#FFC107"></polygon>
+                        <polygon points="114,124 266,124 236,78 144,78" fill="#FF7043"></polygon>
+                        <polygon points="144,78 236,78 190,34" fill="#E53935"></polygon>
+                        <text x="190" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Local, Emergencia menor</text>
+                        <text x="190" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Comunal, Emergencia mayor</text>
+                        <text x="190" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Regional, Desastre</text>
+                        <text x="190" y="63" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 4px rgba(0,0,0,0.8)">Nacional, Catástrofe</text>
+                    </svg>
+                    <div class="item-grid">
+                        <div class="item-card" style="border-left-color:#E53935"><div class="item-head no-number"><span class="item-icon" style="color:#E53935">${iconWrap(svgLibrary.flagSmall, 20)}</span><div class="item-text">Nacional, Catástrofe</div></div></div>
+                        <div class="item-card" style="border-left-color:#FF7043"><div class="item-head no-number"><span class="item-icon" style="color:#FF7043">${iconWrap(svgLibrary.mapSmall, 20)}</span><div class="item-text">Regional, Desastre</div></div></div>
+                        <div class="item-card" style="border-left-color:#FFC107"><div class="item-head no-number"><span class="item-icon" style="color:#FFC107">${iconWrap(svgLibrary.buildingSmall, 20)}</span><div class="item-text">Comunal, Emergencia mayor</div></div></div>
+                        <div class="item-card" style="border-left-color:#4CAF50"><div class="item-head no-number"><span class="item-icon" style="color:#4CAF50">${iconWrap(svgLibrary.homeSmall, 20)}</span><div class="item-text">Local, Emergencia menor</div></div></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function svgTimelineAcreditacion() {
+            return `
+                <svg class="timeline-svg" viewBox="0 0 720 80" height="80" aria-hidden="true">
+                    <line x1="70" y1="28" x2="650" y2="28" stroke="#BED0E4" stroke-width="5" stroke-linecap="round"></line>
+                    <g class="timeline-node delay-1">
+                        <circle cx="70" cy="28" r="16" fill="#1B3A6B"></circle>
+                        <text x="70" y="33" text-anchor="middle" font-size="14" font-weight="900" fill="#FFFFFF">1</text>
+                        <text x="70" y="66" text-anchor="middle" font-size="11" font-weight="700" fill="#1B3A6B">Inscribirse</text>
+                    </g>
+                    <g class="timeline-node delay-2">
+                        <circle cx="263" cy="28" r="16" fill="#1B3A6B"></circle>
+                        <text x="263" y="33" text-anchor="middle" font-size="14" font-weight="900" fill="#FFFFFF">2</text>
+                        <text x="263" y="66" text-anchor="middle" font-size="11" font-weight="700" fill="#1B3A6B">Capacitación</text>
+                    </g>
+                    <g class="timeline-node delay-3">
+                        <circle cx="456" cy="28" r="16" fill="#1B3A6B"></circle>
+                        <text x="456" y="33" text-anchor="middle" font-size="14" font-weight="900" fill="#FFFFFF">3</text>
+                        <text x="456" y="66" text-anchor="middle" font-size="11" font-weight="700" fill="#1B3A6B">Acreditación SISE</text>
+                    </g>
+                    <g class="timeline-node delay-4">
+                        <circle cx="650" cy="28" r="16" fill="#1B3A6B"></circle>
+                        <text x="650" y="33" text-anchor="middle" font-size="14" font-weight="900" fill="#FFFFFF">4</text>
+                        <text x="650" y="66" text-anchor="middle" font-size="11" font-weight="700" fill="#1B3A6B">Participación en terreno</text>
+                    </g>
+                </svg>
+            `;
+        }
+
+        function svgPeopleRow() {
+            return `
+                <div class="people-row-wrap">
+                    <div class="people-caption">Cada persona acreditada suma.</div>
+                    <div class="people-row">
+                        <svg viewBox="0 0 560 88" aria-hidden="true">
+                            <g class="person-figure d1" fill="#FFFFFF"><circle cx="56" cy="24" r="13"></circle><rect x="42" y="42" width="28" height="42" rx="12"></rect></g>
+                            <g class="person-figure d2" fill="#E8540A"><circle cx="156" cy="24" r="13"></circle><rect x="142" y="42" width="28" height="42" rx="12"></rect></g>
+                            <g class="person-figure d3" fill="#FFFFFF"><circle cx="256" cy="24" r="13"></circle><rect x="242" y="42" width="28" height="42" rx="12"></rect></g>
+                            <g class="person-figure d4" fill="#E8540A"><circle cx="356" cy="24" r="13"></circle><rect x="342" y="42" width="28" height="42" rx="12"></rect></g>
+                            <g class="person-figure d5" fill="#FFFFFF"><circle cx="456" cy="24" r="13"></circle><rect x="442" y="42" width="28" height="42" rx="12"></rect></g>
+                        </svg>
+                    </div>
+                </div>
+            `;
+        }
+
+        function svgFichaStroke() {
+            return `
+                <svg class="form-svg" viewBox="0 0 300 220" height="220" aria-hidden="true">
+                    <rect x="70" y="24" width="160" height="180" rx="18" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="3"></rect>
+                    <path class="stroke-reveal" d="M96 68h108" stroke="#E8540A" stroke-width="4" fill="none"></path>
+                    <path class="stroke-reveal" d="M96 98h92" stroke="#2E6DA4" stroke-width="4" fill="none" style="animation-delay:.2s"></path>
+                    <path class="stroke-reveal" d="M96 128h108" stroke="#2E6DA4" stroke-width="4" fill="none" style="animation-delay:.4s"></path>
+                    <path class="stroke-reveal" d="M96 158h78" stroke="#E8540A" stroke-width="4" fill="none" style="animation-delay:.6s"></path>
+                </svg>
+            `;
+        }
+
+        function svgEmergencyHouse() {
+            return `
+                <svg viewBox="0 0 300 220" height="220" aria-hidden="true">
+                    <path d="m72 106 78-58 78 58" fill="none" stroke="#1B3A6B" stroke-width="6"></path>
+                    <path d="M92 100v84h116v-84" fill="#EEF3FA" stroke="#1B3A6B" stroke-width="6"></path>
+                    <path d="M136 184v-40h28v40" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"></path>
+                    <path class="flicker" d="M232 70c8 8 10 18 4 24 5-1 11 2 13 7 6-9 4-21-5-31-4 5-10 6-12 0Z" fill="#E8540A"></path>
+                    <path class="flicker" d="M58 156c10 6 22 6 32 0 8 10 18 14 28 10" fill="none" stroke="#2E6DA4" stroke-width="6" stroke-linecap="round"></path>
+                </svg>
+            `;
+        }
+
+        function svgDoorSurvey() {
+            return `
+                <svg viewBox="0 0 320 220" height="220" aria-hidden="true">
+                    <path d="M196 54h80v138h-80z" fill="#EEF3FA" stroke="#1B3A6B" stroke-width="4"></path>
+                    <circle cx="258" cy="124" r="3" fill="#1B3A6B"></circle>
+                    <circle cx="92" cy="52" r="18" fill="#F2C6A5"></circle>
+                    <path d="M92 70v62" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M92 86 58 122" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M92 86 134 98" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M92 132 70 192" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M92 132 114 192" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <rect x="134" y="86" width="26" height="34" rx="4" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="3"></rect>
+                    <path d="M141 98h12" stroke="#E8540A" stroke-width="2"></path>
+                    <path d="M141 105h12" stroke="#E8540A" stroke-width="2"></path>
+                    <circle cx="218" cy="90" r="14" fill="#F2C6A5"></circle>
+                    <path d="M218 104v42" stroke="#2E6DA4" stroke-width="8" stroke-linecap="round"></path>
+                    <circle cx="250" cy="96" r="12" fill="#F2C6A5"></circle>
+                    <path d="M250 108v38" stroke="#E8540A" stroke-width="8" stroke-linecap="round"></path>
+                </svg>
+            `;
+        }
+
+        function svgModulesGlow() {
+            return `
+                <svg class="module-svg" viewBox="0 0 300 220" height="220" aria-hidden="true">
+                    <rect x="72" y="26" width="156" height="170" rx="18" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="3"></rect>
+                    <rect class="module-glow" x="94" y="52" width="112" height="22" rx="8" fill="#E8540A"></rect>
+                    <rect class="module-glow" x="94" y="86" width="112" height="22" rx="8" fill="#2E6DA4" style="animation-delay:.3s"></rect>
+                    <rect class="module-glow" x="94" y="120" width="112" height="22" rx="8" fill="#E8540A" style="animation-delay:.6s"></rect>
+                    <rect class="module-glow" x="94" y="154" width="112" height="22" rx="8" fill="#2E6DA4" style="animation-delay:.9s"></rect>
+                </svg>
+            `;
+        }
+
+        function svgMapPinBounce() {
+            return `
+                <svg viewBox="0 0 320 220" height="220" aria-hidden="true">
+                    <path d="M30 164c40-30 75-24 112-10 30 11 62 9 114-12" fill="none" stroke="#BED0E4" stroke-width="8" stroke-linecap="round"></path>
+                    <path d="M72 74c20-12 48-14 70-6" fill="none" stroke="#2E6DA4" stroke-width="6" stroke-linecap="round"></path>
+                    <g class="bouncy">
+                        <path d="M170 166s28-30 28-52a28 28 0 1 0-56 0c0 22 28 52 28 52Z" fill="#E8540A"></path>
+                        <circle cx="170" cy="114" r="10" fill="#FFFFFF"></circle>
+                    </g>
+                </svg>
+            `;
+        }
+
+        function svgFamilyAppear() {
+            return `
+                <svg viewBox="0 0 320 220" height="220" aria-hidden="true">
+                    <g class="person-figure d1" fill="#1B3A6B"><circle cx="92" cy="60" r="18"></circle><rect x="76" y="82" width="32" height="62" rx="14"></rect></g>
+                    <g class="person-figure d2" fill="#2E6DA4"><circle cx="152" cy="48" r="16"></circle><rect x="138" y="68" width="28" height="72" rx="14"></rect></g>
+                    <g class="person-figure d3" fill="#E8540A"><circle cx="212" cy="60" r="18"></circle><rect x="196" y="82" width="32" height="62" rx="14"></rect></g>
+                    <g class="person-figure d4" fill="#7EA6D8"><circle cx="126" cy="112" r="12"></circle><rect x="116" y="126" width="20" height="42" rx="10"></rect></g>
+                    <g class="person-figure d5" fill="#F08A46"><circle cx="188" cy="112" r="12"></circle><rect x="178" y="126" width="20" height="42" rx="10"></rect></g>
+                </svg>
+            `;
+        }
+
+        function svgWheelchair() { return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g stroke="#2E6DA4" fill="none" stroke-width="4"><circle cx="66" cy="82" r="20"></circle><circle cx="94" cy="24" r="9"></circle><path d="M94 34v24h22"/><path d="M80 58h38"/><path d="M116 58l16 32"/><path d="M72 58l-12 12"/></g></svg>`; }
+        function svgHands() { return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g stroke="#E8540A" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 72 60 52l24 22 24-22 30 20"></path><path d="M40 86 68 62"></path><path d="M140 86 112 62"></path><path d="M78 70 90 82 102 70"></path></g></svg>`; }
+        function svgMindHeart() { return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g stroke="#2E6DA4" fill="none" stroke-width="4"><path d="M90 18a36 36 0 0 0-36 36c0 12 5 20 11 26 4 4 7 9 7 15v3h36v-3c0-6 3-11 7-15 6-6 11-14 11-26A36 36 0 0 0 90 18Z"></path></g><g class="heartbeat"><path d="m90 74-11-10a8 8 0 0 1 11.2-11.4A8 8 0 0 1 101.6 64L90 74Z" fill="#E8540A"></path></g></svg>`; }
+        function svgUrgencyScale() { return `<svg viewBox="0 0 180 100" height="100" aria-hidden="true"><rect x="0" y="18" width="56" height="20" rx="6" fill="#E53935"></rect><rect x="62" y="18" width="56" height="20" rx="6" fill="#FF7043"></rect><rect x="124" y="18" width="56" height="20" rx="6" fill="#FFC107"></rect><text x="18" y="32" font-size="14" font-weight="900" fill="#FFF">1</text><text x="80" y="32" font-size="14" font-weight="900" fill="#FFF">2</text><text x="142" y="32" font-size="14" font-weight="900" fill="#1B3A6B">3</text></svg>`; }
+
+        function svgRedes() { return `<svg viewBox="0 0 180 100" height="100" aria-hidden="true"><g stroke="#2E6DA4" fill="none" stroke-width="4"><circle cx="38" cy="48" r="10"></circle><circle cx="90" cy="22" r="10"></circle><circle cx="142" cy="48" r="10"></circle><circle cx="90" cy="78" r="10"></circle><path d="M46 44 82 26"></path><path d="M98 26 134 44"></path><path d="M134 52 98 74"></path><path d="M82 74 46 52"></path></g></svg>`; }
+        function svgFirma() { return `<svg viewBox="0 0 180 100" height="100" aria-hidden="true"><path d="M20 68c22 0 28-24 44-24 10 0 10 15 20 15 14 0 16-42 36-42 8 0 14 7 14 15 0 16-16 30-34 30H20" fill="none" stroke="#E8540A" stroke-width="4" stroke-linecap="round"></path><path d="M20 84h140" fill="none" stroke="#2E6DA4" stroke-width="3"></path></svg>`; }
+        function svgCredencial() { return `<svg viewBox="0 0 180 100" height="100" aria-hidden="true"><rect x="62" y="20" width="56" height="62" rx="8" fill="#EEF3FA" stroke="#1B3A6B" stroke-width="3"></rect><path d="M90 20V8" stroke="#1B3A6B" stroke-width="3"></path><path d="M74 42h32" stroke="#E8540A" stroke-width="3"></path><path d="M74 56h24" stroke="#2E6DA4" stroke-width="3"></path></svg>`; }
+
+        function svgTeamFallback() {
+            return `
+                <div class="team-fallback">
+                    <svg viewBox="0 0 620 170" aria-hidden="true">
+                        <g fill="#1B3A6B"><circle cx="110" cy="40" r="22"></circle><rect x="88" y="66" width="44" height="66" rx="18"></rect></g>
+                        <g fill="#2E6DA4"><circle cx="220" cy="40" r="22"></circle><rect x="198" y="66" width="44" height="66" rx="18"></rect></g>
+                        <g fill="#E8540A"><circle cx="330" cy="40" r="22"></circle><rect x="308" y="66" width="44" height="66" rx="18"></rect></g>
+                        <g fill="#7EA6D8"><circle cx="440" cy="40" r="22"></circle><rect x="418" y="66" width="44" height="66" rx="18"></rect></g>
+                        <g fill="#F08A46"><circle cx="550" cy="40" r="22"></circle><rect x="528" y="66" width="44" height="66" rx="18"></rect></g>
+                    </svg>
+                </div>
+            `;
+        }
+
+        function svgNormativaVertical() {
+            return `
+                <svg viewBox="0 0 560 210" height="180" aria-hidden="true" style="overflow:visible">
+                    <line x1="260" y1="40" x2="260" y2="154" stroke="#9AB7DB" stroke-width="3" stroke-dasharray="6 6"></line>
+                    <rect x="98" y="16" rx="18" ry="18" width="324" height="46" fill="#1B3A6B"></rect>
+                    <rect x="98" y="82" rx="18" ry="18" width="324" height="46" fill="#E8540A"></rect>
+                    <rect x="98" y="148" rx="18" ry="18" width="324" height="46" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="2"></rect>
+                    <text x="260" y="44" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">D.S. N°1.434, 2017</text>
+                    <text x="260" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">D.S. N°2.724, 2024</text>
+                    <text x="260" y="176" text-anchor="middle" font-size="15" font-weight="700" fill="#1B3A6B">Ley N°21.364</text>
+                    <text x="314" y="74" font-size="14" font-weight="700" fill="#E8540A">vincula con →</text>
+                </svg>
+            `;
+        }
+
+        function svgSiseNetwork() {
+            return `
+                <svg class="sise-svg" viewBox="0 0 400 370" height="100%" aria-hidden="true">
+                    <line x1="200" y1="188" x2="94" y2="98" stroke="#2E6DA4" stroke-width="4"></line>
+                    <line x1="200" y1="188" x2="306" y2="98" stroke="#2E6DA4" stroke-width="4"></line>
+                    <line x1="200" y1="188" x2="200" y2="310" stroke="#2E6DA4" stroke-width="4"></line>
+                    <g class="sise-node delay-1">
+                        <rect x="12" y="38" rx="18" ry="18" width="138" height="96" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="2"></rect>
+                        <g transform="translate(64 64)" style="color:#E8540A">${iconSet.form.replace('width="24" height="24"', 'width="32" height="32"')}</g>
+                        <text x="81" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A6B">FIBE Papel</text>
+                        <text x="81" y="126" text-anchor="middle" font-size="12" font-weight="300" fill="#435261">Formulario en terreno</text>
+                    </g>
+                    <g class="sise-node delay-2">
+                        <rect x="250" y="38" rx="18" ry="18" width="138" height="96" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="2"></rect>
+                        <g transform="translate(302 64)" style="color:#E8540A">${iconSet.phone.replace('width="24" height="24"', 'width="32" height="32"')}</g>
+                        <text x="319" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A6B">APP SISE</text>
+                        <text x="319" y="126" text-anchor="middle" font-size="12" font-weight="300" fill="#435261">Captura móvil</text>
+                    </g>
+                    <g class="sise-node delay-3">
+                        <rect x="131" y="252" rx="18" ry="18" width="138" height="96" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="2"></rect>
+                        <g transform="translate(183 278)" style="color:#E8540A">${iconSet.screen.replace('width="24" height="24"', 'width="32" height="32"')}</g>
+                        <text x="200" y="326" text-anchor="middle" font-size="16" font-weight="700" fill="#1B3A6B">Plataforma Web</text>
+                        <text x="200" y="340" text-anchor="middle" font-size="12" font-weight="300" fill="#435261">Gestión institucional</text>
+                    </g>
+                    <g class="sise-node delay-4">
+                        <circle cx="200" cy="188" r="50" fill="#1B3A6B" style="animation:pulseRing 2s infinite"></circle>
+                        <text x="200" y="181" text-anchor="middle" font-size="22" font-weight="900" fill="#FFFFFF">SISE</text>
+                        <text x="200" y="203" text-anchor="middle" font-size="12" font-weight="300" fill="#FFFFFF">Sistema integral</text>
+                    </g>
+                </svg>
+            `;
+        }
+
+        function svgFlujoHorizontal() {
+            return `
+                <svg class="app-flow-svg" viewBox="0 0 760 140" height="100" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="flowBlue1b" x1="0%" x2="100%"><stop offset="0%" stop-color="#2E6DA4"></stop><stop offset="100%" stop-color="#4B88C0"></stop></linearGradient>
+                        <linearGradient id="flowBlue2b" x1="0%" x2="100%"><stop offset="0%" stop-color="#1B3A6B"></stop><stop offset="100%" stop-color="#36598B"></stop></linearGradient>
+                        <linearGradient id="flowBlue3b" x1="0%" x2="100%"><stop offset="0%" stop-color="#E8540A"></stop><stop offset="100%" stop-color="#F1894B"></stop></linearGradient>
+                    </defs>
+                    <rect x="16" y="36" rx="16" ry="16" width="170" height="62" fill="url(#flowBlue1b)"></rect>
+                    <rect x="248" y="36" rx="16" ry="16" width="170" height="62" fill="url(#flowBlue2b)"></rect>
+                    <rect x="480" y="36" rx="16" ry="16" width="170" height="62" fill="url(#flowBlue3b)"></rect>
+                    <path class="animated-dash" d="M186 67h62" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <path class="animated-dash" d="M418 67h62" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <path d="m235 61 13 6-13 6" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <path d="m467 61 13 6-13 6" stroke="#2E6DA4" stroke-width="3" fill="none"></path>
+                    <text x="101" y="61" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">ALFA</text>
+                    <text x="101" y="81" text-anchor="middle" font-size="11" font-weight="300" fill="#FFFFFF">Evaluación preliminar</text>
+                    <text x="333" y="61" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">FIBE</text>
+                    <text x="333" y="81" text-anchor="middle" font-size="11" font-weight="300" fill="#FFFFFF">Caracterización del hogar</text>
+                    <text x="565" y="61" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">SISE</text>
+                    <text x="565" y="81" text-anchor="middle" font-size="11" font-weight="300" fill="#FFFFFF">Repositorio de gestión</text>
+                    <rect x="286" y="6" rx="10" ry="10" width="94" height="22" fill="#E8540A"></rect>
+                    <text x="333" y="21" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">También por APP</text>
+                </svg>
+            `;
+        }
+
+        function svgEncuestadorPhone() {
+            return `
+                <svg viewBox="0 0 280 220" height="200" aria-hidden="true">
+                    <rect x="42" y="36" width="82" height="148" rx="18" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="4"></rect>
+                    <rect x="54" y="52" width="58" height="92" rx="8" fill="#E8F0FA"></rect>
+                    <rect x="68" y="66" width="30" height="30" rx="6" fill="#2E6DA4"></rect>
+                    <path d="M77 81h12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M83 75v12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M62 114h42" stroke="#E8540A" stroke-width="4" stroke-linecap="round"></path>
+                    <path d="M62 128h34" stroke="#2E6DA4" stroke-width="4" stroke-linecap="round"></path>
+                    <circle cx="83" cy="160" r="5" fill="#2E6DA4"></circle>
+                    <circle cx="194" cy="44" r="18" fill="#F6D1B4"></circle>
+                    <path d="M194 64v58" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M194 78 168 106" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M194 80 224 96" stroke="#1B3A6B" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M194 122 174 182" stroke="#2E6DA4" stroke-width="10" stroke-linecap="round"></path>
+                    <path d="M194 122 214 182" stroke="#2E6DA4" stroke-width="10" stroke-linecap="round"></path>
+                    <rect x="158" y="102" width="22" height="34" rx="5" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="3"></rect>
+                    <path d="M163 114h12" stroke="#E8540A" stroke-width="2.5" stroke-linecap="round"></path>
+                    <path d="M163 122h12" stroke="#E8540A" stroke-width="2.5" stroke-linecap="round"></path>
+                    <rect x="178" y="66" width="32" height="18" rx="8" fill="#1B3A6B"></rect>
+                    <path d="M188 75h12" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"></path>
+                </svg>
+            `;
+        }
+
+        function svgPiramideNiveles() {
+            return `
+                <div class="split-40-60">
+                    <svg class="pyramid-svg" viewBox="0 0 380 260" height="260" aria-hidden="true">
+                        <polygon points="30,236 330,236 286,184 74,184" fill="#4CAF50"></polygon>
+                        <polygon points="74,184 286,184 254,132 106,132" fill="#FFC107"></polygon>
+                        <polygon points="106,132 254,132 226,82 134,82" fill="#FF7043"></polygon>
+                        <polygon points="134,82 226,82 190,34" fill="#E53935"></polygon>
+                        <text x="190" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Local, Emergencia menor</text>
+                        <text x="190" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Comunal, Emergencia mayor</text>
+                        <text x="190" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Regional, Desastre</text>
+                        <text x="190" y="64" text-anchor="middle" font-size="11" font-weight="900" fill="#FFFFFF" style="text-shadow:0 0 6px rgba(27,58,107,1)">Nacional, Catástrofe</text>
+                    </svg>
+                    <div class="item-grid">
+                        <div class="item-card" style="border-left-color:#E53935;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#E53935"><i data-lucide="flag" style="width:20px;height:20px"></i></span><div class="item-text">Nacional, Catástrofe</div></div></div>
+                        <div class="item-card" style="border-left-color:#FF7043;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#FF7043"><i data-lucide="map" style="width:20px;height:20px"></i></span><div class="item-text">Regional, Desastre</div></div></div>
+                        <div class="item-card" style="border-left-color:#FFC107;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#FFC107"><i data-lucide="building-2" style="width:20px;height:20px"></i></span><div class="item-text">Comunal, Emergencia mayor</div></div></div>
+                        <div class="item-card" style="border-left-color:#4CAF50;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#4CAF50"><i data-lucide="home" style="width:20px;height:20px"></i></span><div class="item-text">Local, Emergencia menor</div></div></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function svgPeopleRow() {
+            return `
+                <div class="people-row-wrap">
+                    <div class="people-caption">Cada persona acreditada suma.</div>
+                    <div class="people-row">
+                        <svg viewBox="0 0 640 120" aria-hidden="true">
+                            <g class="person-figure d1" fill="#FFFFFF"><circle cx="68" cy="28" r="14"></circle><path d="M48 52h40l8 48H40Z"></path></g>
+                            <g class="person-figure d2" fill="#E8540A"><circle cx="164" cy="28" r="14"></circle><path d="M144 52h40l8 48H136Z"></path></g>
+                            <g class="person-figure d3" fill="#FFFFFF"><circle cx="260" cy="28" r="14"></circle><path d="M240 52h40l8 48H232Z"></path></g>
+                            <g class="person-figure d4" fill="#E8540A"><circle cx="356" cy="28" r="14"></circle><path d="M336 52h40l8 48H328Z"></path></g>
+                            <g class="person-figure d5" fill="#FFFFFF"><circle cx="452" cy="28" r="14"></circle><path d="M432 52h40l8 48H424Z"></path></g>
+                            <g class="person-figure d6" fill="#E8540A"><circle cx="548" cy="28" r="14"></circle><path d="M528 52h40l8 48H520Z"></path></g>
+                        </svg>
+                    </div>
+                </div>
+            `;
+        }
+
+        function svgFichaStroke() {
+            return `
+                <svg class="form-svg" viewBox="0 0 240 260" height="100%" aria-hidden="true">
+                    <rect x="30" y="18" width="180" height="220" rx="20" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"></rect>
+                    <rect x="30" y="18" width="180" height="34" rx="20" fill="#1B3A6B"></rect>
+                    <text x="120" y="39" text-anchor="middle" font-size="16" font-weight="900" fill="#FFFFFF">FIBE</text>
+                    <path class="stroke-reveal" d="M56 78h128" stroke="#E8540A" stroke-width="5" fill="none"></path>
+                    <path class="stroke-reveal" d="M56 106h96" stroke="#2E6DA4" stroke-width="5" fill="none" style="animation-delay:.3s"></path>
+                    <path class="stroke-reveal" d="M56 134h128" stroke="#E8540A" stroke-width="5" fill="none" style="animation-delay:.6s"></path>
+                    <path class="stroke-reveal" d="M56 162h118" stroke="#2E6DA4" stroke-width="5" fill="none" style="animation-delay:.9s"></path>
+                    <path class="stroke-reveal" d="M56 190h82" stroke="#E8540A" stroke-width="5" fill="none" style="animation-delay:1.2s"></path>
+                    <path class="stroke-reveal" d="M56 218h110" stroke="#2E6DA4" stroke-width="5" fill="none" style="animation-delay:1.5s"></path>
+                </svg>
+            `;
+        }
+
+        function svgEmergencyHouse() {
+            return `
+                <svg viewBox="0 0 260 240" height="100%" aria-hidden="true">
+                    <circle cx="130" cy="118" r="42" fill="none" stroke="#E8540A" stroke-width="4" opacity=".55" style="animation:alertWave 2s infinite"></circle>
+                    <circle cx="130" cy="118" r="58" fill="none" stroke="#E8540A" stroke-width="4" opacity=".45" style="animation:alertWave 2s .4s infinite"></circle>
+                    <circle cx="130" cy="118" r="76" fill="none" stroke="#E8540A" stroke-width="4" opacity=".35" style="animation:alertWave 2s .8s infinite"></circle>
+                    <path d="m60 120 70-54 70 54" fill="none" stroke="#1B3A6B" stroke-width="8"></path>
+                    <path d="M82 114v82h96v-82" fill="#EEF3FA" stroke="#1B3A6B" stroke-width="8"></path>
+                    <path d="M118 196v-40h24v40" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="4"></path>
+                </svg>
+            `;
+        }
+
+        function svgDoorSurvey() {
+            return `
+                <svg viewBox="0 0 280 260" height="100%" aria-hidden="true">
+                    <g style="transform-origin:95px 128px;animation:sway 2s infinite alternate ease-in-out">
+                        <circle cx="95" cy="46" r="20" fill="#F6D1B4"></circle>
+                        <path d="M95 66v72" stroke="#1B3A6B" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 84 60 122" stroke="#1B3A6B" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 84 138 96" stroke="#1B3A6B" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 138 72 210" stroke="#2E6DA4" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 138 118 210" stroke="#2E6DA4" stroke-width="12" stroke-linecap="round"></path>
+                        <rect x="136" y="82" width="34" height="48" rx="6" fill="#E8540A"></rect>
+                        <path d="M144 98h18" stroke="#FFFFFF" stroke-width="3"></path>
+                        <path d="M144 108h18" stroke="#FFFFFF" stroke-width="3"></path>
+                    </g>
+                    <rect x="186" y="62" width="72" height="136" rx="6" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="4"></rect>
+                    <circle cx="246" cy="132" r="3" fill="#2E6DA4"></circle>
+                </svg>
+            `;
+        }
+
+        function svgModulesGlow() {
+            return `
+                <svg class="module-svg" viewBox="0 0 230 260" height="100%" aria-hidden="true">
+                    <rect x="32" y="18" width="166" height="224" rx="18" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"></rect>
+                    <rect x="52" y="44" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle 2.4s infinite"></rect>
+                    <rect x="52" y="76" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle 2.4s .4s infinite"></rect>
+                    <rect x="52" y="108" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle 2.4s .8s infinite"></rect>
+                    <rect x="52" y="140" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle 2.4s 1.2s infinite"></rect>
+                    <rect x="52" y="172" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle 2.4s 1.6s infinite"></rect>
+                    <rect x="52" y="204" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle 2.4s 2s infinite"></rect>
+                </svg>
+            `;
+        }
+
+        function svgMapPinBounce() {
+            return `
+                <svg viewBox="0 0 260 240" height="100%" aria-hidden="true">
+                    <rect x="30" y="34" width="200" height="170" rx="18" fill="#FFFFFF" stroke="#D8E4EF" stroke-width="3"></rect>
+                    <path d="M56 68h148M56 104h148M56 140h148M92 34v170M138 34v170M184 34v170" fill="none" stroke="#D8E4EF" stroke-width="3"></path>
+                    <g class="bouncy">
+                        <path d="M130 198s30-34 30-60a30 30 0 1 0-60 0c0 26 30 60 30 60Z" fill="#E8540A"></path>
+                        <circle cx="130" cy="138" r="11" fill="#FFFFFF"></circle>
+                    </g>
+                </svg>
+            `;
+        }
+
+        function svgFamilyAppear() {
+            return `
+                <svg viewBox="0 0 300 220" height="100%" aria-hidden="true">
+                    <g style="animation:familyCycle 3.2s infinite"><g fill="#1B3A6B"><circle cx="80" cy="60" r="18"></circle><path d="M58 84h44l8 66H50Z"></path></g></g>
+                    <g style="animation:familyCycle 3.2s .4s infinite"><g fill="#2E6DA4"><circle cx="140" cy="52" r="17"></circle><path d="M118 76h44l8 74H110Z"></path></g></g>
+                    <g style="animation:familyCycle 3.2s .8s infinite"><g fill="#E8540A"><circle cx="208" cy="60" r="18"></circle><path d="M186 84h44l8 66H178Z"></path></g></g>
+                    <g style="animation:familyCycle 3.2s 1.2s infinite"><g fill="#A7C0DD"><circle cx="116" cy="118" r="12"></circle><path d="M102 136h28l5 38H97Z"></path></g></g>
+                    <g style="animation:familyCycle 3.2s 1.6s infinite"><g fill="#F2A168"><circle cx="180" cy="118" r="12"></circle><path d="M166 136h28l5 38H161Z"></path></g></g>
+                </svg>
+            `;
+        }
+
+        function svgHands() {
+            return `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="44" r="13" stroke="#2E6DA4" stroke-width="4"></circle><circle cx="120" cy="44" r="13" stroke="#2E6DA4" stroke-width="4"></circle><path d="M46 80c7-12 16-18 27-18 10 0 17 6 22 14" stroke="#E8540A" stroke-width="5"></path><path d="M134 80c-7-12-16-18-27-18-10 0-17 6-22 14" stroke="#E8540A" stroke-width="5"></path><path d="M76 88h28" stroke="#2E6DA4" stroke-width="4"></path><path d="M90 74v28" stroke="#2E6DA4" stroke-width="4"></path></g></svg>`;
+        }
+
+        function svgTeamFallback() {
+            return `
+                <div class="team-fallback">
+                    <svg viewBox="0 0 720 210" aria-hidden="true">
+                        <g fill="#1B3A6B"><circle cx="92" cy="48" r="22"></circle><path d="M64 76h56l10 86H54Z"></path><rect x="76" y="92" width="32" height="26" rx="6" fill="#2E6DA4"></rect></g>
+                        <g fill="#2E6DA4"><circle cx="218" cy="48" r="22"></circle><path d="M190 76h56l10 86H180Z"></path><rect x="202" y="92" width="32" height="26" rx="6" fill="#1B3A6B"></rect></g>
+                        <g fill="#E8540A"><circle cx="344" cy="48" r="22"></circle><path d="M316 76h56l10 86H306Z"></path><rect x="328" y="92" width="32" height="26" rx="6" fill="#1B3A6B"></rect></g>
+                        <g fill="#2E6DA4"><circle cx="470" cy="48" r="22"></circle><path d="M442 76h56l10 86H432Z"></path><rect x="454" y="92" width="32" height="26" rx="6" fill="#E8540A"></rect></g>
+                        <g fill="#1B3A6B"><circle cx="596" cy="48" r="22"></circle><path d="M568 76h56l10 86H558Z"></path><rect x="580" y="92" width="32" height="26" rx="6" fill="#2E6DA4"></rect></g>
+                    </svg>
+                </div>
+            `;
+        }
+
+        function svgTeamSoftBlue() {
+            return `
+                <div class="team-fallback">
+                    <svg viewBox="0 0 720 210" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="softBlueVest" x1="0" x2="1">
+                                <stop offset="0%" stop-color="#BFD7EE"></stop>
+                                <stop offset="100%" stop-color="#DDEAF7"></stop>
+                            </linearGradient>
+                            <linearGradient id="softBlueAccent" x1="0" x2="1">
+                                <stop offset="0%" stop-color="#7FB2DD"></stop>
+                                <stop offset="100%" stop-color="#AFCFEA"></stop>
+                            </linearGradient>
+                        </defs>
+                        <g fill="#D7E7F6"><circle cx="92" cy="50" r="22"></circle><path d="M64 78h56l10 84H54Z"></path><rect x="77" y="92" width="30" height="24" rx="6" fill="url(#softBlueAccent)"></rect></g>
+                        <g fill="#CFE2F4"><circle cx="218" cy="50" r="22"></circle><path d="M190 78h56l10 84H180Z"></path><rect x="203" y="92" width="30" height="24" rx="6" fill="url(#softBlueVest)"></rect></g>
+                        <g fill="#E5F0FA"><circle cx="344" cy="50" r="22"></circle><path d="M316 78h56l10 84H306Z"></path><rect x="329" y="92" width="30" height="24" rx="6" fill="url(#softBlueAccent)"></rect></g>
+                        <g fill="#C7DDF2"><circle cx="470" cy="50" r="22"></circle><path d="M442 78h56l10 84H432Z"></path><rect x="455" y="92" width="30" height="24" rx="6" fill="url(#softBlueVest)"></rect></g>
+                        <g fill="#DCEBFA"><circle cx="596" cy="50" r="22"></circle><path d="M568 78h56l10 84H558Z"></path><rect x="581" y="92" width="30" height="24" rx="6" fill="url(#softBlueAccent)"></rect></g>
+                    </svg>
+                </div>
+            `;
+        }
+
+        const benefits = [
+            ["01", "nodes", "Entrega información social estandarizada para la toma de decisiones."],
+            ["02", "flow", "Fortalece la coordinación entre instituciones con un lenguaje común."],
+            ["03", "pin", "Mejora la trazabilidad territorial del catastro en emergencia."],
+            ["04", "aidBox", "Aporta antecedentes para focalizar apoyos y ayudas de emergencia."],
+            ["05", "document", "Favorece consistencia y comparabilidad entre eventos y territorios."],
+            ["06", "star", "Contribuye a una respuesta pública más oportuna y focalizada."]
+        ];
+
+        const basicNeeds = [
+            ["food", "Alimentación"],
+            ["water", "Agua"],
+            ["blanket", "Abrigo"],
+            ["hygiene", "Higiene"],
+            ["tent", "Solución habitacional transitoria"],
+            ["box", "Otros insumos"]
+        ];
+
+        const slides = [
+            { id: "marco-normativo", title: "Marco Normativo", navIcon: "shield", layout: "normative", items: [
+                { icon: "document", text: "El D.S. N°1.434 de 2017 establece competencias estatales y protocolos de acción para la gestión integral de emergencias." },
+                { icon: "arrow", text: "El D.S. N°2.724 de 2024 vincula el D.S. N°1.434 con la Ley N°21.364 y asegura su articulación con el marco normativo vigente.", media: svgNormativaVertical() },
+                { icon: "checkSmall", text: "La Ley N°21.364 crea el Sistema Nacional de Prevención y Respuesta ante Desastres y entrega el marco legal vigente para la coordinación frente a emergencias, desastres y catástrofes." },
+                { icon: "shield", text: "Para el SISE y la FIBE, el marco normativo de referencia está dado por el D.S. N°1.434 de 2017 y el D.S. N°2.724 de 2024." }
+            ]},
+            { id: "que-es-sise", title: "¿Qué es el SISE?", navIcon: "nodes", layout: "sise", items: [
+                { icon: "nodes", text: "El SISE es el sistema integral del Ministerio de Desarrollo Social y Familia para el levantamiento, resguardo y gestión de información social en emergencias." },
+                { icon: "form", text: "Incluye la FIBE en formato papel y APP, para registrar en terreno la caracterización de los hogares afectados." },
+                { icon: "document", text: "Incluye la plataforma web SISE como repositorio de gestión de datos para consulta, validación, seguimiento y uso institucional." },
+                { icon: "checkSmall", text: "Incluye manuales y procedimientos que estandarizan la aplicación, registro y tratamiento de la información." },
+                { icon: "shield", text: "Es administrado por la Subsecretaría de Servicios Sociales." }
+            ]},
+            { id: "quienes-informan", title: "¿Quiénes y cómo informan?", navIcon: "flow", layout: "flowplus", items: [
+                { icon: "flow", text: "La Subsecretaría de Servicios Sociales administra el SISE y coordina su operación por medio de la Unidad de Información Social en Emergencias." },
+                { icon: "document", text: "La información puede ingresar por digitación de ficha papel o transferirse directamente desde la APP a la plataforma web SISE." },
+                { icon: "checkSmall", text: "Los antecedentes resultantes permiten que otros organismos del Estado focalicen ayudas de emergencia, conforme a la Ley N°19.628 sobre protección de datos personales." }
+            ]},
+            { id: "documentos-niveles", title: "Documentos y Niveles de Emergencia", navIcon: "pyramid", layout: "pyramid", items: [
+                { icon: "document", text: "El informe ALFA corresponde a una evaluación preliminar de daños y necesidades." },
+                { icon: "form", text: "La FIBE realiza la caracterización social de los hogares afectados y aporta información para la respuesta institucional." }
+            ]},
+            { id: "coordinacion", title: "Juntos protegemos a la comunidad", navIcon: "gears", layout: "impact", items: [
+                { icon: "shield", text: "La Ley N°21.364 fortalece la coordinación entre instituciones para la respuesta frente a desastres." },
+                { icon: "gears", text: "El trabajo articulado se expresa en las fases de respuesta, rehabilitación e inicio de la reconstrucción." },
+                { icon: "checkSmall", text: "La gestión de emergencias requiere información oportuna, coordinación territorial y acción conjunta." }
+            ]},
+            { id: "que-es-fibe", title: "¿Qué es la FIBE?", navIcon: "form", layout: "visual-right", visual: "fibe", items: [
+                { icon: "form", text: "La Ficha Básica de Emergencia es el instrumento oficial del SISE, administrado por la Subsecretaría de Servicios Sociales en la División de Focalización." },
+                { icon: "document", text: "Registra información socioeconómica y de afectación en personas, hogares y viviendas." },
+                { icon: "checkSmall", text: "Su aplicación apoya la coordinación de la respuesta social del Estado y la focalización de ayudas de emergencia." }
+            ]},
+            { id: "cuando-aplica", title: "¿Cuándo y para qué se aplica?", navIcon: "calendar", layout: "visual-right", visual: "risk", items: [
+                { icon: "calendar", text: "Se aplica ante emergencias, desastres y catástrofes que afectan hogares y viviendas." },
+                { icon: "flow", text: "Apoya la coordinación entre MDSF, MINVU, Ministerio del Interior, SENAPRED, municipios y otros organismos competentes." },
+                { icon: "checkSmall", text: "Contribuye a orientar una respuesta más oportuna y focalizada." }
+            ]},
+            { id: "quien-aplica", title: "¿Quién aplica, dónde se aplica y quién responde la FIBE?", navIcon: "personClipboard", layout: "visual-right", visual: "door", items: [
+                { icon: "personClipboard", text: "Aplica un/a encuestador/a acreditado/a en el SISE." },
+                { icon: "home", text: "La ficha se levanta en el domicilio de residencia habitual del hogar afectado." },
+                { icon: "family", text: "Responde un/a informante mayor de 18 años que forme parte del grupo familiar o la jefatura de hogar reconocida por este." }
+            ]},
+            { id: "formato-uso", title: "Formato y Uso", navIcon: "document", layout: "visual-right", visual: "modules", items: [
+                { icon: "document", text: "La FIBE es un formulario organizado en módulos temáticos para aplicación en terreno." },
+                { icon: "form", text: "Está disponible en formato papel y digital para ajustarse a las condiciones operativas de la emergencia." },
+                { icon: "checkSmall", text: "Su estructura permite registrar de forma ordenada antecedentes sociales y de afectación material." }
+            ]},
+            { id: "modulo-1", title: "Módulo 1, Dirección del Hogar", navIcon: "pin", layout: "visual-right", visual: "map", items: [
+                { number: 1, icon: "pin", text: "Registra identificación territorial y ubicación precisa del hogar afectado." },
+                { number: 2, icon: "document", text: "Permite vincular la vivienda con la comuna, el territorio y el evento de emergencia correspondiente." },
+                { number: 3, icon: "checkSmall", text: "La precisión en este módulo es clave para la trazabilidad del catastro." }
+            ]},
+            { id: "modulo-2", title: "Módulo 2, Composición del Hogar", navIcon: "family", layout: "visual-right", visual: "family", items: [
+                { number: 1, icon: "family", text: "Identifica a las personas que integran el hogar afectado." },
+                { number: 2, icon: "document", text: "Permite establecer número de integrantes, composición familiar y características relevantes para la caracterización social." },
+                { number: 3, icon: "checkSmall", text: "Aporta información para dimensionar la afectación del grupo familiar." }
+            ]},
+            { id: "modulo-3", title: "Módulo 3, Necesidades Especiales", navIcon: "health", layout: "needs-special", items: [
+                { number: 1, icon: "health", text: "Considera personas con discapacidad física, sensorial, mental o intelectual.", media: svgWheelchair() },
+                { number: 2, icon: "support", text: "Identifica situaciones de dependencia y apoyos requeridos por el hogar.", media: svgHands() },
+                { number: 3, icon: "mind", text: "Incorpora la salud mental como dimensión relevante para la respuesta psicosocial en emergencia.", media: svgMindHeart(), badge: "★ Novedad 2026: se incluye atención psicosocial" },
+                { number: 4, icon: "arrow", text: "Permite registrar niveles de urgencia para apoyar la priorización institucional.", media: svgUrgencyScale() }
+            ]},
+            { id: "modulo-4", title: "Módulo 4, Necesidades Básicas", navIcon: "aidBox", layout: "basic-needs", items: [] },
+            { id: "modulo-5", title: "Módulo 5, Apreciación del Daño", navIcon: "damage", layout: "damage", items: [
+                { number: 1, icon: "home", text: "Vivienda, escala de daño: no afectada, poco afectada, medianamente afectada, muy afectada, destruida." },
+                { number: 2, icon: "sofa", text: "Enseres del hogar, escala de daño: no afectados, poco afectados, medianamente afectados y muy afectados." },
+                { number: 3, icon: "checkSmall", text: "La evaluación debe realizarse conforme a la Guía de Aplicación FIBE, con criterios diferenciados según cada nivel de afectación." }
+            ]},
+            { id: "modulo-6", title: "Módulo 6, Redes y Firma", navIcon: "signature", layout: "signatures", items: [] },
+            { id: "importancia-beneficios", title: "Importancia y Beneficios", navIcon: "star", layout: "benefits", items: [] },
+            { id: "fibe-emergencias-recientes", title: "FIBE en emergencias recientes", navIcon: "flow", layout: "recent-cases", items: [] },
+            { id: "por-que-acreditarte", title: "¿Por qué acreditarte?", navIcon: "medal", layout: "reason", items: [
+                { icon: "medal", text: "La acreditación entrega herramientas para aplicar correctamente la FIBE y resguardar la calidad del levantamiento." },
+                { icon: "checkSmall", text: "Fortalece la capacidad institucional para responder con equipos preparados para el catastro social." },
+                { icon: "shield", text: "Permite integrar el registro de personas acreditadas SISE." }
+            ]},
+            { id: "como-acreditarse", title: "¿Cómo acreditarse?", navIcon: "steps", layout: "how", items: [
+                { number: 1, icon: "steps", text: "Inscribirse mediante el formulario oficial de matrícula, con enlace o código QR institucional." },
+                { number: 2, icon: "document", text: "Participar en la capacitación teórico práctica definida por la Unidad de Información Social en Emergencias." },
+                { number: 3, icon: "medal", text: "Aprobar el proceso de acreditación SISE e incorporarse al registro de personas acreditadas." },
+                { number: 4, icon: "personClipboard", text: "La acreditación habilita para participar en encuestaje cuando las autoridades competentes así lo dispongan, pero no autoriza por sí sola la salida a terreno." }
+            ]},
+            { id: "equipo-cierre", title: "Únete al encuestaje FIBE", navIcon: "check", layout: "team", items: [
+                { icon: "check", text: "Tu labor en la aplicación de la FIBE contribuye a que el Estado cuente con información confiable para focalizar su respuesta de emergencia." },
+                { icon: "star", text: "Cada catastro bien realizado fortalece la coordinación institucional y apoya una atención más oportuna hacia los hogares afectados." }
+            ]},
+            { id: "invitacion-final", title: "Tu compromiso marca la diferencia.", navIcon: "star", layout: "final", items: [] }
+        ];
+
+        const navList = document.getElementById("navList");
+        const slideTrack = document.getElementById("slideTrack");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const progressCount = document.getElementById("progressCount");
+        const progressFill = document.getElementById("progressFill");
+        const splashScreen = document.getElementById("splashScreen");
+        const startButton = document.getElementById("startButton");
+        let currentIndex = 0;
+
+        function renderItem(item, index, orange = false) {
+            const color = orange ? "#FFFFFF" : (index % 2 === 0 ? "#E8540A" : "#2E6DA4");
+            const headClass = item.number ? "item-head" : "item-head no-number";
+            const badge = item.badge ? `<div style="display:inline-block;background:#E8540A;color:#FFFFFF;border-radius:6px;padding:6px 8px;font-size:12px;font-weight:700">${item.badge}</div>` : "";
+            return `
+                <div class="item-card">
+                    <div class="${headClass}">
+                        ${item.number ? `<span class="item-number">${item.number}</span>` : ""}
+                        <span class="item-icon" style="color:${color}">${iconSet[item.icon] || iconSet.document}</span>
+                        <div class="item-text">${item.text}</div>
+                    </div>
+                    ${badge}
+                    ${item.media ? `<div class="item-media">${item.media}</div>` : ""}
+                </div>
+            `;
+        }
+
+        function renderVisual(name) {
+            if (name === "fibe") return `<div class="visual-panel"><div class="visual-title">Instrumento oficial del SISE</div><div class="tall-svg">${svgFichaStroke()}</div></div>`;
+            if (name === "risk") return `<div class="visual-panel"><div class="visual-title">Aplicación en contexto de emergencia</div><div class="tall-svg">${svgEmergencyHouse()}</div></div>`;
+            if (name === "door") return `<div class="visual-panel"><div class="visual-title">Aplicación en el hogar afectado</div><div class="tall-svg">${svgDoorSurvey()}</div></div>`;
+            if (name === "modules") return `<div class="visual-panel"><div class="visual-title">Módulos de registro</div><div class="tall-svg">${svgModulesGlow()}</div></div>`;
+            if (name === "map") return `<div class="visual-panel"><div class="visual-title">Ubicación del hogar</div><div class="tall-svg">${svgMapPinBounce()}</div></div>`;
+            if (name === "family") return `<div class="visual-panel"><div class="visual-title">Integrantes del hogar</div><div class="tall-svg">${svgFamilyAppear()}</div></div>`;
+            return "";
+        }
+
+        function renderBenefits() {
+            return `
+                <div class="benefits-grid">
+                    ${benefits.map(([num, icon, text]) => `
+                        <div class="benefit-card">
+                            <div class="benefit-num">${num}</div>
+                            <div class="benefit-icon">${iconSet[icon]}</div>
+                            <p>${text}</p>
+                        </div>
+                    `).join("")}
+                </div>
+            `;
+        }
+
+        function renderSignatures() {
+            return `
+                <div class="three-col">
+                    <div class="item-card sign-col" style="min-height:100%">
+                        <div class="visual-title">Redes</div>
+                        <div class="item-text">Recoge redes de apoyo y antecedentes de participación comunitaria relevantes para la respuesta en emergencia.</div>
+                        <div class="item-media">${svgRedes()}</div>
+                    </div>
+                    <div class="item-card sign-col" style="min-height:100%">
+                        <div class="visual-title">Firma del informante</div>
+                        <div class="item-text">Incluye la firma del o la informante y la declaración de veracidad de los antecedentes entregados.</div>
+                        <div class="item-media">${svgFirma()}</div>
+                        <div class="statement-banner">Al firmar, el/la informante declara que los datos son verídicos. La entrega de información falsa tiene implicancias legales.</div>
+                    </div>
+                    <div class="item-card sign-col" style="min-height:100%">
+                        <div class="visual-title">Firma del encuestador/a</div>
+                        <div class="item-text">Incorpora la firma del encuestador/a acreditado/a como respaldo del levantamiento realizado en terreno.</div>
+                        <div class="item-media">${svgCredencial()}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderBasicNeeds() {
+            return `
+                <div class="slide-body">
+                    <div class="need-banner">
+                        <span>${iconSet.alert}</span>
+                        <span>Este módulo prioriza las necesidades según urgencia declarada por el hogar afectado.</span>
+                    </div>
+                    <div class="needs-grid">
+                        ${basicNeeds.map(([icon, label]) => `
+                            <div class="need-card">
+                                <div class="need-icon">${iconSet[icon]}</div>
+                                <p>${label}</p>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDamage() {
+            return `
+                <div class="item-grid">
+                    <div class="item-card" style="padding:18px 18px">
+                        <div class="item-head">
+                            <span class="item-number">1</span>
+                            <span class="item-icon" style="color:#E8540A">${iconSet.home.replace('width="24" height="24"', 'width="32" height="32"')}</span>
+                            <div class="item-text"><strong>Vivienda</strong>, escala de daño: no afectada, poco afectada, medianamente afectada, muy afectada, destruida.</div>
+                        </div>
+                        <div class="item-media">
+                            <svg class="scale-svg" viewBox="0 0 640 84" height="84" aria-hidden="true">
+                                <text x="60" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">No afectada</text>
+                                <text x="182" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Poco</text>
+                                <text x="310" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Medianamente</text>
+                                <text x="440" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Muy</text>
+                                <text x="572" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Destruida</text>
+                                <rect x="0" y="30" width="112" height="40" rx="8" fill="#4CAF50" style="transform-origin:left;animation:barGrow .35s ease forwards"></rect>
+                                <rect x="118" y="30" width="120" height="40" rx="8" fill="#8BC34A" style="transform-origin:left;animation:barGrow .35s ease .1s forwards"></rect>
+                                <rect x="244" y="30" width="128" height="40" rx="8" fill="#FFC107" style="transform-origin:left;animation:barGrow .35s ease .2s forwards"></rect>
+                                <rect x="378" y="30" width="126" height="40" rx="8" fill="#FF7043" style="transform-origin:left;animation:barGrow .35s ease .3s forwards"></rect>
+                                <rect x="510" y="30" width="130" height="40" rx="8" fill="#E53935" style="transform-origin:left;animation:barGrow .35s ease .4s forwards"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="item-card" style="padding:18px 18px">
+                        <div class="item-head">
+                            <span class="item-number">2</span>
+                            <span class="item-icon" style="color:#2E6DA4">${iconSet.sofa.replace('width="24" height="24"', 'width="40" height="40"')}</span>
+                            <div class="item-text"><strong>Enseres del hogar</strong>, escala de daño: no afectados, poco afectados, medianamente afectados y muy afectados.</div>
+                        </div>
+                        <div class="item-media">
+                            <svg class="scale-svg" viewBox="0 0 640 84" height="84" aria-hidden="true">
+                                <text x="82" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">No afectados</text>
+                                <text x="242" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Poco</text>
+                                <text x="402" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Medianamente</text>
+                                <text x="560" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Muy afectados</text>
+                                <rect x="0" y="30" width="156" height="40" rx="8" fill="#4CAF50" style="transform-origin:left;animation:barGrow .35s ease forwards"></rect>
+                                <rect x="162" y="30" width="156" height="40" rx="8" fill="#FFC107" style="transform-origin:left;animation:barGrow .35s ease .1s forwards"></rect>
+                                <rect x="324" y="30" width="156" height="40" rx="8" fill="#FF7043" style="transform-origin:left;animation:barGrow .35s ease .2s forwards"></rect>
+                                <rect x="486" y="30" width="154" height="40" rx="8" fill="#E53935" style="transform-origin:left;animation:barGrow .35s ease .3s forwards"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="item-card" style="padding:18px 18px">
+                        <div class="item-head no-number">
+                            <span class="item-icon" style="color:#E8540A">${iconSet.checkSmall.replace('width="24" height="24"', 'width="32" height="32"')}</span>
+                            <div class="item-text">La evaluación debe realizarse conforme a la Guía de Aplicación FIBE, con criterios diferenciados según cada nivel de afectación.</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderReason() {
+            return `
+                <div class="slide-body with-bottom-image">
+                    <div class="item-grid">
+                        ${slides.find((s) => s.id === "por-que-acreditarte").items.map((item, index) => renderItem(item, index)).join("")}
+                    </div>
+                    <div class="slide-image-wrap bottom">
+                        ${svgTeamSoftBlue()}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderHow() {
+            return `
+                <div class="split-70-30" style="grid-template-columns:1.3fr .7fr">
+                    <div class="item-grid">
+                        ${slides.find((s) => s.id === "como-acreditarse").items.map((item, index) => {
+                            if (index === 3) {
+                                return `
+                                    <div class="item-card" style="padding:16px">
+                                        <div class="item-head">
+                                            <span class="item-number">${item.number}</span>
+                                            <span class="item-icon" style="color:#2E6DA4">${iconSet[item.icon]}</span>
+                                            <div class="item-text">${item.text}</div>
+                                        </div>
+                                        <div class="item-media">${svgTimelineAcreditacion()}</div>
+                                    </div>
+                                `;
+                            }
+                            return renderItem({...item}, index).replace('<div class="item-card">','<div class="item-card" style="padding:16px">');
+                        }).join("")}
+                    </div>
+                    <div class="qr-side">
+                        <img src="./qr_inscripcion.png" alt="QR inscripción acreditación SISE 2026">
+                        <strong>Formulario de inscripción</strong>
+                        <div class="qr-sub">Acreditación SISE 2026</div>
+                        <a href="#">Escanea o haz clic aquí</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTeamClose() {
+            return `
+                <div class="slide-body with-bottom-image">
+                    <div class="item-grid orange-list">
+                        ${slides.find((s) => s.id === "equipo-cierre").items.map((item, index) => renderItem(item, index, true).replace('<div class="item-card">','<div class="item-card" style="padding:18px">').replace('font-size: 15px','font-size: 16px')).join("")}
+                    </div>
+                    <div class="slide-image-wrap bottom" style="align-self:end">
+                        ${svgTeamSoftBlue()}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderFinalInvite() {
+            return `
+                <div class="final-wrap">
+                    <div class="splash-big-icon">${iconSet.openPerson.replace('width="24" height="24"', 'width="80" height="80"')}</div>
+                    <h2 class="slide-title">Tu compromiso marca la diferencia.</h2>
+                    <div class="final-subtitle">Cada ficha bien aplicada es una familia que recibe la ayuda que necesita.</div>
+                    <div class="final-line"></div>
+                    <div class="final-meta">Ministerio de Desarrollo Social y Familia — Unidad de Información Social en Emergencias — 2026</div>
+                    <button class="final-btn" id="backToStart">← Volver al inicio</button>
+                </div>
+            `;
+        }
+
+        function renderSlideBody(slide) {
+            if (slide.layout === "normative") {
+                return `<div class="slide-body">${renderDefaultItems(slide.items)}${svgNormativeIcons()}</div>`;
+            }
+            if (slide.layout === "sise") {
+                return `<div class="split-60-40"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index)).join("")}</div><div class="visual-panel"><div class="visual-title">Componentes del sistema</div>${svgSiseNetwork()}</div></div>`;
+            }
+            if (slide.layout === "flowplus") {
+                return `<div class="split-40-60"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index)).join("")}</div><div class="visual-panel-light"><div class="visual-title">Flujo de información y aplicación móvil</div>${svgFlujoHorizontal()}<div style="margin-top:10px;display:flex;justify-content:center">${svgEncuestadorPhone()}</div></div></div>`;
+            }
+            if (slide.layout === "pyramid") {
+                return `<div class="slide-body">${renderDefaultItems(slide.items)}<div class="visual-panel">${svgPiramideNiveles()}</div></div>`;
+            }
+            if (slide.layout === "impact") {
+                return `<div class="impact-body">${slide.items.map((item, index) => `<div class="impact-card delay-${index + 1}"><div class="impact-icon">${iconSet[item.icon]}</div><p>${item.text}</p></div>`).join("")}${svgPeopleRow()}</div>`;
+            }
+            if (slide.layout === "visual-right") {
+                return `<div class="split-visual"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index)).join("")}</div>${renderVisual(slide.visual)}</div>`;
+            }
+            if (slide.layout === "needs-special") {
+                return `<div class="item-grid">${slide.items.map((item, index) => renderItem(item, index)).join("")}</div>`;
+            }
+            if (slide.layout === "basic-needs") return renderBasicNeeds();
+            if (slide.layout === "damage") return renderDamage();
+            if (slide.layout === "signatures") return renderSignatures();
+            if (slide.layout === "benefits") return renderBenefits();
+            if (slide.layout === "recent-cases") return renderRecentCases();
+            if (slide.layout === "reason") return renderReason();
+            if (slide.layout === "how") return renderHow();
+            if (slide.layout === "team") return renderTeamClose();
+            if (slide.layout === "final") return renderFinalInvite();
+            return renderDefaultItems(slide.items);
+        }
+
+        function renderDefaultItems(items) {
+            return `<div class="item-grid">${items.map((item, index) => renderItem(item, index)).join("")}</div>`;
+        }
+
+        function htmlSiseNetwork() {
+            return `
+                <div style="width:100%;height:100%;min-height:320px;background:#F0F4FF;border-radius:16px;padding:18px;display:flex;align-items:center;justify-content:center">
+                    <div style="position:relative;width:100%;max-width:420px;height:320px">
+                        <div style="position:absolute;left:50%;top:50%;width:100px;height:100px;margin-left:-50px;margin-top:-50px;border-radius:50%;background:#1B3A6B;color:#FFFFFF;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 0 0 rgba(46,109,164,0.4);animation:pulseNode 2s infinite">
+                            <strong style="font-size:22px;line-height:1">SISE</strong>
+                            <span style="font-size:12px;font-weight:300">Sistema integral</span>
+                        </div>
+                        <div style="position:absolute;left:18px;top:24px;width:120px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
+                            <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="file-text" style="width:32px;height:32px"></i></div>
+                            <div style="font-size:18px;font-weight:700">FIBE Papel</div>
+                        </div>
+                        <div style="position:absolute;right:18px;top:24px;width:120px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
+                            <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="smartphone" style="width:32px;height:32px"></i></div>
+                            <div style="font-size:18px;font-weight:700">APP SISE</div>
+                        </div>
+                        <div style="position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:140px;padding:12px;border:2px solid #2E6DA4;border-radius:12px;background:#FFFFFF;text-align:center;color:#1A2B45">
+                            <div style="color:#E8540A;margin-bottom:8px"><i data-lucide="monitor" style="width:32px;height:32px"></i></div>
+                            <div style="font-size:18px;font-weight:700">Plataforma Web</div>
+                        </div>
+                        <div style="position:absolute;left:132px;top:100px;width:68px;height:3px;background:#2E6DA4"></div>
+                        <div style="position:absolute;right:132px;top:100px;width:68px;height:3px;background:#2E6DA4"></div>
+                        <div style="position:absolute;left:50%;top:182px;width:3px;height:46px;transform:translateX(-50%);background:#2E6DA4"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderVisual(name) {
+            if (name === "fibe") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Instrumento oficial del SISE</div><div class="tall-svg">${svgFichaStroke()}</div></div>`;
+            if (name === "risk") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en contexto de emergencia</div><div class="tall-svg">${svgEmergencyHouse()}</div></div>`;
+            if (name === "door") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en el hogar afectado</div><div class="tall-svg">${svgDoorSurvey()}</div></div>`;
+            if (name === "modules") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Módulos de registro</div><div class="tall-svg">${svgModulesGlow()}</div></div>`;
+            if (name === "map") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Ubicación del hogar</div><div class="tall-svg">${svgMapPinBounce()}</div></div>`;
+            if (name === "family") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Integrantes del hogar</div><div class="tall-svg">${svgFamilyAppear()}</div></div>`;
+            return "";
+        }
+
+        function renderHow() {
+            return `
+                <div class="split-70-30" style="grid-template-columns:1.3fr .7fr">
+                    <div class="item-grid">
+                        ${slides.find((s) => s.id === "como-acreditarse").items.map((item, index) =>
+                            renderItem({ ...item }, index).replace('<div class="item-card">', '<div class="item-card" style="padding:16px">')
+                        ).join("")}
+                        <div class="item-card" style="padding:16px">
+                            <div class="item-head no-number">
+                                <span class="item-icon" style="color:#2E6DA4">${iconSet.steps}</span>
+                                <div class="item-text">Ruta de acreditación SISE para inscripción, capacitación, acreditación y eventual participación en terreno.</div>
+                            </div>
+                            <div class="item-media">${svgTimelineAcreditacion()}</div>
+                        </div>
+                    </div>
+                    <div class="qr-side">
+                        <img src="./qr_inscripcion.png" alt="QR inscripción acreditación SISE 2026">
+                        <strong>Formulario de inscripción</strong>
+                        <div class="qr-sub">Acreditación SISE 2026</div>
+                        <a href="#">Escanea o haz clic aquí</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSlideBody(slide) {
+            if (slide.layout === "normative") {
+                return `<div class="slide-body" style="gap:16px">${renderDefaultItems(slide.items.map(item => ({...item, media:""}))).replace('<div class="item-grid">','<div class="item-grid" style="gap:10px">')}${svgNormativeIcons()}</div>`;
+            }
+            if (slide.layout === "sise") {
+                return `<div class="split-60-40"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index).replace('padding: 14px 15px','padding:16px')).join("")}</div><div class="visual-panel-light visual-fill"><div class="visual-title">Componentes del sistema</div>${htmlSiseNetwork()}</div></div>`;
+            }
+            if (slide.layout === "flowplus") {
+                return `<div class="split-40-60"><div class="item-grid" style="gap:10px">${slide.items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:16px">')).join("")}</div><div class="visual-panel-light visual-fill"><div class="visual-title">Flujo de información y aplicación móvil</div><div style="display:flex;flex-direction:column;justify-content:space-between;gap:12px;flex:1">${svgFlujoHorizontal()}<div style="display:flex;justify-content:center;align-items:flex-end;flex:1">${svgEncuestadorPhone()}</div></div></div></div>`;
+            }
+            if (slide.layout === "pyramid") {
+                return `<div class="slide-body" style="gap:20px"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:16px">')).join("")}</div><div class="visual-panel" style="align-items:center;justify-content:center">${svgPiramideNiveles()}</div></div>`;
+            }
+            if (slide.layout === "impact") {
+                return `<div class="impact-body">${slide.items.map((item, index) => `<div class="impact-card delay-${index + 1}" style="padding:18px"><div class="impact-icon">${iconSet[item.icon]}</div><p style="font-size:17px">${item.text}</p></div>`).join("")}${svgPeopleRow()}</div>`;
+            }
+            if (slide.layout === "visual-right") {
+                return `<div class="split-visual"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index)).join("")}</div>${renderVisual(slide.visual)}</div>`;
+            }
+            if (slide.layout === "needs-special") {
+                const items = slides.find((s) => s.id === "modulo-3").items.map((item, index) => {
+                    const media = [svgWheelchair(), svgHands(), `<svg viewBox="0 0 180 120" height="120" aria-hidden="true"><g stroke="#2E6DA4" fill="none" stroke-width="3"><path d="M90 18a36 36 0 0 0-36 36c0 12 5 20 11 26 4 4 7 9 7 15v3h36v-3c0-6 3-11 7-15 6-6 11-14 11-26A36 36 0 0 0 90 18Z"></path></g><g class="heartbeat" style="transform-origin:center"><path d="m90 78-14-12a9 9 0 0 1 12.5-12.8A9 9 0 0 1 103 66l-13 12Z" fill="#E8540A" style="animation:pulseHeart 1s infinite"></path></g></svg>`, svgUrgencyScale()][index];
+                    return {...item, media};
+                });
+                return `<div class="item-grid" style="gap:8px">${items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:14px 15px">')).join("")}</div>`;
+            }
+            if (slide.layout === "basic-needs") return renderBasicNeeds();
+            if (slide.layout === "damage") return renderDamage();
+            if (slide.layout === "signatures") return renderSignatures();
+            if (slide.layout === "benefits") return renderBenefits();
+            if (slide.layout === "reason") return renderReason();
+            if (slide.layout === "how") return renderHow();
+            if (slide.layout === "team") return renderTeamClose();
+            if (slide.layout === "final") return renderFinalInvite();
+            return renderDefaultItems(slide.items);
+        }
+
+        function renderFinalInvite() {
+            return `
+                <div class="final-wrap" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;height:100%">
+                    <div class="splash-big-icon">${iconSet.openPerson.replace('width="24" height="24"', 'width="60" height="60"')}</div>
+                    <h2 class="slide-title">Tu compromiso marca la diferencia.</h2>
+                    <div class="final-line"></div>
+                    <div class="final-meta">Ministerio de Desarrollo Social y Familia — Unidad de Información Social en Emergencias — 2026</div>
+                    <button class="final-btn" id="backToStart">← Volver al inicio</button>
+                </div>
+            `;
+        }
+
+        function renderBasicNeeds() {
+            const colors = ["#E8540A", "#1B3A6B", "#E8540A", "#1B3A6B", "#E8540A", "#1B3A6B"];
+            return `
+                <div class="slide-body">
+                    <div class="need-banner">
+                        <span>${iconSet.alert}</span>
+                        <span>Este módulo prioriza las necesidades según urgencia declarada por el hogar afectado.</span>
+                    </div>
+                    <div class="needs-grid">
+                        ${basicNeeds.map(([icon, label], index) => `
+                            <div class="need-card" style="background:${colors[index]};min-height:120px">
+                                <div class="need-icon" style="background:transparent;color:#FFFFFF">${iconSet[icon].replace('stroke="currentColor"', 'stroke="currentColor"')}</div>
+                                <p style="color:#FFFFFF;font-size:18px">${label}</p>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSignatures() {
+            return `
+                <div class="three-col" style="display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start">
+                    <div class="item-card sign-col" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-height:100%">
+                        <div class="item-media" style="margin:0 auto">${svgRedes()}</div>
+                        <div class="visual-title" style="text-align:center;width:100%">Redes</div>
+                        <div class="item-text" style="text-align:left;font-size:18px">Recoge redes de apoyo y antecedentes de participación comunitaria relevantes para la respuesta en emergencia.</div>
+                    </div>
+                    <div class="item-card sign-col" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-height:100%">
+                        <div class="item-media" style="margin:0 auto">${svgFirma()}</div>
+                        <div class="visual-title" style="text-align:center;width:100%">Firma del informante</div>
+                        <div class="item-text" style="text-align:left;font-size:18px">Incluye la firma del o la informante y la declaración de veracidad de los antecedentes entregados.</div>
+                        <div class="statement-banner">Al firmar, el/la informante declara que los datos son verídicos. La entrega de información falsa tiene implicancias legales.</div>
+                    </div>
+                    <div class="item-card sign-col" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-height:100%">
+                        <div class="item-media" style="margin:0 auto">${svgCredencial()}</div>
+                        <div class="visual-title" style="text-align:center;width:100%">Firma del encuestador/a</div>
+                        <div class="item-text" style="text-align:left;font-size:18px">Incorpora la firma del encuestador/a acreditado/a como respaldo del levantamiento realizado en terreno.</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderReason() {
+            return `
+                <div class="slide-body with-bottom-image">
+                    <div class="item-grid" style="margin-top:16px;margin-bottom:16px">
+                        ${slides.find((s) => s.id === "por-que-acreditarte").items.map((item, index) => renderItem(item, index)).join("")}
+                    </div>
+                    <div class="slide-image-wrap bottom">
+                        ${svgTeamSoftBlue()}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderRecentCases() {
+            return `
+                <div class="cases-slide">
+                    <div class="cases-head">
+                        <div class="cases-subtitle">Focalización de ayudas con información levantada en terreno</div>
+                    </div>
+                    <div class="cases-grid">
+                        <article class="case-card featured">
+                            <div class="case-head">
+                                <div class="case-title">Valparaíso 2024</div>
+                                <div class="case-kicker">Incendios en Viña del Mar, Quilpué y Villa Alemana</div>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-card primary">
+                                    <div class="metric-value">8.542</div>
+                                    <div class="metric-label">fichas terminadas</div>
+                                    <div class="metric-note">22.066 personas catastradas</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value" style="color:#1B3A6B">35,2%</div>
+                                    <div class="metric-label" style="color:#1B3A6B">cobertura del Bono de Uniforme Escolar</div>
+                                    <div class="metric-note" style="color:#5A6A79">2.987 hogares, $427.600.000, 4.276 NNA</div>
+                                </div>
+                            </div>
+                            <div class="territory-strip">
+                                <div class="territory-chip"><div class="territory-name">Quilpué</div><div class="territory-data">2.407 fichas, 6.397 personas</div></div>
+                                <div class="territory-chip"><div class="territory-name">Villa Alemana</div><div class="territory-data">120 fichas, 310 personas</div></div>
+                                <div class="territory-chip"><div class="territory-name">Viña del Mar</div><div class="territory-data">6.015 fichas, 15.359 personas</div></div>
+                            </div>
+                            <div class="focus-grid">
+                                <div class="focus-pill"><i data-lucide="shirt"></i><div><strong>Bono de Uniforme Escolar</strong><span>2.987 hogares beneficiados, $427.600.000 y 4.276 NNA.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="heart-pulse"></i><div><strong>Ayudas tempranas sectoriales</strong><span>SENADIS 561 ayudas técnicas, Niñez 3.059 kits, FOSIS 381 prestaciones, SENAMA 153 talleres.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="stethoscope"></i><div><strong>Prestaciones de salud y educación</strong><span>FONASA 55.017 prestaciones y JUNAEB 4.975 apoyos por $1.546.186.730.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="house-plus"></i><div><strong>Habitabilidad y reconstrucción</strong><span>MINVU 1.340 subsidios y SENAPRED 1.673 viviendas de emergencia.</span></div></div>
+                            </div>
+                            <div class="case-highlight">
+                                <div class="ring" data-label="24K"></div>
+                                <div><strong>La FIBE permitió dimensionar la afectación y orientar ayudas monetarias, apoyos sociales y soluciones habitacionales en gran escala.</strong><span>SENAPRED movilizó $12.547.500.000 en viviendas de emergencia y múltiples servicios activaron apoyos focalizados.</span></div>
+                            </div>
+                        </article>
+                        <article class="case-card">
+                            <div class="case-head">
+                                <div class="case-title">Ñuble – Biobío 2026</div>
+                                <div class="case-kicker">Incendios forestales</div>
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-card primary">
+                                    <div class="metric-value">4.971</div>
+                                    <div class="metric-label">fichas terminadas</div>
+                                    <div class="metric-note">12.833 personas catastradas</div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value" style="color:#1B3A6B">95%</div>
+                                    <div class="metric-label" style="color:#1B3A6B">cobertura del Bono de Recuperación</div>
+                                    <div class="metric-note" style="color:#5A6A79">4.713 hogares, $6.810.000.000</div>
+                                </div>
+                            </div>
+                            <div class="territory-strip two">
+                                <div class="territory-chip"><div class="territory-name">Ñuble</div><div class="territory-data">642 hogares terminados, 1.583 personas</div></div>
+                                <div class="territory-chip"><div class="territory-name">Biobío</div><div class="territory-data">4.329 hogares terminados, 11.250 personas</div></div>
+                            </div>
+                            <div class="focus-grid">
+                                <div class="focus-pill"><i data-lucide="wallet"></i><div><strong>Bono de Recuperación</strong><span>4.713 hogares beneficiados por $6.810.000.000.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="home"></i><div><strong>SENAPRED y habitabilidad</strong><span>522 viviendas de emergencia asignadas y apoyos para reconstrucción desde MINVU.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="accessibility"></i><div><strong>Apoyos focalizados</strong><span>SENADIS identificó 172 personas con necesidad de ayuda técnica y activó compras iniciales cercanas a $13.000.000.</span></div></div>
+                                <div class="focus-pill"><i data-lucide="graduation-cap"></i><div><strong>Salud y educación</strong><span>FONASA 788 prestaciones, JUNAEB 460 sets, 1.827 becas escolares y 661 apoyos en educación superior.</span></div></div>
+                            </div>
+                            <div class="case-highlight">
+                                <div class="ring" data-label="95%"></div>
+                                <div><strong>La FIBE permitió identificar con rapidez a los hogares afectados y activar transferencias, apoyos sectoriales y soluciones transitorias de habitabilidad.</strong><span>También orientó la focalización de FOSIS y otros servicios en proceso de respuesta productiva y social.</span></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="cases-footer">La FIBE transforma el levantamiento en terreno en focalización efectiva: identifica hogares afectados, prioriza la respuesta y articula ayudas concretas entre múltiples servicios del Estado.</div>
+                </div>
+            `;
+        }
+
+        function svgPiramideNiveles() {
+            return `
+                <div style="display:flex;flex-direction:row;align-items:center;justify-content:center;gap:22px;width:100%">
+                    <svg class="pyramid-svg" viewBox="0 0 380 260" height="230" aria-hidden="true" style="flex:0 0 auto">
+                        <polygon points="30,236 330,236 286,184 74,184" fill="#4CAF50"></polygon>
+                        <polygon points="74,184 286,184 254,132 106,132" fill="#FFC107"></polygon>
+                        <polygon points="106,132 254,132 226,82 134,82" fill="#FF7043"></polygon>
+                        <polygon points="134,82 226,82 190,34" fill="#E53935"></polygon>
+                        <text x="190" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Local, Emergencia menor</text>
+                        <text x="190" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Comunal, Emergencia mayor</text>
+                        <text x="190" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Regional, Desastre</text>
+                        <text x="190" y="64" text-anchor="middle" font-size="11" font-weight="900" fill="#FFFFFF" style="text-shadow:0 0 6px rgba(27,58,107,1)">Nacional, Catástrofe</text>
+                    </svg>
+                    <div class="item-grid" style="width:min(320px,100%);gap:10px;flex:0 1 320px">
+                        <div class="item-card" style="border-left-color:#E53935;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#E53935"><i data-lucide="flag" style="width:20px;height:20px"></i></span><div class="item-text">Nacional, Catástrofe</div></div></div>
+                        <div class="item-card" style="border-left-color:#FF7043;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#FF7043"><i data-lucide="map" style="width:20px;height:20px"></i></span><div class="item-text">Regional, Desastre</div></div></div>
+                        <div class="item-card" style="border-left-color:#FFC107;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#FFC107"><i data-lucide="building-2" style="width:20px;height:20px"></i></span><div class="item-text">Comunal, Emergencia mayor</div></div></div>
+                        <div class="item-card" style="border-left-color:#4CAF50;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#4CAF50"><i data-lucide="home" style="width:20px;height:20px"></i></span><div class="item-text">Local, Emergencia menor</div></div></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderVisual(name) {
+            if (name === "fibe") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Instrumento oficial del SISE</div><div class="tall-svg" style="min-height:154px">${svgFichaStroke()}</div></div>`;
+            if (name === "risk") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en contexto de emergencia</div><div class="tall-svg" style="min-height:154px">${svgEmergencyHouse()}</div></div>`;
+            if (name === "door") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Aplicación en el hogar afectado</div><div class="tall-svg" style="min-height:154px">${svgDoorSurvey()}</div></div>`;
+            if (name === "modules") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Módulos de registro</div><div class="tall-svg" style="min-height:154px">${svgModulesGlow()}</div></div>`;
+            if (name === "map") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Ubicación del hogar</div><div class="tall-svg" style="min-height:154px">${svgMapPinBounce()}</div></div>`;
+            if (name === "family") return `<div class="visual-panel-light visual-fill"><div class="visual-title">Integrantes del hogar</div><div class="tall-svg" style="min-height:154px">${svgFamilyAppear()}</div></div>`;
+            return "";
+        }
+
+        function renderHow() {
+            const items = slides.find((s) => s.id === "como-acreditarse").items;
+            return `
+                <div class="split-70-30" style="grid-template-columns:1.3fr .7fr">
+                    <div class="item-grid">
+                        ${items.map((item, index) => `
+                            <div class="item-card" style="padding:16px">
+                                <div class="item-head">
+                                    <span class="item-number">${item.number || index + 1}</span>
+                                    <span class="item-icon" style="color:${index % 2 === 0 ? "#E8540A" : "#2E6DA4"}">${iconSet[item.icon] || iconSet.document}</span>
+                                    <div class="item-text">${item.text}</div>
+                                </div>
+                            </div>
+                        `).join("")}
+                    </div>
+                    <div class="qr-side" style="min-height:auto;padding:24px;display:flex;align-items:center;justify-content:center">
+                        <img src="./qr_inscripcion.png" alt="QR inscripción acreditación SISE 2026" style="width:240px;height:240px">
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSlideBody(slide) {
+            if (slide.layout === "normative") {
+                return `<div class="slide-body" style="gap:16px">${renderDefaultItems(slide.items.map(item => ({...item, media:""}))).replace('<div class="item-grid">','<div class="item-grid" style="gap:10px">')}${svgNormativeIcons()}</div>`;
+            }
+            if (slide.layout === "sise") {
+                return `<div class="split-60-40"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index).replace('padding: 14px 15px','padding:16px')).join("")}</div><div class="visual-panel-light visual-fill"><div class="visual-title">Componentes del sistema</div>${htmlSiseNetwork()}</div></div>`;
+            }
+            if (slide.layout === "flowplus") {
+                return `<div class="split-40-60"><div class="item-grid" style="gap:10px">${slide.items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:16px">')).join("")}</div><div class="visual-panel-light visual-fill"><div class="visual-title">Flujo de información y aplicación móvil</div><div style="display:flex;flex-direction:column;justify-content:center;gap:2px;flex:1">${svgFlujoHorizontal()}<div style="display:flex;justify-content:center;align-items:center;flex:1">${svgEncuestadorPhone()}</div></div></div></div>`;
+            }
+            if (slide.layout === "pyramid") {
+                return `<div class="slide-body" style="gap:20px"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:16px">')).join("")}</div><div class="visual-panel" style="align-items:center;justify-content:center">${svgPiramideNiveles()}</div></div>`;
+            }
+            if (slide.layout === "impact") {
+                return `<div class="impact-body">${slide.items.map((item, index) => `<div class="impact-card delay-${index + 1}" style="padding:18px"><div class="impact-icon">${iconSet[item.icon]}</div><p style="font-size:17px">${item.text}</p></div>`).join("")}${svgPeopleRow()}</div>`;
+            }
+            if (slide.layout === "visual-right") {
+                return `<div class="split-visual"><div class="item-grid">${slide.items.map((item, index) => renderItem(item, index).replace('<div class="item-card">','<div class="item-card" style="padding:18px 18px">').replace('font-size: 16px','font-size: 18px')).join("")}</div>${renderVisual(slide.visual)}</div>`;
+            }
+            if (slide.layout === "needs-special") {
+                const items = slides.find((s) => s.id === "modulo-3").items;
+                const mediaByIndex = [
+                    `<div style="margin-top:4px">${svgWheelchair().replace('height="120"', 'height="62"')}</div>`,
+                    `<div style="margin-top:2px">${svgHands().replace('height="120"', 'height="54"')}</div>`,
+                    `<div style="margin-top:2px"><svg viewBox="0 0 180 120" height="68" aria-hidden="true"><g stroke="#2E6DA4" fill="none" stroke-width="3"><path d="M90 18a36 36 0 0 0-36 36c0 12 5 20 11 26 4 4 7 9 7 15v3h36v-3c0-6 3-11 7-15 6-6 11-14 11-26A36 36 0 0 0 90 18Z"></path></g><path d="m90 78-14-12a9 9 0 0 1 12.5-12.8A9 9 0 0 1 103 66l-13 12Z" fill="#E8540A" style="animation:pulseHeart 1s infinite;transform-origin:center"></path></svg></div>`,
+                    `<div style="margin-top:2px">${svgUrgencyScale().replace('height="100"', 'height="62"')}</div>`
+                ];
+                return `<div class="item-grid" style="gap:4px">${items.map((item, index) => `
+                    <div class="item-card" style="padding:8px 12px;gap:4px">
+                        <div class="item-head">
+                            <span class="item-number">${item.number || index + 1}</span>
+                            <span class="item-icon" style="color:${index % 2 === 0 ? "#E8540A" : "#2E6DA4"}">${iconSet[item.icon] || iconSet.document}</span>
+                            <div class="item-text" style="font-size:18px;line-height:1.4">${item.text}</div>
+                        </div>
+                        ${item.badge ? `<div style="display:inline-block;background:#E8540A;color:#FFFFFF;border-radius:6px;padding:5px 8px;font-size:11px;font-weight:700">${item.badge}</div>` : ""}
+                        <div class="item-media">${mediaByIndex[index] || ""}</div>
+                    </div>
+                `).join("")}</div>`;
+            }
+            if (slide.layout === "basic-needs") return renderBasicNeeds();
+            if (slide.layout === "damage") return renderDamage();
+            if (slide.layout === "signatures") return renderSignatures();
+            if (slide.layout === "benefits") return renderBenefits();
+            if (slide.layout === "reason") return renderReason();
+            if (slide.layout === "how") return renderHow();
+            if (slide.layout === "team") return renderTeamClose();
+            if (slide.layout === "final") return renderFinalInvite();
+            return renderDefaultItems(slide.items);
+        }
+
+        function svgFichaStroke() {
+            return `
+                <svg class="form-svg" viewBox="0 0 240 260" height="100%" aria-hidden="true">
+                    <rect x="30" y="18" width="180" height="220" rx="20" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"></rect>
+                    <rect x="30" y="18" width="180" height="34" rx="20" fill="#1B3A6B"></rect>
+                    <text x="120" y="39" text-anchor="middle" font-size="16" font-weight="900" fill="#FFFFFF">FIBE</text>
+                    <path d="M56 78h128" stroke="#E8540A" stroke-width="5" fill="none" stroke-dasharray="120" stroke-dashoffset="120" style="animation:revealStroke 1s ease infinite"></path>
+                    <path d="M56 106h96" stroke="#2E6DA4" stroke-width="5" fill="none" stroke-dasharray="120" stroke-dashoffset="120" style="animation:revealStroke 1s ease .5s infinite"></path>
+                    <path d="M56 134h128" stroke="#E8540A" stroke-width="5" fill="none" stroke-dasharray="120" stroke-dashoffset="120" style="animation:revealStroke 1s ease 1s infinite"></path>
+                    <path d="M56 162h118" stroke="#2E6DA4" stroke-width="5" fill="none" stroke-dasharray="120" stroke-dashoffset="120" style="animation:revealStroke 1s ease 1.5s infinite"></path>
+                </svg>
+            `;
+        }
+
+        function svgEmergencyHouse() {
+            return `
+                <svg viewBox="0 0 260 240" height="100%" aria-hidden="true">
+                    <circle cx="130" cy="118" r="42" fill="none" stroke="#E8540A" stroke-width="4" opacity=".55" style="animation:alertWave 1.5s infinite"></circle>
+                    <circle cx="130" cy="118" r="58" fill="none" stroke="#E8540A" stroke-width="4" opacity=".45" style="animation:alertWave 1.5s .5s infinite"></circle>
+                    <circle cx="130" cy="118" r="76" fill="none" stroke="#E8540A" stroke-width="4" opacity=".35" style="animation:alertWave 1.5s 1s infinite"></circle>
+                    <path d="m60 120 70-54 70 54" fill="none" stroke="#1B3A6B" stroke-width="8"></path>
+                    <path d="M82 114v82h96v-82" fill="#EEF3FA" stroke="#1B3A6B" stroke-width="8"></path>
+                    <path d="M118 196v-40h24v40" fill="#FFFFFF" stroke="#2E6DA4" stroke-width="4"></path>
+                </svg>
+            `;
+        }
+
+        function svgDoorSurvey() {
+            return `
+                <svg viewBox="0 0 280 260" height="100%" aria-hidden="true">
+                    <g style="transform-origin:95px 128px;animation:sway 1.5s infinite alternate ease-in-out">
+                        <circle cx="95" cy="46" r="20" fill="#F6D1B4"></circle>
+                        <path d="M95 66v72" stroke="#1B3A6B" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 84 60 122" stroke="#1B3A6B" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 84 138 96" stroke="#1B3A6B" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 138 72 210" stroke="#2E6DA4" stroke-width="12" stroke-linecap="round"></path>
+                        <path d="M95 138 118 210" stroke="#2E6DA4" stroke-width="12" stroke-linecap="round"></path>
+                        <rect x="136" y="82" width="34" height="48" rx="6" fill="#E8540A"></rect>
+                    </g>
+                    <rect x="186" y="62" width="72" height="136" rx="6" fill="#EEF3FA" stroke="#2E6DA4" stroke-width="4"></rect>
+                </svg>
+            `;
+        }
+
+        function svgModulesGlow() {
+            return `
+                <svg class="module-svg" viewBox="0 0 230 260" height="100%" aria-hidden="true">
+                    <rect x="32" y="18" width="166" height="224" rx="18" fill="#FFFFFF" stroke="#1B3A6B" stroke-width="4"></rect>
+                    <rect x="52" y="44" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle .6s infinite"></rect>
+                    <rect x="52" y="76" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle .6s .4s infinite"></rect>
+                    <rect x="52" y="108" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle .6s .8s infinite"></rect>
+                    <rect x="52" y="140" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle .6s 1.2s infinite"></rect>
+                    <rect x="52" y="172" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle .6s 1.6s infinite"></rect>
+                    <rect x="52" y="204" width="126" height="22" rx="8" fill="#E0E8F0" style="animation:moduleCycle .6s 2s infinite"></rect>
+                </svg>
+            `;
+        }
+
+        function svgFamilyAppear() {
+            return `
+                <svg viewBox="0 0 300 220" height="100%" aria-hidden="true">
+                    <g style="animation:familyCycle 3.5s infinite"><g fill="#1B3A6B"><circle cx="80" cy="60" r="18"></circle><path d="M58 84h44l8 66H50Z"></path></g></g>
+                    <g style="animation:familyCycle 3.5s .4s infinite"><g fill="#2E6DA4"><circle cx="140" cy="52" r="17"></circle><path d="M118 76h44l8 74H110Z"></path></g></g>
+                    <g style="animation:familyCycle 3.5s .8s infinite"><g fill="#E8540A"><circle cx="208" cy="60" r="18"></circle><path d="M186 84h44l8 66H178Z"></path></g></g>
+                    <g style="animation:familyCycle 3.5s 1.2s infinite"><g fill="#A7C0DD"><circle cx="116" cy="118" r="12"></circle><path d="M102 136h28l5 38H97Z"></path></g></g>
+                    <g style="animation:familyCycle 3.5s 1.6s infinite"><g fill="#F2A168"><circle cx="180" cy="118" r="12"></circle><path d="M166 136h28l5 38H161Z"></path></g></g>
+                </svg>
+            `;
+        }
+
+        function renderDamage() {
+            return `
+                <div class="item-grid">
+                    <div class="item-card" style="padding:18px">
+                        <div class="item-head">
+                            <span class="item-number">1</span>
+                            <span class="item-icon" style="color:#E8540A">${iconSet.home.replace('width="24" height="24"', 'width="32" height="32"')}</span>
+                            <div class="item-text" style="font-size:18px"><strong>Vivienda</strong>, escala de daño: no afectada, poco afectada, medianamente afectada, muy afectada, destruida.</div>
+                        </div>
+                        <div class="item-media">
+                            <svg class="scale-svg" viewBox="0 0 640 94" height="94" aria-hidden="true">
+                                <text x="60" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">No afectada</text>
+                                <text x="182" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Poco</text>
+                                <text x="310" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Medianamente</text>
+                                <text x="440" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Muy</text>
+                                <text x="572" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Destruida</text>
+                                <rect x="0" y="30" width="112" height="50" rx="8" fill="#4CAF50"></rect>
+                                <rect x="118" y="30" width="120" height="50" rx="8" fill="#8BC34A"></rect>
+                                <rect x="244" y="30" width="128" height="50" rx="8" fill="#FFC107"></rect>
+                                <rect x="378" y="30" width="126" height="50" rx="8" fill="#FF7043"></rect>
+                                <rect x="510" y="30" width="130" height="50" rx="8" fill="#E53935"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="item-card" style="padding:18px">
+                        <div class="item-head">
+                            <span class="item-number">2</span>
+                            <span class="item-icon" style="color:#E8540A">${iconSet.sofa.replace('width="24" height="24"', 'width="40" height="40"')}</span>
+                            <div class="item-text" style="font-size:18px"><strong>Enseres del hogar</strong>, escala de daño: no afectados, poco afectados, medianamente afectados y muy afectados.</div>
+                        </div>
+                        <div class="item-media">
+                            <svg class="scale-svg" viewBox="0 0 640 94" height="94" aria-hidden="true">
+                                <text x="82" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">No afectados</text>
+                                <text x="242" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Poco</text>
+                                <text x="402" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Medianamente</text>
+                                <text x="560" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#1B3A6B">Muy afectados</text>
+                                <rect x="0" y="30" width="156" height="50" rx="8" fill="#4CAF50"></rect>
+                                <rect x="162" y="30" width="156" height="50" rx="8" fill="#FFC107"></rect>
+                                <rect x="324" y="30" width="156" height="50" rx="8" fill="#FF7043"></rect>
+                                <rect x="486" y="30" width="154" height="50" rx="8" fill="#E53935"></rect>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="item-card" style="padding:18px">
+                        <div class="item-head no-number">
+                            <span class="item-icon" style="color:#E8540A">${iconSet.checkSmall.replace('width="24" height="24"', 'width="32" height="32"')}</span>
+                            <div class="item-text" style="font-size:18px">La evaluación debe realizarse conforme a la Guía de Aplicación FIBE, con criterios diferenciados según cada nivel de afectación.</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createNav() {
+            navList.innerHTML = slides.map((slide, index) => `
+                <a href="#${slide.id}" class="nav-item ${index === 0 ? "active" : ""}" data-index="${index}">
+                    <span>${iconSet[slide.navIcon]}</span>
+                    <span>${slide.title}</span>
+                </a>
+            `).join("");
+        }
+
+        function createSlides() {
+            slideTrack.innerHTML = slides.map((slide, index) => `
+                <article class="slide ${index === 0 ? "active" : ""} ${slide.layout === "impact" ? "impact-slide" : ""} ${slide.layout === "final" ? "final-slide" : ""}" id="${slide.id}">
+                    <div class="slide-head">
+                        <h2 class="slide-title">${slide.title}</h2>
+                    </div>
+                    ${renderSlideBody(slide)}
+                </article>
+            `).join("");
+        }
+
+        function updateUI() {
+            document.querySelectorAll(".slide").forEach((slide, index) => slide.classList.toggle("active", index === currentIndex));
+            document.querySelectorAll(".nav-item").forEach((item, index) => item.classList.toggle("active", index === currentIndex));
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === slides.length - 1;
+            progressCount.textContent = `${currentIndex + 1} / ${slides.length}`;
+            progressFill.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
+        }
+
+        function goToSlide(index) {
+            if (index < 0 || index >= slides.length) return;
+            currentIndex = index;
+            updateUI();
+        }
+
+        function startPresentation() {
+            if (!splashScreen) return;
+            splashScreen.classList.add("fade-out");
+            setTimeout(() => { splashScreen.style.display = "none"; }, 460);
+        }
+
+        window.startPresentation = startPresentation;
+
+        prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+        nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
+        navList.addEventListener("click", (event) => {
+            const link = event.target.closest(".nav-item");
+            if (!link) return;
+            event.preventDefault();
+            goToSlide(Number(link.dataset.index));
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") goToSlide(currentIndex - 1);
+            if (event.key === "ArrowRight") goToSlide(currentIndex + 1);
+        });
+
+        if (startButton) startButton.addEventListener("click", startPresentation);
+
+        document.addEventListener("click", (event) => {
+            if (event.target && event.target.id === "backToStart") {
+                goToSlide(0);
+                splashScreen.style.display = "flex";
+                requestAnimationFrame(() => splashScreen.classList.remove("fade-out"));
+            }
+        });
+
+        createNav();
+        createSlides();
+        updateUI();
+        if (window.lucide && window.lucide.createIcons) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
