@@ -228,9 +228,11 @@
         }
         .case-card > * { position: relative; z-index: 1; }
         .case-card.featured { background: linear-gradient(180deg, #FBFDFF 0%, #EEF4FB 100%); }
-        .case-card.secondary { border-top-color: #E8540A; }
+        .case-card.secondary { background: linear-gradient(180deg, #FFFFFF 0%, #FFF6F0 100%); border-top-color: #E8540A; }
+        .case-card.secondary::before { background: linear-gradient(135deg, rgba(232,84,10,.13), rgba(245,142,72,.08)); }
         .case-head { display: grid; gap: 4px; }
         .case-title { font-size: 25px; font-weight: 900; color: var(--azul-profundo); line-height: 1.05; }
+        .case-card.secondary .case-title { color: #C84807; }
         .case-kicker { font-size: 15px; color: var(--gris-suave); line-height: 1.3; }
         .case-hero-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .hero-metric {
@@ -242,7 +244,8 @@
             gap: 4px;
         }
         .hero-metric.primary { background: linear-gradient(135deg, #1B3A6B, #2E6DA4); color: #FFFFFF; border-color: transparent; }
-        .case-card.secondary .hero-metric.primary { background: linear-gradient(135deg, #2E6DA4, #E8540A); }
+        .case-card.secondary .hero-metric { background: #FFF7F2; border-color: #F2C4A8; }
+        .case-card.secondary .hero-metric.primary { background: linear-gradient(135deg, #C84807, #E8540A); }
         .hero-number { font-size: 42px; font-weight: 900; line-height: .95; color: inherit; letter-spacing: -.5px; }
         .hero-label { font-size: 15px; line-height: 1.25; color: inherit; }
         .hero-note { font-size: 13px; line-height: 1.3; color: rgba(255,255,255,.88); }
@@ -1681,12 +1684,10 @@
                                 <div class="hero-metric primary">
                                     <div class="hero-number">8.542</div>
                                     <div class="hero-label">fichas terminadas</div>
-                                    <div class="hero-note">22.066 personas catastradas</div>
                                 </div>
                                 <div class="hero-metric">
                                     <div class="hero-number" style="color:#1B3A6B">22.066</div>
                                     <div class="hero-label" style="color:#1B3A6B">personas catastradas</div>
-                                    <div class="hero-note" style="color:#5A6A79">Viña del Mar, Quilpué y Villa Alemana</div>
                                 </div>
                             </div>
                             <div class="territory-strip">
@@ -1714,12 +1715,10 @@
                                 <div class="hero-metric primary">
                                     <div class="hero-number">4.971</div>
                                     <div class="hero-label">fichas terminadas</div>
-                                    <div class="hero-note">12.833 personas catastradas</div>
                                 </div>
                                 <div class="hero-metric">
-                                    <div class="hero-number" style="color:#1B3A6B">12.833</div>
-                                    <div class="hero-label" style="color:#1B3A6B">personas catastradas</div>
-                                    <div class="hero-note" style="color:#5A6A79">Ñuble 642 hogares, Biobío 4.329 hogares</div>
+                                    <div class="hero-number" style="color:#C84807">12.833</div>
+                                    <div class="hero-label" style="color:#C84807">personas catastradas</div>
                                 </div>
                             </div>
                             <div class="territory-strip two">
