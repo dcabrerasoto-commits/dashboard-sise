@@ -320,10 +320,12 @@
         .qr-side .qr-sub { font-size: 17px; color: rgba(255,255,255,.88); font-weight:300; }
         .qr-side a { font-size: 17px; color: #FFFFFF; text-decoration: underline; }
 
-        .orange-list .item-card { background: #E8540A; border-left-color: #E8540A; }
-        .orange-list .item-text { color: #FFFFFF; }
-        .orange-list .item-icon { color: #FFFFFF !important; }
-        .orange-list .item-card:hover { background: #1B3A6B; transition: .2s; }
+        .orange-list .item-card { background: linear-gradient(180deg, #FFFFFF, #F7FAFE); border: 1px solid #DCE8F4; border-left: 5px solid #E8540A; }
+        .orange-list .item-card:nth-child(even) { border-left-color: #2E6DA4; }
+        .orange-list .item-text { color: var(--azul-profundo); }
+        .orange-list .item-icon { color: #E8540A !important; }
+        .orange-list .item-card:nth-child(even) .item-icon { color: #2E6DA4 !important; }
+        .orange-list .item-card:hover { background: #F3F7FC; transition: .2s; }
 
         .big-icon { width: 52px; height: 52px; margin: 0 auto; color: #2E6DA4; display: flex; align-items: center; justify-content: center; }
         .norm-icons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
@@ -337,8 +339,10 @@
 
         .final-wrap { display: flex; flex-direction: column; gap: 16px; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; flex:1; animation: fadeInSoft .5s ease both; }
         .splash-big-icon { width: 60px; height: 60px; color: #FFFFFF; display: flex; align-items: center; justify-content: center; animation: pulseNode 2s ease-in-out infinite; }
+        .final-wrap .splash-big-icon { width: 78px; height: 78px; border-radius: 24px; background: rgba(232,84,10,.16); border: 1px solid rgba(255,255,255,.20); box-shadow: 0 16px 32px rgba(0,0,0,.16); }
+        .final-wrap .splash-big-icon svg { width: 44px; height: 44px; }
         .final-subtitle { color: rgba(255,255,255,.82); font-size: 18px; font-weight: 300; line-height: 1.4; max-width: 620px; }
-        .final-line { width: 60px; height: 4px; border-radius: 999px; background: #E8540A; }
+        .final-line { width: 160px; height: 3px; border-radius: 999px; background: linear-gradient(90deg, rgba(255,255,255,.62), #E8540A, rgba(255,255,255,.22)); }
         .final-meta { color: #FFFFFF; font-size: 14px; line-height: 1.45; }
         .final-btn {
             border: none; border-radius: 999px; background: #FFFFFF; color: #1B3A6B; padding: 10px 24px; font-weight: 700; font-size: 14px; margin-top:auto;
@@ -1236,11 +1240,11 @@
                 { number: 3, icon: "medal", text: "Aprobar el proceso de acreditación SISE e incorporarse al registro de personas acreditadas." },
                 { number: 4, icon: "personClipboard", text: "La acreditación habilita para participar en encuestaje cuando las autoridades competentes así lo dispongan, pero no autoriza por sí sola la salida a terreno." }
             ]},
-            { id: "equipo-cierre", title: "Únete al encuestaje FIBE", navIcon: "check", layout: "team", items: [
-                { icon: "check", text: "Tu labor en la aplicación de la FIBE contribuye a que el Estado cuente con información confiable para focalizar su respuesta de emergencia." },
-                { icon: "star", text: "Cada catastro bien realizado fortalece la coordinación institucional y apoya una atención más oportuna hacia los hogares afectados." }
+            { id: "equipo-cierre", title: "Acredítate para apoyar el encuestaje FIBE", navIcon: "check", layout: "team", items: [
+                { icon: "check", text: "Acredítate para aplicar correctamente la FIBE y aportar información confiable a la respuesta de emergencia." },
+                { icon: "star", text: "Cada catastro bien realizado fortalece la coordinación institucional y permite una atención más oportuna a los hogares afectados." }
             ]},
-            { id: "invitacion-final", title: "Tu compromiso marca la diferencia.", navIcon: "star", layout: "final", items: [] }
+            { id: "invitacion-final", title: "Tu trabajo en terreno marca la diferencia.", navIcon: "star", layout: "final", items: [] }
         ];
 
         const navList = document.getElementById("navList");
@@ -1449,8 +1453,8 @@
             return `
                 <div class="final-wrap">
                     <div class="splash-big-icon">${iconSet.openPerson.replace('width="24" height="24"', 'width="80" height="80"')}</div>
-                    <h2 class="slide-title">Tu compromiso marca la diferencia.</h2>
-                    <div class="final-subtitle">Cada ficha bien aplicada es una familia que recibe la ayuda que necesita.</div>
+                    <h2 class="slide-title">Tu trabajo en terreno marca la diferencia.</h2>
+                    <div class="final-subtitle">La calidad del levantamiento impacta directamente en la respuesta.</div>
                     <div class="final-line"></div>
                     <div class="final-meta">Ministerio de Desarrollo Social y Familia — Unidad de Información Social en Emergencias — 2026</div>
                     <button class="final-btn" id="backToStart">← Volver al inicio</button>
@@ -1603,8 +1607,9 @@
         function renderFinalInvite() {
             return `
                 <div class="final-wrap" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;height:100%">
-                    <div class="splash-big-icon">${iconSet.openPerson.replace('width="24" height="24"', 'width="60" height="60"')}</div>
-                    <h2 class="slide-title">Tu compromiso marca la diferencia.</h2>
+                    <div class="splash-big-icon">${iconSet.openPerson.replace('width="24" height="24"', 'width="86" height="86"')}</div>
+                    <h2 class="slide-title">Tu trabajo en terreno marca la diferencia.</h2>
+                    <div class="final-subtitle">La calidad del levantamiento impacta directamente en la respuesta.</div>
                     <div class="final-line"></div>
                     <div class="final-meta">Ministerio de Desarrollo Social y Familia — Unidad de Información Social en Emergencias — 2026</div>
                     <button class="final-btn" id="backToStart">← Volver al inicio</button>
