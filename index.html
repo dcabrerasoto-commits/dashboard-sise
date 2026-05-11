@@ -283,7 +283,13 @@
                 porComuna: Object.values(fila.porComuna).map((comunaFila) => ({
                     ...comunaFila,
                     TasaAcreditado: comunaFila.Total > 0 ? (comunaFila.Acreditado / comunaFila.Total) * 100 : 0
-                })).sort((a, b) => b.Total - a.Total || a.Comuna.localeCompare(b.Comuna, "es-CL"))
+                })).sort((a, b) => {
+                    const aSinComuna = a.Comuna === "Sin comuna informada";
+                    const bSinComuna = b.Comuna === "Sin comuna informada";
+                    if (aSinComuna && !bSinComuna) return 1;
+                    if (!aSinComuna && bSinComuna) return -1;
+                    return b.Total - a.Total || a.Comuna.localeCompare(b.Comuna, "es-CL");
+                })
             })).sort((a, b) => a.OrdenRegion - b.OrdenRegion);
             return resumen;
         });
