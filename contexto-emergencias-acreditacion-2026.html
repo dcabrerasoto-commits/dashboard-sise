@@ -336,6 +336,34 @@
         .tall-svg { min-height: 170px; display:flex; align-items:center; justify-content:center; flex:0 0 auto; margin-top:2px; }
         .tall-svg svg { width:100%; height:100%; min-height:150px; max-height:180px; }
         .sign-col .item-media svg { height: 100px; }
+        .pyramid-figure-wrap { display:flex; align-items:center; justify-content:center; width:100%; }
+        .pyramid-figure {
+            width: 320px;
+            height: 210px;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            overflow: hidden;
+            border: 2px solid #1B3A6B;
+            background: #FFFFFF;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .pyramid-band {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#FFFFFF;
+            font-weight:700;
+            text-align:center;
+            line-height:1.15;
+            text-shadow:0 1px 3px rgba(0,0,0,0.6);
+            border-bottom: 2px solid rgba(255,255,255,0.95);
+        }
+        .pyramid-band:last-child { border-bottom: none; }
+        .pyramid-band.top { flex: 0 0 22%; background:#E53935; font-size:12px; }
+        .pyramid-band.upper { flex: 0 0 26%; background:#FF7043; font-size:13px; }
+        .pyramid-band.middle { flex: 0 0 24%; background:#FFC107; font-size:13px; }
+        .pyramid-band.base { flex: 1 1 auto; background:#4CAF50; font-size:13px; }
 
         .final-wrap { display: flex; flex-direction: column; gap: 16px; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; flex:1; animation: fadeInSoft .5s ease both; }
         .splash-big-icon { width: 60px; height: 60px; color: #FFFFFF; display: flex; align-items: center; justify-content: center; animation: pulseNode 2s ease-in-out infinite; }
@@ -749,33 +777,14 @@
         function svgPiramideNiveles() {
             return `
                 <div class="split-40-60">
-                    <svg class="pyramid-svg" viewBox="0 0 380 240" height="240" aria-hidden="true" style="shape-rendering:crispEdges">
-                        <defs>
-                            <linearGradient id="pyramidBands" x1="0" y1="216" x2="0" y2="34" gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#4CAF50"></stop>
-                                <stop offset="25.2%" stop-color="#4CAF50"></stop>
-                                <stop offset="25.2%" stop-color="#FFC107"></stop>
-                                <stop offset="50.5%" stop-color="#FFC107"></stop>
-                                <stop offset="50.5%" stop-color="#FF7043"></stop>
-                                <stop offset="75.8%" stop-color="#FF7043"></stop>
-                                <stop offset="75.8%" stop-color="#E53935"></stop>
-                                <stop offset="100%" stop-color="#E53935"></stop>
-                            </linearGradient>
-                            <clipPath id="pyramidClip">
-                                <polygon points="24,216 356,216 190,34"></polygon>
-                            </clipPath>
-                        </defs>
-                        <polygon points="24,216 356,216 190,34" fill="url(#pyramidBands)" stroke="#1B3A6B" stroke-width="2" stroke-linejoin="miter"></polygon>
-                        <g clip-path="url(#pyramidClip)">
-                            <line x1="0" y1="170" x2="380" y2="170" stroke="#FFFFFF" stroke-width="2"></line>
-                            <line x1="0" y1="124" x2="380" y2="124" stroke="#FFFFFF" stroke-width="2"></line>
-                            <line x1="0" y1="78" x2="380" y2="78" stroke="#FFFFFF" stroke-width="2"></line>
-                        </g>
-                        <text x="190" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Local, Emergencia menor</text>
-                        <text x="190" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Comunal, Emergencia mayor</text>
-                        <text x="190" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Regional, Desastre</text>
-                        <text x="190" y="63" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 4px rgba(0,0,0,0.8)">Nacional, Catástrofe</text>
-                    </svg>
+                    <div class="pyramid-figure-wrap" aria-hidden="true">
+                        <div class="pyramid-figure">
+                            <div class="pyramid-band top">Nacional, Catástrofe</div>
+                            <div class="pyramid-band upper">Regional, Desastre</div>
+                            <div class="pyramid-band middle">Comunal, Emergencia mayor</div>
+                            <div class="pyramid-band base">Local, Emergencia menor</div>
+                        </div>
+                    </div>
                     <div class="item-grid">
                         <div class="item-card" style="border-left-color:#E53935"><div class="item-head no-number"><span class="item-icon" style="color:#E53935">${iconWrap(svgLibrary.flagSmall, 20)}</span><div class="item-text">Nacional, Catástrofe</div></div></div>
                         <div class="item-card" style="border-left-color:#FF7043"><div class="item-head no-number"><span class="item-icon" style="color:#FF7043">${iconWrap(svgLibrary.mapSmall, 20)}</span><div class="item-text">Regional, Desastre</div></div></div>
