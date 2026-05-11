@@ -1,4 +1,4 @@
-<!DOCTYPE html>`r`n<!-- pages-rebuild-2026-04-23T16:10:00Z -->
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -93,10 +93,24 @@
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
         tr:hover td { background: #f7faff; }
+        .region-cell-button { background: none; border: none; padding: 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; }
+        .region-cell-button:hover { text-decoration: underline; }
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
         .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
         .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 2px; }
+        .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
+        .modal-backdrop.visible { display: flex; }
+        .modal-card { width: min(980px, 100%); max-height: 85vh; overflow: auto; background: white; border: 1px solid var(--borde); border-radius: 12px; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18); padding: 20px; }
+        .modal-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+        .modal-title { font-size: 22px; font-weight: 700; color: #17396f; }
+        .modal-subtitle { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.5; }
+        .modal-close { border: 1px solid #cbd5e1; background: white; color: var(--azul-sise); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-weight: 700; }
+        .modal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px; }
+        .modal-stat { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 10px; padding: 14px 15px; }
+        .modal-stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.7px; font-weight: 700; color: var(--azul-secundario); margin-bottom: 6px; }
+        .modal-stat-value { font-size: 26px; font-weight: 700; color: #17396f; }
+        .modal-empty { background: #f8fbff; border: 1px solid #dbe5f3; border-radius: 10px; padding: 15px; color: #475569; line-height: 1.6; }
         @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
         @media (max-width: 760px) { header { flex-direction: column; align-items: flex-start; } .header-meta { width: 100%; } }
     </style>
@@ -120,12 +134,26 @@
         <div id="content"></div>
     </div>
     </div>
+<div class="modal-backdrop" id="comunaModal" onclick="cerrarModalComuna(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <div>
+                <div class="section-title" style="margin-bottom:6px;">Desglose por comuna</div>
+                <div class="modal-title" id="comunaModalTitle">Región</div>
+                <div class="modal-subtitle" id="comunaModalSubtitle"></div>
+            </div>
+            <button class="modal-close" type="button" onclick="cerrarModalComuna()">Cerrar</button>
+        </div>
+        <div id="comunaModalContent"></div>
+    </div>
+</div>
 <script>
     let chartEstado = null;
     let chartRegion = null;
     let chartTendencia = null;
     let dashboardData = null;
     let currentMonthIndex = 0;
+    let modalRegionActual = null;
     const AUTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQp3xmjVpjlQTcHdHxM69Jju6ZOJuE2jm58gWU7owObfGoL0PTzHAgWiDR2i8ri-anb0c7j_p4ffjJb/pub?gid=1955078176&single=true&output=csv";
     
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
@@ -164,6 +192,11 @@
     function buscarColumnasEstado(headers) { return headers.filter((header) => norm(header).startsWith("ESTADO")); }
     function extraerMesDesdeColumna(nombre) { return norm(nombre).replace(/^ESTADO_?/, "").trim(); }
     function normalizarEstado(valor) { const estado = norm(valor); if (!estado) return "SIN ESTADO"; if (estado.includes("NO VIGENTE")) return "NO VIGENTE"; if (estado.includes("NO ACREDITADO")) return "NO ACREDITADO"; if (estado === "ACREDITADO") return "ACREDITADO"; return estado; }
+    function normalizarComuna(valor) {
+        const texto = String(valor || "").trim();
+        if (!texto || norm(texto) === "0") return "Sin comuna informada";
+        return texto.replace(/\s+/g, " ").trim();
+    }
     function construirUrlSinCache(url) {
         const limpia = String(url || "").trim();
         if (!limpia) return "";
@@ -200,27 +233,49 @@
     function fmt(n) { return Number(n || 0).toLocaleString("es-CL"); }
     function pct(n, total) { return total > 0 ? ((n / total) * 100).toFixed(1) + "%" : "-"; }
     function obtenerDelta(actual, previo) { const diff = actual - previo; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} vs mes anterior` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} vs mes anterior` }; return { className: "delta-flat", label: "Sin variación vs mes anterior" }; }
+    function obtenerResumenVacio(region, etiquetaRegion) {
+        return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, TasaAcreditado: 0, porComuna: [] };
+    }
     function procesarDatos(datos, cols) {
-        const { colRegion, columnasEstado } = cols;
+        const { colRegion, colComuna, columnasEstado } = cols;
         const meses = columnasEstado.map((columna) => ({ key: columna, label: extraerMesDesdeColumna(columna) }));
         const monthly = meses.map((mes) => {
-            const resumen = { key: mes.key, label: mes.label, acreditado: 0, noVigente: 0, noAcreditado: 0, sinEstado: 0, total: datos.length, porRegion: {} };
+            const resumen = { key: mes.key, label: mes.label, acreditado: 0, noVigente: 0, noAcreditado: 0, sinEstado: 0, total: datos.length, porRegion: {}, hasComunaData: false };
             datos.forEach((fila) => {
                 const estado = normalizarEstado(fila[mes.key]);
                 const region = normalizarRegion(colRegion ? fila[colRegion] : "");
+                const comuna = normalizarComuna(colComuna ? fila[colComuna] : "");
                 if (!resumen.porRegion[region]) {
-                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0 };
+                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, porComuna: {} };
                 }
                 resumen.porRegion[region].Total++;
                 if (estado === "ACREDITADO") { resumen.acreditado++; resumen.porRegion[region].Acreditado++; }
                 else if (estado === "NO VIGENTE") { resumen.noVigente++; resumen.porRegion[region].NoVigente++; }
                 else if (estado === "NO ACREDITADO") { resumen.noAcreditado++; resumen.porRegion[region].NoAcreditado++; }
                 else { resumen.sinEstado++; resumen.porRegion[region].SinEstado++; }
+                if (colComuna) {
+                    resumen.hasComunaData = true;
+                    if (!resumen.porRegion[region].porComuna[comuna]) {
+                        resumen.porRegion[region].porComuna[comuna] = { Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, TasaAcreditado: 0 };
+                    }
+                    resumen.porRegion[region].porComuna[comuna].Total++;
+                    if (estado === "ACREDITADO") resumen.porRegion[region].porComuna[comuna].Acreditado++;
+                    else if (estado === "NO VIGENTE") resumen.porRegion[region].porComuna[comuna].NoVigente++;
+                    else if (estado === "NO ACREDITADO") resumen.porRegion[region].porComuna[comuna].NoAcreditado++;
+                    else resumen.porRegion[region].porComuna[comuna].SinEstado++;
+                }
             });
-            resumen.porRegion = Object.values(resumen.porRegion).map((fila) => ({ ...fila, TasaAcreditado: fila.Total > 0 ? (fila.Acreditado / fila.Total) * 100 : 0 })).sort((a, b) => a.OrdenRegion - b.OrdenRegion);
+            resumen.porRegion = Object.values(resumen.porRegion).map((fila) => ({
+                ...fila,
+                TasaAcreditado: fila.Total > 0 ? (fila.Acreditado / fila.Total) * 100 : 0,
+                porComuna: Object.values(fila.porComuna).map((comunaFila) => ({
+                    ...comunaFila,
+                    TasaAcreditado: comunaFila.Total > 0 ? (comunaFila.Acreditado / comunaFila.Total) * 100 : 0
+                })).sort((a, b) => b.Total - a.Total || a.Comuna.localeCompare(b.Comuna, "es-CL"))
+            })).sort((a, b) => a.OrdenRegion - b.OrdenRegion);
             return resumen;
         });
-        return { totalPersonas: datos.length, meses, monthly, fechaCarga: new Date().toLocaleDateString("es-CL") };
+        return { totalPersonas: datos.length, meses, monthly, fechaCarga: new Date().toLocaleDateString("es-CL"), hasComunaData: Boolean(colComuna) };
     }
     function obtenerHallazgos(monthData, prevMonthData) {
         const regiones = monthData.porRegion.filter((r) => r.Total > 0);
@@ -268,6 +323,58 @@
     }
     function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
     function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mes.label}</button>`).join(""); }
+    function obtenerMesActual() {
+        return dashboardData && dashboardData.monthly ? dashboardData.monthly[currentMonthIndex] : null;
+    }
+    function abrirDetalleRegion(region) {
+        const monthData = obtenerMesActual();
+        if (!monthData) return;
+        const regionData = monthData.porRegion.find((item) => item.Region === region) || obtenerResumenVacio(region, ETIQUETAS_REGION[region] || region);
+        modalRegionActual = regionData.Region;
+        document.getElementById("comunaModalTitle").textContent = regionData.RegionEtiqueta;
+        const subtituloBase = `Mes visualizado: ${monthData.label}.`;
+        document.getElementById("comunaModalSubtitle").textContent = dashboardData.hasComunaData
+            ? `${subtituloBase} Desglose del número de personas por comuna dentro de la región seleccionada.`
+            : `${subtituloBase} La fuente publicada actual no incluye una columna de comuna; agrega una columna COMUNA para habilitar este detalle.`;
+        const contenedor = document.getElementById("comunaModalContent");
+        if (!dashboardData.hasComunaData) {
+            contenedor.innerHTML = `<div class="modal-empty">La base publicada hoy no trae una columna de comuna. En cuanto el CSV incorpore una columna como <strong>COMUNA</strong>, <strong>NOMBRE_COMUNA</strong> o similar, este desglose se activará automáticamente al hacer clic en cada región.</div>`;
+        } else {
+            const filasComuna = regionData.porComuna.map((c) => `
+                <tr>
+                    <td>${c.Comuna}</td>
+                    <td>${fmt(c.Acreditado)}</td>
+                    <td>${fmt(c.NoVigente)}</td>
+                    <td>${fmt(c.NoAcreditado)}</td>
+                    <td>${fmt(c.SinEstado)}</td>
+                    <td>${fmt(c.Total)}</td>
+                    <td>${badgeTasa(c.TasaAcreditado)}</td>
+                </tr>
+            `).join("");
+            contenedor.innerHTML = `
+                <div class="modal-grid">
+                    <div class="modal-stat"><div class="modal-stat-label">N° de personas registradas</div><div class="modal-stat-value">${fmt(regionData.Total)}</div></div>
+                    <div class="modal-stat"><div class="modal-stat-label">N° de personas acreditadas</div><div class="modal-stat-value">${fmt(regionData.Acreditado)}</div></div>
+                    <div class="modal-stat"><div class="modal-stat-label">N° de personas no vigentes</div><div class="modal-stat-value">${fmt(regionData.NoVigente)}</div></div>
+                    <div class="modal-stat"><div class="modal-stat-label">N° de personas no acreditadas</div><div class="modal-stat-value">${fmt(regionData.NoAcreditado)}</div></div>
+                </div>
+                <div class="table-section" style="padding:0; border:none; box-shadow:none;">
+                    <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
+                    <div class="section-note" style="padding:0 0 12px 0;">El listado se ordena por número de registros.</div>
+                    <table>
+                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead>
+                        <tbody>${filasComuna}</tbody>
+                    </table>
+                </div>
+            `;
+        }
+        document.getElementById("comunaModal").classList.add("visible");
+    }
+    function cerrarModalComuna(event) {
+        if (event && event.target && event.target !== event.currentTarget) return;
+        modalRegionActual = null;
+        document.getElementById("comunaModal").classList.remove("visible");
+    }
     function renderDashboard() {
         const monthData = dashboardData.monthly[currentMonthIndex];
         const prevMonthData = currentMonthIndex > 0 ? dashboardData.monthly[currentMonthIndex - 1] : null;
@@ -279,7 +386,7 @@
         const deltaTotal = obtenerDelta(monthData.total, prevMonthData ? prevMonthData.total : monthData.total);
         const filasRegion = monthData.porRegion.map((r) => `
             <tr>
-                <td>${r.RegionEtiqueta}</td>
+                <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
                 <td>${fmt(r.Acreditado)}</td>
                 <td>${fmt(r.NoVigente)}</td>
                 <td>${fmt(r.NoAcreditado)}</td>
@@ -319,7 +426,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">Orden geográfico fijo desde nivel central hacia el extremo sur. La última columna incorpora una barra visual para lectura rápida del porcentaje acreditado.</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, cero o sin clasificación se consolidan en Nivel Central.</div></div></div>
@@ -332,11 +439,12 @@
             throw new Error("El archivo está vacío o no tiene filas de datos.");
         }
         const colRegion = buscarColumna(headers, ["REGION", "REGIÓN", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
+        const colComuna = buscarColumna(headers, ["COMUNA", "NOMBRE_COMUNA", "NOM_COMUNA", "COMUNA_NOMBRE", "GLOSA_COMUNA"]) || buscarColumnaAproximada(headers, (n) => n.includes("COMUNA"));
         const columnasEstado = buscarColumnasEstado(headers).filter((h) => datos.some((fila) => String(fila[h] || "").trim() !== ""));
         if (columnasEstado.length === 0) {
             throw new Error("No se encontraron columnas de estado válidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
         }
-        dashboardData = procesarDatos(datos, { colRegion, columnasEstado });
+        dashboardData = procesarDatos(datos, { colRegion, colComuna, columnasEstado });
         currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
         renderDashboard();
         if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
