@@ -334,7 +334,7 @@
         const topNoVigente = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
         const diffAcreditado = prevMonthData ? monthData.acreditado - prevMonthData.acreditado : 0;
         return [
-            `${monthData.label}: número de personas no vigentes ${fmt(monthData.noVigente)}, número de personas no acreditadas ${fmt(monthData.noAcreditado)} y número de personas acreditadas ${fmt(monthData.acreditado)}.`,
+            `${monthData.label}: número de personas acreditadas ${fmt(monthData.acreditado)}, número de personas no vigentes ${fmt(monthData.noVigente)} y número de personas no acreditadas ${fmt(monthData.noAcreditado)}.`,
             topNumero ? `${topNumero.RegionEtiqueta} concentra el mayor número de registros del mes, con ${fmt(topNumero.Total)} registros.` : "No hay información regional disponible.",
             topAcreditacion ? `${topAcreditacion.RegionEtiqueta} presenta el mayor porcentaje de acreditación entre regiones con al menos 200 registros, alcanzando ${topAcreditacion.TasaAcreditado.toFixed(1)}%.` : "No hay suficiente base para comparar porcentajes regionales.",
             topNoVigente ? `${topNoVigente.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(topNoVigente.NoVigente)} registros.` : "No se identificaron concentraciones relevantes de no vigencia.",
