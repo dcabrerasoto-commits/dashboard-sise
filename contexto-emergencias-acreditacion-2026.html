@@ -337,33 +337,31 @@
         .tall-svg svg { width:100%; height:100%; min-height:150px; max-height:180px; }
         .sign-col .item-media svg { height: 100px; }
         .pyramid-figure-wrap { display:flex; align-items:center; justify-content:center; width:100%; }
-        .pyramid-figure {
+        .hierarchy-figure {
             width: 320px;
-            height: 210px;
-            clip-path: polygon(50% 0, 100% 100%, 0 100%);
-            overflow: hidden;
-            border: 2px solid #1B3A6B;
-            background: #FFFFFF;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            gap: 10px;
+            justify-items: center;
         }
-        .pyramid-band {
+        .hierarchy-level {
             display:flex;
             align-items:center;
             justify-content:center;
+            min-height: 42px;
+            padding: 0 14px;
             color:#FFFFFF;
             font-weight:700;
             text-align:center;
             line-height:1.15;
-            text-shadow:0 1px 3px rgba(0,0,0,0.6);
-            border-bottom: 2px solid rgba(255,255,255,0.95);
+            text-shadow:0 1px 3px rgba(0,0,0,0.35);
+            border-radius: 6px;
+            border: 2px solid rgba(27,58,107,.18);
+            box-shadow: 0 8px 18px rgba(27,58,107,.08);
         }
-        .pyramid-band:last-child { border-bottom: none; }
-        .pyramid-band.top { flex: 0 0 22%; background:#E53935; font-size:12px; }
-        .pyramid-band.upper { flex: 0 0 26%; background:#FF7043; font-size:13px; }
-        .pyramid-band.middle { flex: 0 0 24%; background:#FFC107; font-size:13px; }
-        .pyramid-band.base { flex: 1 1 auto; background:#4CAF50; font-size:13px; }
+        .hierarchy-level.top { width: 108px; background:#E53935; font-size:12px; }
+        .hierarchy-level.upper { width: 176px; background:#FF7043; font-size:13px; }
+        .hierarchy-level.middle { width: 244px; background:#FFC107; font-size:13px; }
+        .hierarchy-level.base { width: 320px; background:#4CAF50; font-size:13px; }
 
         .final-wrap { display: flex; flex-direction: column; gap: 16px; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; flex:1; animation: fadeInSoft .5s ease both; }
         .splash-big-icon { width: 60px; height: 60px; color: #FFFFFF; display: flex; align-items: center; justify-content: center; animation: pulseNode 2s ease-in-out infinite; }
@@ -778,11 +776,11 @@
             return `
                 <div class="split-40-60">
                     <div class="pyramid-figure-wrap" aria-hidden="true">
-                        <div class="pyramid-figure">
-                            <div class="pyramid-band top">Nacional, Catástrofe</div>
-                            <div class="pyramid-band upper">Regional, Desastre</div>
-                            <div class="pyramid-band middle">Comunal, Emergencia mayor</div>
-                            <div class="pyramid-band base">Local, Emergencia menor</div>
+                        <div class="hierarchy-figure">
+                            <div class="hierarchy-level top">Nacional, Catástrofe</div>
+                            <div class="hierarchy-level upper">Regional, Desastre</div>
+                            <div class="hierarchy-level middle">Comunal, Emergencia mayor</div>
+                            <div class="hierarchy-level base">Local, Emergencia menor</div>
                         </div>
                     </div>
                     <div class="item-grid">
