@@ -328,7 +328,7 @@
         return { totalPersonas: datos.length, meses, monthly, fechaCarga: new Date().toLocaleDateString("es-CL"), hasComunaData: Boolean(colComuna) };
     }
     function obtenerHallazgos(monthData, prevMonthData) {
-        const regiones = monthData.porRegion.filter((r) => r.Total > 0);
+        const regiones = monthData.porRegion.filter((r) => r.Total > 0 && r.Region !== "NIVEL CENTRAL");
         const topNumero = [...regiones].sort((a, b) => b.Total - a.Total)[0];
         const topAcreditacion = [...regiones].filter((r) => r.Total >= 200).sort((a, b) => b.TasaAcreditado - a.TasaAcreditado)[0];
         const topNoVigente = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
@@ -343,7 +343,7 @@
     }
     function obtenerAlertas(monthData, prevMonthData) {
         const alertas = [];
-        const regiones = monthData.porRegion.filter((r) => r.Total > 0);
+        const regiones = monthData.porRegion.filter((r) => r.Total > 0 && r.Region !== "NIVEL CENTRAL");
         const altaNoVigencia = [...regiones].filter((r) => r.NoVigente / r.Total >= 0.45).sort((a, b) => (b.NoVigente / b.Total) - (a.NoVigente / a.Total))[0];
         const bajaAcreditacion = [...regiones].filter((r) => r.Total >= 200 && r.TasaAcreditado < 12).sort((a, b) => a.TasaAcreditado - b.TasaAcreditado)[0];
         const altaNoAcreditacion = [...regiones].filter((r) => r.NoAcreditado / r.Total >= 0.35).sort((a, b) => (b.NoAcreditado / b.Total) - (a.NoAcreditado / a.Total))[0];
