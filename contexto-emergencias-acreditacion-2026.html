@@ -749,11 +749,11 @@
         function svgPiramideNiveles() {
             return `
                 <div class="split-40-60">
-                    <svg class="pyramid-svg" viewBox="0 0 380 240" height="240" aria-hidden="true">
-                        <polygon points="24,216 356,216 306,170 74,170" fill="#4CAF50"></polygon>
-                        <polygon points="74,170 306,170 266,124 114,124" fill="#FFC107"></polygon>
-                        <polygon points="114,124 266,124 236,78 144,78" fill="#FF7043"></polygon>
-                        <polygon points="144,78 236,78 190,34" fill="#E53935"></polygon>
+                    <svg class="pyramid-svg" viewBox="0 0 380 240" height="240" aria-hidden="true" style="shape-rendering:crispEdges">
+                        <polygon points="24,216 356,216 306,170 74,170" fill="#4CAF50" style="shape-rendering:crispEdges"></polygon>
+                        <polygon points="74,170 306,170 266,124 114,124" fill="#FFC107" style="shape-rendering:crispEdges"></polygon>
+                        <polygon points="114,124 266,124 236,78 144,78" fill="#FF7043" style="shape-rendering:crispEdges"></polygon>
+                        <polygon points="144,78 236,78 190,34" fill="#E53935" style="shape-rendering:crispEdges"></polygon>
                         <text x="190" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Local, Emergencia menor</text>
                         <text x="190" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Comunal, Emergencia mayor</text>
                         <text x="190" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(0,0,0,0.6)">Regional, Desastre</text>
