@@ -245,6 +245,38 @@
     function fmt(n) { return Number(n || 0).toLocaleString("es-CL"); }
     function pct(n, total) { return total > 0 ? ((n / total) * 100).toFixed(1) + "%" : "-"; }
     function obtenerDelta(actual, previo) { const diff = actual - previo; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} vs mes anterior` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} vs mes anterior` }; return { className: "delta-flat", label: "Sin variación vs mes anterior" }; }
+    const doughnutPercentageLabels = {
+        id: "doughnutPercentageLabels",
+        afterDatasetsDraw(chart) {
+            const dataset = chart.data.datasets[0];
+            const meta = chart.getDatasetMeta(0);
+            if (!dataset || !meta || !meta.data || !meta.data.length) return;
+            const total = dataset.data.reduce((acc, value) => acc + Number(value || 0), 0);
+            if (!total) return;
+            const { ctx } = chart;
+            ctx.save();
+            ctx.font = "700 11px Segoe UI";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            meta.data.forEach((arc, index) => {
+                const valor = Number(dataset.data[index] || 0);
+                if (!valor) return;
+                const porcentaje = (valor / total) * 100;
+                if (porcentaje < 4) return;
+                const angle = (arc.startAngle + arc.endAngle) / 2;
+                const radius = arc.innerRadius + (arc.outerRadius - arc.innerRadius) * 0.58;
+                const x = arc.x + Math.cos(angle) * radius;
+                const y = arc.y + Math.sin(angle) * radius;
+                ctx.fillStyle = "#ffffff";
+                ctx.strokeStyle = "rgba(15, 23, 42, 0.22)";
+                ctx.lineWidth = 3;
+                const etiqueta = `${porcentaje.toFixed(1)}%`;
+                ctx.strokeText(etiqueta, x, y);
+                ctx.fillText(etiqueta, x, y);
+            });
+            ctx.restore();
+        }
+    };
     function obtenerResumenVacio(region, etiquetaRegion) {
         return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, TasaAcreditado: 0, porComuna: [] };
     }
@@ -475,6 +507,7 @@
         if (chartTendencia) chartTendencia.destroy();
         if (chartRegion) chartRegion.destroy();
         chartEstado = new Chart(ctxEstado, {
+            plugins: [doughnutPercentageLabels],
             type: "doughnut",
             data: {
                 labels: ["ACREDITADO", "NO VIGENTE", "NO ACREDITADO", "SIN ESTADO"],
