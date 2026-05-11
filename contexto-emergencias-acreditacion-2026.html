@@ -1828,16 +1828,14 @@
         function svgPiramideNiveles() {
             return `
                 <div style="display:flex;flex-direction:row;align-items:center;justify-content:center;gap:22px;width:100%">
-                    <svg class="pyramid-svg" viewBox="0 0 380 260" height="230" aria-hidden="true" style="flex:0 0 auto">
-                        <polygon points="30,236 330,236 286,184 74,184" fill="#4CAF50"></polygon>
-                        <polygon points="74,184 286,184 254,132 106,132" fill="#FFC107"></polygon>
-                        <polygon points="106,132 254,132 226,82 134,82" fill="#FF7043"></polygon>
-                        <polygon points="134,82 226,82 190,34" fill="#E53935"></polygon>
-                        <text x="190" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Local, Emergencia menor</text>
-                        <text x="190" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Comunal, Emergencia mayor</text>
-                        <text x="190" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" style="text-shadow:0 1px 3px rgba(27,58,107,0.8)">Regional, Desastre</text>
-                        <text x="190" y="64" text-anchor="middle" font-size="11" font-weight="900" fill="#FFFFFF" style="text-shadow:0 0 6px rgba(27,58,107,1)">Nacional, Catástrofe</text>
-                    </svg>
+                    <div class="pyramid-figure-wrap" aria-hidden="true" style="flex:0 0 auto">
+                        <div class="hierarchy-figure">
+                            <div class="hierarchy-level top">Nacional, Catástrofe</div>
+                            <div class="hierarchy-level upper">Regional, Desastre</div>
+                            <div class="hierarchy-level middle">Comunal, Emergencia mayor</div>
+                            <div class="hierarchy-level base">Local, Emergencia menor</div>
+                        </div>
+                    </div>
                     <div class="item-grid" style="width:min(320px,100%);gap:10px;flex:0 1 320px">
                         <div class="item-card" style="border-left-color:#E53935;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#E53935"><i data-lucide="flag" style="width:20px;height:20px"></i></span><div class="item-text">Nacional, Catástrofe</div></div></div>
                         <div class="item-card" style="border-left-color:#FF7043;padding:16px"><div class="item-head no-number"><span class="item-icon" style="color:#FF7043"><i data-lucide="map" style="width:20px;height:20px"></i></span><div class="item-text">Regional, Desastre</div></div></div>
