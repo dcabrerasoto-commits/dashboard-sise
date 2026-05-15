@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard SISE 2026</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="comunas_oficiales.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -158,9 +159,7 @@
     
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
     const ETIQUETAS_REGION = {"NIVEL CENTRAL":"Nivel Central","ARICA Y PARINACOTA":"Arica y Parinacota","TARAPACA":"Tarapacá","ANTOFAGASTA":"Antofagasta","ATACAMA":"Atacama","COQUIMBO":"Coquimbo","VALPARAISO":"Valparaíso","METROPOLITANA":"Metropolitana de Santiago","OHIGGINS":"O'Higgins","MAULE":"Maule","NUBLE":"Ñuble","BIO BIO":"Biobío","LA ARAUCANIA":"La Araucanía","LOS RIOS":"Los Ríos","LOS LAGOS":"Los Lagos","AYSEN":"Aysén","MAGALLANES":"Magallanes"};
-    const COMUNA_ETIQUETAS = {
-        "ALHUE":"Alhué","AISEN":"Aisén","AYSEN":"Aysén","CABILDO":"Cabildo","CALAMA":"Calama","CARTAGENA":"Cartagena","CASTRO":"Castro","CHAITEN":"Chaitén","CHILLAN":"Chillán","CHIMBARONGO":"Chimbarongo","CISNES":"Cisnes","COCHAMO":"Cochamó","COLBUN":"Colbún","CORRAL":"Corral","CURACAUTIN":"Curacautín","EL BOSQUE":"El Bosque","FREIRE":"Freire","FUTALEUFU":"Futaleufú","GORBEA":"Gorbea","GRANEROS":"Graneros","IQUIQUE":"Iquique","LAJA":"Laja","LLAY LLAY":"Llay-Llay","LONGAVI":"Longaví","MALLOA":"Malloa","MELIPEUCO":"Melipeuco","NANCAGUA":"Nancagua","ÑUÑOA":"Ñuñoa","NUNOA":"Ñuñoa","OLLAGUE":"Ollagüe","PAIHUANO":"Paihuano","PAINE":"Paine","PELARCO":"Pelarco","PEMUCO":"Pemuco","PETORCA":"Petorca","PICA":"Pica","PICHILEMU":"Pichilemu","PITRUFQUEN":"Pitrufquén","PORTEZUELO":"Portezuelo","PUCON":"Pucón","PURREN":"Purén","PURRANQUE":"Purranque","QUELLON":"Quellón","QUILLECO":"Quilleco","QUILACO":"Quilaco","QUINCHAO":"Quinchao","SAN FERNANDO":"San Fernando","SAN MIGUEL":"San Miguel","SAN RAMON":"San Ramón","TALTAL":"Taltal","TIRUA":"Tirúa","TIMAUKEL":"Timaukel","TOME":"Tomé","TREHUACO":"Trehuaco"
-    };
+    const COMUNAS_OFICIALES_POR_REGION = window.COMUNAS_OFICIALES_POR_REGION || {};
     function norm(str) { return String(str || "").replace(/^\uFEFF/, "").toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
     function limpiarHeader(str) { return String(str || "").replace(/^\uFEFF/, "").trim(); }
     function detectarSeparador(primeraLinea) { const semicolons = (primeraLinea.match(/;/g) || []).length; const commas = (primeraLinea.match(/,/g) || []).length; return semicolons > commas ? ";" : ","; }
@@ -195,19 +194,29 @@
     function buscarColumnasEstado(headers) { return headers.filter((header) => norm(header).startsWith("ESTADO")); }
     function extraerMesDesdeColumna(nombre) { return norm(nombre).replace(/^ESTADO_?/, "").trim(); }
     function normalizarEstado(valor) { const estado = norm(valor); if (!estado) return "SIN ESTADO"; if (estado.includes("NO VIGENTE")) return "NO VIGENTE"; if (estado.includes("NO ACREDITADO")) return "NO ACREDITADO"; if (estado === "ACREDITADO") return "ACREDITADO"; return estado; }
-    function titleCaseTerritorial(texto) {
-        const menores = new Set(["de","del","la","las","lo","los","y"]);
-        return String(texto || "").toLowerCase().split(/\s+/).map((palabra, index) => {
-            if (!palabra) return palabra;
-            if (index > 0 && menores.has(palabra)) return palabra;
-            return palabra.split("-").map((segmento) => segmento ? segmento.charAt(0).toUpperCase() + segmento.slice(1) : segmento).join("-");
-        }).join(" ");
+    function comunaClave(valor) {
+        return norm(valor).replace(/[^A-Z0-9]/g, "");
     }
-    function normalizarComuna(valor) {
+    function obtenerIndiceComunasOficiales() {
+        if (window.__COMUNAS_OFICIALES_INDEX) return window.__COMUNAS_OFICIALES_INDEX;
+        const indice = {};
+        Object.entries(COMUNAS_OFICIALES_POR_REGION).forEach(([region, comunas]) => {
+            indice[region] = {};
+            comunas.forEach((comuna) => {
+                indice[region][comunaClave(comuna)] = comuna;
+            });
+        });
+        window.__COMUNAS_OFICIALES_INDEX = indice;
+        return indice;
+    }
+    function normalizarComunaPorRegion(region, valor) {
         const texto = String(valor || "").trim();
-        if (!texto || norm(texto) === "0") return "Sin comuna informada";
-        const limpio = texto.replace(/\s+/g, " ").trim();
-        return COMUNA_ETIQUETAS[norm(limpio)] || titleCaseTerritorial(limpio);
+        if (!texto || norm(texto) === "0") return "Sin información de comuna";
+        const oficiales = obtenerIndiceComunasOficiales();
+        const comunasRegion = oficiales[region];
+        if (!comunasRegion) return "Sin información de comuna";
+        const match = comunasRegion[comunaClave(texto)];
+        return match || "Sin información de comuna";
     }
     function construirUrlSinCache(url) {
         const limpia = String(url || "").trim();
@@ -288,7 +297,7 @@
             datos.forEach((fila) => {
                 const estado = normalizarEstado(fila[mes.key]);
                 const region = normalizarRegion(colRegion ? fila[colRegion] : "");
-                const comuna = normalizarComuna(colComuna ? fila[colComuna] : "");
+                const comuna = normalizarComunaPorRegion(region, colComuna ? fila[colComuna] : "");
                 if (!resumen.porRegion[region]) {
                     resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, porComuna: {} };
                 }
@@ -316,11 +325,11 @@
                     ...comunaFila,
                     TasaAcreditado: comunaFila.Total > 0 ? (comunaFila.Acreditado / comunaFila.Total) * 100 : 0
                 })).sort((a, b) => {
-                    const aSinComuna = a.Comuna === "Sin comuna informada";
-                    const bSinComuna = b.Comuna === "Sin comuna informada";
+                    const aSinComuna = a.Comuna === "Sin información de comuna";
+                    const bSinComuna = b.Comuna === "Sin información de comuna";
                     if (aSinComuna && !bSinComuna) return 1;
                     if (!aSinComuna && bSinComuna) return -1;
-                    return b.Total - a.Total || a.Comuna.localeCompare(b.Comuna, "es-CL");
+                    return a.Comuna.localeCompare(b.Comuna, "es-CL");
                 })
             })).sort((a, b) => a.OrdenRegion - b.OrdenRegion);
             return resumen;
