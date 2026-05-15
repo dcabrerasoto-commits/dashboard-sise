@@ -210,6 +210,7 @@
         return indice;
     }
     function normalizarComunaPorRegion(region, valor) {
+        if (region === "NIVEL CENTRAL") return "Nivel Central";
         const texto = String(valor || "").trim();
         if (!texto || norm(texto) === "0") return "Sin información de comuna";
         const oficiales = obtenerIndiceComunasOficiales();
