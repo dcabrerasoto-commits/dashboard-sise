@@ -69,6 +69,15 @@
         .executive-text { font-size: 20px; line-height: 1.45; color: #17396f; font-weight: 600; }
         .executive-side .executive-text { font-size: 15px; font-weight: 500; color: var(--gris-texto); }
         .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; margin-bottom: 20px; }
+        .toolbar-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .export-wrap { position: relative; }
+        .export-btn { background: var(--azul-sise); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; padding: 10px 14px; font-size: 13px; }
+        .export-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 290px; background: white; border: 1px solid #d7e0ee; border-radius: 10px; box-shadow: var(--sombra); padding: 8px; display: none; z-index: 40; }
+        .export-menu.visible { display: block; }
+        .export-option { width: 100%; border: none; background: white; text-align: left; padding: 10px 12px; border-radius: 8px; font-size: 13px; color: var(--gris-texto); cursor: pointer; }
+        .export-option:hover { background: #f3f6fb; }
+        .export-option:disabled { color: #94a3b8; cursor: not-allowed; }
+        .export-hint { padding: 8px 12px 4px; font-size: 12px; color: #64748b; line-height: 1.4; }
         .month-group { display: flex; flex-wrap: wrap; gap: 8px; }
         .month-btn { padding: 10px 14px; background: #f3f6fb; color: var(--azul-sise); border: 1px solid #d7e0ee; font-size: 13px; }
         .month-btn.active { background: var(--azul-sise); color: white; border-color: var(--azul-sise); }
@@ -156,6 +165,7 @@
     let dashboardData = null;
     let currentMonthIndex = 0;
     let modalRegionActual = null;
+    let regionSeleccionada = null;
     const AUTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQp3xmjVpjlQTcHdHxM69Jju6ZOJuE2jm58gWU7owObfGoL0PTzHAgWiDR2i8ri-anb0c7j_p4ffjJb/pub?gid=1955078176&single=true&output=csv";
     
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
@@ -387,11 +397,49 @@
     function obtenerMesActual() {
         return dashboardData && dashboardData.monthly ? dashboardData.monthly[currentMonthIndex] : null;
     }
+    function slug(texto) { return String(texto || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase(); }
+    function escaparHtml(valor) { return String(valor ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+    function descargarExcel(nombre, titulo, headers, filas) {
+        const widths = headers.map((header, index) => {
+            const maxData = Math.max(header.length, ...filas.map((fila) => String(fila[index] ?? "").length));
+            return Math.min(Math.max(maxData + 2, 12), 28);
+        });
+        const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>table{border-collapse:collapse;font-family:Segoe UI,Arial,sans-serif;font-size:12px}th{background:#1a4080;color:#fff;font-weight:700;padding:8px 10px;border:1px solid #cbd5e1;text-align:left}td{padding:7px 10px;border:1px solid #dbe5f3}tr:nth-child(even) td{background:#f8fbff}.title{font-size:16px;font-weight:700;color:#17396f;margin-bottom:10px}</style></head><body><div class="title">${escaparHtml(titulo)}</div><table><colgroup>${widths.map((w) => `<col style="width:${w}ch">`).join("")}</colgroup><thead><tr>${headers.map((header) => `<th>${escaparHtml(header)}</th>`).join("")}</tr></thead><tbody>${filas.map((fila) => `<tr>${fila.map((valor) => `<td>${escaparHtml(valor)}</td>`).join("")}</tr>`).join("")}</tbody></table></body></html>`;
+        const blob = new Blob([html], { type: "application/vnd.ms-excel;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = nombre;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+    function exportarRegional() {
+        const monthData = obtenerMesActual();
+        if (!monthData) return;
+        const filas = monthData.porRegion.map((r) => [r.RegionEtiqueta, fmt(r.Acreditado), fmt(r.NoVigente), fmt(r.NoAcreditado), fmt(r.SinEstado), fmt(r.Total), `${r.TasaAcreditado.toFixed(1)}%`]);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
+        cerrarMenuExportacion();
+    }
+    function exportarComunal() {
+        const monthData = obtenerMesActual();
+        if (!monthData || !regionSeleccionada) return;
+        const regionData = monthData.porRegion.find((item) => item.Region === regionSeleccionada);
+        if (!regionData || !regionData.porComuna || !regionData.porComuna.length) return;
+        const filas = regionData.porComuna.map((c) => [c.Comuna, fmt(c.Acreditado), fmt(c.NoVigente), fmt(c.NoAcreditado), fmt(c.SinEstado), fmt(c.Total), `${c.TasaAcreditado.toFixed(1)}%`]);
+        descargarExcel(`sise_${slug(monthData.label)}_${slug(regionData.RegionEtiqueta)}_detalle_comunal.xls`, `Detalle comunal - ${regionData.RegionEtiqueta} - ${monthData.label}`, ["Comuna", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
+        cerrarMenuExportacion();
+    }
+    function exportarAmbos() { exportarRegional(); if (dashboardData.hasComunaData && regionSeleccionada) setTimeout(() => exportarComunal(), 250); }
+    function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
+    function cerrarMenuExportacion() { const menu = document.getElementById("exportMenu"); if (menu) menu.classList.remove("visible"); }
     function abrirDetalleRegion(region) {
         const monthData = obtenerMesActual();
         if (!monthData) return;
         const regionData = monthData.porRegion.find((item) => item.Region === region) || obtenerResumenVacio(region, ETIQUETAS_REGION[region] || region);
         modalRegionActual = regionData.Region;
+        regionSeleccionada = regionData.Region;
         document.getElementById("comunaModalTitle").textContent = regionData.RegionEtiqueta;
         const subtituloBase = `Mes visualizado: ${monthData.label}.`;
         document.getElementById("comunaModalSubtitle").textContent = dashboardData.hasComunaData
@@ -474,7 +522,18 @@
             </div>
             <div class="panel toolbar">
                 <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
-                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div></div>
+                <div class="toolbar-actions">
+                    <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div></div>
+                    <div class="export-wrap">
+                        <button type="button" class="export-btn" onclick="toggleMenuExportacion()">Exportar datos</button>
+                        <div class="export-menu" id="exportMenu">
+                            <button type="button" class="export-option" onclick="exportarRegional()">Descargar resumen nacional por región</button>
+                            <button type="button" class="export-option" onclick="exportarComunal()" ${dashboardData.hasComunaData && regionSeleccionada ? "" : "disabled"}>Descargar detalle comunal de la región seleccionada</button>
+                            <button type="button" class="export-option" onclick="exportarAmbos()">Descargar ambos</button>
+                            <div class="export-hint">${regionSeleccionada ? `Región seleccionada: ${ETIQUETAS_REGION[regionSeleccionada] || regionSeleccionada}` : "Selecciona una región para habilitar la descarga comunal."}</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="kpi-section">
                 <div class="kpi-card"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(monthData.total)}</div><div class="kpi-percent">${pct(monthData.total, dashboardData.totalPersonas)} de la base cargada</div></div>
@@ -581,6 +640,10 @@
 
     window.addEventListener("DOMContentLoaded", () => {
         cargarDatosPublicados();
+    });
+    window.addEventListener("click", (event) => {
+        const wrap = document.querySelector(".export-wrap");
+        if (wrap && !wrap.contains(event.target)) cerrarMenuExportacion();
     });
 </script>
 </body>
