@@ -455,11 +455,16 @@
         const regionData = monthData.porRegion.find((item) => item.Region === region) || obtenerResumenVacio(region, ETIQUETAS_REGION[region] || region);
         modalRegionActual = regionData.Region;
         regionSeleccionada = regionData.Region;
+        const esNivelCentral = regionData.Region === "NIVEL CENTRAL";
         document.getElementById("comunaModalTitle").textContent = regionData.RegionEtiqueta;
         const subtituloBase = `Mes visualizado: ${monthData.label}.`;
-        document.getElementById("comunaModalSubtitle").textContent = dashboardData.hasComunaData
-            ? `${subtituloBase} Desglose del número de personas por comuna dentro de la región seleccionada.`
-            : `${subtituloBase} La fuente publicada actual no incluye una columna de comuna; agrega una columna COMUNA para habilitar este detalle.`;
+        const encabezado = document.querySelector("#comunaModal .section-title");
+        if (encabezado) encabezado.textContent = esNivelCentral ? "Resumen del nivel central" : "Desglose por comuna";
+        document.getElementById("comunaModalSubtitle").textContent = esNivelCentral
+            ? `${subtituloBase} Resumen del número de personas registradas en Nivel Central.`
+            : (dashboardData.hasComunaData
+                ? `${subtituloBase} Desglose del número de personas por comuna dentro de la región seleccionada.`
+                : `${subtituloBase} La fuente publicada actual no incluye una columna de comuna; agrega una columna COMUNA para habilitar este detalle.`);
         const contenedor = document.getElementById("comunaModalContent");
         if (!dashboardData.hasComunaData) {
             contenedor.innerHTML = `<div class="modal-empty">La base publicada hoy no trae una columna de comuna. En cuanto el CSV incorpore una columna como <strong>COMUNA</strong>, <strong>NOMBRE_COMUNA</strong> o similar, este desglose se activará automáticamente al hacer clic en cada región.</div>`;
@@ -475,7 +480,6 @@
                     <td>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
             `).join("");
-            const esNivelCentral = regionData.Region === "NIVEL CENTRAL";
             contenedor.innerHTML = `
                 <div class="modal-grid">
                     <div class="modal-stat"><div class="modal-stat-label">N° de personas registradas</div><div class="modal-stat-value">${fmt(regionData.Total)}</div></div>
