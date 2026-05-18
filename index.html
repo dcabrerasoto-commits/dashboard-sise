@@ -422,16 +422,24 @@
         descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
         cerrarMenuExportacion();
     }
-    function exportarComunal() {
+    function exportarComunalNacional() {
         const monthData = obtenerMesActual();
-        if (!monthData || !regionSeleccionada) return;
-        const regionData = monthData.porRegion.find((item) => item.Region === regionSeleccionada);
-        if (!regionData || !regionData.porComuna || !regionData.porComuna.length) return;
-        const filas = regionData.porComuna.map((c) => [c.Comuna, fmt(c.Acreditado), fmt(c.NoVigente), fmt(c.NoAcreditado), fmt(c.SinEstado), fmt(c.Total), `${c.TasaAcreditado.toFixed(1)}%`]);
-        descargarExcel(`sise_${slug(monthData.label)}_${slug(regionData.RegionEtiqueta)}_detalle_comunal.xls`, `Detalle comunal - ${regionData.RegionEtiqueta} - ${monthData.label}`, ["Comuna", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
+        if (!monthData) return;
+        const filas = monthData.porRegion.flatMap((regionData) =>
+            (regionData.porComuna || []).map((c) => [
+                regionData.RegionEtiqueta,
+                c.Comuna,
+                fmt(c.Acreditado),
+                fmt(c.NoVigente),
+                fmt(c.NoAcreditado),
+                fmt(c.SinEstado),
+                fmt(c.Total),
+                `${c.TasaAcreditado.toFixed(1)}%`
+            ])
+        );
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
         cerrarMenuExportacion();
     }
-    function exportarAmbos() { exportarRegional(); if (dashboardData.hasComunaData && regionSeleccionada) setTimeout(() => exportarComunal(), 250); }
     function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
     function cerrarMenuExportacion() { const menu = document.getElementById("exportMenu"); if (menu) menu.classList.remove("visible"); }
     function abrirDetalleRegion(region) {
@@ -528,9 +536,8 @@
                         <button type="button" class="export-btn" onclick="toggleMenuExportacion()">Exportar datos</button>
                         <div class="export-menu" id="exportMenu">
                             <button type="button" class="export-option" onclick="exportarRegional()">Descargar resumen nacional por región</button>
-                            <button type="button" class="export-option" onclick="exportarComunal()" ${dashboardData.hasComunaData && regionSeleccionada ? "" : "disabled"}>Descargar detalle comunal de la región seleccionada</button>
-                            <button type="button" class="export-option" onclick="exportarAmbos()">Descargar ambos</button>
-                            <div class="export-hint">${regionSeleccionada ? `Región seleccionada: ${ETIQUETAS_REGION[regionSeleccionada] || regionSeleccionada}` : "Selecciona una región para habilitar la descarga comunal."}</div>
+                            <button type="button" class="export-option" onclick="exportarComunalNacional()" ${dashboardData.hasComunaData ? "" : "disabled"}>Descargar resumen nacional por comuna</button>
+                            <div class="export-hint">La exportación comunal incluye la región asociada y conserva la misma lógica de consolidación aplicada en el dashboard.</div>
                         </div>
                     </div>
                 </div>
