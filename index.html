@@ -61,7 +61,7 @@
         .executive-band { grid-template-columns: 2fr 1fr; margin-bottom: 20px; }
         .charts-section { grid-template-columns: 1.25fr 0.75fr; margin-bottom: 22px; }
         .mid-section { grid-template-columns: 1.45fr 0.55fr; margin-bottom: 22px; align-items: start; }
-        .footer-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .footer-grid { grid-template-columns: minmax(240px, 0.8fr) minmax(420px, 1.2fr); gap: 18px; align-items: start; }
         .kpi-section { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 22px; }
         .executive-main, .executive-side, .chart-card, .table-section, .insight-card, .map-card, .footer-card, .kpi-card { padding: 18px 20px; }
         .executive-title, .toolbar-title, .section-title, .kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; color: var(--azul-secundario); }
@@ -99,7 +99,8 @@
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
         .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
-        .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 2px; }
+        .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 4px; }
+        .footer-item.metodologia { max-width: 760px; }
         .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
         .modal-backdrop.visible { display: flex; }
         .modal-card { width: min(980px, 100%); max-height: 85vh; overflow: auto; background: white; border: 1px solid var(--borde); border-radius: 12px; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18); padding: 20px; }
@@ -112,7 +113,7 @@
         .modal-stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.7px; font-weight: 700; color: var(--azul-secundario); margin-bottom: 6px; }
         .modal-stat-value { font-size: 26px; font-weight: 700; color: #17396f; }
         .modal-empty { background: #f8fbff; border: 1px solid #dbe5f3; border-radius: 10px; padding: 15px; color: #475569; line-height: 1.6; }
-        @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
+        @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band, .footer-grid { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
         @media (max-width: 760px) { header { flex-direction: column; align-items: flex-start; } .header-meta { width: 100%; } }
     </style>
 </head>
@@ -473,7 +474,7 @@
             </div>
             <div class="panel toolbar">
                 <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
-                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div><div><strong>Fecha de carga:</strong> ${dashboardData.fechaCarga}</div></div>
+                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div></div>
             </div>
             <div class="kpi-section">
                 <div class="kpi-card"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(monthData.total)}</div><div class="kpi-percent">${pct(monthData.total, dashboardData.totalPersonas)} de la base cargada</div></div>
@@ -489,7 +490,7 @@
                 <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
-            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item"><strong>Fecha de actualización visual</strong>${dashboardData.fechaCarga}.</div><div class="footer-item"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Regiones vacías, cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden existir diferencias entre región y comuna. En esos casos, cuando la comuna no corresponde a la región informada, se clasifica como Sin información de comuna.</div></div></div>
+            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
         `;
         crearGraficos(monthData);
     }
