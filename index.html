@@ -305,11 +305,14 @@
         const { colRegion, colComuna, columnasEstado } = cols;
         const meses = columnasEstado.map((columna) => ({ key: columna, label: extraerMesDesdeColumna(columna) }));
         const monthly = meses.map((mes) => {
-            const resumen = { key: mes.key, label: mes.label, acreditado: 0, noVigente: 0, noAcreditado: 0, sinEstado: 0, total: datos.length, porRegion: {}, hasComunaData: false };
+            const resumen = { key: mes.key, label: mes.label, acreditado: 0, noVigente: 0, noAcreditado: 0, sinEstado: 0, total: 0, porRegion: {}, hasComunaData: false };
             datos.forEach((fila) => {
+                const valorMes = String(fila[mes.key] || "").trim();
+                if (!valorMes) return;
                 const estado = normalizarEstado(fila[mes.key]);
                 const region = normalizarRegion(colRegion ? fila[colRegion] : "");
                 const comuna = normalizarComunaPorRegion(region, colComuna ? fila[colComuna] : "");
+                resumen.total++;
                 if (!resumen.porRegion[region]) {
                     resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, porComuna: {} };
                 }
