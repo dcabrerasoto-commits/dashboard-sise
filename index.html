@@ -83,10 +83,14 @@
         .month-btn.active { background: var(--azul-sise); color: white; border-color: var(--azul-sise); }
         .toolbar-meta, .section-note, .footer-item, .kpi-percent { font-size: 13px; color: #64748b; line-height: 1.5; }
         .kpi-card { border-top: 4px solid var(--azul-sise); }
+        .kpi-card.azul { background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%); color: white; border-top-color: #0f2f5f; }
         .kpi-card.verde { border-top-color: var(--verde); }
         .kpi-card.ambar { border-top-color: var(--ambar); }
         .kpi-card.rojo { border-top-color: var(--rojo); }
         .kpi-value { font-size: 34px; font-weight: 700; color: var(--azul-sise); margin: 6px 0 4px; }
+        .kpi-card.azul .kpi-label, .kpi-card.azul .kpi-value, .kpi-card.azul .kpi-percent { color: white; }
+        .kpi-card.azul .kpi-label { opacity: 0.9; }
+        .kpi-card.azul .kpi-percent { opacity: 0.9; }
         .kpi-card.verde .kpi-value { color: var(--verde); }
         .kpi-card.ambar .kpi-value { color: var(--ambar); }
         .kpi-card.rojo .kpi-value { color: var(--rojo); }
@@ -546,7 +550,7 @@
                 </div>
             </div>
             <div class="kpi-section">
-                <div class="kpi-card"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN únicos de los meses consolidados.</div></div>
+                <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN únicos de los meses consolidados.</div></div>
                 <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${pct(monthData.acreditado, monthData.total)} del mes</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
                 <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${pct(monthData.noVigente, monthData.total)} del mes</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
                 <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${pct(monthData.noAcreditado, monthData.total)} del mes</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
