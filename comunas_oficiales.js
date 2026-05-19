@@ -378,3 +378,11 @@
                        "Torres del Paine"
                    ]
 };
+window.COMUNAS_ALIAS_POR_REGION = {
+    "COQUIMBO": {
+        "PAIGUANO": "Paihuano"
+    },
+    "NUBLE": {
+        "TREGUACO": "Trehuaco"
+    }
+};
