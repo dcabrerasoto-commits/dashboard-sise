@@ -109,8 +109,9 @@
         tr:hover td { background: #f7faff; }
         .region-cell-button { background: none; border: none; padding: 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; }
         .region-cell-button:hover { text-decoration: underline; }
-        .subdetalle-institucion { margin-top: 6px; padding-top: 6px; border-top: 1px dashed #d8e2f0; font-size: 11px; line-height: 1.45; color: #64748b; }
-        .subdetalle-institucion strong { color: var(--azul-sise); font-weight: 700; display: block; margin-bottom: 2px; }
+        .subfila-institucion td { font-size: 11px; color: #64748b; padding-top: 6px; padding-bottom: 8px; background: #fafcff; }
+        .subfila-institucion td:first-child { font-weight: 700; color: #526277; }
+        .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
         .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
@@ -460,12 +461,28 @@
         return alertas;
     }
     function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
-    function renderInstitucionDetalle(item, esNivelCentral, tipo) {
+    function renderSubfilasInstitucion(item, esNivelCentral) {
         if (esNivelCentral) return "";
-        if (tipo === "ACREDITADO") return `<div class="subdetalle-institucion"><strong>Por institución</strong><span>SEREMI y Municipalidad: ${fmt(item.AcreditadoPublico)}</span><br><span>Otras instituciones: ${fmt(item.AcreditadoOtras)}</span></div>`;
-        if (tipo === "NO VIGENTE") return `<div class="subdetalle-institucion"><strong>Por institución</strong><span>SEREMI y Municipalidad: ${fmt(item.NoVigentePublico)}</span><br><span>Otras instituciones: ${fmt(item.NoVigenteOtras)}</span></div>`;
-        if (tipo === "NO ACREDITADO") return `<div class="subdetalle-institucion"><strong>Por institución</strong><span>SEREMI y Municipalidad: ${fmt(item.NoAcreditadoPublico)}</span><br><span>Otras instituciones: ${fmt(item.NoAcreditadoOtras)}</span></div>`;
-        return "";
+        return `
+            <tr class="subfila-institucion">
+                <td>SEREMI y Municipalidad</td>
+                <td>${fmt(item.AcreditadoPublico)}</td>
+                <td>${fmt(item.NoVigentePublico)}</td>
+                <td>${fmt(item.NoAcreditadoPublico)}</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="subfila-institucion">
+                <td>Otras instituciones</td>
+                <td>${fmt(item.AcreditadoOtras)}</td>
+                <td>${fmt(item.NoVigenteOtras)}</td>
+                <td>${fmt(item.NoAcreditadoOtras)}</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        `;
     }
     function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mes.label}</button>`).join(""); }
     function obtenerMesActual() {
@@ -542,13 +559,14 @@
             const filasComuna = regionData.porComuna.map((c) => `
                 <tr>
                     <td>${c.Comuna}</td>
-                    <td>${fmt(c.Acreditado)}${renderInstitucionDetalle(c, false, "ACREDITADO")}</td>
-                    <td>${fmt(c.NoVigente)}${renderInstitucionDetalle(c, false, "NO VIGENTE")}</td>
-                    <td>${fmt(c.NoAcreditado)}${renderInstitucionDetalle(c, false, "NO ACREDITADO")}</td>
+                    <td>${fmt(c.Acreditado)}</td>
+                    <td>${fmt(c.NoVigente)}</td>
+                    <td>${fmt(c.NoAcreditado)}</td>
                     <td>${fmt(c.SinEstado)}</td>
                     <td>${fmt(c.Total)}</td>
                     <td>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
+                ${renderSubfilasInstitucion(c, false)}
             `).join("");
             contenedor.innerHTML = `
                 <div class="modal-grid">
@@ -582,22 +600,17 @@
         const deltaNoVigente = obtenerDelta(monthData.noVigente, prevMonthData ? prevMonthData.noVigente : monthData.noVigente);
         const deltaNoAcreditado = obtenerDelta(monthData.noAcreditado, prevMonthData ? prevMonthData.noAcreditado : monthData.noAcreditado);
         const deltaTotal = obtenerDelta(monthData.total, prevMonthData ? prevMonthData.total : monthData.total);
-        const totalesInstitucion = monthData.porRegion.filter((r) => r.Region !== "NIVEL CENTRAL").reduce((acc, r) => {
-            acc.municipalidad += r.Municipalidad;
-            acc.seremi += r.Seremi;
-            acc.otras += r.OtrasInstituciones;
-            return acc;
-        }, { municipalidad: 0, seremi: 0, otras: 0 });
         const filasRegion = monthData.porRegion.map((r) => `
             <tr>
                 <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
-                <td>${fmt(r.Acreditado)}${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL", "ACREDITADO")}</td>
-                <td>${fmt(r.NoVigente)}${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL", "NO VIGENTE")}</td>
-                <td>${fmt(r.NoAcreditado)}${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL", "NO ACREDITADO")}</td>
+                <td>${fmt(r.Acreditado)}</td>
+                <td>${fmt(r.NoVigente)}</td>
+                <td>${fmt(r.NoAcreditado)}</td>
                 <td>${fmt(r.SinEstado)}</td>
                 <td>${fmt(r.Total)}</td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
+            ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL")}
         `).join("");
         const filaTotales = `
             <tr>
