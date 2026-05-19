@@ -512,8 +512,21 @@
     function exportarRegional() {
         const monthData = obtenerMesActual();
         if (!monthData) return;
-        const filas = monthData.porRegion.map((r) => [r.RegionEtiqueta, fmt(r.Acreditado), fmt(r.NoVigente), fmt(r.NoAcreditado), fmt(r.SinEstado), r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.Municipalidad), r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.Seremi), r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.OtrasInstituciones), fmt(r.Total), `${r.TasaAcreditado.toFixed(1)}%`]);
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Municipalidad", "SEREMI", "Otras instituciones", "Total", "% acreditado"], filas);
+        const filas = monthData.porRegion.map((r) => [
+            r.RegionEtiqueta,
+            fmt(r.Acreditado),
+            fmt(r.NoVigente),
+            fmt(r.NoAcreditado),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoPublico),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigentePublico),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoPublico),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoOtras),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigenteOtras),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoOtras),
+            fmt(r.Total),
+            `${r.TasaAcreditado.toFixed(1)}%`
+        ]);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total", "% acreditado"], filas);
         cerrarMenuExportacion();
     }
     function exportarComunalNacional() {
@@ -526,15 +539,17 @@
                 fmt(c.Acreditado),
                 fmt(c.NoVigente),
                 fmt(c.NoAcreditado),
-                fmt(c.SinEstado),
-                c.Comuna === "Nivel Central" ? "-" : fmt(c.Municipalidad),
-                c.Comuna === "Nivel Central" ? "-" : fmt(c.Seremi),
-                c.Comuna === "Nivel Central" ? "-" : fmt(c.OtrasInstituciones),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoPublico),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigentePublico),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoPublico),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoOtras),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigenteOtras),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoOtras),
                 fmt(c.Total),
                 `${c.TasaAcreditado.toFixed(1)}%`
             ])
         );
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Municipalidad", "SEREMI", "Otras instituciones", "Total", "% acreditado"], filas);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total", "% acreditado"], filas);
         cerrarMenuExportacion();
     }
     function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
