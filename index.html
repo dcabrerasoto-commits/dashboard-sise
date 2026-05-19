@@ -114,6 +114,7 @@
         .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; }
         .subfila-institucion td:first-child { font-weight: 400; color: #748396; }
         .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
+        .subfila-institucion td:last-child { text-align: center; }
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
         .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
@@ -465,22 +466,24 @@
     function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
     function renderSubfilasInstitucion(item, esNivelCentral) {
         if (esNivelCentral) return "";
+        const totalPublico = item.AcreditadoPublico + item.NoVigentePublico + item.NoAcreditadoPublico;
+        const totalOtras = item.AcreditadoOtras + item.NoVigenteOtras + item.NoAcreditadoOtras;
         return `
             <tr class="subfila-institucion">
                 <td>SEREMI y Municipalidad</td>
                 <td>${fmt(item.AcreditadoPublico)}</td>
                 <td>${fmt(item.NoVigentePublico)}</td>
                 <td>${fmt(item.NoAcreditadoPublico)}</td>
-                <td>-</td>
-                <td>-</td>
+                <td>${fmt(totalPublico)}</td>
+                <td>·</td>
             </tr>
             <tr class="subfila-institucion">
                 <td>Otras instituciones</td>
                 <td>${fmt(item.AcreditadoOtras)}</td>
                 <td>${fmt(item.NoVigenteOtras)}</td>
                 <td>${fmt(item.NoAcreditadoOtras)}</td>
-                <td>-</td>
-                <td>-</td>
+                <td>${fmt(totalOtras)}</td>
+                <td>·</td>
             </tr>
         `;
     }
