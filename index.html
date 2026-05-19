@@ -307,10 +307,17 @@
         }
     };
     function obtenerResumenVacio(region, etiquetaRegion) {
-        return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, TasaAcreditado: 0, porComuna: [] };
+        return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, TasaAcreditado: 0, porComuna: [] };
+    }
+    function normalizarInstitucion(valor) {
+        const texto = norm(valor);
+        if (!texto) return "OTRAS";
+        if (texto.includes("SEREMI")) return "SEREMI";
+        if (texto.includes("MUNICIPALIDAD") || texto.includes("MUNICIPIO") || texto.includes("MUNI")) return "MUNICIPALIDAD";
+        return "OTRAS";
     }
     function procesarDatos(datos, cols) {
-        const { colRegion, colComuna, columnasEstado } = cols;
+        const { colRegion, colComuna, colDependeDe, columnasEstado } = cols;
         const meses = columnasEstado.map((columna) => ({ key: columna, label: extraerMesDesdeColumna(columna) }));
         const monthly = meses.map((mes) => {
             const resumen = { key: mes.key, label: mes.label, acreditado: 0, noVigente: 0, noAcreditado: 0, sinEstado: 0, total: 0, porRegion: {}, hasComunaData: false };
@@ -320,11 +327,17 @@
                 const estado = normalizarEstado(fila[mes.key]);
                 const region = normalizarRegion(colRegion ? fila[colRegion] : "");
                 const comuna = normalizarComunaPorRegion(region, colComuna ? fila[colComuna] : "");
+                const institucion = normalizarInstitucion(colDependeDe ? fila[colDependeDe] : "");
                 resumen.total++;
                 if (!resumen.porRegion[region]) {
-                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, porComuna: {} };
+                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, porComuna: {} };
                 }
                 resumen.porRegion[region].Total++;
+                if (region !== "NIVEL CENTRAL") {
+                    if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].Municipalidad++;
+                    else if (institucion === "SEREMI") resumen.porRegion[region].Seremi++;
+                    else resumen.porRegion[region].OtrasInstituciones++;
+                }
                 if (estado === "ACREDITADO") { resumen.acreditado++; resumen.porRegion[region].Acreditado++; }
                 else if (estado === "NO VIGENTE") { resumen.noVigente++; resumen.porRegion[region].NoVigente++; }
                 else if (estado === "NO ACREDITADO") { resumen.noAcreditado++; resumen.porRegion[region].NoAcreditado++; }
@@ -332,9 +345,14 @@
                 if (colComuna) {
                     resumen.hasComunaData = true;
                     if (!resumen.porRegion[region].porComuna[comuna]) {
-                        resumen.porRegion[region].porComuna[comuna] = { Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, TasaAcreditado: 0 };
+                        resumen.porRegion[region].porComuna[comuna] = { Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, TasaAcreditado: 0 };
                     }
                     resumen.porRegion[region].porComuna[comuna].Total++;
+                    if (region !== "NIVEL CENTRAL") {
+                        if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].porComuna[comuna].Municipalidad++;
+                        else if (institucion === "SEREMI") resumen.porRegion[region].porComuna[comuna].Seremi++;
+                        else resumen.porRegion[region].porComuna[comuna].OtrasInstituciones++;
+                    }
                     if (estado === "ACREDITADO") resumen.porRegion[region].porComuna[comuna].Acreditado++;
                     else if (estado === "NO VIGENTE") resumen.porRegion[region].porComuna[comuna].NoVigente++;
                     else if (estado === "NO ACREDITADO") resumen.porRegion[region].porComuna[comuna].NoAcreditado++;
@@ -429,8 +447,8 @@
     function exportarRegional() {
         const monthData = obtenerMesActual();
         if (!monthData) return;
-        const filas = monthData.porRegion.map((r) => [r.RegionEtiqueta, fmt(r.Acreditado), fmt(r.NoVigente), fmt(r.NoAcreditado), fmt(r.SinEstado), fmt(r.Total), `${r.TasaAcreditado.toFixed(1)}%`]);
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
+        const filas = monthData.porRegion.map((r) => [r.RegionEtiqueta, fmt(r.Acreditado), fmt(r.NoVigente), fmt(r.NoAcreditado), fmt(r.SinEstado), r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.Municipalidad), r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.Seremi), r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.OtrasInstituciones), fmt(r.Total), `${r.TasaAcreditado.toFixed(1)}%`]);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Municipalidad", "SEREMI", "Otras instituciones", "Total", "% acreditado"], filas);
         cerrarMenuExportacion();
     }
     function exportarComunalNacional() {
@@ -444,11 +462,14 @@
                 fmt(c.NoVigente),
                 fmt(c.NoAcreditado),
                 fmt(c.SinEstado),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.Municipalidad),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.Seremi),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.OtrasInstituciones),
                 fmt(c.Total),
                 `${c.TasaAcreditado.toFixed(1)}%`
             ])
         );
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Total", "% acreditado"], filas);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "No vigente", "No acreditado", "Sin estado", "Municipalidad", "SEREMI", "Otras instituciones", "Total", "% acreditado"], filas);
         cerrarMenuExportacion();
     }
     function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
@@ -480,6 +501,9 @@
                     <td>${fmt(c.NoVigente)}</td>
                     <td>${fmt(c.NoAcreditado)}</td>
                     <td>${fmt(c.SinEstado)}</td>
+                    <td>${fmt(c.Municipalidad)}</td>
+                    <td>${fmt(c.Seremi)}</td>
+                    <td>${fmt(c.OtrasInstituciones)}</td>
                     <td>${fmt(c.Total)}</td>
                     <td>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
@@ -494,7 +518,7 @@
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table>
-                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead>
+                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Municipalidad</th><th>SEREMI</th><th>Otras instituciones</th><th>Total</th><th>% acreditado</th></tr></thead>
                         <tbody>${filasComuna}</tbody>
                     </table>
                 </div>`}
@@ -516,6 +540,12 @@
         const deltaNoVigente = obtenerDelta(monthData.noVigente, prevMonthData ? prevMonthData.noVigente : monthData.noVigente);
         const deltaNoAcreditado = obtenerDelta(monthData.noAcreditado, prevMonthData ? prevMonthData.noAcreditado : monthData.noAcreditado);
         const deltaTotal = obtenerDelta(monthData.total, prevMonthData ? prevMonthData.total : monthData.total);
+        const totalesInstitucion = monthData.porRegion.filter((r) => r.Region !== "NIVEL CENTRAL").reduce((acc, r) => {
+            acc.municipalidad += r.Municipalidad;
+            acc.seremi += r.Seremi;
+            acc.otras += r.OtrasInstituciones;
+            return acc;
+        }, { municipalidad: 0, seremi: 0, otras: 0 });
         const filasRegion = monthData.porRegion.map((r) => `
             <tr>
                 <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
@@ -523,6 +553,9 @@
                 <td>${fmt(r.NoVigente)}</td>
                 <td>${fmt(r.NoAcreditado)}</td>
                 <td>${fmt(r.SinEstado)}</td>
+                <td>${r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.Municipalidad)}</td>
+                <td>${r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.Seremi)}</td>
+                <td>${r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.OtrasInstituciones)}</td>
                 <td>${fmt(r.Total)}</td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
@@ -534,6 +567,9 @@
                 <td><strong>${fmt(monthData.noVigente)}</strong></td>
                 <td><strong>${fmt(monthData.noAcreditado)}</strong></td>
                 <td><strong>${fmt(monthData.sinEstado)}</strong></td>
+                <td><strong>${fmt(totalesInstitucion.municipalidad)}</strong></td>
+                <td><strong>${fmt(totalesInstitucion.seremi)}</strong></td>
+                <td><strong>${fmt(totalesInstitucion.otras)}</strong></td>
                 <td><strong>${fmt(monthData.total)}</strong></td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0, 100).toFixed(1)}%"></div></div><strong>${badgeTasa(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0)}</strong></td>
             </tr>
@@ -568,7 +604,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Municipalidad</th><th>SEREMI</th><th>Otras instituciones</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
@@ -582,11 +618,12 @@
         }
         const colRegion = buscarColumna(headers, ["REGION", "REGIÓN", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
         const colComuna = buscarColumna(headers, ["COMUNA", "NOMBRE_COMUNA", "NOM_COMUNA", "COMUNA_NOMBRE", "GLOSA_COMUNA"]) || buscarColumnaAproximada(headers, (n) => n.includes("COMUNA"));
+        const colDependeDe = buscarColumna(headers, ["DEPENDE DE", "DEPENDE_DE", "DEPENDENCIA", "INSTITUCION", "INSTITUCIÓN"]);
         const columnasEstado = buscarColumnasEstado(headers).filter((h) => datos.some((fila) => String(fila[h] || "").trim() !== ""));
         if (columnasEstado.length === 0) {
             throw new Error("No se encontraron columnas de estado válidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
         }
-        dashboardData = procesarDatos(datos, { colRegion, colComuna, columnasEstado });
+        dashboardData = procesarDatos(datos, { colRegion, colComuna, colDependeDe, columnasEstado });
         currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
         renderDashboard();
         if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
