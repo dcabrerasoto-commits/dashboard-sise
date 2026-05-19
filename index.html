@@ -107,9 +107,11 @@
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
         tr:hover td { background: #f7faff; }
+        tr.region-group-par td { background: #ffffff; }
+        tr.region-group-impar td { background: #f7fafd; }
         .region-cell-button { background: none; border: none; padding: 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; }
         .region-cell-button:hover { text-decoration: underline; }
-        .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; background: #fafcff; }
+        .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; }
         .subfila-institucion td:first-child { font-weight: 400; color: #748396; }
         .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
         .percent-cell { min-width: 180px; }
@@ -554,8 +556,8 @@
         if (!dashboardData.hasComunaData) {
             contenedor.innerHTML = `<div class="modal-empty">La base publicada hoy no trae una columna de comuna. En cuanto el CSV incorpore una columna como <strong>COMUNA</strong>, <strong>NOMBRE_COMUNA</strong> o similar, este desglose se activará automáticamente al hacer clic en cada región.</div>`;
         } else {
-            const filasComuna = regionData.porComuna.map((c) => `
-                <tr>
+        const filasComuna = regionData.porComuna.map((c, index) => `
+                <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
                     <td>${c.Comuna}</td>
                     <td>${fmt(c.Acreditado)}</td>
                     <td>${fmt(c.NoVigente)}</td>
@@ -563,7 +565,7 @@
                     <td>${fmt(c.Total)}</td>
                     <td>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
-                ${renderSubfilasInstitucion(c, false)}
+                ${renderSubfilasInstitucion(c, false).replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
             `).join("");
             contenedor.innerHTML = `
                 <div class="modal-grid">
@@ -597,8 +599,8 @@
         const deltaNoVigente = obtenerDelta(monthData.noVigente, prevMonthData ? prevMonthData.noVigente : monthData.noVigente);
         const deltaNoAcreditado = obtenerDelta(monthData.noAcreditado, prevMonthData ? prevMonthData.noAcreditado : monthData.noAcreditado);
         const deltaTotal = obtenerDelta(monthData.total, prevMonthData ? prevMonthData.total : monthData.total);
-        const filasRegion = monthData.porRegion.map((r) => `
-            <tr>
+        const filasRegion = monthData.porRegion.map((r, index) => `
+            <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
                 <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
                 <td>${fmt(r.Acreditado)}</td>
                 <td>${fmt(r.NoVigente)}</td>
@@ -606,7 +608,7 @@
                 <td>${fmt(r.Total)}</td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
-            ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL")}
+            ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL").replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
         `).join("");
         const filaTotales = `
             <tr>
