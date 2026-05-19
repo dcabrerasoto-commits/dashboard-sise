@@ -115,6 +115,7 @@
         .subfila-institucion td:first-child { font-weight: 400; color: #748396; }
         .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
         .subfila-institucion td:last-child { text-align: center; }
+        .subfila-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; color: #9aa9bb; }
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
         .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
@@ -475,7 +476,7 @@
                 <td>${fmt(item.NoVigentePublico)}</td>
                 <td>${fmt(item.NoAcreditadoPublico)}</td>
                 <td>${fmt(totalPublico)}</td>
-                <td>·</td>
+                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
             </tr>
             <tr class="subfila-institucion">
                 <td>Otras instituciones</td>
@@ -483,7 +484,7 @@
                 <td>${fmt(item.NoVigenteOtras)}</td>
                 <td>${fmt(item.NoAcreditadoOtras)}</td>
                 <td>${fmt(totalOtras)}</td>
-                <td>·</td>
+                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
             </tr>
         `;
     }
