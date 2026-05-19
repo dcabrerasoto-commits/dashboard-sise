@@ -109,8 +109,8 @@
         tr:hover td { background: #f7faff; }
         .region-cell-button { background: none; border: none; padding: 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; }
         .region-cell-button:hover { text-decoration: underline; }
-        .subfila-institucion td { font-size: 11px; color: #64748b; padding-top: 6px; padding-bottom: 8px; background: #fafcff; }
-        .subfila-institucion td:first-child { font-weight: 700; color: #526277; }
+        .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; background: #fafcff; }
+        .subfila-institucion td:first-child { font-weight: 400; color: #748396; }
         .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
@@ -471,14 +471,12 @@
                 <td>${fmt(item.NoAcreditadoPublico)}</td>
                 <td>-</td>
                 <td>-</td>
-                <td>-</td>
             </tr>
             <tr class="subfila-institucion">
                 <td>Otras instituciones</td>
                 <td>${fmt(item.AcreditadoOtras)}</td>
                 <td>${fmt(item.NoVigenteOtras)}</td>
                 <td>${fmt(item.NoAcreditadoOtras)}</td>
-                <td>-</td>
                 <td>-</td>
                 <td>-</td>
             </tr>
@@ -562,7 +560,6 @@
                     <td>${fmt(c.Acreditado)}</td>
                     <td>${fmt(c.NoVigente)}</td>
                     <td>${fmt(c.NoAcreditado)}</td>
-                    <td>${fmt(c.SinEstado)}</td>
                     <td>${fmt(c.Total)}</td>
                     <td>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
@@ -578,7 +575,7 @@
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table>
-                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead>
+                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th><th>% acreditado</th></tr></thead>
                         <tbody>${filasComuna}</tbody>
                     </table>
                 </div>`}
@@ -606,7 +603,6 @@
                 <td>${fmt(r.Acreditado)}</td>
                 <td>${fmt(r.NoVigente)}</td>
                 <td>${fmt(r.NoAcreditado)}</td>
-                <td>${fmt(r.SinEstado)}</td>
                 <td>${fmt(r.Total)}</td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
@@ -618,7 +614,6 @@
                 <td><strong>${fmt(monthData.acreditado)}</strong></td>
                 <td><strong>${fmt(monthData.noVigente)}</strong></td>
                 <td><strong>${fmt(monthData.noAcreditado)}</strong></td>
-                <td><strong>${fmt(monthData.sinEstado)}</strong></td>
                 <td><strong>${fmt(monthData.total)}</strong></td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0, 100).toFixed(1)}%"></div></div><strong>${badgeTasa(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0)}</strong></td>
             </tr>
@@ -653,7 +648,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Sin estado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
