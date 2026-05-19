@@ -109,8 +109,8 @@
         tr:hover td { background: #f7faff; }
         .region-cell-button { background: none; border: none; padding: 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; }
         .region-cell-button:hover { text-decoration: underline; }
-        .subdetalle-institucion { margin-top: 6px; font-size: 12px; line-height: 1.45; color: #64748b; }
-        .subdetalle-institucion strong { color: var(--azul-sise); font-weight: 700; }
+        .subdetalle-institucion { margin-top: 6px; padding-top: 6px; border-top: 1px dashed #d8e2f0; font-size: 11px; line-height: 1.45; color: #64748b; }
+        .subdetalle-institucion strong { color: var(--azul-sise); font-weight: 700; display: block; margin-bottom: 2px; }
         .percent-cell { min-width: 180px; }
         .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
         .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
@@ -309,7 +309,7 @@
         }
     };
     function obtenerResumenVacio(region, etiquetaRegion) {
-        return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, TasaAcreditado: 0, porComuna: [] };
+        return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, AcreditadoPublico: 0, AcreditadoOtras: 0, NoVigentePublico: 0, NoVigenteOtras: 0, NoAcreditadoPublico: 0, NoAcreditadoOtras: 0, TasaAcreditado: 0, porComuna: [] };
     }
     function normalizarInstitucion(valor) {
         const texto = norm(valor);
@@ -332,7 +332,7 @@
                 const institucion = normalizarInstitucion(colDependeDe ? fila[colDependeDe] : "");
                 resumen.total++;
                 if (!resumen.porRegion[region]) {
-                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, porComuna: {} };
+                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, AcreditadoPublico: 0, AcreditadoOtras: 0, NoVigentePublico: 0, NoVigenteOtras: 0, NoAcreditadoPublico: 0, NoAcreditadoOtras: 0, porComuna: {} };
                 }
                 resumen.porRegion[region].Total++;
                 if (region !== "NIVEL CENTRAL") {
@@ -340,14 +340,32 @@
                     else if (institucion === "SEREMI") resumen.porRegion[region].Seremi++;
                     else resumen.porRegion[region].OtrasInstituciones++;
                 }
-                if (estado === "ACREDITADO") { resumen.acreditado++; resumen.porRegion[region].Acreditado++; }
-                else if (estado === "NO VIGENTE") { resumen.noVigente++; resumen.porRegion[region].NoVigente++; }
-                else if (estado === "NO ACREDITADO") { resumen.noAcreditado++; resumen.porRegion[region].NoAcreditado++; }
+                if (estado === "ACREDITADO") {
+                    resumen.acreditado++; resumen.porRegion[region].Acreditado++;
+                    if (region !== "NIVEL CENTRAL") {
+                        if (institucion === "OTRAS") resumen.porRegion[region].AcreditadoOtras++;
+                        else resumen.porRegion[region].AcreditadoPublico++;
+                    }
+                }
+                else if (estado === "NO VIGENTE") {
+                    resumen.noVigente++; resumen.porRegion[region].NoVigente++;
+                    if (region !== "NIVEL CENTRAL") {
+                        if (institucion === "OTRAS") resumen.porRegion[region].NoVigenteOtras++;
+                        else resumen.porRegion[region].NoVigentePublico++;
+                    }
+                }
+                else if (estado === "NO ACREDITADO") {
+                    resumen.noAcreditado++; resumen.porRegion[region].NoAcreditado++;
+                    if (region !== "NIVEL CENTRAL") {
+                        if (institucion === "OTRAS") resumen.porRegion[region].NoAcreditadoOtras++;
+                        else resumen.porRegion[region].NoAcreditadoPublico++;
+                    }
+                }
                 else { resumen.sinEstado++; resumen.porRegion[region].SinEstado++; }
                 if (colComuna) {
                     resumen.hasComunaData = true;
                     if (!resumen.porRegion[region].porComuna[comuna]) {
-                        resumen.porRegion[region].porComuna[comuna] = { Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, TasaAcreditado: 0 };
+                        resumen.porRegion[region].porComuna[comuna] = { Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, AcreditadoPublico: 0, AcreditadoOtras: 0, NoVigentePublico: 0, NoVigenteOtras: 0, NoAcreditadoPublico: 0, NoAcreditadoOtras: 0, TasaAcreditado: 0 };
                     }
                     resumen.porRegion[region].porComuna[comuna].Total++;
                     if (region !== "NIVEL CENTRAL") {
@@ -355,9 +373,27 @@
                         else if (institucion === "SEREMI") resumen.porRegion[region].porComuna[comuna].Seremi++;
                         else resumen.porRegion[region].porComuna[comuna].OtrasInstituciones++;
                     }
-                    if (estado === "ACREDITADO") resumen.porRegion[region].porComuna[comuna].Acreditado++;
-                    else if (estado === "NO VIGENTE") resumen.porRegion[region].porComuna[comuna].NoVigente++;
-                    else if (estado === "NO ACREDITADO") resumen.porRegion[region].porComuna[comuna].NoAcreditado++;
+                    if (estado === "ACREDITADO") {
+                        resumen.porRegion[region].porComuna[comuna].Acreditado++;
+                        if (region !== "NIVEL CENTRAL") {
+                            if (institucion === "OTRAS") resumen.porRegion[region].porComuna[comuna].AcreditadoOtras++;
+                            else resumen.porRegion[region].porComuna[comuna].AcreditadoPublico++;
+                        }
+                    }
+                    else if (estado === "NO VIGENTE") {
+                        resumen.porRegion[region].porComuna[comuna].NoVigente++;
+                        if (region !== "NIVEL CENTRAL") {
+                            if (institucion === "OTRAS") resumen.porRegion[region].porComuna[comuna].NoVigenteOtras++;
+                            else resumen.porRegion[region].porComuna[comuna].NoVigentePublico++;
+                        }
+                    }
+                    else if (estado === "NO ACREDITADO") {
+                        resumen.porRegion[region].porComuna[comuna].NoAcreditado++;
+                        if (region !== "NIVEL CENTRAL") {
+                            if (institucion === "OTRAS") resumen.porRegion[region].porComuna[comuna].NoAcreditadoOtras++;
+                            else resumen.porRegion[region].porComuna[comuna].NoAcreditadoPublico++;
+                        }
+                    }
                     else resumen.porRegion[region].porComuna[comuna].SinEstado++;
                 }
             });
@@ -424,9 +460,12 @@
         return alertas;
     }
     function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
-    function renderInstitucionDetalle(item, esNivelCentral) {
+    function renderInstitucionDetalle(item, esNivelCentral, tipo) {
         if (esNivelCentral) return "";
-        return `<div class="subdetalle-institucion"><strong>Por institución:</strong><br>SEREMI y Municipalidad: ${fmt(item.Seremi + item.Municipalidad)}<br>Otras instituciones: ${fmt(item.OtrasInstituciones)}</div>`;
+        if (tipo === "ACREDITADO") return `<div class="subdetalle-institucion"><strong>Por institución</strong><span>SEREMI y Municipalidad: ${fmt(item.AcreditadoPublico)}</span><br><span>Otras instituciones: ${fmt(item.AcreditadoOtras)}</span></div>`;
+        if (tipo === "NO VIGENTE") return `<div class="subdetalle-institucion"><strong>Por institución</strong><span>SEREMI y Municipalidad: ${fmt(item.NoVigentePublico)}</span><br><span>Otras instituciones: ${fmt(item.NoVigenteOtras)}</span></div>`;
+        if (tipo === "NO ACREDITADO") return `<div class="subdetalle-institucion"><strong>Por institución</strong><span>SEREMI y Municipalidad: ${fmt(item.NoAcreditadoPublico)}</span><br><span>Otras instituciones: ${fmt(item.NoAcreditadoOtras)}</span></div>`;
+        return "";
     }
     function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mes.label}</button>`).join(""); }
     function obtenerMesActual() {
@@ -502,10 +541,10 @@
         } else {
             const filasComuna = regionData.porComuna.map((c) => `
                 <tr>
-                    <td>${c.Comuna}${renderInstitucionDetalle(c, false)}</td>
-                    <td>${fmt(c.Acreditado)}</td>
-                    <td>${fmt(c.NoVigente)}</td>
-                    <td>${fmt(c.NoAcreditado)}</td>
+                    <td>${c.Comuna}</td>
+                    <td>${fmt(c.Acreditado)}${renderInstitucionDetalle(c, false, "ACREDITADO")}</td>
+                    <td>${fmt(c.NoVigente)}${renderInstitucionDetalle(c, false, "NO VIGENTE")}</td>
+                    <td>${fmt(c.NoAcreditado)}${renderInstitucionDetalle(c, false, "NO ACREDITADO")}</td>
                     <td>${fmt(c.SinEstado)}</td>
                     <td>${fmt(c.Total)}</td>
                     <td>${badgeTasa(c.TasaAcreditado)}</td>
@@ -551,10 +590,10 @@
         }, { municipalidad: 0, seremi: 0, otras: 0 });
         const filasRegion = monthData.porRegion.map((r) => `
             <tr>
-                <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button>${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL")}</td>
-                <td>${fmt(r.Acreditado)}</td>
-                <td>${fmt(r.NoVigente)}</td>
-                <td>${fmt(r.NoAcreditado)}</td>
+                <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
+                <td>${fmt(r.Acreditado)}${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL", "ACREDITADO")}</td>
+                <td>${fmt(r.NoVigente)}${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL", "NO VIGENTE")}</td>
+                <td>${fmt(r.NoAcreditado)}${renderInstitucionDetalle(r, r.Region === "NIVEL CENTRAL", "NO ACREDITADO")}</td>
                 <td>${fmt(r.SinEstado)}</td>
                 <td>${fmt(r.Total)}</td>
                 <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
@@ -704,4 +743,5 @@
 </script>
 </body>
 </html>
+
 
