@@ -175,6 +175,7 @@
     const ORDEN_REGIONES = ["NIVEL CENTRAL","ARICA Y PARINACOTA","TARAPACA","ANTOFAGASTA","ATACAMA","COQUIMBO","VALPARAISO","METROPOLITANA","OHIGGINS","MAULE","NUBLE","BIO BIO","LA ARAUCANIA","LOS RIOS","LOS LAGOS","AYSEN","MAGALLANES"];
     const ETIQUETAS_REGION = {"NIVEL CENTRAL":"Nivel Central","ARICA Y PARINACOTA":"Arica y Parinacota","TARAPACA":"Tarapacá","ANTOFAGASTA":"Antofagasta","ATACAMA":"Atacama","COQUIMBO":"Coquimbo","VALPARAISO":"Valparaíso","METROPOLITANA":"Metropolitana de Santiago","OHIGGINS":"O'Higgins","MAULE":"Maule","NUBLE":"Ñuble","BIO BIO":"Biobío","LA ARAUCANIA":"La Araucanía","LOS RIOS":"Los Ríos","LOS LAGOS":"Los Lagos","AYSEN":"Aysén","MAGALLANES":"Magallanes"};
     const COMUNAS_OFICIALES_POR_REGION = window.COMUNAS_OFICIALES_POR_REGION || {};
+    const COMUNAS_ALIAS_POR_REGION = window.COMUNAS_ALIAS_POR_REGION || {};
     function norm(str) { return String(str || "").replace(/^\uFEFF/, "").toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
     function limpiarHeader(str) { return String(str || "").replace(/^\uFEFF/, "").trim(); }
     function detectarSeparador(primeraLinea) { const semicolons = (primeraLinea.match(/;/g) || []).length; const commas = (primeraLinea.match(/,/g) || []).length; return semicolons > commas ? ";" : ","; }
@@ -219,6 +220,9 @@
             indice[region] = {};
             comunas.forEach((comuna) => {
                 indice[region][comunaClave(comuna)] = comuna;
+            });
+            Object.entries(COMUNAS_ALIAS_POR_REGION[region] || {}).forEach(([alias, oficial]) => {
+                indice[region][comunaClave(alias)] = oficial;
             });
         });
         window.__COMUNAS_OFICIALES_INDEX = indice;
