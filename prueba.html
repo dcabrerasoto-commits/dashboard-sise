@@ -727,6 +727,8 @@
         }
         dashboardData = procesarDatos(datos, { colRegion, colComuna, colDependeDe, columnasEstado });
         currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
+        document.getElementById("uploadSection").classList.add("hidden");
+        document.getElementById("dashboardSection").classList.remove("hidden");
         renderDashboard();
         if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
     }
