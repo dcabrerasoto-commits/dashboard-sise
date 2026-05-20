@@ -20,12 +20,7 @@
         }
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background:
-                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-                radial-gradient(circle at top right, rgba(44, 90, 160, 0.18), transparent 24%),
-                linear-gradient(180deg, #e8eef7 0%, #dfe8f3 100%);
-            background-size: 24px 24px, 24px 24px, auto, auto;
+            background: radial-gradient(circle at top right, rgba(44, 90, 160, 0.10), transparent 22%), linear-gradient(180deg, #f4f7fb 0%, #edf2f8 100%);
             min-height: 100vh;
             padding: 20px;
             color: var(--gris-texto);
@@ -34,7 +29,7 @@
         header, .panel, .upload-section, .chart-card, .table-section, .insight-card, .map-card, .footer-card, .kpi-card { background: white; border: 1px solid var(--borde); border-radius: 10px; box-shadow: var(--sombra); }
         header {
             background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%);
-            color: white; padding: 28px 30px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-radius: 10px; position: relative; overflow: hidden; border: 1px solid #3f6297; box-shadow: 0 14px 30px rgba(20, 48, 92, 0.20);
+            color: white; padding: 24px 30px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-radius: 10px; position: relative; overflow: hidden;
         }
         header::before {
             content: "";
@@ -96,9 +91,9 @@
         .info-msg { background: #eff6ff; border: 1px solid #93c5fd; color: var(--azul-sise); }
         .hidden { display: none; }
         .executive-band, .charts-section, .mid-section, .footer-grid, .kpi-section { display: grid; gap: 16px; }
-        .executive-band { grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.8fr); margin-bottom: 20px; }
-        .charts-section { grid-template-columns: minmax(0, 1.3fr) minmax(340px, 0.7fr); margin-bottom: 22px; }
-        .mid-section { grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.5fr); margin-bottom: 22px; align-items: start; }
+        .executive-band { grid-template-columns: 2fr 1fr; margin-bottom: 20px; }
+        .charts-section { grid-template-columns: 1.25fr 0.75fr; margin-bottom: 22px; }
+        .mid-section { grid-template-columns: 1.45fr 0.55fr; margin-bottom: 22px; align-items: start; }
         .footer-grid { grid-template-columns: minmax(240px, 0.8fr) minmax(420px, 1.2fr); gap: 18px; align-items: start; }
         .kpi-section { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 22px; }
         .executive-main, .executive-side, .chart-card, .table-section, .insight-card, .map-card, .footer-card, .kpi-card { padding: 18px 20px; }
