@@ -172,7 +172,7 @@
             <div class="meta-value">Seguimiento mensual de estados de acreditación</div>
         </div>
     </header>
-    <div class="upload-section" id="uploadSection">
+    <div class="upload-section hidden" id="uploadSection">
         <div class="upload-zone" onclick="document.getElementById('csvFile').click()">
             <p>Seleccionar archivo CSV (.csv)</p>
             <small>Versión de prueba para iterar cambios visuales sin tocar la pública.</small>
@@ -727,8 +727,10 @@
         }
         dashboardData = procesarDatos(datos, { colRegion, colComuna, colDependeDe, columnasEstado });
         currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
-        document.getElementById("uploadSection").classList.add("hidden");
-        document.getElementById("dashboardSection").classList.remove("hidden");
+        const uploadSection = document.getElementById("uploadSection");
+        const dashboardSection = document.getElementById("dashboardSection");
+        if (uploadSection) uploadSection.classList.add("hidden");
+        if (dashboardSection) dashboardSection.classList.remove("hidden");
         renderDashboard();
         if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
     }
@@ -798,6 +800,8 @@
             mostrarInfo("");
         } catch (error) {
             mostrarError("Error al cargar la fuente publicada: " + error.message);
+            const uploadSection = document.getElementById("uploadSection");
+            if (uploadSection) uploadSection.classList.remove("hidden");
         }
     }
 
