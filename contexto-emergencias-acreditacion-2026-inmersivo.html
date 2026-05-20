@@ -60,6 +60,25 @@ body.in-experience .wrap{grid-template-columns:minmax(286px,18.5vw) minmax(0,1fr
 #modulo-4 .siseNetwork .card{background:radial-gradient(circle at 88% 18%,rgba(255,240,232,.82),transparent 70px),linear-gradient(135deg,#ffffff,#f4f8fd)!important;border-top-color:var(--orange)!important}.caseCard{min-height:0!important}.caseCard .metric{background:#f4f8fd!important;border-radius:16px!important}.caseCard .metric strong{font-size:clamp(1.8rem,2.3vw,2.4rem)!important;color:#12315d!important}
 #modulo-6{gap:16px!important}.compactConcepts{margin-bottom:clamp(38px,4.4vw,70px)!important}.cierreFinal{margin-top:clamp(36px,4vw,64px)!important;background:radial-gradient(circle at 82% 10%,rgba(255,255,255,.16),transparent 18vw),linear-gradient(135deg,#12315d,#2e6da4)!important}.cierreFinal h3{font-size:clamp(2rem,4vw,4rem)!important;text-wrap:balance}.cierreFinal p{font-size:clamp(1rem,1.4vw,1.28rem)!important;max-width:860px!important}
 @media(max-width:1180px){.chain{grid-template-columns:repeat(2,minmax(0,1fr))!important}.side:after{display:none}}@media(max-width:720px){.chain{grid-template-columns:1fr!important}.landing:after{display:none}.sphere:before,.sphere:after{display:none}}
+</style><style id="immersive-polish-final-20260520">
+.side:after{display:none!important;content:none!important}
+body.in-experience .side{box-shadow:10px 0 34px rgba(18,49,93,.1)!important;border-right:1px solid rgba(46,109,164,.18)!important}
+body.in-experience .nav a{position:relative!important;overflow:hidden!important}
+body.in-experience .nav a:before{content:"";position:absolute;left:14px;top:50%;width:8px;height:8px;border-radius:50%;background:#c8d8ea;transform:translateY(-50%);opacity:.55}
+body.in-experience .nav a.active:before{background:#fff;box-shadow:0 0 0 6px rgba(255,255,255,.14)}
+#modulo-6{padding-bottom:clamp(34px,4vw,62px)!important;overflow-y:auto!important;align-content:start!important}
+#modulo-6 .compactConcepts{margin-bottom:clamp(46px,5vw,86px)!important;z-index:3!important;position:relative!important}
+#modulo-6 .compactConcepts .gloss{align-items:center!important}
+#modulo-6 .cierreFinal{box-sizing:border-box!important;margin:clamp(46px,5vw,86px) 0 0!important;min-height:auto!important;width:100%!important;border-radius:28px!important;padding:clamp(36px,5vw,72px)!important;overflow:hidden!important;align-content:center!important;justify-items:center!important;text-align:center!important;z-index:2!important;position:relative!important}
+#modulo-6 .cierreFinal h3{font-size:clamp(1.85rem,3.4vw,3.55rem)!important;line-height:1.08!important;max-width:1050px!important;margin:0!important;overflow-wrap:anywhere!important;text-wrap:balance!important;color:#fff!important}
+#modulo-6 .cierreFinal p{max-width:820px!important;margin:0!important;color:rgba(255,255,255,.9)!important;line-height:1.35!important}
+#modulo-6 .cierreFinal .btn{max-width:max-content!important;white-space:normal!important}
+.motion-ready .sec > .head,.motion-ready .sec > .chain,.motion-ready .sec > .compare,.motion-ready .sec > .contextStrategic,.motion-ready .sec > .grid2,.motion-ready .sec > .grid3,.motion-ready .sec > .flow,.motion-ready .sec > .techFlow,.motion-ready .sec > .cap,.motion-ready .sec > .caseGrid,.motion-ready .sec > .concepts,.motion-ready .sec > .final,.motion-ready .sec > .navBtns{opacity:0;transform:translateY(18px);transition:opacity .62s ease,transform .62s ease}
+.motion-ready .sec.in-view > .head,.motion-ready .sec.in-view > .chain,.motion-ready .sec.in-view > .compare,.motion-ready .sec.in-view > .contextStrategic,.motion-ready .sec.in-view > .grid2,.motion-ready .sec.in-view > .grid3,.motion-ready .sec.in-view > .flow,.motion-ready .sec.in-view > .techFlow,.motion-ready .sec.in-view > .cap,.motion-ready .sec.in-view > .caseGrid,.motion-ready .sec.in-view > .concepts,.motion-ready .sec.in-view > .final,.motion-ready .sec.in-view > .navBtns{opacity:1;transform:none}
+.motion-ready .sec.in-view > :nth-child(2){transition-delay:.08s}.motion-ready .sec.in-view > :nth-child(3){transition-delay:.16s}.motion-ready .sec.in-view > :nth-child(4){transition-delay:.24s}.motion-ready .sec.in-view > :nth-child(5){transition-delay:.32s}.motion-ready .sec.in-view > :nth-child(6){transition-delay:.4s}.motion-ready .sec.in-view > :nth-child(7){transition-delay:.48s}
+.motion-ready .landing .landing-copy > *,.motion-ready .landing .sphere{animation:landingReveal .78s ease both}.motion-ready .landing .landing-copy > *:nth-child(2){animation-delay:.08s}.motion-ready .landing .landing-copy > *:nth-child(3){animation-delay:.16s}.motion-ready .landing .landing-copy > *:nth-child(4){animation-delay:.24s}.motion-ready .landing .sphere{animation-delay:.22s}@keyframes landingReveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:900px){#modulo-6 .compactConcepts{margin-bottom:34px!important}#modulo-6 .cierreFinal{margin-top:34px!important;padding:30px 20px!important}#modulo-6 .cierreFinal h3{font-size:clamp(1.7rem,8vw,2.7rem)!important}}
+@media(prefers-reduced-motion:reduce){.motion-ready .sec > *{opacity:1!important;transform:none!important;transition:none!important}.motion-ready .landing .landing-copy > *,.motion-ready .landing .sphere{animation:none!important}}
 </style></head><body><section class="landing" id="inicio" aria-label="Portada del recorrido">
   <div class="landing-bg" aria-hidden="true"></div>
   <div class="landing-shell">
@@ -167,7 +186,22 @@ document.querySelectorAll('a[href="#inicio"]').forEach(link=>link.addEventListen
   window.scrollTo({top:0,behavior:'smooth'});
 }));
 if(window.lucide)lucide.createIcons();
-</script></body></html>
+
+const motionRoot=document.querySelector('.wrap main');
+document.body.classList.add('motion-ready');
+const revealSections=document.querySelectorAll('.sec');
+if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting) entry.target.classList.add('in-view');
+    });
+  },{root:motionRoot,threshold:.36});
+  revealSections.forEach(section=>revealObserver.observe(section));
+}else{
+  revealSections.forEach(section=>section.classList.add('in-view'));
+}
+revealSections[0]?.classList.add('in-view');</script></body></html>
+
 
 
 
