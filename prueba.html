@@ -102,7 +102,14 @@
         .month-btn { padding: 10px 14px; background: #f3f6fb; color: var(--azul-sise); border: 1px solid #d7e0ee; font-size: 13px; }
         .month-btn.active { background: var(--azul-sise); color: white; border-color: var(--azul-sise); box-shadow: 0 8px 18px rgba(26, 64, 128, 0.18); }
         .toolbar-meta, .section-note, .footer-item, .kpi-percent { font-size: 13px; color: #64748b; line-height: 1.5; }
-        .kpi-card { border-top: 4px solid var(--azul-sise); }
+        .guide-band { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; perspective: 1200px; }
+        .guide-card { background: linear-gradient(180deg, #fbfdff 0%, #f3f7fd 100%); border: 1px solid #dbe5f3; border-radius: 10px; padding: 14px 16px; transform: translateY(0) rotateX(0deg); transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease; box-shadow: 0 6px 18px rgba(26, 64, 128, 0.08); }
+        .guide-card:hover { transform: translateY(-4px) rotateX(4deg); box-shadow: 0 16px 30px rgba(26, 64, 128, 0.14); border-color: #c5d5ec; }
+        .guide-step { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 999px; background: var(--azul-sise); color: white; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+        .guide-title { font-size: 13px; font-weight: 700; color: #17396f; margin-bottom: 4px; }
+        .guide-text { font-size: 12px; color: #64748b; line-height: 1.5; }
+        .kpi-card { border-top: 4px solid var(--azul-sise); transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
+        .kpi-card:hover { transform: translateY(-4px); box-shadow: 0 18px 30px rgba(26, 64, 128, 0.14); }
         .kpi-card.azul { background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%); color: white; border-top-color: #0f2f5f; }
         .kpi-card.verde { border-top-color: var(--verde); }
         .kpi-card.ambar { border-top-color: var(--ambar); }
@@ -120,9 +127,14 @@
         .delta-flat, .badge-ambar { background: #fef3c7; color: #92400e; }
         .chart-canvas-wrap { position: relative; height: 280px; }
         .chart-canvas-wrap.compact { height: 200px; max-width: 320px; margin: 0 auto; }
+        .chart-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
+        .chart-card:hover { transform: translateY(-4px); box-shadow: 0 18px 30px rgba(26, 64, 128, 0.14); }
         .insight-list { display: grid; gap: 10px; }
-        .insight-item { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 8px; padding: 12px 14px; line-height: 1.5; font-size: 14px; }
+        .insight-item { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 8px; padding: 12px 14px; line-height: 1.5; font-size: 14px; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+        .insight-item:hover { transform: translateX(4px); box-shadow: 0 8px 18px rgba(26, 64, 128, 0.10); }
         .table-section { overflow-x: auto; }
+        .panel, .table-section, .insight-card, .footer-card, .map-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
+        .panel:hover, .table-section:hover, .insight-card:hover, .footer-card:hover, .map-card:hover { transform: translateY(-3px); box-shadow: 0 16px 28px rgba(26, 64, 128, 0.12); }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
@@ -153,7 +165,7 @@
         .modal-stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.7px; font-weight: 700; color: var(--azul-secundario); margin-bottom: 6px; }
         .modal-stat-value { font-size: 26px; font-weight: 700; color: #17396f; }
         .modal-empty { background: #f8fbff; border: 1px solid #dbe5f3; border-radius: 10px; padding: 15px; color: #475569; line-height: 1.6; }
-        @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band, .footer-grid { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
+        @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band, .footer-grid, .guide-band { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
         @media (max-width: 760px) { header { flex-direction: column; align-items: flex-start; } .header-meta { width: 100%; } }
     </style>
 </head>
@@ -680,7 +692,7 @@
         document.getElementById("content").innerHTML = `
             <div class="executive-band">
                 <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${hallazgos[0]}</div></div>
-                <div class="panel executive-side"><div class="executive-title">Contexto del corte</div><div class="executive-text">Mes visualizado: <strong>${monthData.label}</strong><br>N° de registros: <strong>${fmt(monthData.total)}</strong><br>Comparación: <strong>${prevMonthData ? prevMonthData.label : "Sin mes previo"}</strong></div></div>
+                <div class="panel executive-side"><div class="executive-title">Qué muestra esta vista</div><div class="executive-text">Mes visualizado: <strong>${monthData.label}</strong><br>Registros del mes: <strong>${fmt(monthData.total)}</strong><br>Mes comparado: <strong>${prevMonthData ? prevMonthData.label : "Sin mes previo"}</strong></div></div>
             </div>
             <div class="panel toolbar">
                 <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
@@ -695,6 +707,23 @@
                     </div>
                 </div>
             </div>
+            <div class="guide-band">
+                <div class="guide-card">
+                    <div class="guide-step">1</div>
+                    <div class="guide-title">Elige el mes</div>
+                    <div class="guide-text">Usa los botones superiores para cambiar el período y comparar su comportamiento con el mes anterior.</div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-step">2</div>
+                    <div class="guide-title">Lee los indicadores</div>
+                    <div class="guide-text">Las tarjetas resumen el número de personas registradas, acreditadas, no vigentes y no acreditadas.</div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-step">3</div>
+                    <div class="guide-title">Baja al territorio</div>
+                    <div class="guide-text">Revisa primero la región y luego haz clic en una fila para abrir el detalle comunal cuando exista.</div>
+                </div>
+            </div>
             <div class="kpi-section">
                 <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN únicos de los meses consolidados.</div></div>
                 <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${pct(monthData.acreditado, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
@@ -702,14 +731,14 @@
                 <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${pct(monthData.noAcreditado, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
             </div>
             <div class="charts-section">
-                <div class="chart-card"><div class="section-title">Tendencia mensual por estado</div><div class="section-note">Permite comparar la evolución del número de personas acreditadas, no vigentes y no acreditadas entre meses informados.</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
-                <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
+                <div class="chart-card"><div class="section-title">Tendencia mensual por estado</div><div class="section-note">Compara cómo cambia el número de personas acreditadas, no vigentes y no acreditadas entre meses.</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
+                <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Muestra qué porcentaje del mes corresponde a cada estado de acreditación.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
-                <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Lee primero los totales regionales. Si haces clic en una región, se abrirá el detalle por comuna." : "Lee primero los totales regionales. La fuente actual todavía no incorpora comuna para abrir el detalle territorial."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Lecturas destacadas</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Puntos a revisar</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
-            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
+            <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Cómo interpretar esta vista</strong>El tablero usa la columna de estado del mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se agrupan en Nivel Central. La información territorial es autodeclarada por la persona usuaria; por eso, si la comuna no coincide con la región informada, se registra como "Sin información de comuna".</div></div></div>
         `;
         crearGraficos(monthData);
     }
@@ -727,10 +756,6 @@
         }
         dashboardData = procesarDatos(datos, { colRegion, colComuna, colDependeDe, columnasEstado });
         currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
-        const uploadSection = document.getElementById("uploadSection");
-        const dashboardSection = document.getElementById("dashboardSection");
-        if (uploadSection) uploadSection.classList.add("hidden");
-        if (dashboardSection) dashboardSection.classList.remove("hidden");
         renderDashboard();
         if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
     }
