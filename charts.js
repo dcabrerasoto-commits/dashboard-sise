@@ -1,3 +1,7 @@
+function porcentajeGrafico(valor) {
+    return `${Number(valor || 0).toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+}
+
 const doughnutPercentageLabels = {
     id: "doughnutPercentageLabels",
     afterDatasetsDraw(chart) {
@@ -23,7 +27,7 @@ const doughnutPercentageLabels = {
             ctx.fillStyle = "#ffffff";
             ctx.strokeStyle = "rgba(15, 23, 42, 0.22)";
             ctx.lineWidth = 3;
-            const etiqueta = `${porcentaje.toFixed(1)}%`;
+            const etiqueta = porcentajeGrafico(porcentaje);
             ctx.strokeText(etiqueta, x, y);
             ctx.fillText(etiqueta, x, y);
         });
@@ -55,8 +59,8 @@ function crearGraficos(monthData) {
                         label: function(context) {
                             const total = context.dataset.data.reduce((acc, value) => acc + Number(value || 0), 0);
                             const valor = Number(context.raw || 0);
-                            const porcentaje = total > 0 ? ((valor / total) * 100).toFixed(1) : "0.0";
-                            return `${context.label}: ${porcentaje}%`;
+                            const porcentaje = total > 0 ? (valor / total) * 100 : 0;
+                            return `${context.label}: ${porcentajeGrafico(porcentaje)}`;
                         }
                     }
                 }
@@ -67,7 +71,7 @@ function crearGraficos(monthData) {
     chartTendencia = new Chart(ctxTrend, {
         type: "line",
         data: {
-            labels: dashboardData.monthly.map((m) => m.label),
+            labels: dashboardData.monthly.map((m) => typeof mesNombrePropioText === "function" ? mesNombrePropioText(m.label) : m.label),
             datasets: [
                 { label: "ACREDITADO", data: dashboardData.monthly.map((m) => m.acreditado), borderColor: "#1a7a4a", backgroundColor: "rgba(26,122,74,0.12)", pointBackgroundColor: "#1a7a4a", pointRadius: 4, tension: 0.25, fill: false },
                 { label: "NO VIGENTE", data: dashboardData.monthly.map((m) => m.noVigente), borderColor: "#b45309", backgroundColor: "rgba(180,83,9,0.12)", pointBackgroundColor: "#b45309", pointRadius: 4, tension: 0.25, fill: false },

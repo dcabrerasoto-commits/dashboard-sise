@@ -113,7 +113,8 @@ function obtenerOrdenRegion(region) { const idx = ORDEN_REGIONES.indexOf(region)
 function mostrarError(msg) { const el = document.getElementById("errorMsg"); el.style.display = msg ? "block" : "none"; el.textContent = msg || ""; }
 function mostrarInfo(msg) { const el = document.getElementById("infoMsg"); el.style.display = msg ? "block" : "none"; el.textContent = msg || ""; }
 function fmt(n) { return Number(n || 0).toLocaleString("es-CL"); }
-function pct(n, total) { return total > 0 ? ((n / total) * 100).toFixed(1) + "%" : "-"; }
+function pctValor(valor) { return `${Number(valor || 0).toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`; }
+function pct(n, total) { return total > 0 ? pctValor((n / total) * 100) : "-"; }
 function obtenerDelta(actual, previo) { const diff = actual - previo; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} vs mes anterior` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} vs mes anterior` }; return { className: "delta-flat", label: "Sin variación vs mes anterior" }; }
 function obtenerResumenVacio(region, etiquetaRegion) {
     return {
@@ -261,7 +262,7 @@ function obtenerHallazgos(monthData, prevMonthData) {
     return [
         `${monthData.label}: número de personas acreditadas ${fmt(monthData.acreditado)}, número de personas no vigentes ${fmt(monthData.noVigente)} y número de personas no acreditadas ${fmt(monthData.noAcreditado)}.`,
         topNumero ? `${topNumero.RegionEtiqueta} concentra el mayor número de registros del mes, con ${fmt(topNumero.Total)} registros.` : "No hay información regional disponible.",
-        topAcreditacion ? `${topAcreditacion.RegionEtiqueta} presenta el mayor porcentaje de acreditación entre regiones con al menos 200 registros, alcanzando ${topAcreditacion.TasaAcreditado.toFixed(1)}%.` : "No hay suficiente base para comparar porcentajes regionales.",
+        topAcreditacion ? `${topAcreditacion.RegionEtiqueta} presenta el mayor porcentaje de acreditación entre regiones con al menos 200 registros, alcanzando ${pctValor(topAcreditacion.TasaAcreditado)}.` : "No hay suficiente base para comparar porcentajes regionales.",
         topNoVigente ? `${topNoVigente.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(topNoVigente.NoVigente)} registros.` : "No se identificaron concentraciones relevantes de no vigencia.",
         prevMonthData ? `La variación mensual del número de personas acreditadas es ${diffAcreditado > 0 ? "+" : ""}${fmt(diffAcreditado)} respecto de ${prevMonthData.label}.` : "No existe un mes previo informado para calcular variación mensual."
     ];
@@ -273,13 +274,13 @@ function obtenerAlertas(monthData, prevMonthData) {
     const bajaAcreditacion = [...regiones].filter((r) => r.Total >= 200 && r.TasaAcreditado < 12).sort((a, b) => a.TasaAcreditado - b.TasaAcreditado)[0];
     const altaNoAcreditacion = [...regiones].filter((r) => r.NoAcreditado / r.Total >= 0.35).sort((a, b) => (b.NoAcreditado / b.Total) - (a.NoAcreditado / a.Total))[0];
     if (altaNoVigencia) {
-        alertas.push(`Seguimiento sugerido: ${altaNoVigencia.RegionEtiqueta} presenta un porcentaje de no vigencia de ${((altaNoVigencia.NoVigente / altaNoVigencia.Total) * 100).toFixed(1)}%.`);
+        alertas.push(`Seguimiento sugerido: ${altaNoVigencia.RegionEtiqueta} presenta un porcentaje de no vigencia de ${pctValor((altaNoVigencia.NoVigente / altaNoVigencia.Total) * 100)}.`);
     }
     if (bajaAcreditacion) {
-        alertas.push(`Atención: ${bajaAcreditacion.RegionEtiqueta} registra un porcentaje de acreditación de ${bajaAcreditacion.TasaAcreditado.toFixed(1)}%, bajo el umbral de referencia de 12,0%.`);
+        alertas.push(`Atención: ${bajaAcreditacion.RegionEtiqueta} registra un porcentaje de acreditación de ${pctValor(bajaAcreditacion.TasaAcreditado)}, bajo el umbral de referencia de 12,0%.`);
     }
     if (altaNoAcreditacion) {
-        alertas.push(`Revisión prioritaria: ${altaNoAcreditacion.RegionEtiqueta} concentra ${((altaNoAcreditacion.NoAcreditado / altaNoAcreditacion.Total) * 100).toFixed(1)}% de personas no acreditadas dentro de su total regional.`);
+        alertas.push(`Revisión prioritaria: ${altaNoAcreditacion.RegionEtiqueta} concentra ${pctValor((altaNoAcreditacion.NoAcreditado / altaNoAcreditacion.Total) * 100)} de personas no acreditadas dentro de su total regional.`);
     }
     if (prevMonthData) {
         const deltaNoVigente = monthData.noVigente - prevMonthData.noVigente;
