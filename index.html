@@ -143,6 +143,11 @@
         .metric-cell { min-width: 190px; }
         .metric-value { font-weight: 700; color: #17396f; }
         .metric-share { margin-top: 4px; font-size: 11px; color: #64748b; line-height: 1.35; }
+        .subfila-institucion td:last-child { text-align: center; }
+        .subfila-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; color: #9aa9bb; }
+        .percent-cell { min-width: 180px; }
+        .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
+        .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
         .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 4px; }
         .footer-item.metodologia { max-width: 760px; }
         .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
@@ -338,7 +343,14 @@
         }
     };
     function obtenerResumenVacio(region, etiquetaRegion) {
-        return { Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, AcreditadoPublico: 0, AcreditadoOtras: 0, NoVigentePublico: 0, NoVigenteOtras: 0, NoAcreditadoPublico: 0, NoAcreditadoOtras: 0, TasaAcreditado: 0, porComuna: [] };
+        return {
+            Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0,
+            Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0,
+            AcreditadoMunicipalidad: 0, AcreditadoSeremi: 0, AcreditadoOtras: 0,
+            NoVigenteMunicipalidad: 0, NoVigenteSeremi: 0, NoVigenteOtras: 0,
+            NoAcreditadoMunicipalidad: 0, NoAcreditadoSeremi: 0, NoAcreditadoOtras: 0,
+            TasaAcreditado: 0, porComuna: []
+        };
     }
     function normalizarInstitucion(valor) {
         const texto = norm(valor);
@@ -361,7 +373,15 @@
                 const institucion = normalizarInstitucion(colDependeDe ? fila[colDependeDe] : "");
                 resumen.total++;
                 if (!resumen.porRegion[region]) {
-                    resumen.porRegion[region] = { Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region), Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, AcreditadoPublico: 0, AcreditadoOtras: 0, NoVigentePublico: 0, NoVigenteOtras: 0, NoAcreditadoPublico: 0, NoAcreditadoOtras: 0, porComuna: {} };
+                    resumen.porRegion[region] = {
+                        Region: region, RegionEtiqueta: ETIQUETAS_REGION[region] || region, OrdenRegion: obtenerOrdenRegion(region),
+                        Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Total: 0,
+                        Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0,
+                        AcreditadoMunicipalidad: 0, AcreditadoSeremi: 0, AcreditadoOtras: 0,
+                        NoVigenteMunicipalidad: 0, NoVigenteSeremi: 0, NoVigenteOtras: 0,
+                        NoAcreditadoMunicipalidad: 0, NoAcreditadoSeremi: 0, NoAcreditadoOtras: 0,
+                        porComuna: {}
+                    };
                 }
                 resumen.porRegion[region].Total++;
                 if (region !== "NIVEL CENTRAL") {
@@ -372,29 +392,39 @@
                 if (estado === "ACREDITADO") {
                     resumen.acreditado++; resumen.porRegion[region].Acreditado++;
                     if (region !== "NIVEL CENTRAL") {
-                        if (institucion === "OTRAS") resumen.porRegion[region].AcreditadoOtras++;
-                        else resumen.porRegion[region].AcreditadoPublico++;
+                        if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].AcreditadoMunicipalidad++;
+                        else if (institucion === "SEREMI") resumen.porRegion[region].AcreditadoSeremi++;
+                        else resumen.porRegion[region].AcreditadoOtras++;
                     }
                 }
                 else if (estado === "NO VIGENTE") {
                     resumen.noVigente++; resumen.porRegion[region].NoVigente++;
                     if (region !== "NIVEL CENTRAL") {
-                        if (institucion === "OTRAS") resumen.porRegion[region].NoVigenteOtras++;
-                        else resumen.porRegion[region].NoVigentePublico++;
+                        if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].NoVigenteMunicipalidad++;
+                        else if (institucion === "SEREMI") resumen.porRegion[region].NoVigenteSeremi++;
+                        else resumen.porRegion[region].NoVigenteOtras++;
                     }
                 }
                 else if (estado === "NO ACREDITADO") {
                     resumen.noAcreditado++; resumen.porRegion[region].NoAcreditado++;
                     if (region !== "NIVEL CENTRAL") {
-                        if (institucion === "OTRAS") resumen.porRegion[region].NoAcreditadoOtras++;
-                        else resumen.porRegion[region].NoAcreditadoPublico++;
+                        if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].NoAcreditadoMunicipalidad++;
+                        else if (institucion === "SEREMI") resumen.porRegion[region].NoAcreditadoSeremi++;
+                        else resumen.porRegion[region].NoAcreditadoOtras++;
                     }
                 }
                 else { resumen.sinEstado++; resumen.porRegion[region].SinEstado++; }
                 if (colComuna) {
                     resumen.hasComunaData = true;
                     if (!resumen.porRegion[region].porComuna[comuna]) {
-                        resumen.porRegion[region].porComuna[comuna] = { Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0, Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0, AcreditadoPublico: 0, AcreditadoOtras: 0, NoVigentePublico: 0, NoVigenteOtras: 0, NoAcreditadoPublico: 0, NoAcreditadoOtras: 0, TasaAcreditado: 0 };
+                        resumen.porRegion[region].porComuna[comuna] = {
+                            Comuna: comuna, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0,
+                            Municipalidad: 0, Seremi: 0, OtrasInstituciones: 0,
+                            AcreditadoMunicipalidad: 0, AcreditadoSeremi: 0, AcreditadoOtras: 0,
+                            NoVigenteMunicipalidad: 0, NoVigenteSeremi: 0, NoVigenteOtras: 0,
+                            NoAcreditadoMunicipalidad: 0, NoAcreditadoSeremi: 0, NoAcreditadoOtras: 0,
+                            TasaAcreditado: 0
+                        };
                     }
                     resumen.porRegion[region].porComuna[comuna].Total++;
                     if (region !== "NIVEL CENTRAL") {
@@ -405,22 +435,25 @@
                     if (estado === "ACREDITADO") {
                         resumen.porRegion[region].porComuna[comuna].Acreditado++;
                         if (region !== "NIVEL CENTRAL") {
-                            if (institucion === "OTRAS") resumen.porRegion[region].porComuna[comuna].AcreditadoOtras++;
-                            else resumen.porRegion[region].porComuna[comuna].AcreditadoPublico++;
+                            if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].porComuna[comuna].AcreditadoMunicipalidad++;
+                            else if (institucion === "SEREMI") resumen.porRegion[region].porComuna[comuna].AcreditadoSeremi++;
+                            else resumen.porRegion[region].porComuna[comuna].AcreditadoOtras++;
                         }
                     }
                     else if (estado === "NO VIGENTE") {
                         resumen.porRegion[region].porComuna[comuna].NoVigente++;
                         if (region !== "NIVEL CENTRAL") {
-                            if (institucion === "OTRAS") resumen.porRegion[region].porComuna[comuna].NoVigenteOtras++;
-                            else resumen.porRegion[region].porComuna[comuna].NoVigentePublico++;
+                            if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].porComuna[comuna].NoVigenteMunicipalidad++;
+                            else if (institucion === "SEREMI") resumen.porRegion[region].porComuna[comuna].NoVigenteSeremi++;
+                            else resumen.porRegion[region].porComuna[comuna].NoVigenteOtras++;
                         }
                     }
                     else if (estado === "NO ACREDITADO") {
                         resumen.porRegion[region].porComuna[comuna].NoAcreditado++;
                         if (region !== "NIVEL CENTRAL") {
-                            if (institucion === "OTRAS") resumen.porRegion[region].porComuna[comuna].NoAcreditadoOtras++;
-                            else resumen.porRegion[region].porComuna[comuna].NoAcreditadoPublico++;
+                            if (institucion === "MUNICIPALIDAD") resumen.porRegion[region].porComuna[comuna].NoAcreditadoMunicipalidad++;
+                            else if (institucion === "SEREMI") resumen.porRegion[region].porComuna[comuna].NoAcreditadoSeremi++;
+                            else resumen.porRegion[region].porComuna[comuna].NoAcreditadoOtras++;
                         }
                     }
                     else resumen.porRegion[region].porComuna[comuna].SinEstado++;
@@ -495,15 +528,25 @@
     }
     function renderSubfilasInstitucion(item, esNivelCentral) {
         if (esNivelCentral) return "";
-        const totalPublico = item.AcreditadoPublico + item.NoVigentePublico + item.NoAcreditadoPublico;
+        const totalMunicipalidad = item.AcreditadoMunicipalidad + item.NoVigenteMunicipalidad + item.NoAcreditadoMunicipalidad;
+        const totalSeremi = item.AcreditadoSeremi + item.NoVigenteSeremi + item.NoAcreditadoSeremi;
         const totalOtras = item.AcreditadoOtras + item.NoVigenteOtras + item.NoAcreditadoOtras;
         return `
             <tr class="subfila-institucion">
-                <td>SEREMI y Municipalidad</td>
-                <td>${fmt(item.AcreditadoPublico)}</td>
-                <td>${fmt(item.NoVigentePublico)}</td>
-                <td>${fmt(item.NoAcreditadoPublico)}</td>
-                <td>${fmt(totalPublico)}</td>
+                <td>Municipalidad</td>
+                <td>${fmt(item.AcreditadoMunicipalidad)}</td>
+                <td>${fmt(item.NoVigenteMunicipalidad)}</td>
+                <td>${fmt(item.NoAcreditadoMunicipalidad)}</td>
+                <td>${fmt(totalMunicipalidad)}</td>
+                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
+            </tr>
+            <tr class="subfila-institucion">
+                <td>SEREMI</td>
+                <td>${fmt(item.AcreditadoSeremi)}</td>
+                <td>${fmt(item.NoVigenteSeremi)}</td>
+                <td>${fmt(item.NoAcreditadoSeremi)}</td>
+                <td>${fmt(totalSeremi)}</td>
+                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
             </tr>
             <tr class="subfila-institucion">
                 <td>Otras instituciones</td>
@@ -511,6 +554,7 @@
                 <td>${fmt(item.NoVigenteOtras)}</td>
                 <td>${fmt(item.NoAcreditadoOtras)}</td>
                 <td>${fmt(totalOtras)}</td>
+                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
             </tr>
         `;
     }
@@ -545,15 +589,18 @@
             `${(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0).toFixed(1)}%`,
             fmt(r.NoVigente),
             fmt(r.NoAcreditado),
-            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoPublico),
-            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigentePublico),
-            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoPublico),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoMunicipalidad),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigenteMunicipalidad),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoMunicipalidad),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoSeremi),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigenteSeremi),
+            r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoSeremi),
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoOtras),
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigenteOtras),
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoOtras),
             fmt(r.Total)
         ]);
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "% del acreditado nacional", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "% del acreditado nacional", "No vigente", "No acreditado", "Municipalidad Acreditados", "Municipalidad No vigentes", "Municipalidad No acreditados", "SEREMI Acreditados", "SEREMI No vigentes", "SEREMI No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
         cerrarMenuExportacion();
     }
     function exportarComunalNacional() {
@@ -567,16 +614,19 @@
                 `${(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0).toFixed(1)}%`,
                 fmt(c.NoVigente),
                 fmt(c.NoAcreditado),
-                c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoPublico),
-                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigentePublico),
-                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoPublico),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoMunicipalidad),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigenteMunicipalidad),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoMunicipalidad),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoSeremi),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigenteSeremi),
+                c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoSeremi),
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoOtras),
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigenteOtras),
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoOtras),
                 fmt(c.Total)
             ])
         );
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "% del acreditado regional", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "% del acreditado regional", "No vigente", "No acreditado", "Municipalidad Acreditados", "Municipalidad No vigentes", "Municipalidad No acreditados", "SEREMI Acreditados", "SEREMI No vigentes", "SEREMI No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
         cerrarMenuExportacion();
     }
     function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
@@ -608,6 +658,7 @@
                     <td>${fmt(c.NoVigente)}</td>
                     <td>${fmt(c.NoAcreditado)}</td>
                     <td>${fmt(c.Total)}</td>
+                    <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(c.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
                 ${renderSubfilasInstitucion(c, false).replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
             `).join("");
@@ -619,9 +670,13 @@
                     <div class="modal-stat"><div class="modal-stat-label">N° de personas no acreditadas</div><div class="modal-stat-value">${fmt(regionData.NoAcreditado)}</div></div>
                 </div>
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
+                    <div class="section-note" style="padding:0 0 10px 0;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div>
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table>
-                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th></tr></thead>
+                        <thead>
+                            <tr><th rowspan="2">Comuna</th><th rowspan="2">Acreditado</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th><th rowspan="2">% acreditado</th></tr>
+                            <tr><th>No vigente</th><th>No acreditado</th></tr>
+                        </thead>
                         <tbody>${filasComuna}</tbody>
                     </table>
                 </div>`}
@@ -650,6 +705,7 @@
                 <td>${fmt(r.NoVigente)}</td>
                 <td>${fmt(r.NoAcreditado)}</td>
                 <td>${fmt(r.Total)}</td>
+                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
             ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL").replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
         `).join("");
@@ -660,6 +716,7 @@
                 <td><strong>${fmt(monthData.noVigente)}</strong></td>
                 <td><strong>${fmt(monthData.noAcreditado)}</strong></td>
                 <td><strong>${fmt(monthData.total)}</strong></td>
+                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0, 100).toFixed(1)}%"></div></div><strong>${badgeTasa(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0)}</strong></td>
             </tr>
         `;
         document.getElementById("content").innerHTML = `
@@ -691,7 +748,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2">Acreditado</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th><th rowspan="2">% acreditado</th></tr><tr><th>No vigente</th><th>No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
