@@ -117,7 +117,8 @@ input[type="file"] { display: none; }
 .context-list span { font-size: 11px; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
 .context-list strong { font-size: 13px; color: #17396f; line-height: 1.35; }
 .context-date { margin-top: 10px; font-size: 11px; color: #8a99ad; }
-.toolbar { position: sticky; top: 10px; z-index: 90; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 14px; margin-bottom: 14px; background: rgba(255,255,255,0.96); border-bottom: 1px solid #dbe5f3; box-shadow: 0 8px 18px rgba(26, 64, 128, 0.08); backdrop-filter: blur(8px); }
+.toolbar { position: sticky; top: 10px; z-index: 90; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 14px; margin-bottom: 14px; background: linear-gradient(180deg, rgba(248, 251, 255, 0.98) 0%, rgba(238, 244, 251, 0.98) 100%); border: 1px solid #cbdced; border-top: 3px solid var(--azul-sise); box-shadow: 0 12px 26px rgba(26, 64, 128, 0.13); backdrop-filter: blur(8px); }
+.toolbar .toolbar-title { color: #17396f; margin-bottom: 5px; }
 .toolbar-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .export-wrap { position: relative; z-index: 100; }
 .export-btn { background: var(--azul-sise); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; padding: 10px 14px; font-size: 13px; position: relative; overflow: hidden; }
@@ -127,7 +128,7 @@ input[type="file"] { display: none; }
 .export-option:hover { background: #f3f6fb; }
 .export-option:disabled { color: #94a3b8; cursor: not-allowed; }
 .export-hint { padding: 8px 12px 4px; font-size: 12px; color: #64748b; line-height: 1.4; }
-.month-group { display: flex; flex-wrap: wrap; gap: 6px; padding: 3px; border: 1px solid #d9e3f1; border-radius: 10px; background: #f5f8fc; }
+.month-group { display: flex; flex-wrap: wrap; gap: 6px; padding: 3px; border: 1px solid #cbdced; border-radius: 10px; background: rgba(255, 255, 255, 0.78); box-shadow: inset 0 1px 0 rgba(255,255,255,0.86); }
 .month-btn { padding: 8px 13px; background: transparent; color: var(--azul-sise); border: 1px solid transparent; border-radius: 8px; font-size: 13px; }
 .month-btn.active { background: #17396f; color: white; border-color: #17396f; box-shadow: 0 8px 18px rgba(26, 64, 128, 0.18); transform: translateY(-1px); }
 .toolbar-meta, .section-note, .footer-item, .kpi-percent { font-size: 13px; color: #64748b; line-height: 1.5; }
