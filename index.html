@@ -133,17 +133,18 @@
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
+        tbody td:not(:first-child) { text-align: right; }
         tr:hover td { background: #f7faff; }
         tr.region-group-par td { background: #ffffff; }
         tr.region-group-impar td { background: #f7fafd; }
         .region-cell-button { background: none; border: none; padding: 2px 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; transition: transform 0.18s ease, color 0.18s ease, letter-spacing 0.18s ease; }
         .region-cell-button:hover { text-decoration: none; color: #102f5d; transform: translateX(4px); letter-spacing: 0.15px; }
-        .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; }
+        .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; vertical-align: top; }
         .subfila-institucion td:first-child { font-weight: 400; color: #748396; }
         .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
         .metric-cell { min-width: 190px; }
         .metric-value { font-weight: 700; color: #17396f; }
-        .metric-share { margin-top: 4px; font-size: 11px; color: #64748b; line-height: 1.35; }
+        .metric-share { margin-top: 4px; font-size: 11px; color: #64748b; line-height: 1.35; white-space: nowrap; }
         .subfila-institucion td:last-child { text-align: center; }
         .subfila-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; color: #9aa9bb; }
         .percent-cell { min-width: 180px; }
@@ -527,7 +528,7 @@
         if (esNivelCentral) return "";
         const textoParticipacion = (valor) => {
             const porcentaje = totalAcreditadoReferencia > 0 ? ((valor / totalAcreditadoReferencia) * 100) : 0;
-            return `${porcentaje.toFixed(1)}% respecto al total ${etiquetaReferencia} de personas acreditadas`;
+            return `${porcentaje.toFixed(1)}% del ${etiquetaReferencia}`;
         };
         const totalMunicipalidad = item.AcreditadoMunicipalidad + item.NoVigenteMunicipalidad + item.NoAcreditadoMunicipalidad;
         const totalSeremi = item.AcreditadoSeremi + item.NoVigenteSeremi + item.NoAcreditadoSeremi;
@@ -708,7 +709,7 @@
                 <td>${fmt(r.NoAcreditado)}</td>
                 <td>${fmt(r.Total)}</td>
             </tr>
-                ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL", monthData.acreditado, "nacional").replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
+                ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL", r.Acreditado, "regional").replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
         `).join("");
         const filaTotales = `
             <tr>
