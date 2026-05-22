@@ -12,8 +12,11 @@ function renderSubfilasInstitucion(item, esNivelCentral, totalAcreditadoReferenc
     const totalSeremi = item.AcreditadoSeremi + item.NoVigenteSeremi + item.NoAcreditadoSeremi;
     const totalOtras = item.AcreditadoOtras + item.NoVigenteOtras + item.NoAcreditadoOtras;
     return `
+        <tr class="subfila-note">
+            <td colspan="6">Detalle institucional, porcentajes respecto al acreditado ${etiquetaReferencia}</td>
+        </tr>
         <tr class="subfila-institucion">
-            <td><div>Municipalidad</div><div class="institution-group-note">% sobre acreditado ${etiquetaReferencia}</div></td>
+            <td>Municipalidad</td>
             <td class="cell-acreditado">${fmt(item.AcreditadoMunicipalidad)}</td>
             <td class="percent-cell cell-porcentaje">${textoParticipacion(item.AcreditadoMunicipalidad)}</td>
             <td class="cell-brecha cell-novigente">${fmt(item.NoVigenteMunicipalidad)}</td>
@@ -83,7 +86,15 @@ function abrirDetalleRegion(region) {
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-note" style="padding:0 0 10px 0;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div>
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
-                    <table>
+                    <table class="fixed-data-table">
+                        <colgroup>
+                            <col class="col-territorio">
+                            <col class="col-data">
+                            <col class="col-data">
+                            <col class="col-data">
+                            <col class="col-data">
+                            <col class="col-data">
+                        </colgroup>
                         <thead>
                             <tr><th rowspan="2">Comuna</th><th rowspan="2" class="th-acreditado">Personas acreditadas</th><th rowspan="2" class="percent-header th-porcentaje">% personas acreditadas respecto al total regional</th><th colspan="2" class="th-brecha-group">Personas sin acreditación vigente</th><th rowspan="2" class="th-total">Total</th></tr>
                             <tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">No acreditado</th></tr>
@@ -169,7 +180,7 @@ function renderDashboard() {
             <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
         </div>
         <div class="mid-section">
-            <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2" class="th-acreditado">Personas acreditadas</th><th rowspan="2" class="percent-header th-porcentaje">% personas acreditadas respecto al total nacional</th><th colspan="2" class="th-brecha-group">Personas sin acreditación vigente</th><th rowspan="2" class="th-total">Total</th></tr><tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+            <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table class="fixed-data-table"><colgroup><col class="col-territorio"><col class="col-data"><col class="col-data"><col class="col-data"><col class="col-data"><col class="col-data"></colgroup><thead><tr><th rowspan="2">Región</th><th rowspan="2" class="th-acreditado">Personas acreditadas</th><th rowspan="2" class="percent-header th-porcentaje">% personas acreditadas respecto al total nacional</th><th colspan="2" class="th-brecha-group">Personas sin acreditación vigente</th><th rowspan="2" class="th-total">Total</th></tr><tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
             <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
         </div>
         <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
