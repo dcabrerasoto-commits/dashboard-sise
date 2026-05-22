@@ -90,13 +90,12 @@ function abrirDetalleRegion(region) {
         `).join("");
         contenedor.innerHTML = `
             <div class="modal-grid">
-                <div class="modal-stat"><div class="modal-stat-label">N° de personas registradas</div><div class="modal-stat-value">${fmt(regionData.Total)}</div></div>
-                <div class="modal-stat"><div class="modal-stat-label">N° de personas acreditadas</div><div class="modal-stat-value">${fmt(regionData.Acreditado)}</div></div>
-                <div class="modal-stat"><div class="modal-stat-label">N° de personas no vigentes</div><div class="modal-stat-value">${fmt(regionData.NoVigente)}</div></div>
-                <div class="modal-stat"><div class="modal-stat-label">N° de personas no acreditadas</div><div class="modal-stat-value">${fmt(regionData.NoAcreditado)}</div></div>
+                <div class="modal-stat modal-stat-azul"><div class="modal-stat-label">N° de personas registradas</div><div class="modal-stat-value">${fmt(regionData.Total)}</div></div>
+                <div class="modal-stat modal-stat-verde"><div class="modal-stat-label">N° de personas acreditadas</div><div class="modal-stat-value">${fmt(regionData.Acreditado)}</div></div>
+                <div class="modal-stat modal-stat-ambar"><div class="modal-stat-label">N° de personas no vigentes</div><div class="modal-stat-value">${fmt(regionData.NoVigente)}</div></div>
+                <div class="modal-stat modal-stat-rojo"><div class="modal-stat-label">N° de personas no acreditadas</div><div class="modal-stat-value">${fmt(regionData.NoAcreditado)}</div></div>
             </div>
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
-                    <div class="section-note" style="padding:0 0 10px 0;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div>
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table class="fixed-data-table">
                         <colgroup>
