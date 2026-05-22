@@ -117,7 +117,7 @@ input[type="file"] { display: none; }
 .context-list span { font-size: 11px; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; }
 .context-list strong { font-size: 13px; color: #17396f; line-height: 1.35; }
 .context-date { margin-top: 10px; font-size: 11px; color: #8a99ad; }
-.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; margin-bottom: 14px; }
+.toolbar { position: sticky; top: 10px; z-index: 90; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 14px; margin-bottom: 14px; background: rgba(255,255,255,0.96); border-bottom: 1px solid #dbe5f3; box-shadow: 0 8px 18px rgba(26, 64, 128, 0.08); backdrop-filter: blur(8px); }
 .toolbar-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .export-wrap { position: relative; z-index: 100; }
 .export-btn { background: var(--azul-sise); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; padding: 10px 14px; font-size: 13px; position: relative; overflow: hidden; }
@@ -212,8 +212,11 @@ tr.region-group-impar td { background: #f7fafd; }
 .footer-item.metodologia { max-width: 760px; }
 .metodologia-card { padding-top: 14px; padding-bottom: 14px; }
 .method-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 8px; }
+.method-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .method-item { background: #f8fbff; border: 1px solid #e1e8f2; border-radius: 8px; padding: 9px 11px; font-size: 12px; line-height: 1.4; color: #5f6f86; }
 .method-item strong { display: block; color: #17396f; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+.method-item span { display: block; }
+.method-item span + span { margin-top: 5px; }
 .method-wide { grid-column: span 2; }
 .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
 .modal-backdrop.visible { display: flex; }
@@ -247,4 +250,4 @@ tr.region-group-impar td { background: #f7fafd; }
 }
 @media (max-width: 1100px) { .charts-section, .mid-section, .executive-band, .footer-grid { grid-template-columns: 1fr; } .toolbar-meta { text-align: left; } }
 @media (max-width: 760px) { body { padding: 12px; } header { padding: 24px 18px 22px; } .context-value { font-size: 14px; } .executive-text { font-size: 17px; } .kpi-value { font-size: 30px; } .context-list div { grid-template-columns: 1fr; gap: 2px; } }
-@media (max-width: 760px) { .method-wide { grid-column: auto; } }
+@media (max-width: 760px) { .method-wide { grid-column: auto; } .method-grid-two { grid-template-columns: 1fr; } .month-group { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; } .month-btn { flex: 0 0 auto; } }
