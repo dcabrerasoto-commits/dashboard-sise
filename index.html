@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard SISE 2026</title>
-    <link rel="stylesheet" href="styles.css?v=20260522-toolbar-azul-oscuro">
+    <link rel="stylesheet" href="styles.css?v=20260522-toolbar-mobile-ok">
     <style>
         .toolbar {
+            top: 8px !important;
+            z-index: 90 !important;
+            margin-bottom: 16px !important;
             background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%) !important;
             border: 1px solid #17396f !important;
             border-top: 3px solid #f59e0b !important;
@@ -64,6 +67,54 @@
             z-index: auto !important;
             background: #17396f;
             background-clip: padding-box;
+        }
+        @media (max-width: 760px) {
+            .toolbar {
+                top: 6px !important;
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 8px !important;
+                padding: 8px 10px !important;
+                border-radius: 10px !important;
+                margin-bottom: 12px !important;
+            }
+            .toolbar .toolbar-title {
+                margin-bottom: 4px !important;
+                font-size: 10px !important;
+                letter-spacing: 0.7px !important;
+            }
+            .toolbar-actions {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 8px !important;
+            }
+            .toolbar-meta {
+                display: none !important;
+            }
+            .month-group {
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                max-width: 100% !important;
+                padding: 2px !important;
+                gap: 4px !important;
+                scrollbar-width: thin;
+            }
+            .month-btn {
+                flex: 0 0 auto !important;
+                padding: 7px 10px !important;
+                font-size: 12px !important;
+            }
+            .export-btn {
+                padding: 8px 10px !important;
+                font-size: 12px !important;
+                white-space: nowrap !important;
+            }
+            .export-menu {
+                right: 0 !important;
+                min-width: min(290px, calc(100vw - 32px)) !important;
+            }
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
