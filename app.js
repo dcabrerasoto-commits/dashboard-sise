@@ -128,7 +128,7 @@ function abrirDetalleRegion(region) {
             </div>
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
-                    <table class="fixed-data-table">
+                    <table class="fixed-data-table modal-data-table">
                         <colgroup>
                             <col class="col-territorio">
                             <col class="col-data">
