@@ -1,5 +1,6 @@
 function slug(texto) { return String(texto || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase(); }
 function escaparHtml(valor) { return String(valor ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function porcentajeExport(valor) { return `${Number(valor || 0).toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`; }
 function descargarExcel(nombre, titulo, headers, filas) {
     const widths = headers.map((header, index) => {
         const maxData = Math.max(header.length, ...filas.map((fila) => String(fila[index] ?? "").length));
@@ -22,7 +23,7 @@ function exportarRegional() {
     const filas = monthData.porRegion.map((r) => [
         r.RegionEtiqueta,
         fmt(r.Acreditado),
-        `${(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0).toFixed(1)}%`,
+        porcentajeExport(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0),
         fmt(r.NoVigente),
         fmt(r.NoAcreditado),
         r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoMunicipalidad),
@@ -47,7 +48,7 @@ function exportarComunalNacional() {
             regionData.RegionEtiqueta,
             c.Comuna,
             fmt(c.Acreditado),
-            `${(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0).toFixed(1)}%`,
+            porcentajeExport(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0),
             fmt(c.NoVigente),
             fmt(c.NoAcreditado),
             c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoMunicipalidad),
