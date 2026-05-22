@@ -29,6 +29,7 @@ function renderTarjetasHallazgos(hallazgos) {
     }).join("");
 }
 function obtenerTipoAlerta(item) {
+    if (typeof item === "object" && item.etiqueta) return item.etiqueta;
     if (item.startsWith("Seguimiento sugerido")) return "Seguimiento";
     if (item.startsWith("Atención")) return "Atención";
     if (item.startsWith("Revisión prioritaria")) return "Revisión prioritaria";
@@ -39,6 +40,9 @@ function renderTarjetasAlertas(alertas) {
     return alertas.map((item) => {
         const tipo = obtenerTipoAlerta(item);
         const clase = tipo === "Atención" ? "alerta-atencion" : (tipo === "Revisión prioritaria" ? "alerta-revision" : "alerta-seguimiento");
+        if (typeof item === "object") {
+            return `<div class="insight-item alert-item ${clase}"><div class="alert-label">${tipo}</div><div class="insight-main">${mesNombrePropioHtml(item.titulo || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.dato || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.lectura || "")}</div>${item.base ? `<div class="insight-base">${item.base}</div>` : ""}</div>`;
+        }
         return `<div class="insight-item alert-item ${clase}"><div class="alert-label">${tipo}</div><div class="insight-copy">${mesNombrePropioHtml(item)}</div></div>`;
     }).join("");
 }

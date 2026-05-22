@@ -270,30 +270,34 @@ function obtenerHallazgos(monthData, prevMonthData) {
 function obtenerAlertas(monthData, prevMonthData) {
     const alertas = [];
     const regiones = monthData.porRegion.filter((r) => r.Total > 0 && r.Region !== "NIVEL CENTRAL");
-    const altaNoVigencia = [...regiones].filter((r) => r.NoVigente / r.Total >= 0.45).sort((a, b) => (b.NoVigente / b.Total) - (a.NoVigente / a.Total))[0];
-    const bajaAcreditacion = [...regiones].filter((r) => r.Total >= 200 && r.TasaAcreditado < 12).sort((a, b) => a.TasaAcreditado - b.TasaAcreditado)[0];
-    const altaNoAcreditacion = [...regiones].filter((r) => r.NoAcreditado / r.Total >= 0.35).sort((a, b) => (b.NoAcreditado / b.Total) - (a.NoAcreditado / a.Total))[0];
-    if (altaNoVigencia) {
-        alertas.push(`Seguimiento sugerido: ${altaNoVigencia.RegionEtiqueta} registra ${fmt(altaNoVigencia.NoVigente)} personas no vigentes. Este resultado permite priorizar la revisión territorial de vigencia y actualización.`);
+    const mayorNoVigencia = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
+    const mayorNoAcreditacion = [...regiones].sort((a, b) => b.NoAcreditado - a.NoAcreditado)[0];
+    const mayorBrecha = [...regiones].sort((a, b) => (b.NoVigente + b.NoAcreditado) - (a.NoVigente + a.NoAcreditado))[0];
+    const mayorRegistros = [...regiones].sort((a, b) => b.Total - a.Total)[0];
+    if (mayorNoVigencia && mayorNoVigencia.NoVigente > 0) {
+        alertas.push({ etiqueta: "Seguimiento", titulo: "Seguimiento de vigencia", dato: `${mayorNoVigencia.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(mayorNoVigencia.NoVigente)} registros.`, lectura: "Este resultado permite priorizar revisión de vigencia, actualización o seguimiento territorial." });
     }
-    if (bajaAcreditacion) {
-        alertas.push(`Atención: ${bajaAcreditacion.RegionEtiqueta} registra ${fmt(bajaAcreditacion.Acreditado)} personas acreditadas entre ${fmt(bajaAcreditacion.Total)} registros. Este punto requiere seguimiento del proceso de acreditación regional.`);
+    if (mayorNoAcreditacion && mayorNoAcreditacion.NoAcreditado > 0) {
+        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Brecha de acreditación", dato: `${mayorNoAcreditacion.RegionEtiqueta} registra el mayor número de personas no acreditadas, con ${fmt(mayorNoAcreditacion.NoAcreditado)} registros.`, lectura: "Este dato permite identificar territorios donde podría requerirse mayor seguimiento del proceso de acreditación." });
     }
-    if (altaNoAcreditacion) {
-        alertas.push(`Revisión prioritaria: ${altaNoAcreditacion.RegionEtiqueta} registra ${fmt(altaNoAcreditacion.NoAcreditado)} personas no acreditadas. Este dato permite orientar la revisión territorial de casos pendientes de acreditación.`);
+    if (mayorBrecha && (mayorBrecha.NoVigente + mayorBrecha.NoAcreditado) > 0) {
+        alertas.push({ etiqueta: "Atención", titulo: "Brecha territorial acumulada", dato: `${mayorBrecha.RegionEtiqueta} concentra ${fmt(mayorBrecha.NoVigente + mayorBrecha.NoAcreditado)} personas sin acreditación vigente o no acreditadas.`, lectura: "Este volumen permite orientar acciones de revisión y apoyo operativo.", base: "Base de cálculo: No vigente + No acreditado." });
+    }
+    if (mayorRegistros && mayorRegistros.Total > 0) {
+        alertas.push({ etiqueta: "Seguimiento", titulo: "Concentración de registros", dato: `${mayorRegistros.RegionEtiqueta} concentra ${fmt(mayorRegistros.Total)} registros en el mes seleccionado.`, lectura: "Este volumen puede requerir seguimiento proporcional a la carga territorial registrada." });
     }
     if (prevMonthData) {
         const deltaNoVigente = monthData.noVigente - prevMonthData.noVigente;
-        if (deltaNoVigente > 500) {
-            alertas.push(`Variación mensual relevante: el número de personas no vigentes aumenta en ${fmt(deltaNoVigente)} respecto de ${prevMonthData.label}.`);
-        }
         const deltaAcreditado = monthData.acreditado - prevMonthData.acreditado;
-        if (deltaAcreditado < -500) {
-            alertas.push(`Variación mensual relevante: el número de personas acreditadas disminuye en ${fmt(deltaAcreditado)} respecto de ${prevMonthData.label}.`);
+        if (deltaAcreditado !== 0) {
+            alertas.push({ etiqueta: "Seguimiento", titulo: "Cambio mensual relevante", dato: `El número de personas acreditadas ${deltaAcreditado > 0 ? "aumenta" : "disminuye"} en ${fmt(Math.abs(deltaAcreditado))} respecto de ${prevMonthData.label}.`, lectura: "Este cambio permite observar avance, retroceso o estabilidad del proceso entre períodos." });
+        }
+        if (deltaNoVigente !== 0 && alertas.length < 6) {
+            alertas.push({ etiqueta: "Seguimiento", titulo: "Variación de no vigencia", dato: `El número de personas no vigentes ${deltaNoVigente > 0 ? "aumenta" : "disminuye"} en ${fmt(Math.abs(deltaNoVigente))} respecto de ${prevMonthData.label}.`, lectura: "Este cambio permite focalizar el seguimiento de vigencia entre períodos." });
         }
     }
     if (alertas.length === 0) {
-        alertas.push("No se detectan alertas prioritarias para el mes seleccionado según los umbrales definidos.");
+        alertas.push({ etiqueta: "Seguimiento", titulo: "Sin puntos prioritarios", dato: "No se detectan puntos prioritarios para el mes seleccionado según los datos visibles.", lectura: "Mantener seguimiento regular del proceso." });
     }
-    return alertas;
+    return alertas.slice(0, 6);
 }
