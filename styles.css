@@ -164,6 +164,7 @@ input[type="file"] { display: none; }
 .insight-kicker, .alert-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.7px; color: var(--azul-secundario); margin-bottom: 3px; }
 .insight-main { font-size: 13px; font-weight: 750; color: #17396f; margin-bottom: 3px; }
 .insight-copy { color: #475569; }
+.insight-base { margin-top: 4px; font-size: 11px; color: #748396; }
 .alert-item { border-left-color: #9fb7d8; }
 .alerta-atencion { border-left-color: #d6a45d; }
 .alerta-revision { border-left-color: #bf7569; }
