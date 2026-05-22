@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard SISE 2026</title>
-    <link rel="stylesheet" href="styles.css?v=20260522-toolbar-azul-2">
+    <link rel="stylesheet" href="styles.css?v=20260522-toolbar-azul-3">
     <style>
         .toolbar {
             background: linear-gradient(180deg, rgba(224, 235, 249, 0.99) 0%, rgba(203, 220, 237, 0.99) 100%) !important;
@@ -15,6 +15,29 @@
         .month-group {
             background: rgba(255, 255, 255, 0.92) !important;
             border-color: #adc4dd !important;
+        }
+        .fixed-data-table thead th {
+            position: sticky;
+            top: 78px;
+            z-index: 35;
+            background: #17396f;
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.16);
+        }
+        .fixed-data-table thead tr:nth-child(2) th {
+            top: 122px;
+            z-index: 34;
+        }
+        .modal-card .fixed-data-table thead th {
+            top: 0;
+            z-index: 55;
+        }
+        .modal-card .fixed-data-table thead tr:nth-child(2) th {
+            top: 43px;
+            z-index: 54;
+        }
+        .modal-card .fixed-data-table thead th,
+        .table-section .fixed-data-table thead th {
+            background-clip: padding-box;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
