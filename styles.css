@@ -168,6 +168,8 @@ table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13
 .fixed-data-table { table-layout: fixed; }
 .col-territorio { width: 14%; }
 .col-data { width: 17.2%; }
+.col-porcentaje { width: 21%; }
+.col-estrecha { width: 15.3%; }
 th { background: #17396f; color: white; padding: 9px 10px; text-align: left; font-weight: 700; font-size: 12px; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.18); }
 th:not(:first-child), td:not(:first-child) { text-align: center; }
 td { padding: 7px 10px; border-bottom: 1px solid #edf1f6; vertical-align: middle; white-space: nowrap; }
