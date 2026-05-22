@@ -1,9 +1,21 @@
-function badgeTasa(valor) { if (valor >= 20) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 1) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
+function porcentajeEs(valor) { return `${valor.toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`; }
+function porcentajeRatioEs(valor, total) { return porcentajeEs(total > 0 ? (valor / total) * 100 : 0); }
+function badgeTasa(valor) { return `<span class="badge badge-principal">${porcentajeEs(valor)}</span>`; }
 function textoPorcentaje(valor, referencia) {
     return `<div class="percent-text">${badgeTasa(valor)}<span class="percent-note">del ${referencia}</span></div>`;
 }
 function textoPorcentajeSimple(valor) {
-    return `<div class="percent-text percent-text-simple">${badgeTasa(valor)}</div>`;
+    return `<div class="percent-text percent-text-simple">${porcentajeEs(valor)}</div>`;
+}
+function mesNombrePropioText(texto) {
+    const meses = ["enero", "febrero", "marzo", "abril"];
+    return String(texto).replace(/\b(enero|febrero|marzo|abril)\b/gi, (m) => {
+        const mes = meses.find((item) => item === m.toLowerCase());
+        return mes ? `${mes.charAt(0).toUpperCase()}${mes.slice(1)}` : m;
+    });
+}
+function mesNombrePropioHtml(texto) {
+    return mesNombrePropioText(texto).replace(/\b(Enero|Febrero|Marzo|Abril)\b/g, "<strong>$1</strong>");
 }
 function renderSubfilasInstitucion(item, esNivelCentral, totalAcreditadoReferencia, etiquetaReferencia) {
     if (esNivelCentral) return "";
@@ -41,7 +53,7 @@ function renderSubfilasInstitucion(item, esNivelCentral, totalAcreditadoReferenc
         </tr>
     `;
 }
-function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mes.label}</button>`).join(""); }
+function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mesNombrePropioText(mes.label)}</button>`).join(""); }
 function obtenerMesActual() {
     return dashboardData && dashboardData.monthly ? dashboardData.monthly[currentMonthIndex] : null;
 }
@@ -53,7 +65,7 @@ function abrirDetalleRegion(region) {
     regionSeleccionada = regionData.Region;
     const esNivelCentral = regionData.Region === "NIVEL CENTRAL";
     document.getElementById("comunaModalTitle").textContent = regionData.RegionEtiqueta;
-    const subtituloBase = `Mes visualizado: ${monthData.label}.`;
+    const subtituloBase = `Mes visualizado: ${mesNombrePropioText(monthData.label)}.`;
     const encabezado = document.getElementById("comunaModalSectionTitle");
     if (encabezado) encabezado.textContent = esNivelCentral ? "Resumen del nivel central" : "Desglose por comuna";
     document.getElementById("comunaModalSubtitle").textContent = esNivelCentral
@@ -137,7 +149,7 @@ function renderDashboard() {
         <tr>
             <td><strong>Total</strong></td>
             <td class="cell-acreditado"><strong>${fmt(monthData.acreditado)}</strong></td>
-            <td class="percent-cell cell-porcentaje">${textoPorcentaje(100, "nacional")}</td>
+            <td class="percent-cell cell-porcentaje">${textoPorcentajeSimple(100)}</td>
             <td class="cell-brecha cell-novigente"><strong>${fmt(monthData.noVigente)}</strong></td>
             <td class="cell-brecha cell-noacreditado"><strong>${fmt(monthData.noAcreditado)}</strong></td>
             <td class="cell-total"><strong>${fmt(monthData.total)}</strong></td>
@@ -145,15 +157,9 @@ function renderDashboard() {
     `;
     document.getElementById("content").innerHTML = `
         <div class="dashboard-shell">
-        <div class="context-strip panel">
-            <div class="context-chip"><span class="context-label">Mes seleccionado</span><strong class="context-value">${monthData.label}</strong></div>
-            <div class="context-chip"><span class="context-label">Fecha de actualización</span><strong class="context-value">${dashboardData.fechaCarga}</strong></div>
-            <div class="context-chip"><span class="context-label">Fuente</span><strong class="context-value">Sistema de Información Social en Emergencias</strong></div>
-            <div class="context-chip"><span class="context-label">Total de registros del mes</span><strong class="context-value">${fmt(monthData.total)}</strong></div>
-        </div>
         <div class="executive-band">
-            <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${hallazgos[0]}</div><div class="executive-support">La lectura resume el estado de acreditación del mes seleccionado y facilita la comparación con el período inmediatamente anterior.</div></div>
-            <div class="panel executive-side"><div class="executive-title">Contexto del corte</div><div class="executive-text">Mes visualizado: <strong>${monthData.label}</strong><br>N° de registros: <strong>${fmt(monthData.total)}</strong><br>Comparación: <strong>${prevMonthData ? prevMonthData.label : "Sin mes previo"}</strong></div></div>
+            <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${mesNombrePropioHtml(hallazgos[0])}</div><div class="executive-support">La lectura resume el estado de acreditación del mes seleccionado y facilita la comparación con el período inmediatamente anterior.</div></div>
+            <div class="panel executive-side"><div class="executive-title">Contexto</div><div class="executive-text">Mes visualizado: <strong>${mesNombrePropioText(monthData.label)}</strong><br>Fecha de actualización: <strong>${dashboardData.fechaCarga}</strong><br>Fuente: <strong>Sistema de Información Social en Emergencias</strong><br>N° de registros: <strong>${fmt(monthData.total)}</strong><br>Comparación: <strong>${prevMonthData ? mesNombrePropioText(prevMonthData.label) : "Sin mes previo"}</strong></div><div class="definitions-compact"><strong>Acreditado:</strong> persona con acreditación vigente. <strong>No vigente:</strong> persona acreditada en períodos anteriores, pero sin vigencia actual. <strong>No acreditado:</strong> persona sin acreditación vigente y sin registro de acreditación previa.</div></div>
         </div>
         <div class="panel toolbar">
             <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
@@ -170,10 +176,10 @@ function renderDashboard() {
         </div>
         <div class="kpi-section">
             <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN únicos de los meses consolidados.</div></div>
-            <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${pct(monthData.acreditado, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Personas con acreditación vigente en el mes visualizado.</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
-            <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${pct(monthData.noVigente, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
-            <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${pct(monthData.noAcreditado, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Personas sin acreditación vigente y sin registro de acreditación previa.</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
-            <div class="kpi-card brecha"><div class="kpi-label">N° de personas con brecha de acreditación</div><div class="kpi-value">${fmt(brechaActual)}</div><div class="kpi-percent">${pct(brechaActual, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Corresponde a la suma de personas no vigentes y no acreditadas del mes.</div><div class="kpi-delta ${deltaBrecha.className}">${deltaBrecha.label}</div></div>
+            <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.acreditado, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">Personas con acreditación vigente en el mes visualizado.</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
+            <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.noVigente, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">Personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
+            <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.noAcreditado, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">Personas sin acreditación vigente y sin registro de acreditación previa.</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
+            <div class="kpi-card brecha"><div class="kpi-label">N° de personas con brecha de acreditación</div><div class="kpi-value">${fmt(brechaActual)}</div><div class="kpi-percent">${porcentajeRatioEs(brechaActual, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">Corresponde a la suma de personas no vigentes y no acreditadas del mes.</div><div class="kpi-delta ${deltaBrecha.className}">${deltaBrecha.label}</div></div>
         </div>
         <div class="charts-section">
             <div class="chart-card"><div class="section-title">Tendencia mensual por estado</div><div class="section-note">Permite comparar la evolución del número de personas acreditadas, no vigentes y no acreditadas entre meses informados.</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
