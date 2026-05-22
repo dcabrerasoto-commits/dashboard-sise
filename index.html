@@ -131,8 +131,8 @@
         .panel, .table-section, .insight-card, .footer-card, .map-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
         .panel:hover, .table-section:hover, .insight-card:hover, .footer-card:hover, .map-card:hover { transform: translateY(-3px); box-shadow: 0 16px 28px rgba(26, 64, 128, 0.12); }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
-        td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
+        th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; white-space: nowrap; }
+        td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; white-space: nowrap; }
         tbody td:not(:first-child) { text-align: right; }
         tr:hover td { background: #f7faff; }
         tr.region-group-par td { background: #ffffff; }
@@ -147,9 +147,9 @@
         .metric-share { margin-top: 4px; font-size: 11px; color: #64748b; line-height: 1.35; white-space: nowrap; }
         .subfila-institucion td:last-child { text-align: center; }
         .subfila-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; color: #9aa9bb; }
-        .percent-cell { min-width: 180px; }
-        .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
-        .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
+        .percent-cell { min-width: 150px; }
+        .percent-text { display: inline-flex; align-items: center; gap: 8px; justify-content: flex-end; }
+        .percent-note { font-size: 11px; color: #64748b; }
         .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 4px; }
         .footer-item.metodologia { max-width: 760px; }
         .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
@@ -524,11 +524,14 @@
         return alertas;
     }
     function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
+    function textoPorcentaje(valor, referencia) {
+        return `<div class="percent-text">${badgeTasa(valor)}<span class="percent-note">del ${referencia}</span></div>`;
+    }
     function renderSubfilasInstitucion(item, esNivelCentral, totalAcreditadoReferencia, etiquetaReferencia) {
         if (esNivelCentral) return "";
         const textoParticipacion = (valor) => {
             const porcentaje = totalAcreditadoReferencia > 0 ? ((valor / totalAcreditadoReferencia) * 100) : 0;
-            return `${porcentaje.toFixed(1)}% del ${etiquetaReferencia}`;
+            return textoPorcentaje(porcentaje, etiquetaReferencia);
         };
         const totalMunicipalidad = item.AcreditadoMunicipalidad + item.NoVigenteMunicipalidad + item.NoAcreditadoMunicipalidad;
         const totalSeremi = item.AcreditadoSeremi + item.NoVigenteSeremi + item.NoAcreditadoSeremi;
@@ -537,7 +540,7 @@
             <tr class="subfila-institucion">
                 <td>Municipalidad</td>
                 <td>${fmt(item.AcreditadoMunicipalidad)}</td>
-                <td class="percent-cell"><div class="metric-share">${textoParticipacion(item.AcreditadoMunicipalidad)}</div></td>
+                <td class="percent-cell">${textoParticipacion(item.AcreditadoMunicipalidad)}</td>
                 <td>${fmt(item.NoVigenteMunicipalidad)}</td>
                 <td>${fmt(item.NoAcreditadoMunicipalidad)}</td>
                 <td>${fmt(totalMunicipalidad)}</td>
@@ -545,7 +548,7 @@
             <tr class="subfila-institucion">
                 <td>SEREMI</td>
                 <td>${fmt(item.AcreditadoSeremi)}</td>
-                <td class="percent-cell"><div class="metric-share">${textoParticipacion(item.AcreditadoSeremi)}</div></td>
+                <td class="percent-cell">${textoParticipacion(item.AcreditadoSeremi)}</td>
                 <td>${fmt(item.NoVigenteSeremi)}</td>
                 <td>${fmt(item.NoAcreditadoSeremi)}</td>
                 <td>${fmt(totalSeremi)}</td>
@@ -553,7 +556,7 @@
             <tr class="subfila-institucion">
                 <td>Otras instituciones</td>
                 <td>${fmt(item.AcreditadoOtras)}</td>
-                <td class="percent-cell"><div class="metric-share">${textoParticipacion(item.AcreditadoOtras)}</div></td>
+                <td class="percent-cell">${textoParticipacion(item.AcreditadoOtras)}</td>
                 <td>${fmt(item.NoVigenteOtras)}</td>
                 <td>${fmt(item.NoAcreditadoOtras)}</td>
                 <td>${fmt(totalOtras)}</td>
@@ -657,7 +660,7 @@
                 <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
                     <td>${c.Comuna}</td>
                     <td>${fmt(c.Acreditado)}</td>
-                    <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0, 100).toFixed(1)}%"></div></div>${badgeTasa(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0)}</td>
+                    <td class="percent-cell">${textoPorcentaje(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0, "regional")}</td>
                     <td>${fmt(c.NoVigente)}</td>
                     <td>${fmt(c.NoAcreditado)}</td>
                     <td>${fmt(c.Total)}</td>
@@ -676,7 +679,7 @@
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table>
                         <thead>
-                            <tr><th rowspan="2">Comuna</th><th rowspan="2">Personas acreditadas</th><th rowspan="2">% de personas acreditadas, respecto total regional</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr>
+                            <tr><th rowspan="2">Comuna</th><th rowspan="2">Personas acreditadas</th><th rowspan="2">% acreditadas</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr>
                             <tr><th>No vigente</th><th>No acreditado</th></tr>
                         </thead>
                         <tbody>${filasComuna}</tbody>
@@ -704,7 +707,7 @@
             <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
                 <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
                 <td>${fmt(r.Acreditado)}</td>
-                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0, 100).toFixed(1)}%"></div></div>${badgeTasa(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0)}</td>
+                <td class="percent-cell">${textoPorcentaje(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0, "nacional")}</td>
                 <td>${fmt(r.NoVigente)}</td>
                 <td>${fmt(r.NoAcreditado)}</td>
                 <td>${fmt(r.Total)}</td>
@@ -715,7 +718,7 @@
             <tr>
                 <td><strong>Total</strong></td>
                 <td><strong>${fmt(monthData.acreditado)}</strong></td>
-                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:100%"></div></div><strong>${badgeTasa(100)}</strong></td>
+                <td class="percent-cell">${textoPorcentaje(100, "nacional")}</td>
                 <td><strong>${fmt(monthData.noVigente)}</strong></td>
                 <td><strong>${fmt(monthData.noAcreditado)}</strong></td>
                 <td><strong>${fmt(monthData.total)}</strong></td>
@@ -750,7 +753,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2">Personas acreditadas</th><th rowspan="2">% de personas acreditadas, respecto total nacional</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr><tr><th>No vigente</th><th>No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2">Personas acreditadas</th><th rowspan="2">% acreditadas</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr><tr><th>No vigente</th><th>No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
