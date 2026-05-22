@@ -132,8 +132,8 @@
         .panel:hover, .table-section:hover, .insight-card:hover, .footer-card:hover, .map-card:hover { transform: translateY(-3px); box-shadow: 0 16px 28px rgba(26, 64, 128, 0.12); }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; white-space: nowrap; }
+        th:not(:first-child), td:not(:first-child) { text-align: center; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; white-space: nowrap; }
-        tbody td:not(:first-child) { text-align: right; }
         tr:hover td { background: #f7faff; }
         tr.region-group-par td { background: #ffffff; }
         tr.region-group-impar td { background: #f7fafd; }
@@ -148,7 +148,7 @@
         .subfila-institucion td:last-child { text-align: center; }
         .subfila-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; color: #9aa9bb; }
         .percent-cell { min-width: 150px; }
-        .percent-text { display: inline-flex; align-items: center; gap: 8px; justify-content: flex-end; }
+        .percent-text { display: inline-flex; align-items: center; gap: 8px; justify-content: center; }
         .percent-note { font-size: 11px; color: #64748b; }
         .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 4px; }
         .footer-item.metodologia { max-width: 760px; }
@@ -523,7 +523,7 @@
         }
         return alertas;
     }
-    function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
+    function badgeTasa(valor) { if (valor >= 20) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 1) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
     function textoPorcentaje(valor, referencia) {
         return `<div class="percent-text">${badgeTasa(valor)}<span class="percent-note">del ${referencia}</span></div>`;
     }
