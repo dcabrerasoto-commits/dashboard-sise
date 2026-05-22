@@ -20,6 +20,28 @@ function mesNombrePropioHtml(texto) {
 function lecturaEjecutivaMes(monthData) {
     return `<strong>${mesNombrePropioText(monthData.label)}:</strong> número de personas acreditadas ${fmt(monthData.acreditado)}, número de personas no vigentes ${fmt(monthData.noVigente)} y número de personas no acreditadas ${fmt(monthData.noAcreditado)}.`;
 }
+function renderTarjetasHallazgos(hallazgos) {
+    const titulos = ["Mayor número de registros", "Mayor acreditación", "Mayor no vigencia", "Variación mensual"];
+    return hallazgos.slice(1).map((item, index) => {
+        const partes = item.split(", ");
+        const dato = partes.length > 1 ? partes[0] : item.split(".")[0];
+        return `<div class="insight-item insight-structured"><div class="insight-kicker">${titulos[index] || "Síntesis"}</div><div class="insight-main">${mesNombrePropioHtml(dato)}</div><div class="insight-copy">${mesNombrePropioHtml(item)}</div></div>`;
+    }).join("");
+}
+function obtenerTipoAlerta(item) {
+    if (item.startsWith("Seguimiento sugerido")) return "Seguimiento";
+    if (item.startsWith("Atención")) return "Atención";
+    if (item.startsWith("Revisión prioritaria")) return "Revisión prioritaria";
+    if (item.startsWith("Variación mensual")) return "Seguimiento";
+    return "Seguimiento";
+}
+function renderTarjetasAlertas(alertas) {
+    return alertas.map((item) => {
+        const tipo = obtenerTipoAlerta(item);
+        const clase = tipo === "Atención" ? "alerta-atencion" : (tipo === "Revisión prioritaria" ? "alerta-revision" : "alerta-seguimiento");
+        return `<div class="insight-item alert-item ${clase}"><div class="alert-label">${tipo}</div><div class="insight-copy">${mesNombrePropioHtml(item)}</div></div>`;
+    }).join("");
+}
 function renderSubfilasInstitucion(item, esNivelCentral, totalAcreditadoReferencia) {
     if (esNivelCentral) return "";
     const textoParticipacion = (valor) => textoPorcentajeSimple(totalAcreditadoReferencia > 0 ? ((valor / totalAcreditadoReferencia) * 100) : 0);
@@ -186,9 +208,9 @@ function renderDashboard() {
         </div>
         <div class="mid-section">
             <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table class="fixed-data-table"><colgroup><col class="col-territorio"><col class="col-data"><col class="col-data col-porcentaje"><col class="col-data col-estrecha"><col class="col-data col-estrecha"><col class="col-data"></colgroup><thead><tr><th rowspan="2">Región</th><th rowspan="2" class="th-acreditado">Personas acreditadas</th><th rowspan="2" class="percent-header th-porcentaje"><span>% personas acreditadas</span><small>Fila regional: respecto al total nacional. Detalle institucional: respecto al acreditado regional.</small></th><th colspan="2" class="th-brecha-group col-brecha-group">Personas sin acreditación vigente</th><th rowspan="2" class="th-total">Total</th></tr><tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
-            <div class="insights-column"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${mesNombrePropioHtml(item)}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${mesNombrePropioHtml(item)}</div>`).join("")}</div></div></div>
+            <div class="insights-column"><div class="insight-card"><div class="section-title">Síntesis ejecutiva</div><div class="insight-list">${renderTarjetasHallazgos(hallazgos)}</div></div><div class="insight-card"><div class="section-title">Puntos de atención</div><div class="insight-list">${renderTarjetasAlertas(alertas)}</div></div></div>
         </div>
-        <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
+        <div class="footer-card metodologia-card"><div class="section-title">Metodología y criterios de lectura</div><div class="method-grid"><div class="method-item"><strong>Fuente</strong><span>Sistema de Información Social en Emergencias.</span></div><div class="method-item"><strong>Unidad de análisis</strong><span>Personas registradas en la base mensual.</span></div><div class="method-item"><strong>Estados</strong><span>Se interpretan según la columna del mes seleccionado.</span></div><div class="method-item"><strong>Territorio</strong><span>Región y comuna dependen de la información registrada en la fuente; las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central.</span></div><div class="method-item method-wide"><strong>Comunas sin coincidencia regional</strong><span>Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</span></div></div></div>
         </div>
     `;
     crearGraficos(monthData);
