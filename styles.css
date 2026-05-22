@@ -119,9 +119,9 @@ input[type="file"] { display: none; }
 .context-date { margin-top: 10px; font-size: 11px; color: #8a99ad; }
 .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; margin-bottom: 14px; }
 .toolbar-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.export-wrap { position: relative; }
+.export-wrap { position: relative; z-index: 100; }
 .export-btn { background: var(--azul-sise); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; padding: 10px 14px; font-size: 13px; position: relative; overflow: hidden; }
-.export-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 290px; background: white; border: 1px solid #d7e0ee; border-radius: 10px; box-shadow: var(--sombra); padding: 8px; display: none; z-index: 40; }
+.export-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 290px; background: white; border: 1px solid #d7e0ee; border-radius: 10px; box-shadow: var(--sombra); padding: 8px; display: none; z-index: 1000; }
 .export-menu.visible { display: block; }
 .export-option { width: 100%; border: none; background: white; text-align: left; padding: 10px 12px; border-radius: 8px; font-size: 13px; color: var(--gris-texto); cursor: pointer; }
 .export-option:hover { background: #f3f6fb; }
