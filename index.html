@@ -48,11 +48,31 @@
         .source-box input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; }
         .source-actions { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
         input[type="file"] { display: none; }
-        .upload-btn, .btn-volver, .month-btn { border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
+        .upload-btn, .btn-volver, .month-btn { border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease, background 0.18s ease, color 0.18s ease; position: relative; overflow: hidden; }
         .upload-btn { background: var(--azul-sise); color: white; padding: 11px 28px; font-size: 15px; }
         .upload-btn.secundario { background: #eef3fb; color: var(--azul-sise); border: 1px solid #d7e0ee; }
         .btn-volver { background: white; border: 1px solid var(--azul-sise); color: var(--azul-sise); padding: 8px 18px; font-size: 13px; margin-bottom: 20px; }
-        .btn-volver:hover, .upload-btn:hover { filter: brightness(1.05); }
+        .upload-btn::before, .btn-volver::before, .month-btn::before, .export-btn::before, .modal-close::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(255,255,255,0) 18%, rgba(255,255,255,0.16) 50%, rgba(255,255,255,0) 82%);
+            transform: translateX(-130%);
+            transition: transform 0.35s ease;
+            pointer-events: none;
+        }
+        .btn-volver:hover, .upload-btn:hover, .month-btn:hover, .export-btn:hover, .modal-close:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(26, 64, 128, 0.18);
+            filter: brightness(1.03);
+        }
+        .btn-volver:hover::before, .upload-btn:hover::before, .month-btn:hover::before, .export-btn:hover::before, .modal-close:hover::before {
+            transform: translateX(130%);
+        }
+        .btn-volver:active, .upload-btn:active, .month-btn:active, .export-btn:active, .modal-close:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(26, 64, 128, 0.14);
+        }
         .error-msg, .info-msg { display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; text-align: left; white-space: pre-line; font-size: 14px; }
         .error-msg { background: #fef2f2; border: 1px solid #fca5a5; color: var(--rojo); }
         .info-msg { background: #eff6ff; border: 1px solid #93c5fd; color: var(--azul-sise); }
@@ -71,7 +91,7 @@
         .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; margin-bottom: 20px; }
         .toolbar-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
         .export-wrap { position: relative; }
-        .export-btn { background: var(--azul-sise); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; padding: 10px 14px; font-size: 13px; }
+        .export-btn { background: var(--azul-sise); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 700; padding: 10px 14px; font-size: 13px; position: relative; overflow: hidden; }
         .export-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 290px; background: white; border: 1px solid #d7e0ee; border-radius: 10px; box-shadow: var(--sombra); padding: 8px; display: none; z-index: 40; }
         .export-menu.visible { display: block; }
         .export-option { width: 100%; border: none; background: white; text-align: left; padding: 10px 12px; border-radius: 8px; font-size: 13px; color: var(--gris-texto); cursor: pointer; }
@@ -80,9 +100,10 @@
         .export-hint { padding: 8px 12px 4px; font-size: 12px; color: #64748b; line-height: 1.4; }
         .month-group { display: flex; flex-wrap: wrap; gap: 8px; }
         .month-btn { padding: 10px 14px; background: #f3f6fb; color: var(--azul-sise); border: 1px solid #d7e0ee; font-size: 13px; }
-        .month-btn.active { background: var(--azul-sise); color: white; border-color: var(--azul-sise); }
+        .month-btn.active { background: var(--azul-sise); color: white; border-color: var(--azul-sise); box-shadow: 0 8px 18px rgba(26, 64, 128, 0.18); }
         .toolbar-meta, .section-note, .footer-item, .kpi-percent { font-size: 13px; color: #64748b; line-height: 1.5; }
-        .kpi-card { border-top: 4px solid var(--azul-sise); }
+        .kpi-card { border-top: 4px solid var(--azul-sise); transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
+        .kpi-card:hover { transform: translateY(-4px); box-shadow: 0 18px 30px rgba(26, 64, 128, 0.14); }
         .kpi-card.azul { background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%); color: white; border-top-color: #0f2f5f; }
         .kpi-card.verde { border-top-color: var(--verde); }
         .kpi-card.ambar { border-top-color: var(--ambar); }
@@ -101,24 +122,27 @@
         .chart-canvas-wrap { position: relative; height: 280px; }
         .chart-canvas-wrap.compact { height: 200px; max-width: 320px; margin: 0 auto; }
         .insight-list { display: grid; gap: 10px; }
-        .insight-item { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 8px; padding: 12px 14px; line-height: 1.5; font-size: 14px; }
+        .chart-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
+        .chart-card:hover { transform: translateY(-4px); box-shadow: 0 18px 30px rgba(26, 64, 128, 0.14); }
+        .insight-item { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 8px; padding: 12px 14px; line-height: 1.5; font-size: 14px; transition: transform 0.18s ease, box-shadow 0.18s ease; }
+        .insight-item:hover { transform: translateX(4px); box-shadow: 0 8px 18px rgba(26, 64, 128, 0.10); }
         .table-section { overflow-x: auto; }
+        .panel, .table-section, .insight-card, .footer-card, .map-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
+        .panel:hover, .table-section:hover, .insight-card:hover, .footer-card:hover, .map-card:hover { transform: translateY(-3px); box-shadow: 0 16px 28px rgba(26, 64, 128, 0.12); }
         table { width: 100%; border-collapse: collapse; font-size: 14px; }
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; }
         tr:hover td { background: #f7faff; }
         tr.region-group-par td { background: #ffffff; }
         tr.region-group-impar td { background: #f7fafd; }
-        .region-cell-button { background: none; border: none; padding: 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; }
-        .region-cell-button:hover { text-decoration: underline; }
+        .region-cell-button { background: none; border: none; padding: 2px 0; color: var(--azul-sise); font: inherit; font-weight: 700; cursor: pointer; text-align: left; transition: transform 0.18s ease, color 0.18s ease, letter-spacing 0.18s ease; }
+        .region-cell-button:hover { text-decoration: none; color: #102f5d; transform: translateX(4px); letter-spacing: 0.15px; }
         .subfila-institucion td { font-size: 10px; color: #748396; padding-top: 4px; padding-bottom: 6px; }
         .subfila-institucion td:first-child { font-weight: 400; color: #748396; }
         .subfila-institucion td:not(:first-child) { border-top: 1px dashed #d8e2f0; }
-        .subfila-institucion td:last-child { text-align: center; }
-        .subfila-placeholder { width: 100%; display: flex; align-items: center; justify-content: center; color: #9aa9bb; }
-        .percent-cell { min-width: 180px; }
-        .data-bar { height: 10px; border-radius: 999px; background: #eef2f7; overflow: hidden; margin-bottom: 6px; }
-        .data-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7aa4df 0%, #2c5aa0 100%); }
+        .metric-cell { min-width: 190px; }
+        .metric-value { font-weight: 700; color: #17396f; }
+        .metric-share { margin-top: 4px; font-size: 11px; color: #64748b; line-height: 1.35; }
         .footer-item strong { color: var(--azul-sise); display: block; margin-bottom: 4px; }
         .footer-item.metodologia { max-width: 760px; }
         .modal-backdrop { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000; }
@@ -127,7 +151,7 @@
         .modal-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
         .modal-title { font-size: 22px; font-weight: 700; color: #17396f; }
         .modal-subtitle { font-size: 13px; color: #64748b; margin-top: 4px; line-height: 1.5; }
-        .modal-close { border: 1px solid #cbd5e1; background: white; color: var(--azul-sise); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-weight: 700; }
+        .modal-close { border: 1px solid #cbd5e1; background: white; color: var(--azul-sise); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-weight: 700; position: relative; overflow: hidden; transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
         .modal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px; }
         .modal-stat { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fc 100%); border: 1px solid #dbe5f3; border-radius: 10px; padding: 14px 15px; }
         .modal-stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.7px; font-weight: 700; color: var(--azul-secundario); margin-bottom: 6px; }
@@ -465,6 +489,10 @@
         return alertas;
     }
     function badgeTasa(valor) { if (valor >= 30) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 15) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
+    function shareText(parte, total, etiqueta) {
+        const valor = total > 0 ? ((parte / total) * 100) : 0;
+        return `<div class="metric-share">${valor.toFixed(1)}% del acreditado ${etiqueta}</div>`;
+    }
     function renderSubfilasInstitucion(item, esNivelCentral) {
         if (esNivelCentral) return "";
         const totalPublico = item.AcreditadoPublico + item.NoVigentePublico + item.NoAcreditadoPublico;
@@ -476,7 +504,6 @@
                 <td>${fmt(item.NoVigentePublico)}</td>
                 <td>${fmt(item.NoAcreditadoPublico)}</td>
                 <td>${fmt(totalPublico)}</td>
-                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
             </tr>
             <tr class="subfila-institucion">
                 <td>Otras instituciones</td>
@@ -484,7 +511,6 @@
                 <td>${fmt(item.NoVigenteOtras)}</td>
                 <td>${fmt(item.NoAcreditadoOtras)}</td>
                 <td>${fmt(totalOtras)}</td>
-                <td class="percent-cell"><div class="subfila-placeholder">·</div></td>
             </tr>
         `;
     }
@@ -516,6 +542,7 @@
         const filas = monthData.porRegion.map((r) => [
             r.RegionEtiqueta,
             fmt(r.Acreditado),
+            `${(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0).toFixed(1)}%`,
             fmt(r.NoVigente),
             fmt(r.NoAcreditado),
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoPublico),
@@ -524,10 +551,9 @@
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.AcreditadoOtras),
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoVigenteOtras),
             r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoOtras),
-            fmt(r.Total),
-            `${r.TasaAcreditado.toFixed(1)}%`
+            fmt(r.Total)
         ]);
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total", "% acreditado"], filas);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "% del acreditado nacional", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
         cerrarMenuExportacion();
     }
     function exportarComunalNacional() {
@@ -538,6 +564,7 @@
                 regionData.RegionEtiqueta,
                 c.Comuna,
                 fmt(c.Acreditado),
+                `${(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0).toFixed(1)}%`,
                 fmt(c.NoVigente),
                 fmt(c.NoAcreditado),
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoPublico),
@@ -546,11 +573,10 @@
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.AcreditadoOtras),
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.NoVigenteOtras),
                 c.Comuna === "Nivel Central" ? "-" : fmt(c.NoAcreditadoOtras),
-                fmt(c.Total),
-                `${c.TasaAcreditado.toFixed(1)}%`
+                fmt(c.Total)
             ])
         );
-        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total", "% acreditado"], filas);
+        descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "% del acreditado regional", "No vigente", "No acreditado", "SEREMI y Municipalidad Acreditados", "SEREMI y Municipalidad No vigentes", "SEREMI y Municipalidad No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
         cerrarMenuExportacion();
     }
     function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
@@ -578,11 +604,10 @@
         const filasComuna = regionData.porComuna.map((c, index) => `
                 <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
                     <td>${c.Comuna}</td>
-                    <td>${fmt(c.Acreditado)}</td>
+                    <td class="metric-cell"><div class="metric-value">${fmt(c.Acreditado)}</div>${shareText(c.Acreditado, regionData.Acreditado, "regional")}</td>
                     <td>${fmt(c.NoVigente)}</td>
                     <td>${fmt(c.NoAcreditado)}</td>
                     <td>${fmt(c.Total)}</td>
-                    <td>${badgeTasa(c.TasaAcreditado)}</td>
                 </tr>
                 ${renderSubfilasInstitucion(c, false).replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
             `).join("");
@@ -596,7 +621,7 @@
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table>
-                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th><th>% acreditado</th></tr></thead>
+                        <thead><tr><th>Comuna</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th></tr></thead>
                         <tbody>${filasComuna}</tbody>
                     </table>
                 </div>`}
@@ -621,22 +646,20 @@
         const filasRegion = monthData.porRegion.map((r, index) => `
             <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
                 <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
-                <td>${fmt(r.Acreditado)}</td>
+                <td class="metric-cell"><div class="metric-value">${fmt(r.Acreditado)}</div>${shareText(r.Acreditado, monthData.acreditado, "nacional")}</td>
                 <td>${fmt(r.NoVigente)}</td>
                 <td>${fmt(r.NoAcreditado)}</td>
                 <td>${fmt(r.Total)}</td>
-                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(r.TasaAcreditado, 100).toFixed(1)}%"></div></div>${badgeTasa(r.TasaAcreditado)}</td>
             </tr>
             ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL").replaceAll('class=\"subfila-institucion\"', `class=\"subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}\"`)}
         `).join("");
         const filaTotales = `
             <tr>
                 <td><strong>Total</strong></td>
-                <td><strong>${fmt(monthData.acreditado)}</strong></td>
+                <td class="metric-cell"><div class="metric-value"><strong>${fmt(monthData.acreditado)}</strong></div>${shareText(monthData.acreditado, monthData.acreditado, "nacional")}</td>
                 <td><strong>${fmt(monthData.noVigente)}</strong></td>
                 <td><strong>${fmt(monthData.noAcreditado)}</strong></td>
                 <td><strong>${fmt(monthData.total)}</strong></td>
-                <td class="percent-cell"><div class="data-bar"><div class="data-fill" style="width:${Math.min(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0, 100).toFixed(1)}%"></div></div><strong>${badgeTasa(monthData.total > 0 ? (monthData.acreditado / monthData.total) * 100 : 0)}</strong></td>
             </tr>
         `;
         document.getElementById("content").innerHTML = `
@@ -668,7 +691,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th><th>% acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table><thead><tr><th>Región</th><th>Acreditado</th><th>No vigente</th><th>No acreditado</th><th>Total</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
