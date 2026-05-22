@@ -114,12 +114,14 @@ function abrirDetalleRegion(region) {
             </tr>
             ${renderSubfilasInstitucion(c, false, regionData.Acreditado).replaceAll('class="subfila-institucion"', `class="subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}"`)}
         `).join("");
+        const brechaRegional = regionData.NoVigente + regionData.NoAcreditado;
         contenedor.innerHTML = `
-            <div class="modal-grid">
-                <div class="modal-stat modal-stat-azul"><div class="modal-stat-label">N° de personas registradas</div><div class="modal-stat-value">${fmt(regionData.Total)}</div></div>
-                <div class="modal-stat modal-stat-verde"><div class="modal-stat-label">N° de personas acreditadas</div><div class="modal-stat-value">${fmt(regionData.Acreditado)}</div></div>
-                <div class="modal-stat modal-stat-ambar"><div class="modal-stat-label">N° de personas no vigentes</div><div class="modal-stat-value">${fmt(regionData.NoVigente)}</div></div>
-                <div class="modal-stat modal-stat-rojo"><div class="modal-stat-label">N° de personas no acreditadas</div><div class="modal-stat-value">${fmt(regionData.NoAcreditado)}</div></div>
+            <div class="modal-grid kpi-section modal-kpi-grid">
+                <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(regionData.Total)}</div><div class="kpi-percent">Corresponde al total de registros de la región seleccionada.</div></div>
+                <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(regionData.Acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.Acreditado, regionData.Total)} del total de registros de la región seleccionada.</div></div>
+                <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(regionData.NoVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoVigente, regionData.Total)} del total de registros de la región seleccionada.</div></div>
+                <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(regionData.NoAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoAcreditado, regionData.Total)} del total de registros de la región seleccionada.</div></div>
+                <div class="kpi-card brecha"><div class="kpi-label">N° de personas con brecha de acreditación</div><div class="kpi-value">${fmt(brechaRegional)}</div><div class="kpi-percent">${porcentajeRatioEs(brechaRegional, regionData.Total)} del total de registros de la región seleccionada.</div></div>
             </div>
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
