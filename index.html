@@ -134,6 +134,7 @@
         th { background: var(--azul-sise); color: white; padding: 11px 14px; text-align: left; font-weight: 700; font-size: 13px; white-space: nowrap; }
         th:not(:first-child), td:not(:first-child) { text-align: center; }
         td { padding: 11px 14px; border-bottom: 1px solid #edf1f6; vertical-align: middle; white-space: nowrap; }
+        .percent-header { white-space: normal; text-align: center; min-width: 220px; line-height: 1.25; }
         tr:hover td { background: #f7faff; }
         tr.region-group-par td { background: #ffffff; }
         tr.region-group-impar td { background: #f7fafd; }
@@ -679,7 +680,7 @@
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
                     <table>
                         <thead>
-                            <tr><th rowspan="2">Comuna</th><th rowspan="2">Personas acreditadas</th><th rowspan="2">% acreditadas</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr>
+                            <tr><th rowspan="2">Comuna</th><th rowspan="2">Personas acreditadas</th><th rowspan="2" class="percent-header">% personas acreditadas respecto al total nacional/regional</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr>
                             <tr><th>No vigente</th><th>No acreditado</th></tr>
                         </thead>
                         <tbody>${filasComuna}</tbody>
@@ -753,7 +754,7 @@
                 <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
             </div>
             <div class="mid-section">
-                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2">Personas acreditadas</th><th rowspan="2">% acreditadas</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr><tr><th>No vigente</th><th>No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+                <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2">Personas acreditadas</th><th rowspan="2" class="percent-header">% personas acreditadas respecto al total nacional/regional</th><th colspan="2">Personas sin acreditación vigente</th><th rowspan="2">Total</th></tr><tr><th>No vigente</th><th>No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
                 <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
             </div>
             <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
