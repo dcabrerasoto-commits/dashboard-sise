@@ -166,8 +166,8 @@ input[type="file"] { display: none; }
 .panel:hover, .table-section:hover, .insight-card:hover, .footer-card:hover, .map-card:hover { transform: translateY(-3px); box-shadow: 0 16px 28px rgba(26, 64, 128, 0.12); }
 table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
 .fixed-data-table { table-layout: fixed; }
-.col-territorio { width: 30%; }
-.col-data { width: 14%; }
+.col-territorio { width: 14%; }
+.col-data { width: 17.2%; }
 th { background: #17396f; color: white; padding: 9px 10px; text-align: left; font-weight: 700; font-size: 12px; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.18); }
 th:not(:first-child), td:not(:first-child) { text-align: center; }
 td { padding: 7px 10px; border-bottom: 1px solid #edf1f6; vertical-align: middle; white-space: nowrap; }
