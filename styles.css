@@ -184,6 +184,7 @@ td { padding: 7px 10px; border-bottom: 1px solid #edf1f6; vertical-align: middle
 .percent-header { white-space: normal; text-align: center; min-width: 0; line-height: 1.2; }
 .percent-header span { display: block; }
 .percent-header small { display: block; margin-top: 4px; font-size: 10px; line-height: 1.25; color: rgba(255,255,255,0.72); font-weight: 500; text-transform: none; letter-spacing: 0; }
+.th-novigente, .th-noacreditado { text-align: center; }
 tr:hover td { background: #f7faff; }
 tr.region-group-par td { background: #ffffff; }
 tr.region-group-impar td { background: #f7fafd; }
