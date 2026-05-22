@@ -4,17 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard SISE 2026</title>
-    <link rel="stylesheet" href="styles.css?v=20260522-regional-normal-modal-sticky">
+    <link rel="stylesheet" href="styles.css?v=20260522-toolbar-azul-oscuro">
     <style>
         .toolbar {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(250, 252, 255, 0.99) 100%) !important;
-            border: 1px solid #d8e1ee !important;
-            border-top: 3px solid #17396f !important;
-            box-shadow: 0 10px 22px rgba(26, 64, 128, 0.11) !important;
+            background: linear-gradient(135deg, #17396f 0%, #1a4080 58%, #25559b 100%) !important;
+            border: 1px solid #17396f !important;
+            border-top: 3px solid #f59e0b !important;
+            box-shadow: 0 14px 30px rgba(26, 64, 128, 0.22) !important;
+        }
+        .toolbar .toolbar-title,
+        .toolbar .toolbar-meta,
+        .toolbar .toolbar-meta strong {
+            color: #ffffff !important;
+        }
+        .toolbar-meta {
+            color: rgba(255, 255, 255, 0.88) !important;
         }
         .month-group {
-            background: rgba(244, 247, 251, 0.96) !important;
-            border-color: #d3deec !important;
+            background: rgba(255, 255, 255, 0.14) !important;
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.18) !important;
+            backdrop-filter: blur(6px);
+        }
+        .month-btn {
+            color: #ffffff !important;
+            background: transparent !important;
+            border: 1px solid transparent !important;
+        }
+        .month-btn:hover {
+            background: rgba(255, 255, 255, 0.12) !important;
+        }
+        .month-btn.active {
+            background: #ffffff !important;
+            color: #17396f !important;
+            border-color: #ffffff !important;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.20) !important;
+        }
+        .export-btn {
+            background: #ffffff !important;
+            color: #17396f !important;
+            border: 1px solid #ffffff !important;
+        }
+        .export-btn:hover {
+            background: #f3f6fb !important;
         }
         .modal-card .table-section {
             max-height: 52vh;
