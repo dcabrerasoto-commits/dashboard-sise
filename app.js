@@ -1,0 +1,221 @@
+function badgeTasa(valor) { if (valor >= 20) return `<span class="badge badge-verde">${valor.toFixed(1)}%</span>`; if (valor >= 1) return `<span class="badge badge-ambar">${valor.toFixed(1)}%</span>`; return `<span class="badge badge-rojo">${valor.toFixed(1)}%</span>`; }
+function textoPorcentaje(valor, referencia) {
+    return `<div class="percent-text">${badgeTasa(valor)}<span class="percent-note">del ${referencia}</span></div>`;
+}
+function textoPorcentajeSimple(valor) {
+    return `<div class="percent-text percent-text-simple">${badgeTasa(valor)}</div>`;
+}
+function renderSubfilasInstitucion(item, esNivelCentral, totalAcreditadoReferencia, etiquetaReferencia) {
+    if (esNivelCentral) return "";
+    const textoParticipacion = (valor) => textoPorcentajeSimple(totalAcreditadoReferencia > 0 ? ((valor / totalAcreditadoReferencia) * 100) : 0);
+    const totalMunicipalidad = item.AcreditadoMunicipalidad + item.NoVigenteMunicipalidad + item.NoAcreditadoMunicipalidad;
+    const totalSeremi = item.AcreditadoSeremi + item.NoVigenteSeremi + item.NoAcreditadoSeremi;
+    const totalOtras = item.AcreditadoOtras + item.NoVigenteOtras + item.NoAcreditadoOtras;
+    return `
+        <tr class="subfila-institucion">
+            <td><div>Municipalidad</div><div class="institution-group-note">% sobre acreditado ${etiquetaReferencia}</div></td>
+            <td class="cell-acreditado">${fmt(item.AcreditadoMunicipalidad)}</td>
+            <td class="percent-cell cell-porcentaje">${textoParticipacion(item.AcreditadoMunicipalidad)}</td>
+            <td class="cell-brecha cell-novigente">${fmt(item.NoVigenteMunicipalidad)}</td>
+            <td class="cell-brecha cell-noacreditado">${fmt(item.NoAcreditadoMunicipalidad)}</td>
+            <td class="cell-total">${fmt(totalMunicipalidad)}</td>
+        </tr>
+        <tr class="subfila-institucion">
+            <td>SEREMI</td>
+            <td class="cell-acreditado">${fmt(item.AcreditadoSeremi)}</td>
+            <td class="percent-cell cell-porcentaje">${textoParticipacion(item.AcreditadoSeremi)}</td>
+            <td class="cell-brecha cell-novigente">${fmt(item.NoVigenteSeremi)}</td>
+            <td class="cell-brecha cell-noacreditado">${fmt(item.NoAcreditadoSeremi)}</td>
+            <td class="cell-total">${fmt(totalSeremi)}</td>
+        </tr>
+        <tr class="subfila-institucion">
+            <td>Otras instituciones</td>
+            <td class="cell-acreditado">${fmt(item.AcreditadoOtras)}</td>
+            <td class="percent-cell cell-porcentaje">${textoParticipacion(item.AcreditadoOtras)}</td>
+            <td class="cell-brecha cell-novigente">${fmt(item.NoVigenteOtras)}</td>
+            <td class="cell-brecha cell-noacreditado">${fmt(item.NoAcreditadoOtras)}</td>
+            <td class="cell-total">${fmt(totalOtras)}</td>
+        </tr>
+    `;
+}
+function buildMonthButtons() { return dashboardData.monthly.map((mes, index) => `<button class="month-btn ${index === currentMonthIndex ? "active" : ""}" onclick="seleccionarMes(${index})">${mes.label}</button>`).join(""); }
+function obtenerMesActual() {
+    return dashboardData && dashboardData.monthly ? dashboardData.monthly[currentMonthIndex] : null;
+}
+function abrirDetalleRegion(region) {
+    const monthData = obtenerMesActual();
+    if (!monthData) return;
+    const regionData = monthData.porRegion.find((item) => item.Region === region) || obtenerResumenVacio(region, ETIQUETAS_REGION[region] || region);
+    modalRegionActual = regionData.Region;
+    regionSeleccionada = regionData.Region;
+    const esNivelCentral = regionData.Region === "NIVEL CENTRAL";
+    document.getElementById("comunaModalTitle").textContent = regionData.RegionEtiqueta;
+    const subtituloBase = `Mes visualizado: ${monthData.label}.`;
+    const encabezado = document.getElementById("comunaModalSectionTitle");
+    if (encabezado) encabezado.textContent = esNivelCentral ? "Resumen del nivel central" : "Desglose por comuna";
+    document.getElementById("comunaModalSubtitle").textContent = esNivelCentral
+        ? `${subtituloBase} Resumen del número de personas registradas en Nivel Central.`
+        : (dashboardData.hasComunaData
+            ? `${subtituloBase} Desglose del número de personas por comuna dentro de la región seleccionada.`
+            : `${subtituloBase} La fuente publicada actual no incluye una columna de comuna; agrega una columna COMUNA para habilitar este detalle.`);
+    const contenedor = document.getElementById("comunaModalContent");
+    if (!dashboardData.hasComunaData) {
+        contenedor.innerHTML = `<div class="modal-empty">La base publicada hoy no trae una columna de comuna. En cuanto el CSV incorpore una columna como <strong>COMUNA</strong>, <strong>NOMBRE_COMUNA</strong> o similar, este desglose se activará automáticamente al hacer clic en cada región.</div>`;
+    } else {
+        const filasComuna = regionData.porComuna.map((c, index) => `
+            <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
+                <td>${c.Comuna}</td>
+                <td class="cell-acreditado">${fmt(c.Acreditado)}</td>
+                <td class="percent-cell cell-porcentaje">${textoPorcentajeSimple(regionData.Acreditado > 0 ? (c.Acreditado / regionData.Acreditado) * 100 : 0)}</td>
+                <td class="cell-brecha cell-novigente">${fmt(c.NoVigente)}</td>
+                <td class="cell-brecha cell-noacreditado">${fmt(c.NoAcreditado)}</td>
+                <td class="cell-total">${fmt(c.Total)}</td>
+            </tr>
+            ${renderSubfilasInstitucion(c, false, regionData.Acreditado, "regional").replaceAll('class="subfila-institucion"', `class="subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}"`)}
+        `).join("");
+        contenedor.innerHTML = `
+            <div class="modal-grid">
+                <div class="modal-stat"><div class="modal-stat-label">N° de personas registradas</div><div class="modal-stat-value">${fmt(regionData.Total)}</div></div>
+                <div class="modal-stat"><div class="modal-stat-label">N° de personas acreditadas</div><div class="modal-stat-value">${fmt(regionData.Acreditado)}</div></div>
+                <div class="modal-stat"><div class="modal-stat-label">N° de personas no vigentes</div><div class="modal-stat-value">${fmt(regionData.NoVigente)}</div></div>
+                <div class="modal-stat"><div class="modal-stat-label">N° de personas no acreditadas</div><div class="modal-stat-value">${fmt(regionData.NoAcreditado)}</div></div>
+            </div>
+                ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
+                    <div class="section-note" style="padding:0 0 10px 0;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div>
+                    <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
+                    <table>
+                        <thead>
+                            <tr><th rowspan="2">Comuna</th><th rowspan="2" class="th-acreditado">Personas acreditadas</th><th rowspan="2" class="percent-header th-porcentaje">% personas acreditadas respecto al total regional</th><th colspan="2" class="th-brecha-group">Personas sin acreditación vigente</th><th rowspan="2" class="th-total">Total</th></tr>
+                            <tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">No acreditado</th></tr>
+                        </thead>
+                        <tbody>${filasComuna}</tbody>
+                    </table>
+                </div>`}
+            `;
+    }
+    document.getElementById("comunaModal").classList.add("visible");
+}
+function cerrarModalComuna(event) {
+    if (event && event.target && event.target !== event.currentTarget) return;
+    modalRegionActual = null;
+    document.getElementById("comunaModal").classList.remove("visible");
+}
+function renderDashboard() {
+    const monthData = dashboardData.monthly[currentMonthIndex];
+    const prevMonthData = currentMonthIndex > 0 ? dashboardData.monthly[currentMonthIndex - 1] : null;
+    const hallazgos = obtenerHallazgos(monthData, prevMonthData);
+    const alertas = obtenerAlertas(monthData, prevMonthData);
+    const deltaAcreditado = obtenerDelta(monthData.acreditado, prevMonthData ? prevMonthData.acreditado : monthData.acreditado);
+    const deltaNoVigente = obtenerDelta(monthData.noVigente, prevMonthData ? prevMonthData.noVigente : monthData.noVigente);
+    const deltaNoAcreditado = obtenerDelta(monthData.noAcreditado, prevMonthData ? prevMonthData.noAcreditado : monthData.noAcreditado);
+    const brechaActual = monthData.noVigente + monthData.noAcreditado;
+    const brechaPrevia = prevMonthData ? prevMonthData.noVigente + prevMonthData.noAcreditado : brechaActual;
+    const deltaBrecha = obtenerDelta(brechaActual, brechaPrevia);
+    const filasRegion = monthData.porRegion.map((r, index) => `
+        <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
+            <td><button type="button" class="region-cell-button" onclick="abrirDetalleRegion('${r.Region.replace(/'/g, "\\'")}')">${r.RegionEtiqueta}</button></td>
+            <td class="cell-acreditado">${fmt(r.Acreditado)}</td>
+            <td class="percent-cell cell-porcentaje">${textoPorcentaje(monthData.acreditado > 0 ? (r.Acreditado / monthData.acreditado) * 100 : 0, "nacional")}</td>
+            <td class="cell-brecha cell-novigente">${fmt(r.NoVigente)}</td>
+            <td class="cell-brecha cell-noacreditado">${fmt(r.NoAcreditado)}</td>
+            <td class="cell-total">${fmt(r.Total)}</td>
+        </tr>
+        ${renderSubfilasInstitucion(r, r.Region === "NIVEL CENTRAL", r.Acreditado, "regional").replaceAll('class="subfila-institucion"', `class="subfila-institucion ${index % 2 === 0 ? "region-group-par" : "region-group-impar"}"`)}
+    `).join("");
+    const filaTotales = `
+        <tr>
+            <td><strong>Total</strong></td>
+            <td class="cell-acreditado"><strong>${fmt(monthData.acreditado)}</strong></td>
+            <td class="percent-cell cell-porcentaje">${textoPorcentaje(100, "nacional")}</td>
+            <td class="cell-brecha cell-novigente"><strong>${fmt(monthData.noVigente)}</strong></td>
+            <td class="cell-brecha cell-noacreditado"><strong>${fmt(monthData.noAcreditado)}</strong></td>
+            <td class="cell-total"><strong>${fmt(monthData.total)}</strong></td>
+        </tr>
+    `;
+    document.getElementById("content").innerHTML = `
+        <div class="dashboard-shell">
+        <div class="context-strip panel">
+            <div class="context-chip"><span class="context-label">Mes seleccionado</span><strong class="context-value">${monthData.label}</strong></div>
+            <div class="context-chip"><span class="context-label">Fecha de actualización</span><strong class="context-value">${dashboardData.fechaCarga}</strong></div>
+            <div class="context-chip"><span class="context-label">Fuente</span><strong class="context-value">Sistema de Información Social en Emergencias</strong></div>
+            <div class="context-chip"><span class="context-label">Total de registros del mes</span><strong class="context-value">${fmt(monthData.total)}</strong></div>
+        </div>
+        <div class="executive-band">
+            <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${hallazgos[0]}</div><div class="executive-support">La lectura resume el estado de acreditación del mes seleccionado y facilita la comparación con el período inmediatamente anterior.</div></div>
+            <div class="panel executive-side"><div class="executive-title">Contexto del corte</div><div class="executive-text">Mes visualizado: <strong>${monthData.label}</strong><br>N° de registros: <strong>${fmt(monthData.total)}</strong><br>Comparación: <strong>${prevMonthData ? prevMonthData.label : "Sin mes previo"}</strong></div></div>
+        </div>
+        <div class="panel toolbar">
+            <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
+            <div class="toolbar-actions">
+                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div></div>
+                <div class="export-wrap">
+                    <button type="button" class="export-btn" onclick="toggleMenuExportacion()">Exportar datos</button>
+                    <div class="export-menu" id="exportMenu">
+                        <button type="button" class="export-option" onclick="exportarRegional()">Descargar resumen nacional por región</button>
+                        <button type="button" class="export-option" onclick="exportarComunalNacional()" ${dashboardData.hasComunaData ? "" : "disabled"}>Descargar resumen nacional por comuna</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kpi-section">
+            <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN únicos de los meses consolidados.</div></div>
+            <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${pct(monthData.acreditado, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Personas con acreditación vigente en el mes visualizado.</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
+            <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${pct(monthData.noVigente, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
+            <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${pct(monthData.noAcreditado, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Personas sin acreditación vigente y sin registro de acreditación previa.</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
+            <div class="kpi-card brecha"><div class="kpi-label">N° de personas con brecha de acreditación</div><div class="kpi-value">${fmt(brechaActual)}</div><div class="kpi-percent">${pct(brechaActual, monthData.total)} del total de registros de ${monthData.label}</div><div class="kpi-description">Corresponde a la suma de personas no vigentes y no acreditadas del mes.</div><div class="kpi-delta ${deltaBrecha.className}">${deltaBrecha.label}</div></div>
+        </div>
+        <div class="charts-section">
+            <div class="chart-card"><div class="section-title">Tendencia mensual por estado</div><div class="section-note">Permite comparar la evolución del número de personas acreditadas, no vigentes y no acreditadas entre meses informados.</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
+            <div class="chart-card"><div class="section-title">Distribución por estado</div><div class="section-note">Resumen compacto del mes seleccionado, con colores semánticos consistentes en todo el tablero.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
+        </div>
+        <div class="mid-section">
+            <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><div class="section-note" style="margin-top:-2px; margin-bottom:10px;">No vigente corresponde a personas que estuvieron acreditadas en períodos anteriores, pero no cuentan con vigencia actual.</div><table><thead><tr><th rowspan="2">Región</th><th rowspan="2" class="th-acreditado">Personas acreditadas</th><th rowspan="2" class="percent-header th-porcentaje">% personas acreditadas respecto al total nacional</th><th colspan="2" class="th-brecha-group">Personas sin acreditación vigente</th><th rowspan="2" class="th-total">Total</th></tr><tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">No acreditado</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+            <div style="display:grid; gap:16px; align-content:start;"><div class="insight-card"><div class="section-title">Hallazgos clave</div><div class="insight-list">${hallazgos.slice(1).map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div><div class="insight-card"><div class="section-title">Alertas clave</div><div class="insight-list">${alertas.map((item) => `<div class="insight-item">${item}</div>`).join("")}</div></div></div>
+        </div>
+        <div class="footer-card"><div class="section-title">Notas metodológicas</div><div class="footer-grid"><div class="footer-item"><strong>Fuente</strong>Sistema de Información Social en Emergencias.</div><div class="footer-item metodologia"><strong>Metodología</strong>Cada vista mensual utiliza la columna de estado correspondiente al mes seleccionado. Las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central. La información territorial es reportada por la persona usuaria, por lo que pueden presentarse diferencias entre región y comuna. Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</div></div></div>
+        </div>
+    `;
+    crearGraficos(monthData);
+}
+function procesarTextoCsv(text, origenLabel) {
+    const { datos, headers } = parsearCSV(text);
+    if (datos.length === 0) {
+        throw new Error("El archivo está vacío o no tiene filas de datos.");
+    }
+    const colRegion = buscarColumna(headers, ["REGION", "REGIÓN", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
+    const colComuna = buscarColumna(headers, ["COMUNA", "NOMBRE_COMUNA", "NOM_COMUNA", "COMUNA_NOMBRE", "GLOSA_COMUNA"]) || buscarColumnaAproximada(headers, (n) => n.includes("COMUNA"));
+    const colDependeDe = buscarColumna(headers, ["DEPENDE DE", "DEPENDE_DE", "DEPENDENCIA", "INSTITUCION", "INSTITUCIÓN"]);
+    const columnasEstado = buscarColumnasEstado(headers).filter((h) => datos.some((fila) => String(fila[h] || "").trim() !== ""));
+    if (columnasEstado.length === 0) {
+        throw new Error("No se encontraron columnas de estado válidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
+    }
+    dashboardData = procesarDatos(datos, { colRegion, colComuna, colDependeDe, columnasEstado });
+    currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
+    renderDashboard();
+    if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
+}
+function seleccionarMes(index) { currentMonthIndex = index; renderDashboard(); }
+async function cargarDatosPublicados() {
+    mostrarError("");
+    mostrarInfo("Cargando datos automáticamente desde la fuente publicada...");
+    try {
+        const urlDescarga = construirUrlSinCache(AUTO_CSV_URL);
+        const response = await fetch(urlDescarga, { cache: "no-store" });
+        if (!response.ok) {
+            throw new Error(`No fue posible descargar el CSV (${response.status}).`);
+        }
+        const text = await response.text();
+        procesarTextoCsv(text, AUTO_CSV_URL);
+        mostrarInfo("");
+    } catch (error) {
+        mostrarError("Error al cargar la fuente publicada: " + error.message);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    cargarDatosPublicados();
+});
+window.addEventListener("click", (event) => {
+    const wrap = document.querySelector(".export-wrap");
+    if (wrap && !wrap.contains(event.target)) cerrarMenuExportacion();
+});
