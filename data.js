@@ -261,29 +261,47 @@ function obtenerHallazgos(monthData, prevMonthData) {
     const diffAcreditado = prevMonthData ? monthData.acreditado - prevMonthData.acreditado : 0;
     return [
         `${monthData.label}: número de personas acreditadas ${fmt(monthData.acreditado)}, número de personas no vigentes ${fmt(monthData.noVigente)} y número de personas no acreditadas ${fmt(monthData.noAcreditado)}.`,
-        topNumero ? `${topNumero.RegionEtiqueta} concentra el mayor número de registros del mes, con ${fmt(topNumero.Total)} registros.` : "No hay información regional disponible.",
-        topAcreditacion ? `${topAcreditacion.RegionEtiqueta} presenta un desempeño relativo destacado en acreditación y registra ${fmt(topAcreditacion.Acreditado)} personas acreditadas en el mes seleccionado.` : "No hay suficiente base para comparar la acreditación regional.",
-        topNoVigente ? `${topNoVigente.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(topNoVigente.NoVigente)} registros.` : "No se identificaron concentraciones relevantes de no vigencia.",
-        prevMonthData ? `La variación mensual del número de personas acreditadas es ${diffAcreditado > 0 ? "+" : ""}${fmt(diffAcreditado)} respecto de ${prevMonthData.label}.` : "No existe un mes previo informado para calcular variación mensual."
+        topNumero ? { titulo: "Mayor número de registros", hallazgo: `${topNumero.RegionEtiqueta} concentra el mayor número de registros del mes, con ${fmt(topNumero.Total)} registros.`, lectura: "Este volumen puede orientar la priorización del seguimiento territorial y del apoyo operativo." } : { titulo: "Mayor número de registros", hallazgo: "No hay información regional disponible.", lectura: "No se identifican territorios para priorizar por volumen de registros." },
+        topAcreditacion ? { titulo: "Mayor acreditación", hallazgo: `${topAcreditacion.RegionEtiqueta} registra ${fmt(topAcreditacion.Acreditado)} personas acreditadas en el mes seleccionado.`, lectura: "Este resultado permite observar un desempeño relativo destacado en la columna de acreditación regional." } : { titulo: "Mayor acreditación", hallazgo: "No hay suficiente base para comparar la acreditación regional.", lectura: "Se requiere mayor volumen de registros para una lectura territorial consistente." },
+        topNoVigente ? { titulo: "Mayor no vigencia", hallazgo: `${topNoVigente.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(topNoVigente.NoVigente)} registros.`, lectura: "Este resultado orienta la revisión de vigencia, actualización o seguimiento territorial." } : { titulo: "Mayor no vigencia", hallazgo: "No se identificaron concentraciones relevantes de no vigencia.", lectura: "Mantener seguimiento regular de la información territorial." },
+        prevMonthData ? { titulo: "Variación mensual", hallazgo: `Las personas acreditadas ${diffAcreditado >= 0 ? "aumentan" : "disminuyen"} en ${fmt(Math.abs(diffAcreditado))} respecto de ${prevMonthData.label}.`, lectura: "Este cambio permite observar avance, retroceso o estabilidad del proceso entre períodos." } : { titulo: "Variación mensual", hallazgo: "No existe un mes previo informado para calcular variación mensual.", lectura: "La comparación se habilita cuando existe un período anterior disponible." }
     ];
 }
 function obtenerAlertas(monthData, prevMonthData) {
     const alertas = [];
     const regiones = monthData.porRegion.filter((r) => r.Total > 0 && r.Region !== "NIVEL CENTRAL");
-    const mayorNoVigencia = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
-    const mayorNoAcreditacion = [...regiones].sort((a, b) => b.NoAcreditado - a.NoAcreditado)[0];
-    const mayorBrecha = [...regiones].sort((a, b) => (b.NoVigente + b.NoAcreditado) - (a.NoVigente + a.NoAcreditado))[0];
-    const mayorRegistros = [...regiones].sort((a, b) => b.Total - a.Total)[0];
-    if (mayorNoVigencia && mayorNoVigencia.NoVigente > 0) {
-        alertas.push({ etiqueta: "Seguimiento", titulo: "Seguimiento de vigencia", dato: `${mayorNoVigencia.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(mayorNoVigencia.NoVigente)} registros.`, lectura: "Este resultado permite priorizar revisión de vigencia, actualización o seguimiento territorial." });
-    }
-    if (mayorNoAcreditacion && mayorNoAcreditacion.NoAcreditado > 0) {
-        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Brecha de acreditación", dato: `${mayorNoAcreditacion.RegionEtiqueta} registra el mayor número de personas no acreditadas, con ${fmt(mayorNoAcreditacion.NoAcreditado)} registros.`, lectura: "Este dato permite identificar territorios donde podría requerirse mayor seguimiento del proceso de acreditación." });
-    }
-    if (mayorBrecha && (mayorBrecha.NoVigente + mayorBrecha.NoAcreditado) > 0) {
+    const usosRegion = {};
+    const puedeUsar = (region) => (usosRegion[region] || 0) < 2;
+    const usar = (fila) => { usosRegion[fila.Region] = (usosRegion[fila.Region] || 0) + 1; };
+    const elegir = (filas, condicion = () => true) => filas.find((fila) => condicion(fila) && puedeUsar(fila.Region));
+    const porNoVigencia = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente);
+    const porNoAcreditacion = [...regiones].sort((a, b) => b.NoAcreditado - a.NoAcreditado);
+    const porBrecha = [...regiones].sort((a, b) => (b.NoVigente + b.NoAcreditado) - (a.NoVigente + a.NoAcreditado));
+    const porRegistros = [...regiones].sort((a, b) => b.Total - a.Total);
+    const porBajaAcreditacion = [...regiones].filter((r) => r.Total >= 200).sort((a, b) => a.Acreditado - b.Acreditado);
+    const mayorBrecha = elegir(porBrecha, (r) => (r.NoVigente + r.NoAcreditado) > 0);
+    if (mayorBrecha) {
+        usar(mayorBrecha);
         alertas.push({ etiqueta: "Atención", titulo: "Brecha territorial acumulada", dato: `${mayorBrecha.RegionEtiqueta} concentra ${fmt(mayorBrecha.NoVigente + mayorBrecha.NoAcreditado)} personas sin acreditación vigente o no acreditadas.`, lectura: "Este volumen permite orientar acciones de revisión y apoyo operativo.", base: "Base de cálculo: No vigente + No acreditado." });
     }
+    const mayorNoVigencia = elegir(porNoVigencia, (r) => r.NoVigente > 0);
+    if (mayorNoVigencia && mayorNoVigencia.NoVigente > 0) {
+        usar(mayorNoVigencia);
+        alertas.push({ etiqueta: "Seguimiento", titulo: "Seguimiento de vigencia", dato: `${mayorNoVigencia.RegionEtiqueta} registra el mayor número de personas no vigentes, con ${fmt(mayorNoVigencia.NoVigente)} registros.`, lectura: "Este resultado permite priorizar revisión de vigencia, actualización o seguimiento territorial." });
+    }
+    const mayorNoAcreditacion = elegir(porNoAcreditacion, (r) => r.NoAcreditado > 0);
+    if (mayorNoAcreditacion && mayorNoAcreditacion.NoAcreditado > 0) {
+        usar(mayorNoAcreditacion);
+        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Brecha de acreditación", dato: `${mayorNoAcreditacion.RegionEtiqueta} registra el mayor número de personas no acreditadas, con ${fmt(mayorNoAcreditacion.NoAcreditado)} registros.`, lectura: "Este dato permite identificar territorios donde podría requerirse mayor seguimiento del proceso de acreditación." });
+    }
+    const bajaAcreditacion = elegir(porBajaAcreditacion, (r) => r.Total > 0);
+    if (bajaAcreditacion) {
+        usar(bajaAcreditacion);
+        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Bajo volumen de acreditación", dato: `${bajaAcreditacion.RegionEtiqueta} registra ${fmt(bajaAcreditacion.Acreditado)} personas acreditadas entre ${fmt(bajaAcreditacion.Total)} registros.`, lectura: "Este punto ayuda a identificar territorios donde el seguimiento comunal puede ser prioritario." });
+    }
+    const mayorRegistros = elegir(porRegistros, (r) => r.Total > 0);
     if (mayorRegistros && mayorRegistros.Total > 0) {
+        usar(mayorRegistros);
         alertas.push({ etiqueta: "Seguimiento", titulo: "Concentración de registros", dato: `${mayorRegistros.RegionEtiqueta} concentra ${fmt(mayorRegistros.Total)} registros en el mes seleccionado.`, lectura: "Este volumen puede requerir seguimiento proporcional a la carga territorial registrada." });
     }
     if (prevMonthData) {

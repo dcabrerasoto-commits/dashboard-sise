@@ -23,6 +23,9 @@ function lecturaEjecutivaMes(monthData) {
 function renderTarjetasHallazgos(hallazgos) {
     const titulos = ["Mayor número de registros", "Mayor acreditación", "Mayor no vigencia", "Variación mensual"];
     return hallazgos.slice(1).map((item, index) => {
+        if (typeof item === "object") {
+            return `<div class="insight-item insight-structured"><div class="insight-kicker">${item.titulo || titulos[index] || "Síntesis"}</div><div class="insight-main">${mesNombrePropioHtml(item.hallazgo || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.lectura || "")}</div></div>`;
+        }
         const partes = item.split(", ");
         const dato = partes.length > 1 ? partes[0] : item.split(".")[0];
         return `<div class="insight-item insight-structured"><div class="insight-kicker">${titulos[index] || "Síntesis"}</div><div class="insight-main">${mesNombrePropioHtml(dato)}</div><div class="insight-copy">${mesNombrePropioHtml(item)}</div></div>`;
@@ -117,11 +120,11 @@ function abrirDetalleRegion(region) {
         const brechaRegional = regionData.NoVigente + regionData.NoAcreditado;
         contenedor.innerHTML = `
             <div class="modal-grid kpi-section modal-kpi-grid">
-                <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(regionData.Total)}</div><div class="kpi-percent">Corresponde al total de registros de la región seleccionada.</div></div>
-                <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(regionData.Acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.Acreditado, regionData.Total)} del total de registros de la región seleccionada.</div></div>
-                <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(regionData.NoVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoVigente, regionData.Total)} del total de registros de la región seleccionada.</div></div>
-                <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(regionData.NoAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoAcreditado, regionData.Total)} del total de registros de la región seleccionada.</div></div>
-                <div class="kpi-card brecha"><div class="kpi-label">N° de personas con brecha de acreditación</div><div class="kpi-value">${fmt(brechaRegional)}</div><div class="kpi-percent">${porcentajeRatioEs(brechaRegional, regionData.Total)} del total de registros de la región seleccionada.</div></div>
+                <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(regionData.Total)}</div></div>
+                <div class="kpi-card verde"><div class="kpi-label">N° de personas acreditadas</div><div class="kpi-value">${fmt(regionData.Acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.Acreditado, regionData.Total)} del total regional.</div></div>
+                <div class="kpi-card ambar"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(regionData.NoVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoVigente, regionData.Total)} del total regional.</div></div>
+                <div class="kpi-card rojo"><div class="kpi-label">N° de personas no acreditadas</div><div class="kpi-value">${fmt(regionData.NoAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoAcreditado, regionData.Total)} del total regional.</div></div>
+                <div class="kpi-card brecha"><div class="kpi-label">N° de personas con brecha de acreditación</div><div class="kpi-value">${fmt(brechaRegional)}</div><div class="kpi-percent">No vigente + No acreditado.</div></div>
             </div>
                 ${esNivelCentral ? "" : `<div class="table-section" style="padding:0; border:none; box-shadow:none;">
                     <div class="section-title" style="padding:0 0 8px 0;">Estados por comuna</div>
