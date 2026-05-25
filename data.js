@@ -260,11 +260,11 @@ function obtenerHallazgos(monthData, prevMonthData) {
     const topNoVigente = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
     const diffAcreditado = prevMonthData ? monthData.acreditado - prevMonthData.acreditado : 0;
     return [
-        `${monthData.label}: número de personas acreditadas ${fmt(monthData.acreditado)}, número de personas no vigentes ${fmt(monthData.noVigente)} y número de personas no acreditadas ${fmt(monthData.noAcreditado)}.`,
+        `${monthData.label}: ${fmt(monthData.acreditado)} personas con acreditación vigente y ${fmt(monthData.noVigente + monthData.noAcreditado)} personas sin acreditación vigente.`,
         topNumero ? { titulo: "Mayor número de registros", hallazgo: `${topNumero.RegionEtiqueta} concentra ${fmt(topNumero.Total)} registros.` } : { titulo: "Mayor número de registros", hallazgo: "No hay información regional disponible." },
-        topAcreditacion ? { titulo: "Mayor acreditación", hallazgo: `${topAcreditacion.RegionEtiqueta} registra ${fmt(topAcreditacion.Acreditado)} personas acreditadas.` } : { titulo: "Mayor acreditación", hallazgo: "No hay suficiente base para comparar la acreditación regional." },
+        topAcreditacion ? { titulo: "Mayor número de personas con acreditación vigente", hallazgo: `${topAcreditacion.RegionEtiqueta} registra ${fmt(topAcreditacion.Acreditado)} personas con acreditación vigente.` } : { titulo: "Mayor número de personas con acreditación vigente", hallazgo: "No hay suficiente base para comparar la acreditación regional." },
         topNoVigente ? { titulo: "Mayor no vigencia", hallazgo: `${topNoVigente.RegionEtiqueta} registra ${fmt(topNoVigente.NoVigente)} personas no vigentes.` } : { titulo: "Mayor no vigencia", hallazgo: "No se identificaron concentraciones relevantes de no vigencia." },
-        prevMonthData ? { titulo: "Variación mensual", hallazgo: `Las personas acreditadas ${diffAcreditado >= 0 ? "aumentan" : "disminuyen"} en ${fmt(Math.abs(diffAcreditado))} respecto de ${prevMonthData.label}.` } : { titulo: "Variación mensual", hallazgo: "No existe un mes previo informado para calcular variación mensual." }
+        prevMonthData ? { titulo: "Variación mensual", hallazgo: `Las personas con acreditación vigente ${diffAcreditado >= 0 ? "aumentan" : "disminuyen"} en ${fmt(Math.abs(diffAcreditado))} respecto de ${prevMonthData.label}.` } : { titulo: "Variación mensual", hallazgo: "No existe un mes previo informado para calcular variación mensual." }
     ];
 }
 function obtenerAlertas(monthData, prevMonthData) {
@@ -280,23 +280,23 @@ function obtenerAlertas(monthData, prevMonthData) {
     const mayorBrecha = elegir(porBrecha, (r) => (r.NoVigente + r.NoAcreditado) > 0);
     if (mayorBrecha) {
         usar(mayorBrecha);
-        alertas.push({ etiqueta: "Atención", titulo: "Brecha territorial acumulada", dato: `${mayorBrecha.RegionEtiqueta} registra ${fmt(mayorBrecha.NoVigente + mayorBrecha.NoAcreditado)} personas sin acreditación vigente o no acreditadas.`, base: "Base: No vigente + No acreditado." });
+        alertas.push({ etiqueta: "Atención", titulo: "Mayor grupo sin acreditación vigente", dato: `${mayorBrecha.RegionEtiqueta} registra ${fmt(mayorBrecha.NoVigente + mayorBrecha.NoAcreditado)} personas sin acreditación vigente.`, base: "Base: No vigente + Sin acreditación previa." });
     }
     const mayorNoAcreditacion = elegir(porNoAcreditacion, (r) => r.NoAcreditado > 0);
     if (mayorNoAcreditacion && mayorNoAcreditacion.NoAcreditado > 0) {
         usar(mayorNoAcreditacion);
-        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Brecha de acreditación", dato: `${mayorNoAcreditacion.RegionEtiqueta} registra ${fmt(mayorNoAcreditacion.NoAcreditado)} personas no acreditadas.` });
+        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Mayor número de personas sin acreditación previa", dato: `${mayorNoAcreditacion.RegionEtiqueta} registra ${fmt(mayorNoAcreditacion.NoAcreditado)} personas sin acreditación previa.` });
     }
     const bajaAcreditacion = elegir(porBajaAcreditacion, (r) => r.Total > 0);
     if (bajaAcreditacion) {
         usar(bajaAcreditacion);
-        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Bajo volumen de acreditación", dato: `${bajaAcreditacion.RegionEtiqueta} registra ${fmt(bajaAcreditacion.Acreditado)} personas acreditadas entre ${fmt(bajaAcreditacion.Total)} registros.` });
+        alertas.push({ etiqueta: "Revisión prioritaria", titulo: "Bajo volumen de acreditación vigente", dato: `${bajaAcreditacion.RegionEtiqueta} registra ${fmt(bajaAcreditacion.Acreditado)} personas con acreditación vigente entre ${fmt(bajaAcreditacion.Total)} registros.` });
     }
     if (prevMonthData) {
         const deltaNoVigente = monthData.noVigente - prevMonthData.noVigente;
         const deltaAcreditado = monthData.acreditado - prevMonthData.acreditado;
         if (deltaAcreditado !== 0) {
-            alertas.push({ etiqueta: "Seguimiento", titulo: "Cambio mensual relevante", dato: `El número de personas acreditadas ${deltaAcreditado > 0 ? "aumenta" : "disminuye"} en ${fmt(Math.abs(deltaAcreditado))} respecto de ${prevMonthData.label}.` });
+            alertas.push({ etiqueta: "Seguimiento", titulo: "Cambio mensual relevante", dato: `El número de personas con acreditación vigente ${deltaAcreditado > 0 ? "aumenta" : "disminuye"} en ${fmt(Math.abs(deltaAcreditado))} respecto de ${prevMonthData.label}.` });
         }
         if (deltaNoVigente !== 0 && alertas.length < 6) {
             alertas.push({ etiqueta: "Seguimiento", titulo: "Variación de no vigencia", dato: `El número de personas no vigentes ${deltaNoVigente > 0 ? "aumenta" : "disminuye"} en ${fmt(Math.abs(deltaNoVigente))} respecto de ${prevMonthData.label}.` });
