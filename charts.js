@@ -46,7 +46,7 @@ function crearGraficos(monthData) {
         plugins: [doughnutPercentageLabels],
         type: "doughnut",
         data: {
-            labels: ["ACREDITADO", "NO VIGENTE", "NO ACREDITADO", "SIN ESTADO"],
+            labels: ["Con acreditación vigente", "No vigente", "Sin acreditación previa", "Sin estado"],
             datasets: [{ data: [monthData.acreditado, monthData.noVigente, monthData.noAcreditado, monthData.sinEstado], backgroundColor: ["#1a7a4a", "#b45309", "#b91c1c", "#64748b"], borderColor: "#ffffff", borderWidth: 2 }]
         },
         options: {
@@ -73,9 +73,9 @@ function crearGraficos(monthData) {
         data: {
             labels: dashboardData.monthly.map((m) => typeof mesNombrePropioText === "function" ? mesNombrePropioText(m.label) : m.label),
             datasets: [
-                { label: "ACREDITADO", data: dashboardData.monthly.map((m) => m.acreditado), borderColor: "#1a7a4a", backgroundColor: "rgba(26,122,74,0.12)", pointBackgroundColor: "#1a7a4a", pointRadius: 4, tension: 0.25, fill: false },
-                { label: "NO VIGENTE", data: dashboardData.monthly.map((m) => m.noVigente), borderColor: "#b45309", backgroundColor: "rgba(180,83,9,0.12)", pointBackgroundColor: "#b45309", pointRadius: 4, tension: 0.25, fill: false },
-                { label: "NO ACREDITADO", data: dashboardData.monthly.map((m) => m.noAcreditado), borderColor: "#b91c1c", backgroundColor: "rgba(185,28,28,0.12)", pointBackgroundColor: "#b91c1c", pointRadius: 4, tension: 0.25, fill: false }
+                { label: "Con acreditación vigente", data: dashboardData.monthly.map((m) => m.acreditado), borderColor: "#1a7a4a", backgroundColor: "rgba(26,122,74,0.12)", pointBackgroundColor: "#1a7a4a", pointRadius: 4, tension: 0.25, fill: false },
+                { label: "No vigente", data: dashboardData.monthly.map((m) => m.noVigente), borderColor: "#b45309", backgroundColor: "rgba(180,83,9,0.12)", pointBackgroundColor: "#b45309", pointRadius: 4, tension: 0.25, fill: false },
+                { label: "Sin acreditación previa", data: dashboardData.monthly.map((m) => m.noAcreditado), borderColor: "#b91c1c", backgroundColor: "rgba(185,28,28,0.12)", pointBackgroundColor: "#b91c1c", pointRadius: 4, tension: 0.25, fill: false }
             ]
         },
         options: {

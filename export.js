@@ -37,7 +37,7 @@ function exportarRegional() {
         r.Region === "NIVEL CENTRAL" ? "-" : fmt(r.NoAcreditadoOtras),
         fmt(r.Total)
     ]);
-    descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Acreditado", "% del acreditado nacional", "No vigente", "No acreditado", "Municipalidad Acreditados", "Municipalidad No vigentes", "Municipalidad No acreditados", "SEREMI Acreditados", "SEREMI No vigentes", "SEREMI No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
+    descargarExcel(`sise_${slug(monthData.label)}_resumen_regional.xls`, `Resumen nacional por región - ${monthData.label}`, ["Región", "Con acreditación vigente", "% con acreditación vigente respecto al total nacional", "No vigente", "Sin acreditación previa", "Municipalidad con acreditación vigente", "Municipalidad No vigentes", "Municipalidad sin acreditación previa", "SEREMI con acreditación vigente", "SEREMI No vigentes", "SEREMI sin acreditación previa", "Otras instituciones con acreditación vigente", "Otras instituciones No vigentes", "Otras instituciones sin acreditación previa", "Total"], filas);
     cerrarMenuExportacion();
 }
 function exportarComunalNacional() {
@@ -63,7 +63,7 @@ function exportarComunalNacional() {
             fmt(c.Total)
         ])
     );
-    descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Acreditado", "% del acreditado regional", "No vigente", "No acreditado", "Municipalidad Acreditados", "Municipalidad No vigentes", "Municipalidad No acreditados", "SEREMI Acreditados", "SEREMI No vigentes", "SEREMI No acreditados", "Otras instituciones Acreditados", "Otras instituciones No vigentes", "Otras instituciones No acreditados", "Total"], filas);
+    descargarExcel(`sise_${slug(monthData.label)}_resumen_comunal_nacional.xls`, `Resumen nacional por comuna - ${monthData.label}`, ["Región", "Comuna", "Con acreditación vigente", "% con acreditación vigente respecto al total regional", "No vigente", "Sin acreditación previa", "Municipalidad con acreditación vigente", "Municipalidad No vigentes", "Municipalidad sin acreditación previa", "SEREMI con acreditación vigente", "SEREMI No vigentes", "SEREMI sin acreditación previa", "Otras instituciones con acreditación vigente", "Otras instituciones No vigentes", "Otras instituciones sin acreditación previa", "Total"], filas);
     cerrarMenuExportacion();
 }
 function toggleMenuExportacion() { document.getElementById("exportMenu").classList.toggle("visible"); }
