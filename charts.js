@@ -48,7 +48,7 @@ function crearGraficos(monthData) {
         type: "doughnut",
         data: {
             labels: ["Con acreditación vigente", "Sin acreditación vigente"],
-            datasets: [{ data: [monthData.acreditado, sinAcreditacionVigente], backgroundColor: ["#1a7a4a", "#8a4b16"], borderColor: "#ffffff", borderWidth: 2 }]
+            datasets: [{ data: [monthData.acreditado, sinAcreditacionVigente], backgroundColor: ["#1a7a4a", "#475569"], borderColor: "#ffffff", borderWidth: 2 }]
         },
         options: {
             responsive: true,
@@ -75,7 +75,7 @@ function crearGraficos(monthData) {
             labels: dashboardData.monthly.map((m) => typeof mesNombrePropioText === "function" ? mesNombrePropioText(m.label) : m.label),
             datasets: [
                 { label: "Con acreditación vigente", data: dashboardData.monthly.map((m) => m.acreditado), borderColor: "#1a7a4a", backgroundColor: "rgba(26,122,74,0.12)", pointBackgroundColor: "#1a7a4a", pointRadius: 4, tension: 0.25, fill: false },
-                { label: "Sin acreditación vigente", data: dashboardData.monthly.map((m) => m.noVigente + m.noAcreditado), borderColor: "#8a4b16", backgroundColor: "rgba(138,75,22,0.12)", pointBackgroundColor: "#8a4b16", pointRadius: 4, tension: 0.25, fill: false }
+                { label: "Sin acreditación vigente", data: dashboardData.monthly.map((m) => m.noVigente + m.noAcreditado), borderColor: "#475569", backgroundColor: "rgba(71,85,105,0.12)", pointBackgroundColor: "#475569", pointRadius: 4, tension: 0.25, fill: false }
             ]
         },
         options: {
