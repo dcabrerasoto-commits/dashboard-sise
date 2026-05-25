@@ -222,7 +222,7 @@ function renderDashboard() {
             </div>
         </div>
         <div class="charts-section">
-            <div class="chart-card"><div class="section-title">Evolución mensual según acreditación vigente</div><div class="section-note">Compara los dos grupos principales. Sin acreditación vigente agrupa no vigente y sin acreditación previa.</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
+            <div class="chart-card"><div class="section-title">Evolución mensual según acreditación vigente</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
             <div class="chart-card"><div class="section-title">Distribución por acreditación vigente</div><div class="section-note">Distribución del mes seleccionado. Sin acreditación vigente agrupa no vigente y sin acreditación previa.</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
         </div>
         <div class="mid-section">
