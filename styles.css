@@ -180,7 +180,8 @@ input[type="file"] { display: none; }
 .delta-down, .badge-rojo { background: #fee2e2; color: #991b1b; }
 .delta-flat, .badge-ambar { background: #fef3c7; color: #92400e; }
 .chart-canvas-wrap { position: relative; height: 230px; }
-.chart-canvas-wrap.compact { height: 170px; max-width: 280px; margin: 0 auto; }
+.chart-canvas-wrap.compact { height: 210px; max-width: 280px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.chart-canvas-wrap.compact canvas { max-height: 180px; }
 .insight-list { display: grid; gap: 8px; }
 .chart-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
 .chart-card:hover { transform: translateY(-4px); box-shadow: 0 18px 30px rgba(26, 64, 128, 0.14); }
