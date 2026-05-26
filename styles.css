@@ -321,7 +321,7 @@ tr.region-group-impar td { background: #f7fafd; }
     td { padding: 4px !important; font-size: 8.5px !important; white-space: normal !important; }
     thead { display: table-header-group !important; }
     tfoot { display: table-footer-group !important; }
-    tr, td, th { break-inside: avoid; page-break-inside: avoid; }
+    tr, td, th { break-inside: auto; page-break-inside: auto; }
     .subfila-institucion td, .subfila-note td { font-size: 7.5px !important; }
     .insights-column { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
     .modal-backdrop { display: none !important; }
@@ -332,4 +332,7 @@ tr.region-group-impar td { background: #f7fafd; }
     body:has(.modal-backdrop.visible) .modal-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
     body:has(.modal-backdrop.visible) .modal-card .table-section { max-height: none !important; overflow: visible !important; background: #ffffff !important; }
     body:has(.modal-backdrop.visible) .modal-card .fixed-data-table { min-width: 0 !important; width: 100% !important; }
+    body:has(.modal-backdrop.visible) .modal-card .fixed-data-table thead { position: static !important; display: table-header-group !important; box-shadow: none !important; }
+    body:has(.modal-backdrop.visible) .modal-card .fixed-data-table thead th { position: static !important; top: auto !important; }
+    body:has(.modal-backdrop.visible) .modal-card .fixed-data-table tr { break-inside: auto !important; page-break-inside: auto !important; }
 }
