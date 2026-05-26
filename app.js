@@ -261,6 +261,15 @@ function procesarTextoCsv(text, origenLabel) {
     renderDashboard();
     if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
 }
+function cargarDatosPreprocesados() {
+    if (!window.SISE_DASHBOARD_DATA || !window.SISE_DASHBOARD_DATA.data) return false;
+    dashboardData = window.SISE_DASHBOARD_DATA.data;
+    currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
+    renderDashboard();
+    mostrarInfo("");
+    mostrarError("");
+    return true;
+}
 function seleccionarMes(index) { currentMonthIndex = index; renderDashboard(); }
 async function cargarDatosPublicados() {
     mostrarError("");
@@ -280,7 +289,7 @@ async function cargarDatosPublicados() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    cargarDatosPublicados();
+    if (!cargarDatosPreprocesados()) cargarDatosPublicados();
 });
 window.addEventListener("click", (event) => {
     const wrap = document.querySelector(".export-wrap");

@@ -1,0 +1,38 @@
+name: Actualizar datos dashboard SISE
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [update-sise-dashboard]
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Generar archivo público de datos
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SHEET_NAME: ${{ secrets.GOOGLE_SHEET_NAME }}
+          GOOGLE_SHEET_RANGE: ${{ secrets.GOOGLE_SHEET_RANGE }}
+          SOURCE_CSV_URL: ${{ secrets.SOURCE_CSV_URL }}
+          SOURCE_CSV_BEARER_TOKEN: ${{ secrets.SOURCE_CSV_BEARER_TOKEN }}
+        run: node scripts/generate-dashboard-data.js
+      - name: Publicar si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard-data.js
+          if git diff --cached --quiet; then
+            echo "Sin cambios de datos."
+          else
+            git commit -m "Actualizar datos publicos del dashboard"
+            git push
+          fi
