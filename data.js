@@ -51,6 +51,30 @@ function parsearCSV(csv) {
 function buscarColumna(headers, candidatos) { const headersNorm = headers.map(norm); for (const cand of candidatos) { const idx = headersNorm.indexOf(norm(cand)); if (idx !== -1) return headers[idx]; } return null; }
 function buscarColumnaAproximada(headers, matcher) { for (const header of headers) { if (matcher(norm(header), header)) return header; } return null; }
 function buscarColumnasEstado(headers) { return headers.filter((header) => norm(header).startsWith("ESTADO")); }
+function normalizarRunValido(valor) {
+    const limpio = String(valor || "").replace(/\./g, "").replace(/-/g, "").trim().toUpperCase();
+    if (!/^\d{7,8}[0-9K]$/.test(limpio)) return "";
+    const cuerpo = limpio.slice(0, -1);
+    const dv = limpio.slice(-1);
+    let suma = 0;
+    let multiplicador = 2;
+    for (let i = cuerpo.length - 1; i >= 0; i--) {
+        suma += Number(cuerpo[i]) * multiplicador;
+        multiplicador = multiplicador === 7 ? 2 : multiplicador + 1;
+    }
+    const esperado = 11 - (suma % 11);
+    const dvEsperado = esperado === 11 ? "0" : esperado === 10 ? "K" : String(esperado);
+    return dv === dvEsperado ? `${cuerpo}-${dv}` : "";
+}
+function filtrarRunUnicosValidos(datos, colRun) {
+    const vistos = new Set();
+    return datos.filter((fila) => {
+        const run = normalizarRunValido(fila[colRun]);
+        if (!run || vistos.has(run)) return false;
+        vistos.add(run);
+        return true;
+    });
+}
 function extraerMesDesdeColumna(nombre) { return norm(nombre).replace(/^ESTADO_?/, "").trim(); }
 function normalizarEstado(valor) { const estado = norm(valor); if (!estado) return "SIN ESTADO"; if (estado.includes("NO VIGENTE")) return "NO VIGENTE"; if (estado.includes("NO ACREDITADO")) return "NO ACREDITADO"; if (estado === "ACREDITADO") return "ACREDITADO"; return estado; }
 function comunaClave(valor) { return norm(valor).replace(/[^A-Z0-9]/g, ""); }

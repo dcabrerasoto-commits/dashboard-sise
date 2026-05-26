@@ -244,11 +244,19 @@ function procesarTextoCsv(text, origenLabel) {
     const colRegion = buscarColumna(headers, ["REGION", "REGIÓN", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
     const colComuna = buscarColumna(headers, ["COMUNA", "NOMBRE_COMUNA", "NOM_COMUNA", "COMUNA_NOMBRE", "GLOSA_COMUNA"]) || buscarColumnaAproximada(headers, (n) => n.includes("COMUNA"));
     const colDependeDe = buscarColumna(headers, ["DEPENDE DE", "DEPENDE_DE", "DEPENDENCIA", "INSTITUCION", "INSTITUCIÓN"]);
+    const colRun = buscarColumna(headers, ["RUN", "RUT", "RUN_PERSONA", "RUT_PERSONA", "RUN BENEFICIARIO", "RUT BENEFICIARIO"]) || buscarColumnaAproximada(headers, (n) => n === "RUN" || n === "RUT" || n.includes("RUN") || n.includes("RUT"));
     const columnasEstado = buscarColumnasEstado(headers).filter((h) => datos.some((fila) => String(fila[h] || "").trim() !== ""));
     if (columnasEstado.length === 0) {
         throw new Error("No se encontraron columnas de estado válidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
     }
-    dashboardData = procesarDatos(datos, { colRegion, colComuna, colDependeDe, columnasEstado });
+    if (!colRun) {
+        throw new Error("No se encontró una columna RUN o RUT para identificar personas únicas.");
+    }
+    const datosRunValidos = filtrarRunUnicosValidos(datos, colRun);
+    if (datosRunValidos.length === 0) {
+        throw new Error("No se encontraron RUN válidos en la fuente publicada.");
+    }
+    dashboardData = procesarDatos(datosRunValidos, { colRegion, colComuna, colDependeDe, columnasEstado });
     currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
     renderDashboard();
     if (origenLabel) mostrarInfo(`Fuente cargada: ${origenLabel}`);
