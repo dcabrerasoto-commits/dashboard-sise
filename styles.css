@@ -202,6 +202,7 @@ input[type="file"] { display: none; }
 table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
 .fixed-data-table { position: relative; }
 .fixed-data-table::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #f59e0b; z-index: 4; pointer-events: none; }
+.modal-card .fixed-data-table thead tr:first-child th { border-top: 4px solid #f59e0b !important; }
 .fixed-data-table thead { border-top: 4px solid #f59e0b !important; }
 .fixed-data-table thead th { border-top: 0 !important; }
 .fixed-data-table { table-layout: fixed; }
