@@ -200,6 +200,8 @@ input[type="file"] { display: none; }
 .panel, .table-section, .insight-card, .footer-card, .map-card { transition: transform 0.22s ease, box-shadow 0.22s ease; transform-style: preserve-3d; }
 .panel:hover, .table-section:hover, .insight-card:hover, .footer-card:hover, .map-card:hover { transform: translateY(-3px); box-shadow: 0 16px 28px rgba(26, 64, 128, 0.12); }
 table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+.fixed-data-table { position: relative; }
+.fixed-data-table::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #f59e0b; z-index: 4; pointer-events: none; }
 .fixed-data-table thead { border-top: 4px solid #f59e0b !important; }
 .fixed-data-table thead th { border-top: 0 !important; }
 .fixed-data-table { table-layout: fixed; }
