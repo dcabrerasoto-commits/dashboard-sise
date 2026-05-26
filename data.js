@@ -115,7 +115,7 @@ function mostrarInfo(msg) { const el = document.getElementById("infoMsg"); el.st
 function fmt(n) { return Number(n || 0).toLocaleString("es-CL"); }
 function pctValor(valor) { return `${Number(valor || 0).toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`; }
 function pct(n, total) { return total > 0 ? pctValor((n / total) * 100) : "-"; }
-function obtenerDelta(actual, previo) { const diff = actual - previo; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} vs mes anterior` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} vs mes anterior` }; return { className: "delta-flat", label: "Sin variación vs mes anterior" }; }
+function obtenerDelta(actual, previo, mesAnterior = "mes anterior") { const diff = actual - previo; const referencia = `respecto de ${mesNombrePropioText(mesAnterior)}`; if (diff > 0) return { className: "delta-up", label: `+${fmt(diff)} ${referencia}` }; if (diff < 0) return { className: "delta-down", label: `${fmt(diff)} ${referencia}` }; return { className: "delta-flat", label: `Sin variación ${referencia}` }; }
 function obtenerResumenVacio(region, etiquetaRegion) {
     return {
         Region: region, RegionEtiqueta: etiquetaRegion || region, Total: 0, Acreditado: 0, NoVigente: 0, NoAcreditado: 0, SinEstado: 0,
