@@ -294,3 +294,42 @@ tr.region-group-impar td { background: #f7fafd; }
 @media (max-width: 900px) { .kpi-group-with-subgroups, .modal-kpi-grid .kpi-group-with-subgroups { grid-column: 1 / -1; grid-template-columns: 1fr; } }
 @media (max-width: 760px) { body { padding: 12px; } header { padding: 24px 18px 22px; } .context-value { font-size: 14px; } .executive-text { font-size: 16px; } .definitions-grouped { grid-template-columns: 1fr; } .kpi-value { font-size: 30px; } .context-list div { grid-template-columns: 1fr; gap: 2px; } }
 @media (max-width: 760px) { .method-wide { grid-column: auto; } .method-grid-two { grid-template-columns: 1fr; } .month-group { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; } .month-btn { flex: 0 0 auto; } }
+@media print {
+    @page { size: A4 landscape; margin: 10mm; }
+    * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    body { background: #ffffff !important; padding: 0 !important; font-size: 10px; }
+    .container { max-width: none !important; width: 100% !important; }
+    header { margin-bottom: 8px !important; padding: 16px 20px !important; break-after: avoid; }
+    h1 { font-size: 24px !important; }
+    .subtitle { font-size: 11px !important; }
+    .toolbar, .export-wrap, .export-menu, .modal-close, .info-msg, .error-msg { display: none !important; }
+    .dashboard-shell, .executive-band, .kpi-section, .charts-section, .mid-section, .footer-grid { display: block !important; padding: 0 !important; margin-bottom: 8px !important; background: transparent !important; border: 0 !important; }
+    .executive-band, .kpi-section, .charts-section, .footer-grid { break-inside: avoid; page-break-inside: avoid; }
+    .panel, .chart-card, .table-section, .insight-card, .footer-card, .kpi-card { box-shadow: none !important; border: 1px solid #cbd5e1 !important; break-inside: avoid; page-break-inside: avoid; }
+    .executive-main, .executive-side, .chart-card, .insight-card, .footer-card { margin-bottom: 8px !important; padding: 10px 12px !important; }
+    .executive-text { font-size: 13px !important; }
+    .definitions-grouped, .kpi-section, .charts-section, .footer-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
+    .kpi-card { min-height: 0 !important; padding: 10px 12px !important; }
+    .kpi-value { font-size: 22px !important; }
+    .kpi-group-with-subgroups { grid-column: span 2 !important; }
+    .chart-card { min-height: 250px !important; }
+    .chart-canvas-wrap, .chart-canvas-wrap.compact { height: 210px !important; }
+    .mid-section { display: block !important; }
+    .table-section { overflow: visible !important; padding: 10px !important; margin-bottom: 8px !important; break-inside: auto !important; page-break-inside: auto !important; }
+    .fixed-data-table { min-width: 0 !important; width: 100% !important; table-layout: fixed !important; font-size: 9px !important; }
+    th { padding: 5px 4px !important; font-size: 8.5px !important; white-space: normal !important; }
+    td { padding: 4px !important; font-size: 8.5px !important; white-space: normal !important; }
+    thead { display: table-header-group !important; }
+    tfoot { display: table-footer-group !important; }
+    tr, td, th { break-inside: avoid; page-break-inside: avoid; }
+    .subfila-institucion td, .subfila-note td { font-size: 7.5px !important; }
+    .insights-column { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
+    .modal-backdrop { display: none !important; }
+    body:has(.modal-backdrop.visible) > .container { display: none !important; }
+    body:has(.modal-backdrop.visible) .modal-backdrop { position: static !important; display: block !important; padding: 0 !important; background: #ffffff !important; }
+    body:has(.modal-backdrop.visible) .modal-card { width: 100% !important; max-height: none !important; overflow: visible !important; padding: 0 !important; border: 0 !important; box-shadow: none !important; }
+    body:has(.modal-backdrop.visible) .modal-header { margin-bottom: 8px !important; break-after: avoid; }
+    body:has(.modal-backdrop.visible) .modal-grid { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 8px !important; }
+    body:has(.modal-backdrop.visible) .modal-card .table-section { max-height: none !important; overflow: visible !important; background: #ffffff !important; }
+    body:has(.modal-backdrop.visible) .modal-card .fixed-data-table { min-width: 0 !important; width: 100% !important; }
+}
