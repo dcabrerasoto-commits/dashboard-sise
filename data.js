@@ -279,15 +279,25 @@ function procesarDatos(datos, cols) {
 }
 function obtenerHallazgos(monthData, prevMonthData) {
     const regiones = monthData.porRegion.filter((r) => r.Total > 0 && r.Region !== "NIVEL CENTRAL");
-    const topNumero = [...regiones].sort((a, b) => b.Total - a.Total)[0];
-    const topAcreditacion = [...regiones].sort((a, b) => b.Acreditado - a.Acreditado)[0];
-    const topNoVigente = [...regiones].sort((a, b) => b.NoVigente - a.NoVigente)[0];
+    const usadas = new Set();
+    const elegirHallazgo = (filas, condicion = () => true) => {
+        const alternativa = filas.find((fila) => condicion(fila) && !usadas.has(fila.Region));
+        const seleccion = alternativa || filas.find(condicion);
+        if (seleccion) usadas.add(seleccion.Region);
+        return seleccion;
+    };
+    const porTotal = [...regiones].sort((a, b) => b.Total - a.Total);
+    const porAcreditado = [...regiones].sort((a, b) => b.Acreditado - a.Acreditado);
+    const porNoAcreditado = [...regiones].sort((a, b) => b.NoAcreditado - a.NoAcreditado);
+    const topNumero = elegirHallazgo(porTotal);
+    const topAcreditacion = elegirHallazgo(porAcreditado, (r) => r.Acreditado > 0);
+    const topSinAcreditacionPrevia = elegirHallazgo(porNoAcreditado, (r) => r.NoAcreditado > 0);
     const diffAcreditado = prevMonthData ? monthData.acreditado - prevMonthData.acreditado : 0;
     return [
         `${monthData.label}: ${fmt(monthData.acreditado)} personas con acreditación vigente y ${fmt(monthData.noVigente + monthData.noAcreditado)} personas sin acreditación vigente.`,
         topNumero ? { titulo: "Mayor número de registros", hallazgo: `${topNumero.RegionEtiqueta} concentra ${fmt(topNumero.Total)} registros.` } : { titulo: "Mayor número de registros", hallazgo: "No hay información regional disponible." },
         topAcreditacion ? { titulo: "Mayor número con acreditación vigente", hallazgo: `${topAcreditacion.RegionEtiqueta} registra ${fmt(topAcreditacion.Acreditado)} personas con acreditación vigente.` } : { titulo: "Mayor número con acreditación vigente", hallazgo: "No hay información regional disponible." },
-        topNoVigente ? { titulo: "Mayor no vigencia", hallazgo: `${topNoVigente.RegionEtiqueta} registra ${fmt(topNoVigente.NoVigente)} personas no vigentes.` } : { titulo: "Mayor no vigencia", hallazgo: "No se identificaron concentraciones relevantes de no vigencia." },
+        topSinAcreditacionPrevia ? { titulo: "Mayor número sin acreditación previa", hallazgo: `${topSinAcreditacionPrevia.RegionEtiqueta} registra ${fmt(topSinAcreditacionPrevia.NoAcreditado)} personas sin acreditación previa.` } : { titulo: "Mayor número sin acreditación previa", hallazgo: "No se identificaron registros sin acreditación previa." },
         prevMonthData ? { titulo: "Variación mensual", hallazgo: `Las personas con acreditación vigente ${diffAcreditado >= 0 ? "aumentan" : "disminuyen"} en ${fmt(Math.abs(diffAcreditado))} respecto de ${prevMonthData.label}.` } : { titulo: "Variación mensual", hallazgo: "No existe un mes previo informado para calcular variación mensual." }
     ];
 }
