@@ -22,7 +22,7 @@ function lecturaEjecutivaMes(monthData) {
     return `<strong>${mesNombrePropioText(monthData.label)}:</strong> ${fmt(monthData.acreditado)} personas con acreditación vigente y ${fmt(sinAcreditacionVigente)} personas sin acreditación vigente. De este segundo grupo, ${fmt(monthData.noVigente)} son no vigentes y ${fmt(monthData.noAcreditado)} no registran acreditación previa.`;
 }
 function renderTarjetasHallazgos(hallazgos) {
-    const titulos = ["Mayor número de registros", "Mayor número con acreditación vigente", "Mayor número sin acreditación previa", "Variación mensual"];
+    const titulos = ["Concentración de registros", "Acreditación vigente relevante", "Sin acreditación previa relevante", "Variación mensual"];
     return hallazgos.slice(1).map((item, index) => {
         if (typeof item === "object") {
             return `<div class="insight-item insight-structured"><div class="insight-kicker">${item.titulo || titulos[index] || "Síntesis"}</div><div class="insight-main">${mesNombrePropioHtml(item.hallazgo || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.lectura || "")}</div></div>`;
