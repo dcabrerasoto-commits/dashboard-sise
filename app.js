@@ -8,14 +8,14 @@ function textoPorcentajeSimple(valor) {
     return `<div class="percent-text percent-text-simple">${porcentajeEs(valor)}</div>`;
 }
 function mesNombrePropioText(texto) {
-    const meses = ["enero", "febrero", "marzo", "abril"];
-    return String(texto).replace(/\b(enero|febrero|marzo|abril)\b/gi, (m) => {
+    const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+    return String(texto).replace(/\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b/gi, (m) => {
         const mes = meses.find((item) => item === m.toLowerCase());
         return mes ? `${mes.charAt(0).toUpperCase()}${mes.slice(1)}` : m;
     });
 }
 function mesNombrePropioHtml(texto) {
-    return mesNombrePropioText(texto).replace(/\b(Enero|Febrero|Marzo|Abril)\b/g, "<strong>$1</strong>");
+    return mesNombrePropioText(texto).replace(/\b(Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre)\b/g, "<strong>$1</strong>");
 }
 function lecturaEjecutivaMes(monthData) {
     const sinAcreditacionVigente = monthData.noVigente + monthData.noAcreditado;
