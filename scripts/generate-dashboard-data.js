@@ -120,6 +120,14 @@ function buildDashboardData(context, rows) {
     return context.procesarDatos(datosRunValidos, { colRegion, colComuna, colDependeDe, columnasEstado });
 }
 
+function updateDataAssetVersion() {
+    const indexPath = path.join(root, "index.html");
+    const html = fs.readFileSync(indexPath, "utf8");
+    const version = new Date().toISOString().replace(/[-:TZ.]/g, "").slice(0, 14);
+    const updated = html.replace(/dashboard-data\.js\?v=[^"]+/g, `dashboard-data.js?v=${version}`);
+    if (updated !== html) fs.writeFileSync(indexPath, updated, "utf8");
+}
+
 async function main() {
     const context = loadDashboardContext();
     const rows = await readGoogleSheetRows() || await readCsvRows(context);
@@ -133,6 +141,7 @@ async function main() {
         ";\n"
     ].join("");
     fs.writeFileSync(path.join(root, "dashboard-data.js"), output, "utf8");
+    updateDataAssetVersion();
     console.log(`dashboard-data.js generado: ${dashboardData.totalPersonas} RUN válidos únicos.`);
 }
 
