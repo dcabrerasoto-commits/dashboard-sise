@@ -128,6 +128,41 @@
         </div>
       </div>
 
+      <div class="score-example">
+        <div class="score-example-intro">
+          <p class="eyebrow">Ejemplo de llenado</p>
+          <h3>¿Cómo se construye el puntaje?</h3>
+          <p>Se utiliza una escala cerrada de 1 a 5 para evitar valores libres: 1 representa una incidencia baja y 5 una incidencia crítica. Cada respuesta debe basarse en antecedentes verificables y no solo en la percepción de quien solicita.</p>
+          <div class="example-block original">
+            <span>Requerimiento utilizado</span>
+            <p>“Al consultar beneficios por RUN, la información aparece duplicada.”</p>
+          </div>
+          <div class="example-block normalized">
+            <span>Redacción TI propuesta</span>
+            <p>Corregir la consulta de beneficios por RUN para que cada beneficio se muestre una sola vez, sin omitir registros válidos y manteniendo consistencia con la fuente de datos y los permisos.</p>
+          </div>
+        </div>
+        <div class="score-table-wrap">
+          <table class="score-table">
+            <thead>
+              <tr><th>Criterio</th><th>Ejemplo</th><th>Fundamento</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Impacto</td><td>4 de 5</td><td>La duplicidad afecta la comprensión y confiabilidad de la consulta.</td></tr>
+              <tr><td>Urgencia</td><td>3 de 5</td><td>Debe corregirse, aunque primero se debe confirmar si afecta solo la visualización.</td></tr>
+              <tr><td>Riesgo</td><td>4 de 5</td><td>Puede inducir decisiones erróneas o inconsistencias en la atención.</td></tr>
+              <tr><td>Gobierno TI</td><td>4 de 5</td><td>Compromete calidad, trazabilidad y consistencia de los datos.</td></tr>
+              <tr><td>Esfuerzo</td><td>2 de 5</td><td>Como supuesto inicial, se estima una corrección acotada de consulta o visualización.</td></tr>
+            </tbody>
+          </table>
+          <div class="score-formula">
+            <strong>Lectura del resultado</strong>
+            <p>La matriz pondera las calificaciones según la metodología definida. En este ejemplo, el impacto y el riesgo son altos, mientras el esfuerzo aparente es bajo; por ello, el requerimiento tendería a ubicarse en una prioridad alta. Si el análisis técnico confirma que también afecta registros o pagos, deben aumentar el riesgo y la urgencia.</p>
+            <p><strong>Regla de uso:</strong> el puntaje propone un orden comparable; no reemplaza la decisión de jefatura. Toda modificación manual de la prioridad debe quedar justificada.</p>
+          </div>
+        </div>
+      </div>
+
       <div class="criteria-grid">
         <article><strong>Impacto</strong><span>¿Qué cambia para la operación si se resuelve?</span></article>
         <article><strong>Urgencia</strong><span>¿Existe una ventana temporal o consecuencia inmediata?</span></article>
@@ -158,6 +193,21 @@
           <strong id="sim-priority" class="priority medium">MEDIA</strong>
           <p id="sim-message">Requiere calendarización y validación de alcance.</p>
         </div>
+      </div>
+
+      <div class="method-notes">
+        <article>
+          <p class="eyebrow">Valorización referencial</p>
+          <h3>Sugerencias de tiempo y costo</h3>
+          <p>Las estimaciones sugeridas se construyen a partir de un estudio de mercado, referencias disponibles en Mercado Público y comparación con requerimientos de naturaleza similar. La matriz relaciona tipo de desarrollo, complejidad, perfiles requeridos y tiempo probable para proponer rangos iniciales de duración y costo.</p>
+          <p>Estos rangos apoyan la conversación presupuestaria, pero no constituyen una cotización ni reemplazan la estimación formal de DAI o del proveedor.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Redactor automático</p>
+          <h3>Es un motor de reglas, no una inteligencia artificial</h3>
+          <p>El redactor reconoce palabras, acciones y estructuras frecuentes, y las combina mediante patrones de redacción técnica previamente definidos. Estos patrones se levantan desde la experiencia institucional, requerimientos ya realizados y formas de especificación observadas en procesos de Mercado Público.</p>
+          <p>Su función es transformar una necesidad informal en una redacción TI más clara y comparable, sin inventar funcionalidades ni cambiar el sentido original. La propuesta siempre debe ser revisada y validada por una persona.</p>
+        </article>
       </div>
     </section>
 
