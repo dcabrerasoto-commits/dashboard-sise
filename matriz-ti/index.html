@@ -98,8 +98,14 @@
     <section id="metodologia" class="section">
       <div class="section-heading narrow">
         <p class="eyebrow">Metodología</p>
-        <h2>Tres miradas para reducir sesgos de priorización</h2>
-        <p>La matriz adapta WSJF utilizado en SAFe, RICE desarrollado por Intercom y criterios de Gobierno TI alineados con COBIT. Los pesos y umbrales son configurables y deben revisarse durante el piloto.</p>
+        <h2>Una misma solicitud, analizada desde tres perspectivas</h2>
+        <p>Seleccione un enfoque y revise cómo cambia la lectura del mismo requerimiento. La metodología no busca producir un número aislado: busca explicar por qué una solicitud debería avanzar antes que otra.</p>
+      </div>
+
+      <div class="method-context">
+        <span>Caso utilizado en toda la explicación</span>
+        <strong>“Al consultar beneficios por RUN, la información aparece duplicada.”</strong>
+        <p>Los tres enfoques observan este mismo problema, pero responden preguntas diferentes y complementarias.</p>
       </div>
 
       <div class="method-tabs" role="tablist" aria-label="Métodos de priorización">
@@ -108,83 +114,55 @@
         <button class="method-tab" type="button" data-method="gobierno" role="tab" aria-selected="false">Gobierno TI</button>
       </div>
 
-      <p class="method-stage-label"><span>1</span> Comprender el método</p>
-      <div class="method-panel" id="method-panel">
-        <div>
-          <p class="eyebrow" id="method-kicker">Costo de esperar</p>
-          <h3 id="method-title">WSJF: ¿qué conviene atender antes?</h3>
-          <p id="method-description">Favorece necesidades con alto costo de postergación y un esfuerzo abordable.</p>
-        </div>
-        <div>
-          <h4>Qué evita</h4>
-          <p id="method-avoids"></p>
-          <h4>Uso en la matriz</h4>
-          <p id="method-use"></p>
-        </div>
-        <div class="method-questions-box">
-          <h4>Preguntas orientadoras</h4>
-          <ul id="method-questions" class="question-list"></ul>
-        </div>
-      </div>
-
-      <p class="method-stage-label"><span>2</span> Interpretar la escala</p>
-      <div class="method-score-detail" aria-live="polite">
-        <div>
-          <p class="eyebrow">Escala del método seleccionado</p>
-          <h3 id="method-score-title">Cómo interpretar los puntajes WSJF</h3>
-          <p id="method-score-intro"></p>
-          <div id="method-score-scale" class="score-scale"></div>
-        </div>
-        <div class="method-applied-example">
-          <span>Ejemplo aplicado: beneficios duplicados</span>
-          <h4 id="method-example-score"></h4>
-          <p id="method-example-reason"></p>
-          <p id="method-example-reading"></p>
-        </div>
-      </div>
-
-      <p class="method-stage-label"><span>3</span> Revisar un ejemplo completo</p>
-      <div class="score-example">
-        <div class="score-example-intro">
-          <p class="eyebrow">Ejemplo de llenado</p>
-          <h3>¿Cómo se construye el puntaje?</h3>
-          <p>Se utiliza una escala cerrada de 1 a 5 para evitar valores libres: 1 representa una incidencia baja y 5 una incidencia crítica. Cada respuesta debe basarse en antecedentes verificables y no solo en la percepción de quien solicita.</p>
-          <div class="example-block original">
-            <span>Requerimiento utilizado</span>
-            <p>“Al consultar beneficios por RUN, la información aparece duplicada.”</p>
+      <div class="method-workbench">
+        <div class="method-panel" id="method-panel">
+          <div class="method-summary">
+            <p class="eyebrow" id="method-kicker">Costo de esperar</p>
+            <h3 id="method-title">WSJF: ¿qué conviene atender antes?</h3>
+            <p id="method-description">Favorece necesidades con alto costo de postergación y un esfuerzo abordable.</p>
+            <div class="method-purpose">
+              <div>
+                <span>Se utiliza para</span>
+                <p id="method-use"></p>
+              </div>
+              <div>
+                <span>Ayuda a evitar</span>
+                <p id="method-avoids"></p>
+              </div>
+            </div>
           </div>
-          <div class="example-block normalized">
-            <span>Redacción TI propuesta</span>
-            <p>Corregir la consulta de beneficios por RUN para que cada beneficio se muestre una sola vez, sin omitir registros válidos y manteniendo consistencia con la fuente de datos y los permisos.</p>
+          <div class="method-questions-box">
+            <span>Preguntas que orientan la calificación</span>
+            <ul id="method-questions" class="question-list"></ul>
           </div>
         </div>
-        <div class="score-table-wrap">
-          <table class="score-table">
-            <thead>
-              <tr><th>Criterio</th><th>Ejemplo</th><th>Fundamento</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Impacto</td><td>4 de 5</td><td>La duplicidad afecta la comprensión y confiabilidad de la consulta.</td></tr>
-              <tr><td>Urgencia</td><td>3 de 5</td><td>Debe corregirse, aunque primero se debe confirmar si afecta solo la visualización.</td></tr>
-              <tr><td>Riesgo</td><td>4 de 5</td><td>Puede inducir decisiones erróneas o inconsistencias en la atención.</td></tr>
-              <tr><td>Gobierno TI</td><td>4 de 5</td><td>Compromete calidad, trazabilidad y consistencia de los datos.</td></tr>
-              <tr><td>Esfuerzo</td><td>2 de 5</td><td>Como supuesto inicial, se estima una corrección acotada de consulta o visualización.</td></tr>
-            </tbody>
-          </table>
-          <div class="score-formula">
-            <strong>Lectura del resultado</strong>
-            <p>La matriz pondera las calificaciones según la metodología definida. En este ejemplo, el impacto y el riesgo son altos, mientras el esfuerzo aparente es bajo; por ello, el requerimiento tendería a ubicarse en una prioridad alta. Si el análisis técnico confirma que también afecta registros o pagos, deben aumentar el riesgo y la urgencia.</p>
-            <p><strong>Regla de uso:</strong> el puntaje propone un orden comparable; no reemplaza la decisión de jefatura. Toda modificación manual de la prioridad debe quedar justificada.</p>
+
+        <div class="method-score-detail" aria-live="polite">
+          <div>
+            <p class="eyebrow">Cómo se califica</p>
+            <h3 id="method-score-title">Cómo interpretar los puntajes WSJF</h3>
+            <p id="method-score-intro"></p>
+            <div id="method-score-scale" class="score-scale"></div>
+          </div>
+          <div class="method-applied-example">
+            <span>Resultado explicado para este caso</span>
+            <h4 id="method-example-score"></h4>
+            <p id="method-example-reason"></p>
+            <p id="method-example-reading"></p>
           </div>
         </div>
       </div>
 
-      <p class="method-stage-label"><span>4</span> Probar una combinación</p>
+      <div class="method-rule">
+        <strong>Cómo se usa el resultado</strong>
+        <p>La calificación propone un orden comparable. Si faltan antecedentes, el resultado queda pendiente; si una persona cambia manualmente la prioridad, debe registrar el motivo.</p>
+      </div>
+
       <div class="simulator">
         <div>
-          <p class="eyebrow">Simulador conceptual</p>
-          <h3>Observe cómo cambian las recomendaciones</h3>
-          <p>No reproduce el cálculo exacto del Excel. Sirve para explicar la lógica durante una presentación.</p>
+          <p class="eyebrow">Pruebe la lógica</p>
+          <h3>Simulador de prioridad</h3>
+          <p>Mueva los criterios para observar cómo cambia la recomendación. Es una demostración y no reemplaza el cálculo del Excel.</p>
         </div>
         <div class="sliders">
           <label>Impacto <input id="impact" type="range" min="1" max="5" value="3"><output for="impact">3</output></label>
@@ -200,7 +178,6 @@
         </div>
       </div>
 
-      <p class="method-stage-label"><span>5</span> Conocer las herramientas de apoyo</p>
       <div class="method-notes">
         <article>
           <p class="eyebrow">Valorización referencial</p>
