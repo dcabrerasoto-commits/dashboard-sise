@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Propuesta interactiva para adoptar la Matriz de Priorización y Gestión de Requerimientos TI SISE.">
+  <title>Propuesta Matriz TI SISE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">SISE</span>
+      <span>Matriz de Priorización TI</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="#propuesta">Propuesta</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#referentes">Referentes</a>
+      <a href="#ejemplos">Ejemplos</a>
+      <a href="#demo">Demostración</a>
+      <a href="#adopcion">Adopción</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Propuesta para jefatura y gestión presupuestaria</p>
+        <h1>De solicitudes aisladas a una cartera TI explicable y trazable</h1>
+        <p class="hero-lead">La matriz ordena el ingreso, la evaluación, la priorización, la estimación y el seguimiento de los requerimientos SISE. La fórmula apoya la conversación; la decisión continúa siendo humana.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">Ver cómo funciona</a>
+          <a class="button secondary" href="#decision">Revisar decisión solicitada</a>
+        </div>
+        <div class="hero-note">
+          <strong>Información siempre vigente:</strong> los resultados cuantitativos se consultan directamente en el Resumen Ejecutivo de la matriz, evitando cifras desactualizadas en esta propuesta.
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Flujo resumido de la matriz">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-card main-card">
+          <span class="mini-label">Cartera TI</span>
+          <strong>Necesidad → decisión → seguimiento</strong>
+          <div class="priority-line">
+            <span class="priority crit">CRIT</span>
+            <span class="priority high">ALTA</span>
+            <span class="priority medium">MEDIA</span>
+            <span class="priority low">BAJA</span>
+          </div>
+        </div>
+        <div class="hero-card floating-card card-a">Trazabilidad</div>
+        <div class="hero-card floating-card card-b">Presupuesto</div>
+        <div class="hero-card floating-card card-c">Gobierno TI</div>
+      </div>
+    </section>
+
+    <section id="propuesta" class="section muted-section">
+      <div class="section-heading">
+        <p class="eyebrow">El mecanismo</p>
+        <h2>Una única ruta desde la necesidad hasta la resolución</h2>
+        <p>La matriz funciona como expediente resumido de decisión y evita que presupuesto reciba solicitudes sin contexto técnico suficiente.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-card">
+          <span class="step">Ingreso</span>
+          <h3>Necesidad original</h3>
+          <p>El área usuaria describe el problema y conserva su formulación como antecedente.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">Normalización</span>
+          <h3>Redacción TI</h3>
+          <p>Un redactor local reconoce patrones y propone una formulación dirigida al equipo técnico o proveedor.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">Evaluación</span>
+          <h3>Criterios comparables</h3>
+          <p>Impacto, urgencia, riesgo, datos, seguridad, cumplimiento, alcance, confianza y esfuerzo.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">Decisión</span>
+          <h3>Prioridad y roadmap</h3>
+          <p>La cartera se ordena y jefatura valida prioridades, excepciones y oportunidad.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">Presupuesto</span>
+          <h3>Rango preliminar</h3>
+          <p>Horas, plazo y UF permiten dimensionar, sin reemplazar análisis técnico ni cotización.</p>
+        </article>
+        <article class="process-card">
+          <span class="step">Seguimiento</span>
+          <h3>Historia verificable</h3>
+          <p>Fecha de ingreso, condición y fecha de resolución mantienen evidencia del ciclo completo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="metodologia" class="section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Metodología</p>
+        <h2>Tres miradas para reducir sesgos de priorización</h2>
+        <p>La matriz adapta WSJF, RICE y Gobierno TI. Los pesos y umbrales son configurables y deben revisarse durante el piloto.</p>
+      </div>
+
+      <div class="method-tabs" role="tablist" aria-label="Métodos de priorización">
+        <button class="method-tab active" type="button" data-method="wsjf" role="tab" aria-selected="true">WSJF</button>
+        <button class="method-tab" type="button" data-method="rice" role="tab" aria-selected="false">RICE</button>
+        <button class="method-tab" type="button" data-method="gobierno" role="tab" aria-selected="false">Gobierno TI</button>
+      </div>
+
+      <div class="method-panel" id="method-panel">
+        <div>
+          <p class="eyebrow" id="method-kicker">Costo de esperar</p>
+          <h3 id="method-title">WSJF: ¿qué conviene atender antes?</h3>
+          <p id="method-description">Favorece necesidades con alto costo de postergación y un esfuerzo abordable.</p>
+        </div>
+        <div>
+          <h4>Preguntas orientadoras</h4>
+          <ul id="method-questions" class="question-list"></ul>
+        </div>
+        <div>
+          <h4>Qué evita</h4>
+          <p id="method-avoids"></p>
+          <h4>Uso en la matriz</h4>
+          <p id="method-use"></p>
+        </div>
+      </div>
+
+      <div class="criteria-grid">
+        <article><strong>Impacto</strong><span>¿Qué cambia para la operación si se resuelve?</span></article>
+        <article><strong>Urgencia</strong><span>¿Existe una ventana temporal o consecuencia inmediata?</span></article>
+        <article><strong>Riesgo</strong><span>¿Qué puede ocurrir si se posterga o falla?</span></article>
+        <article><strong>Datos</strong><span>¿Qué tan sensible o crítica es la información involucrada?</span></article>
+        <article><strong>Seguridad</strong><span>¿Afecta accesos, perfiles, autenticación o exposición?</span></article>
+        <article><strong>Cumplimiento</strong><span>¿Existe obligación normativa, de control o auditoría?</span></article>
+        <article><strong>Alcance</strong><span>¿Cuántos usuarios, territorios o procesos se benefician?</span></article>
+        <article><strong>Confianza</strong><span>¿Qué tan completa y validada está la información?</span></article>
+        <article><strong>Esfuerzo</strong><span>¿Qué complejidad técnica, coordinación e integración requiere?</span></article>
+      </div>
+
+      <div class="simulator">
+        <div>
+          <p class="eyebrow">Simulador conceptual</p>
+          <h3>Observe cómo cambian las recomendaciones</h3>
+          <p>No reproduce el cálculo exacto del Excel. Sirve para explicar la lógica durante una presentación.</p>
+        </div>
+        <div class="sliders">
+          <label>Impacto <input id="impact" type="range" min="1" max="5" value="3"><output for="impact">3</output></label>
+          <label>Urgencia <input id="urgency" type="range" min="1" max="5" value="3"><output for="urgency">3</output></label>
+          <label>Riesgo <input id="risk" type="range" min="1" max="5" value="3"><output for="risk">3</output></label>
+          <label>Gobierno TI <input id="governance" type="range" min="1" max="5" value="3"><output for="governance">3</output></label>
+          <label>Esfuerzo <input id="effort" type="range" min="1" max="5" value="3"><output for="effort">3</output></label>
+        </div>
+        <div class="sim-result">
+          <span>Lectura orientativa</span>
+          <strong id="sim-priority" class="priority medium">MEDIA</strong>
+          <p id="sim-message">Requiere calendarización y validación de alcance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="referentes" class="section muted-section">
+      <div class="section-heading">
+        <p class="eyebrow">Referentes de uso</p>
+        <h2>No es una fórmula inventada desde cero</h2>
+        <p>La matriz combina prácticas conocidas y las adapta al contexto SISE. No pretende ser una implementación certificada de esos marcos.</p>
+      </div>
+      <div class="reference-grid">
+        <article class="reference-card">
+          <span class="reference-type">Agilidad a escala</span>
+          <h3>SAFe utiliza WSJF</h3>
+          <p>Scaled Agile describe el uso de WSJF para revisar y priorizar funcionalidades y habilitadores dentro de la planificación de productos y soluciones.</p>
+          <a href="https://www.scaledagileframework.com/features-and-capabilities/" target="_blank" rel="noopener">Fuente oficial de Scaled Agile</a>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">Gestión de producto</span>
+          <h3>Intercom desarrolló RICE</h3>
+          <p>Intercom utiliza alcance, impacto, confianza y esfuerzo para comparar ideas de producto con una disciplina común.</p>
+          <a href="https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/" target="_blank" rel="noopener">Fuente oficial de Intercom</a>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">Gobierno empresarial de TI</span>
+          <h3>COBIT es promovido por ISACA</h3>
+          <p>COBIT entrega una visión integral para gobernar y gestionar información y tecnología, alineando valor, riesgo, recursos y objetivos institucionales.</p>
+          <a href="https://www.isaca.org/resources/cobit" target="_blank" rel="noopener">Fuente oficial de ISACA</a>
+        </article>
+      </div>
+      <div class="adaptation-note">
+        <strong>Adaptación SISE:</strong> WSJF ayuda a ordenar el costo de esperar; RICE aporta alcance y confianza; Gobierno TI incorpora datos, seguridad, cumplimiento y riesgo. Jefatura mantiene la facultad de modificar el orden con una excepción documentada.
+      </div>
+    </section>
+
+    <section id="ejemplos" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Ejemplos de la cartera</p>
+        <h2>Cómo mejora la calidad de una solicitud</h2>
+        <p>Los ejemplos ilustran la transformación; la redacción final siempre debe revisarse con el área usuaria y DAI.</p>
+      </div>
+      <div class="example-filter" role="group" aria-label="Filtrar ejemplos">
+        <button class="filter-button active" type="button" data-filter="all">Todos</button>
+        <button class="filter-button" type="button" data-filter="correctivo">Correctivos</button>
+        <button class="filter-button" type="button" data-filter="datos">Datos</button>
+        <button class="filter-button" type="button" data-filter="integracion">Integración</button>
+        <button class="filter-button" type="button" data-filter="gobierno">Gobierno</button>
+      </div>
+      <div class="examples-grid">
+        <article class="example-card" data-category="correctivo datos">
+          <span class="tag">Correctivo</span>
+          <h3>Beneficios duplicados</h3>
+          <div class="example-block original">
+            <span>Solicitud original</span>
+            <p>“Al consultar beneficios por RUN, la información aparece duplicada.”</p>
+          </div>
+          <div class="example-block normalized">
+            <span>Redacción TI propuesta</span>
+            <p>Corregir la consulta de beneficios por RUN para que cada beneficio se muestre una sola vez, sin omitir registros válidos y manteniendo consistencia con la fuente de datos y los permisos.</p>
+          </div>
+          <p class="decision-question"><strong>Pregunta de decisión:</strong> ¿la duplicidad afecta solo la visualización o también el registro y pago del beneficio?</p>
+        </article>
+
+        <article class="example-card" data-category="integracion datos">
+          <span class="tag">Integración</span>
+          <h3>Sincronización sin conexión</h3>
+          <div class="example-block original">
+            <span>Solicitud original</span>
+            <p>“Permitir trabajar sin internet y que al volver la señal no se dupliquen registros.”</p>
+          </div>
+          <div class="example-block normalized">
+            <span>Redacción TI propuesta</span>
+            <p>Implementar operación sin conexión y sincronización posterior, conservando datos hasta la confirmación del servidor, controlando reintentos y evitando pérdidas o duplicidades.</p>
+          </div>
+          <p class="decision-question"><strong>Pregunta de decisión:</strong> ¿qué regla debe aplicarse cuando la información local y la del servidor son diferentes?</p>
+        </article>
+
+        <article class="example-card" data-category="datos gobierno">
+          <span class="tag">Calidad de datos</span>
+          <h3>Validación de estado vital</h3>
+          <div class="example-block original">
+            <span>Solicitud original</span>
+            <p>“Validar que al digitar una ficha el RUN no esté fallecido.”</p>
+          </div>
+          <div class="example-block normalized">
+            <span>Redacción TI propuesta</span>
+            <p>Validar el RUN contra la fuente oficial antes de guardar, impedir la operación cuando corresponda, informar la causa y evitar modificaciones parciales.</p>
+          </div>
+          <p class="decision-question"><strong>Pregunta de decisión:</strong> ¿qué tratamiento se aplicará si la fuente oficial no está disponible?</p>
+        </article>
+
+        <article class="example-card" data-category="gobierno">
+          <span class="tag">Trazabilidad</span>
+          <h3>Historial de modificaciones</h3>
+          <div class="example-block original">
+            <span>Solicitud original</span>
+            <p>“Crear una pantalla para ver qué datos se modificaron y por qué se anuló un folio.”</p>
+          </div>
+          <div class="example-block normalized">
+            <span>Redacción TI propuesta</span>
+            <p>Implementar una vista de cambios que identifique campos alterados, valores anteriores y nuevos, usuario, fecha, acción y motivo de anulación.</p>
+          </div>
+          <p class="decision-question"><strong>Pregunta de decisión:</strong> ¿qué perfiles podrán consultar o exportar la evidencia?</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="demo" class="section demo-section">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Demostración de uso</p>
+        <h2>Una simulación del recorrido dentro de la matriz</h2>
+        <p>La animación representa el comportamiento general. No contiene información real ni modifica el archivo Excel.</p>
+      </div>
+      <div class="demo-shell">
+        <div class="demo-toolbar">
+          <span class="demo-dot red"></span><span class="demo-dot amber"></span><span class="demo-dot green"></span>
+          <strong>Matriz_Priorizacion_SISE.xlsm</strong>
+          <button id="restart-demo" type="button">Reiniciar</button>
+        </div>
+        <div class="demo-progress"><span id="demo-progress-bar"></span></div>
+        <div class="demo-grid">
+          <div class="demo-step-list" id="demo-step-list">
+            <button type="button" class="demo-step active" data-step="0"><span>1</span> Ingresar necesidad</button>
+            <button type="button" class="demo-step" data-step="1"><span>2</span> Generar redacción</button>
+            <button type="button" class="demo-step" data-step="2"><span>3</span> Evaluar criterios</button>
+            <button type="button" class="demo-step" data-step="3"><span>4</span> Revisar prioridad</button>
+            <button type="button" class="demo-step" data-step="4"><span>5</span> Resolver y archivar</button>
+          </div>
+          <div class="demo-workspace">
+            <div class="fake-sheet">
+              <div class="fake-row header">
+                <span>Requerimiento original</span>
+                <span>Redacción TI</span>
+                <span>Prioridad</span>
+                <span>Condición</span>
+              </div>
+              <div class="fake-row">
+                <span id="demo-original" class="editable-cell"></span>
+                <span id="demo-normalized"></span>
+                <span><b id="demo-priority" class="priority-placeholder">—</b></span>
+                <span id="demo-status">No resuelto</span>
+              </div>
+            </div>
+            <div class="demo-explanation">
+              <span id="demo-caption-label">Paso de ingreso</span>
+              <h3 id="demo-caption-title">La persona describe la necesidad</h3>
+              <p id="demo-caption-text">La columna original conserva exactamente lo que fue solicitado y sirve como evidencia del problema inicial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gif-panel">
+        <div>
+          <h3>GIF para correos y presentaciones</h3>
+          <p>Una versión resumida de la demostración puede insertarse en materiales que no ejecutan el dashboard.</p>
+        </div>
+        <img src="demo_matriz_sise.gif" alt="Demostración animada del flujo de la matriz SISE">
+      </div>
+    </section>
+
+    <section id="adopcion" class="section muted-section">
+      <div class="section-heading">
+        <p class="eyebrow">Estrategia de adopción</p>
+        <h2>Validar primero; institucionalizar después</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>Preparación</span>
+          <h3>Definir reglas de uso</h3>
+          <ul>
+            <li>Responsable funcional y contraparte técnica.</li>
+            <li>Frecuencia de revisión y criterios de excepción.</li>
+            <li>Fuente única y permisos de SharePoint.</li>
+          </ul>
+        </article>
+        <article>
+          <span>Piloto</span>
+          <h3>Usar y observar</h3>
+          <ul>
+            <li>Registrar nuevas solicitudes.</li>
+            <li>Revisar calidad de redacción y clasificación.</li>
+            <li>Contrastar estimaciones con análisis reales.</li>
+          </ul>
+        </article>
+        <article>
+          <span>Ajuste</span>
+          <h3>Corregir con evidencia</h3>
+          <ul>
+            <li>Ajustar preguntas, escalas y patrones.</li>
+            <li>Documentar diferencias de esfuerzo.</li>
+            <li>Revisar reglas presupuestarias.</li>
+          </ul>
+        </article>
+        <article>
+          <span>Consolidación</span>
+          <h3>Adoptar como antecedente</h3>
+          <ul>
+            <li>Usar en presupuesto y contratación.</li>
+            <li>Revisión ejecutiva de cartera.</li>
+            <li>Evaluar extensión a otros sistemas.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="governance-matrix">
+        <div class="governance-intro">
+          <p class="eyebrow">Gobernanza</p>
+          <h3>Cada actor valida una dimensión distinta</h3>
+          <p>La separación de responsabilidades evita que una prioridad técnica se confunda con una aprobación presupuestaria.</p>
+        </div>
+        <div class="role"><strong>Área usuaria</strong><span>Necesidad y validación funcional</span></div>
+        <div class="role"><strong>DAI</strong><span>Factibilidad, riesgo, dependencias y esfuerzo</span></div>
+        <div class="role"><strong>Presupuesto</strong><span>Disponibilidad, oportunidad y fuente de recursos</span></div>
+        <div class="role"><strong>Jefatura</strong><span>Prioridad, excepciones y compromisos</span></div>
+        <div class="role"><strong>Proveedor</strong><span>Cotización, plazo, supuestos y exclusiones</span></div>
+      </div>
+    </section>
+
+    <section id="decision" class="section decision-section">
+      <div>
+        <p class="eyebrow">Decisión solicitada</p>
+        <h2>Aprobar un piloto con responsabilidades y controles explícitos</h2>
+      </div>
+      <div class="decision-grid">
+        <div><span>01</span><p>Designar responsable funcional y contraparte técnica.</p></div>
+        <div><span>02</span><p>Acordar una instancia periódica de revisión de cartera.</p></div>
+        <div><span>03</span><p>Usar la matriz como antecedente para presupuesto y contratación.</p></div>
+        <div><span>04</span><p>No comprometer costos sin validación técnica o cotización.</p></div>
+        <div><span>05</span><p>Registrar excepciones y evaluar el piloto antes de extenderlo.</p></div>
+      </div>
+      <blockquote>La matriz no reemplaza la decisión de jefatura. Mejora la calidad, trazabilidad y defensa de esa decisión.</blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>Propuesta de adopción de la Matriz TI SISE</p>
+    <p>Referencias: Scaled Agile Framework, Intercom e ISACA. Adaptación metodológica para evaluación interna.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
