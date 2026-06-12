@@ -17,8 +17,9 @@
     <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
       <a href="#propuesta">Propuesta</a>
       <a href="#ejemplos">Redactor automático</a>
-      <a href="#metodologia">Metodologías</a>
       <a href="#demo">Demostración</a>
+      <a href="#metodologia">Metodologías</a>
+      <a href="#valorizacion">Valorización</a>
       <a href="#adopcion">Adopción</a>
     </nav>
   </header>
@@ -102,12 +103,6 @@
         <p>Seleccione un enfoque y revise cómo cambia la lectura del mismo requerimiento. La metodología no busca producir un número aislado: busca explicar por qué una solicitud debería avanzar antes que otra.</p>
       </div>
 
-      <div class="method-context">
-        <span>Caso utilizado en toda la explicación</span>
-        <strong>“Al consultar beneficios por RUN, la información aparece duplicada.”</strong>
-        <p>Los tres enfoques observan este mismo problema, pero responden preguntas diferentes y complementarias.</p>
-      </div>
-
       <div class="method-tabs" role="tablist" aria-label="Métodos de priorización">
         <button class="method-tab active" type="button" data-method="wsjf" role="tab" aria-selected="true">WSJF</button>
         <button class="method-tab" type="button" data-method="rice" role="tab" aria-selected="false">RICE</button>
@@ -145,7 +140,7 @@
             <div id="method-score-scale" class="score-scale"></div>
           </div>
           <div class="method-applied-example">
-            <span>Resultado explicado para este caso</span>
+            <span>Aplicado al caso de beneficios duplicados</span>
             <h4 id="method-example-score"></h4>
             <p id="method-example-reason"></p>
             <p id="method-example-reading"></p>
@@ -153,23 +148,9 @@
         </div>
       </div>
 
-      <div class="method-rule">
-        <strong>Cómo se usa el resultado</strong>
-        <p>La calificación propone un orden comparable. Si faltan antecedentes, el resultado queda pendiente; si una persona cambia manualmente la prioridad, debe registrar el motivo.</p>
-      </div>
-
-      <div class="method-notes">
-        <article>
-          <p class="eyebrow">Módulo 3 · Supuestos de valorización</p>
-          <h3>Estimación referencial mediante estudio de Mercado Público</h3>
-          <p>Las sugerencias de tiempo y costo se construyen comparando requerimientos de naturaleza similar, referencias disponibles en Mercado Público, tipo de desarrollo, complejidad y perfiles técnicos necesarios.</p>
-          <p>El resultado entrega un rango inicial para dimensionar la solicitud. No constituye una cotización y debe ser confirmado por DAI o por el proveedor.</p>
-        </article>
-      </div>
-
       <div class="simulator">
         <div>
-          <p class="eyebrow">Módulo 4 · Simulador</p>
+          <p class="eyebrow">Simulador de la metodología</p>
           <h3>Simulador de prioridad</h3>
           <p>Mueva los criterios para observar cómo cambia la recomendación. Es una demostración y no reemplaza el cálculo del Excel.</p>
         </div>
@@ -187,6 +168,19 @@
         </div>
       </div>
 
+    </section>
+
+    <section id="valorizacion" class="section valuation-section">
+      <div class="valuation-layout">
+        <div>
+          <p class="eyebrow">Módulo 3 · Supuestos de valorización</p>
+          <h2>Una referencia inicial de tiempo y costo</h2>
+        </div>
+        <div>
+          <p>Las sugerencias se construyen comparando requerimientos similares, referencias disponibles en Mercado Público, tipo de desarrollo, complejidad y perfiles técnicos necesarios.</p>
+          <p>La matriz entrega un rango preliminar para dimensionar la solicitud. No constituye una cotización y debe ser confirmado por DAI o por el proveedor.</p>
+        </div>
+      </div>
     </section>
 
     <section id="ejemplos" class="section">
@@ -243,19 +237,6 @@
           <p class="decision-question"><strong>Pregunta de decisión:</strong> ¿qué tratamiento se aplicará si la fuente oficial no está disponible?</p>
         </article>
 
-        <article class="example-card" data-category="gobierno">
-          <span class="tag">Trazabilidad</span>
-          <h3>Historial de modificaciones</h3>
-          <div class="example-block original">
-            <span>Solicitud original</span>
-            <p>“Crear una pantalla para ver qué datos se modificaron y por qué se anuló un folio.”</p>
-          </div>
-          <div class="example-block normalized">
-            <span>Redacción TI propuesta</span>
-            <p>Implementar una vista de cambios que identifique campos alterados, valores anteriores y nuevos, usuario, fecha, acción y motivo de anulación.</p>
-          </div>
-          <p class="decision-question"><strong>Pregunta de decisión:</strong> ¿qué perfiles podrán consultar o exportar la evidencia?</p>
-        </article>
       </div>
     </section>
 
