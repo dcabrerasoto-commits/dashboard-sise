@@ -155,6 +155,60 @@ function updateSimulator() {
 sliderIds.forEach(id => document.querySelector(`#${id}`).addEventListener("input", updateSimulator));
 updateSimulator();
 
+const valuationAssumptions = {
+  low: { label: "Baja", hours: 72, weeks: [2, 4] },
+  medium: { label: "Media", hours: 144, weeks: [5, 7] },
+  high: { label: "Alta", hours: 280, weeks: [8, 12] }
+};
+const valuationRates = {
+  dai: { label: "DAI", rate: 0.2 },
+  provider: { label: "Proveedor", rate: 0.3 }
+};
+const valuationState = { complexity: "medium", executor: "dai" };
+
+function formatUf(value) {
+  return value.toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+}
+
+function updateValuation() {
+  const assumption = valuationAssumptions[valuationState.complexity];
+  const executor = valuationRates[valuationState.executor];
+  const profiles = Number(document.querySelector("#valuation-profiles").value);
+  const hours = assumption.hours + (profiles - 1) * 16;
+  const lower = hours * executor.rate * 0.9;
+  const upper = hours * executor.rate * 1.15;
+
+  document.querySelector('output[for="valuation-profiles"]').value = profiles;
+  document.querySelector("#valuation-complexity").textContent = assumption.label;
+  document.querySelector("#valuation-hours").textContent = `${hours} h`;
+  document.querySelector("#valuation-time").textContent = `${assumption.weeks[0]} a ${assumption.weeks[1]} semanas`;
+  document.querySelector("#valuation-rate").textContent = `${formatUf(executor.rate)} UF/h`;
+  document.querySelector("#valuation-total").textContent = `${formatUf(lower)} a ${formatUf(upper)} UF`;
+  document.querySelector("#valuation-explanation").textContent =
+    `Ejemplo construido con complejidad ${assumption.label.toLowerCase()}, ejecución ${executor.label} y ${profiles} ${profiles === 1 ? "perfil" : "perfiles"}.`;
+}
+
+document.querySelectorAll("#complexity-options button").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("#complexity-options button").forEach(item => item.classList.remove("active"));
+    button.classList.add("active");
+    valuationState.complexity = button.dataset.value;
+    updateValuation();
+  });
+});
+
+document.querySelectorAll("#executor-options button").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll("#executor-options button").forEach(item => item.classList.remove("active"));
+    button.classList.add("active");
+    valuationState.executor = button.dataset.value;
+    updateValuation();
+  });
+});
+
+document.querySelector("#valuation-profiles").addEventListener("input", updateValuation);
+updateValuation();
+
 document.querySelectorAll(".example-view-button").forEach(button => {
   button.addEventListener("click", () => {
     document.querySelectorAll(".example-view-button").forEach(item => item.classList.remove("active"));
