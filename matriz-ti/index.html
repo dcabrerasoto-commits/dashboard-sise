@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Propuesta interactiva para adoptar la Matriz de Priorización y Gestión de Requerimientos TI SISE.">
   <title>Propuesta Matriz TI SISE</title>
-  <link rel="stylesheet" href="styles.css?v=20260612-4">
+  <link rel="stylesheet" href="styles.css?v=20260612-5">
 </head>
 <body>
   <header class="topbar">
@@ -194,7 +194,7 @@
         </div>
         <div>
           <p>Las sugerencias se construyen comparando requerimientos similares, referencias disponibles en Mercado Público, tipo de desarrollo, complejidad y perfiles técnicos necesarios.</p>
-          <p>La matriz entrega un rango preliminar para dimensionar la solicitud. No constituye una cotización y debe ser confirmado por DAI o por el proveedor.</p>
+          <p>Si el desarrollo lo realiza DAI, la referencia muestra únicamente dedicación interna en horas. Si corresponde a proveedor, añade un rango preliminar en UF que debe ser confirmado mediante cotización.</p>
         </div>
       </div>
       <div class="valuation-game">
@@ -235,14 +235,14 @@
             <i>→</i>
             <div><span>Plazo</span><strong id="valuation-time">5 a 7 semanas</strong></div>
             <i>→</i>
-            <div><span>Tarifa referencial</span><strong id="valuation-rate">0,20 UF/h</strong></div>
+            <div><span id="valuation-rate-label">Costo adicional</span><strong id="valuation-rate">No aplica</strong></div>
           </div>
           <div class="valuation-total">
-            <span>Rango referencial estimado</span>
-            <strong id="valuation-total">29 a 37 UF</strong>
+            <span id="valuation-total-label">Dedicación interna estimada</span>
+            <strong id="valuation-total">160 horas</strong>
             <p id="valuation-explanation">Ejemplo construido con complejidad media, ejecución DAI y dos perfiles.</p>
           </div>
-          <p class="valuation-disclaimer">Los parámetros son demostrativos y deben calibrarse con antecedentes reales, referencias de Mercado Público y validación técnica.</p>
+          <p class="valuation-disclaimer">DAI corresponde a capacidad interna de la institución y no genera un costo adicional en UF. Los rangos monetarios se muestran únicamente para proveedor.</p>
         </div>
       </div>
     </section>
@@ -415,6 +415,6 @@
     <p>Adaptación metodológica para evaluación interna.</p>
   </footer>
 
-  <script src="app.js?v=20260612-4"></script>
+  <script src="app.js?v=20260612-5"></script>
 </body>
 </html>
