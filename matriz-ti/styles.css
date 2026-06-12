@@ -207,6 +207,26 @@ p { line-height: 1.65; }
 .method-panel p { color: var(--muted); }
 .question-list { margin: 0; padding-left: 20px; color: var(--ink); }
 .question-list li { margin-bottom: 10px; line-height: 1.45; }
+.method-score-detail {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 28px;
+  margin-top: 20px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #f8fbfe;
+}
+.method-score-detail h3 { margin-top: 4px; }
+.score-scale { display: grid; gap: 8px; margin-top: 18px; }
+.score-scale div { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: center; }
+.score-scale strong { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: white; background: var(--blue); }
+.score-scale span { color: var(--muted); line-height: 1.45; }
+.method-applied-example { padding: 22px; border-radius: 16px; color: white; background: var(--navy); }
+.method-applied-example > span { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #a9c9e5; }
+.method-applied-example h4 { margin: 12px 0; color: white; font-size: 19px; }
+.method-applied-example p { color: #d5e3ef; }
+.method-applied-example p:last-child { margin-bottom: 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.16); }
 .score-example {
   display: grid;
   grid-template-columns: .85fr 1.35fr;
@@ -403,7 +423,7 @@ footer { display: flex; justify-content: space-between; gap: 30px; padding: 28px
   .hero { grid-template-columns: 1fr; }
   .hero-visual { min-height: 390px; }
   .process-grid, .reference-grid, .examples-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .method-panel, .simulator, .score-example { grid-template-columns: 1fr; }
+  .method-panel, .method-score-detail, .simulator, .score-example { grid-template-columns: 1fr; }
   .timeline { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .decision-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
