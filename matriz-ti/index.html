@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Propuesta interactiva para adoptar la Matriz de Priorización y Gestión de Requerimientos TI SISE.">
   <title>Propuesta Matriz TI SISE</title>
-  <link rel="stylesheet" href="styles.css?v=20260612-2">
+  <link rel="stylesheet" href="styles.css?v=20260612-3">
 </head>
 <body>
   <header class="topbar">
@@ -181,6 +181,54 @@
           <p>La matriz entrega un rango preliminar para dimensionar la solicitud. No constituye una cotización y debe ser confirmado por DAI o por el proveedor.</p>
         </div>
       </div>
+      <div class="valuation-game">
+        <div class="valuation-controls">
+          <p class="eyebrow">Ejemplo interactivo</p>
+          <h3>Construya una referencia</h3>
+          <p>Seleccione los supuestos y observe cómo se forma el rango preliminar.</p>
+
+          <fieldset>
+            <legend>1. Complejidad estimada</legend>
+            <div class="valuation-options" id="complexity-options">
+              <button type="button" data-value="low">Baja</button>
+              <button type="button" data-value="medium" class="active">Media</button>
+              <button type="button" data-value="high">Alta</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Responsable del desarrollo</legend>
+            <div class="valuation-options" id="executor-options">
+              <button type="button" data-value="dai" class="active">DAI</button>
+              <button type="button" data-value="provider">Proveedor</button>
+            </div>
+          </fieldset>
+
+          <label class="valuation-range">
+            <span>3. Perfiles participantes</span>
+            <input id="valuation-profiles" type="range" min="1" max="5" value="2">
+            <output for="valuation-profiles">2</output>
+          </label>
+        </div>
+
+        <div class="valuation-result" aria-live="polite">
+          <div class="valuation-flow">
+            <div><span>Complejidad</span><strong id="valuation-complexity">Media</strong></div>
+            <i>→</i>
+            <div><span>Horas base</span><strong id="valuation-hours">160 h</strong></div>
+            <i>→</i>
+            <div><span>Plazo</span><strong id="valuation-time">5 a 7 semanas</strong></div>
+            <i>→</i>
+            <div><span>Tarifa referencial</span><strong id="valuation-rate">0,20 UF/h</strong></div>
+          </div>
+          <div class="valuation-total">
+            <span>Rango referencial estimado</span>
+            <strong id="valuation-total">29 a 37 UF</strong>
+            <p id="valuation-explanation">Ejemplo construido con complejidad media, ejecución DAI y dos perfiles.</p>
+          </div>
+          <p class="valuation-disclaimer">Los parámetros son demostrativos y deben calibrarse con antecedentes reales, referencias de Mercado Público y validación técnica.</p>
+        </div>
+      </div>
     </section>
 
     <section id="ejemplos" class="section">
@@ -351,6 +399,6 @@
     <p>Adaptación metodológica para evaluación interna.</p>
   </footer>
 
-  <script src="app.js?v=20260612-2"></script>
+  <script src="app.js?v=20260612-3"></script>
 </body>
 </html>
