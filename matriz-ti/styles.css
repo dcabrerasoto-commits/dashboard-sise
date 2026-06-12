@@ -106,21 +106,9 @@ main { display: flex; flex-direction: column; }
     linear-gradient(140deg, #fff 50%, #f7fafc 100%);
 }
 .hero-lead { max-width: 760px; color: var(--muted); font-size: 19px; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0; }
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 22px;
-  border-radius: 12px;
-  font-weight: 700;
-  text-decoration: none;
-}
-.button.primary { color: white; background: var(--blue); }
-.button.secondary { color: var(--navy); background: white; border: 1px solid var(--line); }
 .hero-note {
   max-width: 750px;
+  margin-top: 30px;
   padding: 18px 20px;
   border-left: 4px solid var(--sky);
   background: rgba(238,246,251,.85);
