@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Propuesta interactiva para adoptar la Matriz de Priorización y Gestión de Requerimientos TI SISE.">
   <title>Propuesta Matriz TI SISE</title>
-  <link rel="stylesheet" href="styles.css?v=20260612-3">
+  <link rel="stylesheet" href="styles.css?v=20260612-4">
 </head>
 <body>
   <header class="topbar">
@@ -37,22 +37,38 @@
           <strong>Información siempre vigente:</strong> los resultados cuantitativos se consultan directamente en el Resumen Ejecutivo de la matriz, evitando cifras desactualizadas en esta propuesta.
         </div>
       </div>
-      <div class="hero-visual" aria-label="Flujo resumido de la matriz">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="hero-card main-card">
-          <span class="mini-label">Cartera TI</span>
-          <strong>Necesidad → decisión → seguimiento</strong>
-          <div class="priority-line">
-            <span class="priority crit">CRIT</span>
-            <span class="priority high">ALTA</span>
-            <span class="priority medium">MEDIA</span>
-            <span class="priority low">BAJA</span>
-          </div>
+      <div class="hero-visual transformation-lab" aria-label="Animación: una idea se transforma en requerimiento y luego en especificación tecnológica">
+        <div class="lab-grid"></div>
+        <div class="energy-line line-one"></div>
+        <div class="energy-line line-two"></div>
+
+        <div class="transform-stage idea-stage">
+          <div class="stage-icon bulb-icon"><span></span></div>
+          <small>Idea</small>
+          <strong>“Necesitamos mejorar esta consulta”</strong>
         </div>
-        <div class="hero-card floating-card card-a">Trazabilidad</div>
-        <div class="hero-card floating-card card-b">Presupuesto</div>
-        <div class="hero-card floating-card card-c">Gobierno TI</div>
+
+        <div class="transform-arrow arrow-one"><span>›</span></div>
+
+        <div class="transform-stage text-stage">
+          <div class="stage-icon document-icon">
+            <i></i><i></i><i></i>
+          </div>
+          <small>Necesidad escrita</small>
+          <strong>Problema, contexto y resultado esperado</strong>
+        </div>
+
+        <div class="transform-arrow arrow-two"><span>›</span></div>
+
+        <div class="transform-stage tech-stage">
+          <div class="stage-icon chip-icon">
+            <b>&lt;/&gt;</b>
+          </div>
+          <small>Especificación TI</small>
+          <strong>Reglas, datos, validaciones y criterios</strong>
+        </div>
+
+        <div class="lab-status"><span></span> Transformación en curso</div>
       </div>
     </section>
 
@@ -399,6 +415,6 @@
     <p>Adaptación metodológica para evaluación interna.</p>
   </footer>
 
-  <script src="app.js?v=20260612-3"></script>
+  <script src="app.js?v=20260612-4"></script>
 </body>
 </html>
