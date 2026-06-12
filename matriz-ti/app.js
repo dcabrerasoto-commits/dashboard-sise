@@ -77,8 +77,6 @@ const methods = {
 };
 
 const tabs = document.querySelectorAll(".method-tab");
-const questionList = document.querySelector("#method-questions");
-
 function renderMethod(key) {
   const method = methods[key];
   document.querySelector("#method-kicker").textContent = method.kicker;
@@ -94,7 +92,6 @@ function renderMethod(key) {
   document.querySelector("#method-example-score").textContent = method.exampleScore;
   document.querySelector("#method-example-reason").textContent = method.exampleReason;
   document.querySelector("#method-example-reading").textContent = method.exampleReading;
-  questionList.innerHTML = method.questions.map(question => `<li>${question}</li>`).join("");
   tabs.forEach(tab => {
     const active = tab.dataset.method === key;
     tab.classList.toggle("active", active);
@@ -123,7 +120,14 @@ function updateSimulator() {
     document.querySelector(`output[for="${id}"]`).value = values[id];
   });
   const valueScore = values.impact * 1.2 + values.urgency + values.risk * 1.1 + values.governance * 1.2;
-  const score = valueScore / Math.max(values.effort, 1);
+  if (values.effort === 0) {
+    const result = document.querySelector("#sim-priority");
+    result.textContent = "PENDIENTE";
+    result.className = "priority pending";
+    document.querySelector("#sim-message").textContent = "Esfuerzo 0 significa que aún no fue estimado. La matriz no asigna prioridad hasta completar este dato.";
+    return;
+  }
+  const score = valueScore / values.effort;
   let priority = "BAJA";
   let className = "low";
   let message = "Conviene mantener en backlog y completar antecedentes.";
@@ -148,15 +152,13 @@ function updateSimulator() {
 sliderIds.forEach(id => document.querySelector(`#${id}`).addEventListener("input", updateSimulator));
 updateSimulator();
 
-document.querySelectorAll(".filter-button").forEach(button => {
+document.querySelectorAll(".example-view-button").forEach(button => {
   button.addEventListener("click", () => {
-    document.querySelectorAll(".filter-button").forEach(item => item.classList.remove("active"));
+    document.querySelectorAll(".example-view-button").forEach(item => item.classList.remove("active"));
     button.classList.add("active");
-    const filter = button.dataset.filter;
-    document.querySelectorAll(".example-card").forEach(card => {
-      const categories = card.dataset.category.split(" ");
-      card.classList.toggle("hidden", filter !== "all" && !categories.includes(filter));
-    });
+    const examples = document.querySelector(".examples-grid");
+    examples.classList.remove("view-original", "view-normalized", "view-compare");
+    examples.classList.add(`view-${button.dataset.view}`);
   });
 });
 
