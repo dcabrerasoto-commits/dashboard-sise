@@ -32,7 +32,7 @@
         <p class="hero-lead">La matriz ordena el ingreso, la evaluación, la priorización, la estimación y el seguimiento de los requerimientos SISE. La fórmula apoya la conversación; la decisión continúa siendo humana.</p>
         <div class="hero-actions">
           <a class="button primary" href="#demo">Ver cómo funciona</a>
-          <a class="button secondary" href="#decision">Revisar decisión solicitada</a>
+          <a class="button secondary" href="#metodologia">Revisar metodología</a>
         </div>
         <div class="hero-note">
           <strong>Información siempre vigente:</strong> los resultados cuantitativos se consultan directamente en el Resumen Ejecutivo de la matriz, evitando cifras desactualizadas en esta propuesta.
@@ -117,10 +117,6 @@
           <p id="method-description">Favorece necesidades con alto costo de postergación y un esfuerzo abordable.</p>
         </div>
         <div>
-          <h4>Preguntas orientadoras</h4>
-          <ul id="method-questions" class="question-list"></ul>
-        </div>
-        <div>
           <h4>Qué evita</h4>
           <p id="method-avoids"></p>
           <h4>Uso en la matriz</h4>
@@ -201,7 +197,7 @@
           <label>Urgencia <input id="urgency" type="range" min="1" max="5" value="3"><output for="urgency">3</output></label>
           <label>Riesgo <input id="risk" type="range" min="1" max="5" value="3"><output for="risk">3</output></label>
           <label>Gobierno TI <input id="governance" type="range" min="1" max="5" value="3"><output for="governance">3</output></label>
-          <label>Esfuerzo <input id="effort" type="range" min="1" max="5" value="3"><output for="effort">3</output></label>
+          <label>Esfuerzo <input id="effort" type="range" min="0" max="5" value="3"><output for="effort">3</output></label>
         </div>
         <div class="sim-result">
           <span>Lectura orientativa</span>
@@ -260,17 +256,15 @@
     <section id="ejemplos" class="section">
       <div class="section-heading">
         <p class="eyebrow">Ejemplos de la cartera</p>
-        <h2>Cómo mejora la calidad de una solicitud</h2>
-        <p>Los ejemplos ilustran la transformación; la redacción final siempre debe revisarse con el área usuaria y DAI.</p>
+        <h2>Redactor automático basado en patrones</h2>
+        <p>Todos los casos permanecen visibles. Use los controles para mostrar la solicitud original, activar la propuesta automática o comparar ambas redacciones. No utiliza inteligencia artificial y la propuesta siempre debe revisarse con el área usuaria y DAI.</p>
       </div>
-      <div class="example-filter" role="group" aria-label="Filtrar ejemplos">
-        <button class="filter-button active" type="button" data-filter="all">Todos</button>
-        <button class="filter-button" type="button" data-filter="correctivo">Correctivos</button>
-        <button class="filter-button" type="button" data-filter="datos">Datos</button>
-        <button class="filter-button" type="button" data-filter="integracion">Integración</button>
-        <button class="filter-button" type="button" data-filter="gobierno">Gobierno</button>
+      <div class="example-view-controls" role="group" aria-label="Visualizar redacciones">
+        <button class="example-view-button active" type="button" data-view="original">1. Solicitud original</button>
+        <button class="example-view-button" type="button" data-view="normalized">2. Activar redactor automático</button>
+        <button class="example-view-button" type="button" data-view="compare">3. Comparar ambas</button>
       </div>
-      <div class="examples-grid">
+      <div class="examples-grid view-original">
         <article class="example-card" data-category="correctivo datos">
           <span class="tag">Correctivo</span>
           <h3>Beneficios duplicados</h3>
@@ -373,13 +367,6 @@
           </div>
         </div>
       </div>
-      <div class="gif-panel">
-        <div>
-          <h3>GIF para correos y presentaciones</h3>
-          <p>Una versión resumida de la demostración puede insertarse en materiales que no ejecutan el dashboard.</p>
-        </div>
-        <img src="demo_matriz_sise.gif" alt="Demostración animada del flujo de la matriz SISE">
-      </div>
     </section>
 
     <section id="adopcion" class="section muted-section">
@@ -440,20 +427,6 @@
       </div>
     </section>
 
-    <section id="decision" class="section decision-section">
-      <div>
-        <p class="eyebrow">Decisión solicitada</p>
-        <h2>Aprobar un piloto con responsabilidades y controles explícitos</h2>
-      </div>
-      <div class="decision-grid">
-        <div><span>01</span><p>Designar responsable funcional y contraparte técnica.</p></div>
-        <div><span>02</span><p>Acordar una instancia periódica de revisión de cartera.</p></div>
-        <div><span>03</span><p>Usar la matriz como antecedente para presupuesto y contratación.</p></div>
-        <div><span>04</span><p>No comprometer costos sin validación técnica o cotización.</p></div>
-        <div><span>05</span><p>Registrar excepciones y evaluar el piloto antes de extenderlo.</p></div>
-      </div>
-      <blockquote>La matriz no reemplaza la decisión de jefatura. Mejora la calidad, trazabilidad y defensa de esa decisión.</blockquote>
-    </section>
   </main>
 
   <footer>
