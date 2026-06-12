@@ -26,7 +26,6 @@
   <main>
     <section id="inicio" class="hero section">
       <div class="hero-copy">
-        <p class="eyebrow">Propuesta para jefatura y gestión presupuestaria</p>
         <h1>De solicitudes aisladas a una cartera TI explicable y trazable</h1>
         <p class="hero-lead">La matriz ordena el ingreso, la evaluación, la priorización, la estimación y el seguimiento de los requerimientos SISE. La fórmula apoya la conversación; la decisión continúa siendo humana.</p>
         <div class="hero-actions">
@@ -60,13 +59,13 @@
       <div class="section-heading">
         <p class="eyebrow">El mecanismo</p>
         <h2>Una única ruta desde la necesidad hasta la resolución</h2>
-        <p>La matriz funciona como expediente resumido de decisión y evita que presupuesto reciba solicitudes sin contexto técnico suficiente.</p>
+        <p>La matriz reúne la información necesaria para comprender, comparar y hacer seguimiento a cada solicitud.</p>
       </div>
       <div class="process-grid">
         <article class="process-card">
           <span class="step">Ingreso</span>
           <h3>Necesidad original</h3>
-          <p>El área usuaria describe el problema y conserva su formulación como antecedente.</p>
+          <p>La persona o el equipo que solicita describe el problema y conserva su texto original como antecedente.</p>
         </article>
         <article class="process-card">
           <span class="step">Normalización</span>
@@ -121,6 +120,10 @@
           <h4>Uso en la matriz</h4>
           <p id="method-use"></p>
         </div>
+        <div class="method-questions-box">
+          <h4>Preguntas orientadoras</h4>
+          <ul id="method-questions" class="question-list"></ul>
+        </div>
       </div>
 
       <div class="method-score-detail" aria-live="polite">
@@ -173,18 +176,6 @@
         </div>
       </div>
 
-      <div class="criteria-grid">
-        <article><strong>Impacto</strong><span>¿Qué cambia para la operación si se resuelve?</span></article>
-        <article><strong>Urgencia</strong><span>¿Existe una ventana temporal o consecuencia inmediata?</span></article>
-        <article><strong>Riesgo</strong><span>¿Qué puede ocurrir si se posterga o falla?</span></article>
-        <article><strong>Datos</strong><span>¿Qué tan sensible o crítica es la información involucrada?</span></article>
-        <article><strong>Seguridad</strong><span>¿Afecta accesos, perfiles, autenticación o exposición?</span></article>
-        <article><strong>Cumplimiento</strong><span>¿Existe obligación normativa, de control o auditoría?</span></article>
-        <article><strong>Alcance</strong><span>¿Cuántos usuarios, territorios o procesos se benefician?</span></article>
-        <article><strong>Confianza</strong><span>¿Qué tan completa y validada está la información?</span></article>
-        <article><strong>Esfuerzo</strong><span>¿Qué complejidad técnica, coordinación e integración requiere?</span></article>
-      </div>
-
       <div class="simulator">
         <div>
           <p class="eyebrow">Simulador conceptual</p>
@@ -225,7 +216,7 @@
       <div class="section-heading">
         <p class="eyebrow">Ejemplos de la cartera</p>
         <h2>Redactor automático basado en patrones</h2>
-        <p>Todos los casos permanecen visibles. Use los controles para mostrar la solicitud original, activar la propuesta automática o comparar ambas redacciones. No utiliza inteligencia artificial y la propuesta siempre debe revisarse con el área usuaria y DAI.</p>
+        <p>Todos los casos permanecen visibles. Use los controles para mostrar la solicitud original, activar la propuesta automática o comparar ambas redacciones. No utiliza inteligencia artificial y la propuesta siempre debe ser revisada por la persona o el equipo que hizo la solicitud.</p>
       </div>
       <div class="example-view-controls" role="group" aria-label="Visualizar redacciones">
         <button class="example-view-button active" type="button" data-view="original">1. Solicitud original</button>
@@ -387,7 +378,7 @@
           <h3>Cada actor valida una dimensión distinta</h3>
           <p>La separación de responsabilidades evita que una prioridad técnica se confunda con una aprobación presupuestaria.</p>
         </div>
-        <div class="role"><strong>Área usuaria</strong><span>Necesidad y validación funcional</span></div>
+        <div class="role"><strong>Persona o equipo solicitante</strong><span>Explica la necesidad y confirma que la solución responde al problema</span></div>
         <div class="role"><strong>DAI</strong><span>Factibilidad, riesgo, dependencias y esfuerzo</span></div>
         <div class="role"><strong>Presupuesto</strong><span>Disponibilidad, oportunidad y fuente de recursos</span></div>
         <div class="role"><strong>Jefatura</strong><span>Prioridad, excepciones y compromisos</span></div>
