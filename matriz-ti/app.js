@@ -161,7 +161,7 @@ const valuationAssumptions = {
   high: { label: "Alta", hours: 280, weeks: [8, 12] }
 };
 const valuationRates = {
-  dai: { label: "DAI", rate: 0.2 },
+  dai: { label: "DAI", rate: null },
   provider: { label: "Proveedor", rate: 0.3 }
 };
 const valuationState = { complexity: "medium", executor: "dai" };
@@ -175,17 +175,27 @@ function updateValuation() {
   const executor = valuationRates[valuationState.executor];
   const profiles = Number(document.querySelector("#valuation-profiles").value);
   const hours = assumption.hours + (profiles - 1) * 16;
-  const lower = hours * executor.rate * 0.9;
-  const upper = hours * executor.rate * 1.15;
-
   document.querySelector('output[for="valuation-profiles"]').value = profiles;
   document.querySelector("#valuation-complexity").textContent = assumption.label;
   document.querySelector("#valuation-hours").textContent = `${hours} h`;
   document.querySelector("#valuation-time").textContent = `${assumption.weeks[0]} a ${assumption.weeks[1]} semanas`;
-  document.querySelector("#valuation-rate").textContent = `${formatUf(executor.rate)} UF/h`;
-  document.querySelector("#valuation-total").textContent = `${formatUf(lower)} a ${formatUf(upper)} UF`;
-  document.querySelector("#valuation-explanation").textContent =
-    `Ejemplo construido con complejidad ${assumption.label.toLowerCase()}, ejecución ${executor.label} y ${profiles} ${profiles === 1 ? "perfil" : "perfiles"}.`;
+  if (valuationState.executor === "dai") {
+    document.querySelector("#valuation-rate-label").textContent = "Costo adicional";
+    document.querySelector("#valuation-rate").textContent = "No aplica";
+    document.querySelector("#valuation-total-label").textContent = "Dedicación interna estimada";
+    document.querySelector("#valuation-total").textContent = `${hours} horas`;
+    document.querySelector("#valuation-explanation").textContent =
+      `Ejecución DAI con ${profiles} ${profiles === 1 ? "perfil interno" : "perfiles internos"}; no se calcula costo en UF.`;
+  } else {
+    const lower = hours * executor.rate * 0.9;
+    const upper = hours * executor.rate * 1.15;
+    document.querySelector("#valuation-rate-label").textContent = "Tarifa referencial";
+    document.querySelector("#valuation-rate").textContent = `${formatUf(executor.rate)} UF/h`;
+    document.querySelector("#valuation-total-label").textContent = "Rango referencial estimado";
+    document.querySelector("#valuation-total").textContent = `${formatUf(lower)} a ${formatUf(upper)} UF`;
+    document.querySelector("#valuation-explanation").textContent =
+      `Ejemplo para proveedor, complejidad ${assumption.label.toLowerCase()} y ${profiles} ${profiles === 1 ? "perfil" : "perfiles"}.`;
+  }
 }
 
 document.querySelectorAll("#complexity-options button").forEach(button => {
