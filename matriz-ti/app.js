@@ -77,6 +77,8 @@ const methods = {
 };
 
 const tabs = document.querySelectorAll(".method-tab");
+const questionList = document.querySelector("#method-questions");
+
 function renderMethod(key) {
   const method = methods[key];
   document.querySelector("#method-kicker").textContent = method.kicker;
@@ -92,6 +94,7 @@ function renderMethod(key) {
   document.querySelector("#method-example-score").textContent = method.exampleScore;
   document.querySelector("#method-example-reason").textContent = method.exampleReason;
   document.querySelector("#method-example-reading").textContent = method.exampleReading;
+  questionList.innerHTML = method.questions.map(question => `<li>${question}</li>`).join("");
   tabs.forEach(tab => {
     const active = tab.dataset.method === key;
     tab.classList.toggle("active", active);
