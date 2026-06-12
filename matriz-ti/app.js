@@ -156,10 +156,10 @@ sliderIds.forEach(id => document.querySelector(`#${id}`).addEventListener("input
 updateSimulator();
 
 const valuationAssumptions = {
-  minor: { label: "Ajuste menor", hours: 4, increment: 4, weeks: ["días", "hasta 1 semana"] },
-  low: { label: "Baja", hours: 16, increment: 6, weeks: ["1", "2 semanas"] },
-  medium: { label: "Media", hours: 48, increment: 8, weeks: ["2", "4 semanas"] },
-  high: { label: "Alta", hours: 120, increment: 16, weeks: ["5", "8 semanas"] }
+  minor: { label: "Ajuste menor", hours: 4, increment: 1, weeks: ["días", "1 a 3 días"] },
+  low: { label: "Baja", hours: 12, increment: 3, weeks: ["días", "3 días a 1 semana"] },
+  medium: { label: "Media", hours: 32, increment: 6, weeks: ["1", "3 semanas"] },
+  high: { label: "Alta", hours: 72, increment: 17, weeks: ["3", "6 semanas"] }
 };
 const valuationRates = {
   dai: { label: "DAI", rate: null },
