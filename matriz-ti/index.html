@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Propuesta interactiva para adoptar la Matriz de Priorización y Gestión de Requerimientos TI SISE.">
   <title>Propuesta Matriz TI SISE</title>
-  <link rel="stylesheet" href="styles.css?v=20260612-5">
+  <link rel="stylesheet" href="styles.css?v=20260612-6">
 </head>
 <body>
   <header class="topbar">
@@ -206,6 +206,7 @@
           <fieldset>
             <legend>1. Complejidad estimada</legend>
             <div class="valuation-options" id="complexity-options">
+              <button type="button" data-value="minor">Ajuste menor</button>
               <button type="button" data-value="low">Baja</button>
               <button type="button" data-value="medium" class="active">Media</button>
               <button type="button" data-value="high">Alta</button>
@@ -231,15 +232,15 @@
           <div class="valuation-flow">
             <div><span>Complejidad</span><strong id="valuation-complexity">Media</strong></div>
             <i>→</i>
-            <div><span>Horas base</span><strong id="valuation-hours">160 h</strong></div>
+            <div><span>Horas base</span><strong id="valuation-hours">56 h</strong></div>
             <i>→</i>
-            <div><span>Plazo</span><strong id="valuation-time">5 a 7 semanas</strong></div>
+            <div><span>Plazo</span><strong id="valuation-time">2 a 4 semanas</strong></div>
             <i>→</i>
             <div><span id="valuation-rate-label">Costo adicional</span><strong id="valuation-rate">No aplica</strong></div>
           </div>
           <div class="valuation-total">
             <span id="valuation-total-label">Dedicación interna estimada</span>
-            <strong id="valuation-total">160 horas</strong>
+            <strong id="valuation-total">56 horas</strong>
             <p id="valuation-explanation">Ejemplo construido con complejidad media, ejecución DAI y dos perfiles.</p>
           </div>
           <p class="valuation-disclaimer">DAI corresponde a capacidad interna de la institución y no genera un costo adicional en UF. Los rangos monetarios se muestran únicamente para proveedor.</p>
@@ -412,9 +413,8 @@
 
   <footer>
     <p>Propuesta de adopción de la Matriz TI SISE</p>
-    <p>Adaptación metodológica para evaluación interna.</p>
   </footer>
 
-  <script src="app.js?v=20260612-5"></script>
+  <script src="app.js?v=20260612-6"></script>
 </body>
 </html>

@@ -156,9 +156,10 @@ sliderIds.forEach(id => document.querySelector(`#${id}`).addEventListener("input
 updateSimulator();
 
 const valuationAssumptions = {
-  low: { label: "Baja", hours: 72, weeks: [2, 4] },
-  medium: { label: "Media", hours: 144, weeks: [5, 7] },
-  high: { label: "Alta", hours: 280, weeks: [8, 12] }
+  minor: { label: "Ajuste menor", hours: 4, increment: 4, weeks: ["días", "hasta 1 semana"] },
+  low: { label: "Baja", hours: 16, increment: 6, weeks: ["1", "2 semanas"] },
+  medium: { label: "Media", hours: 48, increment: 8, weeks: ["2", "4 semanas"] },
+  high: { label: "Alta", hours: 120, increment: 16, weeks: ["5", "8 semanas"] }
 };
 const valuationRates = {
   dai: { label: "DAI", rate: null },
@@ -174,11 +175,12 @@ function updateValuation() {
   const assumption = valuationAssumptions[valuationState.complexity];
   const executor = valuationRates[valuationState.executor];
   const profiles = Number(document.querySelector("#valuation-profiles").value);
-  const hours = assumption.hours + (profiles - 1) * 16;
+  const hours = assumption.hours + (profiles - 1) * assumption.increment;
   document.querySelector('output[for="valuation-profiles"]').value = profiles;
   document.querySelector("#valuation-complexity").textContent = assumption.label;
   document.querySelector("#valuation-hours").textContent = `${hours} h`;
-  document.querySelector("#valuation-time").textContent = `${assumption.weeks[0]} a ${assumption.weeks[1]} semanas`;
+  document.querySelector("#valuation-time").textContent =
+    assumption.weeks[0] === "días" ? assumption.weeks[1] : `${assumption.weeks[0]} a ${assumption.weeks[1]}`;
   if (valuationState.executor === "dai") {
     document.querySelector("#valuation-rate-label").textContent = "Costo adicional";
     document.querySelector("#valuation-rate").textContent = "No aplica";
