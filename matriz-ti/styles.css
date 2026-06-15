@@ -116,115 +116,134 @@ main { display: flex; flex-direction: column; }
   line-height: 1.55;
 }
 .hero-visual { position: relative; min-height: 480px; }
-.transformation-orbit {
+.idea-trace {
   overflow: hidden;
   border: 1px solid #d4e5f0;
   border-radius: 32px;
   background:
-    radial-gradient(circle at 50% 46%, rgba(77,155,211,.17), transparent 30%),
+    radial-gradient(circle at 78% 28%, rgba(77,155,211,.14), transparent 30%),
     linear-gradient(145deg, #fbfdff, #eaf4fa);
   box-shadow: 0 26px 65px rgba(20,43,74,.13);
 }
-.orbit-ring {
+.trace-line {
   position: absolute;
-  left: 50%;
-  top: 46%;
-  border: 1px solid rgba(37,111,158,.2);
-  border-radius: 50%;
-  transform: translate(-50%,-50%);
+  left: 14%;
+  right: 14%;
+  top: 48%;
+  height: 2px;
+  border-radius: 999px;
+  background: #c6dce9;
 }
-.ring-outer { width: 390px; height: 390px; animation: orbit-rotate 24s linear infinite; }
-.ring-inner { width: 250px; height: 250px; border-style: dashed; animation: orbit-rotate 18s linear infinite reverse; }
-.orbit-pulse {
-  position: absolute;
-  left: 50%;
-  top: 46%;
-  width: 155px;
-  height: 155px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(77,155,211,.22), rgba(77,155,211,.03) 62%, transparent 64%);
-  transform: translate(-50%,-50%);
-  animation: orbit-pulse 3s ease-in-out infinite;
+.trace-progress {
+  display: block;
+  width: 24%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue);
+  box-shadow: 0 0 14px rgba(37,111,158,.45);
+  animation: trace-travel 4.5s ease-in-out infinite;
 }
-.idea-core {
+.trace-start {
   position: absolute;
-  left: 50%;
-  top: 46%;
-  z-index: 3;
-  width: 124px;
-  height: 124px;
+  left: 12%;
+  top: 48%;
   display: flex;
   flex-direction: column;
+  gap: 14px;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255,255,255,.75);
-  border-radius: 50%;
-  color: white;
-  background: linear-gradient(145deg, #1b5c8b, #398bc0);
-  box-shadow: 0 18px 42px rgba(31,100,145,.3);
   transform: translate(-50%,-50%);
 }
-.idea-core span { font-size: 10px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
-.idea-core strong { margin-top: 5px; font-size: 17px; }
-.orbit-stage {
-  position: relative;
-  z-index: 2;
-  position: absolute;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  min-width: 188px;
-  padding: 14px 16px;
-  border: 1px solid #d0e2ed;
-  border-radius: 16px;
-  color: var(--navy);
-  background: rgba(255,255,255,.94);
-  box-shadow: 0 14px 34px rgba(20,43,74,.11);
-  animation: stage-float 4s ease-in-out infinite;
-}
-.orbit-stage > span {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  border-radius: 12px;
-  color: white;
+.idea-spark {
+  width: 34px;
+  height: 34px;
+  border: 9px solid #d9edf8;
+  border-radius: 50%;
   background: var(--blue);
-  font-size: 13px;
-  font-weight: 900;
+  box-shadow: 0 0 0 1px rgba(37,111,158,.2), 0 10px 25px rgba(37,111,158,.2);
+  animation: spark-breathe 3s ease-in-out infinite;
 }
-.orbit-stage small {
-  display: block;
-  margin-bottom: 4px;
+.trace-start small {
   color: var(--blue);
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .1em;
-}
-.orbit-stage strong { font-size: 13px; }
-.stage-writing { left: 4%; top: 13%; }
-.stage-analysis { right: 3%; top: 22%; animation-delay: -1.3s; }
-.stage-technology { right: 9%; bottom: 14%; animation-delay: -2.6s; }
-.orbit-caption {
-  position: absolute;
-  left: 50%;
-  bottom: 22px;
-  z-index: 3;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  transform: translateX(-50%);
-  color: #527a95;
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .14em;
   white-space: nowrap;
 }
-.orbit-caption span { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 10px rgba(37,111,158,.45); animation: blink 1.2s infinite; }
+.trace-sheet {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 126px;
+  height: 158px;
+  padding: 48px 22px 20px;
+  border: 1px solid #c9dfea;
+  border-radius: 10px 24px 10px 10px;
+  background: white;
+  box-shadow: 0 18px 38px rgba(20,43,74,.12);
+  transform: translate(-50%,-50%) rotate(-3deg);
+}
+.trace-sheet::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 31px;
+  height: 31px;
+  border-left: 1px solid #c9dfea;
+  border-bottom: 1px solid #c9dfea;
+  border-radius: 0 22px 0 8px;
+  background: #e8f3f9;
+}
+.trace-sheet span {
+  display: block;
+  height: 3px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background: #9fc6dc;
+}
+.trace-sheet span:nth-child(2) { width: 72%; }
+.trace-sheet span:nth-child(3) { width: 88%; }
+.trace-sheet strong {
+  position: absolute;
+  left: 50%;
+  bottom: 17px;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+.trace-output {
+  position: absolute;
+  right: 7%;
+  top: 48%;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 17px 20px;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(145deg, #1b5c8b, #398bc0);
+  box-shadow: 0 18px 38px rgba(31,100,145,.24);
+  transform: translateY(-50%);
+}
+.trace-output > span { font-size: 21px; font-weight: 900; }
+.trace-output small { display: block; margin-bottom: 3px; color: #c8e8fa; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.trace-output strong { font-size: 14px; }
+.trace-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  width: 80%;
+  margin: 0;
+  color: #527a95;
+  font-size: 12px;
+  text-align: center;
+  transform: translateX(-50%);
+}
 .priority {
   display: inline-flex;
   align-items: center;
@@ -551,22 +570,20 @@ footer { display: flex; justify-content: flex-start; gap: 30px; padding: 28px cl
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes blink { 50% { opacity: 0; } }
-@keyframes orbit-rotate {
-  to { transform: translate(-50%,-50%) rotate(360deg); }
+@keyframes trace-travel {
+  0% { transform: translateX(0); opacity: 0; }
+  15%, 75% { opacity: 1; }
+  100% { transform: translateX(320%); opacity: 0; }
 }
-@keyframes orbit-pulse {
-  0%, 100% { opacity: .55; transform: translate(-50%,-50%) scale(.94); }
-  50% { opacity: 1; transform: translate(-50%,-50%) scale(1.08); }
-}
-@keyframes stage-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
+@keyframes spark-breathe {
+  0%, 100% { transform: scale(.92); }
+  50% { transform: scale(1.08); }
 }
 
 @media (max-width: 1000px) {
   .hero { grid-template-columns: 1fr; }
   .hero-visual { min-height: 390px; }
-  .transformation-orbit { min-height: 430px; }
+  .idea-trace { min-height: 430px; }
   .process-grid, .examples-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .method-panel, .method-score-detail, .simulator { grid-template-columns: 1fr; }
   #metodologia .section-heading { grid-template-columns: 1fr; gap: 18px; }
@@ -586,14 +603,13 @@ footer { display: flex; justify-content: flex-start; gap: 30px; padding: 28px cl
   .main-nav { display: none; position: absolute; top: 65px; left: 16px; right: 16px; flex-direction: column; align-items: stretch; padding: 15px; border: 1px solid var(--line); border-radius: 12px; background: white; box-shadow: var(--shadow); }
   .main-nav.open { display: flex; }
   .process-grid, .examples-grid, .timeline, .decision-grid, .governance-matrix { grid-template-columns: 1fr; }
-  .transformation-orbit { min-height: 520px; }
-  .ring-outer { width: 320px; height: 320px; }
-  .ring-inner { width: 210px; height: 210px; }
-  .orbit-stage { min-width: 168px; padding: 11px 12px; }
-  .stage-writing { left: 3%; top: 8%; }
-  .stage-analysis { right: 2%; top: 25%; }
-  .stage-technology { right: 5%; bottom: 16%; }
-  .orbit-caption { width: 88%; justify-content: center; white-space: normal; text-align: center; }
+  .idea-trace { min-height: 500px; }
+  .trace-line { top: 45%; }
+  .trace-start { left: 12%; top: 45%; }
+  .trace-sheet { top: 45%; width: 108px; height: 142px; }
+  .trace-output { right: 4%; top: 45%; padding: 14px; }
+  .trace-output div { display: none; }
+  .trace-caption { bottom: 35px; }
   .valuation-flow { grid-template-columns: 1fr; }
   .valuation-range { grid-template-columns: 1fr 1fr 28px; }
   .governance-intro { grid-row: auto; }
