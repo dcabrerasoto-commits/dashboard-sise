@@ -49,7 +49,9 @@ async function hogar(f){
  document.getElementById('total-ayudas').textContent=`Total: ${d.beneficios.length}`;
  const caracterizacion={...c};delete caracterizacion.Folio;delete caracterizacion['Estado del Folio'];delete caracterizacion['Estado de la Vivienda'];delete caracterizacion['Estado de Enseres'];
  document.getElementById('caracterizacion').innerHTML=cards(caracterizacion);
- document.getElementById('senapred').innerHTML=cards(d.senapred);
+ const valoresSenapred=Object.values(d.senapred||{}),tieneSenapred=valoresSenapred.some(v=>{const n=String(v??'').trim().toLowerCase();return n&&n!=='sin información'&&n!=='sin informacion'});
+ document.getElementById('senapred').innerHTML=tieneSenapred?cards(d.senapred):'';
+ document.getElementById('senapred').closest('.cartola-seccion').classList.toggle('oculto',!tieneSenapred);
  document.getElementById('integrantes').innerHTML=tabla(d.integrantes,[['run','RUN'],['nombre','Nombre y Apellidos'],['parentesco','Parentesco'],['telefono','Teléfono']]);
  document.getElementById('beneficios').innerHTML=d.beneficios.length?tablaAyudas(d.beneficios):'<div class="vacio">El hogar no registra Ayudas Tempranas.</div>';
  let seccion=document.getElementById('seccion-extraordinaria');
