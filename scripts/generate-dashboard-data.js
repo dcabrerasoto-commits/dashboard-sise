@@ -105,6 +105,22 @@ async function readCsvRows(context) {
     return context.parsearCSV(await response.text());
 }
 
+async function readPreferredRows(context) {
+    const errores = [];
+    try {
+        return await readCsvRows(context);
+    } catch (error) {
+        errores.push(`CSV: ${error.message}`);
+    }
+    try {
+        const googleRows = await readGoogleSheetRows();
+        if (googleRows) return googleRows;
+    } catch (error) {
+        errores.push(`Google Sheets: ${error.message}`);
+    }
+    throw new Error(`No fue posible obtener datos para el dashboard. ${errores.join(" | ")}`);
+}
+
 function buildDashboardData(context, rows) {
     const { datos, headers } = rows;
     if (!datos.length) throw new Error("La fuente no tiene filas de datos.");
@@ -130,7 +146,7 @@ function updateDataAssetVersion() {
 
 async function main() {
     const context = loadDashboardContext();
-    const rows = await readGoogleSheetRows() || await readCsvRows(context);
+    const rows = await readPreferredRows(context);
     const dashboardData = buildDashboardData(context, rows);
     const output = [
         "window.SISE_DASHBOARD_DATA = ",
