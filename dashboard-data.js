@@ -1,5 +1,5 @@
 window.SISE_DASHBOARD_DATA = {
-  "source": "private-google-sheet",
+  "source": "csv",
   "data": {
     "totalPersonas": 21002,
     "meses": [

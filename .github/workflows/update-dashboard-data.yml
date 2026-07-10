@@ -1,6 +1,8 @@
 name: Actualizar datos dashboard SISE
 
 on:
+  schedule:
+    - cron: "15 11 * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [update-sise-dashboard]
