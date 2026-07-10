@@ -28,8 +28,6 @@ jobs:
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
           GOOGLE_SHEET_NAME: ${{ secrets.GOOGLE_SHEET_NAME }}
           GOOGLE_SHEET_RANGE: ${{ secrets.GOOGLE_SHEET_RANGE }}
-          SOURCE_CSV_URL: ${{ secrets.SOURCE_CSV_URL }}
-          SOURCE_CSV_BEARER_TOKEN: ${{ secrets.SOURCE_CSV_BEARER_TOKEN }}
         run: node scripts/generate-dashboard-data.js
       - name: Publicar si hay cambios
         run: |

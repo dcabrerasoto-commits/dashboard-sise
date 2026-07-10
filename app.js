@@ -1,4 +1,4 @@
-function porcentajeEs(valor) { return `${valor.toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`; }
+﻿function porcentajeEs(valor) { return `${valor.toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`; }
 function porcentajeRatioEs(valor, total) { return porcentajeEs(total > 0 ? (valor / total) * 100 : 0); }
 function badgeTasa(valor) { return `<span class="badge badge-principal">${porcentajeEs(valor)}</span>`; }
 function textoPorcentaje(valor) {
@@ -19,31 +19,31 @@ function mesNombrePropioHtml(texto) {
 }
 function lecturaEjecutivaMes(monthData) {
     const sinAcreditacionVigente = monthData.noVigente + monthData.noAcreditado;
-    return `<strong>${mesNombrePropioText(monthData.label)}:</strong> ${fmt(monthData.acreditado)} personas con acreditación vigente y ${fmt(sinAcreditacionVigente)} personas sin acreditación vigente. De este segundo grupo, ${fmt(monthData.noVigente)} son no vigentes y ${fmt(monthData.noAcreditado)} no registran acreditación previa.`;
+    return `<strong>${mesNombrePropioText(monthData.label)}:</strong> ${fmt(monthData.acreditado)} personas con acreditaciÃ³n vigente y ${fmt(sinAcreditacionVigente)} personas sin acreditaciÃ³n vigente. De este segundo grupo, ${fmt(monthData.noVigente)} son no vigentes y ${fmt(monthData.noAcreditado)} no registran acreditaciÃ³n previa.`;
 }
 function renderTarjetasHallazgos(hallazgos) {
-    const titulos = ["Concentración de registros", "Acreditación vigente relevante", "Sin acreditación previa relevante", "Variación mensual"];
+    const titulos = ["ConcentraciÃ³n de registros", "AcreditaciÃ³n vigente relevante", "Sin acreditaciÃ³n previa relevante", "VariaciÃ³n mensual"];
     return hallazgos.slice(1).map((item, index) => {
         if (typeof item === "object") {
-            return `<div class="insight-item insight-structured"><div class="insight-kicker">${item.titulo || titulos[index] || "Síntesis"}</div><div class="insight-main">${mesNombrePropioHtml(item.hallazgo || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.lectura || "")}</div></div>`;
+            return `<div class="insight-item insight-structured"><div class="insight-kicker">${item.titulo || titulos[index] || "SÃ­ntesis"}</div><div class="insight-main">${mesNombrePropioHtml(item.hallazgo || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.lectura || "")}</div></div>`;
         }
         const partes = item.split(", ");
         const dato = partes.length > 1 ? partes[0] : item.split(".")[0];
-        return `<div class="insight-item insight-structured"><div class="insight-kicker">${titulos[index] || "Síntesis"}</div><div class="insight-main">${mesNombrePropioHtml(dato)}</div><div class="insight-copy">${mesNombrePropioHtml(item)}</div></div>`;
+        return `<div class="insight-item insight-structured"><div class="insight-kicker">${titulos[index] || "SÃ­ntesis"}</div><div class="insight-main">${mesNombrePropioHtml(dato)}</div><div class="insight-copy">${mesNombrePropioHtml(item)}</div></div>`;
     }).join("");
 }
 function obtenerTipoAlerta(item) {
     if (typeof item === "object" && item.etiqueta) return item.etiqueta;
     if (item.startsWith("Seguimiento sugerido")) return "Seguimiento";
-    if (item.startsWith("Atención")) return "Atención";
-    if (item.startsWith("Revisión prioritaria")) return "Revisión prioritaria";
-    if (item.startsWith("Variación mensual")) return "Seguimiento";
+    if (item.startsWith("AtenciÃ³n")) return "AtenciÃ³n";
+    if (item.startsWith("RevisiÃ³n prioritaria")) return "RevisiÃ³n prioritaria";
+    if (item.startsWith("VariaciÃ³n mensual")) return "Seguimiento";
     return "Seguimiento";
 }
 function renderTarjetasAlertas(alertas) {
     return alertas.map((item) => {
         const tipo = obtenerTipoAlerta(item);
-        const clase = tipo === "Atención" ? "alerta-atencion" : (tipo === "Revisión prioritaria" ? "alerta-revision" : "alerta-seguimiento");
+        const clase = tipo === "AtenciÃ³n" ? "alerta-atencion" : (tipo === "RevisiÃ³n prioritaria" ? "alerta-revision" : "alerta-seguimiento");
         if (typeof item === "object") {
             return `<div class="insight-item alert-item ${clase}"><div class="alert-label">${tipo}</div><div class="insight-main">${mesNombrePropioHtml(item.titulo || "")}</div><div class="insight-copy">${mesNombrePropioHtml(item.dato || "")}</div>${item.base ? `<div class="insight-base">${item.base}</div>` : ""}</div>`;
         }
@@ -99,13 +99,13 @@ function abrirDetalleRegion(region) {
     const encabezado = document.getElementById("comunaModalSectionTitle");
     if (encabezado) encabezado.textContent = esNivelCentral ? "Resumen del nivel central" : "Desglose por comuna";
     document.getElementById("comunaModalSubtitle").textContent = esNivelCentral
-        ? `${subtituloBase} Resumen del número de personas registradas en Nivel Central.`
+        ? `${subtituloBase} Resumen del nÃºmero de personas registradas en Nivel Central.`
         : (dashboardData.hasComunaData
-            ? `${subtituloBase} Desglose del número de personas por comuna dentro de la región seleccionada.`
+            ? `${subtituloBase} Desglose del nÃºmero de personas por comuna dentro de la regiÃ³n seleccionada.`
             : `${subtituloBase} La fuente publicada actual no incluye una columna de comuna; agrega una columna COMUNA para habilitar este detalle.`);
     const contenedor = document.getElementById("comunaModalContent");
     if (!dashboardData.hasComunaData) {
-        contenedor.innerHTML = `<div class="modal-empty">La base publicada hoy no trae una columna de comuna. En cuanto el CSV incorpore una columna como <strong>COMUNA</strong>, <strong>NOMBRE_COMUNA</strong> o similar, este desglose se activará automáticamente al hacer clic en cada región.</div>`;
+        contenedor.innerHTML = `<div class="modal-empty">La base publicada hoy no trae una columna de comuna. En cuanto el CSV incorpore una columna como <strong>COMUNA</strong>, <strong>NOMBRE_COMUNA</strong> o similar, este desglose se activarÃ¡ automÃ¡ticamente al hacer clic en cada regiÃ³n.</div>`;
     } else {
         const filasComuna = regionData.porComuna.map((c, index) => `
             <tr class="${index % 2 === 0 ? "region-group-par" : "region-group-impar"}">
@@ -121,13 +121,13 @@ function abrirDetalleRegion(region) {
         const brechaRegional = regionData.NoVigente + regionData.NoAcreditado;
         contenedor.innerHTML = `
             <div class="modal-grid kpi-section modal-kpi-grid">
-                <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(regionData.Total)}</div></div>
-                <div class="kpi-card verde"><div class="kpi-label">N° de personas con acreditación vigente</div><div class="kpi-value">${fmt(regionData.Acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.Acreditado, regionData.Total)} del total regional.</div></div>
+                <div class="kpi-card azul"><div class="kpi-label">NÂ° de personas registradas</div><div class="kpi-value">${fmt(regionData.Total)}</div></div>
+                <div class="kpi-card verde"><div class="kpi-label">NÂ° de personas con acreditaciÃ³n vigente</div><div class="kpi-value">${fmt(regionData.Acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.Acreditado, regionData.Total)} del total regional.</div></div>
                 <div class="kpi-group-with-subgroups">
-                    <div class="kpi-card brecha"><div class="kpi-label">N° de personas sin acreditación vigente</div><div class="kpi-value">${fmt(brechaRegional)}</div><div class="kpi-percent">No vigente + Sin acreditación previa.</div></div>
-                    <div class="kpi-subgroups-panel"><div class="kpi-subgroup-heading">Subgrupos de personas sin acreditación vigente</div><div class="kpi-subgroup-stack">
-                        <div class="kpi-card ambar kpi-subgrupo"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(regionData.NoVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoVigente, regionData.Total)} del total regional.</div></div>
-                        <div class="kpi-card rojo kpi-subgrupo"><div class="kpi-label">N° de personas sin acreditación previa</div><div class="kpi-value">${fmt(regionData.NoAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoAcreditado, regionData.Total)} del total regional.</div></div>
+                    <div class="kpi-card brecha"><div class="kpi-label">NÂ° de personas sin acreditaciÃ³n vigente</div><div class="kpi-value">${fmt(brechaRegional)}</div><div class="kpi-percent">No vigente + Sin acreditaciÃ³n previa.</div></div>
+                    <div class="kpi-subgroups-panel"><div class="kpi-subgroup-heading">Subgrupos de personas sin acreditaciÃ³n vigente</div><div class="kpi-subgroup-stack">
+                        <div class="kpi-card ambar kpi-subgrupo"><div class="kpi-label">NÂ° de personas no vigentes</div><div class="kpi-value">${fmt(regionData.NoVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoVigente, regionData.Total)} del total regional.</div></div>
+                        <div class="kpi-card rojo kpi-subgrupo"><div class="kpi-label">NÂ° de personas sin acreditaciÃ³n previa</div><div class="kpi-value">${fmt(regionData.NoAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(regionData.NoAcreditado, regionData.Total)} del total regional.</div></div>
                     </div></div>
                     </div>
                 </div>
@@ -144,8 +144,8 @@ function abrirDetalleRegion(region) {
                             <col class="col-data">
                         </colgroup>
                         <thead>
-                            <tr><th rowspan="2">Comuna</th><th rowspan="2" class="th-acreditado">Con acreditación vigente</th><th rowspan="2" class="percent-header th-porcentaje"><span>% con acreditación vigente respecto al total regional</span></th><th colspan="2" class="th-brecha-group col-brecha-group"><span>Personas sin acreditación vigente</span></th><th rowspan="2" class="th-total">Total</th></tr>
-                            <tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">Sin acreditación previa</th></tr>
+                            <tr><th rowspan="2">Comuna</th><th rowspan="2" class="th-acreditado">Con acreditaciÃ³n vigente</th><th rowspan="2" class="percent-header th-porcentaje"><span>% con acreditaciÃ³n vigente respecto al total regional</span></th><th colspan="2" class="th-brecha-group col-brecha-group"><span>Personas sin acreditaciÃ³n vigente</span></th><th rowspan="2" class="th-total">Total</th></tr>
+                            <tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">Sin acreditaciÃ³n previa</th></tr>
                         </thead>
                         <tbody>${filasComuna}</tbody>
                     </table>
@@ -196,42 +196,42 @@ function renderDashboard() {
     document.getElementById("content").innerHTML = `
         <div class="dashboard-shell">
         <div class="executive-band">
-            <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${lecturaEjecutivaMes(monthData)}</div><div class="definitions-compact definitions-grouped"><div class="definition-group"><strong>Con acreditación vigente</strong><span>Personas matriculadas con acreditación vigente en el mes seleccionado.</span></div><div class="definition-group definition-group-parent"><strong>Sin acreditación vigente</strong><span>Personas matriculadas que actualmente no cuentan con acreditación activa.</span><div class="definition-subgroups"><span><b>No vigente:</b> personas matriculadas que tuvieron acreditación previa, pero no cuentan con vigencia actual.</span><span><b>Sin acreditación previa:</b> personas matriculadas que no registran acreditación anterior ni actual.</span></div></div></div></div>
-            <div class="panel executive-side"><div class="executive-title">Contexto</div><div class="context-list"><div><span>Mes visualizado</span><strong>${mesNombrePropioText(monthData.label)}</strong></div><div><span>Fuente</span><strong>Sistema de Información Social en Emergencias</strong></div><div><span>N° de registros del mes</span><strong>${fmt(monthData.total)} registros de ${mesNombrePropioText(monthData.label)}</strong></div><div><span>Comparación</span><strong>${prevMonthData ? `${mesNombrePropioText(prevMonthData.label)} (${fmt(prevMonthData.total)} registros)` : "Sin mes previo"}</strong></div><div><span>Variación del universo mensual</span><strong>${prevMonthData ? `${deltaUniverso >= 0 ? "+" : ""}${fmt(deltaUniverso)} registros` : "Sin mes previo"}</strong></div></div><div class="context-note">Las variaciones muestran el cambio frente al mes anterior. Como el total de registros puede cambiar, no deben leerse como traspasos directos entre categorías.</div></div>
+            <div class="panel executive-main"><div class="executive-title">Lectura ejecutiva</div><div class="executive-text">${lecturaEjecutivaMes(monthData)}</div><div class="definitions-compact definitions-grouped"><div class="definition-group"><strong>Con acreditaciÃ³n vigente</strong><span>Personas matriculadas con acreditaciÃ³n vigente en el mes seleccionado.</span></div><div class="definition-group definition-group-parent"><strong>Sin acreditaciÃ³n vigente</strong><span>Personas matriculadas que actualmente no cuentan con acreditaciÃ³n activa.</span><div class="definition-subgroups"><span><b>No vigente:</b> personas matriculadas que tuvieron acreditaciÃ³n previa, pero no cuentan con vigencia actual.</span><span><b>Sin acreditaciÃ³n previa:</b> personas matriculadas que no registran acreditaciÃ³n anterior ni actual.</span></div></div></div></div>
+            <div class="panel executive-side"><div class="executive-title">Contexto</div><div class="context-list"><div><span>Mes visualizado</span><strong>${mesNombrePropioText(monthData.label)}</strong></div><div><span>Fuente</span><strong>Sistema de InformaciÃ³n Social en Emergencias</strong></div><div><span>NÂ° de registros del mes</span><strong>${fmt(monthData.total)} registros de ${mesNombrePropioText(monthData.label)}</strong></div><div><span>ComparaciÃ³n</span><strong>${prevMonthData ? `${mesNombrePropioText(prevMonthData.label)} (${fmt(prevMonthData.total)} registros)` : "Sin mes previo"}</strong></div><div><span>VariaciÃ³n del universo mensual</span><strong>${prevMonthData ? `${deltaUniverso >= 0 ? "+" : ""}${fmt(deltaUniverso)} registros` : "Sin mes previo"}</strong></div></div><div class="context-note">Las variaciones muestran el cambio frente al mes anterior. Como el total de registros puede cambiar, no deben leerse como traspasos directos entre categorÃ­as.</div></div>
         </div>
         <div class="panel toolbar">
             <div><div class="toolbar-title">Seleccionar mes</div><div class="month-group">${buildMonthButtons()}</div></div>
             <div class="toolbar-actions">
-                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de Información Social en Emergencias</div></div>
+                <div class="toolbar-meta"><div><strong>Fuente:</strong> Sistema de InformaciÃ³n Social en Emergencias</div></div>
                 <div class="export-wrap">
                     <button type="button" class="export-btn" onclick="toggleMenuExportacion()">Exportar datos</button>
                     <div class="export-menu" id="exportMenu">
-                        <button type="button" class="export-option" onclick="exportarRegional()">Descargar resumen nacional por región</button>
+                        <button type="button" class="export-option" onclick="exportarRegional()">Descargar resumen nacional por regiÃ³n</button>
                         <button type="button" class="export-option" onclick="exportarComunalNacional()" ${dashboardData.hasComunaData ? "" : "disabled"}>Descargar resumen nacional por comuna</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="kpi-section">
-            <div class="kpi-card azul"><div class="kpi-label">N° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN únicos de los meses consolidados.</div></div>
-            <div class="kpi-card verde"><div class="kpi-label">N° de personas con acreditación vigente</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.acreditado, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">Personas con acreditación vigente en el mes visualizado.</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
+            <div class="kpi-card azul"><div class="kpi-label">NÂ° de personas registradas</div><div class="kpi-value">${fmt(dashboardData.totalPersonas)}</div><div class="kpi-percent">Recuento de RUN Ãºnicos de los meses consolidados.</div></div>
+            <div class="kpi-card verde"><div class="kpi-label">NÂ° de personas con acreditaciÃ³n vigente</div><div class="kpi-value">${fmt(monthData.acreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.acreditado, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">Personas con acreditaciÃ³n vigente en el mes visualizado.</div><div class="kpi-delta ${deltaAcreditado.className}">${deltaAcreditado.label}</div></div>
             <div class="kpi-group-with-subgroups">
-                <div class="kpi-card brecha"><div class="kpi-label">N° de personas sin acreditación vigente</div><div class="kpi-value">${fmt(brechaActual)}</div><div class="kpi-percent">${porcentajeRatioEs(brechaActual, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">No vigente + Sin acreditación previa.</div><div class="kpi-delta ${deltaBrecha.className}">${deltaBrecha.label}</div></div>
-                <div class="kpi-subgroups-panel"><div class="kpi-subgroup-heading">Subgrupos de personas sin acreditación vigente</div><div class="kpi-subgroup-stack">
-                    <div class="kpi-card ambar kpi-subgrupo"><div class="kpi-label">N° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.noVigente, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
-                    <div class="kpi-card rojo kpi-subgrupo"><div class="kpi-label">N° de personas sin acreditación previa</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.noAcreditado, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
+                <div class="kpi-card brecha"><div class="kpi-label">NÂ° de personas sin acreditaciÃ³n vigente</div><div class="kpi-value">${fmt(brechaActual)}</div><div class="kpi-percent">${porcentajeRatioEs(brechaActual, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-description">No vigente + Sin acreditaciÃ³n previa.</div><div class="kpi-delta ${deltaBrecha.className}">${deltaBrecha.label}</div></div>
+                <div class="kpi-subgroups-panel"><div class="kpi-subgroup-heading">Subgrupos de personas sin acreditaciÃ³n vigente</div><div class="kpi-subgroup-stack">
+                    <div class="kpi-card ambar kpi-subgrupo"><div class="kpi-label">NÂ° de personas no vigentes</div><div class="kpi-value">${fmt(monthData.noVigente)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.noVigente, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-delta ${deltaNoVigente.className}">${deltaNoVigente.label}</div></div>
+                    <div class="kpi-card rojo kpi-subgrupo"><div class="kpi-label">NÂ° de personas sin acreditaciÃ³n previa</div><div class="kpi-value">${fmt(monthData.noAcreditado)}</div><div class="kpi-percent">${porcentajeRatioEs(monthData.noAcreditado, monthData.total)} del total de registros de ${mesNombrePropioText(monthData.label)}</div><div class="kpi-delta ${deltaNoAcreditado.className}">${deltaNoAcreditado.label}</div></div>
                 </div></div>
             </div>
         </div>
         <div class="charts-section">
-            <div class="chart-card"><div class="section-title">Evolución mensual según acreditación vigente</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
-            <div class="chart-card"><div class="section-title">Distribución por acreditación vigente</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
+            <div class="chart-card"><div class="section-title">EvoluciÃ³n mensual segÃºn acreditaciÃ³n vigente</div><div class="chart-canvas-wrap"><canvas id="trendChart"></canvas></div></div>
+            <div class="chart-card"><div class="section-title">DistribuciÃ³n por acreditaciÃ³n vigente</div><div class="chart-canvas-wrap compact"><canvas id="estadoChart"></canvas></div></div>
         </div>
         <div class="mid-section">
-            <div class="table-section"><div class="section-title">Estados por región</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una región para ver el desglose por comuna." : "Haz clic en una región para revisar el detalle disponible. La fuente actual todavía no incorpora comuna."}</div><table class="fixed-data-table"><colgroup><col class="col-territorio"><col class="col-data"><col class="col-data col-porcentaje"><col class="col-data col-estrecha"><col class="col-data col-estrecha"><col class="col-data"></colgroup><thead><tr><th rowspan="2">Región</th><th rowspan="2" class="th-acreditado">Con acreditación vigente</th><th rowspan="2" class="percent-header th-porcentaje"><span>% con acreditación vigente</span><small>Fila regional: respecto al total nacional. Detalle institucional: respecto a personas con acreditación vigente de la región.</small></th><th colspan="2" class="th-brecha-group col-brecha-group"><span>Personas sin acreditación vigente</span></th><th rowspan="2" class="th-total">Total</th></tr><tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">Sin acreditación previa</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
-            <div class="insights-column"><div class="insight-card"><div class="section-title">Síntesis ejecutiva</div><div class="insight-list">${renderTarjetasHallazgos(hallazgos)}</div></div><div class="insight-card"><div class="section-title">Puntos de atención</div><div class="insight-list">${renderTarjetasAlertas(alertas)}</div></div></div>
+            <div class="table-section"><div class="section-title">Estados por regiÃ³n</div><div class="section-note">${dashboardData.hasComunaData ? "Haz clic en una regiÃ³n para ver el desglose por comuna." : "Haz clic en una regiÃ³n para revisar el detalle disponible. La fuente actual todavÃ­a no incorpora comuna."}</div><table class="fixed-data-table"><colgroup><col class="col-territorio"><col class="col-data"><col class="col-data col-porcentaje"><col class="col-data col-estrecha"><col class="col-data col-estrecha"><col class="col-data"></colgroup><thead><tr><th rowspan="2">RegiÃ³n</th><th rowspan="2" class="th-acreditado">Con acreditaciÃ³n vigente</th><th rowspan="2" class="percent-header th-porcentaje"><span>% con acreditaciÃ³n vigente</span><small>Fila regional: respecto al total nacional. Detalle institucional: respecto a personas con acreditaciÃ³n vigente de la regiÃ³n.</small></th><th colspan="2" class="th-brecha-group col-brecha-group"><span>Personas sin acreditaciÃ³n vigente</span></th><th rowspan="2" class="th-total">Total</th></tr><tr><th class="th-novigente">No vigente</th><th class="th-noacreditado">Sin acreditaciÃ³n previa</th></tr></thead><tbody>${filasRegion}${filaTotales}</tbody></table></div>
+            <div class="insights-column"><div class="insight-card"><div class="section-title">SÃ­ntesis ejecutiva</div><div class="insight-list">${renderTarjetasHallazgos(hallazgos)}</div></div><div class="insight-card"><div class="section-title">Puntos de atenciÃ³n</div><div class="insight-list">${renderTarjetasAlertas(alertas)}</div></div></div>
         </div>
-        <div class="footer-card metodologia-card"><div class="section-title">Metodología y criterios de lectura</div><div class="method-grid method-grid-two"><div class="method-item"><strong>Fuente y territorio</strong><span><b>Fuente:</b> Sistema de Información Social en Emergencias.</span><span><b>Territorio:</b> región y comuna dependen de la información registrada en la fuente; las regiones vacías, con valor cero o sin clasificación se consolidan en Nivel Central.</span></div><div class="method-item"><strong>Comunas sin coincidencia regional</strong><span>Cuando la comuna informada no corresponde a la región registrada, se clasifica como "Sin información de comuna".</span></div></div></div>
+        <div class="footer-card metodologia-card"><div class="section-title">MetodologÃ­a y criterios de lectura</div><div class="method-grid method-grid-two"><div class="method-item"><strong>Fuente y territorio</strong><span><b>Fuente:</b> Sistema de InformaciÃ³n Social en Emergencias.</span><span><b>Territorio:</b> regiÃ³n y comuna dependen de la informaciÃ³n registrada en la fuente; las regiones vacÃ­as, con valor cero o sin clasificaciÃ³n se consolidan en Nivel Central.</span></div><div class="method-item"><strong>Comunas sin coincidencia regional</strong><span>Cuando la comuna informada no corresponde a la regiÃ³n registrada, se clasifica como "Sin informaciÃ³n de comuna".</span></div></div></div>
         </div>
     `;
     crearGraficos(monthData);
@@ -239,22 +239,22 @@ function renderDashboard() {
 function procesarTextoCsv(text, origenLabel) {
     const { datos, headers } = parsearCSV(text);
     if (datos.length === 0) {
-        throw new Error("El archivo está vacío o no tiene filas de datos.");
+        throw new Error("El archivo estÃ¡ vacÃ­o o no tiene filas de datos.");
     }
-    const colRegion = buscarColumna(headers, ["REGION", "REGIÓN", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
+    const colRegion = buscarColumna(headers, ["REGION", "REGIÃ“N", "REGION_NOMBRE", "NOM_REGION", "NOMBRE_REGION"]) || buscarColumnaAproximada(headers, (n) => n.startsWith("REGI") || n.includes("REGION"));
     const colComuna = buscarColumna(headers, ["COMUNA", "NOMBRE_COMUNA", "NOM_COMUNA", "COMUNA_NOMBRE", "GLOSA_COMUNA"]) || buscarColumnaAproximada(headers, (n) => n.includes("COMUNA"));
-    const colDependeDe = buscarColumna(headers, ["DEPENDE DE", "DEPENDE_DE", "DEPENDENCIA", "INSTITUCION", "INSTITUCIÓN"]);
+    const colDependeDe = buscarColumna(headers, ["DEPENDE DE", "DEPENDE_DE", "DEPENDENCIA", "INSTITUCION", "INSTITUCIÃ“N"]);
     const colRun = buscarColumna(headers, ["RUN", "RUT", "RUN_PERSONA", "RUT_PERSONA", "RUN BENEFICIARIO", "RUT BENEFICIARIO"]) || buscarColumnaAproximada(headers, (n) => n === "RUN" || n === "RUT" || n.includes("RUN") || n.includes("RUT"));
     const columnasEstado = buscarColumnasEstado(headers).filter((h) => datos.some((fila) => String(fila[h] || "").trim() !== ""));
     if (columnasEstado.length === 0) {
-        throw new Error("No se encontraron columnas de estado válidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
+        throw new Error("No se encontraron columnas de estado vÃ¡lidas. Se esperaban columnas como ESTADO_ENERO, ESTADO_FEBRERO o ESTADO_MARZO.");
     }
     if (!colRun) {
-        throw new Error("No se encontró una columna RUN o RUT para identificar personas únicas.");
+        throw new Error("No se encontrÃ³ una columna RUN o RUT para identificar personas Ãºnicas.");
     }
     const datosRunValidos = filtrarRunUnicosValidos(datos, colRun);
     if (datosRunValidos.length === 0) {
-        throw new Error("No se encontraron RUN válidos en la fuente publicada.");
+        throw new Error("No se encontraron RUN vÃ¡lidos en la fuente publicada.");
     }
     dashboardData = procesarDatos(datosRunValidos, { colRegion, colComuna, colDependeDe, columnasEstado });
     currentMonthIndex = Math.max(dashboardData.monthly.length - 1, 0);
@@ -271,27 +271,15 @@ function cargarDatosPreprocesados() {
     return true;
 }
 function seleccionarMes(index) { currentMonthIndex = index; renderDashboard(); }
-async function cargarDatosPublicados() {
-    mostrarError("");
-    mostrarInfo("Cargando datos automáticamente desde la fuente publicada...");
-    try {
-        const urlDescarga = construirUrlSinCache(AUTO_CSV_URL);
-        const response = await fetch(urlDescarga, { cache: "no-store" });
-        if (!response.ok) {
-            throw new Error(`No fue posible descargar el CSV (${response.status}).`);
-        }
-        const text = await response.text();
-        procesarTextoCsv(text, AUTO_CSV_URL);
-        mostrarInfo("");
-    } catch (error) {
-        mostrarError("Error al cargar la fuente publicada: " + error.message);
-    }
-}
-
 window.addEventListener("DOMContentLoaded", () => {
-    if (!cargarDatosPreprocesados()) cargarDatosPublicados();
+    if (!cargarDatosPreprocesados()) {
+        mostrarInfo("");
+        mostrarError("No fue posible cargar los datos preprocesados del dashboard.");
+    }
 });
 window.addEventListener("click", (event) => {
     const wrap = document.querySelector(".export-wrap");
     if (wrap && !wrap.contains(event.target)) cerrarMenuExportacion();
 });
+
+
