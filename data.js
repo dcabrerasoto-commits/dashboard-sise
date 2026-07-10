@@ -123,7 +123,7 @@ function normalizarRegion(valor) {
     if (normalizado.includes("METROPOLITANA")) return "METROPOLITANA";
     if (normalizado.includes("OHIGGINS")) return "OHIGGINS";
     if (normalizado.includes("MAULE")) return "MAULE";
-    if (normalizado === "UBLE" || normalizado.endsWith(" UBLE") || normalizado.includes("NUBLE") || normalizado.includes("ÑUBLE") || normalizado.includes("ÃUBLE")) return "NUBLE";
+    if (normalizado === "UBLE" || normalizado.endsWith(" UBLE") || normalizado.includes("NUBLE") || normalizado.includes("?UBLE") || normalizado.includes("?UBLE")) return "NUBLE";
     if (normalizado.includes("BIO") && normalizado.includes("BIO")) return "BIO BIO";
     if (normalizado.includes("ARAUCANIA")) return "LA ARAUCANIA";
     if (normalizado.includes("LOS RIOS")) return "LOS RIOS";
