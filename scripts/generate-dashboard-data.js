@@ -91,36 +91,6 @@ async function readGoogleSheetRows() {
     return { datos, headers };
 }
 
-async function readCsvRows(context) {
-    const dataJs = fs.readFileSync(path.join(root, "data.js"), "utf8");
-    const defaultUrl = (dataJs.match(/AUTO_CSV_URL\s*=\s*"([^"]+)"/) || [])[1];
-    const url = process.env.SOURCE_CSV_URL || defaultUrl;
-    if (!url) throw new Error("No se encontró SOURCE_CSV_URL ni AUTO_CSV_URL.");
-    const headers = {};
-    if (process.env.SOURCE_CSV_BEARER_TOKEN) {
-        headers.Authorization = `Bearer ${process.env.SOURCE_CSV_BEARER_TOKEN}`;
-    }
-    const response = await fetch(url, { headers });
-    if (!response.ok) throw new Error(`CSV ${response.status}: ${await response.text()}`);
-    return context.parsearCSV(await response.text());
-}
-
-async function readPreferredRows(context) {
-    const errores = [];
-    try {
-        return await readCsvRows(context);
-    } catch (error) {
-        errores.push(`CSV: ${error.message}`);
-    }
-    try {
-        const googleRows = await readGoogleSheetRows();
-        if (googleRows) return googleRows;
-    } catch (error) {
-        errores.push(`Google Sheets: ${error.message}`);
-    }
-    throw new Error(`No fue posible obtener datos para el dashboard. ${errores.join(" | ")}`);
-}
-
 function buildDashboardData(context, rows) {
     const { datos, headers } = rows;
     if (!datos.length) throw new Error("La fuente no tiene filas de datos.");
@@ -146,7 +116,10 @@ function updateDataAssetVersion() {
 
 async function main() {
     const context = loadDashboardContext();
-    const rows = await readPreferredRows(context);
+    const rows = await readGoogleSheetRows();
+    if (!rows) {
+        throw new Error("No se configuró GOOGLE_SHEET_ID. La actualización pública requiere la Google Sheet privada.");
+    }
     const dashboardData = buildDashboardData(context, rows);
     const output = [
         "window.SISE_DASHBOARD_DATA = ",
