@@ -1,5 +1,5 @@
 window.SISE_DASHBOARD_DATA = {
-  "source": "csv",
+  "source": "private-google-sheet",
   "data": {
     "totalPersonas": 21002,
     "meses": [
@@ -46269,7 +46269,7 @@ window.SISE_DASHBOARD_DATA = {
         "hasComunaData": true
       }
     ],
-    "fechaCarga": "10-07-2026",
+    "fechaCarga": "11-07-2026",
     "hasComunaData": true
   }
 };
