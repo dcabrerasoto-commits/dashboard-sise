@@ -1,6 +1,64 @@
 {
-  "eventoId": "128042",
-  "actualizado": "",
-  "fuente": "pendiente_robot_sise",
-  "filas": []
+  "actualizado": "2026-07-15T16:58:52",
+  "busquedaEvento": "Sistema Frontal",
+  "eventos": [
+    {
+      "id": "148442",
+      "nombre": "Sistema Frontal",
+      "region": "",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": "14/07/2026"
+    },
+    {
+      "id": "148401",
+      "nombre": "Sistema Frontal",
+      "region": "",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": "14/07/2026"
+    }
+  ],
+  "fuentes": [
+    "148401_20260715_1657_Reporte_BD_FIBE.xlsx",
+    "148401_20260715_1658_Reporte_BD_FIBE.xlsx",
+    "148442_20260715_1656_Reporte_BD_FIBE.xlsx",
+    "148442_20260715_1658_Reporte_BD_FIBE.xlsx"
+  ],
+  "filas": [
+    {
+      "region": "LOS RÍOS",
+      "comuna": "VALDIVIA",
+      "evento": "Sistema Frontal",
+      "id": "148401",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 1,
+      "digitacion": 0,
+      "personas": 4,
+      "nna": 1,
+      "mayores": 1,
+      "discapacidad": 2,
+      "hora": "16:58",
+      "fechaLlenado": "15-07-2026 16:58"
+    },
+    {
+      "region": "LA ARAUCANÍA",
+      "comuna": "GALVARINO",
+      "evento": "Sistema Frontal",
+      "id": "148442",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 1,
+      "digitacion": 0,
+      "personas": 3,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "hora": "16:58",
+      "fechaLlenado": "15-07-2026 16:58"
+    }
+  ]
 }
