@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-15T19:05:17",
+  "actualizado": "2026-07-15T19:09:43",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -29,26 +29,11 @@
   ],
   "filas": [
     {
-      "region": "LOS RÍOS",
-      "comuna": "VALDIVIA",
-      "evento": "Sistema Frontal",
-      "id": "148401",
-      "alfa": 0,
-      "aplicadas": 0,
-      "anuladas": 0,
-      "terminadas": 1,
-      "digitacion": 0,
-      "personas": 4,
-      "nna": 1,
-      "mayores": 1,
-      "discapacidad": 2,
-      "hora": "19:05",
-      "fechaLlenado": "15-07-2026 19:05"
-    },
-    {
       "region": "BIOBÍO",
       "comuna": "TOMÉ",
       "evento": "Sistema Frontal",
+      "fechaOcurrencia": "14/07/2026",
+      "fechaCreacion": "15/07/2026",
       "id": "148401",
       "alfa": 0,
       "aplicadas": 0,
@@ -59,13 +44,15 @@
       "nna": 5,
       "mayores": 1,
       "discapacidad": 1,
-      "hora": "19:05",
-      "fechaLlenado": "15-07-2026 19:05"
+      "hora": "19:09",
+      "fechaLlenado": "15-07-2026 19:09"
     },
     {
       "region": "LA ARAUCANÍA",
       "comuna": "GALVARINO",
       "evento": "Sistema Frontal",
+      "fechaOcurrencia": "14/07/2026",
+      "fechaCreacion": "15/07/2026",
       "id": "148442",
       "alfa": 0,
       "aplicadas": 0,
@@ -76,8 +63,8 @@
       "nna": 1,
       "mayores": 5,
       "discapacidad": 3,
-      "hora": "19:05",
-      "fechaLlenado": "15-07-2026 19:05"
+      "hora": "19:09",
+      "fechaLlenado": "15-07-2026 19:09"
     }
   ]
 }
