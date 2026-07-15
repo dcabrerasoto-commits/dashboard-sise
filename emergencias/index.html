@@ -21,7 +21,6 @@ main{padding:20px 0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 240
 <div class="layout"><div>
 <div class="nav"><button class="active" data-tab="resumen">Resumen nacional</button><button data-tab="detalle">Detalle comunal</button><button data-tab="carga">Carga regional</button></div>
 <section id="resumen" class="panel active">
-<div class="alert">Regiones bajo alarma: Atacama a Los Lagos. La incorporacion de grupos vulnerables es viable si la base SISE entrega edad, fecha de nacimiento, discapacidad o marca equivalente por integrante de ficha terminada.</div>
 <div class="grid" id="kpis"></div>
 <div class="section" id="resumenRegionSection"><h2>Regiones con informacion reportada</h2><div id="resumenRegionContent"></div></div>
 <div class="section region-detail" id="regionDetail"><button class="back btn" id="volverRegiones">Volver</button><h2 id="regionDetailTitle"></h2><div class="tablebox"><table><thead><tr><th rowspan="2">Comuna</th><th rowspan="2">Evento</th><th rowspan="2">ID SISE</th><th class="group" colspan="2">Estimacion Comunal</th><th class="group" colspan="4">Reporte SISE</th><th class="group" colspan="3">Grupos vulnerables</th><th rowspan="2">Actualizacion</th></tr><tr><th>Hogares ALFA</th><th>Fichas aplicadas</th><th>Fichas anuladas</th><th>En digitacion</th><th>Terminadas</th><th>N&deg; personas en fichas terminadas</th><th>NNA</th><th>Personas mayores</th><th>Personas con discapacidad</th></tr></thead><tbody id="tablaComunas"></tbody></table></div></div>
