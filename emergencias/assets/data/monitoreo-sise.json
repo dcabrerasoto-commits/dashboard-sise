@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-15T16:58:52",
+  "actualizado": "2026-07-15T17:43:12",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -20,10 +20,12 @@
     }
   ],
   "fuentes": [
-    "148401_20260715_1657_Reporte_BD_FIBE.xlsx",
-    "148401_20260715_1658_Reporte_BD_FIBE.xlsx",
-    "148442_20260715_1656_Reporte_BD_FIBE.xlsx",
-    "148442_20260715_1658_Reporte_BD_FIBE.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1657_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1658_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1743_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1656_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1658_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1743_Reporte_BD_FIBE.xlsx"
   ],
   "filas": [
     {
@@ -40,8 +42,25 @@
       "nna": 1,
       "mayores": 1,
       "discapacidad": 2,
-      "hora": "16:58",
-      "fechaLlenado": "15-07-2026 16:58"
+      "hora": "17:43",
+      "fechaLlenado": "15-07-2026 17:43"
+    },
+    {
+      "region": "BIOBÍO",
+      "comuna": "TOMÉ",
+      "evento": "Sistema Frontal",
+      "id": "148401",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 5,
+      "digitacion": 0,
+      "personas": 15,
+      "nna": 5,
+      "mayores": 1,
+      "discapacidad": 1,
+      "hora": "17:43",
+      "fechaLlenado": "15-07-2026 17:43"
     },
     {
       "region": "LA ARAUCANÍA",
@@ -51,14 +70,14 @@
       "alfa": 0,
       "aplicadas": 0,
       "anuladas": 0,
-      "terminadas": 1,
+      "terminadas": 4,
       "digitacion": 0,
-      "personas": 3,
-      "nna": 0,
-      "mayores": 0,
-      "discapacidad": 0,
-      "hora": "16:58",
-      "fechaLlenado": "15-07-2026 16:58"
+      "personas": 9,
+      "nna": 1,
+      "mayores": 5,
+      "discapacidad": 3,
+      "hora": "17:43",
+      "fechaLlenado": "15-07-2026 17:43"
     }
   ]
 }
