@@ -1,0 +1,1 @@
+window.UISE_HISTORICO_ENDPOINT = "";
