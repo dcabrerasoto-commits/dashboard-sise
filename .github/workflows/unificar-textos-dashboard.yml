@@ -1,0 +1,106 @@
+name: Unificar textos del dashboard
+
+on:
+  push:
+    paths:
+      - '.github/workflows/unificar-textos-dashboard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-textos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aplicar correcciones de redacción y ortografía
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          files = [Path('emergencias/index.html'), Path('emergencias/imprimir.html')]
+
+          replacements = {
+              'La actualizacion se demorara un tiempo en verse reflejada en la plataforma.': 'La actualización de los registros SISE puede tardar algunos minutos en verse reflejada en la plataforma.',
+              'La actualización se demorará un tiempo en verse reflejada en la plataforma.': 'La actualización de los registros SISE puede tardar algunos minutos en verse reflejada en la plataforma.',
+              'Actualizacion de registros SISE': 'Actualización de registros SISE',
+              'Actualización de registros Sise': 'Actualización de registros SISE',
+              'Plataforma web SISE e información reportada por las SEREMI.': 'Fuente de información: Plataforma web SISE e información ingresada por las regiones.',
+              'Fuente de información: Plataforma web SISE e información reportada por las SEREMI.': 'Fuente de información: Plataforma web SISE e información ingresada por las regiones.',
+              'Fuente de información: Plataforma web SISE e información reportada por las SEREMI': 'Fuente de información: Plataforma web SISE e información ingresada por las regiones',
+              'Última sincronización SISE': 'Última sincronización con SISE',
+              'Registro de afectación y FIBE aplicadas pendientes de digitación.': 'Registro de afectación y Fichas Básicas de Emergencia (FIBE).',
+              'Los eventos aparecerán cuando el robot detecte información disponible en SISE.': 'Los eventos estarán disponibles una vez que el proceso automático detecte información en la plataforma web SISE.',
+              'Los eventos aparecerán cuando el robot detecte información disponible en la plataforma web SISE.': 'Los eventos estarán disponibles una vez que el proceso automático detecte información en la plataforma web SISE.',
+              'Los eventos aparecerán cuando el proceso automático detecte información disponible en SISE.': 'Los eventos estarán disponibles una vez que el proceso automático detecte información en la plataforma web SISE.',
+              'En proceso: la información puede cambiar durante el día.': 'En proceso: la información aún se encuentra en actualización y puede cambiar durante el día.',
+              'Actualizado: se confirma que esta información será la del día.': 'Actualizado: la información del día ha sido revisada y corresponde al reporte definitivo.',
+              'Actualizado: la información del día ha sido revisada y corresponde al reporte definitivo': 'Actualizado: la información del día ha sido revisada y corresponde al reporte definitivo.',
+              'Encuestadores FIBE disponibles': 'Número de encuestadores FIBE disponibles',
+              'FIBE aplicadas pendientes de digitación': 'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',
+              'FIBE pendientes de digitación': 'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',
+              'FIBE pendientes': 'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',
+              'Fichas pendientes': 'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',
+              'Pendientes de digitación': 'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',
+          }
+
+          for path in files:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+
+              # Corrige duplicaciones que pueden surgir al normalizar textos ya extensos.
+              text = text.replace(
+                  'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación aplicadas pendientes de digitación',
+                  'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'
+              )
+              text = text.replace(
+                  'Fichas Básicas de Emergencia (FIBE) aplicadas Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',
+                  'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'
+              )
+              text = text.replace(
+                  'Fuente de información: Fuente de información:',
+                  'Fuente de información:'
+              )
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verificar términos obligatorios
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required = {
+              'emergencias/index.html': [
+                  'Actualización de registros SISE',
+                  'La actualización de los registros SISE puede tardar algunos minutos en verse reflejada en la plataforma.',
+                  'Última sincronización con SISE',
+                  'Registro de afectación y Fichas Básicas de Emergencia (FIBE).',
+                  'Los eventos estarán disponibles una vez que el proceso automático detecte información en la plataforma web SISE.',
+                  'Número de encuestadores FIBE disponibles',
+                  'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'
+              ],
+              'emergencias/imprimir.html': [
+                  'Fuente de información: Plataforma web SISE e información ingresada por las regiones.',
+                  'Número de encuestadores FIBE disponibles',
+                  'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'
+              ]
+          }
+          for filename, terms in required.items():
+              text = Path(filename).read_text(encoding='utf-8')
+              missing = [term for term in terms if term not in text]
+              if missing:
+                  raise SystemExit(f'{filename}: faltan textos requeridos: {missing}')
+          PY
+
+      - name: Publicar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add emergencias/index.html emergencias/imprimir.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Unificar redacción y ortografía del dashboard SISE"
+          git push
