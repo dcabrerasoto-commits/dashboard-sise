@@ -1,0 +1,36 @@
+name: Completar unificación de textos
+
+on:
+  push:
+    paths:
+      - '.github/completar-textos.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Corregir referencias restantes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for path in [Path('emergencias/index.html'), Path('emergencias/imprimir.html')]:
+              text=path.read_text(encoding='utf-8')
+              text=text.replace("thReg('FIBE aplicadas')","thReg('Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación')")
+              text=text.replace("'FIBE aplicadas',`Número de encuestadores", "'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación',`Número de encuestadores")
+              text=text.replace("'FIBE aplicadas pendientes de digitacion'", "'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'")
+              text=text.replace("'FIBE aplicadas pendientes de digitación'", "'Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'")
+              text=text.replace('Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación Básicas de Emergencia (FIBE) aplicadas pendientes de digitación','Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación')
+              path.write_text(text,encoding='utf-8')
+          PY
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add emergencias/index.html emergencias/imprimir.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Completar unificación de textos del dashboard"
+          git push
