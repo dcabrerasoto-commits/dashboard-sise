@@ -1,0 +1,1 @@
+Sincronizar el reporte imprimible con los datos actuales del dashboard y eliminar el botón interno.
