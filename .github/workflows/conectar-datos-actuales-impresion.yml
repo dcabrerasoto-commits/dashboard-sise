@@ -1,0 +1,38 @@
+name: Conectar datos actuales con impresión
+
+on:
+  push:
+    paths:
+      - '.github/conectar-datos-impresion.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Actualizar botón de impresión
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path=Path('emergencias/index.html')
+          text=path.read_text(encoding='utf-8')
+          text=text.replace("onclick=\"window.open('imprimir.html', '_blank')\"","onclick=\"abrirReporteImprimible()\"",1)
+          if 'function abrirReporteImprimible()' not in text:
+              marker='async function actualizarSise()'
+              fn="function abrirReporteImprimible(){const snapshot={filas:combinados(),generado:fechaHora(),ultimaSise:ultimaHora()};localStorage.setItem('uise-reporte-imprimible',JSON.stringify(snapshot));window.open('imprimir.html','_blank')}\n"
+              if marker not in text:
+                  raise SystemExit('No se encontró el punto de inserción.')
+              text=text.replace(marker,fn+marker,1)
+          path.write_text(text,encoding='utf-8')
+          PY
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add emergencias/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Usar datos actuales del dashboard en reporte imprimible"
+          git push
