@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-15T22:47:02",
+  "actualizado": "2026-07-15T22:53:24",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -25,9 +25,21 @@
       "comunas": "",
       "estado": "Activa",
       "fechaCreacion": "14/07/2026"
+    },
+    {
+      "id": "148401",
+      "nombre": "148401",
+      "region": "BIOBÍO",
+      "comunas": "TOMÉ",
+      "estado": "Activa",
+      "fechaCreacion": "14/07/2026"
     }
   ],
   "fuentes": [
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1657_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1658_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1743_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260715_1915_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1656_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1658_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1743_Reporte_BD_FIBE.xlsx",
@@ -40,6 +52,26 @@
   ],
   "advertencias": [],
   "filas": [
+    {
+      "region": "BIOBÍO",
+      "comuna": "TOMÉ",
+      "evento": "148401",
+      "fechaEvento": "14/07/2026",
+      "fechaOcurrencia": "14/07/2026",
+      "fechaCreacion": "15/07/2026",
+      "id": "148401",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 5,
+      "digitacion": 0,
+      "personas": 15,
+      "nna": 5,
+      "mayores": 1,
+      "discapacidad": 1,
+      "hora": "22:53",
+      "fechaLlenado": "15-07-2026 22:53"
+    },
     {
       "region": "LA ARAUCANÍA",
       "comuna": "GALVARINO",
@@ -57,8 +89,8 @@
       "nna": 1,
       "mayores": 5,
       "discapacidad": 3,
-      "hora": "22:47",
-      "fechaLlenado": "15-07-2026 22:47"
+      "hora": "22:53",
+      "fechaLlenado": "15-07-2026 22:53"
     },
     {
       "region": "",
@@ -77,8 +109,8 @@
       "nna": 0,
       "mayores": 0,
       "discapacidad": 0,
-      "hora": "22:47",
-      "fechaLlenado": "15-07-2026 22:47"
+      "hora": "22:53",
+      "fechaLlenado": "15-07-2026 22:53"
     },
     {
       "region": "",
@@ -97,8 +129,8 @@
       "nna": 0,
       "mayores": 0,
       "discapacidad": 0,
-      "hora": "22:47",
-      "fechaLlenado": "15-07-2026 22:47"
+      "hora": "22:53",
+      "fechaLlenado": "15-07-2026 22:53"
     }
   ]
 }
