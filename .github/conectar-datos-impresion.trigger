@@ -1,0 +1,1 @@
+Guardar el estado actual del dashboard antes de abrir el reporte imprimible.
