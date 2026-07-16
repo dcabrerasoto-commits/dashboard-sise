@@ -1,7 +1,15 @@
 {
-  "actualizado": "2026-07-15T22:28:48",
+  "actualizado": "2026-07-15T22:36:02",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
+    {
+      "id": "148501",
+      "nombre": "Sistema Frontal",
+      "region": "",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": "15/07/2026"
+    },
     {
       "id": "148442",
       "nombre": "Sistema Frontal",
@@ -20,7 +28,9 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1658_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_1743_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_2130_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_2228_Reporte_BD_FIBE.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_2228_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260715_2235_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260715_2234_Reporte_BD_FIBE.xlsx"
   ],
   "filas": [
     {
@@ -40,8 +50,8 @@
       "nna": 5,
       "mayores": 1,
       "discapacidad": 1,
-      "hora": "22:28",
-      "fechaLlenado": "15-07-2026 22:28"
+      "hora": "22:36",
+      "fechaLlenado": "15-07-2026 22:36"
     },
     {
       "region": "LA ARAUCANÍA",
@@ -60,8 +70,8 @@
       "nna": 1,
       "mayores": 5,
       "discapacidad": 3,
-      "hora": "22:28",
-      "fechaLlenado": "15-07-2026 22:28"
+      "hora": "22:36",
+      "fechaLlenado": "15-07-2026 22:36"
     }
   ]
 }
