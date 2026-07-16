@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reporte Ejecutivo Monitoreo SISE</title>
+<style>
+@font-face{font-family:GobCL;src:url("assets/fonts/gobCL_Regular.otf")}@font-face{font-family:GobCL;src:url("assets/fonts/gobCL_Bold.otf");font-weight:700}@font-face{font-family:GobCL;src:url("assets/fonts/gobCL_Heavy.otf");font-weight:800}
+:root{--azul:#123d72;--azul2:#2467a5;--amarillo:#f0c93b;--gris:#eef3f8;--borde:#c9d6e3;--texto:#17324d}
+*{box-sizing:border-box}body{margin:0;background:#e8eef4;color:var(--texto);font-family:GobCL,Arial,sans-serif;font-size:14px}.toolbar{position:sticky;top:0;z-index:5;background:var(--azul);padding:10px 20px;text-align:right}.toolbar button{border:0;border-radius:7px;background:#fff;color:var(--azul);font-weight:700;padding:10px 16px;cursor:pointer}.report{width:297mm;min-height:210mm;margin:15px auto;background:#fff;padding:10mm 12mm 15mm;box-shadow:0 5px 22px rgba(20,45,75,.18)}header{display:grid;grid-template-columns:1fr auto;gap:12mm;align-items:start;border-bottom:3px solid var(--amarillo);padding-bottom:5mm;margin-bottom:5mm}.eyebrow{color:#b48c00;font-size:10pt;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.title{margin:2mm 0 1mm;font-size:22pt;line-height:1.05;color:var(--azul)}.subtitle{font-size:13pt;font-weight:700;color:var(--azul2)}.meta{margin-top:2mm;font-size:9.5pt;color:#52677b}.logos{display:flex;gap:5mm}.logos img{width:24mm;height:18mm;object-fit:contain}.section-title{margin:5mm 0 2.5mm;border-left:5px solid var(--amarillo);padding:2mm 3mm;background:var(--azul2);color:#fff;font-size:12pt;font-weight:800}.indicators{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5mm;margin-bottom:4mm}.indicator{border:1px solid var(--borde);background:#f7fafc;padding:3mm;min-height:21mm}.indicator.hero{border-left:4px solid var(--amarillo)}.indicator-label{font-size:9pt;line-height:1.25;color:#40586e}.indicator-value{margin-top:2mm;font-size:20pt;font-weight:800;color:var(--azul)}table{width:100%;border-collapse:collapse;table-layout:fixed;margin-bottom:5mm}th,td{border:1px solid var(--borde);padding:2.2mm 2mm;vertical-align:middle}th{background:var(--azul2);color:#fff;font-size:9pt;font-weight:700;line-height:1.25}td{font-size:9.5pt;text-align:center}th:first-child,td:first-child{text-align:left}.total td{background:#e7eef5;font-weight:800;color:var(--azul)}.zero td{color:#8795a3}.page-break{break-before:page;page-break-before:always}.footer{position:fixed;left:12mm;right:12mm;bottom:5mm;display:flex;justify-content:space-between;border-top:1px solid var(--borde);padding-top:2mm;color:#5c6e7f;font-size:8pt}.note{font-size:8.5pt;color:#607386;margin-top:-2mm;margin-bottom:4mm}.empty{padding:10mm;text-align:center;border:1px dashed var(--borde);color:#607386}
+@page{size:A4 landscape;margin:0}@media print{body{background:#fff}.toolbar{display:none}.report{width:297mm;min-height:210mm;margin:0;padding:9mm 11mm 14mm;box-shadow:none}.indicator-value{font-size:19pt}th{font-size:9pt}td{font-size:9.5pt}.footer{left:11mm;right:11mm}}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">Imprimir / guardar PDF</button></div>
+<main class="report">
+<header><div><div class="eyebrow">Sistema de Información Social en Emergencias</div><h1 class="title">Monitoreo SISE - Ficha Básica de Emergencia</h1><div class="subtitle">Sistema Frontal - Julio</div><div class="meta" id="meta"></div></div><div class="logos"><img src="assets/LOGO_SISE.png" alt="Logo SISE"><img src="assets/logo_MDSF.png" alt="Ministerio de Desarrollo Social y Familia"></div></header>
+<div class="section-title">Resumen nacional</div><div class="indicators" id="indicators"></div>
+<div class="section-title">Estimación regional</div><table><thead><tr><th style="width:24%">Región</th><th>Hogares afectados informados en ALFA</th><th>FIBE aplicadas pendientes de digitación</th><th id="encHeader">Encuestadores FIBE disponibles</th></tr></thead><tbody id="regionalBody"></tbody></table>
+<div class="page-break"></div>
+<div class="section-title">Registros de la plataforma web SISE</div><p class="note">Información obtenida automáticamente desde la plataforma web SISE.</p><table><thead><tr><th style="width:18%">Región</th><th>FIBE terminadas</th><th>FIBE en proceso de digitación</th><th>FIBE anuladas</th><th>Personas registradas en FIBE terminadas</th><th>Niños, niñas y adolescentes</th><th>Personas mayores</th><th>Personas con discapacidad y/o dependencia</th></tr></thead><tbody id="siseBody"></tbody></table>
+<div class="footer"><span id="issued"></span><span>Uso restringido e institucional</span></div>
+</main>
+<script>
+const regiones=['Atacama','Coquimbo','Valparaíso','Metropolitana','O’Higgins','Maule','Ñuble','Biobío','La Araucanía','Los Ríos','Los Lagos'];
+const fmt=n=>new Intl.NumberFormat('es-CL').format(Number(n||0));
+const reportes=JSON.parse(localStorage.getItem('uise-reportes-regionales')||'[]');
+let sise=[];
+function mañana(){let d=new Date();d.setDate(d.getDate()+1);return new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric'}).format(d).replaceAll('/','-')}
+function fechaHora(){return new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date())}
+function clave(t){return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’']/g,'').toUpperCase()}
+function canonRegion(r){return regiones.find(x=>clave(x)===clave(r))||r}
+function combinar(){const keys=new Set([...reportes.map(x=>canonRegion(x.region)+'|'+x.comuna),...sise.map(x=>canonRegion(x.region)+'|'+x.comuna)]);return [...keys].map(k=>{const [region,comuna]=k.split('|');const r=[...reportes].reverse().find(x=>canonRegion(x.region)===region&&x.comuna===comuna)||{};const s=[...sise].reverse().find(x=>canonRegion(x.region)===region&&x.comuna===comuna)||{};return{region,alfa:+(r.alfa||0),ap:+(r.aplicadas||0),enc:+(r.encuestadores||0),te:+(s.terminadas||0),di:+(s.digitacion||0),an:+(s.anuladas||0),pe:+(s.personas||0),nna:+(s.nna||0),ma:+(s.mayores||0),dis:+(s.discapacidad||0)}})}
+function resumen(region){return combinar().filter(x=>x.region===region).reduce((o,x)=>(o.alfa+=x.alfa,o.ap+=x.ap,o.enc+=x.enc,o.te+=x.te,o.di+=x.di,o.an+=x.an,o.pe+=x.pe,o.nna+=x.nna,o.ma+=x.ma,o.dis+=x.dis,o),{alfa:0,ap:0,enc:0,te:0,di:0,an:0,pe:0,nna:0,ma:0,dis:0})}
+function total(){return regiones.reduce((o,r)=>{const x=resumen(r);Object.keys(o).forEach(k=>o[k]+=x[k]);return o},{alfa:0,ap:0,enc:0,te:0,di:0,an:0,pe:0,nna:0,ma:0,dis:0})}
+function rowRegional(nombre,x,cls=''){return `<tr class="${cls}"><td>${nombre}</td><td>${fmt(x.alfa)}</td><td>${fmt(x.ap)}</td><td>${fmt(x.enc)}</td></tr>`}
+function rowSise(nombre,x,cls=''){return `<tr class="${cls}"><td>${nombre}</td><td>${fmt(x.te)}</td><td>${fmt(x.di)}</td><td>${fmt(x.an)}</td><td>${fmt(x.pe)}</td><td>${fmt(x.nna)}</td><td>${fmt(x.ma)}</td><td>${fmt(x.dis)}</td></tr>`}
+function render(){const t=total();meta.textContent=`Fecha y hora de emisión: ${fechaHora()}`;issued.textContent=`Emitido: ${fechaHora()}`;encHeader.textContent=`Encuestadores FIBE disponibles ${mañana()}`;const items=[['Hogares afectados informados en ALFA',t.alfa,true],['FIBE aplicadas pendientes de digitación',t.ap,true],['Encuestadores FIBE disponibles '+mañana(),t.enc,false],['FIBE terminadas',t.te,true],['FIBE en proceso de digitación',t.di,false],['FIBE anuladas',t.an,false],['Personas registradas en FIBE terminadas',t.pe,false]];indicators.innerHTML=items.map(x=>`<div class="indicator ${x[2]?'hero':''}"><div class="indicator-label">${x[0]}</div><div class="indicator-value">${fmt(x[1])}</div></div>`).join('');regionalBody.innerHTML=rowRegional('TOTAL NACIONAL',t,'total')+regiones.map(r=>rowRegional(r,resumen(r),Object.values(resumen(r)).every(v=>v===0)?'zero':'')).join('');siseBody.innerHTML=rowSise('TOTAL NACIONAL',t,'total')+regiones.map(r=>rowSise(r,resumen(r),Object.values(resumen(r)).every(v=>v===0)?'zero':'')).join('')}
+async function cargar(){try{const res=await fetch('assets/data/monitoreo-sise.json?ts='+Date.now(),{cache:'no-store'});if(res.ok){const j=await res.json();const arr=Array.isArray(j)?j:(j.registros||j.datos||[]);sise=arr.map(x=>({...x,region:canonRegion(x.region||x.REGION||'')}))}}catch(e){}render()}
+cargar();
+</script>
+</body></html>
