@@ -27,7 +27,10 @@ main{padding:20px 0 30px}.shell{background:var(--fondo);border-radius:10px;paddi
 .matrix-box .affect-matrix .row-total,.matrix-box .affect-matrix .national-row td{background:var(--azul)!important;color:#fff!important;font-weight:800}
 .damage-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:12px}
 .damage-title{margin:0 0 8px;color:var(--azul);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
-.damage-card{background:#fff;border:1px solid #d8e1ea;border-radius:8px;padding:10px;text-align:center;min-height:72px}
+.damage-card{background:#fff;border:1px solid #d8e1ea;border-radius:8px;padding:10px;text-align:center;min-height:72px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.damage-card:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(20,52,84,.16);border-color:#b9c8d8}
+.matrix-box .affect-matrix tbody td{transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.matrix-box .affect-matrix tbody td:not(:first-child):hover{position:relative;z-index:2;transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,52,84,.14);background:#f8fbff!important}
 .damage-card em{display:none}
 .damage-card span{display:block;color:#17324d;font-size:12px;font-weight:800;line-height:1.15}
 .damage-card strong{display:block;margin-top:5px;font-size:26px;line-height:1;font-weight:800}
