@@ -1,0 +1,52 @@
+name: Aplicar textos dashboard
+
+on:
+  push:
+    paths:
+      - '.github/textos-dashboard.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Corregir textos
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files=[Path('emergencias/index.html'),Path('emergencias/imprimir.html')]
+          pairs=[
+          ('La actualizacion se demorara un tiempo en verse reflejada en la plataforma.','La actualización de los registros SISE puede tardar algunos minutos en verse reflejada en la plataforma.'),
+          ('La actualización se demorará un tiempo en verse reflejada en la plataforma.','La actualización de los registros SISE puede tardar algunos minutos en verse reflejada en la plataforma.'),
+          ('Actualizacion de registros SISE','Actualización de registros SISE'),
+          ('Plataforma web SISE e información reportada por las SEREMI.','Fuente de información: Plataforma web SISE e información ingresada por las regiones.'),
+          ('Fuente de información: Plataforma web SISE e información reportada por las SEREMI.','Fuente de información: Plataforma web SISE e información ingresada por las regiones.'),
+          ('Información reportada por las SEREMI','Información ingresada por las regiones'),
+          ('Última sincronización SISE','Última sincronización con SISE'),
+          ('Registro de afectación y FIBE aplicadas pendientes de digitación.','Registro de afectación y Fichas Básicas de Emergencia (FIBE).'),
+          ('Los eventos aparecerán cuando el robot detecte información disponible en SISE.','Los eventos estarán disponibles una vez que el proceso automático detecte información en la plataforma web SISE.'),
+          ('En proceso: la información puede cambiar durante el día.','En proceso: la información aún se encuentra en actualización y puede cambiar durante el día.'),
+          ('Actualizado: se confirma que esta información será la del día.','Actualizado: la información del día ha sido revisada y corresponde al reporte definitivo.'),
+          ('Encuestadores FIBE disponibles','Número de encuestadores FIBE disponibles'),
+          ('FIBE aplicadas pendientes de digitación','Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'),
+          ('FIBE pendientes de digitación','Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'),
+          ('FIBE pendientes','Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación'),
+          ('Fichas pendientes','Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación')]
+          for p in files:
+              text=p.read_text(encoding='utf-8')
+              for a,b in pairs:text=text.replace(a,b)
+              text=text.replace('Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación aplicadas pendientes de digitación','Fichas Básicas de Emergencia (FIBE) aplicadas pendientes de digitación')
+              text=text.replace('Fuente de información: Fuente de información:','Fuente de información:')
+              p.write_text(text,encoding='utf-8')
+          PY
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add emergencias/index.html emergencias/imprimir.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Unificar redacción y ortografía del dashboard SISE"
+          git push
