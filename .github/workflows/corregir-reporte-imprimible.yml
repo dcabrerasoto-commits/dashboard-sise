@@ -1,0 +1,64 @@
+name: Corregir reporte imprimible
+
+on:
+  push:
+    paths:
+      - '.github/corregir-reporte-imprimible.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sincronizar datos y simplificar impresión
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          index = Path('emergencias/index.html')
+          text = index.read_text(encoding='utf-8')
+          text = text.replace(
+              "<button class=\"btn\" onclick=\"window.open('imprimir.html', '_blank')\">Imprimir / guardar PDF</button>",
+              "<button class=\"btn\" onclick=\"abrirReporteImprimible()\">Imprimir / guardar PDF</button>"
+          )
+          marker = "async function actualizarSise()"
+          if "function abrirReporteImprimible()" not in text:
+              fn = "function abrirReporteImprimible(){localStorage.setItem('uise-reporte-imprimible',JSON.stringify({filas:combinados(),generado:fechaHora(),ultimaSise:ultimaHora()}));window.open('imprimir.html','_blank')}\n"
+              text = text.replace(marker, fn + marker, 1)
+          index.write_text(text, encoding='utf-8')
+
+          imprimir = Path('emergencias/imprimir.html')
+          p = imprimir.read_text(encoding='utf-8')
+
+          # Elimina el botón/toolbar visible de la página imprimible.
+          import re
+          p = re.sub(r'<div class="toolbar">.*?</div>\s*', '', p, count=1, flags=re.S)
+          p = p.replace('.toolbar{position:sticky;top:0;z-index:5;background:var(--azul);padding:10px 20px;text-align:right}.toolbar button{border:0;border-radius:7px;background:#fff;color:var(--azul);font-weight:700;padding:10px 16px;cursor:pointer}', '')
+          p = p.replace('.toolbar{display:none}', '')
+
+          # Usa prioritariamente el snapshot exacto del dashboard.
+          p = p.replace(
+              "let sise=[];",
+              "let sise=[];const snapshot=JSON.parse(localStorage.getItem('uise-reporte-imprimible')||'null');"
+          )
+          p = p.replace(
+              "function combinar(){const keys=new Set([...reportes.map(x=>canonRegion(x.region)+'|'+x.comuna),...sise.map(x=>canonRegion(x.region)+'|'+x.comuna)]);return [...keys].map(k=>{const [region,comuna]=k.split('|');const r=[...reportes].reverse().find(x=>canonRegion(x.region)===region&&x.comuna===comuna)||{};const s=[...sise].reverse().find(x=>canonRegion(x.region)===region&&x.comuna===comuna)||{};return{region,alfa:+(r.alfa||0),ap:+(r.aplicadas||0),enc:+(r.encuestadores||0),te:+(s.terminadas||0),di:+(s.digitacion||0),an:+(s.anuladas||0),pe:+(s.personas||0),nna:+(s.nna||0),ma:+(s.mayores||0),dis:+(s.discapacidad||0)}})}",
+              "function combinar(){if(snapshot&&Array.isArray(snapshot.filas))return snapshot.filas.map(x=>({region:canonRegion(x.region),alfa:+(x.alfa||0),ap:+(x.aplicadas||0),enc:+(x.encuestadores||0),te:+(x.terminadas||0),di:+(x.digitacion||0),an:+(x.anuladas||0),pe:+(x.personas||0),nna:+(x.nna||0),ma:+(x.mayores||0),dis:+(x.discapacidad||0)}));const keys=new Set([...reportes.map(x=>canonRegion(x.region)+'|'+x.comuna),...sise.map(x=>canonRegion(x.region)+'|'+x.comuna)]);return [...keys].map(k=>{const [region,comuna]=k.split('|');const r=[...reportes].reverse().find(x=>canonRegion(x.region)===region&&x.comuna===comuna)||{};const s=[...sise].reverse().find(x=>canonRegion(x.region)===region&&x.comuna===comuna)||{};return{region,alfa:+(r.alfa||0),ap:+(r.aplicadas||0),enc:+(r.encuestadores||0),te:+(s.terminadas||0),di:+(s.digitacion||0),an:+(s.anuladas||0),pe:+(s.personas||0),nna:+(s.nna||0),ma:+(s.mayores||0),dis:+(s.discapacidad||0)}})}"
+          )
+          p = p.replace(
+              "meta.textContent=`Fecha y hora de emisión: ${fechaHora()}`;issued.textContent=`Emitido: ${fechaHora()}`;",
+              "const emitido=(snapshot&&snapshot.generado)||fechaHora();meta.textContent=`Fecha y hora de emisión: ${emitido}`+(snapshot&&snapshot.ultimaSise&&snapshot.ultimaSise!=='--:--'?` · Última sincronización con SISE: ${snapshot.ultimaSise}`:'');issued.textContent=`Emitido: ${emitido}`;"
+          )
+          imprimir.write_text(p, encoding='utf-8')
+          PY
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add emergencias/index.html emergencias/imprimir.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Sincronizar reporte imprimible con datos actuales del dashboard"
+          git push
