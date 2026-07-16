@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-15T22:53:24",
+  "actualizado": "2026-07-15T23:00:57",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -28,9 +28,7 @@
     },
     {
       "id": "148401",
-      "nombre": "148401",
-      "region": "BIOBÍO",
-      "comunas": "TOMÉ",
+      "nombre": "Sistema Frontal",
       "estado": "Activa",
       "fechaCreacion": "14/07/2026"
     }
@@ -55,7 +53,7 @@
     {
       "region": "BIOBÍO",
       "comuna": "TOMÉ",
-      "evento": "148401",
+      "evento": "Sistema Frontal",
       "fechaEvento": "14/07/2026",
       "fechaOcurrencia": "14/07/2026",
       "fechaCreacion": "15/07/2026",
@@ -69,8 +67,8 @@
       "nna": 5,
       "mayores": 1,
       "discapacidad": 1,
-      "hora": "22:53",
-      "fechaLlenado": "15-07-2026 22:53"
+      "hora": "23:00",
+      "fechaLlenado": "15-07-2026 23:00"
     },
     {
       "region": "LA ARAUCANÍA",
@@ -89,8 +87,8 @@
       "nna": 1,
       "mayores": 5,
       "discapacidad": 3,
-      "hora": "22:53",
-      "fechaLlenado": "15-07-2026 22:53"
+      "hora": "23:00",
+      "fechaLlenado": "15-07-2026 23:00"
     },
     {
       "region": "",
@@ -109,8 +107,8 @@
       "nna": 0,
       "mayores": 0,
       "discapacidad": 0,
-      "hora": "22:53",
-      "fechaLlenado": "15-07-2026 22:53"
+      "hora": "23:00",
+      "fechaLlenado": "15-07-2026 23:00"
     },
     {
       "region": "",
@@ -129,8 +127,8 @@
       "nna": 0,
       "mayores": 0,
       "discapacidad": 0,
-      "hora": "22:53",
-      "fechaLlenado": "15-07-2026 22:53"
+      "hora": "23:00",
+      "fechaLlenado": "15-07-2026 23:00"
     }
   ]
 }
