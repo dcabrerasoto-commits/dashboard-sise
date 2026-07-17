@@ -88,8 +88,8 @@
   }
 
   function loadDetailPopups() {
-    const popupScript = loadAuxiliaryScript("detail-popups.js?v=20260717-12", "detailPopups");
-    const loadRules = () => loadAuxiliaryScript("situation-rules.js?v=20260717-12", "situationRules");
+    const popupScript = loadAuxiliaryScript("detail-popups.js?v=20260717-13", "detailPopups");
+    const loadRules = () => loadAuxiliaryScript("situation-rules.js?v=20260717-13", "situationRules");
     if (popupScript) popupScript.addEventListener("load", loadRules, {once:true});
     else loadRules();
   }
