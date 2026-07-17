@@ -22,6 +22,37 @@
     return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
   }
 
+  function cleanText(value) {
+    return String(value ?? "")
+      .replaceAll("SÃ­", "Sí")
+      .replaceAll("SÃ", "Sí")
+      .replaceAll("NiÃ±ez", "Niñez")
+      .replaceAll("ProtecciÃ³n", "Protección")
+      .replaceAll("informaciÃ³n", "información")
+      .replaceAll("afectaciÃ³n", "afectación")
+      .replaceAll("RegiÃ³n", "Región")
+      .replaceAll("DirecciÃ³n", "Dirección")
+      .replaceAll("actualizaciÃ³n", "actualización")
+      .replaceAll("situaciÃ³n", "situación")
+      .replaceAll("evaluaciÃ³n", "evaluación")
+      .replaceAll("nÃºmero", "número")
+      .replaceAll("Ã¡", "á")
+      .replaceAll("Ã©", "é")
+      .replaceAll("Ã­", "í")
+      .replaceAll("Ã³", "ó")
+      .replaceAll("Ãº", "ú")
+      .replaceAll("Ã±", "ñ");
+  }
+
+  function cleanRecord(record) {
+    const cleaned = {};
+    Object.keys(record || {}).forEach(key => {
+      const value = record[key];
+      cleaned[key] = Array.isArray(value) ? value.map(item => typeof item === "string" ? cleanText(item) : item) : (typeof value === "string" ? cleanText(value) : value);
+    });
+    return cleaned;
+  }
+
   function fetchSharedRecords() {
     const callbackName = `__residenciasSync_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
@@ -57,7 +88,7 @@
       window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:[]}}));
       return [];
     }
-    const valid = shared.filter(record => !invalidTestRecord(record));
+    const valid = shared.filter(record => !invalidTestRecord(record)).map(cleanRecord);
     setStatus("El tablero muestra el último reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Histórico diario.", "ok");
     window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
     return valid;
