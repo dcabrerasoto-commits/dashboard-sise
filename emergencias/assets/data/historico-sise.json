@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-17T14:21:48",
+  "actualizado": "2026-07-17T16:48:39",
   "historial": [
     {
       "fecha": "2026-07-15",
@@ -250,7 +250,7 @@
     },
     {
       "fecha": "2026-07-17",
-      "marca": "17-07-2026 14:21",
+      "marca": "17-07-2026 16:48",
       "tipo": "Plataforma web SISE",
       "region": "La Araucanía",
       "comuna": "Galvarino",
@@ -269,7 +269,7 @@
     },
     {
       "fecha": "2026-07-17",
-      "marca": "17-07-2026 14:21",
+      "marca": "17-07-2026 16:48",
       "tipo": "Plataforma web SISE",
       "region": "Ñuble",
       "comuna": "San Carlos",
@@ -285,6 +285,44 @@
       "mayores": 1,
       "discapacidad": 0,
       "_firma": "0|0|0|4|0|0|15|5|1|0|11|4|0"
+    },
+    {
+      "fecha": "2026-07-17",
+      "marca": "17-07-2026 16:48",
+      "tipo": "Plataforma web SISE",
+      "region": "Biobío",
+      "comuna": "Tom?",
+      "id": "148401",
+      "alfa": 0,
+      "aplicadas": 0,
+      "encuestadores": 0,
+      "terminadas": 6,
+      "digitacion": 0,
+      "anuladas": 0,
+      "personas": 19,
+      "nna": 7,
+      "mayores": 1,
+      "discapacidad": 1,
+      "_firma": "0|0|0|6|0|0|19|7|1|1|12|7|0"
+    },
+    {
+      "fecha": "2026-07-17",
+      "marca": "17-07-2026 16:45",
+      "tipo": "Plataforma web SISE",
+      "region": "La Araucan?a",
+      "comuna": "Galvarino",
+      "id": "148442",
+      "alfa": 0,
+      "aplicadas": 0,
+      "encuestadores": 0,
+      "terminadas": 4,
+      "digitacion": 0,
+      "anuladas": 0,
+      "personas": 9,
+      "nna": 1,
+      "mayores": 5,
+      "discapacidad": 3,
+      "_firma": "0|0|0|4|0|0|9|1|5|3|6|3|0"
     }
   ]
 }
