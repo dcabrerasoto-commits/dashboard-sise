@@ -1,4 +1,4 @@
-const SPREADSHEET_ID = '1-j0ItNOgWTvYjWlmnks1JCelQ-zhXN4Gii_QVq05ByA';
+﻿const SPREADSHEET_ID = '1-j0ItNOgWTvYjWlmnks1JCelQ-zhXN4Gii_QVq05ByA';
 const SHEET_NAME = 'Registros';
 
 const HEADERS = [
@@ -18,25 +18,25 @@ const HEADER_ALIASES = {
   reportTime: ['HORA_REPORTE'],
   service: ['SERVICIO_RESPONSABLE','Servicio'],
   program: ['PROGRAMA_LINEA','Programa'],
-  region: ['REGION','Región','RegiÃ³n'],
+  region: ['REGION','RegiÃ³n','RegiÃƒÂ³n'],
   commune: ['COMUNA','Comuna'],
   establishment: ['RESIDENCIA_ESTABLECIMIENTO','Establecimiento'],
-  address: ['DIRECCION_RESIDENCIA','Dirección residencia','Direccion residencia'],
+  address: ['DIRECCION_RESIDENCIA','DirecciÃ³n residencia','Direccion residencia'],
   responsible: ['RESPONSABLE_RESIDENCIA','Responsable'],
   contactEmail: ['CORREO_CONTACTO','Correo de contacto'],
-  contactPhone: ['TELEFONO_CONTACTO','Teléfono de contacto','Telefono de contacto'],
+  contactPhone: ['TELEFONO_CONTACTO','TelÃ©fono de contacto','Telefono de contacto'],
   previousReport: ['REPORTE_PREVIO'],
   hasChanges: ['HUBO_CAMBIOS'],
   status: ['ESTADO_GENERAL','Estado'],
-  damageLevel: ['NIVEL_DANO_RIESGO','Nivel de daño','Nivel de daÃ±o'],
+  damageLevel: ['NIVEL_DANO_RIESGO','Nivel de daÃ±o','Nivel de daÃƒÂ±o'],
   capacity: ['CAPACIDAD_TOTAL','Capacidad'],
   people: ['PERSONAS_ATENDIDAS','Personas atendidas'],
   situations: ['SITUACIONES_PRESENTES','Situaciones'],
-  otherSituation: ['OTRA_SITUACION','Otra situación','Otra situaciÃ³n'],
+  otherSituation: ['OTRA_SITUACION','Otra situaciÃ³n','Otra situaciÃƒÂ³n'],
   sewageExposure: ['EXPOSICION_AGUAS_SERVIDAS'],
   electrodependent: ['PERSONAS_ELECTRODEPENDIENTES'],
   electrodependentCount: ['NUMERO_ELECTRODEPENDIENTES'],
-  damageDetail: ['DETALLE_AFECTACION_RIESGO','Detalle del daño','Detalle del daÃ±o'],
+  damageDetail: ['DETALLE_AFECTACION_RIESGO','Detalle del daÃ±o','Detalle del daÃƒÂ±o'],
   needs: ['NECESIDADES_PRIORITARIAS','Necesidades'],
   measures: ['MEDIDAS_IMPLEMENTADAS','Medidas implementadas'],
   observations: ['OBSERVACIONES','Observaciones'],
@@ -71,10 +71,16 @@ function doPost(e) {
   try {
     lock.waitLock(20000);
     const payload = parsePayload_(e);
-    validateRecord_(payload);
-    appendRecord_(ensureSheet_(), payload);
+    const action = String(payload.action || 'save').toLowerCase();
+    const record = payload.record || payload;
+    validateRecord_(record);
+    if (action === 'update') {
+      updateRecord_(ensureSheet_(), record);
+    } else {
+      appendRecord_(ensureSheet_(), record);
+    }
     SpreadsheetApp.flush();
-    return json_({ ok: true, id: payload.id, timestamp: new Date().toISOString() });
+    return json_({ ok: true, id: record.id, action: action, timestamp: new Date().toISOString() });
   } catch (error) {
     return json_({ ok: false, error: String(error && error.message || error) });
   } finally {
@@ -84,13 +90,12 @@ function doPost(e) {
 
 function parsePayload_(e) {
   const raw = e && e.postData && e.postData.contents ? e.postData.contents : '';
-  if (!raw) throw new Error('No se recibió información.');
-  const parsed = JSON.parse(raw);
-  return parsed && parsed.record ? parsed.record : parsed;
+  if (!raw) throw new Error('No se recibiÃ³ informaciÃ³n.');
+  return JSON.parse(raw);
 }
 
 function validateRecord_(record) {
-  if (!record || typeof record !== 'object') throw new Error('El reporte no es válido.');
+  if (!record || typeof record !== 'object') throw new Error('El reporte no es vÃ¡lido.');
   ['id','reportDate','service','region','commune','establishment','responsible','contactEmail','contactPhone','status'].forEach(field => {
     if (!String(record[field] == null ? '' : record[field]).trim()) throw new Error('Falta el campo obligatorio: ' + field);
   });
@@ -130,7 +135,7 @@ function recordToRow_(r) {
     r.service || '', r.program || '', r.region || '', r.commune || '', r.establishment || '', r.address || '',
     r.responsible || '', r.contactEmail || '', r.contactPhone || '', r.previousReport || '', r.hasChanges || '',
     r.status || '', r.damageLevel || '', Number(r.capacity || 0), Number(r.people || 0),
-    (r.situations || []).join(' | '), (r.situations || []).includes('Exposición a aguas servidas') ? 'Sí' : 'No',
+    (r.situations || []).join(' | '), (r.situations || []).includes('ExposiciÃ³n a aguas servidas') ? 'SÃ­' : 'No',
     r.electrodependent || 'No', Number(r.electrodependentCount || 0), r.damageDetail || '',
     (r.needs || []).join(' | '), r.measures || '', r.observations || '', r.previousRecordId || ''
   ];
@@ -147,6 +152,32 @@ function appendRecord_(sheet, record) {
     if (index != null) row[index] = values[field];
   });
   sheet.appendRow(row);
+}
+
+function updateRecord_(sheet, record) {
+  const lastRow = sheet.getLastRow();
+  const lastColumn = Math.max(sheet.getLastColumn(), HEADERS.length);
+  if (lastRow < 2) throw new Error('No existen registros para actualizar.');
+  const headers = sheet.getRange(1, 1, 1, lastColumn).getValues()[0];
+  const headerMap = buildHeaderMap_(headers);
+  const idColumn = headerMap.id;
+  if (idColumn == null) throw new Error('No se encontro columna de ID.');
+  const ids = sheet.getRange(2, idColumn + 1, lastRow - 1, 1).getValues();
+  let targetRow = 0;
+  for (let i = 0; i < ids.length; i++) {
+    if (String(ids[i][0] || '') === String(record.id || '')) {
+      targetRow = i + 2;
+      break;
+    }
+  }
+  if (!targetRow) throw new Error('No se encontro el registro para actualizar: ' + record.id);
+  const current = sheet.getRange(targetRow, 1, 1, lastColumn).getValues()[0];
+  const values = recordToValues_(record);
+  Object.keys(values).forEach(field => {
+    const index = headerMap[field];
+    if (index != null) current[index] = values[field];
+  });
+  sheet.getRange(targetRow, 1, 1, lastColumn).setValues([current]);
 }
 
 function recordToValues_(r) {
@@ -175,7 +206,7 @@ function recordToValues_(r) {
     people: Number(r.people || 0),
     situations: situations.join(' | '),
     otherSituation: r.otherSituation || '',
-    sewageExposure: situations.includes('Exposición a aguas servidas') ? 'Sí' : 'No',
+    sewageExposure: situations.includes('ExposiciÃ³n a aguas servidas') ? 'SÃ­' : 'No',
     electrodependent: r.electrodependent || 'No',
     electrodependentCount: Number(r.electrodependentCount || 0),
     damageDetail: r.damageDetail || '',
@@ -264,3 +295,4 @@ function sanitizeCallback_(value) {
 function json_(value) {
   return ContentService.createTextOutput(JSON.stringify(value)).setMimeType(ContentService.MimeType.JSON);
 }
+
