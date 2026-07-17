@@ -16,7 +16,6 @@
     const local = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
     return local.toISOString().slice(0, 10);
   };
-  let applying = false;
   let timer = null;
 
   function readRecords() {
@@ -68,11 +67,11 @@
     return (record.situations || []).some(value => key(value) === key(situation));
   }
 
-  function enhanceRegions(data) {
+  function renderRegions(data) {
     const container = $("regionMap");
-    if (!container || !window.MONITOREO_CATALOGOS) return;
-    const regions = window.MONITOREO_CATALOGOS.regiones || [];
-    container.innerHTML = regions.map(region => {
+    const catalog = window.MONITOREO_CATALOGOS;
+    if (!container || !catalog) return;
+    container.innerHTML = (catalog.regiones || []).map(region => {
       const rows = data.filter(record => record.region === region);
       const total = rows.length;
       const affected = rows.filter(isAffected).length;
@@ -82,45 +81,39 @@
         <span class="region-values"><b>${fmt(total)}</b><small>informadas</small><i>/</i><b>${fmt(affected)}</b><small>con afectación</small></span>
       </button>`;
     }).join("");
-    container.querySelectorAll(".region-block").forEach(button => {
-      button.addEventListener("click", () => {
-        if ($("filterRegion")) $("filterRegion").value = button.dataset.region;
-        scheduleEnhancement();
-      });
-    });
   }
 
-  function enhanceSituations(data) {
+  function renderSituations(data) {
     const container = $("situationBars");
-    if (!container || !window.MONITOREO_CATALOGOS) return;
-    const base = window.MONITOREO_CATALOGOS.situaciones || [];
-    const withoutSituations = data.filter(record => !(record.situations || []).length);
-    const withoutAffectation = withoutSituations.filter(record => record.status === "Sin afectación").length;
-    const withoutLabel = withoutSituations.length > 0 && withoutAffectation === withoutSituations.length
-      ? "Sin situaciones reportadas (sin afectación)"
-      : "Sin situaciones reportadas";
-    const rows = [{label:withoutLabel, value:withoutSituations.length}, ...base.map(label => ({label, value:data.filter(record => hasSituation(record, label)).length}))];
+    const catalog = window.MONITOREO_CATALOGOS;
+    if (!container || !catalog) return;
+    const without = data.filter(record => record.status === "Sin afectación" && !(record.situations || []).length);
+    const rows = [
+      {label:"Sin situaciones reportadas (sin afectación)", value:without.length},
+      ...(catalog.situaciones || []).map(label => ({label, value:data.filter(record => hasSituation(record, label)).length}))
+    ];
     const max = Math.max(1, ...rows.map(row => row.value));
     container.innerHTML = rows.map(row => `<div class="bar-row"><div class="bar-label">${esc(row.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(row.value / max * 100)}%"></div></div><div class="bar-value">${fmt(row.value)}</div></div>`).join("");
   }
 
   function centerCards() {
-    document.querySelectorAll("#resumen .kpi").forEach(card => {
-      const value = card.querySelector(".kpi-value");
-      if (value) value.style.cssText += ";display:flex;align-items:center;justify-content:center;text-align:center;width:100%;";
+    document.querySelectorAll("#resumen .kpi-value").forEach(value => {
+      value.style.display = "flex";
+      value.style.alignItems = "center";
+      value.style.justifyContent = "center";
+      value.style.textAlign = "center";
+      value.style.width = "100%";
     });
   }
 
   function ensureAddressField() {
     if ($("address")) return;
-    const establishment = $("establishment");
-    const label = establishment?.closest("label");
-    const grid = label?.parentElement;
-    if (!grid) return;
+    const establishmentLabel = $("establishment")?.closest("label");
+    if (!establishmentLabel) return;
     const addressLabel = document.createElement("label");
     addressLabel.className = "span-2";
     addressLabel.innerHTML = 'Dirección de la residencia<input id="address" name="address" type="text" maxlength="220" required placeholder="Calle, número y referencia, si corresponde">';
-    label.insertAdjacentElement("afterend", addressLabel);
+    establishmentLabel.insertAdjacentElement("afterend", addressLabel);
   }
 
   function findPreviousAddress() {
@@ -136,28 +129,22 @@
   }
 
   function saveAddressInLastRecord() {
-    const address = $("address")?.value.trim() || "";
     const records = readRecords();
     if (!records.length) return;
-    const last = records[records.length - 1];
-    last.address = address;
+    records[records.length - 1].address = $("address")?.value.trim() || "";
     writeRecords(records);
   }
 
   function ensureHistoryDetail() {
     const history = $("historico");
     if (!history) return;
-    const summaryTable = history.querySelector(".history-table");
-    const firstHeader = summaryTable?.querySelector("thead th:first-child");
+    const firstHeader = history.querySelector(".history-table thead th:first-child");
     if (firstHeader) firstHeader.textContent = "Fecha de reporte";
     if ($("historyEntriesBody")) return;
     const card = document.createElement("article");
     card.className = "card table-card history-entry-card";
-    card.innerHTML = `
-      <div class="card-head"><div><span class="card-kicker">DETALLE DE INGRESOS</span><h3>Reportes registrados</h3></div><span class="small-note">Cada fila corresponde a un ingreso guardado</span></div>
-      <div class="table-scroll"><table class="history-entry-table"><thead><tr>
-        <th>Fecha de reporte</th><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Dirección</th><th>Estado</th><th>Hubo cambios</th><th>Situaciones reportadas</th><th>Responsable</th>
-      </tr></thead><tbody id="historyEntriesBody"></tbody></table></div>`;
+    card.innerHTML = `<div class="card-head"><div><span class="card-kicker">DETALLE DE INGRESOS</span><h3>Reportes registrados</h3></div><span class="small-note">Cada fila corresponde a un ingreso guardado</span></div>
+      <div class="table-scroll"><table class="history-entry-table"><thead><tr><th>Fecha de reporte</th><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Dirección</th><th>Estado</th><th>Hubo cambios</th><th>Situaciones reportadas</th><th>Responsable</th></tr></thead><tbody id="historyEntriesBody"></tbody></table></div>`;
     history.appendChild(card);
   }
 
@@ -174,32 +161,27 @@
       return (!service || record.service === service) && (!region || record.region === region) && (!from || date >= from) && (!to || date <= to);
     }).sort((a,b) => new Date(b.reportDate || b.createdAt || 0) - new Date(a.reportDate || a.createdAt || 0));
     body.innerHTML = records.length ? records.map(record => `<tr>
-      <td>${esc(formatDateTime(record.reportDate || record.createdAt))}</td>
-      <td>${esc(record.service || "")}</td><td>${esc(record.region || "")}</td><td>${esc(record.commune || "")}</td>
-      <td>${esc(record.establishment || "")}</td><td>${esc(record.address || "Sin información")}</td>
-      <td>${esc(record.status || "Sin información")}</td><td>${esc(record.hasChanges || "No aplica")}</td>
+      <td>${esc(formatDateTime(record.reportDate || record.createdAt))}</td><td>${esc(record.service || "")}</td><td>${esc(record.region || "")}</td><td>${esc(record.commune || "")}</td>
+      <td>${esc(record.establishment || "")}</td><td>${esc(record.address || "Sin información")}</td><td>${esc(record.status || "Sin información")}</td><td>${esc(record.hasChanges || "No aplica")}</td>
       <td>${esc((record.situations || []).join(", ") || (record.status === "Sin afectación" ? "Sin situaciones reportadas (sin afectación)" : "Sin situaciones reportadas"))}</td><td>${esc(record.responsible || "")}</td>
     </tr>`).join("") : '<tr><td colspan="10">Sin ingresos para el período seleccionado.</td></tr>';
   }
 
-  function applyEnhancements() {
-    if (applying) return;
-    applying = true;
+  function refresh() {
     const data = filteredLatest();
     centerCards();
-    enhanceRegions(data);
-    enhanceSituations(data);
+    renderRegions(data);
+    renderSituations(data);
     renderHistoryEntries();
-    requestAnimationFrame(() => { applying = false; });
   }
 
-  function scheduleEnhancement() {
+  function scheduleRefresh(delay = 30) {
     clearTimeout(timer);
-    timer = setTimeout(applyEnhancements, 30);
+    timer = setTimeout(refresh, delay);
   }
 
   function injectStyles() {
-    if (document.getElementById("dashboard-balance-styles")) return;
+    if ($("dashboard-balance-styles")) return;
     const style = document.createElement("style");
     style.id = "dashboard-balance-styles";
     style.textContent = `
@@ -210,16 +192,10 @@
       #regionMap{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-content:start!important;flex:1!important}
       .region-block{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;padding:9px 10px!important}
       .region-values{display:grid!important;grid-template-columns:auto auto auto auto auto!important;align-items:baseline!important;gap:4px!important;white-space:nowrap!important}
-      .region-values b{font-size:17px!important;color:var(--primary,#154f55)!important}
-      .region-values small{font-size:8px!important;text-transform:uppercase!important;letter-spacing:.03em!important;color:#61777b!important}
-      .region-values i{font-style:normal!important;color:#8a9b9e!important}
-      #situationBars{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;gap:8px!important}
-      #situationBars .bar-row{min-height:30px!important}
-      #historico .history-entry-card{margin-top:18px!important;border-top-color:var(--accent,#61b8e6)!important}
-      #historico .history-entry-table{min-width:1450px!important}
-      #historico .history-entry-table td,#historico .history-entry-table th{vertical-align:top!important}
-      @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}
-      @media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}
+      .region-values b{font-size:17px!important;color:var(--primary,#154f55)!important}.region-values small{font-size:8px!important;text-transform:uppercase!important;color:#61777b!important}.region-values i{font-style:normal!important;color:#8a9b9e!important}
+      #situationBars{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;gap:8px!important}#situationBars .bar-row{min-height:30px!important}
+      #historico .history-entry-card{margin-top:18px!important;border-top-color:var(--accent,#61b8e6)!important}#historico .history-entry-table{min-width:1450px!important}
+      @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}@media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}
     `;
     document.head.appendChild(style);
   }
@@ -228,20 +204,17 @@
     injectStyles();
     ensureAddressField();
     ensureHistoryDetail();
-    scheduleEnhancement();
-    ["filterService","filterRegion","filterStatus"].forEach(id => $(id)?.addEventListener("change", scheduleEnhancement));
-    $("clearFilters")?.addEventListener("click", scheduleEnhancement);
+    scheduleRefresh(80);
+    ["filterService","filterRegion","filterStatus"].forEach(id => $(id)?.addEventListener("change", () => scheduleRefresh()));
+    $("clearFilters")?.addEventListener("click", () => scheduleRefresh());
     ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id)?.addEventListener("change", renderHistoryEntries));
     $("clearHistoryFilters")?.addEventListener("click", () => setTimeout(renderHistoryEntries, 0));
     ["service","region","commune","establishment"].forEach(id => $(id)?.addEventListener(id === "establishment" ? "blur" : "change", findPreviousAddress));
     $("reportForm")?.addEventListener("submit", () => {
-      saveAddressInLastRecord();
-      ["filterService","filterRegion","filterStatus"].forEach(id => { if ($(id)) $(id).value = ""; });
-      setTimeout(scheduleEnhancement, 80);
-      setTimeout(scheduleEnhancement, 900);
+      setTimeout(saveAddressInLastRecord, 0);
+      setTimeout(() => scheduleRefresh(), 60);
+      setTimeout(() => scheduleRefresh(), 900);
     });
-    const observer = new MutationObserver(() => { if (!applying) scheduleEnhancement(); });
-    [$("kpiGrid"), $("regionMap"), $("situationBars")].filter(Boolean).forEach(node => observer.observe(node, {childList:true, subtree:true}));
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
