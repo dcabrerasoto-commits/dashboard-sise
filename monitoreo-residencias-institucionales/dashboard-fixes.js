@@ -78,7 +78,7 @@
       const level = affected >= 6 ? 3 : affected >= 3 ? 2 : affected >= 1 ? 1 : 0;
       return `<button type="button" class="region-block level-${level}" data-region="${esc(region)}" title="${esc(region)}: ${fmt(total)} informadas, ${fmt(affected)} con afectación">
         <strong>${esc(region)}</strong>
-        <span class="region-values"><span><b>${fmt(total)}</b><small>informadas</small></span><i></i><span><b>${fmt(affected)}</b><small>con afectación</small></span></span>
+        <span class="region-values"><span><b>${fmt(total)}</b><small>informadas</small></span><span><b>${fmt(affected)}</b><small>con afectación</small></span></span>
       </button>`;
     }).join("");
   }
@@ -199,9 +199,9 @@
       .region-block.level-3{background:#287fae!important;border-color:#176f9d!important}
       .region-block.level-3 .region-values{background:rgba(255,255,255,.16)!important;border-color:rgba(255,255,255,.35)!important}
       .region-block.level-3 strong,.region-block.level-3 .region-values b,.region-block.level-3 .region-values small{color:#fff!important}
-      .region-values{display:flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;white-space:nowrap!important;background:#fff!important;border:1px solid #dfe9e7!important;padding:5px 7px!important;min-width:142px!important}
+      .region-values{display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;white-space:nowrap!important;background:#fff!important;border:1px solid #dfe9e7!important;padding:5px 8px!important;min-width:138px!important}
       .region-values>span{display:inline-flex!important;align-items:baseline!important;gap:3px!important;text-align:center!important;background:transparent!important;border:0!important;padding:0!important;min-width:0!important}
-      .region-values b{font-size:16px!important;line-height:1!important;color:var(--primary,#154f55)!important}.region-values small{font-size:7px!important;line-height:1!important;text-transform:uppercase!important;color:#61777b!important}.region-values i{display:block!important;width:4px!important;height:4px!important;background:#8aa2a0!important;transform:rotate(45deg)!important;font-style:normal!important}
+      .region-values b{font-size:15px!important;line-height:1!important;color:var(--primary,#154f55)!important}.region-values small{font-size:7px!important;line-height:1!important;text-transform:uppercase!important;color:#61777b!important}.region-values i{display:none!important}
       #resumen .legend{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:12px!important;padding:10px 12px!important;background:#f8fbfa!important;border:1px solid #d8e5e3!important;color:#38595e!important;font-size:11px!important}
       #resumen .legend span{display:inline-flex!important;align-items:center!important;gap:6px!important;padding:4px 8px!important;background:#fff!important;border:1px solid #e1e8e7!important;font-weight:750!important}
       #resumen .legend span::before{content:"";width:12px;height:12px;border:1px solid #b8c9c7;background:#f4f7f6}

@@ -302,8 +302,8 @@
     $("reportForm").addEventListener("submit", saveReport);
     $("resetForm").addEventListener("click", () => setTimeout(resetForm, 0));
     $("exportButton").addEventListener("click", () => {
-      const headers = ["Fecha y hora","Servicio","Región","Comuna","Residencia","Responsable","Correo","Teléfono","Hubo cambios","Estado","Situaciones","Electrodependientes","N° electrodependientes"];
-      const rows = records.map(r => [r.reportDate,r.service,r.region,r.commune,r.establishment,r.responsible,r.contactEmail,r.contactPhone,r.hasChanges,r.status,(r.situations||[]).join(" | "),r.electrodependent,r.electrodependentCount]);
+      const headers = ["ID","Fecha de registro","Fecha y hora del reporte","Servicio","Programa o linea","Region","Comuna","Residencia","Direccion","Responsable","Correo","Telefono","Reporte anterior","Hubo cambios","ID reporte anterior","Estado","Nivel de dano o riesgo","Capacidad total","Personas atendidas","Situaciones presentes","Detalle de afectacion o riesgo","Personas electrodependientes","Numero de personas electrodependientes","Necesidades prioritarias","Medidas implementadas","Observaciones"];
+      const rows = records.map(r => [r.id,r.createdAt,r.reportDate,r.service,r.program,r.region,r.commune,r.establishment,r.address,r.responsible,r.contactEmail,r.contactPhone,r.previousReport,r.hasChanges,r.previousRecordId,r.status,r.damageLevel,r.capacity,r.people,(r.situations||[]).join(" | "),r.damageDetail,r.electrodependent,r.electrodependentCount,(r.needs||[]).join(" | "),r.measures,r.observations]);
       const csv = "\ufeff" + [headers].concat(rows).map(row => row.map(v => `"${String(v == null ? "" : v).replace(/"/g,'""')}"`).join(";")).join("\r\n");
       const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
       const a = document.createElement("a"); a.href = url; a.download = `seguimiento_residencias_${dateKey(new Date())}.csv`; a.click(); URL.revokeObjectURL(url);
