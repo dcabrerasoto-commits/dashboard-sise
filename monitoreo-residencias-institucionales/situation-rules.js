@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "mdsf-monitoreo-residencias-v2";
   const $ = id => document.getElementById(id);
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
@@ -11,14 +10,10 @@
     return Number.isNaN(date.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}).format(date);
   };
   let scheduled = false;
+  let sharedRecords = [];
 
   function readRecords() {
-    try {
-      const records = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(records) ? records : [];
-    } catch (_) {
-      return [];
-    }
+    return sharedRecords;
   }
 
   function identity(record) {
@@ -110,6 +105,10 @@
 
   function init() {
     scheduleUpdate(0);
+    window.addEventListener("residencias:shared-data", event => {
+      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records : [];
+      scheduleUpdate();
+    });
     const container = $("situationBars");
     if (!container) return;
     container.addEventListener("click", event => {
