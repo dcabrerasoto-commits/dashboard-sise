@@ -94,7 +94,12 @@
     const container = $("situationBars");
     if (!container || !window.MONITOREO_CATALOGOS) return;
     const base = window.MONITOREO_CATALOGOS.situaciones || [];
-    const rows = [{label:"Sin situaciones reportadas", value:data.filter(record => !(record.situations || []).length).length}, ...base.map(label => ({label, value:data.filter(record => hasSituation(record, label)).length}))];
+    const withoutSituations = data.filter(record => !(record.situations || []).length);
+    const withoutAffectation = withoutSituations.filter(record => record.status === "Sin afectación").length;
+    const withoutLabel = withoutSituations.length > 0 && withoutAffectation === withoutSituations.length
+      ? "Sin situaciones reportadas (sin afectación)"
+      : "Sin situaciones reportadas";
+    const rows = [{label:withoutLabel, value:withoutSituations.length}, ...base.map(label => ({label, value:data.filter(record => hasSituation(record, label)).length}))];
     const max = Math.max(1, ...rows.map(row => row.value));
     container.innerHTML = rows.map(row => `<div class="bar-row"><div class="bar-label">${esc(row.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(row.value / max * 100)}%"></div></div><div class="bar-value">${fmt(row.value)}</div></div>`).join("");
   }
@@ -173,7 +178,7 @@
       <td>${esc(record.service || "")}</td><td>${esc(record.region || "")}</td><td>${esc(record.commune || "")}</td>
       <td>${esc(record.establishment || "")}</td><td>${esc(record.address || "Sin información")}</td>
       <td>${esc(record.status || "Sin información")}</td><td>${esc(record.hasChanges || "No aplica")}</td>
-      <td>${esc((record.situations || []).join(", ") || "Sin situaciones reportadas")}</td><td>${esc(record.responsible || "")}</td>
+      <td>${esc((record.situations || []).join(", ") || (record.status === "Sin afectación" ? "Sin situaciones reportadas (sin afectación)" : "Sin situaciones reportadas"))}</td><td>${esc(record.responsible || "")}</td>
     </tr>`).join("") : '<tr><td colspan="10">Sin ingresos para el período seleccionado.</td></tr>';
   }
 
