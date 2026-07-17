@@ -31,6 +31,15 @@
     const service = String(record?.service || "").trim();
     return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
   };
+  const uniqueById = (input) => {
+    const map = new Map();
+    (input || []).forEach(record => {
+      const id = String(record?.id || "").trim();
+      if (id) map.set(id, record);
+      else map.set(`__row_${map.size}`, record);
+    });
+    return Array.from(map.values());
+  };
 
   function populate(select, values, firstLabel) {
     select.innerHTML = `<option value="">${esc(firstLabel)}</option>` + (values || []).map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join("");
@@ -307,7 +316,7 @@
   function setupSharedData() {
     window.addEventListener("residencias:shared-data", event => {
       const shared = event.detail && Array.isArray(event.detail.records) ? event.detail.records : [];
-      records = shared;
+      records = uniqueById(shared);
       latest = latestRecords(records);
       renderAll();
     });
