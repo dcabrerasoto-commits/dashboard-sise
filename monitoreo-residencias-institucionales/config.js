@@ -3,5 +3,12 @@ window.MONITOREO_CONFIG = {
   // carga colaborativa y lectura nacional en tiempo real.
   endpoint: "",
   storageMode: "auto",
-  appVersion: "1.0.0"
+  appVersion: "1.1.0"
 };
+
+window.addEventListener("load", () => {
+  const script = document.createElement("script");
+  script.src = "enhancements.js?v=20260716-mapa-regional-azul";
+  script.defer = true;
+  document.body.appendChild(script);
+});
