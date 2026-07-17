@@ -58,6 +58,16 @@
     );
   }
 
+  function regionalData(region) {
+    const service = $("filterService")?.value || "";
+    const status = $("filterStatus")?.value || "";
+    return latestRecords(readRecords()).filter(record =>
+      key(record.region) === key(region) &&
+      (!service || record.service === service) &&
+      (!status || record.status === status)
+    );
+  }
+
   function isAffected(record) {
     return record.status === "Con afectación" || (record.situations || []).length > 0;
   }
@@ -126,6 +136,30 @@
       <td>${fmt(record.people)}</td><td>${record.electrodependent === "Sí" ? `Sí (${fmt(record.electrodependentCount)})` : "No"}</td>
       <td>${esc(formatDateTime(record.reportDate || record.createdAt))}</td>
     </tr>`).join("")}</tbody></table></div>`;
+  }
+
+  function communeSummaryTable(region, records) {
+    if (!records.length) return '<div class="detail-modal-empty">No existen reportes asociados a esta región.</div>';
+    const groups = new Map();
+    records.forEach(record => {
+      const commune = record.commune || "Sin información";
+      if (!groups.has(commune)) groups.set(commune, []);
+      groups.get(commune).push(record);
+    });
+    const rows = Array.from(groups.entries()).sort((a,b) => key(a[0]).localeCompare(key(b[0]))).map(([commune, rows]) => {
+      const affected = rows.filter(isAffected).length;
+      const without = rows.filter(record => record.status === "Sin afectación").length;
+      const electro = rows.filter(record => record.electrodependent === "Sí").length;
+      const last = rows.map(record => new Date(record.reportDate || record.createdAt || 0).getTime() || 0).sort((a,b) => b - a)[0];
+      return `<tr data-region="${esc(region)}" data-commune="${esc(commune)}">
+        <td><button type="button" class="commune-detail-link">${esc(commune)}</button></td>
+        <td>${fmt(rows.length)}</td><td>${fmt(without)}</td><td>${fmt(affected)}</td><td>${fmt(electro)}</td>
+        <td>${last ? esc(formatDateTime(last)) : "Sin información"}</td>
+      </tr>`;
+    }).join("");
+    return `<div class="detail-modal-table-wrap"><table class="detail-modal-table commune-summary-table"><thead><tr>
+      <th>Comuna</th><th>Residencias informadas</th><th>Sin afectación</th><th>Con afectación</th><th>Electrodependientes</th><th>Última actualización</th>
+    </tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   function valueOrEmpty(value) {
@@ -214,7 +248,7 @@
   }
 
   function openRegiónDetail(region) {
-    const records = currentData().filter(record => record.region === region);
+    const records = regionalData(region);
     const affected = records.filter(isAffected).length;
     const without = records.filter(record => record.status === "Sin afectación").length;
     const evaluation = records.filter(record => record.status === "En evaluación").length;
@@ -229,6 +263,26 @@
         {label:"Sin afectación", value:without},
         {label:"En evaluación", value:evaluation},
         {label:"Con electrodependientes", value:electro}
+      ]),
+      body: communeSummaryTable(region, records)
+    });
+  }
+
+  function openCommuneDetail(region, commune) {
+    const records = regionalData(region).filter(record => key(record.commune || "Sin información") === key(commune));
+    const affected = records.filter(isAffected).length;
+    const people = records.reduce((sum, record) => sum + Number(record.people || 0), 0);
+    const electroPeople = records.reduce((sum, record) => sum + Number(record.electrodependentCount || 0), 0);
+    openModal({
+      kicker: "DETALLE COMUNAL",
+      title: `${commune} - ${region}`,
+      subtitle: records.length ? "Residencias vigentes informadas para esta comuna." : "No existen residencias informadas para esta comuna.",
+      summary: summaryCards([
+        {label:"Residencias", value:records.length},
+        {label:"Con afectación", value:affected},
+        {label:"Sin afectación", value:records.filter(record => record.status === "Sin afectación").length},
+        {label:"Personas atendidas", value:people},
+        {label:"Personas electrodependientes", value:electroPeople}
       ]),
       body: recordsTable(records)
     });
@@ -278,6 +332,7 @@
       .detail-modal-body{overflow:auto;padding:18px 20px 22px;background:#f6f9f8}
       .detail-modal-table-wrap{overflow:auto;border:1px solid #b7c9cb;background:#fff}
       .detail-modal-table{width:100%;min-width:1050px;border-collapse:collapse}.detail-modal-table th{position:sticky;top:0;z-index:1;padding:10px;background:#e7f3f5;color:#154f55;text-align:left;font-size:11px;text-transform:uppercase;border-bottom:1px solid #afc4c7}.detail-modal-table td{padding:10px;border-bottom:1px solid #dce5e5;font-size:12px;vertical-align:top}.detail-modal-table tbody tr:hover{background:#eef8fd}
+      .commune-summary-table{min-width:760px}.commune-summary-table tbody tr{cursor:pointer}.commune-detail-link{border:0;background:transparent;color:#154f55;font-weight:850;text-align:left;text-decoration:underline;cursor:pointer;padding:0}
       .detail-status{display:inline-block;padding:4px 7px;background:#edf4f3;border-left:4px solid #287fae;font-weight:750;white-space:nowrap}
       .detail-modal-empty{padding:28px;text-align:center;background:#fff;border:1px solid #c2d0d1;color:#53686c}
       .record-detail-section{background:#fff;border:1px solid #c3d3d1;margin-bottom:14px}.record-detail-section h3{margin:0;padding:12px 14px;background:#eaf4f3;color:#154f55;font-size:15px}
@@ -299,6 +354,26 @@
       const row = event.target.closest("tr");
       if (row) openDetailRow(row);
     });
+    document.addEventListener("click", event => {
+      const regionBlock = event.target.closest("#regionMap .region-block");
+      if (regionBlock?.dataset.region) {
+        event.preventDefault();
+        event.stopPropagation();
+        openRegiónDetail(regionBlock.dataset.region);
+        return;
+      }
+      const regionRow = event.target.closest("#regionTableBody tr");
+      if (regionRow?.cells?.[0]?.textContent && regionRow.cells.length > 1) {
+        event.preventDefault();
+        openRegiónDetail(regionRow.cells[0].textContent.trim());
+        return;
+      }
+      const communeRow = event.target.closest(".commune-summary-table tbody tr");
+      if (communeRow?.dataset.region && communeRow.dataset.commune) {
+        event.preventDefault();
+        openCommuneDetail(communeRow.dataset.region, communeRow.dataset.commune);
+      }
+    }, true);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
