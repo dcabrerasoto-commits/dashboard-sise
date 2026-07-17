@@ -79,7 +79,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .kpi.alert::after{display:none}
 .kpi.alert:hover{border-color:var(--primary-dark)}
 .kpi.alert:hover::after{display:none}
-.kpi-label{max-width:85%;color:#fff;font-weight:800;font-size:14px;line-height:1.25;text-transform:uppercase;letter-spacing:.025em}
+.kpi-label{max-width:85%;color:#fff;font-weight:600;font-size:14px;line-height:1.25;text-transform:uppercase;letter-spacing:.025em}
 .kpi-value{align-self:center;margin-top:10px;color:#fff;font-size:46px;font-weight:850;line-height:1;font-variant-numeric:tabular-nums}
 .kpi.alert .kpi-value{color:#fff}
 .kpi-sub{margin-top:9px;padding-top:8px;border-top:1px solid rgba(255,255,255,.18);color:#d6e4e3;font-size:12px;font-weight:650}
