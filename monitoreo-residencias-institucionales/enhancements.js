@@ -56,10 +56,30 @@
       .tab-entry{border-color:var(--accent)!important;color:var(--accent-dark)!important}
       .tab-entry.active{background:var(--accent)!important;border-color:var(--accent)!important;color:#08384f!important}
       .mode-pill{background:var(--accent-soft)!important;border-color:#9bcfe9!important;color:var(--accent-dark)!important}
-      .kpi.alert{border-top-color:var(--accent)!important;background:linear-gradient(135deg,#fff 0 70%,var(--accent-soft) 70%)!important}
+      .kpi.alert{border-top-color:var(--accent)!important;background:linear-gradient(135deg,#fff 0 76%,var(--accent-soft) 76%)!important}
       .kpi.alert .kpi-value{color:var(--accent-dark)!important}
       .table-card,.definition{border-top-color:var(--accent)!important}
+
+      #resumen .kpi-grid{
+        grid-template-columns:repeat(6,minmax(0,1fr))!important;
+        gap:8px!important;
+        margin-bottom:16px!important;
+      }
+      #resumen .kpi{
+        min-height:104px!important;
+        padding:11px 12px!important;
+        border-top-width:5px!important;
+        box-shadow:4px 4px 0 rgba(21,79,85,.07)!important;
+      }
+      #resumen .kpi::after{width:8px!important;height:8px!important;right:10px!important;top:11px!important}
+      #resumen .kpi-label{font-size:11px!important;line-height:1.18!important;max-width:88%!important;letter-spacing:.015em!important}
+      #resumen .kpi-value{font-size:32px!important;margin-top:5px!important}
+      #resumen .kpi-sub{font-size:10px!important;margin-top:5px!important;padding-top:5px!important}
+      #resumen .kpi:hover{transform:translate(-3px,-3px)!important;box-shadow:7px 8px 0 rgba(21,79,85,.12),0 14px 28px rgba(17,54,59,.14)!important}
+
       .toolbar-actions .definition-action{
+        display:inline-flex!important;
+        align-items:center!important;
         background:#fff!important;
         border:1px solid var(--border-strong,#839c98)!important;
         color:var(--primary,#154f55)!important;
@@ -77,14 +97,37 @@
         border-color:var(--primary,#154f55)!important;
         color:#fff!important;
       }
-      #regionMap{display:none!important}
+
+      .map-comparison{
+        display:grid;
+        grid-template-columns:minmax(260px,.9fr) minmax(310px,1.1fr);
+        gap:14px;
+        align-items:stretch;
+      }
       #chileRegionMap{
         width:100%;
-        height:560px;
+        height:520px;
         background:#eee9df;
         border:1px solid #b8c9cd;
         box-shadow:5px 5px 0 rgba(21,79,85,.08);
       }
+      #regionMap{
+        display:grid!important;
+        grid-template-columns:repeat(2,minmax(0,1fr))!important;
+        gap:7px!important;
+        max-width:none!important;
+        width:100%!important;
+        height:520px;
+        max-height:520px;
+        margin:0!important;
+        padding:10px;
+        align-content:start;
+        overflow:auto;
+        background:#f6f2e9;
+        border:1px solid #c7d3d4;
+        box-shadow:5px 5px 0 rgba(21,79,85,.06);
+      }
+      #regionMap .region-block{min-height:43px}
       #chileRegionMap .leaflet-control-zoom a{
         border-radius:0!important;
         color:#174c68!important;
@@ -97,7 +140,23 @@
       }
       .map-source{margin-top:10px;color:#607276;font-size:11px;text-align:right}
       .map-loading{height:100%;display:grid;place-items:center;color:#50696e;font-weight:700;padding:20px;text-align:center}
-      @media(max-width:720px){#chileRegionMap{height:500px}}
+
+      @media(max-width:1180px){
+        #resumen .kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+      }
+      @media(max-width:900px){
+        .map-comparison{grid-template-columns:1fr}
+        #chileRegionMap,#regionMap{height:470px;max-height:470px}
+      }
+      @media(max-width:720px){
+        #resumen .kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+        #resumen .kpi{min-height:98px!important}
+        #regionMap{grid-template-columns:1fr!important;height:auto;max-height:480px}
+        #chileRegionMap{height:480px}
+      }
+      @media(max-width:450px){
+        #resumen .kpi-grid{grid-template-columns:1fr!important}
+      }
     `;
     document.head.appendChild(style);
   }
@@ -107,8 +166,8 @@
     const actions = document.querySelector(".toolbar-actions");
     const exportButton = document.getElementById("exportButton");
     if (!button || !actions || !exportButton) return;
-    button.classList.add("definition-action");
-    actions.insertBefore(button, exportButton);
+    button.classList.add("definition-action", "btn", "btn-light");
+    if (button.parentElement !== actions) actions.insertBefore(button, exportButton);
   }
 
   function loadLeaflet() {
@@ -200,19 +259,24 @@
     const original = document.getElementById("regionMap");
     if (!original || document.getElementById("chileRegionMap")) return;
 
+    const wrapper = document.createElement("div");
+    wrapper.className = "map-comparison";
+    original.parentNode.insertBefore(wrapper, original);
+
     const visible = document.createElement("div");
     visible.id = "chileRegionMap";
     visible.innerHTML = '<div class="map-loading">Cargando cartografía regional…</div>';
-    original.parentNode.insertBefore(visible, original);
+    wrapper.appendChild(visible);
+    wrapper.appendChild(original);
 
     const source = document.createElement("div");
     source.className = "map-source";
     source.textContent = "Cartografía territorial: Biblioteca del Congreso Nacional de Chile.";
-    const legend = original.parentNode.querySelector(".map-legend");
+    const legend = wrapper.parentNode.querySelector(".map-legend");
     if (legend) legend.insertAdjacentElement("afterend", source);
 
     const note = original.closest(".card")?.querySelector(".small-note");
-    if (note) note.textContent = "Cartografía regional";
+    if (note) note.textContent = "Mapa de Chile y detalle regional";
 
     try {
       await loadLeaflet();
@@ -257,8 +321,7 @@
       map.fitBounds([[-56.2,-76.5],[-17.3,-66]], { padding:[12,12] });
       setTimeout(() => map.invalidateSize(), 150);
     } catch (error) {
-      visible.innerHTML = '<div class="map-loading">No fue posible cargar el mapa territorial. Se mantiene disponible el consolidado regional.</div>';
-      original.style.display = "grid";
+      visible.innerHTML = '<div class="map-loading">No fue posible cargar el mapa territorial. El detalle regional permanece disponible al costado.</div>';
     }
   }
 
