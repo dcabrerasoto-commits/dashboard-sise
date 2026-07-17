@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   "use strict";
 
   const $ = id => document.getElementById(id);
@@ -49,7 +49,7 @@
 
   function currentData() {
     const service = $("filterService")?.value || "";
-    const region = $("filterRegion")?.value || "";
+    const region = $("filterRegión")?.value || "";
     const status = $("filterStatus")?.value || "";
     return latestRecords(readRecords()).filter(record =>
       (!service || record.service === service) &&
@@ -130,11 +130,11 @@
 
   function valueOrEmpty(value) {
     const text = String(value ?? "").trim();
-    return text || "Sin informacion";
+    return text || "Sin información";
   }
 
   function listOrEmpty(value) {
-    return Array.isArray(value) && value.length ? value.join(", ") : "Sin informacion";
+    return Array.isArray(value) && value.length ? value.join(", ") : "Sin información";
   }
 
   function detailItem(label, value) {
@@ -151,7 +151,7 @@
     openModal({
       kicker: "DETALLE DEL REPORTE VIGENTE",
       title: record.establishment || "Residencia",
-      subtitle: `${valueOrEmpty(record.commune)} - ${valueOrEmpty(record.region)}. Ultima actualizacion: ${formatDateTime(record.reportDate || record.createdAt)}`,
+      subtitle: `${valueOrEmpty(record.commune)} - ${valueOrEmpty(record.region)}. Última actualización: ${formatDateTime(record.reportDate || record.createdAt)}`,
       summary: summaryCards([
         {label:"Personas atendidas", value:record.people},
         {label:"Capacidad", value:record.capacity},
@@ -162,24 +162,24 @@
       body: [
         detailSection("Identificacion y contacto", [
           detailItem("Servicio responsable", record.service),
-          detailItem("Programa o linea", record.program),
-          detailItem("Region", record.region),
+          detailItem("Programa o línea", record.program),
+          detailItem("Región", record.region),
           detailItem("Comuna", record.commune),
           detailItem("Residencia", record.establishment),
-          detailItem("Direccion", record.address),
+          detailItem("Dirección", record.address),
           detailItem("Responsable", record.responsible),
           detailItem("Correo de contacto", record.contactEmail),
-          detailItem("Telefono de contacto", record.contactPhone)
+          detailItem("Teléfono de contacto", record.contactPhone)
         ]),
-        detailSection("Estado y afectacion", [
+        detailSection("Estado y afectación", [
           detailItem("Estado general", record.status),
-          detailItem("Nivel de dano o riesgo", record.damageLevel),
+          detailItem("Nivel de daño o riesgo", record.damageLevel),
           detailItem("Capacidad total", record.capacity),
           detailItem("Personas atendidas", record.people),
           detailItem("Situaciones presentes", situations),
           detailItem("Personas electrodependientes", record.electrodependent),
-          detailItem("Numero de personas electrodependientes", record.electrodependentCount),
-          detailItem("Detalle de afectacion o riesgo", record.damageDetail)
+          detailItem("Número de personas electrodependientes", record.electrodependentCount),
+          detailItem("Detalle de afectación o riesgo", record.damageDetail)
         ]),
         detailSection("Necesidades y respuesta", [
           detailItem("Necesidades prioritarias", needs),
@@ -194,7 +194,7 @@
 
   function detailRowsData() {
     const service = $("detailService")?.value || "";
-    const region = $("detailRegion")?.value || "";
+    const region = $("detailRegión")?.value || "";
     const situation = $("detailSituation")?.value || "";
     const query = key($("detailSearch")?.value || "");
     return latestRecords(readRecords()).filter(record =>
@@ -213,7 +213,7 @@
     if (record) openRecordDetail(record);
   }
 
-  function openRegionDetail(region) {
+  function openRegiónDetail(region) {
     const records = currentData().filter(record => record.region === region);
     const affected = records.filter(isAffected).length;
     const without = records.filter(record => record.status === "Sin afectación").length;
@@ -249,7 +249,7 @@
       subtitle: records.length ? "Residencias cuyo último reporte coincide con esta situación." : "No existen registros asociados a esta situación con los filtros actuales.",
       summary: summaryCards([
         {label:"Residencias", value:records.length},
-        {label:"Regiones", value:regions},
+        {label:"Regiónes", value:regions},
         {label:"Con afectación", value:affected},
         {label:"Personas atendidas", value:people},
         {label:"Personas electrodependientes", value:electroPeople}
@@ -304,3 +304,6 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
   else init();
 })();
+
+
+

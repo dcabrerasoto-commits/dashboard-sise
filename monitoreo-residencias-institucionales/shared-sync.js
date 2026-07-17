@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   "use strict";
 
   const config = window.MONITOREO_SYNC_CONFIG || {};
@@ -38,7 +38,7 @@
       window[callbackName] = response => {
         finish(() => {
           if (!response || response.ok !== true || !Array.isArray(response.records)) {
-            reject(new Error(response?.error || "La respuesta de sincronizacion no es valida."));
+            reject(new Error(response?.error || "La respuesta de sincronización no es válida."));
             return;
           }
           resolve(response.records);
@@ -53,12 +53,12 @@
 
   function applySharedRecords(shared) {
     if (shared.some(shiftedRecord)) {
-      setStatus("La base compartida requiere actualizar su implementacion. No se muestran columnas corridas.", "error");
+      setStatus("La base compartida requiere actualizar su implementación. No se muestran columnas corridas.", "error");
       window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:[]}}));
       return [];
     }
     const valid = shared.filter(record => !invalidTestRecord(record));
-    setStatus("El tablero muestra el ultimo reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Historico diario.", "ok");
+    setStatus("El tablero muestra el último reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Histórico diario.", "ok");
     window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
     return valid;
   }
@@ -66,7 +66,7 @@
   function jsonpLoad() {
     if (!endpoint || loading) return;
     loading = true;
-    setStatus("Sincronizando informacion compartida...", "loading");
+    setStatus("Sincronizando información compartida...", "loading");
     fetchSharedRecords()
       .then(applySharedRecords)
       .catch(error => setStatus(`${error.message} No se muestran datos locales.`, "error"))
@@ -122,3 +122,4 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
   else init();
 })();
+
