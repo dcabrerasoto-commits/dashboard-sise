@@ -3,5 +3,5 @@ window.MONITOREO_CONFIG = {
   // carga colaborativa y lectura nacional en tiempo real.
   endpoint: "",
   storageMode: "auto",
-  appVersion: "1.3.0"
+  appVersion: "1.4.0"
 };
