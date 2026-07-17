@@ -268,9 +268,8 @@
     safeWrite(records);
     latest = latestRecords(records);
     renderAll();
-    $("formMessage").textContent = "Reporte guardado correctamente.";
-    $("formMessage").className = "form-message ok";
-    setTimeout(resetForm, 800);
+    $("formMessage").textContent = "Guardando reporte en la base compartida...";
+    $("formMessage").className = "form-message";
   }
 
   function resetForm() {
@@ -324,6 +323,17 @@
       records = shared;
       latest = latestRecords(records);
       renderAll();
+    });
+    window.addEventListener("residencias:shared-save", event => {
+      const detail = event.detail || {};
+      if (detail.ok) {
+        $("formMessage").textContent = "Reporte guardado correctamente en la base compartida.";
+        $("formMessage").className = "form-message ok";
+        setTimeout(resetForm, 800);
+      } else {
+        $("formMessage").textContent = "No se pudo confirmar el guardado en Google Sheets. Revise la conexion e intente nuevamente.";
+        $("formMessage").className = "form-message error";
+      }
     });
   }
 
