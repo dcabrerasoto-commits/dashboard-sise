@@ -11,7 +11,7 @@
       #resumen .kpi{min-height:94px!important;padding:9px 10px!important;border-top-width:5px!important}
       #resumen .kpi::after{width:7px!important;height:7px!important;right:9px!important;top:9px!important}
       #resumen .kpi-label{font-size:10.5px!important;line-height:1.15!important;letter-spacing:.01em!important}
-      #resumen .kpi-value{font-size:29px!important;margin-top:3px!important}
+      #resumen .kpi-value{font-size:29px!important;margin-top:3px!important;text-align:center!important;width:100%!important}
       #resumen .kpi-sub{font-size:9.5px!important;margin-top:4px!important;padding-top:4px!important}
       .toolbar-actions .definition-action{display:inline-flex!important;align-items:center!important;background:#fff!important;border:1px solid var(--border-strong,#839c98)!important;color:var(--primary,#154f55)!important;padding:10px 14px!important;font-weight:750!important;border-radius:0!important}
       .toolbar-actions .definition-action:hover{background:#edf7fc!important;border-color:var(--accent-dark)!important;transform:translate(-3px,-3px)!important;box-shadow:5px 5px 0 rgba(21,79,85,.14)!important}
