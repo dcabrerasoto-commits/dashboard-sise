@@ -49,7 +49,7 @@
 
   function currentData() {
     const service = $("filterService")?.value || "";
-    const region = $("filterRegión")?.value || "";
+    const region = $("filterRegion")?.value || "";
     const status = $("filterStatus")?.value || "";
     return latestRecords(readRecords()).filter(record =>
       (!service || record.service === service) &&
@@ -194,7 +194,7 @@
 
   function detailRowsData() {
     const service = $("detailService")?.value || "";
-    const region = $("detailRegión")?.value || "";
+    const region = $("detailRegion")?.value || "";
     const situation = $("detailSituation")?.value || "";
     const query = key($("detailSearch")?.value || "");
     return latestRecords(readRecords()).filter(record =>

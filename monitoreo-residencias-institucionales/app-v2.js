@@ -5,6 +5,7 @@
   let records = [];
   let latest = [];
   let previousMatch = null;
+  let detailSort = {field:"reportDate", direction:"desc"};
 
   const $ = (id) => document.getElementById(id);
   const $$ = (selector, root = document) => Array.prototype.slice.call(root.querySelectorAll(selector));
@@ -53,7 +54,7 @@
 
   function setupCatalogs() {
     ["filterService","detailService","historyService"].forEach(id => populate($(id), C.servicios, "Todos los servicios"));
-    ["filterRegión","detailRegión","historyRegión"].forEach(id => populate($(id), C.regiones, "Todas las regiones"));
+    ["filterRegion","detailRegion","historyRegion"].forEach(id => populate($(id), C.regiones, "Todas las regiones"));
     populate($("filterStatus"), C.estados, "Todos los estados");
     populate($("detailSituation"), C.situaciones, "Todas las situaciones");
     populate($("service"), C.servicios, "Seleccione un servicio");
@@ -149,7 +150,7 @@
   function filteredSummary() {
     return latest.filter(r =>
       (!$("filterService").value || r.service === $("filterService").value) &&
-      (!$("filterRegión").value || r.region === $("filterRegión").value) &&
+      (!$("filterRegion").value || r.region === $("filterRegion").value) &&
       (!$("filterStatus").value || r.status === $("filterStatus").value)
     );
   }
@@ -181,7 +182,7 @@
     renderKpis(data);
     const regions = byRegión(data);
     $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
-    $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegión").value = btn.dataset.region; renderSummary(); }));
+    $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
     const situations = [
       {label:"Sin situaciones reportadas (sin afectación)", value:data.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length},
       ...(C.situaciones || []).map(label => ({label, value:data.filter(r => hasSituation(r,label)).length}))
@@ -192,20 +193,49 @@
     $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
   }
 
+  function detailValue(record, field) {
+    if (field === "situations") return (record.situations || []).join(", ");
+    if (field === "people") return Number(record.people || 0);
+    if (field === "reportDate") return new Date(record.reportDate || record.createdAt || 0).getTime() || 0;
+    return key(record[field] || "");
+  }
+
+  function sortDetailRows(rows) {
+    const factor = detailSort.direction === "asc" ? 1 : -1;
+    return rows.sort((a, b) => {
+      const av = detailValue(a, detailSort.field);
+      const bv = detailValue(b, detailSort.field);
+      if (av < bv) return -1 * factor;
+      if (av > bv) return 1 * factor;
+      return (new Date(b.reportDate || b.createdAt || 0).getTime() || 0) - (new Date(a.reportDate || a.createdAt || 0).getTime() || 0);
+    });
+  }
+
+  function renderDetailSortState() {
+    $$("#detailTable th[data-sort]").forEach(th => {
+      const active = th.dataset.sort === detailSort.field;
+      th.classList.toggle("sort-active", active);
+      th.setAttribute("aria-sort", active ? (detailSort.direction === "asc" ? "ascending" : "descending") : "none");
+      const icon = th.querySelector(".sort-icon");
+      if (icon) icon.textContent = active ? (detailSort.direction === "asc" ? "▲" : "▼") : "↕";
+    });
+  }
+
   function renderDetail() {
     const q = key($("detailSearch").value);
-    const data = latest.filter(r =>
+    const data = sortDetailRows(latest.filter(r =>
       (!$("detailService").value || r.service === $("detailService").value) &&
-      (!$("detailRegión").value || r.region === $("detailRegión").value) &&
+      (!$("detailRegion").value || r.region === $("detailRegion").value) &&
       (!$("detailSituation").value || hasSituation(r, $("detailSituation").value)) &&
       (!q || [r.service,r.program,r.region,r.commune,r.establishment,r.responsible,r.contactEmail,r.contactPhone].some(v => key(v).includes(q)))
-    ).sort((a,b) => (new Date(b.reportDate || b.createdAt || 0).getTime() || 0) - (new Date(a.reportDate || a.createdAt || 0).getTime() || 0));
+    ));
     $("detailTableBody").innerHTML = data.length ? data.map(r => `<tr><td>${esc(r.service)}</td><td>${esc(r.region)}</td><td>${esc(r.commune)}</td><td>${esc(r.establishment)}</td><td>${esc(r.status)}</td><td>${esc((r.situations || []).join(", ") || "Sin situaciones")}</td><td>${fmt(r.people)}</td><td>${esc(r.damageLevel || "Sin información")}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
+    renderDetailSortState();
   }
 
   function dailyRows() {
     const service = $("historyService").value;
-    const region = $("historyRegión").value;
+    const region = $("historyRegion").value;
     const from = $("historyFrom").value;
     const to = $("historyTo").value;
     const filtered = records.filter(r => {
@@ -291,12 +321,17 @@
   }
 
   function setupEvents() {
-    ["filterService","filterRegión","filterStatus"].forEach(id => $(id).addEventListener("change", renderSummary));
-    $("clearFilters").addEventListener("click", () => { ["filterService","filterRegión","filterStatus"].forEach(id => $(id).value = ""); renderSummary(); });
-    ["detailService","detailRegión","detailSituation"].forEach(id => $(id).addEventListener("change", renderDetail));
+    ["filterService","filterRegion","filterStatus"].forEach(id => $(id).addEventListener("change", renderSummary));
+    $("clearFilters").addEventListener("click", () => { ["filterService","filterRegion","filterStatus"].forEach(id => $(id).value = ""); renderSummary(); });
+    ["detailService","detailRegion","detailSituation"].forEach(id => $(id).addEventListener("change", renderDetail));
     $("detailSearch").addEventListener("input", renderDetail);
-    ["historyService","historyRegión","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
-    $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegión","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
+    $$("#detailTable th[data-sort]").forEach(th => th.addEventListener("click", () => {
+      const field = th.dataset.sort;
+      detailSort = {field, direction: detailSort.field === field && detailSort.direction === "asc" ? "desc" : "asc"};
+      renderDetail();
+    }));
+    ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
+    $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
     $("region").addEventListener("change", e => { setCommunes(e.target.value); previousMatch = null; });
     ["service","commune","establishment"].forEach(id => $(id).addEventListener(id === "establishment" ? "blur" : "change", evaluatePrevious));
     $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "Sí"));
