@@ -1,4 +1,4 @@
-# Monitoreo de Residencias Institucionales
+# Seguimiento de Residencias Institucionales
 
 Plataforma pública para consolidar información sobre afectación, continuidad operativa y necesidades de residencias o establecimientos dependientes de distintos servicios.
 
@@ -8,7 +8,7 @@ Plataforma pública para consolidar información sobre afectación, continuidad 
 
 ## Componentes
 
-- Resumen nacional con indicadores.
+- Seguimiento nacional con indicadores.
 - Mapa regional esquemático.
 - Consolidado por región.
 - Detalle filtrable por servicio, región y situación.
@@ -20,7 +20,7 @@ Plataforma pública para consolidar información sobre afectación, continuidad 
 ## Estructura
 
 - `index.html`: interfaz principal.
-- `styles.css`: identidad visual propia, sin referencias a otros sistemas.
+- `styles.css`: identidad visual propia, con tarjetas rectas, proporciones uniformes y efectos de interacción.
 - `catalogos.js`: servicios, estados, situaciones, necesidades, regiones y 346 comunas.
 - `config.js`: configuración del endpoint.
 - `app.js`: carga, filtros, indicadores, formulario y exportación.
