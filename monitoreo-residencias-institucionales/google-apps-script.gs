@@ -59,7 +59,7 @@ function parsePayload_(e) {
 
 function validateRecord_(record) {
   if (!record || typeof record !== 'object') throw new Error('El reporte no es válido.');
-  ['id','reportDate','service','region','commune','establishment','responsible','status'].forEach(field => {
+  ['id','reportDate','service','region','commune','establishment','responsible','contactEmail','contactPhone','status'].forEach(field => {
     if (!String(record[field] == null ? '' : record[field]).trim()) throw new Error('Falta el campo obligatorio: ' + field);
   });
   if (/prueba/i.test(String(record.establishment)) || /prueba/i.test(String(record.responsible))) {
