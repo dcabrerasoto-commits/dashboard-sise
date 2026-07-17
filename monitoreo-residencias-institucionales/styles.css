@@ -70,19 +70,19 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .filter-bar select,.filter-bar input{width:100%;min-width:0;min-height:42px;border:1px solid #adc1be;padding:9px 10px;background:#fff;color:var(--text)}
 .filter-bar .btn{justify-self:start;min-height:42px}
 .kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:17px;align-items:stretch}
-.kpi{position:relative;display:grid;grid-template-rows:auto 1fr auto;background:#fff;border:1px solid var(--border);border-top:7px solid var(--primary-mid);padding:17px 18px;min-height:150px;box-shadow:6px 6px 0 rgba(21,79,85,.08);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;border-radius:0!important}
-.kpi::after{content:"";position:absolute;right:15px;top:17px;width:12px;height:12px;background:var(--primary-soft);border:1px solid #9ab5b1;transition:transform .22s ease,background .22s ease}
-.kpi:hover{transform:translate(-5px,-5px);box-shadow:10px 12px 0 rgba(21,79,85,.14),var(--shadow-hover);border-color:var(--primary-mid);background:#fcfefd}
-.kpi:hover::after{transform:rotate(45deg) scale(1.08);background:var(--primary-mid)}
-.kpi.primary{border-top-color:var(--primary-dark);background:linear-gradient(135deg,#fff 0 70%,#edf5f4 70%)}
-.kpi.alert{border-top-color:var(--accent);background:linear-gradient(135deg,#fff 0 70%,var(--accent-soft) 70%)}
-.kpi.alert::after{background:var(--accent-soft);border-color:#8cc6e3}
-.kpi.alert:hover{border-color:var(--accent-dark)}
-.kpi.alert:hover::after{background:var(--accent)}
-.kpi-label{max-width:85%;color:#465f63;font-weight:800;font-size:14px;line-height:1.25;text-transform:uppercase;letter-spacing:.025em}
-.kpi-value{align-self:center;margin-top:10px;color:var(--primary-dark);font-size:46px;font-weight:850;line-height:1;font-variant-numeric:tabular-nums}
-.kpi.alert .kpi-value{color:var(--accent-dark)}
-.kpi-sub{margin-top:9px;padding-top:8px;border-top:1px solid #dbe4e2;color:var(--muted);font-size:12px;font-weight:650}
+.kpi{position:relative;display:grid;grid-template-rows:auto 1fr auto;background:linear-gradient(135deg,#073f3f 0%,#0d5a58 100%);border:1px solid #0f6c6b;border-top:7px solid #78d8ff;padding:17px 18px;min-height:150px;box-shadow:6px 6px 0 rgba(10,61,63,.14);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;border-radius:0!important;color:#fff}
+.kpi::after{content:"";position:absolute;right:15px;top:17px;width:12px;height:12px;background:#9fe7ff;border:1px solid rgba(255,255,255,.65);transition:transform .22s ease,background .22s ease}
+.kpi:hover{transform:translate(-5px,-5px);box-shadow:10px 12px 0 rgba(10,61,63,.2),var(--shadow-hover);border-color:#9fe7ff;background:linear-gradient(135deg,#064747 0%,#0e6462 100%)}
+.kpi:hover::after{transform:rotate(45deg) scale(1.08);background:#fff}
+.kpi.primary{border-top-color:#b7efff;background:linear-gradient(135deg,#063b3b 0%,#0c5352 100%)}
+.kpi.alert{border-top-color:#55c7f2;background:linear-gradient(135deg,#074646 0%,#12666a 100%)}
+.kpi.alert::after{background:#b7efff;border-color:rgba(255,255,255,.7)}
+.kpi.alert:hover{border-color:#b7efff}
+.kpi.alert:hover::after{background:#fff}
+.kpi-label{max-width:85%;color:#fff;font-weight:800;font-size:14px;line-height:1.25;text-transform:uppercase;letter-spacing:.025em}
+.kpi-value{align-self:center;margin-top:10px;color:#9fe7ff;font-size:46px;font-weight:850;line-height:1;font-variant-numeric:tabular-nums}
+.kpi.alert .kpi-value{color:#9fe7ff}
+.kpi-sub{margin-top:9px;padding-top:8px;border-top:1px solid rgba(183,239,255,.32);color:#dff8ff;font-size:12px;font-weight:650}
 .dashboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px;align-items:stretch}
 .card{background:#fff;border:1px solid var(--border);border-top:5px solid var(--primary);padding:18px;box-shadow:6px 6px 0 rgba(21,79,85,.07);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;border-radius:0!important}
 .card:hover{transform:translate(-5px,-5px);box-shadow:10px 11px 0 rgba(21,79,85,.12),var(--shadow-hover);border-color:var(--accent-dark)}
