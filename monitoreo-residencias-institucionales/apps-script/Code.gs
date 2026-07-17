@@ -11,6 +11,38 @@ const HEADERS = [
   'ID_REPORTE_ANTERIOR'
 ];
 
+const HEADER_ALIASES = {
+  id: ['ID_REGISTRO','ID'],
+  createdAt: ['FECHA_HORA_REPORTE','Creado'],
+  reportDate: ['FECHA_REPORTE','Fecha reporte','FECHA_HORA_REPORTE','Creado'],
+  reportTime: ['HORA_REPORTE'],
+  service: ['SERVICIO_RESPONSABLE','Servicio'],
+  program: ['PROGRAMA_LINEA','Programa'],
+  region: ['REGION','Región','RegiÃ³n'],
+  commune: ['COMUNA','Comuna'],
+  establishment: ['RESIDENCIA_ESTABLECIMIENTO','Establecimiento'],
+  address: ['DIRECCION_RESIDENCIA','Dirección residencia','Direccion residencia'],
+  responsible: ['RESPONSABLE_RESIDENCIA','Responsable'],
+  contactEmail: ['CORREO_CONTACTO','Correo de contacto'],
+  contactPhone: ['TELEFONO_CONTACTO','Teléfono de contacto','Telefono de contacto'],
+  previousReport: ['REPORTE_PREVIO'],
+  hasChanges: ['HUBO_CAMBIOS'],
+  status: ['ESTADO_GENERAL','Estado'],
+  damageLevel: ['NIVEL_DANO_RIESGO','Nivel de daño','Nivel de daÃ±o'],
+  capacity: ['CAPACIDAD_TOTAL','Capacidad'],
+  people: ['PERSONAS_ATENDIDAS','Personas atendidas'],
+  situations: ['SITUACIONES_PRESENTES','Situaciones'],
+  otherSituation: ['OTRA_SITUACION','Otra situación','Otra situaciÃ³n'],
+  sewageExposure: ['EXPOSICION_AGUAS_SERVIDAS'],
+  electrodependent: ['PERSONAS_ELECTRODEPENDIENTES'],
+  electrodependentCount: ['NUMERO_ELECTRODEPENDIENTES'],
+  damageDetail: ['DETALLE_AFECTACION_RIESGO','Detalle del daño','Detalle del daÃ±o'],
+  needs: ['NECESIDADES_PRIORITARIAS','Necesidades'],
+  measures: ['MEDIDAS_IMPLEMENTADAS','Medidas implementadas'],
+  observations: ['OBSERVACIONES','Observaciones'],
+  previousRecordId: ['ID_REPORTE_ANTERIOR']
+};
+
 function doGet(e) {
   const action = String((e && e.parameter && e.parameter.action) || 'list').toLowerCase();
   const callback = sanitizeCallback_((e && e.parameter && e.parameter.callback) || '');
@@ -40,7 +72,7 @@ function doPost(e) {
     lock.waitLock(20000);
     const payload = parsePayload_(e);
     validateRecord_(payload);
-    ensureSheet_().appendRow(recordToRow_(payload));
+    appendRecord_(ensureSheet_(), payload);
     SpreadsheetApp.flush();
     return json_({ ok: true, id: payload.id, timestamp: new Date().toISOString() });
   } catch (error) {
@@ -71,10 +103,18 @@ function ensureSheet_() {
   const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
   let sheet = spreadsheet.getSheetByName(SHEET_NAME);
   if (!sheet) sheet = spreadsheet.insertSheet(SHEET_NAME);
-  const currentHeaders = sheet.getRange(1, 1, 1, HEADERS.length).getValues()[0];
-  if (currentHeaders.join('|') !== HEADERS.join('|')) {
+  const lastColumn = Math.max(sheet.getLastColumn(), HEADERS.length);
+  const currentHeaders = sheet.getRange(1, 1, 1, lastColumn).getValues()[0].map(String);
+  if (!currentHeaders.some(Boolean)) {
     sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
     sheet.setFrozenRows(1);
+  } else {
+    const existing = {};
+    currentHeaders.forEach(header => existing[normalizeHeader_(header)] = true);
+    const missing = HEADERS.filter(header => !existing[normalizeHeader_(header)]);
+    if (missing.length) {
+      sheet.getRange(1, currentHeaders.length + 1, 1, missing.length).setValues([missing]);
+    }
   }
   return sheet;
 }
@@ -96,27 +136,120 @@ function recordToRow_(r) {
   ];
 }
 
+function appendRecord_(sheet, record) {
+  const lastColumn = Math.max(sheet.getLastColumn(), HEADERS.length);
+  const headers = sheet.getRange(1, 1, 1, lastColumn).getValues()[0];
+  const headerMap = buildHeaderMap_(headers);
+  const values = recordToValues_(record);
+  const row = new Array(lastColumn).fill('');
+  Object.keys(values).forEach(field => {
+    const index = headerMap[field];
+    if (index != null) row[index] = values[field];
+  });
+  sheet.appendRow(row);
+}
+
+function recordToValues_(r) {
+  const date = new Date(r.reportDate || r.createdAt || new Date());
+  const timezone = Session.getScriptTimeZone() || 'America/Santiago';
+  const situations = r.situations || [];
+  return {
+    id: r.id || '',
+    createdAt: date,
+    reportDate: Utilities.formatDate(date, timezone, 'yyyy-MM-dd'),
+    reportTime: Utilities.formatDate(date, timezone, 'HH:mm:ss'),
+    service: r.service || '',
+    program: r.program || '',
+    region: r.region || '',
+    commune: r.commune || '',
+    establishment: r.establishment || '',
+    address: r.address || '',
+    responsible: r.responsible || '',
+    contactEmail: r.contactEmail || '',
+    contactPhone: r.contactPhone || '',
+    previousReport: r.previousReport || '',
+    hasChanges: r.hasChanges || '',
+    status: r.status || '',
+    damageLevel: r.damageLevel || '',
+    capacity: Number(r.capacity || 0),
+    people: Number(r.people || 0),
+    situations: situations.join(' | '),
+    otherSituation: r.otherSituation || '',
+    sewageExposure: situations.includes('Exposición a aguas servidas') ? 'Sí' : 'No',
+    electrodependent: r.electrodependent || 'No',
+    electrodependentCount: Number(r.electrodependentCount || 0),
+    damageDetail: r.damageDetail || '',
+    needs: (r.needs || []).join(' | '),
+    measures: r.measures || '',
+    observations: r.observations || '',
+    previousRecordId: r.previousRecordId || ''
+  };
+}
+
 function readRecords_() {
   const sheet = ensureSheet_();
   const lastRow = sheet.getLastRow();
   if (lastRow < 2) return [];
-  const rows = sheet.getRange(2, 1, lastRow - 1, HEADERS.length).getValues();
-  return rows.filter(row => row[0]).map(rowToRecord_);
+  const lastColumn = Math.max(sheet.getLastColumn(), HEADERS.length);
+  const headers = sheet.getRange(1, 1, 1, lastColumn).getValues()[0];
+  const headerMap = buildHeaderMap_(headers);
+  const rows = sheet.getRange(2, 1, lastRow - 1, lastColumn).getValues();
+  return rows.map(row => rowToRecord_(row, headerMap)).filter(record => record.id);
 }
 
-function rowToRecord_(row) {
-  const reportDate = row[1] instanceof Date ? row[1].toISOString() : String(row[1] || '');
-  return {
-    id: String(row[0] || ''), createdAt: reportDate, reportDate: reportDate,
-    service: String(row[4] || ''), program: String(row[5] || ''), region: String(row[6] || ''), commune: String(row[7] || ''),
-    establishment: String(row[8] || ''), address: String(row[9] || ''), responsible: String(row[10] || ''),
-    contactEmail: String(row[11] || ''), contactPhone: String(row[12] || ''), previousReport: String(row[13] || ''),
-    hasChanges: String(row[14] || ''), status: String(row[15] || ''), damageLevel: String(row[16] || ''),
-    capacity: Number(row[17] || 0), people: Number(row[18] || 0), situations: splitList_(row[19]),
-    electrodependent: String(row[21] || 'No'), electrodependentCount: Number(row[22] || 0),
-    damageDetail: String(row[23] || ''), needs: splitList_(row[24]), measures: String(row[25] || ''),
-    observations: String(row[26] || ''), previousRecordId: String(row[27] || '')
+function rowToRecord_(row, headerMap) {
+  const value = (field, fallbackIndex) => {
+    const index = headerMap[field];
+    if (index != null) return row[index];
+    return fallbackIndex == null ? '' : row[fallbackIndex];
   };
+  const reportDateRaw = value('createdAt', 1) || value('reportDate', 2);
+  const reportDate = reportDateRaw instanceof Date ? reportDateRaw.toISOString() : String(reportDateRaw || '');
+  const situations = splitList_(value('situations', 19));
+  return {
+    id: String(value('id', 0) || ''), createdAt: reportDate, reportDate: reportDate,
+    service: String(value('service', 4) || ''), program: String(value('program', 5) || ''),
+    region: String(value('region', 6) || ''), commune: String(value('commune', 7) || ''),
+    establishment: String(value('establishment', 8) || ''), address: String(value('address', 9) || ''),
+    responsible: String(value('responsible', 10) || ''), contactEmail: String(value('contactEmail', 11) || ''),
+    contactPhone: String(value('contactPhone', 12) || ''), previousReport: String(value('previousReport', 13) || ''),
+    hasChanges: String(value('hasChanges', 14) || ''), status: String(value('status', 15) || ''),
+    damageLevel: String(value('damageLevel', 16) || ''), capacity: Number(value('capacity', 17) || 0),
+    people: Number(value('people', 18) || 0), situations: situations,
+    otherSituation: String(value('otherSituation', null) || ''),
+    electrodependent: String(value('electrodependent', 21) || 'No'), electrodependentCount: Number(value('electrodependentCount', 22) || 0),
+    damageDetail: String(value('damageDetail', 23) || ''), needs: splitList_(value('needs', 24)),
+    measures: String(value('measures', 25) || ''), observations: String(value('observations', 26) || ''),
+    previousRecordId: String(value('previousRecordId', 27) || '')
+  };
+}
+
+function buildHeaderMap_(headers) {
+  const normalized = {};
+  headers.forEach((header, index) => {
+    const key = normalizeHeader_(header);
+    if (key) normalized[key] = index;
+  });
+  const map = {};
+  Object.keys(HEADER_ALIASES).forEach(field => {
+    const aliases = HEADER_ALIASES[field];
+    for (let i = 0; i < aliases.length; i++) {
+      const index = normalized[normalizeHeader_(aliases[i])];
+      if (index != null) {
+        map[field] = index;
+        break;
+      }
+    }
+  });
+  return map;
+}
+
+function normalizeHeader_(value) {
+  return String(value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '');
 }
 
 function splitList_(value) {
