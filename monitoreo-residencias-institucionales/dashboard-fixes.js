@@ -53,9 +53,9 @@
     const region = $("filterRegion")?.value || "";
     const status = $("filterStatus")?.value || "";
     return latestRecords(readRecords()).filter(record =>
-      (!service || record.service === service) &&
-      (!region || record.region === region) &&
-      (!status || record.status === status)
+      (!service || key(record.service) === key(service)) &&
+      (!region || key(record.region) === key(region)) &&
+      (!status || key(record.status) === key(status))
     );
   }
 
@@ -72,7 +72,7 @@
     const catalog = window.MONITOREO_CATALOGOS;
     if (!container || !catalog) return;
     container.innerHTML = (catalog.regiones || []).map(region => {
-      const rows = data.filter(record => record.region === region);
+      const rows = data.filter(record => key(record.region) === key(region));
       const total = rows.length;
       const affected = rows.filter(isAffected).length;
       const level = affected >= 6 ? 3 : affected >= 3 ? 2 : affected >= 1 ? 1 : 0;

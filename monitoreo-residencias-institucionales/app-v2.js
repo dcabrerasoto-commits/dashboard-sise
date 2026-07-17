@@ -169,7 +169,7 @@
 
   function byRegion(data) {
     return (C.regiones || []).map(region => {
-      const rows = data.filter(r => r.region === region);
+      const rows = data.filter(r => key(r.region) === key(region));
       const dates = rows.map(r => r.reportDate || r.createdAt).sort();
       return {region, total:rows.length, without:rows.filter(r => r.status === "Sin afectación").length, affected:rows.filter(affected).length, electricity:rows.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:rows.filter(r => hasSituation(r,"Exposición a aguas servidas")).length, electro:rows.filter(r => r.electrodependent === "Sí").length, last:dates.length ? dates[dates.length - 1] : ""};
     });
@@ -181,7 +181,7 @@
     const data = filteredSummary();
     renderKpis(data);
     const regions = byRegion(data);
-    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}"><strong>${esc(r.region)}</strong><span>${fmt(r.affected)}</span></button>`).join("");
+    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
     const situations = (C.situaciones || []).map(label => ({label, value:data.filter(r => hasSituation(r,label)).length}));
     const max = Math.max(1, ...situations.map(x => x.value));
