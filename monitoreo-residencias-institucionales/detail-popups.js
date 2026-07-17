@@ -14,10 +14,15 @@
   function readRecords() {
     try {
       const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(parsed) ? parsed : [];
+      return Array.isArray(parsed) ? parsed.filter(record => !shiftedRecord(record)) : [];
     } catch (_) {
       return [];
     }
+  }
+
+  function shiftedRecord(record) {
+    const service = String(record?.service || "").trim();
+    return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
   }
 
   function identity(record) {
