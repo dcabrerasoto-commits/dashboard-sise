@@ -47,7 +47,7 @@
   }
 
   function setCommunes(region, selected) {
-    const values = (C.comunasPorRegión || {})[region] || [];
+    const values = (C.comunasPorRegion || {})[region] || [];
     populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una región");
     $("commune").value = selected || "";
   }
