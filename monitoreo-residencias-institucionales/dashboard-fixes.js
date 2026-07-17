@@ -17,6 +17,15 @@
   };
   let sharedRecords = null;
   let timer = null;
+  const uniqueById = input => {
+    const map = new Map();
+    (input || []).forEach(record => {
+      const id = String(record?.id || "").trim();
+      if (id) map.set(id, record);
+      else map.set(`__row_${map.size}`, record);
+    });
+    return Array.from(map.values());
+  };
 
   function readRecords() {
     if (Array.isArray(sharedRecords)) return sharedRecords;
@@ -225,7 +234,7 @@
       setTimeout(() => scheduleRefresh(), 900);
     });
     window.addEventListener("residencias:shared-data", event => {
-      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records.filter(record => !shiftedRecord(record)) : null;
+      sharedRecords = event.detail && Array.isArray(event.detail.records) ? uniqueById(event.detail.records.filter(record => !shiftedRecord(record))) : null;
       scheduleRefresh(0);
     });
   }

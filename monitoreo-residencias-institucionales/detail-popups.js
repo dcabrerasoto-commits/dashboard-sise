@@ -11,6 +11,15 @@
   };
 
   let sharedRecords = [];
+  const uniqueById = input => {
+    const map = new Map();
+    (input || []).forEach(record => {
+      const id = String(record?.id || "").trim();
+      if (id) map.set(id, record);
+      else map.set(`__row_${map.size}`, record);
+    });
+    return Array.from(map.values());
+  };
 
   function readRecords() {
     return sharedRecords.filter(record => !shiftedRecord(record));
@@ -284,7 +293,7 @@
     injectStyles();
     ensureModal();
     window.addEventListener("residencias:shared-data", event => {
-      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records : [];
+      sharedRecords = event.detail && Array.isArray(event.detail.records) ? uniqueById(event.detail.records) : [];
     });
     $("detailTableBody")?.addEventListener("click", event => {
       const row = event.target.closest("tr");
