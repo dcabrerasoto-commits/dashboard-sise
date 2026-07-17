@@ -16,9 +16,11 @@
     const local = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
     return local.toISOString().slice(0, 10);
   };
+  let sharedRecords = null;
   let timer = null;
 
   function readRecords() {
+    if (Array.isArray(sharedRecords)) return sharedRecords;
     try {
       const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
       return Array.isArray(data) ? data : [];
@@ -227,6 +229,10 @@
       setTimeout(saveAddressInLastRecord, 0);
       setTimeout(() => scheduleRefresh(), 60);
       setTimeout(() => scheduleRefresh(), 900);
+    });
+    window.addEventListener("residencias:shared-data", event => {
+      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records : null;
+      scheduleRefresh(0);
     });
   }
 
