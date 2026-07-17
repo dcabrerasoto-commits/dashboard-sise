@@ -197,12 +197,12 @@
       #resumen .dashboard-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:stretch!important}
       #resumen .dashboard-grid>.card{height:100%!important;display:flex!important;flex-direction:column!important}
       #regionMap{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-content:start!important;flex:1!important;gap:10px!important}
-      .region-block{display:grid!important;grid-template-columns:minmax(110px,1fr) auto!important;align-items:center!important;gap:10px!important;padding:10px 11px!important;background:#f8fbfa!important;border:1px solid #c7d8d6!important;box-shadow:0 1px 0 rgba(11,54,59,.06)!important}
+      .region-block{display:grid!important;grid-template-columns:minmax(110px,1fr) auto!important;align-items:center!important;gap:10px!important;padding:10px 11px!important;background:#f8fbfa!important;border:0!important;box-shadow:none!important}
       .region-block strong{font-size:12.5px!important;color:#173f45!important;text-align:left!important}
-      .region-block.level-1{background:#eef9ff!important;border-color:#9fd3ed!important}
-      .region-block.level-2{background:#c6e9fa!important;border-color:#66b7df!important}
-      .region-block.level-3{background:#287fae!important;border-color:#176f9d!important}
-      .region-block.level-3 .region-values{background:rgba(255,255,255,.16)!important;border-color:rgba(255,255,255,.35)!important}
+      .region-block.level-1{background:#eef9ff!important;border-color:transparent!important}
+      .region-block.level-2{background:#c6e9fa!important;border-color:transparent!important}
+      .region-block.level-3{background:#287fae!important;border-color:transparent!important}
+      .region-block.level-3 .region-values{background:rgba(255,255,255,.16)!important;border-color:transparent!important}
       .region-block.level-3 strong,.region-block.level-3 .region-values b,.region-block.level-3 .region-values small{color:#fff!important}
       .region-values{display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;white-space:nowrap!important;background:#fff!important;border:1px solid #dfe9e7!important;padding:5px 8px!important;min-width:138px!important}
       .region-values>span{display:inline-flex!important;align-items:baseline!important;gap:3px!important;text-align:center!important;background:transparent!important;border:0!important;padding:0!important;min-width:0!important}
