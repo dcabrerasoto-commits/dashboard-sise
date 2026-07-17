@@ -78,10 +78,20 @@
     form.insertBefore(progress, notice);
   }
 
+  function loadDetailPopups() {
+    if (document.querySelector('script[data-detail-popups]')) return;
+    const script = document.createElement("script");
+    script.src = "detail-popups.js?v=20260717-11";
+    script.defer = true;
+    script.dataset.detailPopups = "true";
+    document.head.appendChild(script);
+  }
+
   function init() {
     injectStyles();
     ensureDefinitionsRight();
     addFormProgress();
+    loadDetailPopups();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
