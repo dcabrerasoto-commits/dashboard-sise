@@ -183,7 +183,10 @@
     const regions = byRegion(data);
     $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
-    const situations = (C.situaciones || []).map(label => ({label, value:data.filter(r => hasSituation(r,label)).length}));
+    const situations = [
+      {label:"Sin situaciones reportadas (sin afectación)", value:data.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length},
+      ...(C.situaciones || []).map(label => ({label, value:data.filter(r => hasSituation(r,label)).length}))
+    ];
     const max = Math.max(1, ...situations.map(x => x.value));
     $("situationBars").innerHTML = situations.map(x => `<div class="bar-row"><div class="bar-label">${esc(x.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.value/max*100)}%"></div></div><div class="bar-value">${fmt(x.value)}</div></div>`).join("");
     const visible = regions.filter(r => r.total > 0);
