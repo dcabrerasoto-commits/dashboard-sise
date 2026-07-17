@@ -118,6 +118,91 @@
     </tr>`).join("")}</tbody></table></div>`;
   }
 
+  function valueOrEmpty(value) {
+    const text = String(value ?? "").trim();
+    return text || "Sin informacion";
+  }
+
+  function listOrEmpty(value) {
+    return Array.isArray(value) && value.length ? value.join(", ") : "Sin informacion";
+  }
+
+  function detailItem(label, value) {
+    return `<div class="record-detail-item"><span>${esc(label)}</span><strong>${esc(valueOrEmpty(value))}</strong></div>`;
+  }
+
+  function detailSection(title, items) {
+    return `<section class="record-detail-section"><h3>${esc(title)}</h3><div class="record-detail-grid">${items.join("")}</div></section>`;
+  }
+
+  function openRecordDetail(record) {
+    const situations = listOrEmpty(record.situations);
+    const needs = listOrEmpty(record.needs);
+    openModal({
+      kicker: "DETALLE DEL REPORTE VIGENTE",
+      title: record.establishment || "Residencia",
+      subtitle: `${valueOrEmpty(record.commune)} - ${valueOrEmpty(record.region)}. Ultima actualizacion: ${formatDateTime(record.reportDate || record.createdAt)}`,
+      summary: summaryCards([
+        {label:"Personas atendidas", value:record.people},
+        {label:"Capacidad", value:record.capacity},
+        {label:"Situaciones", value:(record.situations || []).length},
+        {label:"Necesidades", value:(record.needs || []).length},
+        {label:"Electrodependientes", value:record.electrodependent === "Si" || record.electrodependent === "Sí" ? record.electrodependentCount : 0}
+      ]),
+      body: [
+        detailSection("Identificacion y contacto", [
+          detailItem("Servicio responsable", record.service),
+          detailItem("Programa o linea", record.program),
+          detailItem("Region", record.region),
+          detailItem("Comuna", record.commune),
+          detailItem("Residencia", record.establishment),
+          detailItem("Direccion", record.address),
+          detailItem("Responsable", record.responsible),
+          detailItem("Correo de contacto", record.contactEmail),
+          detailItem("Telefono de contacto", record.contactPhone)
+        ]),
+        detailSection("Estado y afectacion", [
+          detailItem("Estado general", record.status),
+          detailItem("Nivel de dano o riesgo", record.damageLevel),
+          detailItem("Capacidad total", record.capacity),
+          detailItem("Personas atendidas", record.people),
+          detailItem("Situaciones presentes", situations),
+          detailItem("Personas electrodependientes", record.electrodependent),
+          detailItem("Numero de personas electrodependientes", record.electrodependentCount),
+          detailItem("Detalle de afectacion o riesgo", record.damageDetail)
+        ]),
+        detailSection("Necesidades y respuesta", [
+          detailItem("Necesidades prioritarias", needs),
+          detailItem("Medidas implementadas", record.measures),
+          detailItem("Observaciones", record.observations),
+          detailItem("Hubo cambios respecto del reporte anterior", record.hasChanges),
+          detailItem("Fecha del reporte", formatDateTime(record.reportDate || record.createdAt))
+        ])
+      ].join("")
+    });
+  }
+
+  function detailRowsData() {
+    const service = $("detailService")?.value || "";
+    const region = $("detailRegion")?.value || "";
+    const situation = $("detailSituation")?.value || "";
+    const query = key($("detailSearch")?.value || "");
+    return latestRecords(readRecords()).filter(record =>
+      (!service || record.service === service) &&
+      (!region || record.region === region) &&
+      (!situation || hasSituation(record, situation)) &&
+      (!query || [record.service, record.program, record.region, record.commune, record.establishment, record.responsible, record.contactEmail, record.contactPhone].some(value => key(value).includes(query)))
+    );
+  }
+
+  function openDetailRow(row) {
+    const cells = row.querySelectorAll("td");
+    if (cells.length < 4) return;
+    const target = [cells[0].textContent, cells[1].textContent, cells[2].textContent, cells[3].textContent].map(key).join("|");
+    const record = detailRowsData().find(item => [item.service, item.region, item.commune, item.establishment].map(key).join("|") === target);
+    if (record) openRecordDetail(record);
+  }
+
   function openRegionDetail(region) {
     const records = currentData().filter(record => record.region === region);
     const affected = records.filter(isAffected).length;
@@ -185,9 +270,10 @@
       .detail-modal-table{width:100%;min-width:1050px;border-collapse:collapse}.detail-modal-table th{position:sticky;top:0;z-index:1;padding:10px;background:#e7f3f5;color:#154f55;text-align:left;font-size:11px;text-transform:uppercase;border-bottom:1px solid #afc4c7}.detail-modal-table td{padding:10px;border-bottom:1px solid #dce5e5;font-size:12px;vertical-align:top}.detail-modal-table tbody tr:hover{background:#eef8fd}
       .detail-status{display:inline-block;padding:4px 7px;background:#edf4f3;border-left:4px solid #287fae;font-weight:750;white-space:nowrap}
       .detail-modal-empty{padding:28px;text-align:center;background:#fff;border:1px solid #c2d0d1;color:#53686c}
-      #regionMap .region-block{cursor:pointer!important}
-      #situationBars .bar-row{cursor:pointer!important;transition:background .15s ease,transform .15s ease}
-      #situationBars .bar-row:hover{background:#e8f6fd!important;transform:translateX(3px)}
+      .record-detail-section{background:#fff;border:1px solid #c3d3d1;margin-bottom:14px}.record-detail-section h3{margin:0;padding:12px 14px;background:#eaf4f3;color:#154f55;font-size:15px}
+      .record-detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#d8e5e3}.record-detail-item{display:grid;gap:5px;padding:11px 12px;background:#fff;min-height:62px}
+      .record-detail-item span{font-size:10px;font-weight:850;text-transform:uppercase;color:#577073}.record-detail-item strong{font-size:13px;line-height:1.35;color:#123c42;font-weight:650;white-space:pre-wrap;overflow-wrap:anywhere}
+      #detailTableBody tr{cursor:pointer}#detailTableBody tr:hover{background:#e8f6fd!important}
       @media(max-width:760px){.detail-modal{padding:8px}.detail-modal-panel{width:100%;max-height:94vh}.detail-modal-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-modal-header{padding:16px}.detail-modal-body{padding:10px}}
     `;
     document.head.appendChild(style);
@@ -196,18 +282,9 @@
   function init() {
     injectStyles();
     ensureModal();
-    $("regionMap")?.addEventListener("click", event => {
-      const button = event.target.closest(".region-block");
-      if (!button) return;
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      openRegionDetail(button.dataset.region || button.querySelector("strong")?.textContent.trim() || "Región");
-    }, true);
-    $("situationBars")?.addEventListener("click", event => {
-      const row = event.target.closest(".bar-row");
-      if (!row) return;
-      const label = row.querySelector(".bar-label")?.textContent.trim();
-      if (label) openSituationDetail(label);
+    $("detailTableBody")?.addEventListener("click", event => {
+      const row = event.target.closest("tr");
+      if (row) openDetailRow(row);
     });
   }
 
