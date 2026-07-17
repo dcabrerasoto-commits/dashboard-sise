@@ -22,13 +22,16 @@ const HEADERS = [
 ];
 
 function doGet(e) {
+  const callback = sanitizeCallback_((e && e.parameter && e.parameter.callback) || "");
+  let result;
   try {
     const action = String((e && e.parameter && e.parameter.action) || "list");
-    if (action !== "list") return json_({ok:false, message:"Acción no válida."});
-    return json_({ok:true, records:readRecords_()});
+    if (action !== "list") result = {ok:false, message:"Acción no válida."};
+    else result = {ok:true, records:readRecords_()};
   } catch (error) {
-    return json_({ok:false, message:String(error.message || error)});
+    result = {ok:false, message:String(error.message || error)};
   }
+  return callback ? javascript_(callback, result) : json_(result);
 }
 
 function doPost(e) {
@@ -177,4 +180,15 @@ function json_(data) {
   return ContentService
     .createTextOutput(JSON.stringify(data))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+function javascript_(callback, data) {
+  return ContentService
+    .createTextOutput(callback + "(" + JSON.stringify(data) + ");")
+    .setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
+
+function sanitizeCallback_(value) {
+  const callback = String(value || "");
+  return /^[A-Za-z_$][0-9A-Za-z_$\.]*$/.test(callback) ? callback : "";
 }
