@@ -23,7 +23,7 @@
     if (Array.isArray(sharedRecords)) return sharedRecords;
     try {
       const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(data) ? data : [];
+      return Array.isArray(data) ? data.filter(record => !shiftedRecord(record)) : [];
     } catch (_) {
       return [];
     }
@@ -31,6 +31,11 @@
 
   function writeRecords(records) {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(records)); } catch (_) {}
+  }
+
+  function shiftedRecord(record) {
+    const service = String(record?.service || "").trim();
+    return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
   }
 
   function identity(record) {
@@ -231,7 +236,7 @@
       setTimeout(() => scheduleRefresh(), 900);
     });
     window.addEventListener("residencias:shared-data", event => {
-      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records : null;
+      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records.filter(record => !shiftedRecord(record)) : null;
       scheduleRefresh(0);
     });
   }

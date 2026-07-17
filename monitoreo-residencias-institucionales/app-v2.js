@@ -28,11 +28,15 @@
     return local.toISOString().slice(0, 10);
   };
   const checkedValues = (name) => $$(`input[name="${name}"]:checked`).map(x => x.value);
+  const shiftedRecord = (record) => {
+    const service = String(record?.service || "").trim();
+    return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
+  };
 
   function safeRead() {
     try {
       const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(parsed) ? parsed : [];
+      return Array.isArray(parsed) ? parsed.filter(record => !shiftedRecord(record)) : [];
     } catch (_) {
       return [];
     }

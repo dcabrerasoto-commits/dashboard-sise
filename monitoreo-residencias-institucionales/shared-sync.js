@@ -31,6 +31,11 @@
     return /prueba/i.test(String(record?.establishment || "")) || /prueba/i.test(String(record?.responsible || ""));
   }
 
+  function shiftedRecord(record) {
+    const service = String(record?.service || "").trim();
+    return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
+  }
+
   function latestLocalRecord() {
     const records = readLocal();
     return records.length ? records[records.length - 1] : null;
@@ -60,6 +65,14 @@
     window[callbackName] = response => {
       if (!response || response.ok !== true || !Array.isArray(response.records)) {
         finishError(response?.error || "La respuesta de sincronización no es válida.");
+        return;
+      }
+      if (response.records.some(shiftedRecord)) {
+        const local = readLocal().filter(record => !shiftedRecord(record));
+        writeLocal(local);
+        cleanup();
+        setStatus("La base compartida requiere actualizar su implementaciÃ³n. No se muestran columnas corridas.", "error");
+        window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:local}}));
         return;
       }
       const valid = response.records.filter(record => !invalidTestRecord(record));
