@@ -83,7 +83,7 @@
         mode: "no-cors",
         cache: "no-store",
         headers: {"Content-Type":"text/plain;charset=utf-8"},
-        body: JSON.stringify({record})
+        body: JSON.stringify({action:"save", record})
       });
       setStatus("Reporte enviado a la base compartida. Actualizando información…", "ok");
       setTimeout(jsonpLoad, 1200);

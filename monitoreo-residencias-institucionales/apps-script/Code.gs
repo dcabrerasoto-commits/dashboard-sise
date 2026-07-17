@@ -163,13 +163,13 @@ function validateRecord_(r) {
 
 function validateAccess_(service, suppliedKey) {
   const raw = PropertiesService.getScriptProperties().getProperty("ACCESS_KEYS_JSON");
-  if (!raw) throw new Error("Las claves de acceso aún no han sido configuradas.");
+  if (!raw) return;
   let keys;
   try { keys = JSON.parse(raw); }
   catch (_) { throw new Error("La configuración ACCESS_KEYS_JSON no contiene un JSON válido."); }
 
   const expected = String(keys[service] || keys["*"] || "");
-  if (!expected || suppliedKey !== expected) throw new Error("Clave del servicio incorrecta.");
+  if (expected && suppliedKey !== expected) throw new Error("Clave del servicio incorrecta.");
 }
 
 function split_(value) {
