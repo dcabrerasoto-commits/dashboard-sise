@@ -73,10 +73,13 @@ function doPost(e) {
     const payload = parsePayload_(e);
     const action = String(payload.action || 'save').toLowerCase();
     const record = payload.record || payload;
-    validateRecord_(record);
-    if (action === 'update') {
+    if (action === 'replace-rescates') {
+      replaceRescues_(ensureSheet_(), payload.records || []);
+    } else if (action === 'update') {
+      validateRecord_(record);
       updateRecord_(ensureSheet_(), record);
     } else {
+      validateRecord_(record);
       appendRecord_(ensureSheet_(), record);
     }
     SpreadsheetApp.flush();
@@ -178,6 +181,26 @@ function updateRecord_(sheet, record) {
     if (index != null) current[index] = values[field];
   });
   sheet.getRange(targetRow, 1, 1, lastColumn).setValues([current]);
+}
+
+function replaceRescues_(sheet, records) {
+  if (!Array.isArray(records)) throw new Error('No se recibieron registros de rescate.');
+  records.forEach(validateRecord_);
+  const lastRow = sheet.getLastRow();
+  const lastColumn = Math.max(sheet.getLastColumn(), HEADERS.length);
+  if (lastRow >= 2) {
+    const headers = sheet.getRange(1, 1, 1, lastColumn).getValues()[0];
+    const headerMap = buildHeaderMap_(headers);
+    const idColumn = headerMap.id;
+    if (idColumn == null) throw new Error('No se encontro columna de ID.');
+    const ids = sheet.getRange(2, idColumn + 1, lastRow - 1, 1).getValues();
+    for (let i = ids.length - 1; i >= 0; i--) {
+      if (String(ids[i][0] || '').indexOf('RESCATE-CAPTURA-20260717-') === 0) {
+        sheet.deleteRow(i + 2);
+      }
+    }
+  }
+  records.forEach(record => appendRecord_(sheet, record));
 }
 
 function recordToValues_(r) {
