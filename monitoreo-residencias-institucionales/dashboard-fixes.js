@@ -78,7 +78,7 @@
       const level = affected >= 6 ? 3 : affected >= 3 ? 2 : affected >= 1 ? 1 : 0;
       return `<button type="button" class="region-block level-${level}" data-region="${esc(region)}" title="${esc(region)}: ${fmt(total)} informadas, ${fmt(affected)} con afectación">
         <strong>${esc(region)}</strong>
-        <span class="region-values"><b>${fmt(total)}</b><small>informadas</small><i>/</i><b>${fmt(affected)}</b><small>con afectación</small></span>
+        <span class="region-values"><span><b>${fmt(total)}</b><small>informadas</small></span><i></i><span><b>${fmt(affected)}</b><small>con afectación</small></span></span>
       </button>`;
     }).join("");
   }
@@ -191,10 +191,21 @@
       #resumen .kpi-value{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;width:100%!important;min-height:38px!important}
       #resumen .dashboard-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:stretch!important}
       #resumen .dashboard-grid>.card{height:100%!important;display:flex!important;flex-direction:column!important}
-      #regionMap{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-content:start!important;flex:1!important}
-      .region-block{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;padding:9px 10px!important}
-      .region-values{display:grid!important;grid-template-columns:auto auto auto auto auto!important;align-items:baseline!important;gap:4px!important;white-space:nowrap!important}
-      .region-values b{font-size:17px!important;color:var(--primary,#154f55)!important}.region-values small{font-size:8px!important;text-transform:uppercase!important;color:#61777b!important}.region-values i{font-style:normal!important;color:#8a9b9e!important}
+      #regionMap{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-content:start!important;flex:1!important;gap:10px!important}
+      .region-block{display:grid!important;grid-template-columns:minmax(120px,1fr) auto!important;align-items:center!important;gap:12px!important;padding:11px 12px!important;background:#f8fbfa!important;border:1px solid #c7d8d6!important;box-shadow:0 1px 0 rgba(11,54,59,.06)!important}
+      .region-block strong{font-size:12.5px!important;color:#173f45!important;text-align:left!important}
+      .region-block.level-1{background:#eef9ff!important;border-color:#9fd3ed!important}
+      .region-block.level-2{background:#c6e9fa!important;border-color:#66b7df!important}
+      .region-block.level-3{background:#287fae!important;border-color:#176f9d!important}
+      .region-block.level-3 .region-values{background:rgba(255,255,255,.16)!important;border-color:rgba(255,255,255,.35)!important}
+      .region-block.level-3 strong,.region-block.level-3 .region-values b,.region-block.level-3 .region-values small{color:#fff!important}
+      .region-values{display:grid!important;grid-template-columns:auto 1px auto!important;align-items:center!important;gap:8px!important;white-space:nowrap!important;background:#fff!important;border:1px solid #dfe9e7!important;padding:6px 8px!important;min-width:176px!important}
+      .region-values>span{display:grid!important;grid-template-columns:auto!important;gap:1px!important;text-align:center!important;background:transparent!important;border:0!important;padding:0!important;min-width:0!important}
+      .region-values b{font-size:19px!important;line-height:1!important;color:var(--primary,#154f55)!important}.region-values small{font-size:8px!important;line-height:1.05!important;text-transform:uppercase!important;color:#61777b!important}.region-values i{display:block!important;width:1px!important;height:26px!important;background:#c8d8d6!important;font-style:normal!important}
+      #resumen .legend{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:12px!important;padding:10px 12px!important;background:#f8fbfa!important;border:1px solid #d8e5e3!important;color:#38595e!important;font-size:11px!important}
+      #resumen .legend span{display:inline-flex!important;align-items:center!important;gap:6px!important;padding:4px 8px!important;background:#fff!important;border:1px solid #e1e8e7!important;font-weight:750!important}
+      #resumen .legend span::before{content:"";width:12px;height:12px;border:1px solid #b8c9c7;background:#f4f7f6}
+      #resumen .legend span:nth-child(2)::before{background:#eef9ff;border-color:#9fd3ed}#resumen .legend span:nth-child(3)::before{background:#c6e9fa;border-color:#66b7df}#resumen .legend span:nth-child(4)::before{background:#287fae;border-color:#176f9d}
       #situationBars{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;gap:8px!important}#situationBars .bar-row{min-height:30px!important}
       #historico .history-entry-card{margin-top:18px!important;border-top-color:var(--accent,#61b8e6)!important}#historico .history-entry-card .table-scroll{max-height:620px!important;overflow:auto!important}#historico .history-entry-table{min-width:1450px!important}
       @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}@media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}
