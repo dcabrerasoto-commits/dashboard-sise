@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "mdsf-monitoreo-residencias-v2";
   const config = window.MONITOREO_SYNC_CONFIG || {};
   const endpoint = String(config.webAppUrl || "").trim();
   const $ = id => document.getElementById(id);
@@ -14,19 +13,6 @@
     line.dataset.syncState = type || "";
   }
 
-  function readLocal() {
-    try {
-      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(parsed) ? parsed : [];
-    } catch (_) {
-      return [];
-    }
-  }
-
-  function writeLocal(records) {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(records || [])); } catch (_) {}
-  }
-
   function invalidTestRecord(record) {
     return /prueba/i.test(String(record?.establishment || "")) || /prueba/i.test(String(record?.responsible || ""));
   }
@@ -34,11 +20,6 @@
   function shiftedRecord(record) {
     const service = String(record?.service || "").trim();
     return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
-  }
-
-  function latestLocalRecord() {
-    const records = readLocal();
-    return records.length ? records[records.length - 1] : null;
   }
 
   function fetchSharedRecords() {
@@ -72,14 +53,11 @@
 
   function applySharedRecords(shared) {
     if (shared.some(shiftedRecord)) {
-      const local = readLocal().filter(record => !shiftedRecord(record));
-      writeLocal(local);
       setStatus("La base compartida requiere actualizar su implementacion. No se muestran columnas corridas.", "error");
-      window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:local}}));
-      return local;
+      window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:[]}}));
+      return [];
     }
     const valid = shared.filter(record => !invalidTestRecord(record));
-    writeLocal(valid);
     setStatus("El tablero muestra el ultimo reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Historico diario.", "ok");
     window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
     return valid;
@@ -91,7 +69,7 @@
     setStatus("Sincronizando informacion compartida...", "loading");
     fetchSharedRecords()
       .then(applySharedRecords)
-      .catch(error => setStatus(`${error.message} Se muestran los datos guardados en este navegador.`, "error"))
+      .catch(error => setStatus(`${error.message} No se muestran datos locales.`, "error"))
       .finally(() => { loading = false; });
   }
 
@@ -117,19 +95,15 @@
       }
       throw new Error("El reporte no aparece todavia en Google Sheets.");
     } catch (error) {
-      setStatus("El reporte quedo guardado localmente, pero no pudo enviarse a la base compartida.", "error");
+      setStatus("No se pudo confirmar el guardado en la base compartida.", "error");
       window.dispatchEvent(new CustomEvent("residencias:shared-save", {detail:{ok:false, record, message:error.message}}));
     }
   }
 
   function setupSubmitSync() {
-    const form = $("reportForm");
-    if (!form) return;
-    form.addEventListener("submit", () => {
-      setTimeout(() => {
-        const record = latestLocalRecord();
-        if (record) postRecord(record);
-      }, 120);
+    window.addEventListener("residencias:pending-record", event => {
+      const record = event.detail && event.detail.record;
+      if (record) postRecord(record);
     });
   }
 

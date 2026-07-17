@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "mdsf-monitoreo-residencias-v2";
   const $ = id => document.getElementById(id);
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
@@ -21,16 +20,7 @@
 
   function readRecords() {
     if (Array.isArray(sharedRecords)) return sharedRecords;
-    try {
-      const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(data) ? data.filter(record => !shiftedRecord(record)) : [];
-    } catch (_) {
-      return [];
-    }
-  }
-
-  function writeRecords(records) {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(records)); } catch (_) {}
+    return [];
   }
 
   function shiftedRecord(record) {
@@ -139,7 +129,6 @@
     const records = readRecords();
     if (!records.length) return;
     records[records.length - 1].address = $("address")?.value.trim() || "";
-    writeRecords(records);
   }
 
   function ensureHistoryDetail() {

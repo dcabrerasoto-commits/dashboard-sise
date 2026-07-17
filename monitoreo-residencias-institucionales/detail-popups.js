@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "mdsf-monitoreo-residencias-v2";
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
@@ -11,13 +10,10 @@
     return Number.isNaN(date.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}).format(date);
   };
 
+  let sharedRecords = [];
+
   function readRecords() {
-    try {
-      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(parsed) ? parsed.filter(record => !shiftedRecord(record)) : [];
-    } catch (_) {
-      return [];
-    }
+    return sharedRecords.filter(record => !shiftedRecord(record));
   }
 
   function shiftedRecord(record) {
@@ -287,6 +283,9 @@
   function init() {
     injectStyles();
     ensureModal();
+    window.addEventListener("residencias:shared-data", event => {
+      sharedRecords = event.detail && Array.isArray(event.detail.records) ? event.detail.records : [];
+    });
     $("detailTableBody")?.addEventListener("click", event => {
       const row = event.target.closest("tr");
       if (row) openDetailRow(row);
