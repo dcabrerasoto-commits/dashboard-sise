@@ -18,7 +18,6 @@
       .toolbar-actions .definition-action.active{background:var(--primary,#154f55)!important;border-color:var(--primary,#154f55)!important;color:#fff!important}
       #regionMap{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;margin:0!important;padding:0!important;overflow:visible!important;background:transparent!important;border:0!important;box-shadow:none!important}
       #regionMap .region-block{min-height:43px}
-
       #ingreso .form-card{border-top:8px solid var(--accent)!important;background:linear-gradient(180deg,#fff 0,#fff 170px,#f7faf9 170px)!important}
       #ingreso .form-head{position:relative;overflow:hidden;background:linear-gradient(110deg,#0b363b 0%,#154f55 62%,#287fae 100%)!important;border-left:0!important;padding:24px 26px!important}
       #ingreso .form-head::after{content:"";position:absolute;right:-46px;top:-64px;width:220px;height:220px;border:28px solid rgba(255,255,255,.09);transform:rotate(18deg)}
@@ -78,13 +77,21 @@
     form.insertBefore(progress, notice);
   }
 
-  function loadDetailPopups() {
-    if (document.querySelector('script[data-detail-popups]')) return;
+  function loadAuxiliaryScript(src, marker) {
+    if (document.querySelector(`script[data-${marker}]`)) return null;
     const script = document.createElement("script");
-    script.src = "detail-popups.js?v=20260717-11";
+    script.src = src;
     script.defer = true;
-    script.dataset.detailPopups = "true";
+    script.dataset[marker] = "true";
     document.head.appendChild(script);
+    return script;
+  }
+
+  function loadDetailPopups() {
+    const popupScript = loadAuxiliaryScript("detail-popups.js?v=20260717-12", "detailPopups");
+    const loadRules = () => loadAuxiliaryScript("situation-rules.js?v=20260717-12", "situationRules");
+    if (popupScript) popupScript.addEventListener("load", loadRules, {once:true});
+    else loadRules();
   }
 
   function init() {
