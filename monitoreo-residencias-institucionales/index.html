@@ -9,10 +9,10 @@
   <meta name="theme-color" content="#0b363b">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260717-08">
-  <script defer src="catalogos.js?v=20260717-08"></script>
-  <script defer src="app-v2.js?v=20260717-08"></script>
-  <script defer src="interface-v2.js?v=20260717-08"></script>
+  <link rel="stylesheet" href="styles.css?v=20260717-09">
+  <script defer src="catalogos.js?v=20260717-09"></script>
+  <script defer src="app-v2.js?v=20260717-09"></script>
+  <script defer src="interface-v2.js?v=20260717-09"></script>
 </head>
 <body>
 <header class="site-header">
@@ -44,7 +44,7 @@
     </div>
 
     <section id="resumen" class="panel active">
-      <div class="section-heading"><div><span class="section-kicker">SEGUIMIENTO NACIONAL</span><h2>Estado de residencias y establecimientos</h2><p>La información corresponde al último reporte disponible por establecimiento.</p></div></div>
+      <div class="section-heading"><div><span class="section-kicker">SEGUIMIENTO NACIONAL</span><h2>Estado de residencias y establecimientos</h2><p>La información mostrada corresponde al último reporte recibido por cada residencia. Cuando se envía un nuevo reporte, este reemplaza al anterior en el tablero. Para revisar todos los reportes enviados, consulte la pestaña Histórico diario.</p></div></div>
       <div class="filters"><label>Servicio<select id="filterService"></select></label><label>Región<select id="filterRegion"></select></label><label>Estado<select id="filterStatus"></select></label><button class="btn btn-secondary" id="clearFilters" type="button">Limpiar filtros</button></div>
       <div class="kpi-grid" id="kpiGrid"></div>
       <div class="dashboard-grid">
@@ -55,22 +55,22 @@
     </section>
 
     <section id="detalle" class="panel">
-      <div class="section-heading"><div><span class="section-kicker">CONSULTA</span><h2>Detalle de establecimientos</h2><p>Revise el último estado informado para cada residencia o establecimiento.</p></div></div>
+      <div class="section-heading"><div><span class="section-kicker">CONSULTA</span><h2>Detalle de establecimientos</h2><p>Esta sección muestra únicamente la información vigente del último reporte de cada residencia. Cada nuevo envío reemplaza la información anterior en esta vista; el detalle de los reportes previos permanece disponible en Histórico diario.</p></div></div>
       <div class="filters"><label>Servicio<select id="detailService"></select></label><label>Región<select id="detailRegion"></select></label><label>Situación<select id="detailSituation"></select></label><label class="search-label">Buscar<input id="detailSearch" type="search" placeholder="Nombre, comuna, responsable o contacto"></label></div>
       <article class="card table-card"><div class="table-scroll"><table class="detail-table"><thead><tr><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Estado</th><th>Situaciones</th><th>Personas atendidas</th><th>Nivel de daño</th><th>Actualización</th></tr></thead><tbody id="detailTableBody"></tbody></table></div></article>
     </section>
 
     <section id="historico" class="panel">
-      <div class="section-heading"><div><span class="section-kicker">EVOLUCIÓN DIARIA</span><h2>Histórico diario de reportes</h2><p>Consolidado por fecha según los reportes recibidos y el último estado informado de cada residencia durante el día.</p></div></div>
+      <div class="section-heading"><div><span class="section-kicker">EVOLUCIÓN DIARIA</span><h2>Histórico diario de reportes</h2><p>Esta sección conserva el detalle de la información reportada en cada fecha. Permite revisar los reportes anteriores, aunque un nuevo envío haya reemplazado la información vigente en el tablero nacional y en la vista de detalle.</p></div></div>
       <div class="filters"><label>Servicio<select id="historyService"></select></label><label>Región<select id="historyRegion"></select></label><label>Desde<input id="historyFrom" type="date"></label><label>Hasta<input id="historyTo" type="date"></label><button class="btn btn-secondary" id="clearHistoryFilters" type="button">Limpiar filtros</button></div>
       <article class="card table-card"><div class="card-head"><div><span class="card-kicker">SERIE DIARIA</span><h3>Resumen por día</h3></div></div><div class="table-scroll"><table class="history-table"><thead><tr><th>Fecha</th><th>Reportes del día</th><th>Residencias informadas</th><th>Con afectación</th><th>Sin afectación</th><th>En evaluación</th><th>Sin electricidad</th><th>Aguas servidas</th><th>Residencias con electrodependientes</th><th>N° de personas electrodependientes</th></tr></thead><tbody id="historyTableBody"></tbody></table></div></article>
     </section>
 
     <section id="ingreso" class="panel">
       <div class="form-card">
-        <div class="form-head"><span class="section-kicker light">INGRESO DE INFORMACIÓN</span><h2>Reporte de residencia o establecimiento</h2><p>Registre el estado actual de la residencia. Los datos se utilizarán para el seguimiento nacional y el histórico diario.</p></div>
+        <div class="form-head"><span class="section-kicker light">INGRESO DE INFORMACIÓN</span><h2>Reporte de residencia o establecimiento</h2><p>Registre la información vigente de la residencia. Cada nuevo reporte reemplaza al anterior en el tablero y en la vista de detalle, pero todos los envíos se conservan para su consulta en Histórico diario.</p></div>
         <form id="reportForm" class="form-body">
-          <div class="pilot-notice">Complete la identificación de la residencia. Si existe un reporte anterior, la plataforma recuperará sus datos automáticamente.</div>
+          <div class="pilot-notice">Complete la identificación de la residencia. Si existe un reporte anterior, la plataforma recuperará sus datos automáticamente. Al guardar un nuevo reporte, este pasará a ser la información vigente; los reportes previos podrán consultarse en Histórico diario.</div>
           <div id="previousReportMessage" class="previous-report-message hidden"></div>
 
           <fieldset>
@@ -125,7 +125,7 @@
 
     <section id="metodologia" class="panel">
       <div class="section-heading"><div><span class="section-kicker">CRITERIOS DE REGISTRO</span><h2>Definiciones operativas</h2><p>Estas reglas permiten comparar los reportes entre servicios, regiones y fechas.</p></div></div>
-      <div class="definition-grid"><article class="definition"><h3>Sin afectación</h3><p>La residencia continúa operativa y no registra daños, interrupciones ni necesidades extraordinarias asociadas a la emergencia.</p></article><article class="definition"><h3>Con afectación</h3><p>Existe daño, interrupción de servicios básicos, riesgo para la operación, evacuación u otra condición que requiere seguimiento.</p></article><article class="definition"><h3>Sin cambios</h3><p>El estado, las situaciones presentes y las necesidades se mantienen respecto del reporte anterior. El envío actualiza la fecha y los datos de contacto.</p></article><article class="definition"><h3>Electrodependencia</h3><p>Condición en que una persona requiere suministro eléctrico continuo para el funcionamiento de un dispositivo médico indispensable.</p></article><article class="definition"><h3>Último reporte vigente</h3><p>El tablero utiliza el envío más reciente para cada combinación de servicio, región, comuna y residencia.</p></article><article class="definition"><h3>Protección de datos</h3><p>No se deben registrar nombres, RUN, diagnósticos ni otros antecedentes personales de las personas residentes.</p></article></div>
+      <div class="definition-grid"><article class="definition"><h3>Sin afectación</h3><p>La residencia continúa operativa y no registra daños, interrupciones ni necesidades extraordinarias asociadas a la emergencia.</p></article><article class="definition"><h3>Con afectación</h3><p>Existe daño, interrupción de servicios básicos, riesgo para la operación, evacuación u otra condición que requiere seguimiento.</p></article><article class="definition"><h3>Sin cambios</h3><p>El estado, las situaciones presentes y las necesidades se mantienen respecto del reporte anterior. El envío actualiza la fecha y los datos de contacto.</p></article><article class="definition"><h3>Electrodependencia</h3><p>Condición en que una persona requiere suministro eléctrico continuo para el funcionamiento de un dispositivo médico indispensable.</p></article><article class="definition"><h3>Información vigente</h3><p>El tablero nacional y la vista de detalle muestran el reporte más reciente de cada residencia. Cada nuevo envío reemplaza al anterior en estas vistas.</p></article><article class="definition"><h3>Histórico de reportes</h3><p>Todos los reportes enviados se conservan y pueden consultarse por fecha en la pestaña Histórico diario.</p></article><article class="definition"><h3>Protección de datos</h3><p>No se deben registrar nombres, RUN, diagnósticos ni otros antecedentes personales de las personas residentes.</p></article></div>
     </section>
   </div>
 </main>
