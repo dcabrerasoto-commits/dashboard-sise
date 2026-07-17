@@ -47,7 +47,14 @@ function doPost(e) {
 function doGet(e) {
   const sheet = ensureSheet_();
   const values = sheet.getDataRange().getValues();
-  const rows = values.slice(1).map(rowToRecord_);
+  const seen = new Map();
+  values.slice(1)
+    .map(rowToRecord_)
+    .filter(record => String(record.tipo || '') === 'Carga regional')
+    .forEach(record => {
+      seen.set(keyFromRecord_(record), record);
+    });
+  const rows = Array.from(seen.values());
   const data = { ok: true, historial: rows };
   const callback = e && e.parameter && e.parameter.callback;
   return output_(data, callback);
@@ -137,6 +144,27 @@ function keyFromRow_(row) {
     row[14],
     row[15],
     row[16]
+  ].join('|');
+}
+
+function keyFromRecord_(record) {
+  return [
+    record.fecha,
+    record.tipo,
+    record.region,
+    record.comuna,
+    record.id,
+    number_(record.alfa),
+    number_(record.aplicadas),
+    number_(record.encuestadores),
+    number_(record.terminadas),
+    number_(record.digitacion),
+    number_(record.anuladas),
+    number_(record.personas),
+    number_(record.nna),
+    number_(record.mayores),
+    number_(record.discapacidad),
+    record.estadoDiario
   ].join('|');
 }
 
