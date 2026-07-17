@@ -22,9 +22,10 @@ main{padding:20px 0 30px}.shell{background:var(--fondo);border-radius:10px;paddi
 .matrix-box .affect-matrix{border:0;min-width:760px;margin-top:8px;border-radius:5px;overflow:hidden}
 .matrix-box .affect-matrix{table-layout:fixed}
 .matrix-box .affect-matrix col{width:14.28%}
-.matrix-box .affect-matrix th{background:var(--azul)!important;color:#fff!important;border:1px solid #d8e1ea;font-weight:700}
+.matrix-box .affect-matrix th{background:var(--azul)!important;color:#fff!important;border:1px solid #d8e1ea;font-weight:700;text-align:center!important}
 .matrix-box .affect-matrix tbody td{border:1px solid #d8e1ea}
 .matrix-box .affect-matrix tbody td{background:#fff!important;text-align:center}
+.matrix-box .affect-matrix tbody td:first-child{text-align:left!important}
 .matrix-box .affect-matrix .row-total,.matrix-box .affect-matrix .national-row td{background:var(--azul)!important;color:#fff!important;font-weight:800}
 .damage-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin:0 0 18px}
 .damage-cards.enseres{grid-template-columns:repeat(5,minmax(0,1fr))}
@@ -42,8 +43,9 @@ main{padding:20px 0 30px}.shell{background:var(--fondo);border-radius:10px;paddi
 .damage-card small{display:block;margin-top:5px;color:#3f5772;font-size:12px;font-weight:700}
 .damage-card.c0 strong{color:#169b62}.damage-card.c1 strong{color:#f2b600}.damage-card.c2 strong{color:#f06f2f}.damage-card.c3 strong{color:#ef3b3a}.damage-card.c4 strong{color:#9a248f}.damage-card.total strong{color:var(--azul)}
 .affect-matrix .damage-head{background:var(--azul)!important;color:#fff!important;text-align:left!important}
-.affect-matrix .damage-head strong{display:block}
-.affect-matrix .damage-head small{display:block;margin-top:3px;color:#dce9f5;font-weight:400}
+.affect-matrix .damage-head strong{display:block;font-size:13px;font-weight:800;line-height:1.2}
+.affect-matrix thead th[colspan]{font-size:13px;font-weight:800;line-height:1.2;text-align:center!important}
+.affect-matrix .damage-head small{display:block;margin-top:3px;color:#dce9f5;font-size:13px;font-weight:800;line-height:1.2}
 .entry-table thead th{background:var(--azul)!important;color:#fff!important}
 .entry-table tbody td:first-child{background:#e8f1fa;color:#0b3b6f}
 .metric-pct{display:block;margin-top:4px;color:#5f7184;font-size:13px;font-weight:700}
