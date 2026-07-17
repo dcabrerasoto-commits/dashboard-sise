@@ -3,9 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="theme-color" content="#0b363b">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260717-05">
+  <link rel="stylesheet" href="styles.css?v=20260717-07">
+  <script>
+    window.addEventListener("error", function () {
+      var line = document.getElementById("syncLine");
+      if (line && line.textContent === "Cargando información…") {
+        line.textContent = "Plataforma disponible en modo local";
+      }
+    });
+    try {
+      var testKey = "__safari_storage_test__";
+      localStorage.setItem(testKey, "1");
+      localStorage.removeItem(testKey);
+      var raw = localStorage.getItem("mdsf-monitoreo-residencias-v1");
+      if (raw) JSON.parse(raw);
+    } catch (error) {
+      try { localStorage.removeItem("mdsf-monitoreo-residencias-v1"); } catch (_) {}
+    }
+  </script>
+  <script defer src="config.js?v=20260717-07"></script>
+  <script defer src="catalogos.js?v=20260717-07"></script>
+  <script defer src="app.js?v=20260717-07"></script>
+  <script defer src="interface-v2.js?v=20260717-07"></script>
 </head>
 <body>
 <header class="site-header">
@@ -17,7 +42,7 @@
       <div class="sync-line" id="syncLine">Cargando información…</div>
     </div>
     <div class="logo-box">
-      <img src="../emergencias/assets/logo_MDSF.png" alt="Ministerio de Desarrollo Social y Familia">
+      <img src="../emergencias/assets/logo_MDSF.png" alt="Ministerio de Desarrollo Social y Familia" width="118" height="86" decoding="async">
     </div>
   </div>
 </header>
@@ -84,10 +109,5 @@
 </main>
 
 <footer class="site-footer"><div class="wrap">Ministerio de Desarrollo Social y Familia · Plataforma de seguimiento institucional</div></footer>
-<script>try{const raw=localStorage.getItem("mdsf-monitoreo-residencias-v1");if(raw)JSON.parse(raw)}catch(error){localStorage.removeItem("mdsf-monitoreo-residencias-v1")}</script>
-<script src="config.js?v=20260717-05"></script>
-<script src="catalogos.js?v=20260717-05"></script>
-<script src="app.js?v=20260717-05"></script>
-<script src="interface-v2.js?v=20260717-05"></script>
 </body>
 </html>
