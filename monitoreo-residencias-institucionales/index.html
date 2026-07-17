@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Plataforma pública para monitorear la afectación de residencias institucionales a nivel nacional.">
+  <title>Monitoreo de Residencias Institucionales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="eyebrow">Ministerio de Desarrollo Social y Familia</span>
+      <h1>Monitoreo de Residencias Institucionales</h1>
+      <p>Afectación, continuidad operativa y necesidades prioritarias</p>
+      <div class="sync-line" id="syncLine">Cargando información…</div>
+    </div>
+    <div class="logo-box">
+      <img src="../emergencias/assets/logo_MDSF.png" alt="Ministerio de Desarrollo Social y Familia">
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="app-shell">
+    <div class="toolbar">
+      <nav class="tabs" aria-label="Secciones">
+        <button class="tab active" data-tab="resumen">Resumen nacional</button>
+        <button class="tab" data-tab="detalle">Detalle</button>
+        <button class="tab tab-entry" data-tab="ingreso">Ingreso de información</button>
+        <button class="tab" data-tab="metodologia">Definiciones</button>
+      </nav>
+      <div class="toolbar-actions">
+        <span class="mode-pill" id="modePill">Versión piloto</span>
+        <button class="btn btn-light" id="exportButton" type="button">Exportar CSV</button>
+        <button class="btn btn-light" id="printButton" type="button">Imprimir</button>
+      </div>
+    </div>
+
+    <section id="resumen" class="panel active">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">VISUALIZACIÓN NACIONAL</span>
+          <h2>Estado de residencias y establecimientos</h2>
+          <p>La información corresponde al último reporte disponible por establecimiento.</p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <label>Servicio
+          <select id="filterService"></select>
+        </label>
+        <label>Región
+          <select id="filterRegion"></select>
+        </label>
+        <label>Estado
+          <select id="filterStatus"></select>
+        </label>
+        <button class="btn btn-secondary" id="clearFilters" type="button">Limpiar filtros</button>
+      </div>
+
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <div class="dashboard-grid">
+        <article class="card map-card">
+          <div class="card-head">
+            <div>
+              <span class="card-kicker">DISTRIBUCIÓN TERRITORIAL</span>
+              <h3>Mapa regional de afectación</h3>
+            </div>
+            <span class="small-note">Representación esquemática</span>
+          </div>
+          <div id="regionMap" class="region-map" aria-label="Mapa esquemático de regiones"></div>
+          <div class="map-legend"><span><i class="level-0"></i>Sin reportes afectados</span><span><i class="level-1"></i>1 a 2</span><span><i class="level-2"></i>3 a 5</span><span><i class="level-3"></i>6 o más</span></div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <span class="card-kicker">SITUACIONES REPORTADAS</span>
+              <h3>Principales afectaciones</h3>
+            </div>
+          </div>
+          <div id="situationBars" class="bar-list"></div>
+        </article>
+      </div>
+
+      <article class="card table-card">
+        <div class="card-head">
+          <div>
+            <span class="card-kicker">RESUMEN TERRITORIAL</span>
+            <h3>Consolidado por región</h3>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Región</th>
+                <th>Total informado</th>
+                <th>Sin afectación</th>
+                <th>Con afectación</th>
+                <th>Sin electricidad</th>
+                <th>Inundación</th>
+                <th>Evacuación</th>
+                <th>Última actualización</th>
+              </tr>
+            </thead>
+            <tbody id="regionTableBody"></tbody>
+          </table>
+        </div>
+      </article>
+      <div class="empty-state hidden" id="emptySummary">Aún no existen registros para los filtros seleccionados.</div>
+    </section>
+
+    <section id="detalle" class="panel">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">CONSULTA</span>
+          <h2>Detalle de establecimientos</h2>
+          <p>Revise el último estado informado para cada residencia o establecimiento.</p>
+        </div>
+      </div>
+      <div class="filters">
+        <label>Servicio
+          <select id="detailService"></select>
+        </label>
+        <label>Región
+          <select id="detailRegion"></select>
+        </label>
+        <label>Situación
+          <select id="detailSituation"></select>
+        </label>
+        <label class="search-label">Buscar
+          <input id="detailSearch" type="search" placeholder="Nombre, comuna o programa">
+        </label>
+      </div>
+      <article class="card table-card">
+        <div class="table-scroll">
+          <table class="detail-table">
+            <thead>
+              <tr>
+                <th>Servicio</th>
+                <th>Región</th>
+                <th>Comuna</th>
+                <th>Establecimiento</th>
+                <th>Estado</th>
+                <th>Situaciones</th>
+                <th>Personas atendidas</th>
+                <th>Nivel de daño</th>
+                <th>Actualización</th>
+              </tr>
+            </thead>
+            <tbody id="detailTableBody"></tbody>
+          </table>
+        </div>
+      </article>
+      <div class="empty-state hidden" id="emptyDetail">No existen establecimientos que coincidan con la búsqueda.</div>
+    </section>
+
+    <section id="ingreso" class="panel">
+      <div class="form-card">
+        <div class="form-head">
+          <span class="section-kicker light">INGRESO DE INFORMACIÓN</span>
+          <h2>Reporte de residencia o establecimiento</h2>
+          <p>Registre el estado actual. Un nuevo envío reemplaza visualmente al reporte anterior del mismo establecimiento, manteniendo el historial en la base.</p>
+        </div>
+        <form id="reportForm" class="form-body">
+          <div class="pilot-notice" id="pilotNotice"></div>
+
+          <fieldset>
+            <legend>Identificación</legend>
+            <div class="form-grid">
+              <label>Servicio responsable
+                <select id="service" name="service" required></select>
+              </label>
+              <label id="otherServiceWrap" class="hidden">Nombre del servicio
+                <input id="otherService" name="otherService" maxlength="120">
+              </label>
+              <label>Programa o línea de atención
+                <input id="program" name="program" maxlength="120" placeholder="Opcional">
+              </label>
+              <label>Región
+                <select id="region" name="region" required></select>
+              </label>
+              <label>Comuna
+                <select id="commune" name="commune" required></select>
+              </label>
+              <label class="span-2">Nombre de la residencia o establecimiento
+                <input id="establishment" name="establishment" maxlength="180" required>
+              </label>
+              <label>Responsable del reporte
+                <input id="responsible" name="responsible" maxlength="120" required>
+              </label>
+              <label>Fecha y hora del reporte
+                <input id="reportDate" name="reportDate" type="datetime-local" required>
+              </label>
+              <label>Clave del servicio
+                <input id="accessKey" name="accessKey" type="password" autocomplete="current-password" placeholder="Requerida en operación multiusuario">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Estado y afectación</legend>
+            <div class="form-grid">
+              <label>Estado general
+                <select id="status" name="status" required></select>
+              </label>
+              <label>Nivel de daño o riesgo
+                <select id="damageLevel" name="damageLevel" required></select>
+              </label>
+              <label>Capacidad total
+                <input id="capacity" name="capacity" type="number" min="0" step="1">
+              </label>
+              <label>Personas atendidas
+                <input id="people" name="people" type="number" min="0" step="1">
+              </label>
+            </div>
+            <div class="check-group">
+              <span class="field-title">Situaciones presentes</span>
+              <div id="situationChecks" class="checks"></div>
+            </div>
+            <label class="block-label">Detalle de la afectación o riesgo
+              <textarea id="damageDetail" name="damageDetail" rows="3" maxlength="1200" placeholder="Describa brevemente daños, riesgos o causas de la interrupción."></textarea>
+            </label>
+            <label class="block-label hidden" id="otherSituationWrap">Otra situación
+              <input id="otherSituation" name="otherSituation" maxlength="240">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Necesidades y respuesta</legend>
+            <div class="check-group">
+              <span class="field-title">Necesidades prioritarias</span>
+              <div id="needChecks" class="checks"></div>
+            </div>
+            <label class="block-label">Medidas implementadas
+              <textarea id="measures" name="measures" rows="3" maxlength="1200"></textarea>
+            </label>
+            <label class="block-label">Observaciones
+              <textarea id="observations" name="observations" rows="3" maxlength="1200"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="btn btn-secondary" id="resetForm" type="reset">Limpiar</button>
+            <button class="btn btn-primary" type="submit">Guardar reporte</button>
+          </div>
+          <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="metodologia" class="panel">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">CRITERIOS DE REGISTRO</span>
+          <h2>Definiciones operativas</h2>
+          <p>Estas reglas permiten comparar los reportes entre servicios y regiones.</p>
+        </div>
+      </div>
+      <div class="definition-grid">
+        <article class="definition"><h3>Sin afectación</h3><p>El establecimiento continúa operativo y no registra daños, interrupciones ni necesidades extraordinarias asociadas a la emergencia.</p></article>
+        <article class="definition"><h3>Con afectación</h3><p>Existe daño, interrupción de servicios básicos, riesgo para la operación, evacuación u otra condición que requiere seguimiento.</p></article>
+        <article class="definition"><h3>En evaluación</h3><p>La situación todavía no puede determinarse y se mantiene pendiente de verificación o inspección.</p></article>
+        <article class="definition"><h3>Evacuación</h3><p>Traslado total o parcial de residentes o personas atendidas hacia una zona segura o establecimiento alternativo.</p></article>
+        <article class="definition"><h3>Último reporte vigente</h3><p>El tablero utiliza el envío más reciente para cada combinación de servicio, región, comuna y establecimiento.</p></article>
+        <article class="definition"><h3>Protección de datos</h3><p>No se deben registrar nombres, RUN, diagnósticos ni otros antecedentes personales de residentes o personas atendidas.</p></article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Ministerio de Desarrollo Social y Familia · Plataforma de monitoreo institucional</div>
+</footer>
+
+<script src="config.js"></script>
+<script src="catalogos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
