@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-17T09:05:07",
+  "actualizado": "2026-07-17T09:14:08",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -113,6 +113,14 @@
       "comunas": "PADRE HURTADO",
       "estado": "Activa",
       "fechaCreacion": "16/07/2026"
+    },
+    {
+      "id": "148564",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Ignacio",
+      "estado": "Activa",
+      "fechaCreacion": "16/07/2026"
     }
   ],
   "fuentes": [
@@ -152,6 +160,7 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260716_1846_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260717_0859_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260717_0900_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260717_0903_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260715_2234_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260715_2241_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260715_2330_Reporte_BD_FIBE.xlsx",
@@ -168,6 +177,7 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260716_1846_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260716_2037_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260717_0859_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260717_0902_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260716_1136_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260716_1240_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260716_1612_Reporte_BD_FIBE.xlsx",
@@ -232,8 +242,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "La Araucanía",
@@ -258,8 +268,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 4
       },
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "Ñuble",
@@ -285,8 +295,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "Maule",
@@ -309,8 +319,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "Maule",
@@ -333,8 +343,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "Biobío",
@@ -357,8 +367,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "Ñuble",
@@ -381,8 +391,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "BIOBÍO",
@@ -405,8 +415,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "BIOBÍO",
@@ -429,8 +439,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "ÑUBLE",
@@ -453,8 +463,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "ÑUBLE",
@@ -477,8 +487,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "BIOBÍO",
@@ -501,8 +511,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "MAULE",
@@ -525,8 +535,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     },
     {
       "region": "METROPOLITANA DE SANTIAGO",
@@ -549,8 +559,32 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:05",
-      "fechaLlenado": "17-07-2026 09:05"
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "San Ignacio",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "16/07/2026",
+      "fechaOcurrencia": "16/07/2026",
+      "fechaCreacion": "16/07/2026",
+      "id": "148564",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "09:14",
+      "fechaLlenado": "17-07-2026 09:14"
     }
   ]
 }
