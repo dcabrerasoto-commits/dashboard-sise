@@ -18,7 +18,7 @@
   };
   const formatDateTime = (value) => {
     const d = new Date(value);
-    return Number.isNaN(d.getTime()) ? "Sin informaciÃ³n" : new Intl.DateTimeFormat("es-CL", {day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}).format(d);
+    return Number.isNaN(d.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}).format(d);
   };
   const dateKey = (value) => {
     const d = new Date(value);
@@ -38,7 +38,7 @@
 
   function setCommunes(region, selected) {
     const values = (C.comunasPorRegion || {})[region] || [];
-    populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una regiÃ³n");
+    populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una región");
     $("commune").value = selected || "";
   }
 
@@ -48,7 +48,7 @@
     populate($("filterStatus"), C.estados, "Todos los estados");
     populate($("detailSituation"), C.situaciones, "Todas las situaciones");
     populate($("service"), C.servicios, "Seleccione un servicio");
-    populate($("region"), C.regiones, "Seleccione una regiÃ³n");
+    populate($("region"), C.regiones, "Seleccione una región");
     populate($("status"), C.estados, "Seleccione un estado");
     populate($("damageLevel"), C.nivelesDanio, "Seleccione un nivel");
     setCommunes("");
@@ -91,7 +91,7 @@
       $("status").required = true;
       $("damageLevel").required = true;
       $("electrodependent").required = true;
-      $("electrodependentCount").required = $("electrodependent").value === "SÃ­";
+      $("electrodependentCount").required = $("electrodependent").value === "Sí";
     }
   }
 
@@ -110,7 +110,7 @@
     $("observations").value = r.observations || "";
     $("electrodependent").value = r.electrodependent || "No";
     $("electrodependentCount").value = r.electrodependentCount || "";
-    $("electrodependentCountWrap").classList.toggle("hidden", r.electrodependent !== "SÃ­");
+    $("electrodependentCountWrap").classList.toggle("hidden", r.electrodependent !== "Sí");
     $$("input[name='situations']").forEach(input => input.checked = (r.situations || []).includes(input.value));
     $$("input[name='needs']").forEach(input => input.checked = (r.needs || []).includes(input.value));
   }
@@ -124,17 +124,17 @@
       wrap.classList.remove("hidden");
       $("hasChanges").value = "";
       setUpdateSections(false);
-      message.textContent = `Se encontrÃ³ un reporte anterior del ${formatDateTime(previousMatch.reportDate || previousMatch.createdAt)}. Revise los datos recuperados e indique si hubo cambios.`;
+      message.textContent = `Se encontró un reporte anterior del ${formatDateTime(previousMatch.reportDate || previousMatch.createdAt)}. Revise los datos recuperados e indique si hubo cambios.`;
       message.classList.remove("hidden");
     } else {
       wrap.classList.add("hidden");
-      $("hasChanges").value = "SÃ­";
+      $("hasChanges").value = "Sí";
       setUpdateSections(true);
       message.classList.add("hidden");
     }
   }
 
-  function affected(r) { return r.status === "Con afectaciÃ³n" || (r.situations || []).length > 0; }
+  function affected(r) { return r.status === "Con afectación" || (r.situations || []).length > 0; }
   function hasSituation(r, value) { return (r.situations || []).some(s => key(s) === key(value)); }
 
   function filteredSummary() {
@@ -147,12 +147,12 @@
 
   function renderKpis(data) {
     const cards = [
-      ["Establecimientos informados", data.length, "Ãšltimo reporte vigente", "primary"],
-      ["Sin afectaciÃ³n", data.filter(r => r.status === "Sin afectaciÃ³n").length, "Estado vigente", ""],
-      ["Con afectaciÃ³n", data.filter(affected).length, "Requiere seguimiento", "alert"],
-      ["Sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "SituaciÃ³n presente", "alert"],
-      ["Aguas servidas", data.filter(r => hasSituation(r, "ExposiciÃ³n a aguas servidas")).length, "ExposiciÃ³n reportada", "alert"],
-      ["Electrodependientes", data.filter(r => r.electrodependent === "SÃ­").length, "Residencias informadas", "alert"]
+      ["Establecimientos informados", data.length, "Último reporte vigente", "primary"],
+      ["Sin afectación", data.filter(r => r.status === "Sin afectación").length, "Estado vigente", ""],
+      ["Con afectación", data.filter(affected).length, "Requiere seguimiento", "alert"],
+      ["Sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Situación presente", "alert"],
+      ["Aguas servidas", data.filter(r => hasSituation(r, "Exposición a aguas servidas")).length, "Exposición reportada", "alert"],
+      ["Electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "Residencias informadas", "alert"]
     ];
     $("kpiGrid").innerHTML = cards.map(([label,value,sub,klass]) => `<article class="kpi ${klass}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
   }
@@ -161,7 +161,7 @@
     return (C.regiones || []).map(region => {
       const rows = data.filter(r => key(r.region) === key(region));
       const dates = rows.map(r => r.reportDate || r.createdAt).sort();
-      return {region, total:rows.length, without:rows.filter(r => r.status === "Sin afectaciÃ³n").length, affected:rows.filter(affected).length, electricity:rows.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:rows.filter(r => hasSituation(r,"ExposiciÃ³n a aguas servidas")).length, electro:rows.filter(r => r.electrodependent === "SÃ­").length, last:dates.length ? dates[dates.length - 1] : ""};
+      return {region, total:rows.length, without:rows.filter(r => r.status === "Sin afectación").length, affected:rows.filter(affected).length, electricity:rows.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:rows.filter(r => hasSituation(r,"Exposición a aguas servidas")).length, electro:rows.filter(r => r.electrodependent === "Sí").length, last:dates.length ? dates[dates.length - 1] : ""};
     });
   }
 
@@ -171,16 +171,16 @@
     const data = filteredSummary();
     renderKpis(data);
     const regions = byRegion(data);
-    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectaciÃ³n"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectaciÃ³n</small></span></button>`).join("");
+    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
     const situations = [
-      {label:"Sin situaciones reportadas (sin afectaciÃ³n)", value:data.filter(r => r.status === "Sin afectaciÃ³n" && !(r.situations || []).length).length},
+      {label:"Sin situaciones reportadas (sin afectación)", value:data.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length},
       ...(C.situaciones || []).map(label => ({label, value:data.filter(r => hasSituation(r,label)).length}))
     ];
     const max = Math.max(1, ...situations.map(x => x.value));
     $("situationBars").innerHTML = situations.map(x => `<div class="bar-row"><div class="bar-label">${esc(x.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.value/max*100)}%"></div></div><div class="bar-value">${fmt(x.value)}</div></div>`).join("");
     const visible = regions.filter(r => r.total > 0);
-    $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin informaciÃ³n")}</td></tr>`).join("") : '<tr><td colspan="8">Sin informaciÃ³n disponible.</td></tr>';
+    $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
   }
 
   function renderDetail() {
@@ -191,7 +191,7 @@
       (!$("detailSituation").value || hasSituation(r, $("detailSituation").value)) &&
       (!q || [r.service,r.program,r.region,r.commune,r.establishment,r.responsible,r.contactEmail,r.contactPhone].some(v => key(v).includes(q)))
     ).sort((a,b) => (new Date(b.reportDate || b.createdAt || 0).getTime() || 0) - (new Date(a.reportDate || a.createdAt || 0).getTime() || 0));
-    $("detailTableBody").innerHTML = data.length ? data.map(r => `<tr><td>${esc(r.service)}</td><td>${esc(r.region)}</td><td>${esc(r.commune)}</td><td>${esc(r.establishment)}</td><td>${esc(r.status)}</td><td>${esc((r.situations || []).join(", ") || "Sin situaciones")}</td><td>${fmt(r.people)}</td><td>${esc(r.damageLevel || "Sin informaciÃ³n")}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin informaciÃ³n disponible.</td></tr>';
+    $("detailTableBody").innerHTML = data.length ? data.map(r => `<tr><td>${esc(r.service)}</td><td>${esc(r.region)}</td><td>${esc(r.commune)}</td><td>${esc(r.establishment)}</td><td>${esc(r.status)}</td><td>${esc((r.situations || []).join(", ") || "Sin situaciones")}</td><td>${fmt(r.people)}</td><td>${esc(r.damageLevel || "Sin información")}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
   }
 
   function dailyRows() {
@@ -212,13 +212,13 @@
     });
     return Array.from(groups.entries()).sort((a,b) => b[0].localeCompare(a[0])).map(([date, rows]) => {
       const current = latestRecords(rows);
-      return {date, reports:rows.length, residences:current.length, affected:current.filter(affected).length, without:current.filter(r => r.status === "Sin afectaciÃ³n").length, evaluation:current.filter(r => r.status === "En evaluaciÃ³n").length, electricity:current.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:current.filter(r => hasSituation(r,"ExposiciÃ³n a aguas servidas")).length, electroResidences:current.filter(r => r.electrodependent === "SÃ­").length, electroPeople:current.reduce((sum,r) => sum + Number(r.electrodependentCount || 0),0)};
+      return {date, reports:rows.length, residences:current.length, affected:current.filter(affected).length, without:current.filter(r => r.status === "Sin afectación").length, evaluation:current.filter(r => r.status === "En evaluación").length, electricity:current.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:current.filter(r => hasSituation(r,"Exposición a aguas servidas")).length, electroResidences:current.filter(r => r.electrodependent === "Sí").length, electroPeople:current.reduce((sum,r) => sum + Number(r.electrodependentCount || 0),0)};
     });
   }
 
   function renderHistory() {
     const rows = dailyRows();
-    $("historyTableBody").innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.date.split("-").reverse().join("-"))}</td><td>${fmt(r.reports)}</td><td>${fmt(r.residences)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.without)}</td><td>${fmt(r.evaluation)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electroResidences)}</td><td>${fmt(r.electroPeople)}</td></tr>`).join("") : '<tr><td colspan="10">Sin registros para el perÃ­odo seleccionado.</td></tr>';
+    $("historyTableBody").innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.date.split("-").reverse().join("-"))}</td><td>${fmt(r.reports)}</td><td>${fmt(r.residences)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.without)}</td><td>${fmt(r.evaluation)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electroResidences)}</td><td>${fmt(r.electroPeople)}</td></tr>`).join("") : '<tr><td colspan="10">Sin registros para el período seleccionado.</td></tr>';
   }
 
   function buildRecord() {
@@ -229,7 +229,7 @@
       createdAt:new Date().toISOString(), reportDate:$("reportDate").value,
       service:$("service").value, program:$("program").value.trim(), region:$("region").value, commune:$("commune").value,
       establishment:$("establishment").value.trim(), responsible:$("responsible").value.trim(), contactEmail:$("contactEmail").value.trim(), contactPhone:$("contactPhone").value.trim(),
-      previousReport:previousMatch ? "SÃ­" : "No", hasChanges:previousMatch ? $("hasChanges").value : "SÃ­", previousRecordId:previousMatch ? previousMatch.id : "",
+      previousReport:previousMatch ? "Sí" : "No", hasChanges:previousMatch ? $("hasChanges").value : "Sí", previousRecordId:previousMatch ? previousMatch.id : "",
       status:noChanges ? source.status : $("status").value, damageLevel:noChanges ? source.damageLevel : $("damageLevel").value,
       capacity:noChanges ? Number(source.capacity || 0) : Number($("capacity").value || 0), people:noChanges ? Number(source.people || 0) : Number($("people").value || 0),
       situations:noChanges ? (source.situations || []) : checkedValues("situations"), damageDetail:noChanges ? source.damageDetail : $("damageDetail").value.trim(),
@@ -245,8 +245,8 @@
       $("formMessage").className = "form-message error";
       return;
     }
-    if (!$("stateSection").classList.contains("hidden") && $("electrodependent").value === "SÃ­" && Number($("electrodependentCount").value || 0) < 1) {
-      $("formMessage").textContent = "Ingrese el nÃºmero de personas electrodependientes.";
+    if (!$("stateSection").classList.contains("hidden") && $("electrodependent").value === "Sí" && Number($("electrodependentCount").value || 0) < 1) {
+      $("formMessage").textContent = "Ingrese el número de personas electrodependientes.";
       $("formMessage").className = "form-message error";
       return;
     }
@@ -290,8 +290,8 @@
     $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
     $("region").addEventListener("change", e => { setCommunes(e.target.value); previousMatch = null; });
     ["service","commune","establishment"].forEach(id => $(id).addEventListener(id === "establishment" ? "blur" : "change", evaluatePrevious));
-    $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "SÃ­"));
-    $("electrodependent").addEventListener("change", e => { const yes = e.target.value === "SÃ­"; $("electrodependentCountWrap").classList.toggle("hidden", !yes); $("electrodependentCount").required = yes; if (!yes) $("electrodependentCount").value = ""; });
+    $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "Sí"));
+    $("electrodependent").addEventListener("change", e => { const yes = e.target.value === "Sí"; $("electrodependentCountWrap").classList.toggle("hidden", !yes); $("electrodependentCount").required = yes; if (!yes) $("electrodependentCount").value = ""; });
     $("reportForm").addEventListener("submit", saveReport);
     $("resetForm").addEventListener("click", () => setTimeout(resetForm, 0));
     $("exportButton").addEventListener("click", () => {
@@ -340,3 +340,4 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
   else init();
 })();
+
