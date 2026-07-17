@@ -64,14 +64,9 @@
       }
       const valid = response.records.filter(record => !invalidTestRecord(record));
       writeLocal(valid);
-      sessionStorage.setItem("residencias-shared-sync-loaded", "1");
       cleanup();
       setStatus(`Base compartida sincronizada: ${valid.length} reportes.`, "ok");
       window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
-      if (!sessionStorage.getItem("residencias-shared-sync-reloaded")) {
-        sessionStorage.setItem("residencias-shared-sync-reloaded", "1");
-        location.reload();
-      }
     };
 
     script.onerror = () => finishError("No fue posible conectar con Google Sheets.");
@@ -91,7 +86,6 @@
         body: JSON.stringify({record})
       });
       setStatus("Reporte enviado a la base compartida. Actualizando información…", "ok");
-      sessionStorage.removeItem("residencias-shared-sync-reloaded");
       setTimeout(jsonpLoad, 1200);
     } catch (_) {
       setStatus("El reporte quedó guardado localmente, pero no pudo enviarse a la base compartida.", "error");
@@ -117,7 +111,6 @@
     setupSubmitSync();
     jsonpLoad();
     window.addEventListener("focus", () => {
-      sessionStorage.removeItem("residencias-shared-sync-reloaded");
       jsonpLoad();
     });
   }
