@@ -40,8 +40,9 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .tab{border:1px solid transparent;background:transparent;color:#465e62;padding:10px 13px;font-weight:750;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease;border-radius:0!important}
 .tab:hover{background:var(--primary-soft);color:var(--primary-dark);border-color:#a9bfbc;transform:translate(-2px,-2px);box-shadow:3px 3px 0 rgba(21,79,85,.10)}
 .tab.active{background:var(--primary);border-color:var(--primary);color:#fff}
-.tab-entry,.tab[data-tab="ingreso"]{border-color:var(--accent);color:var(--accent-dark)}
-.tab-entry.active,.tab[data-tab="ingreso"].active{background:var(--accent);border-color:var(--accent);color:#08384f}
+.tab-entry,.tab[data-tab="ingreso"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-dark);box-shadow:inset 0 -3px 0 var(--accent)}
+.tab-entry:hover,.tab[data-tab="ingreso"]:hover{background:var(--accent);border-color:var(--accent-dark);color:#08384f}
+.tab-entry.active,.tab[data-tab="ingreso"].active{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff}
 .toolbar-actions{display:flex;align-items:center;gap:8px}
 .mode-pill{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid #9bcfe9;background:var(--accent-soft);color:var(--accent-dark);font-size:12px;font-weight:800;white-space:nowrap;border-radius:0!important}
 .mode-pill.cloud{background:#e0efe7;border-color:#8fc2aa;color:#17583b}
