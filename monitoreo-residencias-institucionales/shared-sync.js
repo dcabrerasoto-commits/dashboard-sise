@@ -55,7 +55,12 @@
   }
 
   function normalizeKey(value) {
-    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^A-Za-z0-9]+/g, "")
+      .toUpperCase()
+      .trim();
   }
 
   function normalizeRegion(region, commune) {
@@ -63,9 +68,9 @@
     const regionKey = normalizeKey(region);
     const direct = (catalog.regiones || []).find(item => normalizeKey(item) === regionKey);
     if (direct) return direct;
-    const communeKey = normalizeKey(commune || region);
+    const possibleCommuneKeys = [normalizeKey(commune), normalizeKey(region)].filter(Boolean);
     const byCommune = Object.keys(catalog.comunasPorRegion || {}).find(regionName =>
-      (catalog.comunasPorRegion[regionName] || []).some(item => normalizeKey(item) === communeKey)
+      (catalog.comunasPorRegion[regionName] || []).some(item => possibleCommuneKeys.includes(normalizeKey(item)))
     );
     return byCommune || region;
   }
