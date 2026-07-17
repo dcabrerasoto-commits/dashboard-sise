@@ -45,7 +45,7 @@
       #ingreso input:focus,#ingreso select:focus,#ingreso textarea:focus{border-color:var(--accent-dark)!important;box-shadow:4px 4px 0 rgba(97,184,230,.20)!important}
       #ingreso .check-option{background:#fff!important;border-color:#b8c9cb!important}
       #ingreso .check-option:has(input:checked){background:var(--accent-soft)!important;border-color:var(--accent-dark)!important;box-shadow:inset 5px 0 0 var(--accent-dark)!important}
-      #ingreso .form-actions{margin:18px -22px -22px;padding:17px 22px;border-top:1px solid #bfd0d1;background:linear-gradient(90deg,var(--beige),#eef8fd)}
+      #ingreso .form-actions{margin:18px -22px -22px;padding:17px 22px;border-top:1px solid #bfd0d1;background:#f7fbfd!important}
       #ingreso .form-actions .btn-primary{background:var(--accent-dark)!important;border-color:var(--accent-dark)!important}
       #historico .history-table{min-width:1180px}
       #historico .table-card{border-top-color:var(--accent)!important}
