@@ -46,14 +46,14 @@
   }
 
   function setCommunes(region, selected) {
-    const values = (C.comunasPorRegion || {})[region] || [];
+    const values = (C.comunasPorRegión || {})[region] || [];
     populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una región");
     $("commune").value = selected || "";
   }
 
   function setupCatalogs() {
     ["filterService","detailService","historyService"].forEach(id => populate($(id), C.servicios, "Todos los servicios"));
-    ["filterRegion","detailRegion","historyRegion"].forEach(id => populate($(id), C.regiones, "Todas las regiones"));
+    ["filterRegión","detailRegión","historyRegión"].forEach(id => populate($(id), C.regiones, "Todas las regiones"));
     populate($("filterStatus"), C.estados, "Todos los estados");
     populate($("detailSituation"), C.situaciones, "Todas las situaciones");
     populate($("service"), C.servicios, "Seleccione un servicio");
@@ -149,7 +149,7 @@
   function filteredSummary() {
     return latest.filter(r =>
       (!$("filterService").value || r.service === $("filterService").value) &&
-      (!$("filterRegion").value || r.region === $("filterRegion").value) &&
+      (!$("filterRegión").value || r.region === $("filterRegión").value) &&
       (!$("filterStatus").value || r.status === $("filterStatus").value)
     );
   }
@@ -166,7 +166,7 @@
     $("kpiGrid").innerHTML = cards.map(([label,value,sub,klass]) => `<article class="kpi ${klass}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
   }
 
-  function byRegion(data) {
+  function byRegión(data) {
     return (C.regiones || []).map(region => {
       const rows = data.filter(r => key(r.region) === key(region));
       const dates = rows.map(r => r.reportDate || r.createdAt).sort();
@@ -179,9 +179,9 @@
   function renderSummary() {
     const data = filteredSummary();
     renderKpis(data);
-    const regions = byRegion(data);
+    const regions = byRegión(data);
     $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
-    $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
+    $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegión").value = btn.dataset.region; renderSummary(); }));
     const situations = [
       {label:"Sin situaciones reportadas (sin afectación)", value:data.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length},
       ...(C.situaciones || []).map(label => ({label, value:data.filter(r => hasSituation(r,label)).length}))
@@ -196,7 +196,7 @@
     const q = key($("detailSearch").value);
     const data = latest.filter(r =>
       (!$("detailService").value || r.service === $("detailService").value) &&
-      (!$("detailRegion").value || r.region === $("detailRegion").value) &&
+      (!$("detailRegión").value || r.region === $("detailRegión").value) &&
       (!$("detailSituation").value || hasSituation(r, $("detailSituation").value)) &&
       (!q || [r.service,r.program,r.region,r.commune,r.establishment,r.responsible,r.contactEmail,r.contactPhone].some(v => key(v).includes(q)))
     ).sort((a,b) => (new Date(b.reportDate || b.createdAt || 0).getTime() || 0) - (new Date(a.reportDate || a.createdAt || 0).getTime() || 0));
@@ -205,7 +205,7 @@
 
   function dailyRows() {
     const service = $("historyService").value;
-    const region = $("historyRegion").value;
+    const region = $("historyRegión").value;
     const from = $("historyFrom").value;
     const to = $("historyTo").value;
     const filtered = records.filter(r => {
@@ -291,12 +291,12 @@
   }
 
   function setupEvents() {
-    ["filterService","filterRegion","filterStatus"].forEach(id => $(id).addEventListener("change", renderSummary));
-    $("clearFilters").addEventListener("click", () => { ["filterService","filterRegion","filterStatus"].forEach(id => $(id).value = ""); renderSummary(); });
-    ["detailService","detailRegion","detailSituation"].forEach(id => $(id).addEventListener("change", renderDetail));
+    ["filterService","filterRegión","filterStatus"].forEach(id => $(id).addEventListener("change", renderSummary));
+    $("clearFilters").addEventListener("click", () => { ["filterService","filterRegión","filterStatus"].forEach(id => $(id).value = ""); renderSummary(); });
+    ["detailService","detailRegión","detailSituation"].forEach(id => $(id).addEventListener("change", renderDetail));
     $("detailSearch").addEventListener("input", renderDetail);
-    ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
-    $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
+    ["historyService","historyRegión","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
+    $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegión","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
     $("region").addEventListener("change", e => { setCommunes(e.target.value); previousMatch = null; });
     ["service","commune","establishment"].forEach(id => $(id).addEventListener(id === "establishment" ? "blur" : "change", evaluatePrevious));
     $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "Sí"));
@@ -304,7 +304,7 @@
     $("reportForm").addEventListener("submit", saveReport);
     $("resetForm").addEventListener("click", () => setTimeout(resetForm, 0));
     $("exportButton").addEventListener("click", () => {
-      const headers = ["ID","Fecha de registro","Fecha y hora del reporte","Servicio","Programa o linea","Region","Comuna","Residencia","Direccion","Responsable","Correo","Telefono","Reporte anterior","Hubo cambios","ID reporte anterior","Estado","Nivel de dano o riesgo","Capacidad total","Personas atendidas","Situaciones presentes","Detalle de afectacion o riesgo","Personas electrodependientes","Numero de personas electrodependientes","Necesidades prioritarias","Medidas implementadas","Observaciones"];
+      const headers = ["ID","Fecha de registro","Fecha y hora del reporte","Servicio","Programa o línea","Región","Comuna","Residencia","Dirección","Responsable","Correo","Teléfono","Reporte anterior","Hubo cambios","ID reporte anterior","Estado","Nivel de daño o riesgo","Capacidad total","Personas atendidas","Situaciones presentes","Detalle de afectación o riesgo","Personas electrodependientes","Número de personas electrodependientes","Necesidades prioritarias","Medidas implementadas","Observaciones"];
       const rows = records.map(r => [r.id,r.createdAt,r.reportDate,r.service,r.program,r.region,r.commune,r.establishment,r.address,r.responsible,r.contactEmail,r.contactPhone,r.previousReport,r.hasChanges,r.previousRecordId,r.status,r.damageLevel,r.capacity,r.people,(r.situations||[]).join(" | "),r.damageDetail,r.electrodependent,r.electrodependentCount,(r.needs||[]).join(" | "),r.measures,r.observations]);
       const csv = "\ufeff" + [headers].concat(rows).map(row => row.map(v => `"${String(v == null ? "" : v).replace(/"/g,'""')}"`).join(";")).join("\r\n");
       const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
@@ -327,7 +327,7 @@
         $("formMessage").className = "form-message ok";
         setTimeout(resetForm, 800);
       } else {
-        $("formMessage").textContent = "No se pudo confirmar el guardado en Google Sheets. Revise la conexion e intente nuevamente.";
+        $("formMessage").textContent = "No se pudo confirmar el guardado en Google Sheets. Revise la conexión e intente nuevamente.";
         $("formMessage").className = "form-message error";
       }
     });
@@ -342,11 +342,12 @@
     latest = latestRecords(records);
     $("reportDate").value = nowLocal();
     $("reportDateDisplay").value = formatDateTime($("reportDate").value);
-    $("syncLine").textContent = "Sincronizando informacion compartida...";
+    $("syncLine").textContent = "Sincronizando información compartida...";
     renderAll();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
   else init();
 })();
+
 
