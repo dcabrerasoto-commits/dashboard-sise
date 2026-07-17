@@ -28,7 +28,7 @@ function doPost(e) {
   const keys = existingKeys_(sheet);
   const rows = [];
 
-  registros.forEach(registro => {
+  registros.filter(registro => String(registro.tipo || '') === 'Carga regional').forEach(registro => {
     const row = rowFromRecord_(registro, payload);
     const key = keyFromRow_(row);
     if (!keys.has(key)) {
