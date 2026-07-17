@@ -65,7 +65,7 @@
       const valid = response.records.filter(record => !invalidTestRecord(record));
       writeLocal(valid);
       cleanup();
-      setStatus(`Base compartida sincronizada: ${valid.length} reportes.`, "ok");
+      setStatus("El tablero muestra el último reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Histórico diario.", "ok");
       window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
     };
 
