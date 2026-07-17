@@ -154,6 +154,8 @@ function validateRecord_(r) {
     ["Comuna", r.commune],
     ["Establecimiento", r.establishment],
     ["Responsable", r.responsible],
+    ["Correo de contacto", r.contactEmail],
+    ["Teléfono de contacto", r.contactPhone],
     ["Estado", r.status],
     ["Nivel de daño", r.damageLevel]
   ];

@@ -112,7 +112,7 @@
     if (!establishmentLabel) return;
     const addressLabel = document.createElement("label");
     addressLabel.className = "span-2";
-    addressLabel.innerHTML = 'Dirección de la residencia<input id="address" name="address" type="text" maxlength="220" required placeholder="Calle, número y referencia, si corresponde">';
+    addressLabel.innerHTML = 'Dirección de la residencia<input id="address" name="address" type="text" maxlength="220" placeholder="Calle, número y referencia, si corresponde">';
     establishmentLabel.insertAdjacentElement("afterend", addressLabel);
   }
 
