@@ -200,7 +200,7 @@
       (!$("detailRegion").value || r.region === $("detailRegion").value) &&
       (!$("detailSituation").value || hasSituation(r, $("detailSituation").value)) &&
       (!q || [r.service,r.program,r.region,r.commune,r.establishment,r.responsible,r.contactEmail,r.contactPhone].some(v => key(v).includes(q)))
-    );
+    ).sort((a,b) => (new Date(b.reportDate || b.createdAt || 0).getTime() || 0) - (new Date(a.reportDate || a.createdAt || 0).getTime() || 0));
     $("detailTableBody").innerHTML = data.length ? data.map(r => `<tr><td>${esc(r.service)}</td><td>${esc(r.region)}</td><td>${esc(r.commune)}</td><td>${esc(r.establishment)}</td><td>${esc(r.status)}</td><td>${esc((r.situations || []).join(", ") || "Sin situaciones")}</td><td>${fmt(r.people)}</td><td>${esc(r.damageLevel || "Sin información")}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
   }
 
