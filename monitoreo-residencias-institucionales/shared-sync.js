@@ -50,7 +50,24 @@
       const value = record[key];
       cleaned[key] = Array.isArray(value) ? value.map(item => typeof item === "string" ? cleanText(item) : item) : (typeof value === "string" ? cleanText(value) : value);
     });
+    cleaned.region = normalizeRegion(cleaned.region, cleaned.commune);
     return cleaned;
+  }
+
+  function normalizeKey(value) {
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+  }
+
+  function normalizeRegion(region, commune) {
+    const catalog = window.MONITOREO_CATALOGOS || {};
+    const regionKey = normalizeKey(region);
+    const direct = (catalog.regiones || []).find(item => normalizeKey(item) === regionKey);
+    if (direct) return direct;
+    const communeKey = normalizeKey(commune || region);
+    const byCommune = Object.keys(catalog.comunasPorRegion || {}).find(regionName =>
+      (catalog.comunasPorRegion[regionName] || []).some(item => normalizeKey(item) === communeKey)
+    );
+    return byCommune || region;
   }
 
   function fetchSharedRecords() {
