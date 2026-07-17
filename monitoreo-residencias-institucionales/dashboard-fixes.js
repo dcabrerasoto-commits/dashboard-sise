@@ -143,7 +143,7 @@
     if ($("historyEntriesBody")) return;
     const card = document.createElement("article");
     card.className = "card table-card history-entry-card";
-    card.innerHTML = `<div class="card-head"><div><span class="card-kicker">DETALLE DE INGRESOS</span><h3>Reportes registrados</h3></div><span class="small-note">Cada fila corresponde a un ingreso guardado</span></div>
+    card.innerHTML = `<div class="card-head"><div><span class="card-kicker">DETALLE DE INGRESOS</span><h3>Reportes registrados</h3></div><span class="small-note" id="historyEntriesCount">Cada fila corresponde a un ingreso guardado</span></div>
       <div class="table-scroll"><table class="history-entry-table"><thead><tr><th>Fecha de reporte</th><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Dirección</th><th>Estado</th><th>Hubo cambios</th><th>Situaciones reportadas</th><th>Responsable</th></tr></thead><tbody id="historyEntriesBody"></tbody></table></div>`;
     history.appendChild(card);
   }
@@ -160,6 +160,8 @@
       const date = dateKey(record.reportDate || record.createdAt);
       return (!service || record.service === service) && (!region || record.region === region) && (!from || date >= from) && (!to || date <= to);
     }).sort((a,b) => new Date(b.reportDate || b.createdAt || 0) - new Date(a.reportDate || a.createdAt || 0));
+    const count = $("historyEntriesCount");
+    if (count) count.textContent = records.length ? `Mostrando ${records.length} ingresos guardados` : "Sin ingresos con los filtros actuales";
     body.innerHTML = records.length ? records.map(record => `<tr>
       <td>${esc(formatDateTime(record.reportDate || record.createdAt))}</td><td>${esc(record.service || "")}</td><td>${esc(record.region || "")}</td><td>${esc(record.commune || "")}</td>
       <td>${esc(record.establishment || "")}</td><td>${esc(record.address || "Sin información")}</td><td>${esc(record.status || "Sin información")}</td><td>${esc(record.hasChanges || "No aplica")}</td>
@@ -194,7 +196,7 @@
       .region-values{display:grid!important;grid-template-columns:auto auto auto auto auto!important;align-items:baseline!important;gap:4px!important;white-space:nowrap!important}
       .region-values b{font-size:17px!important;color:var(--primary,#154f55)!important}.region-values small{font-size:8px!important;text-transform:uppercase!important;color:#61777b!important}.region-values i{font-style:normal!important;color:#8a9b9e!important}
       #situationBars{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;gap:8px!important}#situationBars .bar-row{min-height:30px!important}
-      #historico .history-entry-card{margin-top:18px!important;border-top-color:var(--accent,#61b8e6)!important}#historico .history-entry-table{min-width:1450px!important}
+      #historico .history-entry-card{margin-top:18px!important;border-top-color:var(--accent,#61b8e6)!important}#historico .history-entry-card .table-scroll{max-height:620px!important;overflow:auto!important}#historico .history-entry-table{min-width:1450px!important}
       @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}@media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}
     `;
     document.head.appendChild(style);
