@@ -311,10 +311,20 @@
     $("printButton").addEventListener("click", () => window.print());
   }
 
+  function setupSharedData() {
+    window.addEventListener("residencias:shared-data", event => {
+      const shared = event.detail && Array.isArray(event.detail.records) ? event.detail.records : [];
+      records = shared;
+      latest = latestRecords(records);
+      renderAll();
+    });
+  }
+
   function init() {
     setupCatalogs();
     setupTabs();
     setupEvents();
+    setupSharedData();
     records = safeRead();
     latest = latestRecords(records);
     $("reportDate").value = nowLocal();
