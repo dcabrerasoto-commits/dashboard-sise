@@ -109,7 +109,7 @@
       return;
     }
     setupSubmitSync();
-    jsonpLoad();
+    setTimeout(jsonpLoad, 700);
     window.addEventListener("focus", () => {
       jsonpLoad();
     });
