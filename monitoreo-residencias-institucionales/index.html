@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260717-03">
 </head>
 <body>
 <header class="site-header">
@@ -29,10 +29,10 @@
         <button class="tab active" data-tab="resumen">Seguimiento nacional</button>
         <button class="tab" data-tab="detalle">Detalle</button>
         <button class="tab tab-entry" data-tab="ingreso">Ingreso de información</button>
-        <button class="tab" data-tab="metodologia">Definiciones</button>
       </nav>
       <div class="toolbar-actions">
         <span class="mode-pill" id="modePill">Versión piloto</span>
+        <button class="tab btn btn-light definition-action" data-tab="metodologia" type="button">Definiciones</button>
         <button class="btn btn-light" id="exportButton" type="button">Exportar CSV</button>
         <button class="btn btn-light" id="printButton" type="button">Imprimir</button>
       </div>
@@ -67,11 +67,11 @@
           <div class="card-head">
             <div>
               <span class="card-kicker">DISTRIBUCIÓN TERRITORIAL</span>
-              <h3>Mapa regional de afectación</h3>
+              <h3>Distribución regional de afectación</h3>
             </div>
-            <span class="small-note">Representación esquemática</span>
+            <span class="small-note">Detalle por región</span>
           </div>
-          <div id="regionMap" class="region-map" aria-label="Mapa esquemático de regiones"></div>
+          <div id="regionMap" class="region-map" aria-label="Detalle regional de afectación"></div>
           <div class="map-legend"><span><i class="level-0"></i>Sin reportes afectados</span><span><i class="level-1"></i>1 a 2</span><span><i class="level-2"></i>3 a 5</span><span><i class="level-3"></i>6 o más</span></div>
         </article>
 
@@ -277,8 +277,10 @@
   <div class="wrap">Ministerio de Desarrollo Social y Familia · Plataforma de seguimiento institucional</div>
 </footer>
 
-<script src="config.js"></script>
-<script src="catalogos.js"></script>
-<script src="app.js"></script>
+<script src="config.js?v=20260717-03"></script>
+<script src="catalogos.js?v=20260717-03"></script>
+<script src="app.js?v=20260717-03"></script>
+<script src="enhancements.js?v=20260717-03"></script>
+<script src="interface-v2.js?v=20260717-03"></script>
 </body>
 </html>
