@@ -86,8 +86,8 @@
       .trim()
       .split(/\s+/)
       .filter(Boolean);
-    while (["REM","PER","RLP","RVA","RFA","RDS","RTS","RMA","RPM","RSP","RESIDENCIA"].includes(words[0])) words.shift();
-    return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS"].includes(word)).join("");
+    while (["REM","PER","RLP","RVA","RFA","RDS","RTS","RMA","RPM","RSP","ELEAM","RESIDENCIA","HOGAR"].includes(words[0])) words.shift();
+    return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS","N"].includes(word)).join("");
   }
 
   function similarity(a, b) {
@@ -158,7 +158,7 @@
     groups.forEach(group => {
       const aliases = [];
       group.forEach(record => {
-        const alias = aliases.find(item => !explicitlyDifferentResidence(item.name, record.establishment) && similarity(item.name, record.establishment) >= 0.92);
+        const alias = aliases.find(item => !explicitlyDifferentResidence(item.name, record.establishment) && similarity(item.name, record.establishment) >= 0.88);
         const canonical = alias ? alias.key : `AUTO|${[record.service, record.region, record.commune].map(normalizeKey).join("|")}|${canonicalResidenceName(record.establishment)}`;
         if (!alias) aliases.push({name:record.establishment, key:canonical});
         record.residenceKey = record.residenceKey || canonical;
