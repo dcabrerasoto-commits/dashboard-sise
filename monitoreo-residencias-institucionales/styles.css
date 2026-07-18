@@ -206,21 +206,37 @@ legend{padding:0 8px;color:var(--primary);font-weight:850}
   .dashboard-grid{gap:12px}
 }
 @media print{
-  body{background:#fff;font-size:10px}
-  .site-header{color:#000;border-bottom:2px solid var(--accent)}
+  @page{size:landscape;margin:7mm}
+  body{background:#fff;font-size:8.5px}
+  .site-header{color:#000;border-bottom:1px solid var(--primary-dark)}
   .site-header .brand p,.sync-line,.toolbar,.filters,.site-footer,.small-note{display:none!important}
-  .header-inner{min-height:auto;padding:5mm 0}
-  .brand h1{font-size:21px;color:var(--primary-dark)}
+  .header-inner{min-height:auto;padding:2mm 0}
+  .brand h1{font-size:15px;color:var(--primary-dark);margin:1mm 0}
   .eyebrow{color:var(--primary)}
   .logo-box{box-shadow:none;border:1px solid #ddd}
   .app-shell{padding:0;margin:0;background:#fff;border:0}
   .panel{display:none!important}
   #resumen.panel{display:block!important}
-  .kpi-grid{grid-template-columns:repeat(3,1fr)}
-  .kpi{min-height:85px;padding:8px;box-shadow:none}
-  .kpi-value{font-size:23px}
-  .dashboard-grid{grid-template-columns:1fr 1fr}
-  .card{box-shadow:none;break-inside:avoid}
+  .section-heading{margin:2mm 0 3mm;padding-left:6px;border-left:3px solid var(--accent)}
+  .section-heading h2{font-size:16px;margin:0}
+  .section-heading p,.card-kicker,.legend{display:none!important}
+  .filter-bar{display:none!important}
+  .kpi-grid{grid-template-columns:repeat(6,1fr);gap:2mm;margin-bottom:3mm}
+  .kpi{min-height:20mm;padding:2mm;box-shadow:none}
+  .kpi-label{font-size:7px}
+  .kpi-value{font-size:18px;margin-top:1mm}
+  .kpi-sub{font-size:6px;margin-top:1mm;padding-top:1mm}
+  .dashboard-grid{display:block;margin:0}
+  .dashboard-grid .card:nth-child(2){display:none!important}
+  .card{box-shadow:none;break-inside:avoid;padding:2mm;margin-bottom:3mm;border-top-width:2px}
+  .card-head{margin-bottom:2mm;padding-bottom:1mm}
+  .card h3{font-size:13px;margin:0}
+  #regionMap{grid-template-columns:repeat(4,1fr)!important;gap:1mm!important}
+  .region-block{min-height:10mm!important;padding:1.5mm!important;gap:1mm!important}
+  .region-block strong{font-size:7.5px!important}
+  .region-values{min-width:0!important;padding:1mm!important;gap:2mm!important}
+  .region-values b{font-size:10px!important}
   table{min-width:0}
-  th,td{font-size:8px;padding:5px}
+  .table-scroll{overflow:visible}
+  th,td{font-size:7px;padding:2.5px}
 }
