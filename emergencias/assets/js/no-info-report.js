@@ -129,7 +129,36 @@
       setTimeout(actualizarDisponibilidad,0);
     },true);
 
+    let sincronizando=false;
+    async function refrescarReportesCompartidos(){
+      if(sincronizando||document.hidden)return;
+      sincronizando=true;
+      try{
+        const antes=JSON.stringify(reportesRegionales.map(d=>[d.region,d.comuna,d.id,d.fechaClave,d.estadoDiario,d.registradoMs,d.alfa,d.aplicadas,d.encuestadores]));
+        await cargarHistoricoNube();
+        deduplicarReportesRegionales();
+        const despues=JSON.stringify(reportesRegionales.map(d=>[d.region,d.comuna,d.id,d.fechaClave,d.estadoDiario,d.registradoMs,d.alfa,d.aplicadas,d.encuestadores]));
+        if(antes!==despues){
+          actualizarComunas();
+          actualizarEventos();
+          render();
+        }
+      }catch(error){
+        console.warn('No se pudo actualizar el autorreporte regional compartido.',error);
+      }finally{
+        sincronizando=false;
+      }
+    }
+
+    window.addEventListener('storage',evento=>{
+      if(evento.key==='uise-reportes-regionales'||evento.key==='uise-historico-diario')refrescarReportesCompartidos();
+    });
+    window.addEventListener('focus',refrescarReportesCompartidos);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)refrescarReportesCompartidos()});
+    setInterval(refrescarReportesCompartidos,10000);
+
     actualizarDisponibilidad();
+    refrescarReportesCompartidos();
     render();
   }
 
