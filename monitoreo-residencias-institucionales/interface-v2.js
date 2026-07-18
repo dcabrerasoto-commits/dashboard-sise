@@ -94,11 +94,16 @@
     else loadRules();
   }
 
+  function loadClearIndicatorLabels() {
+    loadAuxiliaryScript("clear-indicator-labels.js?v=20260718-07", "clearIndicatorLabels");
+  }
+
   function init() {
     injectStyles();
     ensureDefinitionsRight();
     addFormProgress();
     loadDetailPopups();
+    loadClearIndicatorLabels();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
