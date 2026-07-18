@@ -132,13 +132,27 @@
   }
 
   function setupResidenceCatalog() {
+    refreshResidenceCatalogOptions();
+  }
+
+  function refreshResidenceCatalogOptions() {
     const select = $("residenceCatalog");
     if (!select) return;
+    const selected = select.value;
+    const region = $("region")?.value || "";
+    const commune = $("commune")?.value || "";
+    const filtered = !region ? [] : RESIDENCE_CATALOG.filter(item =>
+      key(item.region) === key(region) &&
+      (!commune || key(item.commune) === key(commune))
+    );
     const options = RESIDENCE_CATALOG
-      .slice()
+      .filter(item => filtered.includes(item))
       .sort((a,b) => key(`${a.region}${a.commune}${a.establishment}`).localeCompare(key(`${b.region}${b.commune}${b.establishment}`)))
       .map(item => `<option value="${esc(item.code)}">${esc(`${item.region} / ${item.commune} / ${item.establishment}`)}</option>`);
-    select.innerHTML = '<option value="">Seleccione una residencia</option>' + options.join("") + `<option value="${OTHER_RESIDENCE}">Otra residencia</option>`;
+    const firstLabel = commune ? "Seleccione una residencia de la comuna" : (region ? "Seleccione una residencia de la región" : "Seleccione una región y comuna");
+    select.innerHTML = `<option value="">${esc(firstLabel)}</option>` + options.join("") + `<option value="${OTHER_RESIDENCE}">Otra residencia</option>`;
+    if ([...select.options].some(option => option.value === selected)) select.value = selected;
+    else select.value = "";
   }
 
   function similarity(a, b) {
@@ -466,10 +480,11 @@
     }));
     ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
     $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
-    $("region").addEventListener("change", e => { setCommunes(e.target.value); previousMatch = null; });
-    $("service").addEventListener("change", () => { previousMatch = null; updateResidenceCatalogMode(); evaluatePrevious(); });
+    $("region").addEventListener("change", e => { setCommunes(e.target.value); refreshResidenceCatalogOptions(); updateResidenceCatalogMode(); previousMatch = null; });
+    $("service").addEventListener("change", () => { previousMatch = null; refreshResidenceCatalogOptions(); updateResidenceCatalogMode(); evaluatePrevious(); });
     $("residenceCatalog")?.addEventListener("change", () => { previousMatch = null; updateResidenceCatalogMode(); evaluatePrevious(); });
-    ["commune","establishment"].forEach(id => $(id).addEventListener(id === "establishment" ? "blur" : "change", evaluatePrevious));
+    $("commune").addEventListener("change", () => { refreshResidenceCatalogOptions(); updateResidenceCatalogMode(); evaluatePrevious(); });
+    $("establishment").addEventListener("blur", evaluatePrevious);
     $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "Sí"));
     $("electrodependent").addEventListener("change", e => { const yes = e.target.value === "Sí"; $("electrodependentCountWrap").classList.toggle("hidden", !yes); $("electrodependentCount").required = yes; if (!yes) $("electrodependentCount").value = ""; });
     $("reportForm").addEventListener("submit", saveReport);
