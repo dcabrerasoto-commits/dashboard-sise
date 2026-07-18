@@ -70,7 +70,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .filter-bar select,.filter-bar input{width:100%;min-width:0;min-height:42px;border:1px solid #adc1be;padding:9px 10px;background:#fff;color:var(--text)}
 .filter-bar .btn{justify-self:start;min-height:42px}
 .kpi-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:14px;align-items:stretch}
-.kpi{position:relative;display:grid;grid-template-rows:auto 1fr auto auto;background:var(--primary-dark);border:1px solid var(--primary-dark);border-top:0;padding:14px 15px;min-height:118px;box-shadow:none;overflow:visible;transition:none;border-radius:0!important;color:#fff}
+.kpi{position:relative;display:grid;grid-template-rows:auto 1fr auto;background:var(--primary-dark);border:1px solid var(--primary-dark);border-top:0;padding:14px 15px;min-height:118px;box-shadow:none;overflow:visible;transition:none;border-radius:0!important;color:#fff}
 .kpi::after{display:none}
 .kpi:hover{transform:none;box-shadow:none;border-color:var(--primary-dark);background:var(--primary-dark)}
 .kpi:hover::after{display:none}
@@ -83,7 +83,6 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .kpi-value{align-self:center;margin-top:7px;color:#fff;font-size:38px;font-weight:850;line-height:1;font-variant-numeric:tabular-nums}
 .kpi.alert .kpi-value{color:#fff}
 .kpi-sub{margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,.18);color:#d6e4e3;font-size:11px;font-weight:650}
-.kpi-help{justify-self:start;margin-top:7px;padding:3px 7px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;font-size:10px;font-weight:650;text-transform:none;letter-spacing:0}
 .kpi[data-definition]::before{content:attr(data-definition);position:absolute;left:10px;right:10px;bottom:calc(100% + 8px);z-index:60;padding:10px 12px;background:#0b363b;color:#fff;font-size:12px;line-height:1.35;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,.20);opacity:0;visibility:hidden;transform:translateY(5px);transition:.15s ease;pointer-events:none}
 .kpi[data-definition]:hover::before,.kpi[data-definition]:focus::before{opacity:1;visibility:visible;transform:translateY(0)}
 .dashboard-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:16px;align-items:stretch}

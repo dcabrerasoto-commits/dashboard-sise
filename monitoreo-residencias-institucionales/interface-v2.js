@@ -7,7 +7,7 @@
     style.id = "seguimiento-ui-styles";
     style.textContent = `
       :root{--accent:#61b8e6!important;--accent-dark:#287fae!important;--accent-soft:#e8f6fd!important;--beige:#f5f0e7}
-      #resumen .kpi-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:8px!important}
+      #resumen .kpi-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important}
       #resumen .kpi{min-height:94px!important;padding:9px 10px!important;border-top-width:5px!important}
       #resumen .kpi::after{width:7px!important;height:7px!important;right:9px!important;top:9px!important}
       #resumen .kpi-label{font-size:10.5px!important;line-height:1.15!important;letter-spacing:.01em!important}
@@ -95,7 +95,7 @@
   }
 
   function loadClearIndicatorLabels() {
-    loadAuxiliaryScript("clear-indicator-labels.js?v=20260718-07", "clearIndicatorLabels");
+    return;
   }
 
   function init() {
