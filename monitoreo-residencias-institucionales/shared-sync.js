@@ -6,7 +6,9 @@
   const $ = id => document.getElementById(id);
   const RESIDENCE_CATALOG = window.MONITOREO_RESIDENCIAS_CATALOGO || [];
   const PROTECTION_SERVICE = "Servicio Nacional de Protección Especializada a la Niñez y Adolescencia";
+  const REFRESH_MS = 60000;
   let loading = false;
+  let refreshTimer = null;
 
   function setStatus(message, type) {
     const line = $("syncLine");
@@ -16,7 +18,7 @@
   }
 
   function invalidTestRecord(record) {
-    return /prueba/i.test(String(record?.establishment || "")) || /prueba/i.test(String(record?.responsible || ""));
+    return /prueba|validacion\s*tecnica|codex/i.test(String(record?.establishment || "")) || /prueba|validacion\s*tecnica|codex/i.test(String(record?.responsible || ""));
   }
 
   function shiftedRecord(record) {
@@ -26,43 +28,18 @@
 
   function cleanText(value) {
     return String(value ?? "")
-      .replaceAll("SÃ­", "Sí")
-      .replaceAll("SÃ", "Sí")
-      .replaceAll("NiÃ±ez", "Niñez")
-      .replaceAll("ProtecciÃ³n", "Protección")
-      .replaceAll("informaciÃ³n", "información")
-      .replaceAll("afectaciÃ³n", "afectación")
-      .replaceAll("RegiÃ³n", "Región")
-      .replaceAll("DirecciÃ³n", "Dirección")
-      .replaceAll("actualizaciÃ³n", "actualización")
-      .replaceAll("situaciÃ³n", "situación")
-      .replaceAll("evaluaciÃ³n", "evaluación")
-      .replaceAll("nÃºmero", "número")
-      .replaceAll("Ã¡", "á")
-      .replaceAll("Ã©", "é")
-      .replaceAll("Ã­", "í")
-      .replaceAll("Ã³", "ó")
-      .replaceAll("Ãº", "ú")
-      .replaceAll("Ã±", "ñ");
-  }
-
-  function cleanRecord(record) {
-    const cleaned = {};
-    Object.keys(record || {}).forEach(key => {
-      const value = record[key];
-      cleaned[key] = Array.isArray(value) ? value.map(item => typeof item === "string" ? cleanText(item) : item) : (typeof value === "string" ? cleanText(value) : value);
-    });
-    cleaned.region = normalizeRegion(cleaned.region, cleaned.commune);
-    return cleaned;
+      .replaceAll("SÃ­", "Sí").replaceAll("SÃ", "Sí")
+      .replaceAll("NiÃ±ez", "Niñez").replaceAll("ProtecciÃ³n", "Protección")
+      .replaceAll("informaciÃ³n", "información").replaceAll("afectaciÃ³n", "afectación")
+      .replaceAll("RegiÃ³n", "Región").replaceAll("DirecciÃ³n", "Dirección")
+      .replaceAll("actualizaciÃ³n", "actualización").replaceAll("situaciÃ³n", "situación")
+      .replaceAll("evaluaciÃ³n", "evaluación").replaceAll("nÃºmero", "número")
+      .replaceAll("Ã¡", "á").replaceAll("Ã©", "é").replaceAll("Ã­", "í")
+      .replaceAll("Ã³", "ó").replaceAll("Ãº", "ú").replaceAll("Ã±", "ñ");
   }
 
   function normalizeKey(value) {
-    return String(value || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^A-Za-z0-9]+/g, "")
-      .toUpperCase()
-      .trim();
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   }
 
   function normalizeRegion(region, commune) {
@@ -77,17 +54,19 @@
     return byCommune || region;
   }
 
+  function cleanRecord(record) {
+    const cleaned = {};
+    Object.keys(record || {}).forEach(field => {
+      const value = record[field];
+      cleaned[field] = Array.isArray(value) ? value.map(item => typeof item === "string" ? cleanText(item) : item) : (typeof value === "string" ? cleanText(value) : value);
+    });
+    cleaned.region = normalizeRegion(cleaned.region, cleaned.commune);
+    return cleaned;
+  }
+
   function canonicalResidenceName(value) {
-    const words = String(value || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toUpperCase()
-      .replace(/[^A-Z0-9]+/g, " ")
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean);
-    while (["RESIDENCIA"].includes(words[0])) words.shift();
-    return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS","N","PER"].includes(word)).join("");
+    const removable = new Set(["RESIDENCIA","RESIDENCIAL","PROTECCION","PARA","DE","DEL","LA","EL","LOS","LAS","PER","REM","RLP","RVA","RTA","RTS","RTT","RDS","RMA","RPM","RFA","HOGAR"]);
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().replace(/[^A-Z0-9]+/g, " ").trim().split(/\s+/).filter(word => word && !removable.has(word)).join("");
   }
 
   function similarity(a, b) {
@@ -96,50 +75,33 @@
     if (!left || !right) return 0;
     if (left === right) return 1;
     if (left.includes(right) || right.includes(left)) return 0.94;
-    const rows = left.length;
-    const cols = right.length;
+    const rows = left.length, cols = right.length;
     const dp = Array.from({length:rows + 1}, () => Array(cols + 1).fill(0));
     for (let i = 0; i <= rows; i++) dp[i][0] = i;
     for (let j = 0; j <= cols; j++) dp[0][j] = j;
-    for (let i = 1; i <= rows; i++) {
-      for (let j = 1; j <= cols; j++) {
-        dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (left[i - 1] === right[j - 1] ? 0 : 1));
-      }
-    }
+    for (let i = 1; i <= rows; i++) for (let j = 1; j <= cols; j++) dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (left[i - 1] === right[j - 1] ? 0 : 1));
     return 1 - dp[rows][cols] / Math.max(rows, cols);
   }
 
   function lastToken(value) {
-    return String(value || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toUpperCase()
-      .replace(/[^A-Z0-9]+/g, " ")
-      .trim()
-      .split(/\s+/)
-      .filter(Boolean)
-      .pop() || "";
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().replace(/[^A-Z0-9]+/g, " ").trim().split(/\s+/).filter(Boolean).pop() || "";
   }
 
   function explicitlyDifferentResidence(a, b) {
     const distinct = new Set(["F","M","I","II","III","IV","1","2","3","4"]);
-    const left = lastToken(a);
-    const right = lastToken(b);
+    const left = lastToken(a), right = lastToken(b);
     return left !== right && distinct.has(left) && distinct.has(right);
   }
 
   function catalogMatch(record) {
     if (normalizeKey(record.service) !== normalizeKey(PROTECTION_SERVICE)) return null;
-    const candidates = RESIDENCE_CATALOG.filter(item =>
-      normalizeKey(item.region) === normalizeKey(record.region) &&
-      normalizeKey(item.commune) === normalizeKey(record.commune)
-    );
+    const candidates = RESIDENCE_CATALOG.filter(item => normalizeKey(item.region) === normalizeKey(record.region) && normalizeKey(item.commune) === normalizeKey(record.commune));
     let best = null;
     candidates.forEach(item => {
       const score = similarity(item.establishment, record.establishment);
       if (!best || score > best.score) best = {item, score};
     });
-    return best && best.score >= 0.88 ? best.item : null;
+    return best && best.score >= 0.86 ? best.item : null;
   }
 
   function enrichResidenceIdentities(records) {
@@ -149,6 +111,7 @@
       if (match) {
         record.residenceCode = match.code || record.residenceCode;
         record.residenceKey = `${normalizeKey(record.service)}|CODIGO|${normalizeKey(match.code)}`;
+        record.establishmentOfficial = match.establishment || record.establishment;
         return;
       }
       const groupKey = [record.service, record.region, record.commune].map(normalizeKey).join("|");
@@ -157,8 +120,9 @@
     });
     groups.forEach(group => {
       const aliases = [];
+      group.sort((a,b) => new Date(a.reportDate || a.createdAt || 0) - new Date(b.reportDate || b.createdAt || 0));
       group.forEach(record => {
-        const alias = aliases.find(item => !explicitlyDifferentResidence(item.name, record.establishment) && similarity(item.name, record.establishment) >= 0.88);
+        const alias = aliases.find(item => !explicitlyDifferentResidence(item.name, record.establishment) && similarity(item.name, record.establishment) >= 0.86);
         const canonical = alias ? alias.key : `AUTO|${[record.service, record.region, record.commune].map(normalizeKey).join("|")}|${canonicalResidenceName(record.establishment)}`;
         if (!alias) aliases.push({name:record.establishment, key:canonical});
         record.residenceKey = canonical;
@@ -167,29 +131,55 @@
     return records;
   }
 
+  function minuteKey(value) {
+    const time = new Date(value || 0).getTime();
+    return time ? Math.floor(time / 60000) : normalizeKey(value);
+  }
+
+  function submissionFingerprint(record) {
+    return [
+      minuteKey(record.reportDate || record.createdAt), normalizeKey(record.service), normalizeKey(record.region), normalizeKey(record.commune),
+      canonicalResidenceName(record.establishment), normalizeKey(record.responsible), normalizeKey(record.status), normalizeKey(record.damageLevel),
+      Number(record.capacity || 0), Number(record.people || 0), (record.situations || []).map(normalizeKey).sort().join("|"),
+      normalizeKey(record.damageDetail), normalizeKey(record.measures), normalizeKey(record.observations)
+    ].join("§");
+  }
+
+  function deduplicateSharedRecords(input) {
+    const byId = new Map();
+    (input || []).forEach(record => {
+      const id = String(record?.id || "").trim();
+      if (!id) return;
+      const prior = byId.get(id);
+      const currentTime = new Date(record.reportDate || record.createdAt || 0).getTime() || 0;
+      const priorTime = prior ? (new Date(prior.reportDate || prior.createdAt || 0).getTime() || 0) : -1;
+      if (!prior || currentTime >= priorTime) byId.set(id, record);
+    });
+    const byFingerprint = new Map();
+    Array.from(byId.values()).forEach(record => {
+      const fingerprint = submissionFingerprint(record);
+      const prior = byFingerprint.get(fingerprint);
+      if (!prior) {
+        byFingerprint.set(fingerprint, record);
+        return;
+      }
+      const currentTime = new Date(record.reportDate || record.createdAt || 0).getTime() || 0;
+      const priorTime = new Date(prior.reportDate || prior.createdAt || 0).getTime() || 0;
+      if (currentTime > priorTime) byFingerprint.set(fingerprint, record);
+    });
+    return Array.from(byFingerprint.values());
+  }
+
   function fetchSharedRecords() {
     const callbackName = `__residenciasSync_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => finish(() => reject(new Error("No fue posible descargar la base compartida."))), 30000);
-
-      function finish(done) {
-        clearTimeout(timeout);
-        delete window[callbackName];
-        script.remove();
-        done();
-      }
-
-      window[callbackName] = response => {
-        finish(() => {
-          if (!response || response.ok !== true || !Array.isArray(response.records)) {
-            reject(new Error(response?.error || "La respuesta de sincronización no es válida."));
-            return;
-          }
-          resolve(response.records);
-        });
-      };
-
+      function finish(done) { clearTimeout(timeout); delete window[callbackName]; script.remove(); done(); }
+      window[callbackName] = response => finish(() => {
+        if (!response || response.ok !== true || !Array.isArray(response.records)) return reject(new Error(response?.error || "La respuesta de sincronización no es válida."));
+        resolve(response.records);
+      });
       script.onerror = () => finish(() => reject(new Error("No fue posible conectar con Google Sheets.")));
       script.src = `${endpoint}?action=list&callback=${encodeURIComponent(callbackName)}&_=${Date.now()}`;
       document.head.appendChild(script);
@@ -202,33 +192,28 @@
       window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:[]}}));
       return [];
     }
-    const valid = enrichResidenceIdentities(shared.filter(record => !invalidTestRecord(record)).map(cleanRecord));
-    setStatus("El tablero muestra el último reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Histórico diario.", "ok");
+    const cleaned = shared.filter(record => !invalidTestRecord(record)).map(cleanRecord);
+    const valid = enrichResidenceIdentities(deduplicateSharedRecords(cleaned));
+    setStatus(`Información compartida actualizada: ${valid.length} reportes válidos. Todas las personas visualizan esta misma base.`, "ok");
     window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
     return valid;
   }
 
   function jsonpLoad() {
-    if (!endpoint || loading) return;
+    if (!endpoint || loading || document.hidden) return;
     loading = true;
     setStatus("Sincronizando información compartida...", "loading");
-    fetchSharedRecords()
-      .then(applySharedRecords)
-      .catch(error => setStatus(`${error.message} No se muestran datos locales.`, "error"))
-      .finally(() => { loading = false; });
+    fetchSharedRecords().then(applySharedRecords).catch(error => setStatus(`${error.message} No se muestran datos locales.`, "error")).finally(() => { loading = false; });
   }
 
   async function postRecord(record) {
-    if (!endpoint || !record || invalidTestRecord(record)) return;
+    if (!endpoint || !record || invalidTestRecord(record)) {
+      window.dispatchEvent(new CustomEvent("residencias:shared-save", {detail:{ok:false, record, message:"Registro de prueba rechazado."}}));
+      return;
+    }
     setStatus("Guardando el reporte en la base compartida...", "loading");
     try {
-      await fetch(endpoint, {
-        method: "POST",
-        mode: "no-cors",
-        cache: "no-store",
-        headers: {"Content-Type":"text/plain;charset=utf-8"},
-        body: JSON.stringify({action:"save", record})
-      });
+      await fetch(endpoint, {method:"POST", mode:"no-cors", cache:"no-store", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify({action:"save", record})});
       setStatus("Verificando que el reporte quedó en la base compartida...", "loading");
       let lastError = null;
       for (let attempt = 0; attempt < 14; attempt++) {
@@ -239,9 +224,7 @@
             window.dispatchEvent(new CustomEvent("residencias:shared-save", {detail:{ok:true, record}}));
             return;
           }
-        } catch (error) {
-          lastError = error;
-        }
+        } catch (error) { lastError = error; }
         setStatus(`Verificando guardado en Google Sheets (${attempt + 1}/14)...`, "loading");
       }
       throw new Error(lastError?.message || "El reporte no aparece todavía en Google Sheets.");
@@ -251,26 +234,16 @@
     }
   }
 
-  function setupSubmitSync() {
-    window.addEventListener("residencias:pending-record", event => {
-      const record = event.detail && event.detail.record;
-      if (record) postRecord(record);
-    });
-  }
-
   function init() {
-    if (!endpoint) {
-      setStatus("Base compartida pendiente de activacion.", "pending");
-      return;
-    }
-    setupSubmitSync();
-    setTimeout(jsonpLoad, 700);
-    window.addEventListener("focus", () => {
-      jsonpLoad();
-    });
+    if (!endpoint) { setStatus("Base compartida pendiente de activación.", "pending"); return; }
+    window.addEventListener("residencias:pending-record", event => { const record = event.detail && event.detail.record; if (record) postRecord(record); });
+    setTimeout(jsonpLoad, 500);
+    refreshTimer = setInterval(jsonpLoad, REFRESH_MS);
+    window.addEventListener("focus", jsonpLoad);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) jsonpLoad(); });
+    window.addEventListener("beforeunload", () => { if (refreshTimer) clearInterval(refreshTimer); });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
   else init();
 })();
-
