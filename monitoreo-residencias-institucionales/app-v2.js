@@ -24,6 +24,10 @@
     const d = new Date(value);
     return Number.isNaN(d.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}).format(d);
   };
+  const updatePrintTimestamp = () => {
+    const target = $("printTimestamp");
+    if (target) target.textContent = `Minuta generada el ${formatDateTime(new Date())}`;
+  };
   const dateKey = (value) => {
     const d = new Date(value);
     if (Number.isNaN(d.getTime())) return "";
@@ -496,7 +500,7 @@
       const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
       const a = document.createElement("a"); a.href = url; a.download = `seguimiento_residencias_${dateKey(new Date())}.csv`; a.click(); URL.revokeObjectURL(url);
     });
-    $("printButton").addEventListener("click", () => window.print());
+    $("printButton").addEventListener("click", () => { updatePrintTimestamp(); window.print(); });
   }
 
   function setupSharedData() {
@@ -529,6 +533,7 @@
     $("reportDate").value = nowLocal();
     $("reportDateDisplay").value = formatDateTime($("reportDate").value);
     updateResidenceCatalogMode();
+    updatePrintTimestamp();
     $("syncLine").textContent = "Sincronizando información compartida...";
     renderAll();
   }
