@@ -310,13 +310,13 @@
 
   function renderKpis(data) {
     const cards = [
-      ["Sin afectación", data.filter(r => r.status === "Sin afectación").length, "Estado vigente", ""],
-      ["Con afectación", data.filter(affected).length, "Requiere seguimiento", "alert"],
-      ["Sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Situación presente", "alert"],
-      ["Aguas servidas", data.filter(r => hasSituation(r, "Exposición a aguas servidas")).length, "Exposición reportada", "alert"],
-      ["Electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "Residencias informadas", "alert"]
+      ["Residencias sin afectación", data.filter(r => r.status === "Sin afectación").length, "Último reporte sin daños ni situaciones de emergencia", "", "Residencias cuyo último reporte vigente indica estado sin afectación."],
+      ["Residencias con afectación", data.filter(affected).length, "Requieren seguimiento", "alert", "Residencias cuyo último reporte vigente indica afectación o alguna situación reportada."],
+      ["Residencias sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Corte eléctrico informado", "alert", "Residencias cuyo último reporte vigente informa falta de electricidad."],
+      ["Residencias con aguas servidas", data.filter(r => hasSituation(r, "Exposición a aguas servidas")).length, "Exposición informada", "alert", "Residencias cuyo último reporte vigente informa exposición a aguas servidas."],
+      ["Residencias con electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "Personas electrodependientes informadas", "alert", "Residencias cuyo último reporte vigente informa personas electrodependientes."]
     ];
-    $("kpiGrid").innerHTML = cards.map(([label,value,sub,klass]) => `<article class="kpi ${klass}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
+    $("kpiGrid").innerHTML = cards.map(([label,value,sub,klass,definition]) => `<article class="kpi ${klass}" tabindex="0" title="${esc(definition)}" data-definition="${esc(definition)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div><span class="kpi-help">Definición</span></article>`).join("");
   }
 
   function byRegión(data) {
