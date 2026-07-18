@@ -3,7 +3,7 @@
 
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
-  const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+  const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   const fmt = value => new Intl.NumberFormat("es-CL").format(Number(value || 0));
   const formatDateTime = value => {
     const date = new Date(value);
@@ -31,6 +31,8 @@
   }
 
   function identity(record) {
+    const code = key(record.residenceCode || record.residenceKey || "");
+    if (code) return [key(record.service), "CODIGO", code].join("|");
     return [record.service, record.region, record.commune, record.establishment].map(key).join("|");
   }
 
