@@ -87,7 +87,7 @@
       .split(/\s+/)
       .filter(Boolean);
     while (["RESIDENCIA"].includes(words[0])) words.shift();
-    return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS","N"].includes(word)).join("");
+    return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS","N","PER"].includes(word)).join("");
   }
 
   function similarity(a, b) {
@@ -147,7 +147,7 @@
     records.forEach(record => {
       const match = catalogMatch(record);
       if (match) {
-        record.residenceCode = record.residenceCode || match.code;
+        record.residenceCode = match.code || record.residenceCode;
         record.residenceKey = `${normalizeKey(record.service)}|CODIGO|${normalizeKey(match.code)}`;
         return;
       }
@@ -161,7 +161,7 @@
         const alias = aliases.find(item => !explicitlyDifferentResidence(item.name, record.establishment) && similarity(item.name, record.establishment) >= 0.88);
         const canonical = alias ? alias.key : `AUTO|${[record.service, record.region, record.commune].map(normalizeKey).join("|")}|${canonicalResidenceName(record.establishment)}`;
         if (!alias) aliases.push({name:record.establishment, key:canonical});
-        record.residenceKey = record.residenceKey || canonical;
+        record.residenceKey = canonical;
       });
     });
     return records;
@@ -171,7 +171,7 @@
     const callbackName = `__residenciasSync_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
     return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => finish(() => reject(new Error("No fue posible descargar la base compartida."))), 15000);
+      const timeout = setTimeout(() => finish(() => reject(new Error("No fue posible descargar la base compartida."))), 30000);
 
       function finish(done) {
         clearTimeout(timeout);
@@ -229,16 +229,22 @@
         headers: {"Content-Type":"text/plain;charset=utf-8"},
         body: JSON.stringify({action:"save", record})
       });
-      setStatus("Verificando que el reporte quedo en la base compartida...", "loading");
-      for (let attempt = 0; attempt < 6; attempt++) {
-        await new Promise(resolve => setTimeout(resolve, attempt ? 1500 : 700));
-        const valid = applySharedRecords(await fetchSharedRecords());
-        if (valid.some(item => item.id === record.id)) {
-          window.dispatchEvent(new CustomEvent("residencias:shared-save", {detail:{ok:true, record}}));
-          return;
+      setStatus("Verificando que el reporte quedó en la base compartida...", "loading");
+      let lastError = null;
+      for (let attempt = 0; attempt < 14; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, attempt ? 2000 : 1200));
+        try {
+          const valid = applySharedRecords(await fetchSharedRecords());
+          if (valid.some(item => item.id === record.id)) {
+            window.dispatchEvent(new CustomEvent("residencias:shared-save", {detail:{ok:true, record}}));
+            return;
+          }
+        } catch (error) {
+          lastError = error;
         }
+        setStatus(`Verificando guardado en Google Sheets (${attempt + 1}/14)...`, "loading");
       }
-      throw new Error("El reporte no aparece todavia en Google Sheets.");
+      throw new Error(lastError?.message || "El reporte no aparece todavía en Google Sheets.");
     } catch (error) {
       setStatus("No se pudo confirmar el guardado en la base compartida.", "error");
       window.dispatchEvent(new CustomEvent("residencias:shared-save", {detail:{ok:false, record, message:error.message}}));

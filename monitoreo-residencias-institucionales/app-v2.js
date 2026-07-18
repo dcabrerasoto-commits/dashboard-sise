@@ -9,6 +9,7 @@
   let latest = [];
   let previousMatch = null;
   let detailSort = {field:"reportDate", direction:"desc"};
+  let savingInProgress = false;
 
   const $ = (id) => document.getElementById(id);
   const $$ = (selector, root = document) => Array.prototype.slice.call(root.querySelectorAll(selector));
@@ -35,6 +36,17 @@
     return local.toISOString().slice(0, 10);
   };
   const checkedValues = (name) => $$(`input[name="${name}"]:checked`).map(x => x.value);
+  function setSavingState(active) {
+    savingInProgress = active;
+    const submit = document.querySelector('#reportForm button[type="submit"]');
+    if (submit) {
+      if (!submit.dataset.defaultText) submit.dataset.defaultText = submit.textContent;
+      submit.disabled = active;
+      submit.textContent = active ? "Guardando..." : submit.dataset.defaultText;
+    }
+    const reset = $("resetForm");
+    if (reset) reset.disabled = active;
+  }
   const shiftedRecord = (record) => {
     const service = String(record?.service || "").trim();
     return /^\d{1,2}:\d{2}(:\d{2})?$/.test(service) || /^\d{4}-\d{2}-\d{2}T/.test(service);
@@ -421,6 +433,7 @@
 
   function saveReport(event) {
     event.preventDefault();
+    if (savingInProgress) return;
     const similar = similarCatalogResidence();
     if (similar) {
       $("formMessage").textContent = `La residencia ingresada se parece a "${similar.establishment}". Selecciónela desde el catálogo o confirme que corresponde a otra residencia con un nombre claramente distinto.`;
@@ -438,6 +451,7 @@
       return;
     }
     const record = buildRecord();
+    setSavingState(true);
     records.push(record);
     latest = latestRecords(records);
     renderAll();
@@ -515,8 +529,9 @@
       if (detail.ok) {
         $("formMessage").textContent = "Reporte guardado correctamente en la base compartida.";
         $("formMessage").className = "form-message ok";
-        setTimeout(resetForm, 800);
+        setTimeout(() => { resetForm(); setSavingState(false); }, 800);
       } else {
+        setSavingState(false);
         $("formMessage").textContent = "No se pudo confirmar el guardado en Google Sheets. Revise la conexión e intente nuevamente.";
         $("formMessage").className = "form-message error";
       }
