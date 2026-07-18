@@ -4,6 +4,8 @@
   const config = window.MONITOREO_SYNC_CONFIG || {};
   const endpoint = String(config.webAppUrl || "").trim();
   const $ = id => document.getElementById(id);
+  const RESIDENCE_CATALOG = window.MONITOREO_RESIDENCIAS_CATALOGO || [];
+  const PROTECTION_SERVICE = "Servicio Nacional de Protección Especializada a la Niñez y Adolescencia";
   let loading = false;
 
   function setStatus(message, type) {
@@ -75,6 +77,96 @@
     return byCommune || region;
   }
 
+  function canonicalResidenceName(value) {
+    const words = String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]+/g, " ")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean);
+    while (["REM","PER","RLP","RVA","RFA","RDS","RTS","RMA","RPM","RSP","RESIDENCIA"].includes(words[0])) words.shift();
+    return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS"].includes(word)).join("");
+  }
+
+  function similarity(a, b) {
+    const left = canonicalResidenceName(a);
+    const right = canonicalResidenceName(b);
+    if (!left || !right) return 0;
+    if (left === right) return 1;
+    if (left.includes(right) || right.includes(left)) return 0.94;
+    const rows = left.length;
+    const cols = right.length;
+    const dp = Array.from({length:rows + 1}, () => Array(cols + 1).fill(0));
+    for (let i = 0; i <= rows; i++) dp[i][0] = i;
+    for (let j = 0; j <= cols; j++) dp[0][j] = j;
+    for (let i = 1; i <= rows; i++) {
+      for (let j = 1; j <= cols; j++) {
+        dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (left[i - 1] === right[j - 1] ? 0 : 1));
+      }
+    }
+    return 1 - dp[rows][cols] / Math.max(rows, cols);
+  }
+
+  function lastToken(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]+/g, " ")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .pop() || "";
+  }
+
+  function explicitlyDifferentResidence(a, b) {
+    const distinct = new Set(["F","M","I","II","III","IV","1","2","3","4"]);
+    const left = lastToken(a);
+    const right = lastToken(b);
+    return left !== right && distinct.has(left) && distinct.has(right);
+  }
+
+  function catalogMatch(record) {
+    if (normalizeKey(record.service) !== normalizeKey(PROTECTION_SERVICE)) return null;
+    const candidates = RESIDENCE_CATALOG.filter(item =>
+      normalizeKey(item.region) === normalizeKey(record.region) &&
+      normalizeKey(item.commune) === normalizeKey(record.commune)
+    );
+    let best = null;
+    candidates.forEach(item => {
+      const score = similarity(item.establishment, record.establishment);
+      if (!best || score > best.score) best = {item, score};
+    });
+    return best && best.score >= 0.88 ? best.item : null;
+  }
+
+  function enrichResidenceIdentities(records) {
+    const groups = new Map();
+    records.forEach(record => {
+      const match = catalogMatch(record);
+      if (match) {
+        record.residenceCode = record.residenceCode || match.code;
+        record.residenceKey = `${normalizeKey(record.service)}|CODIGO|${normalizeKey(match.code)}`;
+        return;
+      }
+      const groupKey = [record.service, record.region, record.commune].map(normalizeKey).join("|");
+      if (!groups.has(groupKey)) groups.set(groupKey, []);
+      groups.get(groupKey).push(record);
+    });
+    groups.forEach(group => {
+      const aliases = [];
+      group.forEach(record => {
+        const alias = aliases.find(item => !explicitlyDifferentResidence(item.name, record.establishment) && similarity(item.name, record.establishment) >= 0.92);
+        const canonical = alias ? alias.key : `AUTO|${[record.service, record.region, record.commune].map(normalizeKey).join("|")}|${canonicalResidenceName(record.establishment)}`;
+        if (!alias) aliases.push({name:record.establishment, key:canonical});
+        record.residenceKey = record.residenceKey || canonical;
+      });
+    });
+    return records;
+  }
+
   function fetchSharedRecords() {
     const callbackName = `__residenciasSync_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
@@ -110,7 +202,7 @@
       window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:[]}}));
       return [];
     }
-    const valid = shared.filter(record => !invalidTestRecord(record)).map(cleanRecord);
+    const valid = enrichResidenceIdentities(shared.filter(record => !invalidTestRecord(record)).map(cleanRecord));
     setStatus("El tablero muestra el último reporte informado por cada residencia. Los reportes anteriores se pueden revisar en Histórico diario.", "ok");
     window.dispatchEvent(new CustomEvent("residencias:shared-data", {detail:{records:valid}}));
     return valid;
