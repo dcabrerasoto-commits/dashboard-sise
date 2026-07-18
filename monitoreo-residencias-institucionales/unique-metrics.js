@@ -108,8 +108,8 @@
     section.className = "unique-metrics-section";
     section.innerHTML = `
       <div class="unique-metrics-head">
-        <div><span class="card-kicker">COBERTURA ACUMULADA</span><h3>Residencias únicas y variación diaria</h3></div>
-        <span class="small-note">Cada residencia se cuenta una sola vez</span>
+        <div><span class="card-kicker">RESIDENCIAS INFORMADAS</span><h3>Total informado y movimiento del último día</h3></div>
+        <span class="small-note">Cada residencia se cuenta una sola vez en el total</span>
       </div>
       <div class="unique-metrics-grid" id="uniqueMetricsGrid"></div>`;
     kpiGrid.insertAdjacentElement("beforebegin", section);
@@ -125,15 +125,15 @@
     const stats = dailyStats(base);
     const last = stats.length ? stats[stats.length - 1] : null;
     const cards = [
-      ["Residencias únicas informadas", latest.length, "Total acumulado con los filtros actuales"],
-      ["Nuevas residencias del último día", last ? last.newResidences : 0, last ? formatDate(last.day) : "Sin reportes"],
-      ["Residencias informadas el último día", last ? last.uniqueDaily : 0, "Residencias distintas que reportaron"],
-      ["Actualizaciones del último día", last ? last.updates : 0, "Reportes de residencias ya informadas"]
+      ["Total de residencias informadas", latest.length, "Residencias distintas registradas hasta ahora"],
+      ["Nuevas residencias informadas", last ? last.newResidences : 0, last ? `Primera vez informadas el ${formatDate(last.day)}` : "Sin reportes"],
+      ["Residencias que reportaron", last ? last.uniqueDaily : 0, last ? `Residencias distintas el ${formatDate(last.day)}` : "Sin reportes"],
+      ["Actualizaciones recibidas", last ? last.updates : 0, "Reportes de residencias ya registradas"]
     ];
     container.innerHTML = cards.map(([label, value, sub]) => `<article class="kpi unique-kpi"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
 
     const firstExisting = $("kpiGrid")?.querySelector(".kpi .kpi-label");
-    if (firstExisting) firstExisting.textContent = "Residencias únicas vigentes";
+    if (firstExisting) firstExisting.textContent = "Residencias informadas";
   }
 
   function detailFilteredLatest() {
@@ -165,7 +165,7 @@
     if (!note) return;
     const visible = detailFilteredLatest();
     const total = latestByResidence(records).length;
-    note.innerHTML = `<strong>${fmt(visible.length)}</strong> residencias únicas visibles. Cada fila corresponde al reporte más reciente de una residencia. <span>Total acumulado nacional: <strong>${fmt(total)}</strong>.</span>`;
+    note.innerHTML = `<strong>${fmt(visible.length)}</strong> residencias informadas visibles. Cada fila muestra solamente el reporte más reciente de una residencia. <span>Total nacional informado: <strong>${fmt(total)}</strong>.</span>`;
   }
 
   function historyBaseRecords() {
@@ -184,7 +184,7 @@
     const note = document.createElement("p");
     note.id = "historyUniqueDefinition";
     note.className = "unique-count-note";
-    note.textContent = "Nuevas residencias del día corresponde a la diferencia respecto del acumulado anterior. El total acumulado cuenta cada residencia una sola vez.";
+    note.textContent = "Nuevas residencias son las informadas por primera vez ese día. Residencias actualizadas son las que ya estaban registradas y enviaron nueva información. El total hasta la fecha cuenta cada residencia una sola vez.";
     heading.appendChild(note);
   }
 
@@ -201,10 +201,10 @@
     table.querySelector("thead").innerHTML = `<tr>
       <th>Fecha de reporte</th>
       <th>Reportes recibidos</th>
-      <th>Residencias únicas del día</th>
-      <th>Nuevas residencias del día</th>
-      <th>Actualizaciones del día</th>
-      <th>Total acumulado de residencias únicas</th>
+      <th>Residencias que reportaron</th>
+      <th>Nuevas residencias</th>
+      <th>Residencias actualizadas</th>
+      <th>Total de residencias informadas hasta la fecha</th>
       <th>Con afectación</th>
       <th>Sin afectación</th>
       <th>En evaluación</th>
