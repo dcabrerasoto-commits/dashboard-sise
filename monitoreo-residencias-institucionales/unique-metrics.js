@@ -130,7 +130,7 @@
       ["Residencias que reportaron en la última fecha", last ? last.uniqueDaily : 0, last ? `Residencias distintas con reporte el ${formatDate(last.day)}` : "Sin reportes"],
       ["Reportes recibidos en la última fecha", last ? last.reports : 0, last ? `Formularios enviados el ${formatDate(last.day)}` : "Sin reportes"]
     ];
-    container.innerHTML = cards.map(([label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div><span class="kpi-help">Definición</span></article>`).join("");
+    container.innerHTML = cards.map(([label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
 
   }
 
@@ -236,7 +236,7 @@
       .unique-metrics-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px}
       .unique-metrics-head h3{margin:3px 0 0;color:#153f45}
       .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-      .unique-kpi{min-height:126px!important;display:grid!important;grid-template-rows:auto 1fr auto auto!important;overflow:visible!important}
+      .unique-kpi{min-height:126px!important;display:grid!important;grid-template-rows:auto 1fr auto!important;overflow:visible!important}
       .unique-kpi .kpi-value{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important}
       .unique-count-note{margin-top:8px!important;padding:10px 12px;background:#eef8fc;border-left:4px solid #61b8e6;color:#315b62}
       .unique-count-note span{margin-left:8px}
