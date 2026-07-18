@@ -310,7 +310,6 @@
 
   function renderKpis(data) {
     const cards = [
-      ["Establecimientos informados", data.length, "Último reporte vigente", "primary"],
       ["Sin afectación", data.filter(r => r.status === "Sin afectación").length, "Estado vigente", ""],
       ["Con afectación", data.filter(affected).length, "Requiere seguimiento", "alert"],
       ["Sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Situación presente", "alert"],
