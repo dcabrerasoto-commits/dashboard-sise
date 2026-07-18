@@ -3,6 +3,7 @@
 
   const $ = id => document.getElementById(id);
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+  const cleanKey = value => key(value).replace(/[^A-Z0-9]+/g, "");
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   const fmt = value => new Intl.NumberFormat("es-CL").format(Number(value || 0));
   const formatDateTime = value => {
@@ -38,7 +39,9 @@
   }
 
   function identity(record) {
-    return [record.service, record.region, record.commune, record.establishment].map(key).join("|");
+    const code = cleanKey(record.residenceCode || record.residenceKey || "");
+    if (code) return [cleanKey(record.service), "CODIGO", code].join("|");
+    return [record.service, record.region, record.commune, record.establishment].map(cleanKey).join("|");
   }
 
   function latestRecords(records) {

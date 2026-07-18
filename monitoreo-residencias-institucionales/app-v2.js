@@ -2,6 +2,9 @@
   "use strict";
 
   const C = window.MONITOREO_CATALOGOS || {};
+  const RESIDENCE_CATALOG = window.MONITOREO_RESIDENCIAS_CATALOGO || [];
+  const PROTECTION_SERVICE = "Servicio Nacional de Protección Especializada a la Niñez y Adolescencia";
+  const OTHER_RESIDENCE = "__otra_residencia__";
   let records = [];
   let latest = [];
   let previousMatch = null;
@@ -10,7 +13,7 @@
   const $ = (id) => document.getElementById(id);
   const $$ = (selector, root = document) => Array.prototype.slice.call(root.querySelectorAll(selector));
   const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
-  const key = (v) => String(v == null ? "" : v).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+  const key = (v) => String(v == null ? "" : v).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   const fmt = (n) => new Intl.NumberFormat("es-CL").format(Number(n || 0));
   const nowLocal = () => {
     const d = new Date();
@@ -52,6 +55,123 @@
     $("commune").value = selected || "";
   }
 
+  function cleanCatalogValue(value) {
+    const text = String(value == null ? "" : value).trim();
+    return key(text) === "SININFORMACION" ? "" : text;
+  }
+
+  function selectedCatalogResidence() {
+    const code = $("residenceCatalog")?.value || "";
+    if (!code || code === OTHER_RESIDENCE) return null;
+    return RESIDENCE_CATALOG.find(item => item.code === code) || null;
+  }
+
+  function isProtectionService() {
+    return key($("service")?.value) === key(PROTECTION_SERVICE);
+  }
+
+  function setResidenceFieldsLocked(locked) {
+    ["program","region","commune"].forEach(id => {
+      const control = $(id);
+      if (control) control.disabled = locked;
+    });
+    const address = $("address");
+    if (address) address.readOnly = locked;
+  }
+
+  function fillFromCatalog(item) {
+    if (!item) return;
+    $("residenceCode").value = item.code || "";
+    $("program").value = cleanCatalogValue(item.program);
+    $("region").value = cleanCatalogValue(item.region);
+    setCommunes($("region").value, cleanCatalogValue(item.commune));
+    $("establishment").value = cleanCatalogValue(item.establishment);
+    if ($("address")) $("address").value = cleanCatalogValue(item.address);
+    $("responsible").value = cleanCatalogValue(item.responsible);
+    $("contactEmail").value = cleanCatalogValue(item.contactEmail);
+    $("contactPhone").value = cleanCatalogValue(item.contactPhone);
+    $("capacity").value = Number(item.capacity || 0) || "";
+    $("people").value = Number(item.people || 0) || "";
+    setResidenceFieldsLocked(true);
+  }
+
+  function updateResidenceCatalogMode() {
+    const wrap = $("residenceCatalogWrap");
+    const select = $("residenceCatalog");
+    const manualInput = $("establishment");
+    const manualLabel = $("establishment")?.closest("label");
+    const enabled = isProtectionService();
+    if (!wrap || !select || !manualLabel) return;
+    wrap.classList.toggle("hidden", !enabled);
+    select.required = enabled;
+    if (!enabled) {
+      select.value = "";
+      $("residenceCode").value = "";
+      manualLabel.classList.remove("hidden");
+      manualInput.required = true;
+      setResidenceFieldsLocked(false);
+      return;
+    }
+    if (!select.value) {
+      manualLabel.classList.add("hidden");
+      $("residenceCode").value = "";
+      manualInput.required = false;
+      setResidenceFieldsLocked(false);
+      return;
+    }
+    const other = select.value === OTHER_RESIDENCE;
+    manualLabel.classList.toggle("hidden", !other);
+    manualInput.required = other;
+    if (other) {
+      $("residenceCode").value = "";
+      $("establishment").value = "";
+      setResidenceFieldsLocked(false);
+      return;
+    }
+    fillFromCatalog(selectedCatalogResidence());
+  }
+
+  function setupResidenceCatalog() {
+    const select = $("residenceCatalog");
+    if (!select) return;
+    const options = RESIDENCE_CATALOG
+      .slice()
+      .sort((a,b) => key(`${a.region}${a.commune}${a.establishment}`).localeCompare(key(`${b.region}${b.commune}${b.establishment}`)))
+      .map(item => `<option value="${esc(item.code)}">${esc(`${item.region} / ${item.commune} / ${item.establishment}`)}</option>`);
+    select.innerHTML = '<option value="">Seleccione una residencia</option>' + options.join("") + `<option value="${OTHER_RESIDENCE}">Otra residencia</option>`;
+  }
+
+  function similarity(a, b) {
+    const left = key(a);
+    const right = key(b);
+    if (!left || !right) return 0;
+    if (left === right) return 1;
+    if (left.includes(right) || right.includes(left)) return 0.94;
+    const m = left.length, n = right.length;
+    const dp = Array.from({length:m + 1}, () => Array(n + 1).fill(0));
+    for (let i = 0; i <= m; i++) dp[i][0] = i;
+    for (let j = 0; j <= n; j++) dp[0][j] = j;
+    for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= n; j++) {
+        dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (left[i - 1] === right[j - 1] ? 0 : 1));
+      }
+    }
+    return 1 - dp[m][n] / Math.max(m, n);
+  }
+
+  function similarCatalogResidence() {
+    if (!isProtectionService() || $("residenceCatalog")?.value !== OTHER_RESIDENCE) return null;
+    const region = $("region").value;
+    const commune = $("commune").value;
+    const name = $("establishment").value;
+    if (!name.trim()) return null;
+    return RESIDENCE_CATALOG.find(item =>
+      (!region || key(item.region) === key(region)) &&
+      (!commune || key(item.commune) === key(commune)) &&
+      similarity(item.establishment, name) >= 0.88
+    ) || null;
+  }
+
   function setupCatalogs() {
     ["filterService","detailService","historyService"].forEach(id => populate($(id), C.servicios, "Todos los servicios"));
     ["filterRegion","detailRegion","historyRegion"].forEach(id => populate($(id), C.regiones, "Todas las regiones"));
@@ -61,6 +181,7 @@
     populate($("region"), C.regiones, "Seleccione una región");
     populate($("status"), C.estados, "Seleccione un estado");
     populate($("damageLevel"), C.nivelesDanio, "Seleccione un nivel");
+    setupResidenceCatalog();
     setCommunes("");
     $("situationChecks").innerHTML = (C.situaciones || []).map((s, i) => `<label class="check-option"><input type="checkbox" name="situations" value="${esc(s)}" id="sit-${i}"><span>${esc(s)}</span></label>`).join("");
     $("needChecks").innerHTML = (C.necesidades || []).map((s, i) => `<label class="check-option"><input type="checkbox" name="needs" value="${esc(s)}" id="need-${i}"><span>${esc(s)}</span></label>`).join("");
@@ -69,7 +190,7 @@
   function latestRecords(input) {
     const map = new Map();
     input.forEach(r => {
-      const k = [key(r.service), key(r.region), key(r.commune), key(r.establishment)].join("|");
+      const k = identityKey(r);
       if (!r.service || !r.region || !r.establishment) return;
       const current = new Date(r.reportDate || r.createdAt || 0).getTime() || 0;
       const prior = map.get(k);
@@ -80,11 +201,13 @@
   }
 
   function identityKey(r) {
+    const code = key(r.residenceCode || r.residenceKey || "");
+    if (code) return [key(r.service), "CODIGO", code].join("|");
     return [key(r.service), key(r.region), key(r.commune), key(r.establishment)].join("|");
   }
 
   function findPrevious() {
-    const current = {service:$("service").value, region:$("region").value, commune:$("commune").value, establishment:$("establishment").value};
+    const current = {service:$("service").value, region:$("region").value, commune:$("commune").value, establishment:$("establishment").value, residenceCode:$("residenceCode")?.value || ""};
     if (!current.service || !current.region || !current.commune || !current.establishment.trim()) return null;
     const target = identityKey(current);
     return latest.find(r => identityKey(r) === target) || null;
@@ -268,6 +391,7 @@
       createdAt:new Date().toISOString(), reportDate:$("reportDate").value,
       service:$("service").value, program:$("program").value.trim(), region:$("region").value, commune:$("commune").value,
       establishment:$("establishment").value.trim(), responsible:$("responsible").value.trim(), contactEmail:$("contactEmail").value.trim(), contactPhone:$("contactPhone").value.trim(),
+      residenceCode:$("residenceCode")?.value || "", residenceKey:[$("service").value, $("region").value, $("commune").value, $("establishment").value].map(key).join("|"),
       previousReport:previousMatch ? "Sí" : "No", hasChanges:previousMatch ? $("hasChanges").value : "Sí", previousRecordId:previousMatch ? previousMatch.id : "",
       status:noChanges ? source.status : $("status").value, damageLevel:noChanges ? source.damageLevel : $("damageLevel").value,
       capacity:noChanges ? Number(source.capacity || 0) : Number($("capacity").value || 0), people:noChanges ? Number(source.people || 0) : Number($("people").value || 0),
@@ -279,6 +403,12 @@
 
   function saveReport(event) {
     event.preventDefault();
+    const similar = similarCatalogResidence();
+    if (similar) {
+      $("formMessage").textContent = `La residencia ingresada se parece a "${similar.establishment}". Selecciónela desde el catálogo o confirme que corresponde a otra residencia con un nombre claramente distinto.`;
+      $("formMessage").className = "form-message error";
+      return;
+    }
     if (previousMatch && !$("hasChanges").value) {
       $("formMessage").textContent = "Indique si hubo cambios respecto del reporte anterior.";
       $("formMessage").className = "form-message error";
@@ -303,6 +433,10 @@
     $("reportDate").value = nowLocal();
     $("reportDateDisplay").value = formatDateTime($("reportDate").value);
     setCommunes("");
+    $("residenceCode").value = "";
+    if ($("residenceCatalog")) $("residenceCatalog").value = "";
+    setResidenceFieldsLocked(false);
+    updateResidenceCatalogMode();
     previousMatch = null;
     $("changeQuestionWrap").classList.add("hidden");
     $("previousReportMessage").classList.add("hidden");
@@ -333,14 +467,16 @@
     ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
     $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
     $("region").addEventListener("change", e => { setCommunes(e.target.value); previousMatch = null; });
-    ["service","commune","establishment"].forEach(id => $(id).addEventListener(id === "establishment" ? "blur" : "change", evaluatePrevious));
+    $("service").addEventListener("change", () => { previousMatch = null; updateResidenceCatalogMode(); evaluatePrevious(); });
+    $("residenceCatalog")?.addEventListener("change", () => { previousMatch = null; updateResidenceCatalogMode(); evaluatePrevious(); });
+    ["commune","establishment"].forEach(id => $(id).addEventListener(id === "establishment" ? "blur" : "change", evaluatePrevious));
     $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "Sí"));
     $("electrodependent").addEventListener("change", e => { const yes = e.target.value === "Sí"; $("electrodependentCountWrap").classList.toggle("hidden", !yes); $("electrodependentCount").required = yes; if (!yes) $("electrodependentCount").value = ""; });
     $("reportForm").addEventListener("submit", saveReport);
     $("resetForm").addEventListener("click", () => setTimeout(resetForm, 0));
     $("exportButton").addEventListener("click", () => {
-      const headers = ["ID","Fecha de registro","Fecha y hora del reporte","Servicio","Programa o línea","Región","Comuna","Residencia","Dirección","Responsable","Correo","Teléfono","Reporte anterior","Hubo cambios","ID reporte anterior","Estado","Nivel de daño o riesgo","Capacidad total","Personas atendidas","Situaciones presentes","Detalle de afectación o riesgo","Personas electrodependientes","Número de personas electrodependientes","Necesidades prioritarias","Medidas implementadas","Observaciones"];
-      const rows = records.map(r => [r.id,r.createdAt,r.reportDate,r.service,r.program,r.region,r.commune,r.establishment,r.address,r.responsible,r.contactEmail,r.contactPhone,r.previousReport,r.hasChanges,r.previousRecordId,r.status,r.damageLevel,r.capacity,r.people,(r.situations||[]).join(" | "),r.damageDetail,r.electrodependent,r.electrodependentCount,(r.needs||[]).join(" | "),r.measures,r.observations]);
+      const headers = ["ID","Código residencia","Fecha de registro","Fecha y hora del reporte","Servicio","Programa o línea","Región","Comuna","Residencia","Dirección","Responsable","Correo","Teléfono","Reporte anterior","Hubo cambios","ID reporte anterior","Estado","Nivel de daño o riesgo","Capacidad total","Personas atendidas","Situaciones presentes","Detalle de afectación o riesgo","Personas electrodependientes","Número de personas electrodependientes","Necesidades prioritarias","Medidas implementadas","Observaciones"];
+      const rows = records.map(r => [r.id,r.residenceCode || "",r.createdAt,r.reportDate,r.service,r.program,r.region,r.commune,r.establishment,r.address,r.responsible,r.contactEmail,r.contactPhone,r.previousReport,r.hasChanges,r.previousRecordId,r.status,r.damageLevel,r.capacity,r.people,(r.situations||[]).join(" | "),r.damageDetail,r.electrodependent,r.electrodependentCount,(r.needs||[]).join(" | "),r.measures,r.observations]);
       const csv = "\ufeff" + [headers].concat(rows).map(row => row.map(v => `"${String(v == null ? "" : v).replace(/"/g,'""')}"`).join(";")).join("\r\n");
       const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
       const a = document.createElement("a"); a.href = url; a.download = `seguimiento_residencias_${dateKey(new Date())}.csv`; a.click(); URL.revokeObjectURL(url);
@@ -377,6 +513,7 @@
     latest = latestRecords(records);
     $("reportDate").value = nowLocal();
     $("reportDateDisplay").value = formatDateTime($("reportDate").value);
+    updateResidenceCatalogMode();
     $("syncLine").textContent = "Sincronizando información compartida...";
     renderAll();
   }
