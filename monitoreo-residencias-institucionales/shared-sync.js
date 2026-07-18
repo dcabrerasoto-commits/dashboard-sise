@@ -86,7 +86,7 @@
       .trim()
       .split(/\s+/)
       .filter(Boolean);
-    while (["REM","PER","RLP","RVA","RFA","RDS","RTS","RMA","RPM","RSP","ELEAM","RESIDENCIA","HOGAR"].includes(words[0])) words.shift();
+    while (["RESIDENCIA"].includes(words[0])) words.shift();
     return words.filter(word => !["DE","DEL","LA","EL","LOS","LAS","N"].includes(word)).join("");
   }
 
