@@ -20,6 +20,10 @@
     return parts.length === 3 ? `${parts[2]}-${parts[1]}-${parts[0]}` : value;
   }
 
+  function todayKey() {
+    return dateKey(new Date());
+  }
+
   function identity(record) {
     const official = record.residenceCode || record.residenceKey || "";
     if (official) return `${key(record.service)}|${key(official)}`;
@@ -123,12 +127,13 @@
     const base = summaryBaseRecords();
     const latest = summaryLatestRecords();
     const stats = dailyStats(base);
-    const last = stats.length ? stats[stats.length - 1] : null;
+    const today = todayKey();
+    const todayStats = stats.find(row => row.day === today);
     const cards = [
-      ["Residencias únicas recibidas", latest.length, "Cada residencia se cuenta una sola vez, aunque envíe más de un reporte"],
-      ["Total de reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
-      ["Residencias que reportaron en la última fecha", last ? last.uniqueDaily : 0, last ? `Residencias distintas con reporte el ${formatDate(last.day)}` : "Sin reportes"],
-      ["Reportes recibidos en el día visible", last ? last.reports : 0, last ? `Total recibido el ${formatDate(last.day)}` : "Sin reportes"]
+      ["Residencias informadas", latest.length, "Total acumulado de residencias únicas que han reportado al menos una vez en la plataforma"],
+      ["Reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
+      ["Residencias que reportaron hoy", todayStats ? todayStats.uniqueDaily : 0, "N° de residencias que enviaron al menos un reporte hoy"],
+      ["Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"]
     ];
     container.innerHTML = cards.map(([label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
 
