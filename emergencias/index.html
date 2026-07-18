@@ -91,7 +91,7 @@ let historialDiario=JSON.parse(localStorage.getItem('uise-historico-diario')||'[
 let historialRobot=[];
 const fmt=n=>new Intl.NumberFormat('es-CL').format(Number(n||0));
 const fmtFecha=s=>String(s||'').replaceAll('/','-');
-const hoyClave=()=>new Date().toISOString().slice(0,10);
+function hoyClave(){let d=new Date(),p=n=>String(n).padStart(2,'0');return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`}
 const fechaHora=()=>new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date());
 function fechaManana(){let d=new Date();d.setDate(d.getDate()+1);return new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric'}).format(d).replaceAll('/','-')}
 function encuestadoresTexto(html=true){return `N° de encuestadores FIBE disponibles para ${html?`<span class="label-date">${fechaManana()}</span>`:fechaManana()}`}
@@ -131,7 +131,7 @@ function ultimaRevisionSise(){let sync=Date.parse(String(ultimaSyncSiseFecha||''
 function ultimaHora(){return ultimaRevisionSise()}
 function horaRegion(region){return combinados().some(d=>d.region===region&&(d.alfa||d.aplicadas||d.encuestadores||d.terminadas||d.digitacion||d.anuladas||d.personas||d.id))?ultimaHora():''}
 function metric(l,v,s,h=false,title='',extra=''){return `<div class="metric ${h?'hero':''}" title="${title}"><span class="metric-label">${l}</span><strong class="metric-value">${fmt(v)}</strong>${extra?`<span class="metric-pct">${extra}</span>`:''}${s?`<span class="metric-source">${s}</span>`:''}</div>`}
-function estado(region){let z=reportesRegionales.map((d,i)=>({...d,_orden:d.registradoMs||i})).filter(d=>d.region===region&&d.fechaClave===hoyClave()).sort((a,b)=>a._orden-b._orden);if(!z.length)return['pending','Pendiente'];return z[z.length-1].estadoDiario==='done'?['done','Actualizado']:['progress','En proceso']}
+function estado(region){let hoy=hoyClave(),reg=regionCanon(region);let z=reportesRegionales.map((d,i)=>({...d,_orden:d.registradoMs||fechaCapturaMs(d)||i,_fecha:d.fechaClave||fechaHist(d)})).filter(d=>regionCanon(d.region)===reg&&d._fecha===hoy).sort((a,b)=>a._orden-b._orden);if(!z.length)return['pending','Pendiente'];return z[z.length-1].estadoDiario==='done'?['done','Actualizado']:['progress','En proceso']}
 function badge(e){const info={pending:'Pendiente: la región no ha registrado información durante el día.',progress:'En proceso: la información aún se encuentra en actualización y puede cambiar durante el día.',done:'Actualizado: la información del día ha sido revisada y corresponde al reporte definitivo.',national:'Nacional: consolidado total de regiones bajo monitoreo.'};return `<span class="status ${e[0]}" title="${info[e[0]]||''}">${e[1]}</span>`}
 const tituloRegional='Registros informados por la región',tituloSise='Registros de la plataforma web SISE';
 const tooltipRegional={'Fichas aplicadas':'Dato diario reportado por la región. El consolidado no puede ser menor que FIBE terminadas + FIBE en proceso de digitación registradas en SISE.'};
