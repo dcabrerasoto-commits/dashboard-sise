@@ -10,7 +10,6 @@
   let previousMatch = null;
   let detailSort = {field:"reportDate", direction:"desc"};
   let savingInProgress = false;
-  let confirmedSimilarResidence = "";
 
   const $ = (id) => document.getElementById(id);
   const $$ = (selector, root = document) => Array.prototype.slice.call(root.querySelectorAll(selector));
@@ -436,12 +435,11 @@
     event.preventDefault();
     if (savingInProgress) return;
     const similar = similarCatalogResidence();
-    const similarKey = similar ? `${similar.code}|${key($("establishment").value)}` : "";
-    if (similar && confirmedSimilarResidence !== similarKey) {
-      $("formMessage").textContent = `La residencia ingresada se parece a "${similar.establishment}". Selecciónela desde el catálogo o confirme que corresponde a otra residencia con un nombre claramente distinto.`;
-      $("formMessage").className = "form-message error";
-      if (!window.confirm(`La residencia ingresada se parece a "${similar.establishment}".\n\nSi corresponde a esa residencia, cancele y selecciónela desde el catálogo.\nSi realmente es otra residencia, acepte para guardar de todas formas.`)) return;
-      confirmedSimilarResidence = similarKey;
+    if (similar) {
+      $("residenceCatalog").value = similar.code;
+      fillFromCatalog(similar);
+      $("formMessage").textContent = `Residencia reconocida en el catálogo: ${similar.establishment}. Se guardará con su código oficial.`;
+      $("formMessage").className = "form-message";
     }
     if (previousMatch && !$("hasChanges").value) {
       $("formMessage").textContent = "Indique si hubo cambios respecto del reporte anterior.";
