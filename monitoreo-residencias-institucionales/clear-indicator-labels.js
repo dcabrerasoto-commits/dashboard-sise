@@ -1,6 +1,13 @@
 (() => {
   "use strict";
 
+  const definitions = [
+    "Total de residencias distintas que existen en la plataforma.",
+    "Residencias que hoy aparecen por primera vez en la plataforma.",
+    "Residencias distintas que enviaron al menos un reporte durante el día.",
+    "Residencias que ya estaban registradas y enviaron un nuevo reporte hoy."
+  ];
+
   function applyClearLabels() {
     const section = document.querySelector(".unique-metrics-section");
     if (section) {
@@ -11,6 +18,7 @@
       if (title) title.textContent = "Residencias registradas y reportes del día";
       if (note) note.textContent = "Una residencia puede enviar más de un reporte";
 
+      const cards = section.querySelectorAll(".unique-kpi");
       const labels = section.querySelectorAll(".kpi-label");
       const subtitles = section.querySelectorAll(".kpi-sub");
       const names = [
@@ -27,6 +35,13 @@
       ];
       labels.forEach((label, index) => { if (names[index]) label.textContent = names[index]; });
       subtitles.forEach((subtitle, index) => { if (explanations[index]) subtitle.textContent = explanations[index]; });
+      cards.forEach((card, index) => {
+        if (!definitions[index]) return;
+        card.title = definitions[index];
+        card.setAttribute("aria-label", `${names[index]}. ${definitions[index]}`);
+        card.setAttribute("tabindex", "0");
+        card.dataset.definition = definitions[index];
+      });
     }
 
     const detailNote = document.getElementById("detailUniqueCount");
@@ -55,11 +70,26 @@
     headers.forEach((header, index) => { if (headerNames[index]) header.textContent = headerNames[index]; });
   }
 
+  function injectTooltipStyles() {
+    if (document.getElementById("indicator-definition-styles")) return;
+    const style = document.createElement("style");
+    style.id = "indicator-definition-styles";
+    style.textContent = `
+      .unique-kpi{position:relative;cursor:help}
+      .unique-kpi::before{content:"i";position:absolute;top:8px;right:8px;width:18px;height:18px;display:grid;place-items:center;border:1px solid #287fae;background:#eef8fc;color:#176777;font-size:11px;font-weight:850;border-radius:50%}
+      .unique-kpi::after{content:attr(data-definition);position:absolute;left:10px;right:10px;bottom:calc(100% + 8px);z-index:50;padding:10px 12px;background:#0b363b;color:#fff;font-size:12px;line-height:1.4;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(5px);transition:.15s ease;pointer-events:none}
+      .unique-kpi:hover::after,.unique-kpi:focus::after{opacity:1;visibility:visible;transform:translateY(0)}
+      @media(max-width:700px){.unique-kpi::after{left:4px;right:4px;font-size:11px}}
+    `;
+    document.head.appendChild(style);
+  }
+
   function schedule() {
     setTimeout(applyClearLabels, 20);
   }
 
   function init() {
+    injectTooltipStyles();
     schedule();
     window.addEventListener("residencias:shared-data", schedule);
     ["filterService","filterRegion","filterStatus","detailService","detailRegion","detailSituation","historyService","historyRegion","historyFrom","historyTo"].forEach(id => {
