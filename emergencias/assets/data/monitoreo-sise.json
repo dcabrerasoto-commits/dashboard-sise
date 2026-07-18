@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-17T22:29:29",
+  "actualizado": "2026-07-18T07:24:04",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -123,6 +123,22 @@
       "fechaCreacion": "14/07/2026"
     },
     {
+      "id": "148944",
+      "nombre": "Sistema Frontal",
+      "region": "Los Ríos",
+      "comunas": "Lanco",
+      "estado": "Activa",
+      "fechaCreacion": "16/07/2026"
+    },
+    {
+      "id": "148946",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Nicolás",
+      "estado": "Activa",
+      "fechaCreacion": "17/07/2026"
+    },
+    {
       "id": "148742",
       "nombre": "Sistema Frontal",
       "region": "Los Ríos",
@@ -235,14 +251,6 @@
       "fechaCreacion": "2026-07-17T04:00:00.000Z"
     },
     {
-      "id": "148944",
-      "nombre": "Sistema Frontal",
-      "region": "Los R?os",
-      "comunas": "Lanco",
-      "estado": "Activa",
-      "fechaCreacion": "16/07/2026"
-    },
-    {
       "id": "148943",
       "nombre": "Sistema Frontal",
       "region": "Valparaíso",
@@ -267,10 +275,10 @@
       "fechaCreacion": "16/07/2026"
     },
     {
-      "id": "148920",
-      "nombre": "Sistema Frontal",
-      "region": "Valparaíso",
-      "comunas": "Quilpué",
+      "id": "148914",
+      "nombre": "148914",
+      "region": "Los Ríos",
+      "comunas": "Panguipulli",
       "estado": "Activa",
       "fechaCreacion": "16/07/2026"
     },
@@ -289,26 +297,10 @@
       "comunas": "Tucapel",
       "estado": "Activa",
       "fechaCreacion": "16/07/2026"
-    },
-    {
-      "id": "148914",
-      "nombre": "148914",
-      "region": "Los Ríos",
-      "comunas": "Panguipulli",
-      "estado": "Activa",
-      "fechaCreacion": "16/07/2026"
-    },
-    {
-      "id": "148946",
-      "nombre": "Sistema Frontal",
-      "region": "?uble",
-      "comunas": "San Nicol?s",
-      "estado": "Activa",
-      "fechaCreacion": "17/07/2026"
     }
   ],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD_MANUAL_20260717_222927\\Reporte_BD_FIBE_manual_2226.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD_MANUAL_20260718_072402\\Reporte_BD_FIBE_manual_0720.xlsx"
   ],
   "advertencias": [],
   "filas": [
@@ -323,20 +315,21 @@
       "alfa": 0,
       "aplicadas": 0,
       "anuladas": 0,
-      "terminadas": 1,
+      "terminadas": 5,
       "digitacion": 0,
-      "personas": 1,
-      "nna": 0,
-      "mayores": 1,
+      "personas": 9,
+      "nna": 2,
+      "mayores": 4,
       "discapacidad": 0,
-      "mujer": 0,
-      "hombre": 1,
+      "mujer": 5,
+      "hombre": 4,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -359,13 +352,13 @@
       "hombre": 12,
       "otro": 0,
       "matrizAfectacion": {
+        "MUY AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Los Ríos",
@@ -391,8 +384,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 5,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "La Araucanía",
@@ -417,8 +410,8 @@
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -441,11 +434,11 @@
       "hombre": 2,
       "otro": 0,
       "matrizAfectacion": {
-        "MUY AFECTADOS|DESTRUIDA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
+        "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Los Ríos",
@@ -470,8 +463,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Los Ríos",
@@ -499,8 +492,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Los Ríos",
@@ -525,8 +518,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Los Ríos",
@@ -552,8 +545,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -584,8 +577,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -608,20 +601,20 @@
       "hombre": 62,
       "otro": 0,
       "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 3,
-        "POCO AFECTADOS|POCO AFECTADA": 17,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 16,
-        "MUY AFECTADOS|DESTRUIDA": 3,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|NO AFECTADA": 3,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 17,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MUY AFECTADOS|DESTRUIDA": 3,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -646,8 +639,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -670,8 +663,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -694,12 +687,12 @@
       "hombre": 9,
       "otro": 0,
       "matrizAfectacion": {
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "POCO AFECTADOS|POCO AFECTADA": 3
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -722,13 +715,13 @@
       "hombre": 3,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 1,
+        "NO AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 1
+        "POCO AFECTADOS|POCO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -751,8 +744,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Metropolitana de Santiago",
@@ -777,8 +770,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -807,8 +800,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -832,13 +825,13 @@
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 5,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -851,23 +844,24 @@
       "alfa": 0,
       "aplicadas": 0,
       "anuladas": 0,
-      "terminadas": 31,
-      "digitacion": 1,
-      "personas": 85,
-      "nna": 14,
-      "mayores": 25,
-      "discapacidad": 11,
-      "mujer": 46,
-      "hombre": 39,
+      "terminadas": 42,
+      "digitacion": 0,
+      "personas": 110,
+      "nna": 18,
+      "mayores": 37,
+      "discapacidad": 13,
+      "mujer": 59,
+      "hombre": 51,
       "otro": 0,
       "matrizAfectacion": {
+        "NO AFECTADOS|NO AFECTADA": 33,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 25,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "NO AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -892,8 +886,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -916,8 +910,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -940,8 +934,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "La Araucanía",
@@ -949,25 +943,23 @@
       "evento": "Sistema Frontal",
       "fechaEvento": "14/07/2026",
       "fechaOcurrencia": "14/07/2026",
-      "fechaCreacion": "15/07/2026",
+      "fechaCreacion": "14/07/2026",
       "id": "148442",
       "alfa": 0,
       "aplicadas": 0,
       "anuladas": 0,
-      "terminadas": 4,
+      "terminadas": 0,
       "digitacion": 0,
-      "personas": 9,
-      "nna": 1,
-      "mayores": 5,
-      "discapacidad": 3,
-      "mujer": 6,
-      "hombre": 3,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
       "otro": 0,
-      "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 4
-      },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "matrizAfectacion": {},
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Biobío",
@@ -975,28 +967,47 @@
       "evento": "Sistema Frontal",
       "fechaEvento": "14/07/2026",
       "fechaOcurrencia": "14/07/2026",
-      "fechaCreacion": "15/07/2026",
+      "fechaCreacion": "14/07/2026",
       "id": "148401",
       "alfa": 0,
       "aplicadas": 0,
       "anuladas": 0,
-      "terminadas": 6,
+      "terminadas": 0,
       "digitacion": 0,
-      "personas": 19,
-      "nna": 7,
-      "mayores": 1,
-      "discapacidad": 1,
-      "mujer": 12,
-      "hombre": 7,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
       "otro": 0,
-      "matrizAfectacion": {
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 1,
-        "NO AFECTADOS|POCO AFECTADA": 1
-      },
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "matrizAfectacion": {},
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "San Nicolás",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "17/07/2026",
+      "fechaOcurrencia": "17/07/2026",
+      "fechaCreacion": "17/07/2026",
+      "id": "148946",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "La Araucanía",
@@ -1019,8 +1030,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "La Araucanía",
@@ -1043,8 +1054,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Metropolitana de Santiago",
@@ -1067,8 +1078,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -1091,8 +1102,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -1115,8 +1126,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "La Araucanía",
@@ -1139,8 +1150,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -1163,8 +1174,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -1187,8 +1198,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Maule",
@@ -1211,8 +1222,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Valparaíso",
@@ -1235,8 +1246,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     },
     {
       "region": "Ñuble",
@@ -1259,76 +1270,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
-    },
-    {
-      "region": "Valparaíso",
-      "comuna": "Quilpué",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "16/07/2026",
-      "fechaOcurrencia": "16/07/2026",
-      "fechaCreacion": "16/07/2026",
-      "id": "148920",
-      "alfa": 0,
-      "aplicadas": 0,
-      "anuladas": 0,
-      "terminadas": 0,
-      "digitacion": 0,
-      "personas": 0,
-      "nna": 0,
-      "mayores": 0,
-      "discapacidad": 0,
-      "mujer": 0,
-      "hombre": 0,
-      "otro": 0,
-      "matrizAfectacion": {},
-      "hora": "22:29",
-      "fechaLlenado": "17-07-2026 22:29"
-    },
-    {
-      "region": "Los R?os",
-      "comuna": "Lanco",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "16/07/2026",
-      "fechaOcurrencia": "16/07/2026",
-      "fechaCreacion": "16/07/2026",
-      "id": "148944",
-      "alfa": 0,
-      "aplicadas": 0,
-      "anuladas": 0,
-      "terminadas": 0,
-      "digitacion": 0,
-      "personas": 0,
-      "nna": 0,
-      "mayores": 0,
-      "discapacidad": 0,
-      "mujer": 0,
-      "hombre": 0,
-      "otro": 0,
-      "matrizAfectacion": {}
-    },
-    {
-      "region": "?uble",
-      "comuna": "San Nicol?s",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "17/07/2026",
-      "fechaOcurrencia": "17/07/2026",
-      "fechaCreacion": "17/07/2026",
-      "id": "148946",
-      "alfa": 0,
-      "aplicadas": 0,
-      "anuladas": 0,
-      "terminadas": 0,
-      "digitacion": 0,
-      "personas": 0,
-      "nna": 0,
-      "mayores": 0,
-      "discapacidad": 0,
-      "mujer": 0,
-      "hombre": 0,
-      "otro": 0,
-      "matrizAfectacion": {}
+      "hora": "07:24",
+      "fechaLlenado": "18-07-2026 07:24"
     }
   ]
 }
