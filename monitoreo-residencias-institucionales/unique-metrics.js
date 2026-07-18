@@ -126,9 +126,9 @@
     const last = stats.length ? stats[stats.length - 1] : null;
     const cards = [
       ["Residencias únicas recibidas", latest.length, "Cada residencia se cuenta una sola vez, aunque envíe más de un reporte"],
-      ["Reportes recibidos", base.length, "Total de formularios enviados a la plataforma"],
+      ["Total de reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
       ["Residencias que reportaron en la última fecha", last ? last.uniqueDaily : 0, last ? `Residencias distintas con reporte el ${formatDate(last.day)}` : "Sin reportes"],
-      ["Reportes recibidos en la última fecha", last ? last.reports : 0, last ? `Formularios enviados el ${formatDate(last.day)}` : "Sin reportes"]
+      ["Reportes recibidos en el día visible", last ? last.reports : 0, last ? `Total recibido el ${formatDate(last.day)}` : "Sin reportes"]
     ];
     container.innerHTML = cards.map(([label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
 
