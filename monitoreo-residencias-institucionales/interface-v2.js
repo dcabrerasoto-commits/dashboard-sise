@@ -79,6 +79,12 @@
 
   function loadAuxiliaryScript(src, marker) {
     if (document.querySelector(`script[data-${marker}]`)) return null;
+    const baseSrc = src.split("?")[0];
+    const alreadyLoaded = Array.from(document.scripts).some(script => {
+      const current = script.getAttribute("src") || "";
+      return current.split("?")[0] === baseSrc;
+    });
+    if (alreadyLoaded) return null;
     const script = document.createElement("script");
     script.src = src;
     script.defer = true;
@@ -88,8 +94,8 @@
   }
 
   function loadDetailPopups() {
-    const popupScript = loadAuxiliaryScript("detail-popups.js?v=20260717-13", "detailPopups");
-    const loadRules = () => loadAuxiliaryScript("situation-rules.js?v=20260717-13", "situationRules");
+    const popupScript = loadAuxiliaryScript("detail-popups.js?v=20260718-15", "detailPopups");
+    const loadRules = () => loadAuxiliaryScript("situation-rules.js?v=20260718-15", "situationRules");
     if (popupScript) popupScript.addEventListener("load", loadRules, {once:true});
     else loadRules();
   }
