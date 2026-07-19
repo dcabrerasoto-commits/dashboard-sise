@@ -28,16 +28,18 @@
     }
 
     const parsed = new Date(text);
-    return Number.isNaN(parsed.getTime()) ? text : parsed.toISOString();
+    return Number.isNaN(parsed.getTime()) ? "" : parsed.toISOString();
   }
 
   function normalizeRecord(record) {
     if (!record || typeof record !== "object") return record;
-    const normalized = normalizeDateTime(
-      record.reportDate || record.createdAt || record.fechaHoraReporte,
-      record.reportDay || record.fechaReporte,
-      record.reportTime || record.horaReporte
-    );
+
+    const explicitDay = String(record.reportDay || record.fechaReporte || "").trim();
+    const explicitTime = String(record.reportTime || record.horaReporte || "").trim();
+    const explicitDateTime = explicitDay ? normalizeDateTime(`${explicitDay} ${explicitTime || "00:00:00"}`) : "";
+    const sourceDateTime = normalizeDateTime(record.reportDate || record.createdAt || record.fechaHoraReporte);
+    const normalized = explicitDateTime || sourceDateTime;
+
     if (normalized) {
       record.reportDate = normalized;
       if (!record.createdAt) record.createdAt = normalized;
