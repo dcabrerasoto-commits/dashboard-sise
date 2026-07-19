@@ -98,10 +98,11 @@
     const container = $("situationBars");
     const catalog = window.MONITOREO_CATALOGOS;
     if (!container || !catalog) return;
-    const without = data.filter(record => record.status === "Sin afectación" && !(record.situations || []).length);
+    const uniqueSituationBase = latestRecords(data);
+    const without = uniqueSituationBase.filter(record => record.status === "Sin afectación" && !(record.situations || []).length);
     const rows = [
       {label:"Sin situaciones reportadas (sin afectación)", value:without.length},
-      ...(catalog.situaciones || []).map(label => ({label, value:data.filter(record => hasSituation(record, label)).length}))
+      ...(catalog.situaciones || []).map(label => ({label, value:uniqueSituationBase.filter(record => hasSituation(record, label)).length}))
     ];
     const max = Math.max(1, ...rows.map(row => row.value));
     container.innerHTML = rows.map(row => `<div class="bar-row"><div class="bar-label">${esc(row.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(row.value / max * 100)}%"></div></div><div class="bar-value">${fmt(row.value)}</div></div>`).join("");
