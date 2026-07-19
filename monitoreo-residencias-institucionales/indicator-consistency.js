@@ -41,18 +41,25 @@
     return (record.situations || []).some(value => key(value) === key(situation));
   }
 
-  function baseLatest() {
-    const service = $("filterService")?.value || "";
-    const region = $("filterRegion")?.value || "";
-    return latestByResidence(records).filter(record =>
+  function canonicalLatest() {
+    return latestByResidence(records);
+  }
+
+  function filterCollection(input, service = "", region = "", selectedCategory = "") {
+    return input.filter(record =>
       (!service || key(record.service) === key(service)) &&
-      (!region || key(record.region) === key(region))
+      (!region || key(record.region) === key(region)) &&
+      (!selectedCategory || key(category(record)) === key(selectedCategory))
     );
   }
 
   function filteredLatest() {
-    const selectedCategory = $("filterStatus")?.value || "";
-    return baseLatest().filter(record => !selectedCategory || key(category(record)) === key(selectedCategory));
+    return filterCollection(
+      canonicalLatest(),
+      $("filterService")?.value || "",
+      $("filterRegion")?.value || "",
+      $("filterStatus")?.value || ""
+    );
   }
 
   function formatDateTime(value) {
@@ -77,24 +84,30 @@
     });
   }
 
-  function renderKpis(data) {
-    const without = data.filter(record => category(record) === "Sin afectación");
-    const affected = data.filter(record => category(record) === "Con afectación");
-    const evaluation = data.filter(record => category(record) === "En evaluación");
+  function countsFor(data) {
+    return {
+      total: data.length,
+      without: data.filter(record => category(record) === "Sin afectación").length,
+      affected: data.filter(record => category(record) === "Con afectación").length,
+      evaluation: data.filter(record => category(record) === "En evaluación").length
+    };
+  }
 
-    setCard(["RESIDENCIASSINAFECTACION"], without.length);
-    setCard(["RESIDENCIASCONAFECTACION"], affected.length);
-    setCard(["RESIDENCIASENEVALUACION", "ENEVALUACION"], evaluation.length);
+  function renderKpis(data) {
+    const counts = countsFor(data);
+    setCard(["RESIDENCIASSINAFECTACION"], counts.without);
+    setCard(["RESIDENCIASCONAFECTACION"], counts.affected);
+    setCard(["RESIDENCIASENEVALUACION", "ENEVALUACION"], counts.evaluation);
     setCard(["RESIDENCIASSINELECTRICIDAD"], data.filter(record => hasSituation(record, "Sin electricidad")).length);
     setCard(["RESIDENCIASCONAGUASSERVIDAS", "AGUASSERVIDAS"], data.filter(record => hasSituation(record, "Exposición a aguas servidas")).length);
-    setCard(["RESIDENCIASCON ELECTRODEPENDIENTES", "ELECTRODEPENDIENTES"], data.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length);
+    setCard(["RESIDENCIAS CON ELECTRODEPENDIENTES", "ELECTRODEPENDIENTES"], data.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length);
 
     const uniqueGrid = $("uniqueMetricsGrid");
     if (uniqueGrid) {
       [...uniqueGrid.querySelectorAll(".unique-kpi")].forEach(card => {
         if (key(card.querySelector(".kpi-label")?.textContent) === "RESIDENCIASINFORMADAS") {
           const target = card.querySelector(".kpi-value");
-          if (target) target.textContent = fmt(data.length);
+          if (target) target.textContent = fmt(counts.total);
         }
       });
     }
@@ -104,10 +117,11 @@
     const container = $("situationBars");
     const catalog = window.MONITOREO_CATALOGOS || {};
     if (!container) return;
+    const counts = countsFor(data);
     const rows = [
-      {label:"Sin afectación", value:data.filter(record => category(record) === "Sin afectación").length},
-      {label:"Con afectación", value:data.filter(record => category(record) === "Con afectación").length},
-      {label:"En evaluación", value:data.filter(record => category(record) === "En evaluación").length},
+      {label:"Sin afectación", value:counts.without},
+      {label:"Con afectación", value:counts.affected},
+      {label:"En evaluación", value:counts.evaluation},
       ...(catalog.situaciones || []).map(label => ({label, value:data.filter(record => hasSituation(record, label)).length}))
     ];
     const max = Math.max(1, ...rows.map(row => row.value));
@@ -132,14 +146,40 @@
     if (!body) return;
     body.innerHTML = (catalog.regiones || []).map(region => {
       const rows = data.filter(record => key(record.region) === key(region));
-      return `<tr><td>${esc(region)}</td><td>${fmt(rows.length)}</td><td>${fmt(rows.filter(record => category(record) === "Sin afectación").length)}</td><td>${fmt(rows.filter(record => category(record) === "Con afectación").length)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Sin electricidad")).length)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Exposición a aguas servidas")).length)}</td><td>${fmt(rows.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length)}</td><td>${esc(latestDate(rows))}</td></tr>`;
+      const counts = countsFor(rows);
+      return `<tr><td>${esc(region)}</td><td>${fmt(counts.total)}</td><td>${fmt(counts.without)}</td><td>${fmt(counts.affected)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Sin electricidad")).length)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Exposición a aguas servidas")).length)}</td><td>${fmt(rows.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length)}</td><td>${esc(latestDate(rows))}</td></tr>`;
     }).join("");
   }
 
-  function validateInvariant(data) {
-    const counts = ["Sin afectación", "Con afectación", "En evaluación"].map(name => data.filter(record => category(record) === name).length);
-    const total = counts.reduce((sum, value) => sum + value, 0);
-    document.documentElement.dataset.indicatorInvariant = total === data.length ? "ok" : "error";
+  function invariantResult(data) {
+    const counts = countsFor(data);
+    return {...counts, ok:counts.total === counts.without + counts.affected + counts.evaluation};
+  }
+
+  function auditAllFilters() {
+    const latest = canonicalLatest();
+    const catalog = window.MONITOREO_CATALOGOS || {};
+    const services = ["", ...(catalog.servicios || [])];
+    const regions = ["", ...(catalog.regiones || [])];
+    const statuses = ["", "Sin afectación", "Con afectación", "En evaluación"];
+    const failures = [];
+
+    services.forEach(service => regions.forEach(region => statuses.forEach(status => {
+      const result = invariantResult(filterCollection(latest, service, region, status));
+      if (!result.ok) failures.push({service, region, status, ...result});
+    })));
+
+    const audit = {
+      ok: failures.length === 0,
+      checkedAt: new Date().toISOString(),
+      combinations: services.length * regions.length * statuses.length,
+      uniqueResidences: latest.length,
+      failures
+    };
+    window.MONITOREO_INDICATOR_AUDIT = audit;
+    document.documentElement.dataset.indicatorAudit = audit.ok ? "ok" : "error";
+    if (!audit.ok) console.error("Inconsistencia de indicadores detectada", audit);
+    return audit;
   }
 
   function refresh() {
@@ -148,7 +188,9 @@
     renderSituations(data);
     renderRegions(data);
     renderRegionTable(data);
-    validateInvariant(data);
+    const current = invariantResult(data);
+    document.documentElement.dataset.indicatorInvariant = current.ok ? "ok" : "error";
+    auditAllFilters();
   }
 
   function schedule(delay = 0) {
@@ -157,13 +199,13 @@
   }
 
   function init() {
-    ["filterService", "filterRegion", "filterStatus"].forEach(id => $(id)?.addEventListener("change", () => schedule(20)));
-    $("clearFilters")?.addEventListener("click", () => schedule(40));
+    ["filterService", "filterRegion", "filterStatus"].forEach(id => $(id)?.addEventListener("change", () => schedule(30)));
+    $("clearFilters")?.addEventListener("click", () => schedule(60));
     window.addEventListener("residencias:shared-data", event => {
       records = Array.isArray(event.detail?.records) ? event.detail.records : [];
-      schedule(80);
+      schedule(100);
     });
-    schedule(500);
+    schedule(600);
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, {once:true});
