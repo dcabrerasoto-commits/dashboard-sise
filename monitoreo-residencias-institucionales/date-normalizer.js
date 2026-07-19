@@ -42,13 +42,22 @@
 
     if (normalized) {
       record.reportDate = normalized;
-      if (!record.createdAt) record.createdAt = normalized;
+      record.createdAt = normalized;
     }
     return record;
   }
 
-  window.addEventListener("residencias:shared-data", event => {
-    const rows = event.detail && event.detail.records;
+  function normalizeEvent(event) {
+    if (event?.type !== "residencias:shared-data") return;
+    const rows = event.detail?.records;
     if (Array.isArray(rows)) rows.forEach(normalizeRecord);
-  });
+  }
+
+  const originalDispatchEvent = window.dispatchEvent.bind(window);
+  window.dispatchEvent = event => {
+    normalizeEvent(event);
+    return originalDispatchEvent(event);
+  };
+
+  window.addEventListener("residencias:shared-data", normalizeEvent);
 })();
