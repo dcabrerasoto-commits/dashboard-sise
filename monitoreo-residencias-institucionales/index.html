@@ -9,19 +9,19 @@
   <meta name="theme-color" content="#0b363b">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260718-14">
-  <script defer src="catalogos.js?v=20260718-14"></script>
-  <script defer src="residencias-catalogo.js?v=20260718-14"></script>
-  <script defer src="sync-config.js?v=20260718-14"></script>
-  <script defer src="chile-time.js?v=20260718-14"></script>
-  <script defer src="app-v2.js?v=20260718-14"></script>
-  <script defer src="interface-v2.js?v=20260718-14"></script>
-  <script defer src="dashboard-fixes.js?v=20260718-14"></script>
-  <script defer src="shared-sync.js?v=20260718-14"></script>
-  <script defer src="date-normalizer.js?v=20260718-14"></script>
-  <script defer src="all-services-catalog.js?v=20260718-14"></script>
-  <script defer src="unique-metrics.js?v=20260718-14"></script>
-  <script defer src="detail-popups.js?v=20260718-14"></script>
+  <link rel="stylesheet" href="styles.css?v=20260718-15">
+  <script defer src="catalogos.js?v=20260718-15"></script>
+  <script defer src="residencias-catalogo.js?v=20260718-15"></script>
+  <script defer src="sync-config.js?v=20260718-15"></script>
+  <script defer src="chile-time.js?v=20260718-15"></script>
+  <script defer src="app-v2.js?v=20260718-15"></script>
+  <script defer src="interface-v2.js?v=20260718-15"></script>
+  <script defer src="dashboard-fixes.js?v=20260718-15"></script>
+  <script defer src="shared-sync.js?v=20260718-15"></script>
+  <script defer src="date-normalizer.js?v=20260718-15"></script>
+  <script defer src="all-services-catalog.js?v=20260718-15"></script>
+  <script defer src="unique-metrics.js?v=20260718-15"></script>
+  <script defer src="detail-popups.js?v=20260718-15"></script>
 </head>
 <body>
 <header class="site-header">
@@ -58,9 +58,9 @@
     <div class="kpi-grid" id="kpiGrid"></div>
     <div class="dashboard-grid">
       <article class="card"><div class="card-head"><div><span class="card-kicker">TERRITORIO</span><h3>Distribución regional de reportes</h3></div><span class="small-note">Residencias informadas / Residencias con afectación</span></div><div id="regionMap" aria-label="Distribución regional de reportes"></div><div class="legend"><span>Sin afectación</span><span>1 a 2 con afectación</span><span>3 a 5 con afectación</span><span>6 o más con afectación</span></div></article>
-      <article class="card"><div class="card-head"><div><span class="card-kicker">AFECTACIÓN</span><h3>Situaciones informadas</h3></div><span class="small-note">Incluye reportes sin situaciones</span></div><div id="situationBars"></div></article>
+      <article class="card"><div class="card-head"><div><span class="card-kicker">AFECTACIÓN</span><h3>Situaciones informadas</h3></div><span class="small-note">Residencias únicas vigentes por situación</span></div><div id="situationBars"></div></article>
     </div>
-    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">RESUMEN TERRITORIAL</span><h3>Último reporte vigente por región</h3></div></div><div class="table-scroll"><table><thead><tr><th>Región</th><th>Informadas</th><th>Sin afectación</th><th>Con afectación</th><th>Sin electricidad</th><th>Aguas servidas</th><th>Electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="regionTableBody"></tbody></table></div></article>
+    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">RESUMEN TERRITORIAL</span><h3>Último reporte vigente por región</h3></div></div><div class="table-scroll"><table><thead><tr><th>Región</th><th>Residencias informadas</th><th>Residencias sin afectación</th><th>Residencias con afectación</th><th>Residencias sin electricidad</th><th>Residencias con aguas servidas</th><th>Residencias con electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="regionTableBody"></tbody></table></div></article>
   </section>
 
   <section class="panel" id="ingreso">

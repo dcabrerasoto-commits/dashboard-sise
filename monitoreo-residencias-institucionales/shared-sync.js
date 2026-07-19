@@ -42,6 +42,26 @@
     return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   }
 
+  function normalizeStatus(value) {
+    const normalized = normalizeKey(value);
+    if (normalized === "SINAFECTACION" || normalized === "SINAFECTACIN") return "Sin afectación";
+    if (normalized === "CONAFECTACION" || normalized === "CONAFECTACIN") return "Con afectación";
+    if (normalized === "ENEVALUACION" || normalized === "ENEVALUACIN") return "En evaluación";
+    if (normalized.includes("NOPRESENTAAFECTACION") || normalized.includes("NOPRESENTASITUACIONES")) return "Sin afectación";
+    return value;
+  }
+
+  function normalizeSituation(value) {
+    const normalized = normalizeKey(value);
+    if (normalized === "INUNDACIN") return "Inundación";
+    if (normalized === "EVACUACIN") return "Evacuación";
+    if (normalized === "EXPOSICINAGUASSERVIDAS") return "Exposición a aguas servidas";
+    if (normalized === "OTRASITUACIN") return "Otra situación";
+    const catalog = window.MONITOREO_CATALOGOS || {};
+    const match = (catalog.situaciones || []).find(item => normalizeKey(item) === normalized);
+    return match || value;
+  }
+
   function normalizeRegion(region, commune) {
     const catalog = window.MONITOREO_CATALOGOS || {};
     const regionKey = normalizeKey(region);
@@ -60,6 +80,8 @@
       const value = record[field];
       cleaned[field] = Array.isArray(value) ? value.map(item => typeof item === "string" ? cleanText(item) : item) : (typeof value === "string" ? cleanText(value) : value);
     });
+    cleaned.status = normalizeStatus(cleaned.status);
+    cleaned.situations = (cleaned.situations || []).map(normalizeSituation);
     cleaned.region = normalizeRegion(cleaned.region, cleaned.commune);
     return cleaned;
   }
