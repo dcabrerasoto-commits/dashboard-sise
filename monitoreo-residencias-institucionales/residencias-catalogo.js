@@ -3575,7 +3575,7 @@ window.MONITOREO_RESIDENCIAS_CATALOGO = [
     "program": "CUIDADO ALTERNATIVO RESIDENCIAL",
     "offerType": "CUIDADO ALTERNATIVO RESIDENCIAL. O ANTIGUA",
     "region": "Valparaíso",
-    "commune": "Calera",
+    "commune": "La Calera",
     "establishment": "REM - RESIDENCIA VIRGEN DE LOS DESAMPARADOS",
     "address": "AVENIDA BERNARDO OHIGGINS, N°950, PARADERO N°26",
     "responsible": "Maria Jose Neira",
