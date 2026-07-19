@@ -102,6 +102,7 @@
     const without = uniqueSituationBase.filter(record => record.status === "Sin afectación" && !(record.situations || []).length);
     const rows = [
       {label:"Sin situaciones reportadas (sin afectación)", value:without.length},
+      {label:"Con afectación", value:uniqueSituationBase.filter(isAffected).length},
       ...(catalog.situaciones || []).map(label => ({label, value:uniqueSituationBase.filter(record => hasSituation(record, label)).length}))
     ];
     const max = Math.max(1, ...rows.map(row => row.value));
