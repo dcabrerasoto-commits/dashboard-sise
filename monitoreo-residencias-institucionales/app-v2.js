@@ -82,7 +82,7 @@
   function setCommunes(region, selected) {
     const values = (C.comunasPorRegion || {})[region] || [];
     populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una región");
-    $("commune").value = selected || "";
+    $("commune").value = selected ? (values.find(value => key(value) === key(selected)) || "") : "";
   }
 
   function cleanCatalogValue(value) {
