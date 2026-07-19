@@ -9,10 +9,10 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   document.head.appendChild(script);
 })();
 
-// Valparaíso: prioriza el evento unificado 149162 y conserva la opción de ingresar otro ID.
+// Valparaíso: unifica los IDs comunales en 149162 y conserva la opción de ingresar otro ID.
 (function cargarEventoUnificadoValparaiso(){
   const script=document.createElement('script');
-  script.src='assets/js/valparaiso-evento-unificado.js?v=20260719';
+  script.src='assets/js/valparaiso-evento-unificado.js?v=20260719-2';
   script.async=false;
   document.head.appendChild(script);
 })();
