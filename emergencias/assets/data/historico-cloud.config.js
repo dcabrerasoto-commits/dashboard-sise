@@ -16,3 +16,11 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   script.async=false;
   document.head.appendChild(script);
 })();
+
+// Detalle comunal: muestra una sola fila consolidada por región y comuna.
+(function cargarDetalleComunaUnica(){
+  const script=document.createElement('script');
+  script.src='assets/js/detalle-comuna-unica.js?v=20260719';
+  script.async=false;
+  document.head.appendChild(script);
+})();
