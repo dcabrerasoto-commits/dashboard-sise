@@ -8,6 +8,7 @@
   const CHILE_TIME_ZONE = "America/Santiago";
   let records = [];
   let timer = null;
+  let lastValidSnapshot = null;
 
   function identity(record) {
     const official = key(record.residenceCode || record.residenceKey || "");
@@ -73,6 +74,53 @@
     const values = rows.map(record => record.reportDate || record.createdAt).filter(Boolean);
     if (!values.length) return "Sin información";
     return formatDateTime(values.sort((a, b) => new Date(b) - new Date(a))[0]);
+  }
+
+  function ensureValidationMessage() {
+    let message = $("indicatorValidationMessage");
+    if (message) return message;
+    const heading = document.querySelector("#resumen .section-heading");
+    if (!heading) return null;
+    message = document.createElement("div");
+    message.id = "indicatorValidationMessage";
+    message.setAttribute("role", "status");
+    message.setAttribute("aria-live", "polite");
+    message.hidden = true;
+    message.textContent = "Los indicadores se encuentran en proceso de validación.";
+    message.style.cssText = "margin-top:12px;padding:10px 14px;border:1px solid #d5a940;border-left:4px solid #d5a940;background:#fff8e6;color:#594615;font-size:.95rem;border-radius:3px;";
+    heading.appendChild(message);
+    return message;
+  }
+
+  function showValidationMessage(show) {
+    const message = ensureValidationMessage();
+    if (message) message.hidden = !show;
+    const summary = $("resumen");
+    if (summary) summary.setAttribute("aria-busy", show ? "true" : "false");
+  }
+
+  function indicatorTargets() {
+    return [$("kpiGrid"), $("uniqueMetricsGrid"), $("situationBars"), $("regionMap"), $("regionTableBody")].filter(Boolean);
+  }
+
+  function captureSnapshot() {
+    lastValidSnapshot = indicatorTargets().map(element => ({id:element.id, html:element.innerHTML}));
+  }
+
+  function restoreSnapshot() {
+    if (!lastValidSnapshot) return false;
+    lastValidSnapshot.forEach(item => {
+      const element = $(item.id);
+      if (element) element.innerHTML = item.html;
+    });
+    return true;
+  }
+
+  function protectFirstInvalidRender() {
+    if (restoreSnapshot()) return;
+    indicatorTargets().forEach(element => {
+      element.innerHTML = '<div style="padding:18px;text-align:center;color:#52676b">Indicadores temporalmente no disponibles mientras se valida la información.</div>';
+    });
   }
 
   function setCard(labelMatch, value) {
@@ -184,13 +232,24 @@
 
   function refresh() {
     const data = filteredLatest();
+    const current = invariantResult(data);
+    const audit = auditAllFilters();
+    const valid = current.ok && audit.ok;
+
+    document.documentElement.dataset.indicatorInvariant = valid ? "ok" : "error";
+
+    if (!valid) {
+      protectFirstInvalidRender();
+      showValidationMessage(true);
+      return;
+    }
+
     renderKpis(data);
     renderSituations(data);
     renderRegions(data);
     renderRegionTable(data);
-    const current = invariantResult(data);
-    document.documentElement.dataset.indicatorInvariant = current.ok ? "ok" : "error";
-    auditAllFilters();
+    captureSnapshot();
+    showValidationMessage(false);
   }
 
   function schedule(delay = 0) {
@@ -199,6 +258,7 @@
   }
 
   function init() {
+    ensureValidationMessage();
     ["filterService", "filterRegion", "filterStatus"].forEach(id => $(id)?.addEventListener("change", () => schedule(30)));
     $("clearFilters")?.addEventListener("click", () => schedule(60));
     window.addEventListener("residencias:shared-data", event => {
