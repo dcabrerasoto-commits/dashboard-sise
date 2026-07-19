@@ -172,7 +172,9 @@
 
   function fetchSharedRecords() {
     const callbackName = `__residenciasSync_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const cacheBust = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
+    script.async = true;
     return new Promise((resolve, reject) => {
       const timeout = setTimeout(() => finish(() => reject(new Error("No fue posible descargar la base compartida."))), 30000);
       function finish(done) { clearTimeout(timeout); delete window[callbackName]; script.remove(); done(); }
@@ -181,7 +183,7 @@
         resolve(response.records);
       });
       script.onerror = () => finish(() => reject(new Error("No fue posible conectar con Google Sheets.")));
-      script.src = `${endpoint}?action=list&callback=${encodeURIComponent(callbackName)}&_=${Date.now()}`;
+      script.src = `${endpoint}?action=list&callback=${encodeURIComponent(callbackName)}&_=${cacheBust}`;
       document.head.appendChild(script);
     });
   }
@@ -240,6 +242,9 @@
     setTimeout(jsonpLoad, 500);
     refreshTimer = setInterval(jsonpLoad, REFRESH_MS);
     window.addEventListener("focus", jsonpLoad);
+    window.addEventListener("pageshow", event => {
+      if (event.persisted) setTimeout(jsonpLoad, 100);
+    });
     document.addEventListener("visibilitychange", () => { if (!document.hidden) jsonpLoad(); });
     window.addEventListener("beforeunload", () => { if (refreshTimer) clearInterval(refreshTimer); });
   }
