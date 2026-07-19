@@ -6,6 +6,7 @@
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   const fmt = value => new Intl.NumberFormat("es-CL").format(Number(value || 0));
   const CHILE_TIME_ZONE = "America/Santiago";
+  const RESIDENCE_CATALOG = window.MONITOREO_RESIDENCIAS_CATALOGO || [];
   const formatDateTime = value => {
     const date = new Date(value);
     return Number.isNaN(date.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {timeZone:CHILE_TIME_ZONE,day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}).format(date);
@@ -24,6 +25,22 @@
 
   function readRecords() {
     return sharedRecords.filter(record => !shiftedRecord(record));
+  }
+
+  function officialCommune(region, commune) {
+    const catalog = window.MONITOREO_CATALOGOS || {};
+    const officialRegion = (catalog.regiones || []).find(item => key(item) === key(region)) || region;
+    return ((catalog.comunasPorRegion || {})[officialRegion] || []).find(item => key(item) === key(commune)) || "";
+  }
+
+  function displayCommune(record) {
+    const direct = officialCommune(record.region, record.commune);
+    if (direct) return direct;
+    const code = key(record.residenceCode || "");
+    const byCode = code ? RESIDENCE_CATALOG.find(item => key(item.code) === code && key(item.region) === key(record.region)) : null;
+    if (byCode) return officialCommune(record.region, byCode.commune) || "Sin comuna oficial";
+    const byName = RESIDENCE_CATALOG.find(item => key(item.region) === key(record.region) && key(item.establishment) === key(record.establishment));
+    return byName ? (officialCommune(record.region, byName.commune) || "Sin comuna oficial") : "Sin comuna oficial";
   }
 
   function shiftedRecord(record) {
@@ -133,7 +150,7 @@
       ${includeRegion ? "<th>Región</th>" : ""}<th>Comuna</th><th>Residencia</th><th>Dirección</th><th>Estado</th><th>Situaciones</th><th>Personas atendidas</th><th>Electrodependientes</th><th>Última actualización</th>
     </tr></thead><tbody>${records.map(record => `<tr>
       ${includeRegion ? `<td>${esc(record.region || "")}</td>` : ""}
-      <td>${esc(record.commune || "")}</td><td>${esc(record.establishment || "")}</td><td>${esc(record.address || "Sin información")}</td>
+      <td>${esc(displayCommune(record))}</td><td>${esc(record.establishment || "")}</td><td>${esc(record.address || "Sin información")}</td>
       <td><span class="detail-status">${esc(record.status || "Sin información")}</span></td>
       <td>${esc((record.situations || []).join(", ") || "Sin situaciones reportadas")}</td>
       <td>${fmt(record.people)}</td><td>${record.electrodependent === "Sí" ? `Sí (${fmt(record.electrodependentCount)})` : "No"}</td>
@@ -145,7 +162,7 @@
     if (!records.length) return '<div class="detail-modal-empty">No existen reportes asociados a esta región.</div>';
     const groups = new Map();
     records.forEach(record => {
-      const commune = record.commune || "Sin información";
+      const commune = displayCommune(record);
       if (!groups.has(commune)) groups.set(commune, []);
       groups.get(commune).push(record);
     });
@@ -188,7 +205,7 @@
     openModal({
       kicker: "DETALLE DEL REPORTE VIGENTE",
       title: record.establishment || "Residencia",
-      subtitle: `${valueOrEmpty(record.commune)} - ${valueOrEmpty(record.region)}. Última actualización: ${formatDateTime(record.reportDate || record.createdAt)}`,
+      subtitle: `${valueOrEmpty(displayCommune(record))} - ${valueOrEmpty(record.region)}. Última actualización: ${formatDateTime(record.reportDate || record.createdAt)}`,
       summary: summaryCards([
         {label:"Personas atendidas", value:record.people},
         {label:"Capacidad", value:record.capacity},
@@ -201,7 +218,7 @@
           detailItem("Servicio responsable", record.service),
           detailItem("Programa o línea", record.program),
           detailItem("Región", record.region),
-          detailItem("Comuna", record.commune),
+          detailItem("Comuna", displayCommune(record)),
           detailItem("Residencia", record.establishment),
           detailItem("Dirección", record.address),
           detailItem("Responsable", record.responsible),
@@ -272,7 +289,7 @@
   }
 
   function openCommuneDetail(region, commune) {
-    const records = regionalData(region).filter(record => key(record.commune || "Sin información") === key(commune));
+    const records = regionalData(region).filter(record => key(displayCommune(record)) === key(commune));
     const affected = records.filter(isAffected).length;
     const people = records.reduce((sum, record) => sum + Number(record.people || 0), 0);
     const electroPeople = records.reduce((sum, record) => sum + Number(record.electrodependentCount || 0), 0);

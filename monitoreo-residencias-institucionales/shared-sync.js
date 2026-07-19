@@ -74,6 +74,24 @@
     return byCommune || region;
   }
 
+  function officialCommune(region, commune) {
+    const catalog = window.MONITOREO_CATALOGOS || {};
+    return ((catalog.comunasPorRegion || {})[region] || []).find(item => normalizeKey(item) === normalizeKey(commune)) || "";
+  }
+
+  function normalizeCommune(region, commune, record) {
+    const direct = officialCommune(region, commune);
+    if (direct) return direct;
+    const code = normalizeKey(record?.residenceCode || "");
+    const byCode = code ? RESIDENCE_CATALOG.find(item => normalizeKey(item.code) === code && normalizeKey(item.region) === normalizeKey(region)) : null;
+    if (byCode) return officialCommune(region, byCode.commune) || "";
+    const byName = RESIDENCE_CATALOG.find(item =>
+      normalizeKey(item.region) === normalizeKey(region) &&
+      normalizeKey(item.establishment) === normalizeKey(record?.establishment)
+    );
+    return byName ? (officialCommune(region, byName.commune) || "") : "";
+  }
+
   function cleanRecord(record) {
     const cleaned = {};
     Object.keys(record || {}).forEach(field => {
@@ -83,6 +101,7 @@
     cleaned.status = normalizeStatus(cleaned.status);
     cleaned.situations = (cleaned.situations || []).map(normalizeSituation);
     cleaned.region = normalizeRegion(cleaned.region, cleaned.commune);
+    cleaned.commune = normalizeCommune(cleaned.region, cleaned.commune, cleaned) || "Sin comuna oficial";
     return cleaned;
   }
 

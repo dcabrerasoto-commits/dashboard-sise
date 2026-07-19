@@ -83,6 +83,16 @@
     const values = (C.comunasPorRegion || {})[region] || [];
     populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una región");
     $("commune").value = selected ? (values.find(value => key(value) === key(selected)) || "") : "";
+    return $("commune").value;
+  }
+
+  function officialRegion(value) {
+    return (C.regiones || []).find(region => key(region) === key(value)) || "";
+  }
+
+  function officialCommune(region, value) {
+    const official = officialRegion(region);
+    return ((C.comunasPorRegion || {})[official] || []).find(commune => key(commune) === key(value)) || "";
   }
 
   function cleanCatalogValue(value) {
@@ -114,7 +124,7 @@
     $("residenceCode").value = item.code || "";
     $("program").value = cleanCatalogValue(item.program);
     $("region").value = cleanCatalogValue(item.region);
-    setCommunes($("region").value, cleanCatalogValue(item.commune));
+    const selectedCommune = setCommunes($("region").value, cleanCatalogValue(item.commune));
     $("establishment").value = cleanCatalogValue(item.establishment);
     if ($("address")) $("address").value = cleanCatalogValue(item.address);
     $("responsible").value = cleanCatalogValue(item.responsible);
@@ -122,7 +132,7 @@
     $("contactPhone").value = cleanCatalogValue(item.contactPhone);
     $("capacity").value = Number(item.capacity || 0) || "";
     $("people").value = Number(item.people || 0) || "";
-    setResidenceFieldsLocked(true);
+    setResidenceFieldsLocked(Boolean(selectedCommune));
   }
 
   function updateResidenceCatalogMode() {
@@ -464,6 +474,12 @@
     if (!$("stateSection").classList.contains("hidden") && $("electrodependent").value === "Sí" && Number($("electrodependentCount").value || 0) < 1) {
       $("formMessage").textContent = "Ingrese el número de personas electrodependientes.";
       $("formMessage").className = "form-message error";
+      return;
+    }
+    if (!officialRegion($("region").value) || !officialCommune($("region").value, $("commune").value)) {
+      $("formMessage").textContent = "Seleccione una región y comuna válidas antes de guardar.";
+      $("formMessage").className = "form-message error";
+      setResidenceFieldsLocked(false);
       return;
     }
     const record = buildRecord();
