@@ -1,6 +1,6 @@
 // Unificación del evento de Valparaíso.
 // Todos los IDs comunales anteriores al evento 149162 se consolidan bajo ese ID,
-// manteniendo intacta la comuna de cada registro.
+// manteniendo intacta la comuna real de cada registro.
 (function configurarEventoUnificadoValparaiso(){
   'use strict';
 
@@ -9,12 +9,26 @@
   let instalado=false;
   let actualizandoSelector=false;
 
-  const clave=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’']/g,'').toUpperCase();
+  const clave=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’']/g,'').toUpperCase().trim();
   const esRegionValparaiso=r=>clave(r)===REGION_VALPARAISO;
 
   function esIdAnteriorValparaiso(id){
     const numero=Number(String(id||'').trim());
     return Number.isInteger(numero)&&numero>0&&numero<Number(ID_UNIFICADO);
+  }
+
+  function esComunaRealValparaiso(comuna){
+    const valor=clave(comuna);
+    if(!valor)return false;
+    const lista=(typeof comunasPorRegion!=='undefined'&&comunasPorRegion['Valparaíso'])||[];
+    return lista.some(nombre=>clave(nombre)===valor);
+  }
+
+  function esFilaAgregadaValparaiso(registro){
+    if(!registro||!esRegionValparaiso(registro.region))return false;
+    const comuna=String(registro.comuna||'').trim();
+    if(!comuna)return false;
+    return !esComunaRealValparaiso(comuna);
   }
 
   function normalizarRegistro(registro){
@@ -24,28 +38,44 @@
 
   function unificarDatos(){
     try{
-      if(typeof datosSise!=='undefined'&&Array.isArray(datosSise))datosSise=datosSise.map(normalizarRegistro);
+      if(typeof datosSise!=='undefined'&&Array.isArray(datosSise)){
+        datosSise=datosSise
+          .map(normalizarRegistro)
+          .filter(registro=>!esFilaAgregadaValparaiso(registro));
+      }
+
       if(typeof eventosInfo!=='undefined'&&Array.isArray(eventosInfo)){
         eventosInfo=eventosInfo.map(e=>{
-          if(!e||!esRegionValparaiso(e.region)||!esIdAnteriorValparaiso(e.id))return e;
+          if(!e||!esRegionValparaiso(e.region)||(!esIdAnteriorValparaiso(e.id)&&String(e.id)!==ID_UNIFICADO))return e;
           return {...e,id:ID_UNIFICADO,nombre:'Evento unificado',comunas:''};
         });
         const vistos=new Set();
         eventosInfo=eventosInfo.filter(e=>{
           const k=[String(e.id||''),clave(e.region||''),clave(e.comunas||'')].join('|');
           if(vistos.has(k))return false;
-          vistos.add(k);return true;
+          vistos.add(k);
+          return true;
         });
       }
+
       if(typeof reportesRegionales!=='undefined'&&Array.isArray(reportesRegionales)){
         reportesRegionales=reportesRegionales.map(normalizarRegistro);
         localStorage.setItem('uise-reportes-regionales',JSON.stringify(reportesRegionales));
       }
-      if(typeof historialRobot!=='undefined'&&Array.isArray(historialRobot))historialRobot=historialRobot.map(normalizarRegistro);
+
+      if(typeof historialRobot!=='undefined'&&Array.isArray(historialRobot)){
+        historialRobot=historialRobot
+          .map(normalizarRegistro)
+          .filter(registro=>!esFilaAgregadaValparaiso(registro));
+      }
+
       if(typeof historialDiario!=='undefined'&&Array.isArray(historialDiario)){
-        historialDiario=historialDiario.map(normalizarRegistro);
+        historialDiario=historialDiario
+          .map(normalizarRegistro)
+          .filter(registro=>!esFilaAgregadaValparaiso(registro));
         localStorage.setItem('uise-historico-diario',JSON.stringify(historialDiario));
       }
+
       if(typeof eventosDetectados!=='undefined'&&Array.isArray(eventosDetectados)){
         eventosDetectados=[...new Set(eventosDetectados.map(id=>esIdAnteriorValparaiso(id)?ID_UNIFICADO:String(id)))];
       }
@@ -71,7 +101,7 @@
     selector.value=forzar?ID_UNIFICADO:([ID_UNIFICADO,'sin-id','manual'].includes(anterior)?anterior:ID_UNIFICADO);
     if(manual)manual.style.display=selector.value==='manual'?'block':'none';
     const nota=document.getElementById('robotNote');
-    if(nota)nota.textContent='Para Valparaíso se utiliza el ID 149162 como evento unificado. Las comunas mantienen sus datos individuales. Use “Otro ID de evento...” solo si se crea un evento nuevo en SISE.';
+    if(nota)nota.textContent='Para Valparaíso se utiliza el ID 149162 como evento unificado. Cada comuna conserva su propia fila y sus datos. Use “Otro ID de evento...” solo si se crea un evento nuevo en SISE.';
     actualizandoSelector=false;
   }
 
@@ -97,6 +127,7 @@
       unificarDatos();
       actualizarEventos();
       construirSelectorValparaiso(true);
+      if(typeof render==='function')render();
     });
 
     selector.addEventListener('change',()=>{
@@ -109,7 +140,6 @@
     });
     observador.observe(selector,{childList:true});
 
-    // Respaldo frente a las actualizaciones automáticas del robot y al caché móvil.
     setInterval(()=>{
       unificarDatos();
       if(esRegionValparaiso(region.value)){
@@ -121,6 +151,7 @@
 
     unificarDatos();
     actualizarEventos();
+    if(typeof render==='function')render();
   }
 
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',instalar,{once:true});
