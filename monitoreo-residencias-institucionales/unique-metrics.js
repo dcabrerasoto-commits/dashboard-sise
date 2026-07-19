@@ -6,12 +6,24 @@
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
   let records = [];
+  const CHILE_TIME_ZONE = "America/Santiago";
+
+  function parseDateValue(value) {
+    if (value instanceof Date) return value;
+    const text = String(value || "").trim();
+    const local = text.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/);
+    if (local) return new Date(Date.UTC(Number(local[1]), Number(local[2]) - 1, Number(local[3]), Number(local[4]) + 4, Number(local[5]), Number(local[6] || 0)));
+    const cl = text.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})(?:[ T,]+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
+    if (cl) return new Date(Date.UTC(Number(cl[3]), Number(cl[2]) - 1, Number(cl[1]), Number(cl[4] || 12) + 4, Number(cl[5] || 0), Number(cl[6] || 0)));
+    return new Date(value);
+  }
 
   function dateKey(value) {
-    const date = new Date(value);
+    const date = parseDateValue(value);
     if (Number.isNaN(date.getTime())) return "";
-    const local = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
-    return local.toISOString().slice(0, 10);
+    const parts = new Intl.DateTimeFormat("en-CA", {timeZone:CHILE_TIME_ZONE, year:"numeric", month:"2-digit", day:"2-digit"}).formatToParts(date);
+    const part = type => parts.find(item => item.type === type)?.value || "";
+    return `${part("year")}-${part("month")}-${part("day")}`;
   }
 
   function formatDate(value) {

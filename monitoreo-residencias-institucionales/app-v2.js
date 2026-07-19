@@ -16,24 +16,38 @@
   const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
   const key = (v) => String(v == null ? "" : v).normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "").toUpperCase().trim();
   const fmt = (n) => new Intl.NumberFormat("es-CL").format(Number(n || 0));
+  const CHILE_TIME_ZONE = "America/Santiago";
+  const parseDateValue = (value) => {
+    if (value instanceof Date) return value;
+    const text = String(value || "").trim();
+    const local = text.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/);
+    if (local) return new Date(Date.UTC(Number(local[1]), Number(local[2]) - 1, Number(local[3]), Number(local[4]) + 4, Number(local[5]), Number(local[6] || 0)));
+    const cl = text.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})(?:[ T,]+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
+    if (cl) return new Date(Date.UTC(Number(cl[3]), Number(cl[2]) - 1, Number(cl[1]), Number(cl[4] || 12) + 4, Number(cl[5] || 0), Number(cl[6] || 0)));
+    return new Date(value);
+  };
+  const chileParts = (value) => {
+    const date = parseDateValue(value);
+    if (Number.isNaN(date.getTime())) return null;
+    const parts = new Intl.DateTimeFormat("en-CA", {timeZone:CHILE_TIME_ZONE, year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", hourCycle:"h23"}).formatToParts(date);
+    const part = (type) => parts.find(item => item.type === type)?.value || "";
+    return {year:part("year"), month:part("month"), day:part("day"), hour:part("hour"), minute:part("minute")};
+  };
   const nowLocal = () => {
-    const d = new Date();
-    const local = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
-    return local.toISOString().slice(0, 16);
+    const parts = chileParts(new Date());
+    return parts ? `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}` : new Date().toISOString().slice(0, 16);
   };
   const formatDateTime = (value) => {
-    const d = new Date(value);
-    return Number.isNaN(d.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}).format(d);
+    const d = parseDateValue(value);
+    return Number.isNaN(d.getTime()) ? "Sin información" : new Intl.DateTimeFormat("es-CL", {timeZone:CHILE_TIME_ZONE, day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}).format(d);
   };
   const updatePrintTimestamp = () => {
     const target = $("printTimestamp");
     if (target) target.textContent = `Minuta generada el ${formatDateTime(new Date())}`;
   };
   const dateKey = (value) => {
-    const d = new Date(value);
-    if (Number.isNaN(d.getTime())) return "";
-    const local = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
-    return local.toISOString().slice(0, 10);
+    const parts = chileParts(value);
+    return parts ? `${parts.year}-${parts.month}-${parts.day}` : "";
   };
   const checkedValues = (name) => $$(`input[name="${name}"]:checked`).map(x => x.value);
   function setSavingState(active) {
