@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-19T19:08:24",
+  "actualizado": "2026-07-19T19:14:22",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -292,7 +292,7 @@
     },
     {
       "id": "148961",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN PUENTE ALTO , PUENTE ALTO, METROPOLITANA DE SANTIAGO",
       "region": "Metropolitana de Santiago",
       "comunas": "Puente Alto",
       "estado": "Activa",
@@ -300,7 +300,7 @@
     },
     {
       "id": "148981",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN COMUNA DE CERRILLOS, CERRILLOS, METROPOLITANA DE SANTIAGO",
       "region": "Metropolitana de Santiago",
       "comunas": "Cerrillos",
       "estado": "Activa",
@@ -308,7 +308,7 @@
     },
     {
       "id": "148745",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN PORTEZUELO, ÑUBLE",
       "region": "Ñuble",
       "comunas": "Portezuelo",
       "estado": "Activa",
@@ -316,7 +316,7 @@
     },
     {
       "id": "149009",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN PENCAHUE, VARIOS, PENCAHUE, MAULE",
       "region": "Maule",
       "comunas": "Pencahue",
       "estado": "Activa",
@@ -324,7 +324,7 @@
     },
     {
       "id": "149008",
-      "nombre": "SISTEMA FRONTAL",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN LOS PRESIDENTES, TALAGANTE, METROPOLITANA DE SANTIAGO",
       "region": "Metropolitana de Santiago",
       "comunas": "Talagante",
       "estado": "Activa",
@@ -332,7 +332,7 @@
     },
     {
       "id": "149041",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (17-07-2026) EN MARÍA PINTO, METROPOLITANA DE SANTIAGO",
       "region": "Metropolitana de Santiago",
       "comunas": "María Pinto",
       "estado": "Activa",
@@ -340,7 +340,7 @@
     },
     {
       "id": "148916",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN QUIRIHUE, QUIRIHUE, ÑUBLE",
       "region": "Ñuble",
       "comunas": "Quirihue",
       "estado": "Activa",
@@ -348,7 +348,7 @@
     },
     {
       "id": "148743",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (17-07-2026) EN COELEMU, COELEMU, ÑUBLE",
       "region": "Ñuble",
       "comunas": "Coelemu",
       "estado": "Activa",
@@ -356,7 +356,7 @@
     },
     {
       "id": "149023",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (18-07-2026) EN SANTA RAQUEL CATO , CHILLÁN, ÑUBLE",
       "region": "Ñuble",
       "comunas": "Chillán",
       "estado": "Activa",
@@ -364,7 +364,7 @@
     },
     {
       "id": "149081",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (14-07-2026) EN CUNCO, LA ARAUCANÍA",
       "region": "La Araucanía",
       "comunas": "Cunco",
       "estado": "Activa",
@@ -372,7 +372,7 @@
     },
     {
       "id": "149101",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (18-07-2026) EN LICANTÉN, LICANTÉN, MAULE",
       "region": "Maule",
       "comunas": "Licantén",
       "estado": "Activa",
@@ -380,7 +380,7 @@
     },
     {
       "id": "149162",
-      "nombre": "Sistema Frontal",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "region": "Valparaíso",
       "comunas": "Algarrobo, Cabildo, Calera, Calle Larga, Cartagena, Casablanca, Catemu, Concón, El Quisco, El Tabo, Hijuelas, Isla De Pascua, Juan Fernández, La Cruz, La Ligua, Limache, Llaillay, Los Andes, Nogales, Olmué, Panquehue, Papudo, Petorca, Puchuncaví, Putaendo, Quillota, Quilpué, Quintero, Rinconada, San Antonio, San Esteban, San Felipe, Santa María, Santo Domingo, Valparaíso, Villa Alemana, Viña Del Mar, Zapallar",
       "estado": "Activa",
@@ -388,276 +388,650 @@
     },
     {
       "id": "148908",
-      "nombre": "148908",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN CORONEL, BIOBÍO",
       "region": "Biobío",
       "comunas": "Coronel",
       "estado": "Activa",
       "fechaCreacion": "16/07/2026"
+    },
+    {
+      "id": "148781",
+      "nombre": "SISTEMA FRONTAL DEL (14-07-2026) EN CAÑETE, CAÑETE, BIOBÍO",
+      "region": "Biobío",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148702",
+      "nombre": "SISTEMA FRONTAL DEL (14-07-2026) EN HUALPÉN, HUALPÉN, BIOBÍO",
+      "region": "Biobío",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148761",
+      "nombre": "SISTEMA FRONTAL DEL (14-07-2026) EN NUEVA IMPERIAL, NUEVA IMPERIAL, LA ARAUCANÍA",
+      "region": "La Araucanía",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149182",
+      "nombre": "SISTEMA FRONTAL DEL (14-07-2026) EN SAN FABIÁN, SAN FABIÁN, ÑUBLE",
+      "region": "Ñuble",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148241",
+      "nombre": "SISTEMA FRONTAL DEL (14-07-2026) EN TOMÉ, TOMÉ, BIOBÍO",
+      "region": "Biobío",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149184",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN CHAÑARAL ALTO, CARRIZAL, PEJERREYES, EL TOME, PALOMO, LAURELES, EL MAITÉN ENTRE OTROS, MONTE PATRIA, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149188",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNA DE COMBARBALA, COMBARBALÁ, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149189",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNA DE LA HIGUERA, LA HIGUERA, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149183",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNA DE VICUÑA, VICUÑA, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149141",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNAL, CHOLCHOL, LA ARAUCANÍA",
+      "region": "La Araucanía",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148568",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN H. DE LA CABRERIA, H. CENTRO, LAS MIRAS, SAN VICENTE, SAN JOSE, SAN VICENTE, H. DEL PEUMO, ÑIQUÉN, ÑUBLE",
+      "region": "Ñuble",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149185",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN LOS VILOS, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149181",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN PUNITAQUI, SECTOR LOS QUILES Y LOCALIDADES RURALES VARIAS EJ: LA RINCONADA, ALTAR, ETC   , PUNITAQUI, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149221",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN SECTOR URBANO RURAL COMUNA CANELA, CANELA, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149186",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN SECTORES RURAL Y URBANO DE LA COMUNA, SALAMANCA, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149187",
+      "nombre": "SISTEMA FRONTAL DEL (15-07-2026) EN SECTORES RURALES Y URBANOS AFECTADOS., OVALLE, COQUIMBO",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148922",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN COMUNA DE PELLUHUE, PELLUHUE, MAULE",
+      "region": "Maule",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148881",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN COMUNA DE PELLUHUE, PELLUHUE, MAULE",
+      "region": "Maule",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148601",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN HUELÓN Y CALPÚN, CUREPTO, MAULE",
+      "region": "Maule",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149042",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN LICANTÉN, LICANTÉN, MAULE",
+      "region": "Maule",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148906",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN PARRAL, PARRAL, MAULE",
+      "region": "Maule",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148562",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN SAN IGNACIO , SAN IGNACIO, ÑUBLE",
+      "region": "Ñuble",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148563",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN SECTOR EL ARRAYAN SIN NUMERO RURAL, TREGUACO, ÑUBLE",
+      "region": "Ñuble",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148565",
+      "nombre": "SISTEMA FRONTAL DEL (16-07-2026) EN SISTEMA FRONTAL, CUREPTO, MAULE",
+      "region": "Maule",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148947",
+      "nombre": "SISTEMA FRONTAL DEL (17-07-2026) EN COMUNA DE CURACAVÍ, CURACAVÍ, METROPOLITANA DE SANTIAGO",
+      "region": "Metropolitana de Santiago",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148904",
+      "nombre": "SISTEMA FRONTAL DEL (17-07-2026) EN DISTINTOS SECTORES, LOTA, BIOBÍO",
+      "region": "Biobío",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149007",
+      "nombre": "SISTEMA FRONTAL DEL (17-07-2026) EN LOS PRESIDENTES, TALAGANTE, METROPOLITANA DE SANTIAGO",
+      "region": "Metropolitana de Santiago",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "148762",
+      "nombre": "SISTEMA FRONTAL DEL (17-07-2026) EN SECTOR LOS PALITOS , ISLA DE MAIPO, METROPOLITANA DE SANTIAGO",
+      "region": "Metropolitana de Santiago",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
+    },
+    {
+      "id": "149022",
+      "nombre": "SISTEMA FRONTAL DEL (18-07-2026) EN VILLA EL PORTAL, MELIPILLA, MELIPILLA, METROPOLITANA DE SANTIAGO",
+      "region": "Metropolitana de Santiago",
+      "comunas": "",
+      "estado": "Activa",
+      "fechaCreacion": ""
     }
   ],
   "descargas": [
     {
       "eventoId": "148681",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148681_20260719_1903_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148681_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148661",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148661_20260719_1903_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148661_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148641",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148641_20260719_1903_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148641_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148621",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148621_20260719_1903_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148621_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148602",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148602_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148602_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148567",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148567_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148567_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148566",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148566_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148566_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148564",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148564_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148564_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148561",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148561_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148561_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148541",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148541_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148541_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148521",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148501",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148481",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148442",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148401",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260719_1910_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148944",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148944_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148944_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148946",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148946_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148946_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148742",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148742_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148742_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148902",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148902_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148902_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148821",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148821_20260719_1904_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148821_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148903",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148903_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148903_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148841",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148841_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148841_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148801",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148801_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148801_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148907",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148907_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148907_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148909",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148909_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148909_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148910",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148910_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148910_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148913",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148913_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148913_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148911",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148911_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148911_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148912",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148912_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148912_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148942",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148942_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148942_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148917",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148917_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148917_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148941",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148941_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148941_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148921",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148921_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148921_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148914",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148914_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148914_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148744",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148744_20260719_1905_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148744_20260719_1911_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148741",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148741_20260719_1911_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148961",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148961_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148961_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148981",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148981_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148981_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148745",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148745_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148745_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149009",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149009_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149009_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149008",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149008_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149008_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149041",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148916",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148916_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148916_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148743",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148743_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148743_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149023",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149023_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149023_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149081",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149101",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260719_1907_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149162",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260719_1908_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260719_1912_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "148908",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148908_20260719_1908_Reporte_BD_FIBE.xlsx"
-    }
-  ],
-  "pendientesDescarga": [
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148908_20260719_1912_Reporte_BD_FIBE.xlsx"
+    },
     {
-      "eventoId": "148741",
-      "region": "Biobío",
-      "comuna": "Tucapel",
-      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+      "eventoId": "148781",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148781_20260719_1912_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148702",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148702_20260719_1912_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148761",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148761_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149182",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149182_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148241",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148241_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149184",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149184_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149188",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149188_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149189",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149189_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149183",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149183_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149141",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149141_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148568",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148568_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149185",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149185_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149181",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149181_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149221",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149221_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149186",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149186_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149187",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149187_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148922",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148922_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148881",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148881_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148601",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148601_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149042",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149042_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148906",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148906_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148562",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148562_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148563",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148563_20260719_1913_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148565",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148565_20260719_1914_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148947",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148947_20260719_1914_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148904",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148904_20260719_1914_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149007",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149007_20260719_1914_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "148762",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148762_20260719_1914_Reporte_BD_FIBE.xlsx"
+    },
+    {
+      "eventoId": "149022",
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149022_20260719_1914_Reporte_BD_FIBE.xlsx"
     }
   ],
+  "pendientesDescarga": [],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148541_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148561_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148564_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148566_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148567_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148602_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148621_20260719_1903_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148641_20260719_1903_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148661_20260719_1903_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148681_20260719_1903_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148741_20260719_1839_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148742_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148743_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148744_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148745_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148801_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148821_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148841_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148902_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148903_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148907_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148908_20260719_1908_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148909_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148910_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148911_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148912_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148913_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148914_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148916_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148917_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148921_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148941_20260719_1905_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148942_20260719_1905_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148241_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148541_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148561_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148562_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148563_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148564_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148565_20260719_1914_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148566_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148567_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148568_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148601_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148602_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148621_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148641_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148661_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148681_20260719_1910_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148702_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148741_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148742_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148743_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148744_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148745_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148761_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148762_20260719_1914_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148781_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148801_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148821_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148841_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148881_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148902_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148903_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148904_20260719_1914_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148906_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148907_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148908_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148909_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148910_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148911_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148912_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148913_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148914_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148916_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148917_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148921_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148922_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148941_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148942_20260719_1911_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148943_20260719_1205_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148944_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148946_20260719_1904_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148961_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148981_20260719_1907_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148944_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148946_20260719_1911_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148947_20260719_1914_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148961_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148981_20260719_1912_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149001_20260719_1206_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149002_20260719_1206_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149003_20260719_1206_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149004_20260719_1206_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149006_20260719_1206_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149008_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149009_20260719_1907_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149007_20260719_1914_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149008_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149009_20260719_1912_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149021_20260719_1206_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149023_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260719_1907_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149022_20260719_1914_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149023_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149042_20260719_1913_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149043_20260719_1207_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149044_20260719_1207_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149045_20260719_1207_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260719_1907_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260719_1907_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260719_1912_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149121_20260719_1207_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260719_1908_Reporte_BD_FIBE.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149141_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260719_1912_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149181_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149182_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149183_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149184_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149185_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149186_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149187_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149188_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149189_20260719_1913_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149221_20260719_1913_Reporte_BD_FIBE.xlsx"
   ],
   "advertencias": [],
   "filas": [
@@ -695,8 +1069,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "La Araucanía",
@@ -724,8 +1098,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -752,8 +1126,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -782,8 +1156,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
@@ -815,8 +1189,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -842,8 +1216,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -874,8 +1248,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Metropolitana de Santiago",
@@ -902,8 +1276,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -928,8 +1302,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
@@ -963,8 +1337,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 5,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -995,8 +1369,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -1019,8 +1393,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
@@ -1045,8 +1419,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
@@ -1081,8 +1455,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
@@ -1113,8 +1487,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Los Ríos",
@@ -1140,8 +1514,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Los Ríos",
@@ -1166,8 +1540,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Los Ríos",
@@ -1195,8 +1569,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Los Ríos",
@@ -1221,13 +1595,13 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
       "comuna": "Coronel",
-      "evento": "148908",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN CORONEL, BIOBÍO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "17/07/2026",
@@ -1253,8 +1627,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -1280,8 +1654,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -1307,8 +1681,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "La Araucanía",
@@ -1333,8 +1707,8 @@
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Los Ríos",
@@ -1360,8 +1734,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -1386,8 +1760,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Biobío",
@@ -1416,8 +1790,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -1444,8 +1818,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Los Ríos",
@@ -1472,8 +1846,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
@@ -1500,13 +1874,13 @@
         "NO AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Metropolitana de Santiago",
       "comuna": "Talagante",
-      "evento": "SISTEMA FRONTAL",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN LOS PRESIDENTES, TALAGANTE, METROPOLITANA DE SANTIAGO",
       "fechaEvento": "15/07/2026",
       "fechaOcurrencia": "15/07/2026",
       "fechaCreacion": "18/07/2026",
@@ -1527,13 +1901,13 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
       "comuna": "Chillán",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (18-07-2026) EN SANTA RAQUEL CATO , CHILLÁN, ÑUBLE",
       "fechaEvento": "18/07/2026",
       "fechaOcurrencia": "18/07/2026",
       "fechaCreacion": "18/07/2026",
@@ -1553,13 +1927,13 @@
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "Quilpué",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1591,13 +1965,13 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "Viña Del Mar",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1626,13 +2000,13 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "San Esteban",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1652,13 +2026,13 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "Valparaíso",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1667,7 +2041,7 @@
       "aplicadas": 0,
       "anuladas": 0,
       "terminadas": 70,
-      "digitacion": 5,
+      "digitacion": 6,
       "personas": 197,
       "nna": 55,
       "mayores": 46,
@@ -1690,13 +2064,13 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "El Tabo",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1718,13 +2092,13 @@
         "POCO AFECTADOS|POCO AFECTADA": 3,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "La Ligua",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1746,13 +2120,13 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Valparaíso",
       "comuna": "Cabildo",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN VALPARAÍSO",
       "fechaEvento": "16/07/2026",
       "fechaOcurrencia": "16/07/2026",
       "fechaCreacion": "19/07/2026",
@@ -1772,8 +2146,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -1796,8 +2170,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "La Araucanía",
@@ -1820,8 +2194,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "La Araucanía",
@@ -1844,8 +2218,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Metropolitana de Santiago",
@@ -1868,8 +2242,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -1892,8 +2266,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -1916,8 +2290,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "La Araucanía",
@@ -1940,8 +2314,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
@@ -1964,13 +2338,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Metropolitana de Santiago",
       "comuna": "Puente Alto",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN PUENTE ALTO , PUENTE ALTO, METROPOLITANA DE SANTIAGO",
       "fechaEvento": "2026-07-18T04:00:00.000Z",
       "fechaOcurrencia": "2026-07-18T04:00:00.000Z",
       "fechaCreacion": "2026-07-18T04:00:00.000Z",
@@ -1988,13 +2362,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Metropolitana de Santiago",
       "comuna": "Cerrillos",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN COMUNA DE CERRILLOS, CERRILLOS, METROPOLITANA DE SANTIAGO",
       "fechaEvento": "2026-07-18T04:00:00.000Z",
       "fechaOcurrencia": "2026-07-18T04:00:00.000Z",
       "fechaCreacion": "2026-07-18T04:00:00.000Z",
@@ -2012,13 +2386,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
       "comuna": "Portezuelo",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN PORTEZUELO, ÑUBLE",
       "fechaEvento": "2026-07-18T04:00:00.000Z",
       "fechaOcurrencia": "2026-07-18T04:00:00.000Z",
       "fechaCreacion": "2026-07-18T04:00:00.000Z",
@@ -2036,13 +2410,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
       "comuna": "Pencahue",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN PENCAHUE, VARIOS, PENCAHUE, MAULE",
       "fechaEvento": "2026-07-18T04:00:00.000Z",
       "fechaOcurrencia": "2026-07-18T04:00:00.000Z",
       "fechaCreacion": "2026-07-18T04:00:00.000Z",
@@ -2060,13 +2434,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Metropolitana de Santiago",
       "comuna": "María Pinto",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (17-07-2026) EN MARÍA PINTO, METROPOLITANA DE SANTIAGO",
       "fechaEvento": "17/07/2026",
       "fechaOcurrencia": "17/07/2026",
       "fechaCreacion": "17/07/2026",
@@ -2084,13 +2458,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
       "comuna": "Quirihue",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN QUIRIHUE, QUIRIHUE, ÑUBLE",
       "fechaEvento": "2026-07-18T04:00:00.000Z",
       "fechaOcurrencia": "2026-07-18T04:00:00.000Z",
       "fechaCreacion": "2026-07-18T04:00:00.000Z",
@@ -2108,13 +2482,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Ñuble",
       "comuna": "Coelemu",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (17-07-2026) EN COELEMU, COELEMU, ÑUBLE",
       "fechaEvento": "2026-07-18T04:00:00.000Z",
       "fechaOcurrencia": "2026-07-18T04:00:00.000Z",
       "fechaCreacion": "2026-07-18T04:00:00.000Z",
@@ -2132,13 +2506,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "La Araucanía",
       "comuna": "Cunco",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (14-07-2026) EN CUNCO, LA ARAUCANÍA",
       "fechaEvento": "14/07/2026",
       "fechaOcurrencia": "14/07/2026",
       "fechaCreacion": "14/07/2026",
@@ -2156,13 +2530,13 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     },
     {
       "region": "Maule",
       "comuna": "Licantén",
-      "evento": "Sistema Frontal",
+      "evento": "SISTEMA FRONTAL DEL (18-07-2026) EN LICANTÉN, LICANTÉN, MAULE",
       "fechaEvento": "18/07/2026",
       "fechaOcurrencia": "18/07/2026",
       "fechaCreacion": "18/07/2026",
@@ -2180,8 +2554,704 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "19:08",
-      "fechaLlenado": "19-07-2026 19:08"
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Biobío",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (14-07-2026) EN CAÑETE, CAÑETE, BIOBÍO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148781",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Biobío",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (14-07-2026) EN HUALPÉN, HUALPÉN, BIOBÍO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148702",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "La Araucanía",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (14-07-2026) EN NUEVA IMPERIAL, NUEVA IMPERIAL, LA ARAUCANÍA",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148761",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (14-07-2026) EN SAN FABIÁN, SAN FABIÁN, ÑUBLE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149182",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Biobío",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (14-07-2026) EN TOMÉ, TOMÉ, BIOBÍO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148241",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN CHAÑARAL ALTO, CARRIZAL, PEJERREYES, EL TOME, PALOMO, LAURELES, EL MAITÉN ENTRE OTROS, MONTE PATRIA, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149184",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNA DE COMBARBALA, COMBARBALÁ, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149188",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNA DE LA HIGUERA, LA HIGUERA, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149189",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNA DE VICUÑA, VICUÑA, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149183",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "La Araucanía",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN COMUNAL, CHOLCHOL, LA ARAUCANÍA",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149141",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN H. DE LA CABRERIA, H. CENTRO, LAS MIRAS, SAN VICENTE, SAN JOSE, SAN VICENTE, H. DEL PEUMO, ÑIQUÉN, ÑUBLE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148568",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN LOS VILOS, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149185",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN PUNITAQUI, SECTOR LOS QUILES Y LOCALIDADES RURALES VARIAS EJ: LA RINCONADA, ALTAR, ETC   , PUNITAQUI, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149181",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN SECTOR URBANO RURAL COMUNA CANELA, CANELA, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149221",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN SECTORES RURAL Y URBANO DE LA COMUNA, SALAMANCA, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149186",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (15-07-2026) EN SECTORES RURALES Y URBANOS AFECTADOS., OVALLE, COQUIMBO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149187",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Maule",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN COMUNA DE PELLUHUE, PELLUHUE, MAULE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148922",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Maule",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN COMUNA DE PELLUHUE, PELLUHUE, MAULE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148881",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Maule",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN HUELÓN Y CALPÚN, CUREPTO, MAULE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148601",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Maule",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN LICANTÉN, LICANTÉN, MAULE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149042",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Maule",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN PARRAL, PARRAL, MAULE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148906",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN SAN IGNACIO , SAN IGNACIO, ÑUBLE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148562",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN SECTOR EL ARRAYAN SIN NUMERO RURAL, TREGUACO, ÑUBLE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148563",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Maule",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (16-07-2026) EN SISTEMA FRONTAL, CUREPTO, MAULE",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148565",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Metropolitana de Santiago",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (17-07-2026) EN COMUNA DE CURACAVÍ, CURACAVÍ, METROPOLITANA DE SANTIAGO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148947",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Biobío",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (17-07-2026) EN DISTINTOS SECTORES, LOTA, BIOBÍO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148904",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Metropolitana de Santiago",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (17-07-2026) EN LOS PRESIDENTES, TALAGANTE, METROPOLITANA DE SANTIAGO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149007",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Metropolitana de Santiago",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (17-07-2026) EN SECTOR LOS PALITOS , ISLA DE MAIPO, METROPOLITANA DE SANTIAGO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "148762",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
+    },
+    {
+      "region": "Metropolitana de Santiago",
+      "comuna": "",
+      "evento": "SISTEMA FRONTAL DEL (18-07-2026) EN VILLA EL PORTAL, MELIPILLA, MELIPILLA, METROPOLITANA DE SANTIAGO",
+      "fechaEvento": "",
+      "fechaOcurrencia": "",
+      "fechaCreacion": "",
+      "id": "149022",
+      "alfa": 0,
+      "aplicadas": 0,
+      "anuladas": 0,
+      "terminadas": 0,
+      "digitacion": 0,
+      "personas": 0,
+      "nna": 0,
+      "mayores": 0,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 0,
+      "otro": 0,
+      "matrizAfectacion": {},
+      "hora": "19:14",
+      "fechaLlenado": "19-07-2026 19:14"
     }
   ]
 }
