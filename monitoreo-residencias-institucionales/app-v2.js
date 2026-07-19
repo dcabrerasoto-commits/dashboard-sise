@@ -80,8 +80,9 @@
   }
 
   function setCommunes(region, selected) {
-    const values = (C.comunasPorRegion || {})[region] || [];
-    populate($("commune"), values, region ? "Seleccione una comuna" : "Seleccione una región");
+    const official = officialRegion(region);
+    const values = (C.comunasPorRegion || {})[official] || [];
+    populate($("commune"), values, official ? "Seleccione una comuna" : "Seleccione una región");
     $("commune").value = selected ? (values.find(value => key(value) === key(selected)) || "") : "";
     return $("commune").value;
   }
@@ -530,10 +531,22 @@
     }));
     ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
     $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
-    $("region").addEventListener("change", e => { setCommunes(e.target.value); refreshResidenceCatalogOptions(); updateResidenceCatalogMode(); previousMatch = null; });
+    $("region").addEventListener("change", e => {
+      const region = officialRegion(e.target.value);
+      e.target.value = region;
+      setCommunes(region);
+      refreshResidenceCatalogOptions();
+      updateResidenceCatalogMode();
+      previousMatch = null;
+    });
     $("service").addEventListener("change", () => { previousMatch = null; refreshResidenceCatalogOptions(); updateResidenceCatalogMode(); evaluatePrevious(); });
     $("residenceCatalog")?.addEventListener("change", () => { previousMatch = null; updateResidenceCatalogMode(); evaluatePrevious(); });
-    $("commune").addEventListener("change", () => { refreshResidenceCatalogOptions(); updateResidenceCatalogMode(); evaluatePrevious(); });
+    $("commune").addEventListener("change", e => {
+      e.target.value = officialCommune($("region").value, e.target.value);
+      refreshResidenceCatalogOptions();
+      updateResidenceCatalogMode();
+      evaluatePrevious();
+    });
     $("establishment").addEventListener("blur", evaluatePrevious);
     $("hasChanges").addEventListener("change", e => setUpdateSections(e.target.value === "Sí"));
     $("electrodependent").addEventListener("change", e => { const yes = e.target.value === "Sí"; $("electrodependentCountWrap").classList.toggle("hidden", !yes); $("electrodependentCount").required = yes; if (!yes) $("electrodependentCount").value = ""; });
