@@ -101,7 +101,7 @@ function comunasIngresoOrdenadas(region){let conInfo=new Set([...datosSise,...re
 function histKeyText(t){return claveTexto(repararTexto(t)).replace(/\s+/g,' ').trim()}
 function histTieneValores(d){return ['alfa','aplicadas','encuestadores','terminadas','digitacion','anuladas','personas','nna','mayores','discapacidad'].some(k=>+(d[k]||0)>0)}
 function histNum(d,k){return Number(String(d[k]??0).replace(',','.'))||0}
-function histExcluir(d){return histKeyText(d.region)==='LOS RIOS'&&histKeyText(d.comuna)==='VALDIVIA'}
+function histExcluir(d){return histKeyText(d.region)==='LOS RIOS'&&histKeyText(d.comuna)==='VALDIVIA'||!aplicadasRegionalValida(d)}
 function aplicadasRegionalValida(d){return !(histKeyText(d.region)==='VALPARAISO'&&String(d.id||'')==='149162'&&+(d.aplicadas||0)===221&&+(d.encuestadores||0)===0)}
 function fechaHist(d){let s=String(d.fecha||d.marca||''),m=s.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})/)||s.match(/(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})/);return !m?'':m[1].length===4?`${m[1]}-${String(m[2]).padStart(2,'0')}-${String(m[3]).padStart(2,'0')}`:`${m[3]}-${String(m[2]).padStart(2,'0')}-${String(m[1]).padStart(2,'0')}`}
 function fechaCapturaMs(d){let s=String(d.marca||d.fecha||''),m=s.match(/(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})[,\s]+(\d{1,2}):(\d{2})(?:\s*([ap])\.?\s*m\.?)?/i)||s.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})[T\s]+(\d{1,2}):(\d{2})/);if(!m)return 0;let y=m[3],mo=m[2],da=m[1],h=+m[4],mi=+m[5];if(m[1].length===4){y=m[1];mo=m[2];da=m[3]}let ampm=(m[6]||'').toLowerCase();if(ampm==='p'&&h<12)h+=12;if(ampm==='a'&&h===12)h=0;return new Date(+y,+mo-1,+da,h,mi).getTime()}
