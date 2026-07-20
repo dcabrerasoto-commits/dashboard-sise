@@ -78,7 +78,7 @@ async function readGoogleSheetRows() {
         headers: { Authorization: `Bearer ${token}` }
     });
     if (!response.ok) throw new Error(`Google values ${response.status}: ${await response.text()}`);
-    const values = (await response.json()).values || [];
+    const values = ((await response.json()).values || []).filter((row) => row.some((value) => String(value || "").trim()));
     if (values.length < 2) return { datos: [], headers: [] };
     const headers = values[0].map((value) => String(value || "").trim());
     const datos = values.slice(1).filter((row) => row.some((value) => String(value || "").trim())).map((row) => {
