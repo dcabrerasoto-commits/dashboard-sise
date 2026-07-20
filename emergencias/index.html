@@ -109,7 +109,7 @@ function comunasIngresoOrdenadas(region){return comunasOrdenadas(region)}
 function histKeyText(t){return claveTexto(repararTexto(t)).replace(/\s+/g,' ').trim()}
 function histTieneValores(d){return ['alfa','aplicadas','encuestadores','terminadas','digitacion','anuladas','personas','nna','mayores','discapacidad'].some(k=>+(d[k]||0)>0)}
 function histNum(d,k){return Number(String(d[k]??0).replace(',','.'))||0}
-function histExcluir(d){return histKeyText(d.region)==='LOS RIOS'&&histKeyText(d.comuna)==='VALDIVIA'||String(d.id||'')==='149162'&&String(d.comuna||'').includes(',')}
+function histExcluir(d){return String(d.id||'')==='149162'&&String(d.comuna||'').includes(',')}
 let cacheAplicadasReplicadas=null,cacheAplicadasReplicadasN=-1,aplicadasBloqueadas=new Set();
 function limpiarCacheAplicadas(){cacheAplicadasReplicadas=null;cacheAplicadasReplicadasN=-1}
 function gruposAplicadasReplicadas(){let n=reportesRegionales.length;if(cacheAplicadasReplicadas&&cacheAplicadasReplicadasN===n)return cacheAplicadasReplicadas;let g=new Map();reportesRegionales.forEach(d=>{let ap=+(d.aplicadas||0),id=String(d.id||'').trim();if(!id||ap<=0)return;let k=[histKeyText(d.region),id,d.fechaLlenado||d.marca||d.fechaClave||'',ap].join('|'),v=g.get(k)||new Set();v.add(histKeyText(d.comuna));g.set(k,v)});cacheAplicadasReplicadas=new Set([...g.entries()].filter(([k,v])=>v.size>=4).map(([k])=>k));cacheAplicadasReplicadas.forEach(k=>aplicadasBloqueadas.add(k));cacheAplicadasReplicadasN=n;return cacheAplicadasReplicadas}
