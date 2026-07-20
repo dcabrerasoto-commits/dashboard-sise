@@ -104,7 +104,7 @@ function fechaManana(){let d=new Date();d.setDate(d.getDate()+1);return new Intl
 function encuestadoresTexto(html=true){return `N° de encuestadores FIBE disponibles para ${html?`<span class="label-date">${fechaManana()}</span>`:fechaManana()}`}
 function encuestadoresTabla(html=true){return `Encuestadores FIBE disponibles para ${html?`<span class="label-date">${fechaManana()}</span>`:fechaManana()}`}
 function comunasOrdenadas(region){return [...(comunasPorRegion[region]||[])].sort((a,b)=>a.localeCompare(b,'es-CL'))}
-function comunasIngresoOrdenadas(region){let conInfo=new Set([...datosSise,...reportesRegionales].filter(d=>d.region===region&&(+(d.alfa||0)||+(d.aplicadas||0)||+(d.encuestadores||0)||+(d.terminadas||0)||+(d.digitacion||0)||+(d.anuladas||0)||+(d.personas||0))).map(d=>claveTexto(d.comuna)));return comunasOrdenadas(region).sort((a,b)=>(conInfo.has(claveTexto(b))-conInfo.has(claveTexto(a)))||a.localeCompare(b,'es-CL'))}
+function comunasIngresoOrdenadas(region){return comunasOrdenadas(region)}
 function histKeyText(t){return claveTexto(repararTexto(t)).replace(/\s+/g,' ').trim()}
 function histTieneValores(d){return ['alfa','aplicadas','encuestadores','terminadas','digitacion','anuladas','personas','nna','mayores','discapacidad'].some(k=>+(d[k]||0)>0)}
 function histNum(d,k){return Number(String(d[k]??0).replace(',','.'))||0}
