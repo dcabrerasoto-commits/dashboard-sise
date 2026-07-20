@@ -53,7 +53,17 @@ function buscarColumnasEstado(headers) { return headers.filter((header) => norm(
 function normalizarRunValido(valor) {
     const limpio = String(valor || "").replace(/\./g, "").replace(/-/g, "").trim().toUpperCase();
     if (!/^\d{7,8}[0-9K]$/.test(limpio)) return "";
-    return `${limpio.slice(0, -1)}-${limpio.slice(-1)}`;
+    const cuerpo = limpio.slice(0, -1);
+    const dv = limpio.slice(-1);
+    let suma = 0;
+    let multiplicador = 2;
+    for (let i = cuerpo.length - 1; i >= 0; i--) {
+        suma += Number(cuerpo[i]) * multiplicador;
+        multiplicador = multiplicador === 7 ? 2 : multiplicador + 1;
+    }
+    const esperado = 11 - (suma % 11);
+    const dvEsperado = esperado === 11 ? "0" : esperado === 10 ? "K" : String(esperado);
+    return dv === dvEsperado ? `${cuerpo}-${dv}` : "";
 }
 function filtrarRunUnicosValidos(datos, colRun) {
     const vistos = new Set();
