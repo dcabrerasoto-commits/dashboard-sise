@@ -36,11 +36,11 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_Enero",
         "label": "ENERO",
-        "acreditado": 14483,
+        "acreditado": 14481,
         "noVigente": 0,
-        "noAcreditado": 4992,
+        "noAcreditado": 4990,
         "sinEstado": 0,
-        "total": 19475,
+        "total": 19471,
         "porRegion": [
           {
             "Region": "ARICA Y PARINACOTA",
@@ -1918,21 +1918,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3556,
+            "Acreditado": 3555,
             "NoVigente": 0,
-            "NoAcreditado": 1408,
+            "NoAcreditado": 1409,
             "SinEstado": 0,
             "Total": 4964,
             "Municipalidad": 4594,
             "Seremi": 73,
             "OtrasInstituciones": 297,
-            "AcreditadoMunicipalidad": 3311,
+            "AcreditadoMunicipalidad": 3310,
             "AcreditadoSeremi": 65,
             "AcreditadoOtras": 180,
             "NoVigenteMunicipalidad": 0,
             "NoVigenteSeremi": 0,
             "NoVigenteOtras": 0,
-            "NoAcreditadoMunicipalidad": 1283,
+            "NoAcreditadoMunicipalidad": 1284,
             "NoAcreditadoSeremi": 8,
             "NoAcreditadoOtras": 117,
             "porComuna": [
@@ -2275,23 +2275,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 0,
-                "NoAcreditado": 86,
+                "NoAcreditado": 87,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 0,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 86,
+                "NoAcreditadoMunicipalidad": 87,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -3050,7 +3050,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 71.63577759871072
+            "TasaAcreditado": 71.61563255439162
           },
           {
             "Region": "OHIGGINS",
@@ -3776,10 +3776,10 @@ window.SISE_DASHBOARD_DATA = {
             "OrdenRegion": 8,
             "Acreditado": 929,
             "NoVigente": 0,
-            "NoAcreditado": 336,
+            "NoAcreditado": 333,
             "SinEstado": 0,
-            "Total": 1265,
-            "Municipalidad": 1052,
+            "Total": 1262,
+            "Municipalidad": 1049,
             "Seremi": 44,
             "OtrasInstituciones": 169,
             "AcreditadoMunicipalidad": 790,
@@ -3788,18 +3788,18 @@ window.SISE_DASHBOARD_DATA = {
             "NoVigenteMunicipalidad": 0,
             "NoVigenteSeremi": 0,
             "NoVigenteOtras": 0,
-            "NoAcreditadoMunicipalidad": 262,
+            "NoAcreditadoMunicipalidad": 259,
             "NoAcreditadoSeremi": 5,
             "NoAcreditadoOtras": 69,
             "porComuna": [
               {
                 "Comuna": "Cauquenes",
-                "Total": 17,
+                "Total": 14,
                 "Acreditado": 5,
                 "NoVigente": 0,
-                "NoAcreditado": 12,
+                "NoAcreditado": 9,
                 "SinEstado": 0,
-                "Municipalidad": 13,
+                "Municipalidad": 10,
                 "Seremi": 0,
                 "OtrasInstituciones": 4,
                 "AcreditadoMunicipalidad": 2,
@@ -3808,10 +3808,10 @@ window.SISE_DASHBOARD_DATA = {
                 "NoVigenteMunicipalidad": 0,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 11,
+                "NoAcreditadoMunicipalidad": 8,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 1,
-                "TasaAcreditado": 29.411764705882355
+                "TasaAcreditado": 35.714285714285715
               },
               {
                 "Comuna": "Chanco",
@@ -4423,7 +4423,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 85.71428571428571
               }
             ],
-            "TasaAcreditado": 73.43873517786561
+            "TasaAcreditado": 73.61331220285261
           },
           {
             "Region": "NUBLE",
@@ -4895,15 +4895,15 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1859,
+            "Acreditado": 1858,
             "NoVigente": 0,
             "NoAcreditado": 448,
             "SinEstado": 0,
-            "Total": 2307,
-            "Municipalidad": 2179,
+            "Total": 2306,
+            "Municipalidad": 2178,
             "Seremi": 37,
             "OtrasInstituciones": 91,
-            "AcreditadoMunicipalidad": 1759,
+            "AcreditadoMunicipalidad": 1758,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 67,
             "NoVigenteMunicipalidad": 0,
@@ -5545,15 +5545,15 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Tomé",
-                "Total": 113,
-                "Acreditado": 87,
+                "Total": 112,
+                "Acreditado": 86,
                 "NoVigente": 0,
                 "NoAcreditado": 26,
                 "SinEstado": 0,
-                "Municipalidad": 113,
+                "Municipalidad": 112,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 87,
+                "AcreditadoMunicipalidad": 86,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 0,
@@ -5562,7 +5562,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 26,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 76.99115044247787
+                "TasaAcreditado": 76.78571428571429
               },
               {
                 "Comuna": "Tucapel",
@@ -5607,7 +5607,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95
               }
             ],
-            "TasaAcreditado": 80.58084091894236
+            "TasaAcreditado": 80.5724197745013
           },
           {
             "Region": "LA ARAUCANIA",
@@ -7760,11 +7760,11 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_FEBRERO",
         "label": "FEBRERO",
-        "acreditado": 14483,
+        "acreditado": 14481,
         "noVigente": 0,
-        "noAcreditado": 4992,
+        "noAcreditado": 4990,
         "sinEstado": 0,
-        "total": 19475,
+        "total": 19471,
         "porRegion": [
           {
             "Region": "ARICA Y PARINACOTA",
@@ -9642,21 +9642,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3556,
+            "Acreditado": 3555,
             "NoVigente": 0,
-            "NoAcreditado": 1408,
+            "NoAcreditado": 1409,
             "SinEstado": 0,
             "Total": 4964,
             "Municipalidad": 4594,
             "Seremi": 73,
             "OtrasInstituciones": 297,
-            "AcreditadoMunicipalidad": 3311,
+            "AcreditadoMunicipalidad": 3310,
             "AcreditadoSeremi": 65,
             "AcreditadoOtras": 180,
             "NoVigenteMunicipalidad": 0,
             "NoVigenteSeremi": 0,
             "NoVigenteOtras": 0,
-            "NoAcreditadoMunicipalidad": 1283,
+            "NoAcreditadoMunicipalidad": 1284,
             "NoAcreditadoSeremi": 8,
             "NoAcreditadoOtras": 117,
             "porComuna": [
@@ -9999,23 +9999,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 0,
-                "NoAcreditado": 86,
+                "NoAcreditado": 87,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 0,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 86,
+                "NoAcreditadoMunicipalidad": 87,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -10774,7 +10774,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 71.63577759871072
+            "TasaAcreditado": 71.61563255439162
           },
           {
             "Region": "OHIGGINS",
@@ -11500,10 +11500,10 @@ window.SISE_DASHBOARD_DATA = {
             "OrdenRegion": 8,
             "Acreditado": 929,
             "NoVigente": 0,
-            "NoAcreditado": 336,
+            "NoAcreditado": 333,
             "SinEstado": 0,
-            "Total": 1265,
-            "Municipalidad": 1052,
+            "Total": 1262,
+            "Municipalidad": 1049,
             "Seremi": 44,
             "OtrasInstituciones": 169,
             "AcreditadoMunicipalidad": 790,
@@ -11512,18 +11512,18 @@ window.SISE_DASHBOARD_DATA = {
             "NoVigenteMunicipalidad": 0,
             "NoVigenteSeremi": 0,
             "NoVigenteOtras": 0,
-            "NoAcreditadoMunicipalidad": 262,
+            "NoAcreditadoMunicipalidad": 259,
             "NoAcreditadoSeremi": 5,
             "NoAcreditadoOtras": 69,
             "porComuna": [
               {
                 "Comuna": "Cauquenes",
-                "Total": 17,
+                "Total": 14,
                 "Acreditado": 5,
                 "NoVigente": 0,
-                "NoAcreditado": 12,
+                "NoAcreditado": 9,
                 "SinEstado": 0,
-                "Municipalidad": 13,
+                "Municipalidad": 10,
                 "Seremi": 0,
                 "OtrasInstituciones": 4,
                 "AcreditadoMunicipalidad": 2,
@@ -11532,10 +11532,10 @@ window.SISE_DASHBOARD_DATA = {
                 "NoVigenteMunicipalidad": 0,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 11,
+                "NoAcreditadoMunicipalidad": 8,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 1,
-                "TasaAcreditado": 29.411764705882355
+                "TasaAcreditado": 35.714285714285715
               },
               {
                 "Comuna": "Chanco",
@@ -12147,7 +12147,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 85.71428571428571
               }
             ],
-            "TasaAcreditado": 73.43873517786561
+            "TasaAcreditado": 73.61331220285261
           },
           {
             "Region": "NUBLE",
@@ -12619,15 +12619,15 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1859,
+            "Acreditado": 1858,
             "NoVigente": 0,
             "NoAcreditado": 448,
             "SinEstado": 0,
-            "Total": 2307,
-            "Municipalidad": 2179,
+            "Total": 2306,
+            "Municipalidad": 2178,
             "Seremi": 37,
             "OtrasInstituciones": 91,
-            "AcreditadoMunicipalidad": 1759,
+            "AcreditadoMunicipalidad": 1758,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 67,
             "NoVigenteMunicipalidad": 0,
@@ -13269,15 +13269,15 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Tomé",
-                "Total": 113,
-                "Acreditado": 87,
+                "Total": 112,
+                "Acreditado": 86,
                 "NoVigente": 0,
                 "NoAcreditado": 26,
                 "SinEstado": 0,
-                "Municipalidad": 113,
+                "Municipalidad": 112,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 87,
+                "AcreditadoMunicipalidad": 86,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 0,
@@ -13286,7 +13286,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 26,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 76.99115044247787
+                "TasaAcreditado": 76.78571428571429
               },
               {
                 "Comuna": "Tucapel",
@@ -13331,7 +13331,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95
               }
             ],
-            "TasaAcreditado": 80.58084091894236
+            "TasaAcreditado": 80.5724197745013
           },
           {
             "Region": "LA ARAUCANIA",
@@ -15484,9 +15484,9 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_MARZO",
         "label": "MARZO",
-        "acreditado": 14662,
-        "noVigente": 1812,
-        "noAcreditado": 3798,
+        "acreditado": 14660,
+        "noVigente": 1804,
+        "noAcreditado": 3808,
         "sinEstado": 0,
         "total": 20272,
         "porRegion": [
@@ -17366,21 +17366,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3583,
+            "Acreditado": 3582,
             "NoVigente": 522,
-            "NoAcreditado": 983,
+            "NoAcreditado": 984,
             "SinEstado": 0,
             "Total": 5088,
             "Municipalidad": 4706,
             "Seremi": 75,
             "OtrasInstituciones": 307,
-            "AcreditadoMunicipalidad": 3334,
+            "AcreditadoMunicipalidad": 3333,
             "AcreditadoSeremi": 67,
             "AcreditadoOtras": 182,
             "NoVigenteMunicipalidad": 478,
             "NoVigenteSeremi": 6,
             "NoVigenteOtras": 38,
-            "NoAcreditadoMunicipalidad": 894,
+            "NoAcreditadoMunicipalidad": 895,
             "NoAcreditadoSeremi": 2,
             "NoAcreditadoOtras": 87,
             "porComuna": [
@@ -17723,23 +17723,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 6,
-                "NoAcreditado": 80,
+                "NoAcreditado": 81,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 6,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 80,
+                "NoAcreditadoMunicipalidad": 81,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -18498,7 +18498,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 70.42059748427673
+            "TasaAcreditado": 70.40094339622641
           },
           {
             "Region": "OHIGGINS",
@@ -19223,8 +19223,8 @@ window.SISE_DASHBOARD_DATA = {
             "RegionEtiqueta": "Maule",
             "OrdenRegion": 8,
             "Acreditado": 1016,
-            "NoVigente": 261,
-            "NoAcreditado": 226,
+            "NoVigente": 253,
+            "NoAcreditado": 234,
             "SinEstado": 0,
             "Total": 1503,
             "Municipalidad": 1248,
@@ -19233,10 +19233,10 @@ window.SISE_DASHBOARD_DATA = {
             "AcreditadoMunicipalidad": 874,
             "AcreditadoSeremi": 41,
             "AcreditadoOtras": 101,
-            "NoVigenteMunicipalidad": 219,
+            "NoVigenteMunicipalidad": 211,
             "NoVigenteSeremi": 2,
             "NoVigenteOtras": 40,
-            "NoAcreditadoMunicipalidad": 155,
+            "NoAcreditadoMunicipalidad": 163,
             "NoAcreditadoSeremi": 4,
             "NoAcreditadoOtras": 67,
             "porComuna": [
@@ -19244,8 +19244,8 @@ window.SISE_DASHBOARD_DATA = {
                 "Comuna": "Cauquenes",
                 "Total": 40,
                 "Acreditado": 8,
-                "NoVigente": 25,
-                "NoAcreditado": 7,
+                "NoVigente": 17,
+                "NoAcreditado": 15,
                 "SinEstado": 0,
                 "Municipalidad": 32,
                 "Seremi": 0,
@@ -19253,10 +19253,10 @@ window.SISE_DASHBOARD_DATA = {
                 "AcreditadoMunicipalidad": 5,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 3,
-                "NoVigenteMunicipalidad": 21,
+                "NoVigenteMunicipalidad": 13,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 4,
-                "NoAcreditadoMunicipalidad": 6,
+                "NoAcreditadoMunicipalidad": 14,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 1,
                 "TasaAcreditado": 20
@@ -20343,21 +20343,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1877,
+            "Acreditado": 1876,
             "NoVigente": 158,
-            "NoAcreditado": 315,
+            "NoAcreditado": 316,
             "SinEstado": 0,
             "Total": 2350,
             "Municipalidad": 2219,
             "Seremi": 37,
             "OtrasInstituciones": 94,
-            "AcreditadoMunicipalidad": 1776,
+            "AcreditadoMunicipalidad": 1775,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 68,
             "NoVigenteMunicipalidad": 150,
             "NoVigenteSeremi": 4,
             "NoVigenteOtras": 4,
-            "NoAcreditadoMunicipalidad": 293,
+            "NoAcreditadoMunicipalidad": 294,
             "NoAcreditadoSeremi": 0,
             "NoAcreditadoOtras": 22,
             "porComuna": [
@@ -20994,23 +20994,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "Tomé",
                 "Total": 115,
-                "Acreditado": 88,
+                "Acreditado": 87,
                 "NoVigente": 19,
-                "NoAcreditado": 8,
+                "NoAcreditado": 9,
                 "SinEstado": 0,
                 "Municipalidad": 115,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 88,
+                "AcreditadoMunicipalidad": 87,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 19,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 8,
+                "NoAcreditadoMunicipalidad": 9,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 76.52173913043478
+                "TasaAcreditado": 75.65217391304347
               },
               {
                 "Comuna": "Tucapel",
@@ -21055,7 +21055,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95.65217391304348
               }
             ],
-            "TasaAcreditado": 79.87234042553192
+            "TasaAcreditado": 79.82978723404256
           },
           {
             "Region": "LA ARAUCANIA",
@@ -23208,11 +23208,11 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_ABRIL",
         "label": "ABRIL",
-        "acreditado": 14844,
-        "noVigente": 1749,
-        "noAcreditado": 3781,
+        "acreditado": 14838,
+        "noVigente": 1745,
+        "noAcreditado": 3782,
         "sinEstado": 0,
-        "total": 20374,
+        "total": 20365,
         "porRegion": [
           {
             "Region": "ARICA Y PARINACOTA",
@@ -25090,21 +25090,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3637,
+            "Acreditado": 3636,
             "NoVigente": 500,
-            "NoAcreditado": 959,
+            "NoAcreditado": 960,
             "SinEstado": 0,
             "Total": 5096,
             "Municipalidad": 4714,
             "Seremi": 75,
             "OtrasInstituciones": 307,
-            "AcreditadoMunicipalidad": 3386,
+            "AcreditadoMunicipalidad": 3385,
             "AcreditadoSeremi": 67,
             "AcreditadoOtras": 184,
             "NoVigenteMunicipalidad": 458,
             "NoVigenteSeremi": 6,
             "NoVigenteOtras": 36,
-            "NoAcreditadoMunicipalidad": 870,
+            "NoAcreditadoMunicipalidad": 871,
             "NoAcreditadoSeremi": 2,
             "NoAcreditadoOtras": 87,
             "porComuna": [
@@ -25447,23 +25447,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 6,
-                "NoAcreditado": 80,
+                "NoAcreditado": 81,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 6,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 80,
+                "NoAcreditadoMunicipalidad": 81,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -26222,7 +26222,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 71.36970172684458
+            "TasaAcreditado": 71.35007849293564
           },
           {
             "Region": "OHIGGINS",
@@ -26946,18 +26946,18 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "MAULE",
             "RegionEtiqueta": "Maule",
             "OrdenRegion": 8,
-            "Acreditado": 1057,
-            "NoVigente": 240,
+            "Acreditado": 1053,
+            "NoVigente": 236,
             "NoAcreditado": 231,
             "SinEstado": 0,
-            "Total": 1528,
-            "Municipalidad": 1271,
+            "Total": 1520,
+            "Municipalidad": 1263,
             "Seremi": 47,
             "OtrasInstituciones": 210,
-            "AcreditadoMunicipalidad": 911,
+            "AcreditadoMunicipalidad": 907,
             "AcreditadoSeremi": 42,
             "AcreditadoOtras": 104,
-            "NoVigenteMunicipalidad": 201,
+            "NoVigenteMunicipalidad": 197,
             "NoVigenteSeremi": 1,
             "NoVigenteOtras": 38,
             "NoAcreditadoMunicipalidad": 159,
@@ -26966,18 +26966,18 @@ window.SISE_DASHBOARD_DATA = {
             "porComuna": [
               {
                 "Comuna": "Cauquenes",
-                "Total": 38,
-                "Acreditado": 19,
-                "NoVigente": 16,
+                "Total": 30,
+                "Acreditado": 15,
+                "NoVigente": 12,
                 "NoAcreditado": 3,
                 "SinEstado": 0,
-                "Municipalidad": 30,
+                "Municipalidad": 22,
                 "Seremi": 0,
                 "OtrasInstituciones": 8,
-                "AcreditadoMunicipalidad": 16,
+                "AcreditadoMunicipalidad": 12,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 3,
-                "NoVigenteMunicipalidad": 12,
+                "NoVigenteMunicipalidad": 8,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 4,
                 "NoAcreditadoMunicipalidad": 2,
@@ -27595,7 +27595,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 82.6086956521739
               }
             ],
-            "TasaAcreditado": 69.17539267015707
+            "TasaAcreditado": 69.27631578947368
           },
           {
             "Region": "NUBLE",
@@ -28067,15 +28067,15 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1879,
+            "Acreditado": 1878,
             "NoVigente": 157,
             "NoAcreditado": 314,
             "SinEstado": 0,
-            "Total": 2350,
-            "Municipalidad": 2219,
+            "Total": 2349,
+            "Municipalidad": 2218,
             "Seremi": 37,
             "OtrasInstituciones": 94,
-            "AcreditadoMunicipalidad": 1778,
+            "AcreditadoMunicipalidad": 1777,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 68,
             "NoVigenteMunicipalidad": 149,
@@ -28717,15 +28717,15 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Tomé",
-                "Total": 115,
-                "Acreditado": 88,
+                "Total": 114,
+                "Acreditado": 87,
                 "NoVigente": 19,
                 "NoAcreditado": 8,
                 "SinEstado": 0,
-                "Municipalidad": 115,
+                "Municipalidad": 114,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 88,
+                "AcreditadoMunicipalidad": 87,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 19,
@@ -28734,7 +28734,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 8,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 76.52173913043478
+                "TasaAcreditado": 76.31578947368422
               },
               {
                 "Comuna": "Tucapel",
@@ -28779,7 +28779,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95.65217391304348
               }
             ],
-            "TasaAcreditado": 79.95744680851064
+            "TasaAcreditado": 79.94891443167306
           },
           {
             "Region": "LA ARAUCANIA",
@@ -30932,11 +30932,11 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_MAYO",
         "label": "MAYO",
-        "acreditado": 14990,
-        "noVigente": 1717,
-        "noAcreditado": 3962,
+        "acreditado": 14984,
+        "noVigente": 1713,
+        "noAcreditado": 3963,
         "sinEstado": 0,
-        "total": 20669,
+        "total": 20660,
         "porRegion": [
           {
             "Region": "ARICA Y PARINACOTA",
@@ -32814,21 +32814,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3653,
+            "Acreditado": 3652,
             "NoVigente": 500,
-            "NoAcreditado": 1007,
+            "NoAcreditado": 1008,
             "SinEstado": 0,
             "Total": 5160,
             "Municipalidad": 4777,
             "Seremi": 75,
             "OtrasInstituciones": 308,
-            "AcreditadoMunicipalidad": 3402,
+            "AcreditadoMunicipalidad": 3401,
             "AcreditadoSeremi": 67,
             "AcreditadoOtras": 184,
             "NoVigenteMunicipalidad": 458,
             "NoVigenteSeremi": 6,
             "NoVigenteOtras": 36,
-            "NoAcreditadoMunicipalidad": 917,
+            "NoAcreditadoMunicipalidad": 918,
             "NoAcreditadoSeremi": 2,
             "NoAcreditadoOtras": 88,
             "porComuna": [
@@ -33171,23 +33171,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 6,
-                "NoAcreditado": 80,
+                "NoAcreditado": 81,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 6,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 80,
+                "NoAcreditadoMunicipalidad": 81,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -33946,7 +33946,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 70.79457364341086
+            "TasaAcreditado": 70.7751937984496
           },
           {
             "Region": "OHIGGINS",
@@ -34670,18 +34670,18 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "MAULE",
             "RegionEtiqueta": "Maule",
             "OrdenRegion": 8,
-            "Acreditado": 1093,
-            "NoVigente": 230,
+            "Acreditado": 1089,
+            "NoVigente": 226,
             "NoAcreditado": 294,
             "SinEstado": 0,
-            "Total": 1617,
-            "Municipalidad": 1339,
+            "Total": 1609,
+            "Municipalidad": 1331,
             "Seremi": 47,
             "OtrasInstituciones": 231,
-            "AcreditadoMunicipalidad": 941,
+            "AcreditadoMunicipalidad": 937,
             "AcreditadoSeremi": 42,
             "AcreditadoOtras": 110,
-            "NoVigenteMunicipalidad": 191,
+            "NoVigenteMunicipalidad": 187,
             "NoVigenteSeremi": 1,
             "NoVigenteOtras": 38,
             "NoAcreditadoMunicipalidad": 207,
@@ -34690,24 +34690,24 @@ window.SISE_DASHBOARD_DATA = {
             "porComuna": [
               {
                 "Comuna": "Cauquenes",
-                "Total": 38,
-                "Acreditado": 20,
-                "NoVigente": 16,
+                "Total": 30,
+                "Acreditado": 16,
+                "NoVigente": 12,
                 "NoAcreditado": 2,
                 "SinEstado": 0,
-                "Municipalidad": 30,
+                "Municipalidad": 22,
                 "Seremi": 0,
                 "OtrasInstituciones": 8,
-                "AcreditadoMunicipalidad": 17,
+                "AcreditadoMunicipalidad": 13,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 3,
-                "NoVigenteMunicipalidad": 12,
+                "NoVigenteMunicipalidad": 8,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 4,
                 "NoAcreditadoMunicipalidad": 1,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 1,
-                "TasaAcreditado": 52.63157894736842
+                "TasaAcreditado": 53.333333333333336
               },
               {
                 "Comuna": "Chanco",
@@ -35319,7 +35319,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 82.6086956521739
               }
             ],
-            "TasaAcreditado": 67.59431045145331
+            "TasaAcreditado": 67.68178993163455
           },
           {
             "Region": "NUBLE",
@@ -35791,15 +35791,15 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1910,
+            "Acreditado": 1909,
             "NoVigente": 152,
             "NoAcreditado": 350,
             "SinEstado": 0,
-            "Total": 2412,
-            "Municipalidad": 2281,
+            "Total": 2411,
+            "Municipalidad": 2280,
             "Seremi": 37,
             "OtrasInstituciones": 94,
-            "AcreditadoMunicipalidad": 1809,
+            "AcreditadoMunicipalidad": 1808,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 68,
             "NoVigenteMunicipalidad": 144,
@@ -36441,15 +36441,15 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Tomé",
-                "Total": 115,
-                "Acreditado": 88,
+                "Total": 114,
+                "Acreditado": 87,
                 "NoVigente": 19,
                 "NoAcreditado": 8,
                 "SinEstado": 0,
-                "Municipalidad": 115,
+                "Municipalidad": 114,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 88,
+                "AcreditadoMunicipalidad": 87,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 19,
@@ -36458,7 +36458,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 8,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 76.52173913043478
+                "TasaAcreditado": 76.31578947368422
               },
               {
                 "Comuna": "Tucapel",
@@ -36503,7 +36503,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95.65217391304348
               }
             ],
-            "TasaAcreditado": 79.18739635157546
+            "TasaAcreditado": 79.17876399834094
           },
           {
             "Region": "LA ARAUCANIA",
@@ -38656,11 +38656,11 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_Junio",
         "label": "JUNIO",
-        "acreditado": 15161,
-        "noVigente": 1709,
-        "noAcreditado": 4159,
+        "acreditado": 15155,
+        "noVigente": 1705,
+        "noAcreditado": 4160,
         "sinEstado": 0,
-        "total": 21029,
+        "total": 21020,
         "porRegion": [
           {
             "Region": "ARICA Y PARINACOTA",
@@ -40538,21 +40538,21 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3693,
+            "Acreditado": 3692,
             "NoVigente": 494,
-            "NoAcreditado": 1190,
+            "NoAcreditado": 1191,
             "SinEstado": 0,
             "Total": 5377,
             "Municipalidad": 4964,
             "Seremi": 75,
             "OtrasInstituciones": 338,
-            "AcreditadoMunicipalidad": 3439,
+            "AcreditadoMunicipalidad": 3438,
             "AcreditadoSeremi": 67,
             "AcreditadoOtras": 187,
             "NoVigenteMunicipalidad": 454,
             "NoVigenteSeremi": 6,
             "NoVigenteOtras": 34,
-            "NoAcreditadoMunicipalidad": 1071,
+            "NoAcreditadoMunicipalidad": 1072,
             "NoAcreditadoSeremi": 2,
             "NoAcreditadoOtras": 117,
             "porComuna": [
@@ -40895,23 +40895,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 6,
-                "NoAcreditado": 80,
+                "NoAcreditado": 81,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 6,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 80,
+                "NoAcreditadoMunicipalidad": 81,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -41670,7 +41670,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 68.68142086665426
+            "TasaAcreditado": 68.66282313557745
           },
           {
             "Region": "OHIGGINS",
@@ -42394,18 +42394,18 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "MAULE",
             "RegionEtiqueta": "Maule",
             "OrdenRegion": 8,
-            "Acreditado": 1102,
-            "NoVigente": 245,
+            "Acreditado": 1098,
+            "NoVigente": 241,
             "NoAcreditado": 270,
             "SinEstado": 0,
-            "Total": 1617,
-            "Municipalidad": 1333,
+            "Total": 1609,
+            "Municipalidad": 1325,
             "Seremi": 50,
             "OtrasInstituciones": 234,
-            "AcreditadoMunicipalidad": 946,
+            "AcreditadoMunicipalidad": 942,
             "AcreditadoSeremi": 44,
             "AcreditadoOtras": 112,
-            "NoVigenteMunicipalidad": 205,
+            "NoVigenteMunicipalidad": 201,
             "NoVigenteSeremi": 1,
             "NoVigenteOtras": 39,
             "NoAcreditadoMunicipalidad": 182,
@@ -42414,24 +42414,24 @@ window.SISE_DASHBOARD_DATA = {
             "porComuna": [
               {
                 "Comuna": "Cauquenes",
-                "Total": 40,
-                "Acreditado": 19,
-                "NoVigente": 17,
+                "Total": 32,
+                "Acreditado": 15,
+                "NoVigente": 13,
                 "NoAcreditado": 4,
                 "SinEstado": 0,
-                "Municipalidad": 30,
+                "Municipalidad": 22,
                 "Seremi": 0,
                 "OtrasInstituciones": 10,
-                "AcreditadoMunicipalidad": 17,
+                "AcreditadoMunicipalidad": 13,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 2,
-                "NoVigenteMunicipalidad": 12,
+                "NoVigenteMunicipalidad": 8,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 5,
                 "NoAcreditadoMunicipalidad": 1,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 3,
-                "TasaAcreditado": 47.5
+                "TasaAcreditado": 46.875
               },
               {
                 "Comuna": "Chanco",
@@ -43064,7 +43064,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 0
               }
             ],
-            "TasaAcreditado": 68.1508967223253
+            "TasaAcreditado": 68.2411435674332
           },
           {
             "Region": "NUBLE",
@@ -43536,15 +43536,15 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1936,
+            "Acreditado": 1935,
             "NoVigente": 152,
             "NoAcreditado": 387,
             "SinEstado": 0,
-            "Total": 2475,
-            "Municipalidad": 2340,
+            "Total": 2474,
+            "Municipalidad": 2339,
             "Seremi": 37,
             "OtrasInstituciones": 98,
-            "AcreditadoMunicipalidad": 1835,
+            "AcreditadoMunicipalidad": 1834,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 68,
             "NoVigenteMunicipalidad": 144,
@@ -44186,15 +44186,15 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Tomé",
-                "Total": 115,
-                "Acreditado": 88,
+                "Total": 114,
+                "Acreditado": 87,
                 "NoVigente": 19,
                 "NoAcreditado": 8,
                 "SinEstado": 0,
-                "Municipalidad": 115,
+                "Municipalidad": 114,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 88,
+                "AcreditadoMunicipalidad": 87,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 19,
@@ -44203,7 +44203,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 8,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 76.52173913043478
+                "TasaAcreditado": 76.31578947368422
               },
               {
                 "Comuna": "Tucapel",
@@ -44248,7 +44248,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95.65217391304348
               }
             ],
-            "TasaAcreditado": 78.22222222222223
+            "TasaAcreditado": 78.21341956345998
           },
           {
             "Region": "LA ARAUCANIA",
@@ -46401,11 +46401,11 @@ window.SISE_DASHBOARD_DATA = {
       {
         "key": "ESTADO_Julio",
         "label": "JULIO",
-        "acreditado": 15466,
-        "noVigente": 4560,
-        "noAcreditado": 1503,
+        "acreditado": 15461,
+        "noVigente": 4555,
+        "noAcreditado": 1504,
         "sinEstado": 0,
-        "total": 21529,
+        "total": 21520,
         "porRegion": [
           {
             "Region": "ARICA Y PARINACOTA",
@@ -47460,8 +47460,8 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "VALPARAISO",
             "RegionEtiqueta": "Valparaíso",
             "OrdenRegion": 5,
-            "Acreditado": 1480,
-            "NoVigente": 661,
+            "Acreditado": 1481,
+            "NoVigente": 660,
             "NoAcreditado": 223,
             "SinEstado": 0,
             "Total": 2364,
@@ -47469,10 +47469,10 @@ window.SISE_DASHBOARD_DATA = {
             "Seremi": 34,
             "OtrasInstituciones": 156,
             "AcreditadoMunicipalidad": 1369,
-            "AcreditadoSeremi": 27,
+            "AcreditadoSeremi": 28,
             "AcreditadoOtras": 84,
             "NoVigenteMunicipalidad": 605,
-            "NoVigenteSeremi": 7,
+            "NoVigenteSeremi": 6,
             "NoVigenteOtras": 49,
             "NoAcreditadoMunicipalidad": 200,
             "NoAcreditadoSeremi": 0,
@@ -48194,16 +48194,16 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Valparaíso",
-                "Total": 435,
-                "Acreditado": 233,
+                "Total": 436,
+                "Acreditado": 234,
                 "NoVigente": 149,
                 "NoAcreditado": 53,
                 "SinEstado": 0,
                 "Municipalidad": 371,
-                "Seremi": 30,
+                "Seremi": 31,
                 "OtrasInstituciones": 34,
                 "AcreditadoMunicipalidad": 197,
-                "AcreditadoSeremi": 24,
+                "AcreditadoSeremi": 25,
                 "AcreditadoOtras": 12,
                 "NoVigenteMunicipalidad": 125,
                 "NoVigenteSeremi": 6,
@@ -48211,7 +48211,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 49,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 4,
-                "TasaAcreditado": 53.5632183908046
+                "TasaAcreditado": 53.669724770642205
               },
               {
                 "Comuna": "Villa Alemana",
@@ -48236,24 +48236,24 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Viña del Mar",
-                "Total": 129,
+                "Total": 128,
                 "Acreditado": 110,
-                "NoVigente": 11,
+                "NoVigente": 10,
                 "NoAcreditado": 8,
                 "SinEstado": 0,
                 "Municipalidad": 84,
-                "Seremi": 3,
+                "Seremi": 2,
                 "OtrasInstituciones": 42,
                 "AcreditadoMunicipalidad": 78,
                 "AcreditadoSeremi": 2,
                 "AcreditadoOtras": 30,
                 "NoVigenteMunicipalidad": 5,
-                "NoVigenteSeremi": 1,
+                "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 5,
                 "NoAcreditadoMunicipalidad": 1,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 7,
-                "TasaAcreditado": 85.27131782945736
+                "TasaAcreditado": 85.9375
               },
               {
                 "Comuna": "Zapallar",
@@ -48277,27 +48277,27 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 62.605752961082906
+            "TasaAcreditado": 62.64805414551608
           },
           {
             "Region": "METROPOLITANA",
             "RegionEtiqueta": "Metropolitana de Santiago",
             "OrdenRegion": 6,
-            "Acreditado": 3848,
+            "Acreditado": 3847,
             "NoVigente": 1326,
-            "NoAcreditado": 464,
+            "NoAcreditado": 465,
             "SinEstado": 0,
             "Total": 5638,
             "Municipalidad": 5207,
             "Seremi": 75,
             "OtrasInstituciones": 356,
-            "AcreditadoMunicipalidad": 3581,
+            "AcreditadoMunicipalidad": 3580,
             "AcreditadoSeremi": 68,
             "AcreditadoOtras": 199,
             "NoVigenteMunicipalidad": 1203,
             "NoVigenteSeremi": 7,
             "NoVigenteOtras": 116,
-            "NoAcreditadoMunicipalidad": 423,
+            "NoAcreditadoMunicipalidad": 424,
             "NoAcreditadoSeremi": 0,
             "NoAcreditadoOtras": 41,
             "porComuna": [
@@ -48640,23 +48640,23 @@ window.SISE_DASHBOARD_DATA = {
               {
                 "Comuna": "La Granja",
                 "Total": 527,
-                "Acreditado": 441,
+                "Acreditado": 440,
                 "NoVigente": 51,
-                "NoAcreditado": 35,
+                "NoAcreditado": 36,
                 "SinEstado": 0,
                 "Municipalidad": 527,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 441,
+                "AcreditadoMunicipalidad": 440,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 51,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 0,
-                "NoAcreditadoMunicipalidad": 35,
+                "NoAcreditadoMunicipalidad": 36,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 83.68121442125236
+                "TasaAcreditado": 83.49146110056927
               },
               {
                 "Comuna": "La Pintana",
@@ -49415,7 +49415,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 100
               }
             ],
-            "TasaAcreditado": 68.25115289109614
+            "TasaAcreditado": 68.23341610500178
           },
           {
             "Region": "OHIGGINS",
@@ -50139,18 +50139,18 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "MAULE",
             "RegionEtiqueta": "Maule",
             "OrdenRegion": 8,
-            "Acreditado": 1117,
-            "NoVigente": 439,
+            "Acreditado": 1113,
+            "NoVigente": 435,
             "NoAcreditado": 131,
             "SinEstado": 0,
-            "Total": 1687,
-            "Municipalidad": 1386,
+            "Total": 1679,
+            "Municipalidad": 1378,
             "Seremi": 50,
             "OtrasInstituciones": 251,
-            "AcreditadoMunicipalidad": 952,
+            "AcreditadoMunicipalidad": 948,
             "AcreditadoSeremi": 45,
             "AcreditadoOtras": 120,
-            "NoVigenteMunicipalidad": 335,
+            "NoVigenteMunicipalidad": 331,
             "NoVigenteSeremi": 2,
             "NoVigenteOtras": 102,
             "NoAcreditadoMunicipalidad": 99,
@@ -50159,24 +50159,24 @@ window.SISE_DASHBOARD_DATA = {
             "porComuna": [
               {
                 "Comuna": "Cauquenes",
-                "Total": 40,
-                "Acreditado": 19,
-                "NoVigente": 20,
+                "Total": 32,
+                "Acreditado": 15,
+                "NoVigente": 16,
                 "NoAcreditado": 1,
                 "SinEstado": 0,
-                "Municipalidad": 30,
+                "Municipalidad": 22,
                 "Seremi": 0,
                 "OtrasInstituciones": 10,
-                "AcreditadoMunicipalidad": 17,
+                "AcreditadoMunicipalidad": 13,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 2,
-                "NoVigenteMunicipalidad": 12,
+                "NoVigenteMunicipalidad": 8,
                 "NoVigenteSeremi": 0,
                 "NoVigenteOtras": 8,
                 "NoAcreditadoMunicipalidad": 1,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 47.5
+                "TasaAcreditado": 46.875
               },
               {
                 "Comuna": "Chanco",
@@ -50809,7 +50809,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 0
               }
             ],
-            "TasaAcreditado": 66.21221102548903
+            "TasaAcreditado": 66.28945801072067
           },
           {
             "Region": "NUBLE",
@@ -51281,15 +51281,15 @@ window.SISE_DASHBOARD_DATA = {
             "Region": "BIO BIO",
             "RegionEtiqueta": "Biobío",
             "OrdenRegion": 10,
-            "Acreditado": 1961,
+            "Acreditado": 1960,
             "NoVigente": 406,
             "NoAcreditado": 132,
             "SinEstado": 0,
-            "Total": 2499,
-            "Municipalidad": 2364,
+            "Total": 2498,
+            "Municipalidad": 2363,
             "Seremi": 37,
             "OtrasInstituciones": 98,
-            "AcreditadoMunicipalidad": 1858,
+            "AcreditadoMunicipalidad": 1857,
             "AcreditadoSeremi": 33,
             "AcreditadoOtras": 70,
             "NoVigenteMunicipalidad": 385,
@@ -51931,15 +51931,15 @@ window.SISE_DASHBOARD_DATA = {
               },
               {
                 "Comuna": "Tomé",
-                "Total": 124,
-                "Acreditado": 88,
+                "Total": 123,
+                "Acreditado": 87,
                 "NoVigente": 33,
                 "NoAcreditado": 3,
                 "SinEstado": 0,
-                "Municipalidad": 124,
+                "Municipalidad": 123,
                 "Seremi": 0,
                 "OtrasInstituciones": 0,
-                "AcreditadoMunicipalidad": 88,
+                "AcreditadoMunicipalidad": 87,
                 "AcreditadoSeremi": 0,
                 "AcreditadoOtras": 0,
                 "NoVigenteMunicipalidad": 33,
@@ -51948,7 +51948,7 @@ window.SISE_DASHBOARD_DATA = {
                 "NoAcreditadoMunicipalidad": 3,
                 "NoAcreditadoSeremi": 0,
                 "NoAcreditadoOtras": 0,
-                "TasaAcreditado": 70.96774193548387
+                "TasaAcreditado": 70.73170731707317
               },
               {
                 "Comuna": "Tucapel",
@@ -51993,7 +51993,7 @@ window.SISE_DASHBOARD_DATA = {
                 "TasaAcreditado": 95.65217391304348
               }
             ],
-            "TasaAcreditado": 78.47138855542217
+            "TasaAcreditado": 78.46277021617294
           },
           {
             "Region": "LA ARAUCANIA",
