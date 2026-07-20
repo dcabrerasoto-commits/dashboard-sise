@@ -107,7 +107,7 @@ function encuestadoresTabla(html=true){return `Encuestadores FIBE disponibles pa
 function comunasOrdenadas(region){return [...(comunasPorRegion[region]||[])].sort((a,b)=>a.localeCompare(b,'es-CL'))}
 function comunasIngresoOrdenadas(region){return comunasOrdenadas(region)}
 function histKeyText(t){return claveTexto(repararTexto(t)).replace(/\s+/g,' ').trim()}
-function histTieneValores(d){return ['alfa','aplicadas','encuestadores','terminadas','digitacion','anuladas','personas','nna','mayores','discapacidad'].some(k=>+(d[k]||0)>0)}
+function histTieneValores(d){return !!String(d.id||'').trim()||['alfa','aplicadas','encuestadores','terminadas','digitacion','anuladas','personas','nna','mayores','discapacidad'].some(k=>+(d[k]||0)>0)}
 function histNum(d,k){return Number(String(d[k]??0).replace(',','.'))||0}
 function histExcluir(d){return String(d.id||'')==='149162'&&String(d.comuna||'').includes(',')}
 let cacheAplicadasReplicadas=null,cacheAplicadasReplicadasN=-1,aplicadasBloqueadas=new Set();
