@@ -54144,7 +54144,7 @@ window.SISE_DASHBOARD_DATA = {
         "hasComunaData": true
       }
     ],
-    "fechaCarga": "19-07-2026",
+    "fechaCarga": "20-07-2026",
     "hasComunaData": true
   }
 };
