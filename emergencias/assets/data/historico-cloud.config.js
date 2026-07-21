@@ -9,11 +9,11 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   document.head.appendChild(script);
 })();
 
-// Mantiene Valparaíso en el corte validado de las 17:05 horas y muestra
+// Mantiene únicamente Valparaíso en el corte validado de las 17:05 horas y muestra
 // una alerta visible mientras se revisa la disminución de FIBE terminadas.
 (function cargarProteccionTerminadas(){
   const script=document.createElement('script');
-  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-7';
+  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-8';
   script.async=false;
   document.head.appendChild(script);
 })();
