@@ -4,6 +4,7 @@
 
   const REGION='VALPARAISO';
   const CORTE_MS=new Date(2026,6,20,17,37,59).getTime();
+  const TOTAL_TERMINADAS_ESPERADO=481;
   const normalizar=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’']/g,'').replace(/\s+/g,' ').trim().toUpperCase();
 
   function regionDe(d){return typeof regionCanon==='function'?regionCanon(d.region):d.region}
@@ -49,12 +50,16 @@
   }
 
   function mostrarAlertaVisible(){
-    if(document.getElementById('alerta-corte-valparaiso'))return;
-    const shell=document.querySelector('.shell');if(!shell)return;
+    const existente=document.getElementById('alerta-corte-valparaiso');
+    if(existente)existente.remove();
+    const ancla=document.getElementById('alertasContent');
+    if(!ancla)return;
     const aviso=document.createElement('div');
-    aviso.id='alerta-corte-valparaiso';aviso.className='note-box';aviso.style.marginBottom='16px';
-    aviso.innerHTML='<strong>Alerta de consistencia — Región de Valparaíso:</strong> Las cifras de la plataforma SISE se mantienen con el último registro disponible por comuna hasta las 17:37 horas del 20-07-2026. Esta medida se aplica porque en actualizaciones posteriores se detectó una disminución no explicada en el número de FIBE terminadas. El corte se mantendrá hasta validar la causa de la variación y su eventual correspondencia con fichas anuladas.';
-    const topbar=shell.querySelector('.topbar');if(topbar)topbar.insertAdjacentElement('afterend',aviso);else shell.prepend(aviso);
+    aviso.id='alerta-corte-valparaiso';
+    aviso.className='note-box';
+    aviso.style.margin='14px 0 18px';
+    aviso.innerHTML='<strong>Alerta:</strong> Para la Región de Valparaíso se mantienen las cifras correspondientes al último registro disponible por comuna hasta las 17:37 horas del 20-07-2026. Esta medida se aplica debido a que en actualizaciones posteriores se detectó una disminución no explicada en el número de FIBE terminadas. El corte se mantendrá hasta validar la causa de la variación y su eventual correspondencia con fichas anuladas.';
+    ancla.insertAdjacentElement('beforebegin',aviso);
   }
 
   function instalar(){
@@ -67,9 +72,13 @@
       const salida=actuales.filter(d=>!esValparaiso(d));
       const actualesValpo=new Map(actuales.filter(esValparaiso).map(d=>[claveRegistro(d),d]));
       corte.forEach((historico,k)=>{const actual=actualesValpo.get(k)||{};salida.push({...actual,...historico,matrizAfectacion:actual.matrizAfectacion||historico.matrizAfectacion||{}})});
+      const totalValparaiso=salida.filter(esValparaiso).reduce((s,d)=>s+Number(d.terminadas||0),0);
+      if(totalValparaiso!==TOTAL_TERMINADAS_ESPERADO)console.warn(`Corte protegido de Valparaíso: se esperaban ${TOTAL_TERMINADAS_ESPERADO} FIBE terminadas y se obtuvieron ${totalValparaiso}.`);
       return salida;
     };
-    protegida.__corteValparaiso17=true;sumarSisePorComuna=protegida;mostrarAlertaVisible();
+    protegida.__corteValparaiso17=true;
+    sumarSisePorComuna=protegida;
+    mostrarAlertaVisible();
     if(typeof combinadosCache!=='undefined')combinadosCache=null;
     if(typeof render==='function')render();
   }
