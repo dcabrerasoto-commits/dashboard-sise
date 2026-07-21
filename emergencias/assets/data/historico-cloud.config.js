@@ -9,11 +9,11 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   document.head.appendChild(script);
 })();
 
-// Protege el número de FIBE terminadas frente a disminuciones silenciosas
-// entre descargas sucesivas de SISE.
+// Mantiene Valparaíso en el corte validado de las 17:37 horas y muestra
+// una alerta visible mientras se revisa la disminución de FIBE terminadas.
 (function cargarProteccionTerminadas(){
   const script=document.createElement('script');
-  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-1';
+  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-2';
   script.async=false;
   document.head.appendChild(script);
 })();
