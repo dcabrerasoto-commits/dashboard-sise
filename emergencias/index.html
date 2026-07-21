@@ -152,7 +152,7 @@ function metric(l,v,s,h=false,title='',extra=''){return `<div class="metric ${h?
 function estado(region){let hoy=hoyClave(),reg=regionCanon(region);let z=reportesRegionales.map((d,i)=>({...d,_orden:d.registradoMs||fechaCapturaMs(d)||i,_fecha:d.fechaClave||fechaHist(d)})).filter(d=>regionCanon(d.region)===reg&&d._fecha===hoy).sort((a,b)=>a._orden-b._orden);if(!z.length)return['pending','Pendiente'];return z[z.length-1].estadoDiario==='done'?['done','Actualizado']:['progress','En proceso']}
 function badge(e){const info={pending:'Pendiente: la región no ha registrado información durante el día.',progress:'En proceso: la información aún se encuentra en actualización y puede cambiar durante el día.',done:'Actualizado: la información del día ha sido revisada y corresponde al reporte definitivo.',national:'Nacional: consolidado total de regiones bajo monitoreo.'};return `<span class="status ${e[0]}" title="${info[e[0]]||''}">${e[1]}</span>`}
 const tituloRegional='Registros informados por la región',tituloSise='Registros de la plataforma web SISE';
-const tooltipAlfa='Dato referencial informado en ALFA o Informe SENAPRED. Puede diferir del levantamiento FIBE; se recomienda no para análisis FIBE ni para estimar hogares afectados.';
+const tooltipAlfa='Dato referencial informado en ALFA o Informe SENAPRED. Puede diferir del levantamiento FIBE; para análisis basados en FIBE y estimaciones de hogares afectados, se recomienda considerar la información proveniente de la FIBE.';
 const tooltipRegional={'Fichas aplicadas':'Dato diario reportado por la región. El consolidado no puede ser menor que FIBE terminadas + FIBE en proceso de digitación registradas en SISE.','Viviendas reportadas en el ALFA o Informe SENAPRED':tooltipAlfa};
 const tooltipSise={};
 tooltipSise['Niños, niñas y adolescentes']='Registros de la plataforma web SISE. Corresponde a personas de 17 años o menos.';
@@ -211,6 +211,7 @@ setInterval(refrescarDatosPublicados,120000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refrescarDatosPublicados()});
 </script>
 </body></html>
+
 
 
 
