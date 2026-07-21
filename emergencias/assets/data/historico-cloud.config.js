@@ -9,18 +9,5 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   document.head.appendChild(script);
 })();
 
-// Valparaíso: unifica los IDs comunales en 149162 y conserva la opción de ingresar otro ID.
-(function cargarEventoUnificadoValparaiso(){
-  const script=document.createElement('script');
-  script.src='assets/js/valparaiso-evento-unificado.js?v=20260719-3';
-  script.async=false;
-  document.head.appendChild(script);
-})();
-
-// Detalle comunal: muestra una sola fila consolidada por región y comuna.
-(function cargarDetalleComunaUnica(){
-  const script=document.createElement('script');
-  script.src='assets/js/detalle-comuna-unica.js?v=20260719';
-  script.async=false;
-  document.head.appendChild(script);
-})();
+// La unificación del evento 149162 y su desglose comunal se realizan en el robot
+// que genera monitoreo-sise.json. No se aplican transformaciones adicionales en la página.
