@@ -3,9 +3,10 @@
   'use strict';
 
   const REGION='VALPARAISO';
-  const CORTE_MS=new Date(2026,6,20,17,5,59).getTime();
   const HORA_CORTE='17:05';
   const TOTAL_TERMINADAS_ESPERADO=481;
+  const SNAPSHOT_URL='https://raw.githubusercontent.com/dcabrerasoto-commits/dashboard-sise/7745f139b769741f9f555a3695f3477824d0d256/emergencias/assets/data/monitoreo-sise.json';
+  let snapshotValparaiso=[];
   const normalizar=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’']/g,'').replace(/\s+/g,' ').trim().toUpperCase();
 
   function regionDe(d){return typeof regionCanon==='function'?regionCanon(d.region):d.region}
@@ -14,91 +15,69 @@
   function esValparaiso(d){return normalizar(regionDe(d))===REGION}
   function esComunaValida(d){const comuna=String(d?.comuna||'').trim();return comuna!==''&&!comuna.includes(',')}
 
-  function fechaHoraRegistroMs(d){
-    const s=String(d.marca||d.fechaLlenado||d.fecha||'').trim();
-    let m=s.match(/(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})[T,\s]+(\d{1,2}):(\d{2})/);
-    if(m)return new Date(+m[3],+m[2]-1,+m[1],+m[4],+m[5]).getTime();
-    m=s.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})[T,\s]+(\d{1,2}):(\d{2})/);
-    if(m)return new Date(+m[1],+m[2]-1,+m[3],+m[4],+m[5]).getTime();
-    m=s.match(/(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})/);
-    if(m)return new Date(+m[3],+m[2]-1,+m[1],23,59).getTime();
-    m=s.match(/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})/);
-    if(m)return new Date(+m[1],+m[2]-1,+m[3],23,59).getTime();
-    return 0;
+  function normalizarFila(d){
+    return {...d,region:regionDe(d),comuna:comunaDe(d),terminadas:Number(d.terminadas||0),digitacion:Number(d.digitacion||0),anuladas:Number(d.anuladas||0),personas:Number(d.personas||0),nna:Number(d.nna||0),mayores:Number(d.mayores||0),discapacidad:Number(d.discapacidad||0),mujer:Number(d.mujer||d.mujeres||0),hombre:Number(d.hombre||d.hombres||0),otro:Number(d.otro||d.otros||0),hora:HORA_CORTE,siseHora:HORA_CORTE,corteProtegidoValparaiso:true};
   }
 
-  function normalizarHistorico(d){
-    const firma=String(d._firma||'').split('|').map(v=>Number(v)||0);
-    return {...d,region:regionDe(d),comuna:comunaDe(d),id:String(d.id||'149162'),terminadas:Number(d.terminadas||0),digitacion:Number(d.digitacion||0),anuladas:Number(d.anuladas||0),personas:Number(d.personas||0),nna:Number(d.nna||0),mayores:Number(d.mayores||0),discapacidad:Number(d.discapacidad||0),mujer:Number(d.mujer||d.mujeres||firma[10]||0),hombre:Number(d.hombre||d.hombres||firma[11]||0),otro:Number(d.otro||d.otros||firma[12]||0),hora:HORA_CORTE,siseHora:HORA_CORTE,corteProtegidoValparaiso:true};
+  function encontrarFilas(obj){
+    let mejor=[];
+    function recorrer(v){
+      if(Array.isArray(v)){
+        const candidatas=v.filter(x=>x&&typeof x==='object'&&'region'in x&&'comuna'in x&&'terminadas'in x);
+        if(candidatas.length>mejor.length)mejor=candidatas;
+        v.forEach(recorrer);
+      }else if(v&&typeof v==='object')Object.values(v).forEach(recorrer);
+    }
+    recorrer(obj);
+    return mejor;
+  }
+
+  async function cargarSnapshot(){
+    try{
+      const r=await fetch(SNAPSHOT_URL,{cache:'no-store'});
+      if(!r.ok)throw new Error(`HTTP ${r.status}`);
+      const data=await r.json();
+      snapshotValparaiso=encontrarFilas(data).filter(d=>esValparaiso(d)&&esComunaValida(d)).map(normalizarFila);
+    }catch(e){console.warn('No se pudo cargar el corte comunal exacto de Valparaíso.',e)}
   }
 
   function corteValparaiso(){
-    const fuentes=[];
-    if(typeof historialRobot!=='undefined'&&Array.isArray(historialRobot))fuentes.push(...historialRobot);
-    if(typeof historialDiario!=='undefined'&&Array.isArray(historialDiario))fuentes.push(...historialDiario);
     const mapa=new Map();
-    fuentes.forEach((d,i)=>{
-      if(!d||!esValparaiso(d)||!esComunaValida(d))return;
-      const momento=fechaHoraRegistroMs(d);
-      if(!momento||momento>CORTE_MS)return;
-      const tipo=normalizar(d.tipo||'SISE');
-      if(tipo&&!tipo.includes('SISE')&&!tipo.includes('ROBOT')&&!tipo.includes('PLATAFORMA WEB'))return;
+    snapshotValparaiso.forEach((d,i)=>{
       const k=claveRegistro(d),prev=mapa.get(k);
-      if(!prev||momento>prev._momento||(momento===prev._momento&&i>prev._orden))mapa.set(k,{...normalizarHistorico(d),_momento:momento,_orden:i});
+      if(!prev)mapa.set(k,{...d,_orden:i});
+      else mapa.set(k,{...prev,...d,terminadas:Number(prev.terminadas||0)+Number(d.terminadas||0),digitacion:Number(prev.digitacion||0)+Number(d.digitacion||0),anuladas:Number(prev.anuladas||0)+Number(d.anuladas||0),personas:Number(prev.personas||0)+Number(d.personas||0),nna:Number(prev.nna||0)+Number(d.nna||0),mayores:Number(prev.mayores||0)+Number(d.mayores||0),discapacidad:Number(prev.discapacidad||0)+Number(d.discapacidad||0)});
     });
     return mapa;
   }
 
   function mostrarAlertaVisible(){
-    const existente=document.getElementById('alerta-corte-valparaiso');
-    if(existente)existente.remove();
-    const ancla=document.getElementById('alertasContent');
-    if(!ancla)return;
+    document.getElementById('alerta-corte-valparaiso')?.remove();
+    const ancla=document.getElementById('alertasContent');if(!ancla)return;
     const aviso=document.createElement('div');
-    aviso.id='alerta-corte-valparaiso';
-    aviso.className='note-box';
-    aviso.style.margin='14px 0 18px';
-    aviso.innerHTML='<strong>Alerta:</strong> Para la Región de Valparaíso se mantienen las cifras correspondientes al corte SISE de las 17:05 horas del 20-07-2026. Esta medida se aplica debido a que en actualizaciones posteriores se detectó una disminución no explicada en el número de FIBE terminadas. El corte se mantendrá hasta validar la causa de la variación y su eventual correspondencia con fichas anuladas.';
+    aviso.id='alerta-corte-valparaiso';aviso.className='note-box';aviso.style.margin='14px 0 18px';
+    aviso.innerHTML='<strong>Alerta:</strong> Para la Región de Valparaíso se mantienen las cifras comunales correspondientes al corte SISE de las 17:05 horas del 20-07-2026. Esta medida se aplica debido a que en actualizaciones posteriores se detectó una disminución no explicada en el número de FIBE terminadas.';
     ancla.insertAdjacentElement('beforebegin',aviso);
   }
 
-  function instalar(){
+  async function instalar(){
     if(typeof sumarSisePorComuna!=='function'||typeof resumenRegion!=='function'||typeof totales!=='function'){setTimeout(instalar,100);return}
     if(sumarSisePorComuna.__corteValparaiso)return;
-
-    const sumarOriginal=sumarSisePorComuna;
-    const resumenOriginal=resumenRegion;
-    const totalesOriginal=totales;
-    const horaOriginal=typeof horaRegion==='function'?horaRegion:null;
+    await cargarSnapshot();
+    const sumarOriginal=sumarSisePorComuna,resumenOriginal=resumenRegion,totalesOriginal=totales,horaOriginal=typeof horaRegion==='function'?horaRegion:null;
 
     sumarSisePorComuna=function(){
       const actuales=sumarOriginal.apply(this,arguments)||[],corte=corteValparaiso();
       if(!corte.size)return actuales;
       const salida=actuales.filter(d=>!esValparaiso(d));
-      const actualesValpo=new Map(actuales.filter(esValparaiso).map(d=>[claveRegistro(d),d]));
-      corte.forEach((historico,k)=>{const actual=actualesValpo.get(k)||{};salida.push({...actual,...historico,matrizAfectacion:actual.matrizAfectacion||historico.matrizAfectacion||{}})});
+      corte.forEach(historico=>salida.push({...historico}));
       return salida;
     };
     sumarSisePorComuna.__corteValparaiso=true;
 
-    resumenRegion=function(region){
-      const r=resumenOriginal.apply(this,arguments);
-      if(normalizar(region)===REGION)r.te=TOTAL_TERMINADAS_ESPERADO;
-      return r;
-    };
-
-    totales=function(){
-      const t=totalesOriginal.apply(this,arguments);
-      const valpoCalculado=(typeof combinados==='function'?combinados():[]).filter(esValparaiso).reduce((s,d)=>s+Number(d.terminadas||0),0);
-      t.te+=TOTAL_TERMINADAS_ESPERADO-valpoCalculado;
-      return t;
-    };
-
-    horaRegion=function(region){
-      if(normalizar(region)===REGION)return HORA_CORTE;
-      if(horaOriginal)return horaOriginal.apply(this,arguments);
-      return '';
-    };
+    resumenRegion=function(region){const r=resumenOriginal.apply(this,arguments);if(normalizar(region)===REGION)r.te=TOTAL_TERMINADAS_ESPERADO;return r};
+    totales=function(){const t=totalesOriginal.apply(this,arguments),valpo=(typeof combinados==='function'?combinados():[]).filter(esValparaiso).reduce((s,d)=>s+Number(d.terminadas||0),0);t.te+=TOTAL_TERMINADAS_ESPERADO-valpo;return t};
+    horaRegion=function(region){if(normalizar(region)===REGION)return HORA_CORTE;return horaOriginal?horaOriginal.apply(this,arguments):''};
 
     mostrarAlertaVisible();
     if(typeof combinadosCache!=='undefined')combinadosCache=null;
