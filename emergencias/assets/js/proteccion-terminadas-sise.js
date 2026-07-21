@@ -62,6 +62,17 @@
     ancla.insertAdjacentElement('beforebegin',aviso);
   }
 
+  function horaSisePorRegion(region){
+    const canon=typeof regionCanon==='function'?regionCanon(region):region;
+    if(normalizar(canon)===REGION)return '17:37';
+    if(typeof combinados!=='function')return '';
+    const horas=combinados()
+      .filter(d=>(typeof regionCanon==='function'?regionCanon(d.region):d.region)===canon)
+      .map(d=>typeof hora24==='function'?hora24(d.siseHora||d.hora||''):String(d.siseHora||d.hora||''))
+      .filter(h=>/^\d{2}:\d{2}$/.test(h)&&h!=='--:--');
+    return horas.sort().at(-1)||'';
+  }
+
   function instalar(){
     if(typeof sumarSisePorComuna!=='function'){setTimeout(instalar,100);return}
     if(sumarSisePorComuna.__corteValparaiso17)return;
@@ -78,6 +89,7 @@
     };
     protegida.__corteValparaiso17=true;
     sumarSisePorComuna=protegida;
+    horaRegion=horaSisePorRegion;
     mostrarAlertaVisible();
     if(typeof combinadosCache!=='undefined')combinadosCache=null;
     if(typeof render==='function')render();
