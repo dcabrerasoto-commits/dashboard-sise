@@ -13,7 +13,7 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
 // una alerta visible mientras se revisa la disminución de FIBE terminadas.
 (function cargarProteccionTerminadas(){
   const script=document.createElement('script');
-  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-3';
+  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-4';
   script.async=false;
   document.head.appendChild(script);
 })();
