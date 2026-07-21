@@ -9,5 +9,14 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   document.head.appendChild(script);
 })();
 
+// Protege el número de FIBE terminadas frente a disminuciones silenciosas
+// entre descargas sucesivas de SISE.
+(function cargarProteccionTerminadas(){
+  const script=document.createElement('script');
+  script.src='assets/js/proteccion-terminadas-sise.js?v=20260721-1';
+  script.async=false;
+  document.head.appendChild(script);
+})();
+
 // La unificación del evento 149162 y su desglose comunal se realizan en el robot
 // que genera monitoreo-sise.json. No se aplican transformaciones adicionales en la página.
