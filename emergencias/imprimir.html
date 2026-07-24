@@ -24,7 +24,7 @@
 <script>
 const regiones=['Arica y Parinacota','Tarapac\u00e1','Antofagasta','Atacama','Coquimbo','Valpara\u00edso','Metropolitana de Santiago',"O'Higgins",'Maule','\u00d1uble','Biob\u00edo','La Araucan\u00eda','Los R\u00edos','Los Lagos','Ays\u00e9n','Magallanes'];
 const regionesReporte=regiones.filter(r=>r!=='Los Lagos');
-const alfaSenapredRegion={'Atacama':135,'Coquimbo':2716,'Valpara\u00edso':6255,'Metropolitana de Santiago':4613,"O'Higgins":703,'Maule':187,'\u00d1uble':887,'Biob\u00edo':1435,'La Araucan\u00eda':207,'Los R\u00edos':0,'Los Lagos':0};
+const alfaSenapredRegion={"Atacama":5937,"Coquimbo":19382,"Valpara\u00edso":9754,"Metropolitana de Santiago":6439,"O'Higgins":1029,"Maule":451,"\u00d1uble":253,"Biob\u00edo":1718,"La Araucan\u00eda":538,"Los R\u00edos":0,"Los Lagos":0};
 const fmt=n=>new Intl.NumberFormat('es-CL').format(Number(n||0));
 const snapshot=JSON.parse(localStorage.getItem('uise-reporte-imprimible')||'null');
 let filas=snapshot&&Array.isArray(snapshot.filas)?snapshot.filas:[];
