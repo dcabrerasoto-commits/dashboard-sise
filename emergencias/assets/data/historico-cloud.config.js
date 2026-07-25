@@ -9,5 +9,13 @@ window.UISE_HISTORICO_ENDPOINT = "https://script.google.com/macros/s/AKfycbx5EoF
   document.head.appendChild(script);
 })();
 
+// Normaliza variantes de nombres comunales para evitar que se contabilicen por separado.
+(function cargarNormalizacionComunal(){
+  const script=document.createElement('script');
+  script.src='assets/js/comuna-normalization.js?v=20260725';
+  script.async=false;
+  document.head.appendChild(script);
+})();
+
 // La unificación del evento 149162 y su desglose comunal se realizan en el robot
 // que genera monitoreo-sise.json. No se aplican transformaciones adicionales en la página.
