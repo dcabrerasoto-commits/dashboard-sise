@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-27T10:21:07",
+  "actualizado": "2026-07-27T10:35:24",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -987,6 +987,14 @@
       "fechaCreacion": "2026-07-14"
     },
     {
+      "id": "150649",
+      "nombre": "Sistema Frontal",
+      "region": "Metropolitana de Santiago",
+      "comunas": "Macul",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-14"
+    },
+    {
       "id": "150621",
       "nombre": "Sistema Frontal",
       "region": "La Araucanía",
@@ -1011,14 +1019,6 @@
       "fechaCreacion": "2026-07-14"
     },
     {
-      "id": "150649",
-      "nombre": "Sistema Frontal",
-      "region": "Metropolitana de Santiago",
-      "comunas": "Macul",
-      "estado": "activa",
-      "fechaCreacion": "2026-07-14"
-    },
-    {
       "id": "148913; 149350",
       "nombre": "Sistema Frontal",
       "region": "La Araucanía",
@@ -1037,536 +1037,801 @@
   ],
   "descargas": [
     {
-      "eventoId": "148401",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148442",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148481",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148481_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148501",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148501_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148521",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148521_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148541",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148541_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148561",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148561_20260727_1000_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148564",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148564_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148566",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148566_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148567",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148567_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148602",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148602_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148621",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148621_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148641",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148641_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148661",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148661_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148681",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148681_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148702",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148702_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148741",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148741_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148742",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148742_20260727_1001_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148743",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148743_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148744",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148744_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148745",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148745_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148781",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148781_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148801",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148801_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148841",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148841_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148902",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148902_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148908",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148908_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148909",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148909_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148910",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148910_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148911",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148911_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148912",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148912_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148913",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148913_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148914",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148914_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148916",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148916_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148917",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148917_20260727_1002_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148921",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148921_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148941",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148941_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148942",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148942_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148944",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148944_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148946",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148946_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148961",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148961_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "148981",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148981_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149008",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149008_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149009",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149009_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149023",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149023_20260727_1003_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149041",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260727_1004_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149081",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260727_1004_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149101",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260727_1004_Reporte_BD_FIBE.xlsx"
-    },
-    {
       "eventoId": "149162",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260727_1007_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149282",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149282_20260727_1008_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149284",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149284_20260727_1008_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149288",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149288_20260727_1008_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149321",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149321_20260727_1008_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149341",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149341_20260727_1008_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260727_1028_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149342",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260727_1012_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149343",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149343_20260727_1012_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149344",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149344_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149347",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149347_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149348",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149348_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149350",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149350_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149352",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149352_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149353",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149353_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149383",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149383_20260727_1013_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149386",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149386_20260727_1013_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260727_1032_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149401",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260727_1014_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149423",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149423_20260727_1014_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149424",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149424_20260727_1014_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149442",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149442_20260727_1014_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149461",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149461_20260727_1014_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149462",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149462_20260727_1014_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149464",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149464_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149466",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149466_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149468",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149468_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149469",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149469_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149471",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149471_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149501",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149501_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149521",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149521_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149522",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149522_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149523",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149523_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149524",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149524_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149565",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149565_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149568",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149568_20260727_1015_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149570",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149570_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149581",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149581_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149621",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149621_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149642",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149642_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149650",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149650_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149651",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149651_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149661",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149661_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149682",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149682_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149683",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149683_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149685",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149685_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149781",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149781_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149804",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149804_20260727_1016_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149821",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149821_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149881",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149881_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149941",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149941_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149962",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149962_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149964",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149964_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149965",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149965_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149967",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149967_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "149981",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149981_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150021",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150021_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150061",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150061_20260727_1017_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150101",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150101_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150141",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150141_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150181",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150181_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150241",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150241_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150261",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150261_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150263",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150263_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150281",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150281_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150301",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150301_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150321",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150321_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150341",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150341_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150381",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150381_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150421",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150421_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150441",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150441_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150442",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150442_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150443",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150443_20260727_1018_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150445",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150445_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150484",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150484_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150485",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150485_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150501",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150501_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150543",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150543_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150561",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150561_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150601",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150601_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150621",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150621_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150623",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150623_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150625",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150625_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150642",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150642_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150646",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150646_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150662",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150662_20260727_1019_Reporte_BD_FIBE.xlsx"
-    },
-    {
-      "eventoId": "150682",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\150682_20260727_1019_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260727_1034_Reporte_BD_FIBE.xlsx"
     }
   ],
   "pendientesDescarga": [],
-  "congeladosDescarga": [],
+  "congeladosDescarga": [
+    {
+      "eventoId": "148401",
+      "region": "Biobío",
+      "comuna": "Tomé",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148442",
+      "region": "La Araucanía",
+      "comuna": "Galvarino",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148481",
+      "region": "Ñuble",
+      "comuna": "Coihueco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148501",
+      "region": "Ñuble",
+      "comuna": "San Carlos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148521",
+      "region": "Biobío",
+      "comuna": "Talcahuano",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148541",
+      "region": "Maule",
+      "comuna": "Pelarco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148561",
+      "region": "Maule",
+      "comuna": "Chanco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148564",
+      "region": "Ñuble",
+      "comuna": "San Ignacio",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148566",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Padre Hurtado",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148567",
+      "region": "Maule",
+      "comuna": "Curepto",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148602",
+      "region": "Biobío",
+      "comuna": "Arauco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148621",
+      "region": "Ñuble",
+      "comuna": "Ñiquén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148641",
+      "region": "Ñuble",
+      "comuna": "Treguaco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148661",
+      "region": "Biobío",
+      "comuna": "Los Álamos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148681",
+      "region": "Biobío",
+      "comuna": "Penco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148702",
+      "region": "Biobío",
+      "comuna": "Hualpén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148741",
+      "region": "Biobío",
+      "comuna": "Tucapel",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148742",
+      "region": "Los Ríos",
+      "comuna": "Futrono",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148743",
+      "region": "Ñuble",
+      "comuna": "Coelemu",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148744",
+      "region": "Los Ríos",
+      "comuna": "Valdivia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148745",
+      "region": "Ñuble",
+      "comuna": "Portezuelo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148781",
+      "region": "Biobío",
+      "comuna": "Cañete",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148801",
+      "region": "Los Ríos",
+      "comuna": "Río Bueno",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148841",
+      "region": "Los Ríos",
+      "comuna": "Los Lagos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148902",
+      "region": "La Araucanía",
+      "comuna": "Angol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148908",
+      "region": "Biobío",
+      "comuna": "Coronel",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148909",
+      "region": "Maule",
+      "comuna": "Pelluhue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148910",
+      "region": "La Araucanía",
+      "comuna": "Padre las Casas",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148911",
+      "region": "Ñuble",
+      "comuna": "Chillan Viejo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148912",
+      "region": "Ñuble",
+      "comuna": "Cobquecura",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148913",
+      "region": "La Araucanía",
+      "comuna": "Los Sauces",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148914",
+      "region": "Los Ríos",
+      "comuna": "Panguipulli",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148916",
+      "region": "Ñuble",
+      "comuna": "Quirihue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148917",
+      "region": "Maule",
+      "comuna": "Sagrada Familia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148921",
+      "region": "Biobío",
+      "comuna": "Lota",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148941",
+      "region": "Ñuble",
+      "comuna": "Yungay",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148942",
+      "region": "Maule",
+      "comuna": "Parral",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148944",
+      "region": "Los Ríos",
+      "comuna": "Lanco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148946",
+      "region": "Ñuble",
+      "comuna": "San Nicolás",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148961",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Puente Alto",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148981",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Cerrillos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149008",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Talagante",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149009",
+      "region": "Maule",
+      "comuna": "Pencahue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149023",
+      "region": "Ñuble",
+      "comuna": "Chillán",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149041",
+      "region": "Metropolitana de Santiago",
+      "comuna": "María Pinto",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149081",
+      "region": "La Araucanía",
+      "comuna": "Cunco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149101",
+      "region": "Maule",
+      "comuna": "Licantén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149282",
+      "region": "Biobío",
+      "comuna": "Lebu",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149284",
+      "region": "La Araucanía",
+      "comuna": "Cholchol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149288",
+      "region": "Biobío",
+      "comuna": "Curanilahue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149321",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Lampa",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149341",
+      "region": "Metropolitana de Santiago",
+      "comuna": "La Florida",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149343",
+      "region": "Biobío",
+      "comuna": "Concepción",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149344",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San Miguel",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149347",
+      "region": "Maule",
+      "comuna": "Empedrado",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149348",
+      "region": "O'Higgins",
+      "comuna": "Las Cabras",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149350",
+      "region": "La Araucanía",
+      "comuna": "Los Sauces",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149352",
+      "region": "Biobío",
+      "comuna": "Chiguayante",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149353",
+      "region": "Biobío",
+      "comuna": "Los Ángeles",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149383",
+      "region": "O'Higgins",
+      "comuna": "Doñihue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149386",
+      "region": "Ñuble",
+      "comuna": "Ninhue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149423",
+      "region": "Ñuble",
+      "comuna": "San Fabián",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149424",
+      "region": "O'Higgins",
+      "comuna": "San Fernando",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149442",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Melipilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149461",
+      "region": "O'Higgins",
+      "comuna": "Palmilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149462",
+      "region": "Maule",
+      "comuna": "Vichuquén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149464",
+      "region": "O'Higgins",
+      "comuna": "Machalí",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149466",
+      "region": "O'Higgins",
+      "comuna": "Navidad",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149468",
+      "region": "Metropolitana de Santiago",
+      "comuna": "El Monte",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149469",
+      "region": "La Araucanía",
+      "comuna": "Freire",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149471",
+      "region": "La Araucanía",
+      "comuna": "Temuco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149501",
+      "region": "Ñuble",
+      "comuna": "Quillón",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149521",
+      "region": "Maule",
+      "comuna": "Villa Alegre",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149522",
+      "region": "O'Higgins",
+      "comuna": "Litueche",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149523",
+      "region": "Metropolitana de Santiago",
+      "comuna": "El Bosque",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149524",
+      "region": "O'Higgins",
+      "comuna": "La Estrella",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149565",
+      "region": "Biobío",
+      "comuna": "San Pedro de la Paz",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149568",
+      "region": "Biobío",
+      "comuna": "Santa Bárbara",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149570",
+      "region": "Ñuble",
+      "comuna": "Pemuco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149581",
+      "region": "Maule",
+      "comuna": "Cauquenes",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149621",
+      "region": "La Araucanía",
+      "comuna": "Loncoche",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149642",
+      "region": "O'Higgins",
+      "comuna": "Placilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149650",
+      "region": "O'Higgins",
+      "comuna": "Paredones",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149651",
+      "region": "La Araucanía",
+      "comuna": "Victoria",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149661",
+      "region": "O'Higgins",
+      "comuna": "Marchihue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149682",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San José de Maipo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149683",
+      "region": "Maule",
+      "comuna": "Retiro",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149685",
+      "region": "Los Ríos",
+      "comuna": "Paillaco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149781",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Maipú",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149804",
+      "region": "Maule",
+      "comuna": "Hualañé",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149821",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Isla de Maipo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149881",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Peñaflor",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149941",
+      "region": "La Araucanía",
+      "comuna": "Villarrica",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149962",
+      "region": "La Araucanía",
+      "comuna": "Ercilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149964",
+      "region": "Biobío",
+      "comuna": "Hualqui",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149965",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Recoleta",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149967",
+      "region": "O'Higgins",
+      "comuna": "Graneros",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149981",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San Ramón",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150021",
+      "region": "Maule",
+      "comuna": "Constitución",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150061",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Buin",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150101",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Cerro Navia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150141",
+      "region": "Biobío",
+      "comuna": "Florida",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150181",
+      "region": "La Araucanía",
+      "comuna": "Traiguén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150241",
+      "region": "Maule",
+      "comuna": "Yerbas Buenas",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150261",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Providencia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150263",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Colina",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150281",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Ñuñoa",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150301",
+      "region": "Metropolitana de Santiago",
+      "comuna": "La Pintana",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150321",
+      "region": "O'Higgins",
+      "comuna": "Lolol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150341",
+      "region": "O'Higgins",
+      "comuna": "Pumanque",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150381",
+      "region": "La Araucanía",
+      "comuna": "Victoria",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150421",
+      "region": "La Araucanía",
+      "comuna": "Villarrica",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150441",
+      "region": "O'Higgins",
+      "comuna": "Quinta de Tilcoco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150442",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San Pedro",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150443",
+      "region": "Maule",
+      "comuna": "Rauco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150445",
+      "region": "Maule",
+      "comuna": "Colbún",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150484",
+      "region": "Maule",
+      "comuna": "Longaví",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150485",
+      "region": "La Araucanía",
+      "comuna": "Nueva Imperial",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150501",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Independencia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150543",
+      "region": "O'Higgins",
+      "comuna": "Olivar",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150561",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Peñalolén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150649",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Macul",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150601",
+      "region": "La Araucanía",
+      "comuna": "Galvarino",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150621",
+      "region": "La Araucanía",
+      "comuna": "Vilcún",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150623",
+      "region": "Maule",
+      "comuna": "Talca",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150625",
+      "region": "La Araucanía",
+      "comuna": "Angol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150642",
+      "region": "La Araucanía",
+      "comuna": "Loncoche",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150646",
+      "region": "La Araucanía",
+      "comuna": "Temuco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150662",
+      "region": "La Araucanía",
+      "comuna": "Freire",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150682",
+      "region": "Ñuble",
+      "comuna": "El Carmen",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    }
+  ],
   "fuentes": [
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260727_1000_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260727_1000_Reporte_BD_FIBE.xlsx",
@@ -1615,13 +1880,13 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260727_1004_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260727_1004_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260727_1004_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260727_1007_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260727_1028_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149282_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149284_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149288_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149321_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149341_20260727_1008_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260727_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260727_1032_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149343_20260727_1012_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149344_20260727_1013_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149347_20260727_1013_Reporte_BD_FIBE.xlsx",
@@ -1631,7 +1896,7 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149353_20260727_1013_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149383_20260727_1013_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149386_20260727_1013_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260727_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260727_1034_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149423_20260727_1014_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149424_20260727_1014_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149442_20260727_1014_Reporte_BD_FIBE.xlsx",
@@ -3187,33 +3452,34 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 63,
+      "aplicadas": 66,
       "anuladas": 0,
-      "terminadas": 60,
+      "terminadas": 63,
       "digitacion": 3,
-      "personas": 181,
-      "nna": 47,
+      "personas": 195,
+      "nna": 54,
       "mayores": 42,
       "discapacidad": 20,
-      "mujer": 102,
-      "hombre": 79,
+      "mujer": 107,
+      "hombre": 88,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 4,
         "NO AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 25,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 26,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 5,
         "MUY AFECTADOS|DESTRUIDA": 7
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3224,30 +3490,30 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 40,
+      "aplicadas": 42,
       "anuladas": 0,
-      "terminadas": 34,
+      "terminadas": 36,
       "digitacion": 6,
-      "personas": 124,
-      "nna": 57,
-      "mayores": 12,
-      "discapacidad": 18,
-      "mujer": 68,
-      "hombre": 55,
+      "personas": 133,
+      "nna": 58,
+      "mayores": 13,
+      "discapacidad": 19,
+      "mujer": 73,
+      "hombre": 59,
       "otro": 1,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 13,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|MUY AFECTADA": 5
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3284,8 +3550,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3298,13 +3564,13 @@
       "alfa": 0,
       "aplicadas": 197,
       "anuladas": 0,
-      "terminadas": 193,
-      "digitacion": 4,
-      "personas": 565,
-      "nna": 118,
-      "mayores": 136,
-      "discapacidad": 58,
-      "mujer": 307,
+      "terminadas": 195,
+      "digitacion": 2,
+      "personas": 570,
+      "nna": 120,
+      "mayores": 137,
+      "discapacidad": 59,
+      "mujer": 312,
       "hombre": 258,
       "otro": 0,
       "matrizAfectacion": {
@@ -3312,15 +3578,15 @@
         "POCO AFECTADOS|POCO AFECTADA": 12,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 98,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 99,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MUY AFECTADOS|MUY AFECTADA": 40,
+        "MUY AFECTADOS|MUY AFECTADA": 41,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|DESTRUIDA": 4
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3333,21 +3599,21 @@
       "alfa": 0,
       "aplicadas": 65,
       "anuladas": 0,
-      "terminadas": 62,
-      "digitacion": 3,
-      "personas": 165,
-      "nna": 50,
-      "mayores": 29,
-      "discapacidad": 14,
-      "mujer": 90,
-      "hombre": 75,
+      "terminadas": 64,
+      "digitacion": 1,
+      "personas": 171,
+      "nna": 51,
+      "mayores": 30,
+      "discapacidad": 15,
+      "mujer": 95,
+      "hombre": 76,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 7,
-        "NO AFECTADOS|POCO AFECTADA": 10,
+        "NO AFECTADOS|POCO AFECTADA": 11,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 17,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 18,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 6,
@@ -3355,8 +3621,8 @@
         "MUY AFECTADOS|DESTRUIDA": 2,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3367,37 +3633,37 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 418,
+      "aplicadas": 423,
       "anuladas": 0,
-      "terminadas": 388,
+      "terminadas": 393,
       "digitacion": 25,
-      "personas": 1198,
-      "nna": 345,
-      "mayores": 228,
-      "discapacidad": 187,
-      "mujer": 691,
-      "hombre": 507,
+      "personas": 1211,
+      "nna": 347,
+      "mayores": 232,
+      "discapacidad": 189,
+      "mujer": 698,
+      "hombre": 513,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 10,
         "POCO AFECTADOS|NO AFECTADA": 3,
-        "POCO AFECTADOS|POCO AFECTADA": 48,
+        "POCO AFECTADOS|POCO AFECTADA": 50,
         "NO AFECTADOS|POCO AFECTADA": 45,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 80,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 44,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 28,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 29,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 45,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "MUY AFECTADOS|MUY AFECTADA": 44,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 41,
-        "NO AFECTADOS|MUY AFECTADA": 5,
+        "NO AFECTADOS|MUY AFECTADA": 6,
         "POCO AFECTADOS|MUY AFECTADA": 17,
         "MUY AFECTADOS|DESTRUIDA": 10,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3408,19 +3674,19 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 161,
+      "aplicadas": 162,
       "anuladas": 0,
-      "terminadas": 155,
+      "terminadas": 156,
       "digitacion": 6,
-      "personas": 458,
+      "personas": 462,
       "nna": 104,
-      "mayores": 119,
-      "discapacidad": 40,
-      "mujer": 260,
-      "hombre": 198,
+      "mayores": 123,
+      "discapacidad": 42,
+      "mujer": 262,
+      "hombre": 200,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|NO AFECTADA": 16,
+        "NO AFECTADOS|NO AFECTADA": 17,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 26,
@@ -3434,8 +3700,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 15,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3446,16 +3712,16 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 96,
+      "aplicadas": 98,
       "anuladas": 0,
-      "terminadas": 95,
-      "digitacion": 1,
-      "personas": 296,
+      "terminadas": 96,
+      "digitacion": 2,
+      "personas": 299,
       "nna": 80,
-      "mayores": 73,
+      "mayores": 75,
       "discapacidad": 59,
-      "mujer": 164,
-      "hombre": 132,
+      "mujer": 165,
+      "hombre": 134,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 10,
@@ -3463,7 +3729,7 @@
         "NO AFECTADOS|POCO AFECTADA": 14,
         "POCO AFECTADOS|POCO AFECTADA": 6,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 28,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 29,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 13,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
@@ -3471,8 +3737,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3483,10 +3749,10 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 26,
+      "aplicadas": 27,
       "anuladas": 0,
       "terminadas": 25,
-      "digitacion": 0,
+      "digitacion": 1,
       "personas": 73,
       "nna": 15,
       "mayores": 19,
@@ -3504,8 +3770,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3540,8 +3806,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3576,8 +3842,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3588,16 +3854,16 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 594,
+      "aplicadas": 596,
       "anuladas": 1,
-      "terminadas": 555,
+      "terminadas": 557,
       "digitacion": 29,
-      "personas": 1735,
-      "nna": 543,
-      "mayores": 231,
+      "personas": 1748,
+      "nna": 547,
+      "mayores": 232,
       "discapacidad": 232,
-      "mujer": 962,
-      "hombre": 773,
+      "mujer": 967,
+      "hombre": 781,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|NO AFECTADA": 1,
@@ -3605,19 +3871,19 @@
         "NO AFECTADOS|POCO AFECTADA": 34,
         "POCO AFECTADOS|POCO AFECTADA": 76,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 6,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 90,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 91,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 162,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MUY AFECTADOS|MUY AFECTADA": 65,
+        "MUY AFECTADOS|MUY AFECTADA": 66,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 48,
         "POCO AFECTADOS|MUY AFECTADA": 14,
         "NO AFECTADOS|MUY AFECTADA": 9,
         "MUY AFECTADOS|DESTRUIDA": 18,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3655,8 +3921,8 @@
         "MUY AFECTADOS|DESTRUIDA": 4,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3697,8 +3963,8 @@
         "MUY AFECTADOS|DESTRUIDA": 16,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3734,8 +4000,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3772,8 +4038,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3807,8 +4073,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 10,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3838,8 +4104,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3873,8 +4139,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3909,8 +4175,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3944,8 +4210,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 6,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3956,10 +4222,10 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 52,
+      "aplicadas": 53,
       "anuladas": 0,
       "terminadas": 52,
-      "digitacion": 0,
+      "digitacion": 1,
       "personas": 144,
       "nna": 46,
       "mayores": 28,
@@ -3979,8 +4245,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -3991,16 +4257,16 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 38,
+      "aplicadas": 39,
       "anuladas": 0,
-      "terminadas": 35,
+      "terminadas": 36,
       "digitacion": 2,
-      "personas": 88,
-      "nna": 25,
+      "personas": 95,
+      "nna": 29,
       "mayores": 18,
       "discapacidad": 11,
-      "mujer": 48,
-      "hombre": 40,
+      "mujer": 52,
+      "hombre": 43,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 8,
@@ -4009,11 +4275,11 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 11,
+        "MUY AFECTADOS|MUY AFECTADA": 12,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4048,8 +4314,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4080,8 +4346,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 6
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4111,8 +4377,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4143,8 +4409,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4155,15 +4421,15 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 77,
+      "aplicadas": 79,
       "anuladas": 0,
-      "terminadas": 77,
-      "digitacion": 0,
-      "personas": 222,
+      "terminadas": 78,
+      "digitacion": 1,
+      "personas": 224,
       "nna": 65,
       "mayores": 48,
       "discapacidad": 36,
-      "mujer": 130,
+      "mujer": 132,
       "hombre": 92,
       "otro": 0,
       "matrizAfectacion": {
@@ -4174,11 +4440,11 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 16,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MUY AFECTADOS|MUY AFECTADA": 36,
+        "MUY AFECTADOS|MUY AFECTADA": 37,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4209,8 +4475,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4237,8 +4503,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4269,8 +4535,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4297,8 +4563,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4327,8 +4593,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 4
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Valparaíso",
@@ -4339,22 +4605,23 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 1,
+      "aplicadas": 3,
       "anuladas": 0,
-      "terminadas": 1,
+      "terminadas": 3,
       "digitacion": 0,
-      "personas": 2,
+      "personas": 5,
       "nna": 0,
       "mayores": 0,
       "discapacidad": 0,
-      "mujer": 1,
-      "hombre": 1,
+      "mujer": 2,
+      "hombre": 3,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:07",
-      "fechaLlenado": "27-07-2026 10:07"
+      "hora": "10:28",
+      "fechaLlenado": "27-07-2026 10:28"
     },
     {
       "region": "Biobío",
@@ -4529,37 +4796,37 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 299,
+      "aplicadas": 308,
       "anuladas": 0,
-      "terminadas": 268,
+      "terminadas": 277,
       "digitacion": 20,
-      "personas": 872,
-      "nna": 249,
-      "mayores": 170,
-      "discapacidad": 136,
-      "mujer": 496,
-      "hombre": 375,
+      "personas": 899,
+      "nna": 259,
+      "mayores": 174,
+      "discapacidad": 142,
+      "mujer": 514,
+      "hombre": 384,
       "otro": 1,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|NO AFECTADA": 2,
-        "NO AFECTADOS|POCO AFECTADA": 17,
+        "NO AFECTADOS|POCO AFECTADA": 18,
         "POCO AFECTADOS|POCO AFECTADA": 33,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 8,
         "MUY AFECTADOS|POCO AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 35,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 68,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 27,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 33,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MUY AFECTADOS|MUY AFECTADA": 38,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 13,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 17,
         "NO AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 8,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
         "MUY AFECTADOS|DESTRUIDA": 6
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4570,10 +4837,10 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 200,
+      "aplicadas": 201,
       "anuladas": 0,
       "terminadas": 187,
-      "digitacion": 13,
+      "digitacion": 14,
       "personas": 484,
       "nna": 115,
       "mayores": 124,
@@ -4595,8 +4862,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 8,
         "NO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4635,8 +4902,8 @@
         "NO AFECTADOS|MUY AFECTADA": 3,
         "MUY AFECTADOS|MUY AFECTADA": 4
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4647,16 +4914,16 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 299,
+      "aplicadas": 308,
       "anuladas": 0,
-      "terminadas": 284,
-      "digitacion": 12,
-      "personas": 837,
-      "nna": 210,
-      "mayores": 178,
-      "discapacidad": 93,
-      "mujer": 457,
-      "hombre": 379,
+      "terminadas": 290,
+      "digitacion": 15,
+      "personas": 851,
+      "nna": 213,
+      "mayores": 182,
+      "discapacidad": 94,
+      "mujer": 463,
+      "hombre": 387,
       "otro": 1,
       "matrizAfectacion": {
         "POCO AFECTADOS|NO AFECTADA": 2,
@@ -4666,19 +4933,19 @@
         "NO AFECTADOS|POCO AFECTADA": 25,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 14,
         "MUY AFECTADOS|POCO AFECTADA": 3,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 17,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 72,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 73,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 20,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "MUY AFECTADOS|MUY AFECTADA": 39,
+        "MUY AFECTADOS|MUY AFECTADA": 40,
+        "POCO AFECTADOS|MUY AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 13,
-        "POCO AFECTADOS|MUY AFECTADA": 8,
         "NO AFECTADOS|MUY AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 16,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4717,8 +4984,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 3
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4731,13 +4998,13 @@
       "alfa": 0,
       "aplicadas": 75,
       "anuladas": 0,
-      "terminadas": 71,
-      "digitacion": 4,
-      "personas": 149,
+      "terminadas": 72,
+      "digitacion": 3,
+      "personas": 150,
       "nna": 22,
-      "mayores": 54,
+      "mayores": 55,
       "discapacidad": 20,
-      "mujer": 82,
+      "mujer": 83,
       "hombre": 67,
       "otro": 0,
       "matrizAfectacion": {
@@ -4749,12 +5016,12 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 21,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 6,
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 3
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4794,8 +5061,8 @@
         "NO AFECTADOS|MUY AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4806,16 +5073,16 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 219,
+      "aplicadas": 220,
       "anuladas": 0,
-      "terminadas": 207,
+      "terminadas": 208,
       "digitacion": 12,
-      "personas": 607,
-      "nna": 127,
+      "personas": 611,
+      "nna": 130,
       "mayores": 153,
       "discapacidad": 70,
-      "mujer": 366,
-      "hombre": 241,
+      "mujer": 368,
+      "hombre": 243,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|NO AFECTADA": 2,
@@ -4826,7 +5093,7 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 41,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 20,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 19,
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "NO AFECTADOS|MUY AFECTADA": 3,
@@ -4834,8 +5101,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4870,8 +5137,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4904,8 +5171,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4938,8 +5205,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4971,8 +5238,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -4999,8 +5266,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Coquimbo",
@@ -5030,8 +5297,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12"
+      "hora": "10:32",
+      "fechaLlenado": "27-07-2026 10:32"
     },
     {
       "region": "Biobío",
@@ -5299,21 +5566,21 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 149,
+      "aplicadas": 153,
       "anuladas": 0,
-      "terminadas": 140,
+      "terminadas": 144,
       "digitacion": 6,
-      "personas": 442,
-      "nna": 147,
-      "mayores": 67,
-      "discapacidad": 57,
-      "mujer": 252,
-      "hombre": 190,
+      "personas": 455,
+      "nna": 151,
+      "mayores": 71,
+      "discapacidad": 59,
+      "mujer": 260,
+      "hombre": 195,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|NO AFECTADA": 4,
-        "NO AFECTADOS|NO AFECTADA": 7,
-        "POCO AFECTADOS|POCO AFECTADA": 35,
+        "NO AFECTADOS|NO AFECTADA": 9,
+        "POCO AFECTADOS|POCO AFECTADA": 37,
         "NO AFECTADOS|POCO AFECTADA": 23,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 23,
@@ -5324,8 +5591,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 5
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Atacama",
@@ -5336,16 +5603,16 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 214,
+      "aplicadas": 217,
       "anuladas": 0,
-      "terminadas": 199,
-      "digitacion": 9,
-      "personas": 552,
+      "terminadas": 200,
+      "digitacion": 11,
+      "personas": 553,
       "nna": 151,
-      "mayores": 114,
+      "mayores": 115,
       "discapacidad": 73,
       "mujer": 294,
-      "hombre": 257,
+      "hombre": 258,
       "otro": 1,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 24,
@@ -5353,9 +5620,9 @@
         "NO AFECTADOS|POCO AFECTADA": 30,
         "POCO AFECTADOS|POCO AFECTADA": 24,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 6,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 38,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 15,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 37,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "NO AFECTADOS|MUY AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 14,
@@ -5363,8 +5630,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Atacama",
@@ -5375,15 +5642,15 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 113,
+      "aplicadas": 115,
       "anuladas": 0,
-      "terminadas": 95,
-      "digitacion": 2,
-      "personas": 273,
+      "terminadas": 96,
+      "digitacion": 3,
+      "personas": 274,
       "nna": 73,
-      "mayores": 55,
-      "discapacidad": 54,
-      "mujer": 150,
+      "mayores": 56,
+      "discapacidad": 55,
+      "mujer": 151,
       "hombre": 122,
       "otro": 1,
       "matrizAfectacion": {
@@ -5392,7 +5659,7 @@
         "NO AFECTADOS|POCO AFECTADA": 12,
         "POCO AFECTADOS|POCO AFECTADA": 14,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 24,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 25,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
@@ -5401,8 +5668,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "POCO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Atacama",
@@ -5413,36 +5680,36 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 224,
+      "aplicadas": 231,
       "anuladas": 1,
-      "terminadas": 219,
-      "digitacion": 0,
-      "personas": 590,
-      "nna": 138,
-      "mayores": 164,
-      "discapacidad": 117,
-      "mujer": 323,
-      "hombre": 266,
+      "terminadas": 223,
+      "digitacion": 3,
+      "personas": 596,
+      "nna": 139,
+      "mayores": 168,
+      "discapacidad": 120,
+      "mujer": 328,
+      "hombre": 267,
       "otro": 1,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 6,
         "POCO AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 20,
+        "POCO AFECTADOS|POCO AFECTADA": 21,
         "NO AFECTADOS|POCO AFECTADA": 20,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 8,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 31,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 62,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 63,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 23,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 27,
+        "MUY AFECTADOS|MUY AFECTADA": 24,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 28,
         "POCO AFECTADOS|MUY AFECTADA": 9,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Atacama",
@@ -5478,8 +5745,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Atacama",
@@ -5490,25 +5757,25 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 83,
+      "aplicadas": 85,
       "anuladas": 0,
-      "terminadas": 80,
-      "digitacion": 2,
-      "personas": 224,
+      "terminadas": 83,
+      "digitacion": 1,
+      "personas": 228,
       "nna": 82,
-      "mayores": 26,
+      "mayores": 28,
       "discapacidad": 20,
-      "mujer": 130,
-      "hombre": 94,
+      "mujer": 132,
+      "hombre": 96,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 14,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
-        "POCO AFECTADOS|POCO AFECTADA": 14,
+        "POCO AFECTADOS|POCO AFECTADA": 15,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 20,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 22,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
@@ -5516,8 +5783,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Atacama",
@@ -5556,8 +5823,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 9,
         "MUY AFECTADOS|DESTRUIDA": 7
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14"
+      "hora": "10:34",
+      "fechaLlenado": "27-07-2026 10:34"
     },
     {
       "region": "Ñuble",
