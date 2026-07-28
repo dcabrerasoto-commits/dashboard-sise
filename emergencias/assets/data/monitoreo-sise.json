@@ -1,15 +1,7 @@
 {
-  "actualizado": "2026-07-28T17:10:23",
+  "actualizado": "2026-07-28T18:19:49",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
-    {
-      "id": "149342",
-      "nombre": "Sistema Frontal",
-      "region": "Coquimbo",
-      "comunas": "",
-      "estado": "activa",
-      "fechaCreacion": "2026-07-14"
-    },
     {
       "id": "148401",
       "nombre": "Sistema Frontal",
@@ -431,6 +423,14 @@
       "nombre": "Sistema Frontal",
       "region": "Metropolitana de Santiago",
       "comunas": "La Florida",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-14"
+    },
+    {
+      "id": "149342",
+      "nombre": "Sistema Frontal",
+      "region": "Coquimbo",
+      "comunas": "",
       "estado": "activa",
       "fechaCreacion": "2026-07-14"
     },
@@ -1108,8 +1108,808 @@
     }
   ],
   "descargas": [],
-  "pendientesDescarga": [],
-  "congeladosDescarga": [],
+  "pendientesDescarga": [
+    {
+      "eventoId": "149162",
+      "region": "Valparaíso",
+      "comuna": "Cabildo, Cartagena, El Tabo, La Ligua, Putaendo, Quilpué, San Esteban, Valparaíso, Viña del Mar, Casablanca, Concon, Juan Fernandez, Puchuncavi, Quintero, Isla de Pascua, Los Andes, Calle Larga, Rinconada, Papudo, Petorca, Zapallar, Quillota, La Calera, Hijuelas, La Cruz, Nogales, San Antonio, Algarrobo, El Quisco, Santo Domingo, San Felipe, Catemu, Llay Llay, Panquehue, Santa Maria, Limache, Olmue, Villa Alemana",
+      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+    },
+    {
+      "eventoId": "149342",
+      "region": "Coquimbo",
+      "comuna": "Andacollo, Canela, Combarbalá, Coquimbo, Illapel, La Higuera, La Serena, Los Vilos, Monte Patria, Ovalle, Paihuano, Punitaqui, Río Hurtado, Salamanca, Vicuña",
+      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+    },
+    {
+      "eventoId": "149401",
+      "region": "Atacama",
+      "comuna": "Alto del Carmen, Vallenar, Caldera, Chañaral, Copiapó, Diego de Almagro, Freirina, Huasco, Tierra Amarilla",
+      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+    }
+  ],
+  "congeladosDescarga": [
+    {
+      "eventoId": "148401",
+      "region": "Biobío",
+      "comuna": "Tomé",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148442",
+      "region": "La Araucanía",
+      "comuna": "Galvarino",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148481",
+      "region": "Ñuble",
+      "comuna": "Coihueco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148501",
+      "region": "Ñuble",
+      "comuna": "San Carlos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148521",
+      "region": "Biobío",
+      "comuna": "Talcahuano",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148541",
+      "region": "Maule",
+      "comuna": "Pelarco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148561",
+      "region": "Maule",
+      "comuna": "Chanco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148564",
+      "region": "Ñuble",
+      "comuna": "San Ignacio",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148566",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Padre Hurtado",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148567",
+      "region": "Maule",
+      "comuna": "Curepto",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148602",
+      "region": "Biobío",
+      "comuna": "Arauco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148621",
+      "region": "Ñuble",
+      "comuna": "Ñiquén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148641",
+      "region": "Ñuble",
+      "comuna": "Treguaco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148661",
+      "region": "Biobío",
+      "comuna": "Los Álamos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148681",
+      "region": "Biobío",
+      "comuna": "Penco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148702",
+      "region": "Biobío",
+      "comuna": "Hualpén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148741",
+      "region": "Biobío",
+      "comuna": "Tucapel",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148742",
+      "region": "Los Ríos",
+      "comuna": "Futrono",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148743",
+      "region": "Ñuble",
+      "comuna": "Coelemu",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148744",
+      "region": "Los Ríos",
+      "comuna": "Valdivia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148745",
+      "region": "Ñuble",
+      "comuna": "Portezuelo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148781",
+      "region": "Biobío",
+      "comuna": "Cañete",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148801",
+      "region": "Los Ríos",
+      "comuna": "Río Bueno",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148841",
+      "region": "Los Ríos",
+      "comuna": "Los Lagos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148902",
+      "region": "La Araucanía",
+      "comuna": "Angol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148908",
+      "region": "Biobío",
+      "comuna": "Coronel",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148909",
+      "region": "Maule",
+      "comuna": "Pelluhue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148910",
+      "region": "La Araucanía",
+      "comuna": "Padre las Casas",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148911",
+      "region": "Ñuble",
+      "comuna": "Chillan Viejo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148912",
+      "region": "Ñuble",
+      "comuna": "Cobquecura",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148913",
+      "region": "La Araucanía",
+      "comuna": "Los Sauces",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148914",
+      "region": "Los Ríos",
+      "comuna": "Panguipulli",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148916",
+      "region": "Ñuble",
+      "comuna": "Quirihue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148917",
+      "region": "Maule",
+      "comuna": "Sagrada Familia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148921",
+      "region": "Biobío",
+      "comuna": "Lota",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148941",
+      "region": "Ñuble",
+      "comuna": "Yungay",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148942",
+      "region": "Maule",
+      "comuna": "Parral",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148944",
+      "region": "Los Ríos",
+      "comuna": "Lanco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148946",
+      "region": "Ñuble",
+      "comuna": "San Nicolás",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148961",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Puente Alto",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "148981",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Cerrillos",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149008",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Talagante",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149009",
+      "region": "Maule",
+      "comuna": "Pencahue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149023",
+      "region": "Ñuble",
+      "comuna": "Chillán",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149041",
+      "region": "Metropolitana de Santiago",
+      "comuna": "María Pinto",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149081",
+      "region": "La Araucanía",
+      "comuna": "Cunco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149101",
+      "region": "Maule",
+      "comuna": "Licantén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149282",
+      "region": "Biobío",
+      "comuna": "Lebu",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149284",
+      "region": "La Araucanía",
+      "comuna": "Cholchol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149288",
+      "region": "Biobío",
+      "comuna": "Curanilahue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149321",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Lampa",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149341",
+      "region": "Metropolitana de Santiago",
+      "comuna": "La Florida",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149343",
+      "region": "Biobío",
+      "comuna": "Concepción",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149344",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San Miguel",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149347",
+      "region": "Maule",
+      "comuna": "Empedrado",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149348",
+      "region": "O'Higgins",
+      "comuna": "Las Cabras",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149350",
+      "region": "La Araucanía",
+      "comuna": "Los Sauces",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149352",
+      "region": "Biobío",
+      "comuna": "Chiguayante",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149353",
+      "region": "Biobío",
+      "comuna": "Los Ángeles",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149383",
+      "region": "O'Higgins",
+      "comuna": "Doñihue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149386",
+      "region": "Ñuble",
+      "comuna": "Ninhue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149423",
+      "region": "Ñuble",
+      "comuna": "San Fabián",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149424",
+      "region": "O'Higgins",
+      "comuna": "San Fernando",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149442",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Melipilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149461",
+      "region": "O'Higgins",
+      "comuna": "Palmilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149462",
+      "region": "Maule",
+      "comuna": "Vichuquén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149464",
+      "region": "O'Higgins",
+      "comuna": "Machalí",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149466",
+      "region": "O'Higgins",
+      "comuna": "Navidad",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149468",
+      "region": "Metropolitana de Santiago",
+      "comuna": "El Monte",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149469",
+      "region": "La Araucanía",
+      "comuna": "Freire",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149471",
+      "region": "La Araucanía",
+      "comuna": "Temuco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149501",
+      "region": "Ñuble",
+      "comuna": "Quillón",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149521",
+      "region": "Maule",
+      "comuna": "Villa Alegre",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149522",
+      "region": "O'Higgins",
+      "comuna": "Litueche",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149523",
+      "region": "Metropolitana de Santiago",
+      "comuna": "El Bosque",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149524",
+      "region": "O'Higgins",
+      "comuna": "La Estrella",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149565",
+      "region": "Biobío",
+      "comuna": "San Pedro de la Paz",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149568",
+      "region": "Biobío",
+      "comuna": "Santa Bárbara",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149570",
+      "region": "Ñuble",
+      "comuna": "Pemuco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149581",
+      "region": "Maule",
+      "comuna": "Cauquenes",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149621",
+      "region": "La Araucanía",
+      "comuna": "Loncoche",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149642",
+      "region": "O'Higgins",
+      "comuna": "Placilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149650",
+      "region": "O'Higgins",
+      "comuna": "Paredones",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149651",
+      "region": "La Araucanía",
+      "comuna": "Victoria",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149661",
+      "region": "O'Higgins",
+      "comuna": "Marchihue",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149682",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San José de Maipo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149683",
+      "region": "Maule",
+      "comuna": "Retiro",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149685",
+      "region": "Los Ríos",
+      "comuna": "Paillaco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149781",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Maipú",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149804",
+      "region": "Maule",
+      "comuna": "Hualañé",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149821",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Isla de Maipo",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149881",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Peñaflor",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149941",
+      "region": "La Araucanía",
+      "comuna": "Villarrica",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149962",
+      "region": "La Araucanía",
+      "comuna": "Ercilla",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149964",
+      "region": "Biobío",
+      "comuna": "Hualqui",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149965",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Recoleta",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149967",
+      "region": "O'Higgins",
+      "comuna": "Graneros",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "149981",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San Ramón",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150021",
+      "region": "Maule",
+      "comuna": "Constitución",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150061",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Buin",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150101",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Cerro Navia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150141",
+      "region": "Biobío",
+      "comuna": "Florida",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150181",
+      "region": "La Araucanía",
+      "comuna": "Traiguén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150241",
+      "region": "Maule",
+      "comuna": "Yerbas Buenas",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150261",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Providencia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150263",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Colina",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150281",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Ñuñoa",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150301",
+      "region": "Metropolitana de Santiago",
+      "comuna": "La Pintana",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150321",
+      "region": "O'Higgins",
+      "comuna": "Lolol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150341",
+      "region": "O'Higgins",
+      "comuna": "Pumanque",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150381",
+      "region": "La Araucanía",
+      "comuna": "Victoria",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150421",
+      "region": "La Araucanía",
+      "comuna": "Villarrica",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150441",
+      "region": "O'Higgins",
+      "comuna": "Quinta de Tilcoco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150442",
+      "region": "Metropolitana de Santiago",
+      "comuna": "San Pedro",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150443",
+      "region": "Maule",
+      "comuna": "Rauco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150445",
+      "region": "Maule",
+      "comuna": "Colbún",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150484",
+      "region": "Maule",
+      "comuna": "Longaví",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150485",
+      "region": "La Araucanía",
+      "comuna": "Nueva Imperial",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150501",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Independencia",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150543",
+      "region": "O'Higgins",
+      "comuna": "Olivar",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150561",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Peñalolén",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150649",
+      "region": "Metropolitana de Santiago",
+      "comuna": "Macul",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150601",
+      "region": "La Araucanía",
+      "comuna": "Galvarino",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150621",
+      "region": "La Araucanía",
+      "comuna": "Vilcún",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150623",
+      "region": "Maule",
+      "comuna": "Talca",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150625",
+      "region": "La Araucanía",
+      "comuna": "Angol",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150642",
+      "region": "La Araucanía",
+      "comuna": "Loncoche",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150646",
+      "region": "La Araucanía",
+      "comuna": "Temuco",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150662",
+      "region": "La Araucanía",
+      "comuna": "Freire",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    },
+    {
+      "eventoId": "150682",
+      "region": "Ñuble",
+      "comuna": "El Carmen",
+      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
+    }
+  ],
   "fuentes": [
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260727_1000_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260727_1000_Reporte_BD_FIBE.xlsx",
@@ -2010,6 +2810,30 @@
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
+    },
+    {
+      "tipo": "descarga_pendiente",
+      "id": "149162",
+      "region": "Valparaíso",
+      "comuna": "Valparaíso/Unificado",
+      "campo": "Descarga SISE",
+      "detalle": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+    },
+    {
+      "tipo": "descarga_pendiente",
+      "id": "149342",
+      "region": "Coquimbo",
+      "comuna": "Coquimbo/Unificado",
+      "campo": "Descarga SISE",
+      "detalle": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+    },
+    {
+      "tipo": "descarga_pendiente",
+      "id": "149401",
+      "region": "Atacama",
+      "comuna": "Atacama/Unificado",
+      "campo": "Descarga SISE",
+      "detalle": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
     }
   ],
   "filas": [
