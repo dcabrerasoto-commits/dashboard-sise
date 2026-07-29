@@ -1,7 +1,31 @@
 {
-  "actualizado": "2026-07-28T19:11:41",
+  "actualizado": "2026-07-28T21:40:25",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
+    {
+      "id": "149162",
+      "nombre": "Sistema Frontal",
+      "region": "Valparaíso",
+      "comunas": "",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-14"
+    },
+    {
+      "id": "149342",
+      "nombre": "Sistema Frontal",
+      "region": "Coquimbo",
+      "comunas": "",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-14"
+    },
+    {
+      "id": "149401",
+      "nombre": "Sistema Frontal",
+      "region": "Atacama",
+      "comunas": "",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-14"
+    },
     {
       "id": "148401",
       "nombre": "Sistema Frontal",
@@ -379,14 +403,6 @@
       "fechaCreacion": "2026-07-14"
     },
     {
-      "id": "149162",
-      "nombre": "Sistema Frontal",
-      "region": "Valparaíso",
-      "comunas": "",
-      "estado": "activa",
-      "fechaCreacion": "2026-07-14"
-    },
-    {
       "id": "149282",
       "nombre": "Sistema Frontal",
       "region": "Biobío",
@@ -423,14 +439,6 @@
       "nombre": "Sistema Frontal",
       "region": "Metropolitana de Santiago",
       "comunas": "La Florida",
-      "estado": "activa",
-      "fechaCreacion": "2026-07-14"
-    },
-    {
-      "id": "149342",
-      "nombre": "Sistema Frontal",
-      "region": "Coquimbo",
-      "comunas": "",
       "estado": "activa",
       "fechaCreacion": "2026-07-14"
     },
@@ -503,14 +511,6 @@
       "nombre": "Sistema Frontal",
       "region": "Ñuble",
       "comunas": "Ninhue",
-      "estado": "activa",
-      "fechaCreacion": "2026-07-14"
-    },
-    {
-      "id": "149401",
-      "nombre": "Sistema Frontal",
-      "region": "Atacama",
-      "comunas": "",
       "estado": "activa",
       "fechaCreacion": "2026-07-14"
     },
@@ -1107,809 +1107,22 @@
       "fechaCreacion": "22/07/2026"
     }
   ],
-  "descargas": [],
-  "pendientesDescarga": [
+  "descargas": [
     {
       "eventoId": "149162",
-      "region": "Valparaíso",
-      "comuna": "Cabildo, Cartagena, El Tabo, La Ligua, Putaendo, Quilpué, San Esteban, Valparaíso, Viña del Mar, Casablanca, Concon, Juan Fernandez, Puchuncavi, Quintero, Isla de Pascua, Los Andes, Calle Larga, Rinconada, Papudo, Petorca, Zapallar, Quillota, La Calera, Hijuelas, La Cruz, Nogales, San Antonio, Algarrobo, El Quisco, Santo Domingo, San Felipe, Catemu, Llay Llay, Panquehue, Santa Maria, Limache, Olmue, Villa Alemana",
-      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260728_2126_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149342",
-      "region": "Coquimbo",
-      "comuna": "Andacollo, Canela, Combarbalá, Coquimbo, Illapel, La Higuera, La Serena, Los Vilos, Monte Patria, Ovalle, Paihuano, Punitaqui, Río Hurtado, Salamanca, Vicuña",
-      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260728_2132_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149401",
-      "region": "Atacama",
-      "comuna": "Alto del Carmen, Vallenar, Caldera, Chañaral, Copiapó, Diego de Almagro, Freirina, Huasco, Tierra Amarilla",
-      "motivo": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260728_2134_Reporte_BD_FIBE.xlsx"
     }
   ],
-  "congeladosDescarga": [
-    {
-      "eventoId": "148401",
-      "region": "Biobío",
-      "comuna": "Tomé",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148442",
-      "region": "La Araucanía",
-      "comuna": "Galvarino",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148481",
-      "region": "Ñuble",
-      "comuna": "Coihueco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148501",
-      "region": "Ñuble",
-      "comuna": "San Carlos",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148521",
-      "region": "Biobío",
-      "comuna": "Talcahuano",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148541",
-      "region": "Maule",
-      "comuna": "Pelarco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148561",
-      "region": "Maule",
-      "comuna": "Chanco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148564",
-      "region": "Ñuble",
-      "comuna": "San Ignacio",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148566",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Padre Hurtado",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148567",
-      "region": "Maule",
-      "comuna": "Curepto",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148602",
-      "region": "Biobío",
-      "comuna": "Arauco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148621",
-      "region": "Ñuble",
-      "comuna": "Ñiquén",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148641",
-      "region": "Ñuble",
-      "comuna": "Treguaco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148661",
-      "region": "Biobío",
-      "comuna": "Los Álamos",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148681",
-      "region": "Biobío",
-      "comuna": "Penco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148702",
-      "region": "Biobío",
-      "comuna": "Hualpén",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148741",
-      "region": "Biobío",
-      "comuna": "Tucapel",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148742",
-      "region": "Los Ríos",
-      "comuna": "Futrono",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148743",
-      "region": "Ñuble",
-      "comuna": "Coelemu",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148744",
-      "region": "Los Ríos",
-      "comuna": "Valdivia",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148745",
-      "region": "Ñuble",
-      "comuna": "Portezuelo",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148781",
-      "region": "Biobío",
-      "comuna": "Cañete",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148801",
-      "region": "Los Ríos",
-      "comuna": "Río Bueno",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148841",
-      "region": "Los Ríos",
-      "comuna": "Los Lagos",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148902",
-      "region": "La Araucanía",
-      "comuna": "Angol",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148908",
-      "region": "Biobío",
-      "comuna": "Coronel",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148909",
-      "region": "Maule",
-      "comuna": "Pelluhue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148910",
-      "region": "La Araucanía",
-      "comuna": "Padre las Casas",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148911",
-      "region": "Ñuble",
-      "comuna": "Chillan Viejo",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148912",
-      "region": "Ñuble",
-      "comuna": "Cobquecura",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148913",
-      "region": "La Araucanía",
-      "comuna": "Los Sauces",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148914",
-      "region": "Los Ríos",
-      "comuna": "Panguipulli",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148916",
-      "region": "Ñuble",
-      "comuna": "Quirihue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148917",
-      "region": "Maule",
-      "comuna": "Sagrada Familia",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148921",
-      "region": "Biobío",
-      "comuna": "Lota",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148941",
-      "region": "Ñuble",
-      "comuna": "Yungay",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148942",
-      "region": "Maule",
-      "comuna": "Parral",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148944",
-      "region": "Los Ríos",
-      "comuna": "Lanco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148946",
-      "region": "Ñuble",
-      "comuna": "San Nicolás",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148961",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Puente Alto",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "148981",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Cerrillos",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149008",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Talagante",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149009",
-      "region": "Maule",
-      "comuna": "Pencahue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149023",
-      "region": "Ñuble",
-      "comuna": "Chillán",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149041",
-      "region": "Metropolitana de Santiago",
-      "comuna": "María Pinto",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149081",
-      "region": "La Araucanía",
-      "comuna": "Cunco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149101",
-      "region": "Maule",
-      "comuna": "Licantén",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149282",
-      "region": "Biobío",
-      "comuna": "Lebu",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149284",
-      "region": "La Araucanía",
-      "comuna": "Cholchol",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149288",
-      "region": "Biobío",
-      "comuna": "Curanilahue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149321",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Lampa",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149341",
-      "region": "Metropolitana de Santiago",
-      "comuna": "La Florida",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149343",
-      "region": "Biobío",
-      "comuna": "Concepción",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149344",
-      "region": "Metropolitana de Santiago",
-      "comuna": "San Miguel",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149347",
-      "region": "Maule",
-      "comuna": "Empedrado",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149348",
-      "region": "O'Higgins",
-      "comuna": "Las Cabras",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149350",
-      "region": "La Araucanía",
-      "comuna": "Los Sauces",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149352",
-      "region": "Biobío",
-      "comuna": "Chiguayante",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149353",
-      "region": "Biobío",
-      "comuna": "Los Ángeles",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149383",
-      "region": "O'Higgins",
-      "comuna": "Doñihue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149386",
-      "region": "Ñuble",
-      "comuna": "Ninhue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149423",
-      "region": "Ñuble",
-      "comuna": "San Fabián",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149424",
-      "region": "O'Higgins",
-      "comuna": "San Fernando",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149442",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Melipilla",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149461",
-      "region": "O'Higgins",
-      "comuna": "Palmilla",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149462",
-      "region": "Maule",
-      "comuna": "Vichuquén",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149464",
-      "region": "O'Higgins",
-      "comuna": "Machalí",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149466",
-      "region": "O'Higgins",
-      "comuna": "Navidad",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149468",
-      "region": "Metropolitana de Santiago",
-      "comuna": "El Monte",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149469",
-      "region": "La Araucanía",
-      "comuna": "Freire",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149471",
-      "region": "La Araucanía",
-      "comuna": "Temuco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149501",
-      "region": "Ñuble",
-      "comuna": "Quillón",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149521",
-      "region": "Maule",
-      "comuna": "Villa Alegre",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149522",
-      "region": "O'Higgins",
-      "comuna": "Litueche",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149523",
-      "region": "Metropolitana de Santiago",
-      "comuna": "El Bosque",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149524",
-      "region": "O'Higgins",
-      "comuna": "La Estrella",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149565",
-      "region": "Biobío",
-      "comuna": "San Pedro de la Paz",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149568",
-      "region": "Biobío",
-      "comuna": "Santa Bárbara",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149570",
-      "region": "Ñuble",
-      "comuna": "Pemuco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149581",
-      "region": "Maule",
-      "comuna": "Cauquenes",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149621",
-      "region": "La Araucanía",
-      "comuna": "Loncoche",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149642",
-      "region": "O'Higgins",
-      "comuna": "Placilla",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149650",
-      "region": "O'Higgins",
-      "comuna": "Paredones",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149651",
-      "region": "La Araucanía",
-      "comuna": "Victoria",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149661",
-      "region": "O'Higgins",
-      "comuna": "Marchihue",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149682",
-      "region": "Metropolitana de Santiago",
-      "comuna": "San José de Maipo",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149683",
-      "region": "Maule",
-      "comuna": "Retiro",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149685",
-      "region": "Los Ríos",
-      "comuna": "Paillaco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149781",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Maipú",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149804",
-      "region": "Maule",
-      "comuna": "Hualañé",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149821",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Isla de Maipo",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149881",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Peñaflor",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149941",
-      "region": "La Araucanía",
-      "comuna": "Villarrica",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149962",
-      "region": "La Araucanía",
-      "comuna": "Ercilla",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149964",
-      "region": "Biobío",
-      "comuna": "Hualqui",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149965",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Recoleta",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149967",
-      "region": "O'Higgins",
-      "comuna": "Graneros",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "149981",
-      "region": "Metropolitana de Santiago",
-      "comuna": "San Ramón",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150021",
-      "region": "Maule",
-      "comuna": "Constitución",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150061",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Buin",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150101",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Cerro Navia",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150141",
-      "region": "Biobío",
-      "comuna": "Florida",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150181",
-      "region": "La Araucanía",
-      "comuna": "Traiguén",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150241",
-      "region": "Maule",
-      "comuna": "Yerbas Buenas",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150261",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Providencia",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150263",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Colina",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150281",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Ñuñoa",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150301",
-      "region": "Metropolitana de Santiago",
-      "comuna": "La Pintana",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150321",
-      "region": "O'Higgins",
-      "comuna": "Lolol",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150341",
-      "region": "O'Higgins",
-      "comuna": "Pumanque",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150381",
-      "region": "La Araucanía",
-      "comuna": "Victoria",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150421",
-      "region": "La Araucanía",
-      "comuna": "Villarrica",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150441",
-      "region": "O'Higgins",
-      "comuna": "Quinta de Tilcoco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150442",
-      "region": "Metropolitana de Santiago",
-      "comuna": "San Pedro",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150443",
-      "region": "Maule",
-      "comuna": "Rauco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150445",
-      "region": "Maule",
-      "comuna": "Colbún",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150484",
-      "region": "Maule",
-      "comuna": "Longaví",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150485",
-      "region": "La Araucanía",
-      "comuna": "Nueva Imperial",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150501",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Independencia",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150543",
-      "region": "O'Higgins",
-      "comuna": "Olivar",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150561",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Peñalolén",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150649",
-      "region": "Metropolitana de Santiago",
-      "comuna": "Macul",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150601",
-      "region": "La Araucanía",
-      "comuna": "Galvarino",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150621",
-      "region": "La Araucanía",
-      "comuna": "Vilcún",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150623",
-      "region": "Maule",
-      "comuna": "Talca",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150625",
-      "region": "La Araucanía",
-      "comuna": "Angol",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150642",
-      "region": "La Araucanía",
-      "comuna": "Loncoche",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150646",
-      "region": "La Araucanía",
-      "comuna": "Temuco",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150662",
-      "region": "La Araucanía",
-      "comuna": "Freire",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    },
-    {
-      "eventoId": "150682",
-      "region": "Ñuble",
-      "comuna": "El Carmen",
-      "motivo": "Region congelada por definicion operativa. Se conserva ultima descarga vigente."
-    }
-  ],
+  "pendientesDescarga": [],
+  "congeladosDescarga": [],
   "fuentes": [
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148401_20260727_1000_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\148442_20260727_1000_Reporte_BD_FIBE.xlsx",
@@ -1958,13 +1171,13 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149041_20260727_1004_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149081_20260727_1004_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149101_20260727_1004_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260728_1530_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260728_2126_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149282_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149284_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149288_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149321_20260727_1008_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149341_20260727_1008_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260728_1530_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260728_2132_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149343_20260727_1012_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149344_20260727_1013_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149347_20260727_1013_Reporte_BD_FIBE.xlsx",
@@ -1974,7 +1187,7 @@
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149353_20260727_1013_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149383_20260727_1013_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149386_20260727_1013_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260728_1530_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260728_2134_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149423_20260727_1014_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149424_20260727_1014_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149442_20260727_1014_Reporte_BD_FIBE.xlsx",
@@ -2050,64 +1263,19 @@
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quilpué",
-      "campo": "terminadas",
-      "valorAnterior": 661,
-      "valorActual": 660
+      "comuna": "Cartagena",
+      "campo": "nna",
+      "valorAnterior": 62,
+      "valorActual": 61
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quilpué",
-      "campo": "personas",
-      "valorAnterior": 2078,
-      "valorActual": 2076
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quilpué",
-      "campo": "mujer",
-      "valorAnterior": 1149,
-      "valorActual": 1146
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Viña Del Mar",
-      "campo": "terminadas",
-      "valorAnterior": 516,
-      "valorActual": 514
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Viña Del Mar",
-      "campo": "personas",
-      "valorAnterior": 1653,
-      "valorActual": 1645
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Viña Del Mar",
-      "campo": "mujer",
-      "valorAnterior": 916,
-      "valorActual": 911
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Viña Del Mar",
-      "campo": "hombre",
-      "valorAnterior": 737,
-      "valorActual": 734
+      "comuna": "Zapallar",
+      "campo": "nna",
+      "valorAnterior": 137,
+      "valorActual": 132
     },
     {
       "tipo": "baja_detectada",
@@ -2122,343 +1290,118 @@
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quillota",
+      "comuna": "Rinconada",
+      "campo": "nna",
+      "valorAnterior": 83,
+      "valorActual": 82
+    },
+    {
+      "tipo": "baja_detectada",
+      "id": "149162",
+      "region": "Valparaíso",
+      "comuna": "Los Andes",
+      "campo": "nna",
+      "valorAnterior": 65,
+      "valorActual": 61
+    },
+    {
+      "tipo": "baja_detectada",
+      "id": "149162",
+      "region": "Valparaíso",
+      "comuna": "Calle Larga",
       "campo": "terminadas",
-      "valorAnterior": 132,
-      "valorActual": 130
+      "valorAnterior": 79,
+      "valorActual": 78
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quillota",
+      "comuna": "Calle Larga",
       "campo": "personas",
-      "valorAnterior": 411,
-      "valorActual": 401
+      "valorAnterior": 240,
+      "valorActual": 238
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quillota",
-      "campo": "mayores",
-      "valorAnterior": 107,
-      "valorActual": 105
+      "comuna": "Calle Larga",
+      "campo": "nna",
+      "valorAnterior": 68,
+      "valorActual": 67
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quillota",
+      "comuna": "Calle Larga",
       "campo": "discapacidad",
-      "valorAnterior": 87,
-      "valorActual": 84
+      "valorAnterior": 33,
+      "valorActual": 32
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Quillota",
+      "comuna": "Calle Larga",
       "campo": "mujer",
-      "valorAnterior": 231,
-      "valorActual": 223
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quillota",
-      "campo": "hombre",
-      "valorAnterior": 180,
-      "valorActual": 178
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso",
-      "campo": "terminadas",
-      "valorAnterior": 519,
-      "valorActual": 514
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso",
-      "campo": "personas",
-      "valorAnterior": 1611,
-      "valorActual": 1600
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso",
-      "campo": "mayores",
-      "valorAnterior": 309,
-      "valorActual": 304
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso",
-      "campo": "discapacidad",
-      "valorAnterior": 251,
-      "valorActual": 249
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso",
-      "campo": "mujer",
-      "valorAnterior": 922,
-      "valorActual": 914
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso",
-      "campo": "hombre",
-      "valorAnterior": 689,
-      "valorActual": 686
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Villa Alemana",
-      "campo": "terminadas",
-      "valorAnterior": 101,
-      "valorActual": 99
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Villa Alemana",
-      "campo": "personas",
-      "valorAnterior": 310,
-      "valorActual": 302
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Villa Alemana",
-      "campo": "discapacidad",
-      "valorAnterior": 37,
-      "valorActual": 35
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Villa Alemana",
-      "campo": "mujer",
-      "valorAnterior": 167,
-      "valorActual": 163
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Villa Alemana",
-      "campo": "hombre",
-      "valorAnterior": 143,
-      "valorActual": 139
+      "valorAnterior": 127,
+      "valorActual": 125
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
       "comuna": "Olmué",
-      "campo": "terminadas",
-      "valorAnterior": 112,
-      "valorActual": 111
+      "campo": "nna",
+      "valorAnterior": 125,
+      "valorActual": 122
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Olmué",
-      "campo": "personas",
-      "valorAnterior": 348,
-      "valorActual": 346
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Olmué",
-      "campo": "mujer",
-      "valorAnterior": 197,
-      "valorActual": 196
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Olmué",
-      "campo": "hombre",
-      "valorAnterior": 151,
-      "valorActual": 150
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Puchuncaví",
-      "campo": "terminadas",
-      "valorAnterior": 88,
-      "valorActual": 85
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Puchuncaví",
-      "campo": "personas",
-      "valorAnterior": 242,
-      "valorActual": 234
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Puchuncaví",
-      "campo": "mayores",
+      "comuna": "El Quisco",
+      "campo": "nna",
       "valorAnterior": 40,
-      "valorActual": 39
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Puchuncaví",
-      "campo": "mujer",
-      "valorAnterior": 139,
-      "valorActual": 135
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Puchuncaví",
-      "campo": "hombre",
-      "valorAnterior": 103,
-      "valorActual": 99
+      "valorActual": 38
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
       "comuna": "Llay Llay",
-      "campo": "terminadas",
-      "valorAnterior": 14,
-      "valorActual": 13
+      "campo": "nna",
+      "valorAnterior": 11,
+      "valorActual": 10
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Llay Llay",
-      "campo": "personas",
-      "valorAnterior": 44,
-      "valorActual": 41
+      "comuna": "Catemu",
+      "campo": "nna",
+      "valorAnterior": 93,
+      "valorActual": 90
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Llay Llay",
-      "campo": "mayores",
-      "valorAnterior": 5,
-      "valorActual": 4
+      "comuna": "San Esteban",
+      "campo": "nna",
+      "valorAnterior": 35,
+      "valorActual": 34
     },
     {
       "tipo": "baja_detectada",
       "id": "149162",
       "region": "Valparaíso",
-      "comuna": "Llay Llay",
-      "campo": "discapacidad",
-      "valorAnterior": 5,
-      "valorActual": 4
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Llay Llay",
-      "campo": "mujer",
-      "valorAnterior": 24,
-      "valorActual": 22
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Llay Llay",
-      "campo": "hombre",
-      "valorAnterior": 20,
-      "valorActual": 19
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quintero",
-      "campo": "terminadas",
-      "valorAnterior": 106,
-      "valorActual": 103
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quintero",
-      "campo": "personas",
-      "valorAnterior": 337,
-      "valorActual": 330
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quintero",
-      "campo": "mayores",
-      "valorAnterior": 52,
-      "valorActual": 49
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quintero",
-      "campo": "discapacidad",
-      "valorAnterior": 42,
-      "valorActual": 40
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quintero",
-      "campo": "mujer",
-      "valorAnterior": 181,
-      "valorActual": 178
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Quintero",
-      "campo": "hombre",
-      "valorAnterior": 155,
-      "valorActual": 151
+      "comuna": "San Antonio",
+      "campo": "nna",
+      "valorAnterior": 6,
+      "valorActual": 5
     },
     {
       "tipo": "baja_detectada",
@@ -2498,57 +1441,12 @@
     },
     {
       "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Copiapó",
-      "campo": "terminadas",
-      "valorAnterior": 227,
-      "valorActual": 224
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Copiapó",
-      "campo": "personas",
-      "valorAnterior": 729,
-      "valorActual": 722
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Copiapó",
-      "campo": "mayores",
-      "valorAnterior": 135,
-      "valorActual": 131
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Copiapó",
-      "campo": "discapacidad",
-      "valorAnterior": 99,
-      "valorActual": 98
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Copiapó",
-      "campo": "mujer",
-      "valorAnterior": 415,
-      "valorActual": 410
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Copiapó",
-      "campo": "hombre",
-      "valorAnterior": 314,
-      "valorActual": 312
+      "id": "149342",
+      "region": "Coquimbo",
+      "comuna": "Los Vilos",
+      "campo": "nna",
+      "valorAnterior": 115,
+      "valorActual": 114
     },
     {
       "tipo": "baja_detectada",
@@ -2564,117 +1462,9 @@
       "id": "149401",
       "region": "Atacama",
       "comuna": "Vallenar",
-      "campo": "terminadas",
-      "valorAnterior": 349,
-      "valorActual": 347
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Vallenar",
-      "campo": "personas",
-      "valorAnterior": 943,
-      "valorActual": 939
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Vallenar",
-      "campo": "mayores",
-      "valorAnterior": 254,
-      "valorActual": 253
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Vallenar",
-      "campo": "discapacidad",
-      "valorAnterior": 177,
-      "valorActual": 176
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Vallenar",
-      "campo": "mujer",
-      "valorAnterior": 530,
-      "valorActual": 527
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Vallenar",
-      "campo": "hombre",
-      "valorAnterior": 413,
-      "valorActual": 412
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Vallenar",
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Huasco",
-      "campo": "terminadas",
-      "valorAnterior": 588,
-      "valorActual": 580
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Huasco",
-      "campo": "personas",
-      "valorAnterior": 1596,
-      "valorActual": 1581
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Huasco",
-      "campo": "mayores",
-      "valorAnterior": 367,
-      "valorActual": 360
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Huasco",
-      "campo": "discapacidad",
-      "valorAnterior": 218,
-      "valorActual": 213
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Huasco",
-      "campo": "mujer",
-      "valorAnterior": 872,
-      "valorActual": 861
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Huasco",
-      "campo": "hombre",
-      "valorAnterior": 724,
-      "valorActual": 720
     },
     {
       "tipo": "baja_detectada",
@@ -2690,99 +1480,9 @@
       "id": "149401",
       "region": "Atacama",
       "comuna": "Tierra Amarilla",
-      "campo": "terminadas",
-      "valorAnterior": 208,
-      "valorActual": 207
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Tierra Amarilla",
-      "campo": "personas",
-      "valorAnterior": 506,
-      "valorActual": 504
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Tierra Amarilla",
-      "campo": "mayores",
-      "valorAnterior": 93,
-      "valorActual": 91
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Tierra Amarilla",
-      "campo": "discapacidad",
-      "valorAnterior": 49,
-      "valorActual": 48
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Tierra Amarilla",
-      "campo": "mujer",
-      "valorAnterior": 282,
-      "valorActual": 281
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Tierra Amarilla",
-      "campo": "hombre",
-      "valorAnterior": 224,
-      "valorActual": 223
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Caldera",
-      "campo": "terminadas",
-      "valorAnterior": 363,
-      "valorActual": 361
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Caldera",
-      "campo": "personas",
-      "valorAnterior": 995,
-      "valorActual": 991
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Caldera",
-      "campo": "mayores",
-      "valorAnterior": 186,
-      "valorActual": 182
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Caldera",
-      "campo": "mujer",
-      "valorAnterior": 535,
-      "valorActual": 533
-    },
-    {
-      "tipo": "baja_detectada",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Caldera",
-      "campo": "hombre",
-      "valorAnterior": 460,
-      "valorActual": 458
+      "campo": "nna",
+      "valorAnterior": 158,
+      "valorActual": 151
     },
     {
       "tipo": "baja_detectada",
@@ -2810,30 +1510,6 @@
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
-    },
-    {
-      "tipo": "descarga_pendiente",
-      "id": "149162",
-      "region": "Valparaíso",
-      "comuna": "Valparaíso/Unificado",
-      "campo": "Descarga SISE",
-      "detalle": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
-    },
-    {
-      "tipo": "descarga_pendiente",
-      "id": "149342",
-      "region": "Coquimbo",
-      "comuna": "Coquimbo/Unificado",
-      "campo": "Descarga SISE",
-      "detalle": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
-    },
-    {
-      "tipo": "descarga_pendiente",
-      "id": "149401",
-      "region": "Atacama",
-      "comuna": "Atacama/Unificado",
-      "campo": "Descarga SISE",
-      "detalle": "No se obtuvo archivo de descarga en esta ejecucion. Se conserva dato vigente previo si existe."
     }
   ],
   "filas": [
@@ -4313,8 +2989,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
         "MUY AFECTADOS|MUY AFECTADA": 6
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4325,16 +3001,16 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 231,
+      "aplicadas": 235,
       "anuladas": 0,
-      "terminadas": 225,
-      "digitacion": 6,
-      "personas": 634,
+      "terminadas": 230,
+      "digitacion": 5,
+      "personas": 645,
       "nna": 137,
-      "mayores": 192,
+      "mayores": 195,
       "discapacidad": 64,
-      "mujer": 351,
-      "hombre": 283,
+      "mujer": 357,
+      "hombre": 288,
       "otro": 0,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 39,
@@ -4343,18 +3019,18 @@
         "MUY AFECTADOS|MUY AFECTADA": 59,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 36,
-        "NO AFECTADOS|NO AFECTADA": 27,
+        "NO AFECTADOS|NO AFECTADA": 30,
         "POCO AFECTADOS|MUY AFECTADA": 4,
-        "NO AFECTADOS|POCO AFECTADA": 7,
+        "NO AFECTADOS|POCO AFECTADA": 8,
         "POCO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 10,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 3,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4365,36 +3041,36 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 697,
-      "anuladas": 3,
-      "terminadas": 661,
-      "digitacion": 25,
-      "personas": 2078,
-      "nna": 681,
-      "mayores": 277,
-      "discapacidad": 279,
-      "mujer": 1149,
-      "hombre": 929,
+      "aplicadas": 755,
+      "anuladas": 4,
+      "terminadas": 723,
+      "digitacion": 19,
+      "personas": 2289,
+      "nna": 725,
+      "mayores": 313,
+      "discapacidad": 305,
+      "mujer": 1259,
+      "hombre": 1029,
       "otro": 1,
       "matrizAfectacion": {
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 24,
-        "MUY AFECTADOS|MUY AFECTADA": 77,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 112,
-        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
-        "POCO AFECTADOS|MUY AFECTADA": 18,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 190,
-        "POCO AFECTADOS|POCO AFECTADA": 93,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 55,
-        "NO AFECTADOS|POCO AFECTADA": 41,
-        "NO AFECTADOS|NO AFECTADA": 7,
+        "NO AFECTADOS|POCO AFECTADA": 44,
+        "POCO AFECTADOS|POCO AFECTADA": 99,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 29,
+        "MUY AFECTADOS|MUY AFECTADA": 81,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 128,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 208,
         "NO AFECTADOS|MUY AFECTADA": 9,
-        "POCO AFECTADOS|NO AFECTADA": 2,
-        "MUY AFECTADOS|DESTRUIDA": 18,
+        "POCO AFECTADOS|MUY AFECTADA": 20,
+        "MUY AFECTADOS|DESTRUIDA": 19,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 62,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7
+        "NO AFECTADOS|NO AFECTADA": 7,
+        "POCO AFECTADOS|NO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4405,33 +3081,33 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 58,
+      "aplicadas": 59,
       "anuladas": 0,
-      "terminadas": 58,
+      "terminadas": 59,
       "digitacion": 0,
-      "personas": 174,
+      "personas": 177,
       "nna": 50,
-      "mayores": 42,
-      "discapacidad": 25,
-      "mujer": 91,
-      "hombre": 83,
+      "mayores": 45,
+      "discapacidad": 27,
+      "mujer": 93,
+      "hombre": 84,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 13,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|NO AFECTADA": 8,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 4,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4442,38 +3118,38 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 543,
+      "aplicadas": 557,
       "anuladas": 0,
-      "terminadas": 516,
-      "digitacion": 22,
-      "personas": 1653,
-      "nna": 559,
-      "mayores": 197,
-      "discapacidad": 205,
-      "mujer": 916,
-      "hombre": 737,
+      "terminadas": 538,
+      "digitacion": 12,
+      "personas": 1713,
+      "nna": 567,
+      "mayores": 205,
+      "discapacidad": 212,
+      "mujer": 957,
+      "hombre": 756,
       "otro": 1,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 47,
-        "POCO AFECTADOS|POCO AFECTADA": 37,
-        "MUY AFECTADOS|MUY AFECTADA": 121,
-        "NO AFECTADOS|POCO AFECTADA": 51,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 11,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 28,
-        "NO AFECTADOS|NO AFECTADA": 11,
-        "POCO AFECTADOS|NO AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 94,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 30,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 32,
-        "POCO AFECTADOS|MUY AFECTADA": 15,
+        "NO AFECTADOS|MUY AFECTADA": 9,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 50,
+        "NO AFECTADOS|POCO AFECTADA": 52,
+        "MUY AFECTADOS|MUY AFECTADA": 124,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 98,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 35,
         "MUY AFECTADOS|DESTRUIDA": 17,
-        "NO AFECTADOS|MUY AFECTADA": 7,
-        "MUY AFECTADOS|POCO AFECTADA": 10,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 30,
+        "POCO AFECTADOS|POCO AFECTADA": 39,
+        "NO AFECTADOS|NO AFECTADA": 11,
+        "MUY AFECTADOS|POCO AFECTADA": 11,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 29,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 12,
+        "POCO AFECTADOS|MUY AFECTADA": 16,
+        "POCO AFECTADOS|NO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4484,35 +3160,36 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 92,
+      "aplicadas": 107,
       "anuladas": 0,
-      "terminadas": 87,
-      "digitacion": 5,
-      "personas": 277,
-      "nna": 85,
-      "mayores": 58,
-      "discapacidad": 30,
-      "mujer": 155,
-      "hombre": 122,
+      "terminadas": 101,
+      "digitacion": 6,
+      "personas": 310,
+      "nna": 88,
+      "mayores": 67,
+      "discapacidad": 32,
+      "mujer": 174,
+      "hombre": 136,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 6,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 32,
+        "POCO AFECTADOS|POCO AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 36,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
-        "MUY AFECTADOS|DESTRUIDA": 7,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 6,
-        "MUY AFECTADOS|MUY AFECTADA": 9,
+        "MUY AFECTADOS|DESTRUIDA": 8,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "MUY AFECTADOS|MUY AFECTADA": 14,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
         "NO AFECTADOS|POCO AFECTADA": 2,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1,
+        "POCO AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4523,34 +3200,34 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 133,
+      "aplicadas": 151,
       "anuladas": 0,
-      "terminadas": 132,
+      "terminadas": 148,
       "digitacion": 3,
-      "personas": 411,
-      "nna": 113,
-      "mayores": 107,
-      "discapacidad": 87,
-      "mujer": 231,
-      "hombre": 180,
+      "personas": 459,
+      "nna": 124,
+      "mayores": 118,
+      "discapacidad": 92,
+      "mujer": 259,
+      "hombre": 200,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 40,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 10,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 10,
-        "NO AFECTADOS|NO AFECTADA": 11,
-        "NO AFECTADOS|MUY AFECTADA": 7,
-        "POCO AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 11,
         "MUY AFECTADOS|MUY AFECTADA": 14,
-        "POCO AFECTADOS|MUY AFECTADA": 3,
-        "NO AFECTADOS|POCO AFECTADA": 18,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 45,
+        "NO AFECTADOS|POCO AFECTADA": 19,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 12,
+        "NO AFECTADOS|NO AFECTADA": 11,
+        "POCO AFECTADOS|POCO AFECTADA": 11,
+        "NO AFECTADOS|MUY AFECTADA": 9,
+        "POCO AFECTADOS|MUY AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4561,19 +3238,19 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 108,
+      "aplicadas": 110,
       "anuladas": 0,
-      "terminadas": 108,
-      "digitacion": 0,
-      "personas": 302,
+      "terminadas": 109,
+      "digitacion": 1,
+      "personas": 307,
       "nna": 83,
-      "mayores": 65,
-      "discapacidad": 51,
-      "mujer": 173,
-      "hombre": 129,
+      "mayores": 66,
+      "discapacidad": 53,
+      "mujer": 174,
+      "hombre": 133,
       "otro": 0,
       "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 51,
+        "MUY AFECTADOS|MUY AFECTADA": 52,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 25,
@@ -4584,8 +3261,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4596,31 +3273,31 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 65,
+      "aplicadas": 68,
       "anuladas": 0,
-      "terminadas": 65,
+      "terminadas": 68,
       "digitacion": 1,
-      "personas": 199,
+      "personas": 203,
       "nna": 65,
-      "mayores": 36,
-      "discapacidad": 23,
-      "mujer": 106,
+      "mayores": 39,
+      "discapacidad": 24,
+      "mujer": 110,
       "hombre": 93,
       "otro": 0,
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 10,
         "POCO AFECTADOS|POCO AFECTADA": 12,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
         "NO AFECTADOS|POCO AFECTADA": 10,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4651,8 +3328,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4663,37 +3340,37 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 540,
-      "anuladas": 14,
-      "terminadas": 519,
-      "digitacion": 8,
-      "personas": 1611,
-      "nna": 489,
-      "mayores": 309,
-      "discapacidad": 251,
-      "mujer": 922,
-      "hombre": 689,
+      "aplicadas": 601,
+      "anuladas": 20,
+      "terminadas": 572,
+      "digitacion": 4,
+      "personas": 1780,
+      "nna": 514,
+      "mayores": 344,
+      "discapacidad": 273,
+      "mujer": 1007,
+      "hombre": 773,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|MUY AFECTADA": 12,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 64,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 34,
-        "MUY AFECTADOS|DESTRUIDA": 15,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 98,
-        "POCO AFECTADOS|POCO AFECTADA": 72,
-        "NO AFECTADOS|POCO AFECTADA": 65,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 51,
-        "MUY AFECTADOS|MUY AFECTADA": 54,
-        "POCO AFECTADOS|MUY AFECTADA": 17,
-        "NO AFECTADOS|NO AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 106,
+        "MUY AFECTADOS|MUY AFECTADA": 62,
+        "POCO AFECTADOS|POCO AFECTADA": 90,
+        "POCO AFECTADOS|MUY AFECTADA": 19,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 54,
+        "NO AFECTADOS|POCO AFECTADA": 73,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 66,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "MUY AFECTADOS|DESTRUIDA": 15,
+        "NO AFECTADOS|NO AFECTADA": 12,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 35,
+        "NO AFECTADOS|MUY AFECTADA": 14,
         "POCO AFECTADOS|NO AFECTADA": 4,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 8,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "NO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4730,8 +3407,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4742,33 +3419,33 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 70,
+      "aplicadas": 76,
       "anuladas": 0,
-      "terminadas": 70,
+      "terminadas": 76,
       "digitacion": 0,
-      "personas": 228,
+      "personas": 246,
       "nna": 59,
-      "mayores": 60,
-      "discapacidad": 23,
-      "mujer": 123,
-      "hombre": 105,
+      "mayores": 67,
+      "discapacidad": 30,
+      "mujer": 137,
+      "hombre": 109,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 10,
         "MUY AFECTADOS|MUY AFECTADA": 12,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 22,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 24,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|POCO AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 6,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 6,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "NO AFECTADOS|NO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 6,
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4779,34 +3456,34 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 116,
+      "aplicadas": 127,
       "anuladas": 0,
-      "terminadas": 114,
-      "digitacion": 2,
-      "personas": 325,
-      "nna": 102,
-      "mayores": 53,
-      "discapacidad": 41,
-      "mujer": 191,
-      "hombre": 134,
+      "terminadas": 126,
+      "digitacion": 1,
+      "personas": 367,
+      "nna": 112,
+      "mayores": 56,
+      "discapacidad": 46,
+      "mujer": 214,
+      "hombre": 153,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|POCO AFECTADA": 13,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 36,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 39,
         "MUY AFECTADOS|DESTRUIDA": 2,
-        "POCO AFECTADOS|POCO AFECTADA": 16,
-        "MUY AFECTADOS|MUY AFECTADA": 7,
+        "POCO AFECTADOS|POCO AFECTADA": 19,
+        "MUY AFECTADOS|MUY AFECTADA": 10,
         "NO AFECTADOS|NO AFECTADA": 7,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 8,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4817,16 +3494,16 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 34,
+      "aplicadas": 35,
       "anuladas": 4,
-      "terminadas": 30,
+      "terminadas": 31,
       "digitacion": 0,
-      "personas": 120,
+      "personas": 122,
       "nna": 40,
       "mayores": 15,
       "discapacidad": 7,
-      "mujer": 63,
-      "hombre": 57,
+      "mujer": 64,
+      "hombre": 58,
       "otro": 0,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
@@ -4836,12 +3513,13 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 3,
         "MUY AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 4,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4872,8 +3550,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4884,34 +3562,34 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 104,
+      "aplicadas": 112,
       "anuladas": 0,
-      "terminadas": 101,
-      "digitacion": 5,
-      "personas": 310,
-      "nna": 89,
-      "mayores": 56,
-      "discapacidad": 37,
-      "mujer": 167,
-      "hombre": 143,
+      "terminadas": 110,
+      "digitacion": 2,
+      "personas": 355,
+      "nna": 105,
+      "mayores": 59,
+      "discapacidad": 43,
+      "mujer": 193,
+      "hombre": 162,
       "otro": 0,
       "matrizAfectacion": {
-        "MUY AFECTADOS|DESTRUIDA": 4,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MUY AFECTADOS|MUY AFECTADA": 30,
+        "MUY AFECTADOS|MUY AFECTADA": 32,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 27,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 16,
-        "POCO AFECTADOS|POCO AFECTADA": 4,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|DESTRUIDA": 4,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 30,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 17,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "NO AFECTADOS|NO AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|NO AFECTADA": 2,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 1
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "POCO AFECTADOS|POCO AFECTADA": 4,
+        "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4943,8 +3621,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4957,25 +3635,25 @@
       "alfa": 0,
       "aplicadas": 19,
       "anuladas": 0,
-      "terminadas": 15,
-      "digitacion": 4,
-      "personas": 61,
+      "terminadas": 16,
+      "digitacion": 3,
+      "personas": 63,
       "nna": 20,
-      "mayores": 11,
-      "discapacidad": 5,
-      "mujer": 35,
-      "hombre": 26,
+      "mayores": 13,
+      "discapacidad": 6,
+      "mujer": 36,
+      "hombre": 27,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "MUY AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|POCO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -4986,7 +3664,7 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 119,
+      "aplicadas": 120,
       "anuladas": 0,
       "terminadas": 112,
       "digitacion": 8,
@@ -4999,19 +3677,19 @@
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|POCO AFECTADA": 31,
-        "MUY AFECTADOS|MUY AFECTADA": 8,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 27,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 27,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 18,
-        "POCO AFECTADOS|POCO AFECTADA": 5,
-        "NO AFECTADOS|MUY AFECTADA": 2,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "MUY AFECTADOS|DESTRUIDA": 1,
-        "NO AFECTADOS|NO AFECTADA": 1
+        "POCO AFECTADOS|POCO AFECTADA": 5,
+        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 8,
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "NO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5049,8 +3727,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5061,31 +3739,32 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 89,
+      "aplicadas": 98,
       "anuladas": 0,
-      "terminadas": 88,
+      "terminadas": 94,
       "digitacion": 3,
-      "personas": 242,
-      "nna": 77,
-      "mayores": 40,
-      "discapacidad": 30,
-      "mujer": 139,
-      "hombre": 103,
+      "personas": 257,
+      "nna": 82,
+      "mayores": 42,
+      "discapacidad": 31,
+      "mujer": 150,
+      "hombre": 107,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 15,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 42,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 45,
+        "POCO AFECTADOS|POCO AFECTADA": 16,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
-        "MUY AFECTADOS|MUY AFECTADA": 16,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|DESTRUIDA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 16,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MUY AFECTADOS|DESTRUIDA": 2,
         "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5099,7 +3778,7 @@
       "aplicadas": 14,
       "anuladas": 0,
       "terminadas": 14,
-      "digitacion": 1,
+      "digitacion": 0,
       "personas": 44,
       "nna": 11,
       "mayores": 5,
@@ -5109,13 +3788,13 @@
       "otro": 0,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
-        "MUY AFECTADOS|MUY AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "POCO AFECTADOS|POCO AFECTADA": 1,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 5,
+        "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5126,15 +3805,15 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 107,
+      "aplicadas": 109,
       "anuladas": 0,
-      "terminadas": 102,
+      "terminadas": 104,
       "digitacion": 5,
-      "personas": 305,
+      "personas": 311,
       "nna": 93,
-      "mayores": 61,
-      "discapacidad": 37,
-      "mujer": 187,
+      "mayores": 62,
+      "discapacidad": 40,
+      "mujer": 193,
       "hombre": 118,
       "otro": 0,
       "matrizAfectacion": {
@@ -5142,8 +3821,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 9,
         "POCO AFECTADOS|POCO AFECTADA": 19,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 17,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 6,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 18,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
         "NO AFECTADOS|NO AFECTADA": 8,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
@@ -5152,8 +3831,8 @@
         "NO AFECTADOS|POCO AFECTADA": 6,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5164,31 +3843,31 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 222,
+      "aplicadas": 226,
       "anuladas": 0,
-      "terminadas": 218,
+      "terminadas": 222,
       "digitacion": 4,
-      "personas": 639,
+      "personas": 650,
       "nna": 137,
-      "mayores": 151,
-      "discapacidad": 65,
-      "mujer": 352,
-      "hombre": 287,
+      "mayores": 152,
+      "discapacidad": 67,
+      "mujer": 361,
+      "hombre": 289,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 111,
-        "MUY AFECTADOS|MUY AFECTADA": 45,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 113,
+        "MUY AFECTADOS|MUY AFECTADA": 46,
         "NO AFECTADOS|NO AFECTADA": 22,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 14,
+        "POCO AFECTADOS|POCO AFECTADA": 15,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 4,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5223,8 +3902,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5259,8 +3938,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5271,29 +3950,29 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 28,
+      "aplicadas": 31,
       "anuladas": 0,
-      "terminadas": 27,
-      "digitacion": 0,
-      "personas": 81,
-      "nna": 18,
-      "mayores": 21,
+      "terminadas": 29,
+      "digitacion": 1,
+      "personas": 86,
+      "nna": 19,
+      "mayores": 22,
       "discapacidad": 12,
-      "mujer": 43,
-      "hombre": 38,
+      "mujer": 47,
+      "hombre": 39,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "NO AFECTADOS|MUY AFECTADA": 7,
-        "NO AFECTADOS|POCO AFECTADA": 4,
+        "NO AFECTADOS|POCO AFECTADA": 6,
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "NO AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5304,35 +3983,67 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 107,
+      "aplicadas": 119,
       "anuladas": 0,
-      "terminadas": 106,
-      "digitacion": 4,
-      "personas": 337,
+      "terminadas": 117,
+      "digitacion": 2,
+      "personas": 362,
       "nna": 122,
-      "mayores": 52,
-      "discapacidad": 42,
-      "mujer": 181,
-      "hombre": 155,
+      "mayores": 62,
+      "discapacidad": 47,
+      "mujer": 195,
+      "hombre": 166,
       "otro": 1,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 29,
-        "MUY AFECTADOS|MUY AFECTADA": 22,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 9,
+        "MUY AFECTADOS|MUY AFECTADA": 24,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 31,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 14,
+        "POCO AFECTADOS|POCO AFECTADA": 10,
+        "NO AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|POCO AFECTADA": 10,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 8,
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
-        "POCO AFECTADOS|POCO AFECTADA": 8,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "NO AFECTADOS|MUY AFECTADA": 1,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
+    },
+    {
+      "region": "Valparaíso",
+      "comuna": "San Felipe",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "16/07/2026",
+      "fechaOcurrencia": "16/07/2026",
+      "fechaCreacion": "19/07/2026",
+      "id": "149162",
+      "alfa": 0,
+      "aplicadas": 35,
+      "anuladas": 0,
+      "terminadas": 32,
+      "digitacion": 3,
+      "personas": 92,
+      "nna": 23,
+      "mayores": 27,
+      "discapacidad": 19,
+      "mujer": 56,
+      "hombre": 36,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MUY AFECTADOS|MUY AFECTADA": 16,
+        "MUY AFECTADOS|DESTRUIDA": 2,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 1
+      },
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5364,40 +4075,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
-    },
-    {
-      "region": "Valparaíso",
-      "comuna": "San Felipe",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "16/07/2026",
-      "fechaOcurrencia": "16/07/2026",
-      "fechaCreacion": "19/07/2026",
-      "id": "149162",
-      "alfa": 0,
-      "aplicadas": 30,
-      "anuladas": 0,
-      "terminadas": 28,
-      "digitacion": 2,
-      "personas": 85,
-      "nna": 23,
-      "mayores": 23,
-      "discapacidad": 18,
-      "mujer": 51,
-      "hombre": 34,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 14,
-        "MUY AFECTADOS|DESTRUIDA": 2,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 1
-      },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5426,8 +4105,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5457,8 +4136,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5485,8 +4164,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Valparaíso",
@@ -5497,10 +4176,10 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 11,
+      "aplicadas": 13,
       "anuladas": 0,
       "terminadas": 5,
-      "digitacion": 6,
+      "digitacion": 8,
       "personas": 17,
       "nna": 6,
       "mayores": 2,
@@ -5514,8 +4193,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:26",
+      "fechaLlenado": "28-07-2026 21:26"
     },
     {
       "region": "Biobío",
@@ -5690,33 +4369,35 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 288,
+      "aplicadas": 313,
       "anuladas": 0,
-      "terminadas": 277,
-      "digitacion": 11,
-      "personas": 709,
-      "nna": 157,
-      "mayores": 190,
-      "discapacidad": 55,
-      "mujer": 383,
-      "hombre": 326,
+      "terminadas": 306,
+      "digitacion": 7,
+      "personas": 781,
+      "nna": 164,
+      "mayores": 223,
+      "discapacidad": 61,
+      "mujer": 420,
+      "hombre": 361,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 69,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
-        "POCO AFECTADOS|POCO AFECTADA": 33,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 44,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 43,
-        "NO AFECTADOS|NO AFECTADA": 37,
+        "NO AFECTADOS|POCO AFECTADA": 71,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
+        "POCO AFECTADOS|POCO AFECTADA": 35,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 45,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 22,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 50,
+        "NO AFECTADOS|NO AFECTADA": 47,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 20,
         "POCO AFECTADOS|NO AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 12,
-        "MUY AFECTADOS|MUY AFECTADA": 6,
-        "NO AFECTADOS|MUY AFECTADA": 2
+        "MUY AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|MUY AFECTADA": 2,
+        "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5727,38 +4408,39 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 197,
+      "aplicadas": 259,
       "anuladas": 2,
-      "terminadas": 191,
-      "digitacion": 3,
-      "personas": 549,
-      "nna": 124,
-      "mayores": 129,
-      "discapacidad": 80,
-      "mujer": 299,
-      "hombre": 250,
+      "terminadas": 251,
+      "digitacion": 5,
+      "personas": 707,
+      "nna": 147,
+      "mayores": 177,
+      "discapacidad": 108,
+      "mujer": 385,
+      "hombre": 322,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 49,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 8,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 22,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 16,
-        "NO AFECTADOS|POCO AFECTADA": 22,
-        "POCO AFECTADOS|POCO AFECTADA": 32,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 65,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 11,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 30,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
+        "NO AFECTADOS|POCO AFECTADA": 23,
+        "POCO AFECTADOS|POCO AFECTADA": 55,
         "MUY AFECTADOS|DESTRUIDA": 3,
-        "MUY AFECTADOS|MUY AFECTADA": 11,
+        "MUY AFECTADOS|MUY AFECTADA": 16,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 10,
         "NO AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "POCO AFECTADOS|MUY AFECTADA": 5,
+        "POCO AFECTADOS|MUY AFECTADA": 6,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "NO AFECTADOS|NO AFECTADA": 2
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5769,38 +4451,38 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 584,
+      "aplicadas": 656,
       "anuladas": 0,
-      "terminadas": 533,
-      "digitacion": 21,
-      "personas": 1709,
-      "nna": 512,
-      "mayores": 353,
-      "discapacidad": 279,
-      "mujer": 974,
-      "hombre": 735,
+      "terminadas": 606,
+      "digitacion": 19,
+      "personas": 1913,
+      "nna": 543,
+      "mayores": 403,
+      "discapacidad": 306,
+      "mujer": 1080,
+      "hombre": 833,
       "otro": 1,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 28,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 127,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 43,
-        "MUY AFECTADOS|MUY AFECTADA": 87,
-        "POCO AFECTADOS|MUY AFECTADA": 11,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 67,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 72,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
+        "NO AFECTADOS|POCO AFECTADA": 33,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 139,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 53,
+        "MUY AFECTADOS|MUY AFECTADA": 96,
+        "POCO AFECTADOS|MUY AFECTADA": 14,
+        "POCO AFECTADOS|POCO AFECTADA": 91,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 78,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 39,
         "NO AFECTADOS|NO AFECTADA": 9,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 13,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 14,
         "NO AFECTADOS|MUY AFECTADA": 7,
-        "MUY AFECTADOS|DESTRUIDA": 14,
+        "MUY AFECTADOS|DESTRUIDA": 15,
         "POCO AFECTADOS|NO AFECTADA": 3,
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5811,33 +4493,33 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 135,
+      "aplicadas": 218,
       "anuladas": 0,
-      "terminadas": 126,
-      "digitacion": 9,
-      "personas": 339,
-      "nna": 90,
-      "mayores": 69,
-      "discapacidad": 37,
-      "mujer": 193,
-      "hombre": 146,
+      "terminadas": 206,
+      "digitacion": 12,
+      "personas": 559,
+      "nna": 146,
+      "mayores": 123,
+      "discapacidad": 51,
+      "mujer": 328,
+      "hombre": 231,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 15,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 13,
-        "MUY AFECTADOS|MUY AFECTADA": 14,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 10,
-        "NO AFECTADOS|POCO AFECTADA": 24,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 26,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 15,
-        "NO AFECTADOS|MUY AFECTADA": 4,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 23,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
+        "MUY AFECTADOS|MUY AFECTADA": 26,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
+        "NO AFECTADOS|POCO AFECTADA": 35,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 45,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 21,
+        "NO AFECTADOS|MUY AFECTADA": 6,
+        "POCO AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 1,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5848,39 +4530,39 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 516,
+      "aplicadas": 543,
       "anuladas": 0,
-      "terminadas": 490,
-      "digitacion": 23,
-      "personas": 1399,
-      "nna": 342,
-      "mayores": 312,
-      "discapacidad": 158,
-      "mujer": 765,
-      "hombre": 634,
+      "terminadas": 520,
+      "digitacion": 20,
+      "personas": 1492,
+      "nna": 362,
+      "mayores": 329,
+      "discapacidad": 166,
+      "mujer": 819,
+      "hombre": 673,
       "otro": 1,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 129,
-        "MUY AFECTADOS|MUY AFECTADA": 94,
-        "POCO AFECTADOS|POCO AFECTADA": 64,
-        "NO AFECTADOS|NO AFECTADA": 7,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 23,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 30,
-        "NO AFECTADOS|POCO AFECTADA": 40,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 8,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 139,
+        "MUY AFECTADOS|MUY AFECTADA": 98,
+        "POCO AFECTADOS|POCO AFECTADA": 69,
+        "NO AFECTADOS|NO AFECTADA": 9,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 24,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 32,
+        "NO AFECTADOS|POCO AFECTADA": 42,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 18,
         "NO AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 13,
         "MUY AFECTADOS|DESTRUIDA": 29,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 22,
-        "POCO AFECTADOS|NO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 23,
+        "POCO AFECTADOS|NO AFECTADA": 4,
         "MUY AFECTADOS|POCO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5891,36 +4573,37 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 399,
+      "aplicadas": 504,
       "anuladas": 3,
-      "terminadas": 380,
-      "digitacion": 16,
-      "personas": 1114,
-      "nna": 267,
-      "mayores": 268,
-      "discapacidad": 126,
-      "mujer": 660,
-      "hombre": 454,
+      "terminadas": 484,
+      "digitacion": 17,
+      "personas": 1435,
+      "nna": 344,
+      "mayores": 334,
+      "discapacidad": 160,
+      "mujer": 830,
+      "hombre": 605,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|MUY AFECTADA": 11,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 50,
-        "NO AFECTADOS|POCO AFECTADA": 72,
-        "MUY AFECTADOS|MUY AFECTADA": 29,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 8,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 11,
-        "POCO AFECTADOS|POCO AFECTADA": 55,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 61,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
-        "POCO AFECTADOS|MUY AFECTADA": 10,
-        "NO AFECTADOS|NO AFECTADA": 18,
+        "NO AFECTADOS|MUY AFECTADA": 13,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 57,
+        "POCO AFECTADOS|NO AFECTADA": 6,
+        "NO AFECTADOS|POCO AFECTADA": 99,
+        "MUY AFECTADOS|MUY AFECTADA": 37,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 9,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 19,
+        "POCO AFECTADOS|POCO AFECTADA": 72,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 74,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 48,
+        "POCO AFECTADOS|MUY AFECTADA": 13,
+        "NO AFECTADOS|NO AFECTADA": 21,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "POCO AFECTADOS|NO AFECTADA": 4,
-        "MUY AFECTADOS|DESTRUIDA": 3
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "MUY AFECTADOS|DESTRUIDA": 3,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5931,36 +4614,37 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 151,
+      "aplicadas": 180,
       "anuladas": 1,
-      "terminadas": 145,
-      "digitacion": 5,
-      "personas": 347,
-      "nna": 65,
-      "mayores": 98,
-      "discapacidad": 61,
-      "mujer": 189,
-      "hombre": 158,
+      "terminadas": 176,
+      "digitacion": 3,
+      "personas": 433,
+      "nna": 87,
+      "mayores": 117,
+      "discapacidad": 78,
+      "mujer": 238,
+      "hombre": 195,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 9,
         "MUY AFECTADOS|MUY AFECTADA": 11,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 33,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
-        "NO AFECTADOS|POCO AFECTADA": 21,
-        "POCO AFECTADOS|POCO AFECTADA": 33,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 43,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 15,
+        "NO AFECTADOS|POCO AFECTADA": 24,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
+        "POCO AFECTADOS|POCO AFECTADA": 36,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "POCO AFECTADOS|MUY AFECTADA": 2,
+        "NO AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
-        "NO AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "POCO AFECTADOS|NO AFECTADA": 4,
-        "MUY AFECTADOS|DESTRUIDA": 3,
-        "POCO AFECTADOS|MUY AFECTADA": 1
+        "MUY AFECTADOS|DESTRUIDA": 3
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -5971,34 +4655,34 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 118,
+      "aplicadas": 131,
       "anuladas": 0,
-      "terminadas": 116,
+      "terminadas": 129,
       "digitacion": 2,
-      "personas": 260,
-      "nna": 52,
-      "mayores": 93,
-      "discapacidad": 26,
-      "mujer": 140,
-      "hombre": 120,
+      "personas": 289,
+      "nna": 57,
+      "mayores": 101,
+      "discapacidad": 29,
+      "mujer": 155,
+      "hombre": 134,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 8,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 27,
-        "MUY AFECTADOS|MUY AFECTADA": 27,
+        "NO AFECTADOS|POCO AFECTADA": 9,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 32,
+        "MUY AFECTADOS|MUY AFECTADA": 30,
         "MUY AFECTADOS|DESTRUIDA": 4,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 10,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 11,
-        "POCO AFECTADOS|POCO AFECTADA": 11,
+        "POCO AFECTADOS|POCO AFECTADA": 12,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
+        "NO AFECTADOS|NO AFECTADA": 3,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 2
+        "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -6009,65 +4693,34 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 158,
+      "aplicadas": 182,
       "anuladas": 0,
-      "terminadas": 143,
+      "terminadas": 166,
       "digitacion": 0,
-      "personas": 389,
-      "nna": 86,
-      "mayores": 111,
-      "discapacidad": 67,
-      "mujer": 218,
-      "hombre": 171,
+      "personas": 455,
+      "nna": 97,
+      "mayores": 128,
+      "discapacidad": 80,
+      "mujer": 253,
+      "hombre": 202,
       "otro": 1,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 36,
-        "NO AFECTADOS|POCO AFECTADA": 18,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 32,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
-        "POCO AFECTADOS|POCO AFECTADA": 13,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 41,
+        "NO AFECTADOS|POCO AFECTADA": 22,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 8,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 39,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 19,
+        "POCO AFECTADOS|POCO AFECTADA": 14,
         "MUY AFECTADOS|MUY AFECTADA": 11,
-        "NO AFECTADOS|NO AFECTADA": 1,
+        "NO AFECTADOS|NO AFECTADA": 2,
         "NO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
-        "POCO AFECTADOS|MUY AFECTADA": 3
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
+        "POCO AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "La Higuera",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 30,
-      "anuladas": 0,
-      "terminadas": 28,
-      "digitacion": 2,
-      "personas": 81,
-      "nna": 24,
-      "mayores": 18,
-      "discapacidad": 7,
-      "mujer": 45,
-      "hombre": 36,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 6,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MUY AFECTADOS|DESTRUIDA": 2
-      },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -6078,36 +4731,72 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 162,
+      "aplicadas": 209,
       "anuladas": 0,
-      "terminadas": 152,
-      "digitacion": 6,
-      "personas": 402,
-      "nna": 92,
-      "mayores": 114,
-      "discapacidad": 66,
-      "mujer": 220,
-      "hombre": 182,
+      "terminadas": 198,
+      "digitacion": 7,
+      "personas": 531,
+      "nna": 113,
+      "mayores": 147,
+      "discapacidad": 91,
+      "mujer": 284,
+      "hombre": 247,
       "otro": 1,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 24,
-        "POCO AFECTADOS|POCO AFECTADA": 19,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 28,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 19,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 11,
-        "NO AFECTADOS|POCO AFECTADA": 23,
-        "MUY AFECTADOS|MUY AFECTADA": 6,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 31,
+        "POCO AFECTADOS|POCO AFECTADA": 23,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 33,
+        "POCO AFECTADOS|MUY AFECTADA": 5,
+        "NO AFECTADOS|POCO AFECTADA": 36,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 24,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 14,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
+        "NO AFECTADOS|MUY AFECTADA": 6,
+        "MUY AFECTADOS|MUY AFECTADA": 8,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "POCO AFECTADOS|NO AFECTADA": 2,
+        "POCO AFECTADOS|NO AFECTADA": 3,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "NO AFECTADOS|MUY AFECTADA": 4,
         "NO AFECTADOS|NO AFECTADA": 2,
-        "POCO AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "La Higuera",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 84,
+      "anuladas": 0,
+      "terminadas": 73,
+      "digitacion": 3,
+      "personas": 233,
+      "nna": 70,
+      "mayores": 43,
+      "discapacidad": 17,
+      "mujer": 125,
+      "hombre": 108,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 21,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 17,
+        "POCO AFECTADOS|POCO AFECTADA": 16,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MUY AFECTADOS|DESTRUIDA": 4,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
+        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3
+      },
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -6118,31 +4807,32 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 48,
+      "aplicadas": 67,
       "anuladas": 0,
-      "terminadas": 46,
-      "digitacion": 2,
-      "personas": 101,
-      "nna": 20,
-      "mayores": 41,
-      "discapacidad": 14,
-      "mujer": 62,
-      "hombre": 39,
+      "terminadas": 60,
+      "digitacion": 7,
+      "personas": 130,
+      "nna": 23,
+      "mayores": 51,
+      "discapacidad": 16,
+      "mujer": 79,
+      "hombre": 51,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 12,
-        "MUY AFECTADOS|MUY AFECTADA": 3,
-        "NO AFECTADOS|NO AFECTADA": 6,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "POCO AFECTADOS|POCO AFECTADA": 5,
+        "NO AFECTADOS|POCO AFECTADA": 13,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "MUY AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|NO AFECTADA": 8,
+        "POCO AFECTADOS|POCO AFECTADA": 6,
         "MUY AFECTADOS|DESTRUIDA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 12,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -6153,28 +4843,29 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 28,
+      "aplicadas": 51,
       "anuladas": 0,
-      "terminadas": 23,
-      "digitacion": 5,
-      "personas": 54,
-      "nna": 5,
-      "mayores": 21,
-      "discapacidad": 14,
-      "mujer": 29,
-      "hombre": 25,
+      "terminadas": 47,
+      "digitacion": 4,
+      "personas": 122,
+      "nna": 20,
+      "mayores": 39,
+      "discapacidad": 20,
+      "mujer": 64,
+      "hombre": 58,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 8,
-        "NO AFECTADOS|POCO AFECTADA": 8,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 1,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
+        "POCO AFECTADOS|POCO AFECTADA": 11,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
+        "NO AFECTADOS|POCO AFECTADA": 9,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
+        "MUY AFECTADOS|MUY AFECTADA": 4,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -6185,32 +4876,33 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 153,
+      "aplicadas": 161,
       "anuladas": 1,
-      "terminadas": 143,
-      "digitacion": 9,
-      "personas": 412,
+      "terminadas": 151,
+      "digitacion": 8,
+      "personas": 432,
       "nna": 115,
-      "mayores": 106,
+      "mayores": 116,
       "discapacidad": 48,
-      "mujer": 231,
-      "hombre": 181,
+      "mujer": 243,
+      "hombre": 189,
       "otro": 0,
       "matrizAfectacion": {
+        "NO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 46,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 10,
-        "POCO AFECTADOS|POCO AFECTADA": 43,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 13,
+        "POCO AFECTADOS|POCO AFECTADA": 46,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 17,
         "NO AFECTADOS|POCO AFECTADA": 15,
         "MUY AFECTADOS|MUY AFECTADA": 4,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 16,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "NO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Coquimbo",
@@ -6244,8 +4936,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "17:07",
-      "fechaLlenado": "28-07-2026 17:07"
+      "hora": "21:32",
+      "fechaLlenado": "28-07-2026 21:32"
     },
     {
       "region": "Biobío",
@@ -6513,36 +5205,36 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 236,
-      "anuladas": 0,
-      "terminadas": 227,
-      "digitacion": 9,
-      "personas": 729,
-      "nna": 221,
-      "mayores": 135,
-      "discapacidad": 99,
-      "mujer": 415,
-      "hombre": 314,
+      "aplicadas": 263,
+      "anuladas": 2,
+      "terminadas": 251,
+      "digitacion": 6,
+      "personas": 813,
+      "nna": 247,
+      "mayores": 152,
+      "discapacidad": 108,
+      "mujer": 461,
+      "hombre": 352,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 16,
-        "POCO AFECTADOS|POCO AFECTADA": 50,
-        "MUY AFECTADOS|MUY AFECTADA": 11,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 48,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 27,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 14,
-        "NO AFECTADOS|NO AFECTADA": 14,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 18,
+        "POCO AFECTADOS|POCO AFECTADA": 55,
+        "MUY AFECTADOS|MUY AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 56,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 29,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 15,
+        "NO AFECTADOS|NO AFECTADA": 17,
         "POCO AFECTADOS|NO AFECTADA": 5,
         "NO AFECTADOS|POCO AFECTADA": 29,
-        "POCO AFECTADOS|MUY AFECTADA": 2,
+        "POCO AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Atacama",
@@ -6553,35 +5245,35 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 336,
-      "anuladas": 0,
-      "terminadas": 304,
-      "digitacion": 4,
-      "personas": 829,
-      "nna": 210,
-      "mayores": 205,
-      "discapacidad": 139,
-      "mujer": 466,
-      "hombre": 363,
+      "aplicadas": 363,
+      "anuladas": 2,
+      "terminadas": 331,
+      "digitacion": 2,
+      "personas": 893,
+      "nna": 216,
+      "mayores": 220,
+      "discapacidad": 151,
+      "mujer": 503,
+      "hombre": 390,
       "otro": 1,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 28,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 35,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 59,
-        "MUY AFECTADOS|MUY AFECTADA": 48,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 33,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 62,
+        "MUY AFECTADOS|MUY AFECTADA": 51,
         "POCO AFECTADOS|POCO AFECTADA": 41,
-        "NO AFECTADOS|POCO AFECTADA": 24,
-        "NO AFECTADOS|MUY AFECTADA": 12,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 13,
+        "NO AFECTADOS|POCO AFECTADA": 27,
+        "NO AFECTADOS|MUY AFECTADA": 15,
+        "POCO AFECTADOS|MUY AFECTADA": 12,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 16,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 14,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 7,
-        "POCO AFECTADOS|MUY AFECTADA": 8,
         "MUY AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|NO AFECTADA": 12,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Atacama",
@@ -6592,36 +5284,36 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 360,
+      "aplicadas": 417,
       "anuladas": 2,
-      "terminadas": 349,
-      "digitacion": 5,
-      "personas": 943,
-      "nna": 222,
-      "mayores": 254,
-      "discapacidad": 177,
-      "mujer": 530,
-      "hombre": 413,
+      "terminadas": 402,
+      "digitacion": 7,
+      "personas": 1080,
+      "nna": 245,
+      "mayores": 301,
+      "discapacidad": 211,
+      "mujer": 617,
+      "hombre": 463,
       "otro": 1,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MUY AFECTADA": 12,
-        "MUY AFECTADOS|MUY AFECTADA": 58,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 12,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 109,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
+        "POCO AFECTADOS|MUY AFECTADA": 13,
+        "MUY AFECTADOS|MUY AFECTADA": 73,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 14,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 126,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 45,
         "NO AFECTADOS|MUY AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 30,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 38,
+        "POCO AFECTADOS|POCO AFECTADA": 34,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 14,
+        "NO AFECTADOS|POCO AFECTADA": 27,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 39,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "NO AFECTADOS|POCO AFECTADA": 24,
         "POCO AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|NO AFECTADA": 8,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Atacama",
@@ -6632,37 +5324,37 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 613,
+      "aplicadas": 671,
       "anuladas": 4,
-      "terminadas": 588,
-      "digitacion": 9,
-      "personas": 1596,
-      "nna": 420,
-      "mayores": 367,
-      "discapacidad": 218,
-      "mujer": 872,
-      "hombre": 724,
+      "terminadas": 639,
+      "digitacion": 7,
+      "personas": 1728,
+      "nna": 448,
+      "mayores": 392,
+      "discapacidad": 233,
+      "mujer": 940,
+      "hombre": 788,
       "otro": 1,
       "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 116,
-        "NO AFECTADOS|NO AFECTADA": 30,
-        "POCO AFECTADOS|POCO AFECTADA": 71,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 131,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 32,
-        "POCO AFECTADOS|MUY AFECTADA": 13,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 38,
-        "NO AFECTADOS|POCO AFECTADA": 67,
-        "NO AFECTADOS|MUY AFECTADA": 16,
+        "MUY AFECTADOS|MUY AFECTADA": 122,
+        "NO AFECTADOS|NO AFECTADA": 31,
+        "POCO AFECTADOS|POCO AFECTADA": 76,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 147,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 39,
+        "POCO AFECTADOS|MUY AFECTADA": 14,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 43,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 39,
+        "NO AFECTADOS|POCO AFECTADA": 73,
+        "NO AFECTADOS|MUY AFECTADA": 17,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 14,
         "POCO AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 13,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 15,
         "MUY AFECTADOS|DESTRUIDA": 5
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Atacama",
@@ -6673,26 +5365,26 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 108,
-      "anuladas": 1,
-      "terminadas": 105,
-      "digitacion": 3,
-      "personas": 276,
-      "nna": 55,
-      "mayores": 89,
-      "discapacidad": 51,
-      "mujer": 135,
-      "hombre": 141,
+      "aplicadas": 132,
+      "anuladas": 2,
+      "terminadas": 124,
+      "digitacion": 7,
+      "personas": 328,
+      "nna": 68,
+      "mayores": 97,
+      "discapacidad": 52,
+      "mujer": 163,
+      "hombre": 165,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 32,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 17,
-        "NO AFECTADOS|POCO AFECTADA": 4,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 38,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 19,
+        "NO AFECTADOS|POCO AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
         "MUY AFECTADOS|DESTRUIDA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 22,
+        "MUY AFECTADOS|MUY AFECTADA": 13,
+        "POCO AFECTADOS|POCO AFECTADA": 26,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
@@ -6701,8 +5393,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Atacama",
@@ -6713,22 +5405,22 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 218,
+      "aplicadas": 222,
       "anuladas": 0,
-      "terminadas": 208,
-      "digitacion": 10,
-      "personas": 506,
+      "terminadas": 212,
+      "digitacion": 9,
+      "personas": 514,
       "nna": 158,
-      "mayores": 93,
-      "discapacidad": 49,
-      "mujer": 282,
-      "hombre": 224,
+      "mayores": 98,
+      "discapacidad": 50,
+      "mujer": 287,
+      "hombre": 227,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|POCO AFECTADA": 33,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 16,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 57,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 20,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 59,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
         "POCO AFECTADOS|POCO AFECTADA": 34,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 14,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
@@ -6736,14 +5428,14 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 4,
         "NO AFECTADOS|NO AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
+        "POCO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|MUY AFECTADA": 1,
-        "POCO AFECTADOS|NO AFECTADA": 4,
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Atacama",
@@ -6754,37 +5446,37 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 377,
+      "aplicadas": 404,
       "anuladas": 2,
-      "terminadas": 363,
-      "digitacion": 5,
-      "personas": 995,
-      "nna": 294,
-      "mayores": 186,
-      "discapacidad": 105,
-      "mujer": 535,
-      "hombre": 460,
+      "terminadas": 387,
+      "digitacion": 6,
+      "personas": 1042,
+      "nna": 297,
+      "mayores": 202,
+      "discapacidad": 109,
+      "mujer": 560,
+      "hombre": 482,
       "otro": 1,
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 12,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 93,
-        "MUY AFECTADOS|MUY AFECTADA": 57,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 33,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 28,
-        "NO AFECTADOS|POCO AFECTADA": 35,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 98,
+        "MUY AFECTADOS|MUY AFECTADA": 61,
+        "POCO AFECTADOS|POCO AFECTADA": 42,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 36,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 29,
+        "NO AFECTADOS|POCO AFECTADA": 37,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 8,
         "NO AFECTADOS|NO AFECTADA": 7,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 39,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 29,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 31,
+        "NO AFECTADOS|MUY AFECTADA": 9,
         "POCO AFECTADOS|MUY AFECTADA": 9,
-        "NO AFECTADOS|MUY AFECTADA": 7,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|NO AFECTADA": 1,
-        "MUY AFECTADOS|POCO AFECTADA": 1
+        "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "17:08",
-      "fechaLlenado": "28-07-2026 17:08"
+      "hora": "21:34",
+      "fechaLlenado": "28-07-2026 21:34"
     },
     {
       "region": "Ñuble",
