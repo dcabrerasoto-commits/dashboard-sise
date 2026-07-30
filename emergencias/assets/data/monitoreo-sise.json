@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-30T17:01:20",
+  "actualizado": "2026-07-30T17:12:24",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -1272,6 +1272,56 @@
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
+    },
+    {
+      "tipo": "matriz_afectacion_ajustada",
+      "id": "148442; 150601",
+      "region": "La Araucanía",
+      "comuna": "Galvarino",
+      "campo": "matrizAfectacion",
+      "valorAnterior": 208,
+      "valorActual": 26,
+      "detalle": "La matriz de afectacion se ajusto al total de FIBE terminadas."
+    },
+    {
+      "tipo": "matriz_afectacion_ajustada",
+      "id": "148913; 149350",
+      "region": "La Araucanía",
+      "comuna": "Los Sauces",
+      "campo": "matrizAfectacion",
+      "valorAnterior": 16,
+      "valorActual": 2,
+      "detalle": "La matriz de afectacion se ajusto al total de FIBE terminadas."
+    },
+    {
+      "tipo": "matriz_afectacion_ajustada",
+      "id": "149469; 150662",
+      "region": "La Araucanía",
+      "comuna": "Freire",
+      "campo": "matrizAfectacion",
+      "valorAnterior": 16,
+      "valorActual": 2,
+      "detalle": "La matriz de afectacion se ajusto al total de FIBE terminadas."
+    },
+    {
+      "tipo": "matriz_afectacion_ajustada",
+      "id": "149621; 150642",
+      "region": "La Araucanía",
+      "comuna": "Loncoche",
+      "campo": "matrizAfectacion",
+      "valorAnterior": 224,
+      "valorActual": 28,
+      "detalle": "La matriz de afectacion se ajusto al total de FIBE terminadas."
+    },
+    {
+      "tipo": "matriz_afectacion_ajustada",
+      "id": "149941; 150421",
+      "region": "La Araucanía",
+      "comuna": "Villarrica",
+      "campo": "matrizAfectacion",
+      "valorAnterior": 80,
+      "valorActual": 10,
+      "detalle": "La matriz de afectacion se ajusto al total de FIBE terminadas."
     }
   ],
   "filas": [
@@ -3623,14 +3673,14 @@
       "hombre": 36,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MUY AFECTADOS|MUY AFECTADA": 52,
-        "POCO AFECTADOS|MUY AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 12,
-        "NO AFECTADOS|NO AFECTADA": 8,
-        "NO AFECTADOS|POCO AFECTADA": 8,
-        "POCO AFECTADOS|POCO AFECTADA": 8,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|MUY AFECTADA": 13,
+        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "NO AFECTADOS|POCO AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
       "hora": "10:19",
       "fechaLlenado": "27-07-2026 10:19",
@@ -4576,8 +4626,8 @@
       "hombre": 6,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|NO AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 4
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
       "hora": "10:13",
       "fechaLlenado": "27-07-2026 10:13",
@@ -5835,8 +5885,8 @@
       "hombre": 5,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4
+        "POCO AFECTADOS|POCO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
       "hora": "10:19",
       "fechaLlenado": "27-07-2026 10:19",
@@ -6199,13 +6249,13 @@
       "hombre": 37,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 20,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 40,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 16,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 12,
-        "MUY AFECTADOS|MUY AFECTADA": 12,
-        "MUY AFECTADOS|POCO AFECTADA": 8
+        "POCO AFECTADOS|POCO AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|POCO AFECTADA": 2
       },
       "hora": "10:19",
       "fechaLlenado": "27-07-2026 10:19",
@@ -6583,12 +6633,12 @@
       "hombre": 16,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 12,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "POCO AFECTADOS|MUY AFECTADA": 8,
-        "MUY AFECTADOS|MUY AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4
+        "POCO AFECTADOS|POCO AFECTADA": 3,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|MUY AFECTADA": 2,
+        "MUY AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
       "hora": "10:18",
       "fechaLlenado": "27-07-2026 10:18",
