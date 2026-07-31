@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-30T19:55:07",
+  "actualizado": "2026-07-30T20:16:46",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -1124,10 +1124,10 @@
   "pendientesDescarga": [],
   "congeladosDescarga": [],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260730_1938_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260730_2006_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260730_1948_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260730_1950_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD_CONGELADA\\regiones_congeladas_vigente.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260730_2003_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\regiones_congeladas_vigente.xlsx"
   ],
   "advertencias": [
     {
@@ -1310,8 +1310,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1352,8 +1352,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1394,8 +1394,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 4
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1406,27 +1406,27 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 761,
+      "aplicadas": 767,
       "anuladas": 21,
-      "terminadas": 726,
+      "terminadas": 733,
       "terminadasApp": 0,
-      "terminadasPapel": 726,
-      "digitacion": 5,
-      "personas": 2257,
-      "nna": 681,
-      "mayores": 415,
-      "discapacidad": 334,
-      "mujer": 1265,
-      "hombre": 992,
+      "terminadasPapel": 733,
+      "digitacion": 4,
+      "personas": 2279,
+      "nna": 690,
+      "mayores": 420,
+      "discapacidad": 336,
+      "mujer": 1276,
+      "hombre": 1003,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 135,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 138,
         "MUY AFECTADOS|MUY AFECTADA": 76,
-        "POCO AFECTADOS|POCO AFECTADA": 127,
+        "POCO AFECTADOS|POCO AFECTADA": 129,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 61,
         "POCO AFECTADOS|MUY AFECTADA": 23,
-        "NO AFECTADOS|POCO AFECTADA": 81,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 94,
+        "NO AFECTADOS|POCO AFECTADA": 82,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 95,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "MUY AFECTADOS|DESTRUIDA": 17,
         "NO AFECTADOS|NO AFECTADA": 13,
@@ -1437,8 +1437,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1476,8 +1476,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1514,8 +1514,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1558,8 +1558,8 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1600,8 +1600,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1640,8 +1640,8 @@
         "MUY AFECTADOS|DESTRUIDA": 2,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1677,8 +1677,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1715,8 +1715,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1755,8 +1755,8 @@
         "NO AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1789,8 +1789,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1827,8 +1827,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1867,8 +1867,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1906,8 +1906,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1946,8 +1946,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -1984,8 +1984,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2021,8 +2021,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2061,8 +2061,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2096,8 +2096,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2132,8 +2132,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2173,8 +2173,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2211,8 +2211,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2249,8 +2249,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2281,8 +2281,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2321,8 +2321,8 @@
         "NO AFECTADOS|POCO AFECTADA": 11,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2360,8 +2360,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2393,8 +2393,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2428,8 +2428,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2471,8 +2471,8 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2505,8 +2505,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2541,8 +2541,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2574,8 +2574,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2607,8 +2607,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Valparaíso",
@@ -2640,8 +2640,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "19:38",
-      "fechaLlenado": "30-07-2026 19:38"
+      "hora": "20:06",
+      "fechaLlenado": "30-07-2026 20:06"
     },
     {
       "region": "Coquimbo",
@@ -3307,8 +3307,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 10,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Atacama",
@@ -3349,8 +3349,8 @@
         "MUY AFECTADOS|DESTRUIDA": 3,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Atacama",
@@ -3391,8 +3391,8 @@
         "NO AFECTADOS|NO AFECTADA": 15,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Atacama",
@@ -3403,17 +3403,17 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 807,
+      "aplicadas": 808,
       "anuladas": 20,
-      "terminadas": 771,
-      "terminadasApp": 168,
+      "terminadas": 772,
+      "terminadasApp": 169,
       "terminadasPapel": 603,
       "digitacion": 7,
-      "personas": 2064,
+      "personas": 2065,
       "nna": 523,
-      "mayores": 501,
+      "mayores": 502,
       "discapacidad": 304,
-      "mujer": 1125,
+      "mujer": 1126,
       "hombre": 939,
       "otro": 1,
       "matrizAfectacion": {
@@ -3426,7 +3426,7 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 48,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 52,
         "NO AFECTADOS|POCO AFECTADA": 86,
-        "NO AFECTADOS|MUY AFECTADA": 23,
+        "NO AFECTADOS|MUY AFECTADA": 24,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 19,
         "POCO AFECTADOS|NO AFECTADA": 2,
@@ -3434,8 +3434,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 18,
         "MUY AFECTADOS|DESTRUIDA": 7
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Atacama",
@@ -3479,8 +3479,8 @@
         "NO AFECTADOS|NO AFECTADA": 2,
         "NO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Atacama",
@@ -3522,8 +3522,8 @@
         "NO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 7
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Atacama",
@@ -3565,8 +3565,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:51",
-      "fechaLlenado": "30-07-2026 19:51"
+      "hora": "20:03",
+      "fechaLlenado": "30-07-2026 20:03"
     },
     {
       "region": "Biobío",
