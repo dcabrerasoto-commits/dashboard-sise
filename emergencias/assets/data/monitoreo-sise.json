@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-30T23:53:46",
+  "actualizado": "2026-07-31T05:52:40",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -1110,23 +1110,23 @@
   "descargas": [
     {
       "eventoId": "149162",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260730_2338_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260731_0538_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149342",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260730_2348_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260731_0547_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149401",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260730_2350_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260731_0549_Reporte_BD_FIBE.xlsx"
     }
   ],
   "pendientesDescarga": [],
   "congeladosDescarga": [],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260730_2338_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260730_2348_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260730_2350_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260731_0538_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260731_0547_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260731_0549_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\regiones_congeladas_vigente.xlsx"
   ],
   "advertencias": [
@@ -1206,7 +1206,7 @@
       "tipo": "baja_detectada",
       "id": "149342",
       "region": "Coquimbo",
-      "comuna": "Coquimbo",
+      "comuna": "La Serena",
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
@@ -1215,7 +1215,7 @@
       "tipo": "baja_detectada",
       "id": "149342",
       "region": "Coquimbo",
-      "comuna": "La Serena",
+      "comuna": "Coquimbo",
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
@@ -1315,8 +1315,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1352,8 +1352,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1395,8 +1395,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1437,8 +1437,8 @@
         "NO AFECTADOS|NO AFECTADA": 7,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 4
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1475,8 +1475,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1509,8 +1509,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1546,8 +1546,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1584,8 +1584,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1628,8 +1628,8 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1670,8 +1670,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1710,8 +1710,8 @@
         "NO AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1748,8 +1748,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1788,8 +1788,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1827,8 +1827,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1867,8 +1867,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1905,8 +1905,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1945,8 +1945,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -1984,8 +1984,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2022,8 +2022,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2061,8 +2061,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2098,8 +2098,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2131,8 +2131,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2166,8 +2166,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2206,8 +2206,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2238,8 +2238,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 12,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2279,8 +2279,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2315,8 +2315,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2353,8 +2353,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2393,8 +2393,8 @@
         "NO AFECTADOS|POCO AFECTADA": 11,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2428,8 +2428,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2462,8 +2462,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2495,8 +2495,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2531,8 +2531,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2574,8 +2574,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2607,8 +2607,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Valparaíso",
@@ -2640,179 +2640,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "23:38",
-      "fechaLlenado": "30-07-2026 23:38"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "Combarbalá",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 437,
-      "anuladas": 0,
-      "terminadas": 419,
-      "terminadasApp": 8,
-      "terminadasPapel": 411,
-      "digitacion": 18,
-      "personas": 1005,
-      "nna": 202,
-      "mayores": 314,
-      "discapacidad": 91,
-      "mujer": 548,
-      "hombre": 457,
-      "otro": 0,
-      "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 93,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
-        "POCO AFECTADOS|POCO AFECTADA": 67,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 52,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 37,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 60,
-        "NO AFECTADOS|NO AFECTADA": 62,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
-        "POCO AFECTADOS|NO AFECTADA": 7,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 14,
-        "MUY AFECTADOS|MUY AFECTADA": 9,
-        "NO AFECTADOS|MUY AFECTADA": 2,
-        "POCO AFECTADOS|MUY AFECTADA": 3,
-        "MUY AFECTADOS|DESTRUIDA": 1
-      },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "Salamanca",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 519,
-      "anuladas": 3,
-      "terminadas": 509,
-      "terminadasApp": 230,
-      "terminadasPapel": 279,
-      "digitacion": 6,
-      "personas": 1389,
-      "nna": 278,
-      "mayores": 367,
-      "discapacidad": 212,
-      "mujer": 759,
-      "hombre": 630,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 122,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 22,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 71,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
-        "NO AFECTADOS|POCO AFECTADA": 52,
-        "POCO AFECTADOS|POCO AFECTADA": 122,
-        "MUY AFECTADOS|DESTRUIDA": 6,
-        "MUY AFECTADOS|MUY AFECTADA": 35,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 12,
-        "NO AFECTADOS|MUY AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|NO AFECTADA": 2,
-        "MUY AFECTADOS|NO AFECTADA": 2,
-        "MUY AFECTADOS|POCO AFECTADA": 1,
-        "POCO AFECTADOS|MUY AFECTADA": 10,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "NO AFECTADOS|NO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
-      },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "Coquimbo",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 867,
-      "anuladas": 28,
-      "terminadas": 815,
-      "terminadasApp": 201,
-      "terminadasPapel": 614,
-      "digitacion": 19,
-      "personas": 2595,
-      "nna": 747,
-      "mayores": 504,
-      "discapacidad": 399,
-      "mujer": 1443,
-      "hombre": 1152,
-      "otro": 1,
-      "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 36,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 186,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 77,
-        "MUY AFECTADOS|MUY AFECTADA": 151,
-        "POCO AFECTADOS|MUY AFECTADA": 17,
-        "POCO AFECTADOS|POCO AFECTADA": 119,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 96,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 15,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 43,
-        "NO AFECTADOS|NO AFECTADA": 12,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 20,
-        "NO AFECTADOS|MUY AFECTADA": 7,
-        "MUY AFECTADOS|DESTRUIDA": 24,
-        "POCO AFECTADOS|NO AFECTADA": 6,
-        "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 4,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
-      },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "Monte Patria",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 581,
-      "anuladas": 3,
-      "terminadas": 563,
-      "terminadasApp": 39,
-      "terminadasPapel": 524,
-      "digitacion": 15,
-      "personas": 1510,
-      "nna": 380,
-      "mayores": 366,
-      "discapacidad": 169,
-      "mujer": 867,
-      "hombre": 643,
-      "otro": 0,
-      "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 68,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 57,
-        "MUY AFECTADOS|MUY AFECTADA": 86,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 31,
-        "NO AFECTADOS|POCO AFECTADA": 64,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 138,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 67,
-        "NO AFECTADOS|MUY AFECTADA": 14,
-        "POCO AFECTADOS|MUY AFECTADA": 15,
-        "MUY AFECTADOS|DESTRUIDA": 9,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
-        "NO AFECTADOS|NO AFECTADA": 2
-      },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:38",
+      "fechaLlenado": "31-07-2026 05:38"
     },
     {
       "region": "Coquimbo",
@@ -2837,114 +2666,27 @@
       "hombre": 1139,
       "otro": 1,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 213,
-        "MUY AFECTADOS|MUY AFECTADA": 159,
-        "POCO AFECTADOS|POCO AFECTADA": 104,
-        "NO AFECTADOS|NO AFECTADA": 14,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 53,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 59,
         "NO AFECTADOS|POCO AFECTADA": 79,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 14,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 24,
         "NO AFECTADOS|MUY AFECTADA": 8,
+        "POCO AFECTADOS|POCO AFECTADA": 104,
+        "MUY AFECTADOS|MUY AFECTADA": 159,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 53,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 213,
         "POCO AFECTADOS|MUY AFECTADA": 24,
-        "MUY AFECTADOS|DESTRUIDA": 43,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 50,
         "POCO AFECTADOS|NO AFECTADA": 8,
-        "MUY AFECTADOS|POCO AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 59,
+        "MUY AFECTADOS|DESTRUIDA": 43,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 14,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
-        "MUY AFECTADOS|NO AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 24,
+        "NO AFECTADOS|NO AFECTADA": 14,
+        "MUY AFECTADOS|POCO AFECTADA": 3,
+        "MUY AFECTADOS|NO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "Ovalle",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 959,
-      "anuladas": 3,
-      "terminadas": 930,
-      "terminadasApp": 1,
-      "terminadasPapel": 929,
-      "digitacion": 26,
-      "personas": 2809,
-      "nna": 700,
-      "mayores": 635,
-      "discapacidad": 307,
-      "mujer": 1598,
-      "hombre": 1211,
-      "otro": 0,
-      "matrizAfectacion": {
-        "NO AFECTADOS|MUY AFECTADA": 18,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 106,
-        "POCO AFECTADOS|NO AFECTADA": 13,
-        "NO AFECTADOS|POCO AFECTADA": 189,
-        "MUY AFECTADOS|MUY AFECTADA": 61,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 20,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 34,
-        "POCO AFECTADOS|POCO AFECTADA": 166,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 157,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 86,
-        "POCO AFECTADOS|MUY AFECTADA": 21,
-        "NO AFECTADOS|NO AFECTADA": 33,
-        "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 11,
-        "MUY AFECTADOS|DESTRUIDA": 9,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 3,
-        "NO AFECTADOS|DESTRUIDA": 2
-      },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
-    },
-    {
-      "region": "Coquimbo",
-      "comuna": "Punitaqui",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "15/07/2026",
-      "fechaOcurrencia": "15/07/2026",
-      "fechaCreacion": "20/07/2026",
-      "id": "149342",
-      "alfa": 0,
-      "aplicadas": 386,
-      "anuladas": 1,
-      "terminadas": 376,
-      "terminadasApp": 0,
-      "terminadasPapel": 376,
-      "digitacion": 9,
-      "personas": 933,
-      "nna": 202,
-      "mayores": 256,
-      "discapacidad": 141,
-      "mujer": 500,
-      "hombre": 433,
-      "otro": 0,
-      "matrizAfectacion": {
-        "NO AFECTADOS|NO AFECTADA": 26,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 13,
-        "MUY AFECTADOS|MUY AFECTADA": 15,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 76,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 29,
-        "NO AFECTADOS|POCO AFECTADA": 63,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 28,
-        "POCO AFECTADOS|POCO AFECTADA": 92,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "POCO AFECTADOS|MUY AFECTADA": 3,
-        "NO AFECTADOS|MUY AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
-        "POCO AFECTADOS|NO AFECTADA": 7,
-        "MUY AFECTADOS|DESTRUIDA": 4
-      },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
@@ -2969,22 +2711,240 @@
       "hombre": 194,
       "otro": 0,
       "matrizAfectacion": {
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
         "NO AFECTADOS|POCO AFECTADA": 13,
+        "NO AFECTADOS|NO AFECTADA": 7,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
+        "POCO AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|DESTRUIDA": 7,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 59,
         "MUY AFECTADOS|MUY AFECTADA": 36,
-        "MUY AFECTADOS|DESTRUIDA": 7,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 17,
         "POCO AFECTADOS|POCO AFECTADA": 17,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
-        "NO AFECTADOS|MUY AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
-        "NO AFECTADOS|NO AFECTADA": 7,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|MUY AFECTADA": 3
+        "NO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "Coquimbo",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 867,
+      "anuladas": 28,
+      "terminadas": 815,
+      "terminadasApp": 201,
+      "terminadasPapel": 614,
+      "digitacion": 19,
+      "personas": 2595,
+      "nna": 747,
+      "mayores": 504,
+      "discapacidad": 399,
+      "mujer": 1443,
+      "hombre": 1152,
+      "otro": 1,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 186,
+        "POCO AFECTADOS|POCO AFECTADA": 119,
+        "MUY AFECTADOS|MUY AFECTADA": 151,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 77,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 96,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 43,
+        "NO AFECTADOS|POCO AFECTADA": 36,
+        "NO AFECTADOS|MUY AFECTADA": 7,
+        "MUY AFECTADOS|DESTRUIDA": 24,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 20,
+        "POCO AFECTADOS|MUY AFECTADA": 17,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 15,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 4,
+        "NO AFECTADOS|NO AFECTADA": 12,
+        "POCO AFECTADOS|NO AFECTADA": 6,
+        "MUY AFECTADOS|POCO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
+      },
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "Combarbalá",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 437,
+      "anuladas": 0,
+      "terminadas": 419,
+      "terminadasApp": 8,
+      "terminadasPapel": 411,
+      "digitacion": 18,
+      "personas": 1005,
+      "nna": 202,
+      "mayores": 314,
+      "discapacidad": 91,
+      "mujer": 548,
+      "hombre": 457,
+      "otro": 0,
+      "matrizAfectacion": {
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 52,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 60,
+        "NO AFECTADOS|NO AFECTADA": 62,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
+        "NO AFECTADOS|POCO AFECTADA": 93,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 37,
+        "NO AFECTADOS|MUY AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 67,
+        "MUY AFECTADOS|MUY AFECTADA": 9,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 14,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
+        "POCO AFECTADOS|NO AFECTADA": 7,
+        "POCO AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|DESTRUIDA": 1,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3
+      },
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "Ovalle",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 959,
+      "anuladas": 3,
+      "terminadas": 930,
+      "terminadasApp": 1,
+      "terminadasPapel": 929,
+      "digitacion": 26,
+      "personas": 2809,
+      "nna": 700,
+      "mayores": 635,
+      "discapacidad": 307,
+      "mujer": 1598,
+      "hombre": 1211,
+      "otro": 0,
+      "matrizAfectacion": {
+        "NO AFECTADOS|POCO AFECTADA": 189,
+        "POCO AFECTADOS|POCO AFECTADA": 166,
+        "MUY AFECTADOS|MUY AFECTADA": 61,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 157,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 106,
+        "NO AFECTADOS|NO AFECTADA": 33,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 86,
+        "POCO AFECTADOS|NO AFECTADA": 13,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 34,
+        "NO AFECTADOS|MUY AFECTADA": 18,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 20,
+        "POCO AFECTADOS|MUY AFECTADA": 21,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "MUY AFECTADOS|DESTRUIDA": 9,
+        "NO AFECTADOS|DESTRUIDA": 2,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 3,
+        "MUY AFECTADOS|POCO AFECTADA": 1
+      },
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "Salamanca",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 519,
+      "anuladas": 3,
+      "terminadas": 509,
+      "terminadasApp": 230,
+      "terminadasPapel": 279,
+      "digitacion": 6,
+      "personas": 1389,
+      "nna": 278,
+      "mayores": 367,
+      "discapacidad": 212,
+      "mujer": 759,
+      "hombre": 630,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 71,
+        "POCO AFECTADOS|NO AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 122,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 122,
+        "NO AFECTADOS|POCO AFECTADA": 52,
+        "MUY AFECTADOS|MUY AFECTADA": 35,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "POCO AFECTADOS|MUY AFECTADA": 10,
+        "NO AFECTADOS|MUY AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 22,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
+        "MUY AFECTADOS|DESTRUIDA": 6,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "MUY AFECTADOS|POCO AFECTADA": 1,
+        "MUY AFECTADOS|NO AFECTADA": 2
+      },
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "Punitaqui",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 386,
+      "anuladas": 1,
+      "terminadas": 376,
+      "terminadasApp": 0,
+      "terminadasPapel": 376,
+      "digitacion": 9,
+      "personas": 933,
+      "nna": 202,
+      "mayores": 256,
+      "discapacidad": 141,
+      "mujer": 500,
+      "hombre": 433,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 76,
+        "NO AFECTADOS|POCO AFECTADA": 63,
+        "POCO AFECTADOS|NO AFECTADA": 7,
+        "POCO AFECTADOS|POCO AFECTADA": 92,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 13,
+        "MUY AFECTADOS|MUY AFECTADA": 15,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 29,
+        "MUY AFECTADOS|DESTRUIDA": 4,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
+        "NO AFECTADOS|NO AFECTADA": 26,
+        "POCO AFECTADOS|MUY AFECTADA": 3,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 28,
+        "NO AFECTADOS|MUY AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 8,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2
+      },
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
@@ -3009,22 +2969,22 @@
       "hombre": 381,
       "otro": 1,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 72,
-        "NO AFECTADOS|POCO AFECTADA": 36,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 18,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 89,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 38,
-        "POCO AFECTADOS|POCO AFECTADA": 32,
+        "NO AFECTADOS|POCO AFECTADA": 36,
         "MUY AFECTADOS|MUY AFECTADA": 25,
-        "NO AFECTADOS|NO AFECTADA": 3,
-        "NO AFECTADOS|MUY AFECTADA": 4,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 72,
+        "POCO AFECTADOS|POCO AFECTADA": 32,
+        "MUY AFECTADOS|DESTRUIDA": 3,
         "POCO AFECTADOS|MUY AFECTADA": 6,
-        "MUY AFECTADOS|DESTRUIDA": 3
+        "NO AFECTADOS|MUY AFECTADA": 4,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
+        "NO AFECTADOS|NO AFECTADA": 3,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
@@ -3051,103 +3011,103 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 63,
         "POCO AFECTADOS|POCO AFECTADA": 44,
+        "MUY AFECTADOS|MUY AFECTADA": 29,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 54,
-        "NO AFECTADOS|POCO AFECTADA": 57,
         "POCO AFECTADOS|MUY AFECTADA": 9,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 49,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 31,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 12,
+        "NO AFECTADOS|POCO AFECTADA": 57,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 49,
         "NO AFECTADOS|MUY AFECTADA": 9,
-        "MUY AFECTADOS|MUY AFECTADA": 29,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "POCO AFECTADOS|NO AFECTADA": 3,
-        "MUY AFECTADOS|POCO AFECTADA": 2,
+        "MUY AFECTADOS|DESTRUIDA": 5,
         "NO AFECTADOS|NO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
-        "MUY AFECTADOS|DESTRUIDA": 5
+        "POCO AFECTADOS|NO AFECTADA": 3,
+        "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
-      "comuna": "La Higuera",
+      "comuna": "Los Vilos",
       "evento": "Sistema Frontal",
       "fechaEvento": "15/07/2026",
       "fechaOcurrencia": "15/07/2026",
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 202,
-      "anuladas": 8,
-      "terminadas": 189,
-      "terminadasApp": 73,
-      "terminadasPapel": 116,
-      "digitacion": 5,
-      "personas": 533,
-      "nna": 147,
-      "mayores": 131,
-      "discapacidad": 56,
-      "mujer": 270,
+      "aplicadas": 227,
+      "anuladas": 2,
+      "terminadas": 214,
+      "terminadasApp": 0,
+      "terminadasPapel": 214,
+      "digitacion": 10,
+      "personas": 605,
+      "nna": 156,
+      "mayores": 158,
+      "discapacidad": 66,
+      "mujer": 342,
       "hombre": 263,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 51,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
-        "NO AFECTADOS|NO AFECTADA": 3,
-        "MUY AFECTADOS|MUY AFECTADA": 34,
-        "POCO AFECTADOS|POCO AFECTADA": 36,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "MUY AFECTADOS|DESTRUIDA": 5,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 56,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 23,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 55,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 28,
+        "NO AFECTADOS|POCO AFECTADA": 25,
+        "MUY AFECTADOS|MUY AFECTADA": 6,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
+        "NO AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 10,
-        "NO AFECTADOS|POCO AFECTADA": 11,
-        "NO AFECTADOS|MUY AFECTADA": 1
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
-      "comuna": "Río Hurtado",
+      "comuna": "Monte Patria",
       "evento": "Sistema Frontal",
       "fechaEvento": "15/07/2026",
       "fechaOcurrencia": "15/07/2026",
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 239,
-      "anuladas": 0,
-      "terminadas": 227,
-      "terminadasApp": 69,
-      "terminadasPapel": 158,
-      "digitacion": 12,
-      "personas": 508,
-      "nna": 97,
-      "mayores": 171,
-      "discapacidad": 62,
-      "mujer": 280,
-      "hombre": 228,
+      "aplicadas": 581,
+      "anuladas": 3,
+      "terminadas": 563,
+      "terminadasApp": 39,
+      "terminadasPapel": 524,
+      "digitacion": 15,
+      "personas": 1510,
+      "nna": 380,
+      "mayores": 366,
+      "discapacidad": 169,
+      "mujer": 867,
+      "hombre": 643,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 35,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 17,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 27,
-        "MUY AFECTADOS|MUY AFECTADA": 28,
-        "NO AFECTADOS|NO AFECTADA": 11,
-        "POCO AFECTADOS|POCO AFECTADA": 24,
-        "MUY AFECTADOS|DESTRUIDA": 3,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 52,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 17,
-        "POCO AFECTADOS|MUY AFECTADA": 5,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "NO AFECTADOS|MUY AFECTADA": 3
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 57,
+        "MUY AFECTADOS|MUY AFECTADA": 86,
+        "POCO AFECTADOS|POCO AFECTADA": 68,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 31,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 67,
+        "NO AFECTADOS|POCO AFECTADA": 64,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 138,
+        "POCO AFECTADOS|MUY AFECTADA": 15,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 7,
+        "MUY AFECTADOS|DESTRUIDA": 9,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "NO AFECTADOS|MUY AFECTADA": 14,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
@@ -3173,62 +3133,62 @@
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 51,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 25,
-        "NO AFECTADOS|POCO AFECTADA": 32,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 56,
-        "POCO AFECTADOS|MUY AFECTADA": 7,
-        "MUY AFECTADOS|MUY AFECTADA": 17,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 8,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 56,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 25,
+        "MUY AFECTADOS|MUY AFECTADA": 17,
+        "NO AFECTADOS|POCO AFECTADA": 32,
+        "MUY AFECTADOS|DESTRUIDA": 5,
+        "POCO AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 18,
+        "NO AFECTADOS|MUY AFECTADA": 3,
         "NO AFECTADOS|NO AFECTADA": 7,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
-        "NO AFECTADOS|MUY AFECTADA": 3,
-        "MUY AFECTADOS|DESTRUIDA": 5,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
-      "comuna": "Los Vilos",
+      "comuna": "La Higuera",
       "evento": "Sistema Frontal",
       "fechaEvento": "15/07/2026",
       "fechaOcurrencia": "15/07/2026",
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 227,
-      "anuladas": 2,
-      "terminadas": 214,
-      "terminadasApp": 0,
-      "terminadasPapel": 214,
-      "digitacion": 10,
-      "personas": 605,
-      "nna": 156,
-      "mayores": 158,
-      "discapacidad": 66,
-      "mujer": 342,
+      "aplicadas": 202,
+      "anuladas": 8,
+      "terminadas": 189,
+      "terminadasApp": 73,
+      "terminadasPapel": 116,
+      "digitacion": 5,
+      "personas": 533,
+      "nna": 147,
+      "mayores": 131,
+      "discapacidad": 56,
+      "mujer": 270,
       "hombre": 263,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|MUY AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 55,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 23,
-        "POCO AFECTADOS|POCO AFECTADA": 56,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 28,
-        "NO AFECTADOS|POCO AFECTADA": 25,
-        "MUY AFECTADOS|MUY AFECTADA": 6,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
-        "NO AFECTADOS|NO AFECTADA": 1,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 4,
-        "MUY AFECTADOS|DESTRUIDA": 1
+        "NO AFECTADOS|POCO AFECTADA": 11,
+        "POCO AFECTADOS|POCO AFECTADA": 36,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 51,
+        "MUY AFECTADOS|MUY AFECTADA": 34,
+        "MUY AFECTADOS|DESTRUIDA": 5,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 21,
+        "NO AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 10,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "NO AFECTADOS|NO AFECTADA": 3
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Coquimbo",
@@ -3253,20 +3213,60 @@
       "hombre": 41,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 6,
-        "MUY AFECTADOS|MUY AFECTADA": 5,
+        "POCO AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|POCO AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 5,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|MUY AFECTADA": 1,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
+        "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "23:48",
-      "fechaLlenado": "30-07-2026 23:48"
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
+    },
+    {
+      "region": "Coquimbo",
+      "comuna": "Río Hurtado",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "15/07/2026",
+      "fechaOcurrencia": "15/07/2026",
+      "fechaCreacion": "20/07/2026",
+      "id": "149342",
+      "alfa": 0,
+      "aplicadas": 239,
+      "anuladas": 0,
+      "terminadas": 227,
+      "terminadasApp": 69,
+      "terminadasPapel": 158,
+      "digitacion": 12,
+      "personas": 508,
+      "nna": 97,
+      "mayores": 171,
+      "discapacidad": 62,
+      "mujer": 280,
+      "hombre": 228,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|POCO AFECTADA": 24,
+        "NO AFECTADOS|POCO AFECTADA": 35,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 52,
+        "NO AFECTADOS|NO AFECTADA": 11,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 17,
+        "MUY AFECTADOS|MUY AFECTADA": 28,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 27,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 17,
+        "MUY AFECTADOS|DESTRUIDA": 3,
+        "POCO AFECTADOS|MUY AFECTADA": 5,
+        "NO AFECTADOS|MUY AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3
+      },
+      "hora": "05:47",
+      "fechaLlenado": "31-07-2026 05:47"
     },
     {
       "region": "Atacama",
@@ -3308,8 +3308,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Atacama",
@@ -3350,8 +3350,8 @@
         "NO AFECTADOS|MUY AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Atacama",
@@ -3393,8 +3393,8 @@
         "MUY AFECTADOS|DESTRUIDA": 7,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Atacama",
@@ -3435,8 +3435,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 15,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Atacama",
@@ -3477,8 +3477,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Atacama",
@@ -3520,8 +3520,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Atacama",
@@ -3566,8 +3566,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "23:51",
-      "fechaLlenado": "30-07-2026 23:51"
+      "hora": "05:49",
+      "fechaLlenado": "31-07-2026 05:49"
     },
     {
       "region": "Biobío",
