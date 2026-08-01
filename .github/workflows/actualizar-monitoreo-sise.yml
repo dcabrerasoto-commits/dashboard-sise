@@ -1,0 +1,24 @@
+name: Actualizar Monitoreo SISE
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-monitoreo-sise
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: [self-hosted, Windows]
+    env:
+      MONITOREO_EVENTO_ID: "149401,149342,149162"
+      MONITOREO_DASHBOARD_REPO: "C:\\Users\\dcabrera\\Documents\\GitHub\\DCS_FIBE\\_pages_dashboard_sise"
+    steps:
+      - name: Ejecutar actualizacion local
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          & "C:\Users\dcabrera\OneDrive - Subsecretaría de Evaluación Social\Escritorio\UISE\01_Emergencias\2026\SISTEMAFRONTAL_JULIO\MONITOREO_SISE\robot\Ejecutar_Monitoreo_SISE.ps1"
