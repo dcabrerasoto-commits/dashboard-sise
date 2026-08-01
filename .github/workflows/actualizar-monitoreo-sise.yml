@@ -21,4 +21,13 @@ jobs:
         shell: powershell
         run: |
           $ErrorActionPreference = "Stop"
-          & "C:\Users\dcabrera\OneDrive - Subsecretaría de Evaluación Social\Escritorio\UISE\01_Emergencias\2026\SISTEMAFRONTAL_JULIO\MONITOREO_SISE\robot\Ejecutar_Monitoreo_SISE.ps1"
+          $script = Get-ChildItem -LiteralPath $env:USERPROFILE -Directory -Filter "OneDrive*" |
+            ForEach-Object {
+              Join-Path $_.FullName "Escritorio\UISE\01_Emergencias\2026\SISTEMAFRONTAL_JULIO\MONITOREO_SISE\robot\Ejecutar_Monitoreo_SISE.ps1"
+            } |
+            Where-Object { Test-Path -LiteralPath $_ } |
+            Select-Object -First 1
+          if (-not $script) {
+            throw "No se encontro Ejecutar_Monitoreo_SISE.ps1 en OneDrive del usuario."
+          }
+          & $script
