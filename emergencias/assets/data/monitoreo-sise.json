@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-03T14:06:14",
+  "actualizado": "2026-08-03T15:58:50",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -1309,6 +1309,36 @@
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
+    },
+    {
+      "tipo": "fuente_sise_desactualizada",
+      "id": "1 ID",
+      "region": "Atacama",
+      "comuna": "",
+      "campo": "Actualizacion SISE",
+      "valorAnterior": "14:02",
+      "valorActual": "15:58",
+      "detalle": "Se conservan datos de una descarga anterior para estos ID: 149401."
+    },
+    {
+      "tipo": "fuente_sise_desactualizada",
+      "id": "1 ID",
+      "region": "Coquimbo",
+      "comuna": "",
+      "campo": "Actualizacion SISE",
+      "valorAnterior": "13:44",
+      "valorActual": "15:58",
+      "detalle": "Se conservan datos de una descarga anterior para estos ID: 149342."
+    },
+    {
+      "tipo": "fuente_sise_desactualizada",
+      "id": "1 ID",
+      "region": "Valparaíso",
+      "comuna": "",
+      "campo": "Actualizacion SISE",
+      "valorAnterior": "13:57",
+      "valorActual": "15:58",
+      "detalle": "Se conservan datos de una descarga anterior para estos ID: 149162."
     }
   ],
   "bonoRecuperacion": {
@@ -3929,8 +3959,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:00",
-      "fechaLlenado": "27-07-2026 10:00",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 60,
       "bonoRecuperacion": 58
@@ -3966,7 +3996,7 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 26,
       "bonoRecuperacion": 24
@@ -4004,8 +4034,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:00",
-      "fechaLlenado": "27-07-2026 10:00",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 54,
       "bonoRecuperacion": 42
@@ -4044,8 +4074,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:00",
-      "fechaLlenado": "27-07-2026 10:00",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 112,
       "bonoRecuperacion": 67
@@ -4080,8 +4110,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:00",
-      "fechaLlenado": "27-07-2026 10:00",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 65,
       "bonoRecuperacion": 65
@@ -4112,8 +4142,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:00",
-      "fechaLlenado": "27-07-2026 10:00",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 9,
       "bonoRecuperacion": 9
@@ -4147,8 +4177,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:00",
-      "fechaLlenado": "27-07-2026 10:00",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 46,
       "bonoRecuperacion": 46
@@ -4185,8 +4215,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 42,
       "bonoRecuperacion": 42
@@ -4218,8 +4248,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 14
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 50,
       "bonoRecuperacion": 50
@@ -4248,8 +4278,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -4287,8 +4317,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 155,
       "bonoRecuperacion": 148
@@ -4327,8 +4357,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4
       },
-      "hora": "19:42",
-      "fechaLlenado": "30-07-2026 19:42",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "bonoRecuperacion": 115
     },
     {
@@ -4355,8 +4385,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 2
@@ -4387,8 +4417,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 6,
       "bonoRecuperacion": 6
@@ -4427,8 +4457,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 3
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 74,
       "bonoRecuperacion": 70
@@ -4462,8 +4492,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 7,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 76,
       "bonoRecuperacion": 0
@@ -4497,8 +4527,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
       "bonoRecuperacion": 28
@@ -4527,8 +4557,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "10:01",
-      "fechaLlenado": "27-07-2026 10:01",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -4558,8 +4588,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 4,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 1,
       "terminadasPapel": 6,
       "bonoRecuperacion": 5
@@ -4587,8 +4617,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -4622,8 +4652,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 5
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
       "bonoRecuperacion": 28
@@ -4653,8 +4683,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 0
@@ -4685,8 +4715,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
       "bonoRecuperacion": 7
@@ -4714,8 +4744,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -4748,8 +4778,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
       "bonoRecuperacion": 11
@@ -4783,8 +4813,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 47,
       "bonoRecuperacion": 47
@@ -4816,8 +4846,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
       "bonoRecuperacion": 10
@@ -4845,8 +4875,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 0
@@ -4876,8 +4906,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
       "bonoRecuperacion": 3
@@ -4911,8 +4941,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 6
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 1,
       "terminadasPapel": 17,
       "bonoRecuperacion": 18
@@ -4941,8 +4971,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 1
@@ -4971,8 +5001,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 5,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 6,
       "bonoRecuperacion": 6
@@ -5008,8 +5038,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 21,
       "bonoRecuperacion": 21
@@ -5043,8 +5073,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:02",
-      "fechaLlenado": "27-07-2026 10:02",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 14,
       "bonoRecuperacion": 14
@@ -5082,8 +5112,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 132,
       "bonoRecuperacion": 132
@@ -5113,8 +5143,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
       "bonoRecuperacion": 5
@@ -5153,8 +5183,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 123,
       "bonoRecuperacion": 117
@@ -5184,8 +5214,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
       "bonoRecuperacion": 7
@@ -5215,8 +5245,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -5254,8 +5284,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 140,
       "bonoRecuperacion": 139
@@ -5286,8 +5316,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
       "bonoRecuperacion": 10
@@ -5316,8 +5346,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
       "bonoRecuperacion": 3
@@ -5346,8 +5376,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 2
@@ -5375,8 +5405,8 @@
       "matrizAfectacion": {
         "NO AFECTADOS|NO AFECTADA": 13
       },
-      "hora": "10:03",
-      "fechaLlenado": "27-07-2026 10:03",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 13,
       "bonoRecuperacion": 0
@@ -5412,8 +5442,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:04",
-      "fechaLlenado": "27-07-2026 10:04",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 16,
       "bonoRecuperacion": 0
@@ -5444,8 +5474,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 6,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:04",
-      "fechaLlenado": "27-07-2026 10:04",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
       "bonoRecuperacion": 11
@@ -5477,8 +5507,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "10:04",
-      "fechaLlenado": "27-07-2026 10:04",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
       "bonoRecuperacion": 0
@@ -5518,8 +5548,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:08",
-      "fechaLlenado": "27-07-2026 10:08",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 106,
       "bonoRecuperacion": 86
@@ -5549,8 +5579,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:08",
-      "fechaLlenado": "27-07-2026 10:08",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -5586,8 +5616,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:08",
-      "fechaLlenado": "27-07-2026 10:08",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 22,
       "bonoRecuperacion": 22
@@ -5625,8 +5655,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 5,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:08",
-      "fechaLlenado": "27-07-2026 10:08",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 82,
       "bonoRecuperacion": 79
@@ -5656,8 +5686,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:08",
-      "fechaLlenado": "27-07-2026 10:08",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -5695,8 +5725,8 @@
         "NO AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:12",
-      "fechaLlenado": "27-07-2026 10:12",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 73,
       "bonoRecuperacion": 0
@@ -5730,8 +5760,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 36,
       "bonoRecuperacion": 36
@@ -5764,8 +5794,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 36,
       "bonoRecuperacion": 25
@@ -5805,8 +5835,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 9,
       "terminadasPapel": 37,
       "bonoRecuperacion": 45
@@ -5834,8 +5864,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -5868,8 +5898,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 16,
       "bonoRecuperacion": 0
@@ -5899,8 +5929,8 @@
         "NO AFECTADOS|POCO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
       "bonoRecuperacion": 0
@@ -5937,8 +5967,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:13",
-      "fechaLlenado": "27-07-2026 10:13",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 31,
       "bonoRecuperacion": 27
@@ -5974,8 +6004,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 35,
       "bonoRecuperacion": 0
@@ -6005,8 +6035,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
       "bonoRecuperacion": 5
@@ -6040,8 +6070,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 19,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 26,
       "terminadasPapel": 3,
       "bonoRecuperacion": 29
@@ -6072,8 +6102,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 6,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 9
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
       "bonoRecuperacion": 28
@@ -6106,8 +6136,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:14",
-      "fechaLlenado": "27-07-2026 10:14",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 12,
       "bonoRecuperacion": 0
@@ -6139,8 +6169,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 8,
       "bonoRecuperacion": 0
@@ -6178,8 +6208,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 35,
       "bonoRecuperacion": 31
@@ -6208,8 +6238,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
       "bonoRecuperacion": 4
@@ -6239,7 +6269,7 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 2
@@ -6276,8 +6306,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 34,
       "bonoRecuperacion": 33
@@ -6313,8 +6343,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 7,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 62,
       "bonoRecuperacion": 62
@@ -6350,8 +6380,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 84,
       "bonoRecuperacion": 84
@@ -6386,8 +6416,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 12,
         "NO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 46,
       "bonoRecuperacion": 46
@@ -6420,8 +6450,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 18,
       "bonoRecuperacion": 18
@@ -6449,8 +6479,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -6481,8 +6511,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:15",
-      "fechaLlenado": "27-07-2026 10:15",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 14,
       "bonoRecuperacion": 0
@@ -6517,8 +6547,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 33,
       "bonoRecuperacion": 33
@@ -6556,8 +6586,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 124,
       "bonoRecuperacion": 122
@@ -6592,7 +6622,7 @@
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
       "bonoRecuperacion": 28
@@ -6624,8 +6654,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
       "bonoRecuperacion": 7
@@ -6660,8 +6690,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 17,
       "bonoRecuperacion": 17
@@ -6689,8 +6719,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -6722,8 +6752,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
       "bonoRecuperacion": 11
@@ -6754,8 +6784,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 42,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 55,
       "bonoRecuperacion": 0
@@ -6788,8 +6818,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 15,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 89,
       "bonoRecuperacion": 89
@@ -6817,8 +6847,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -6852,8 +6882,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 27,
       "bonoRecuperacion": 0
@@ -6883,8 +6913,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "10:16",
-      "fechaLlenado": "27-07-2026 10:16",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
       "bonoRecuperacion": 0
@@ -6915,8 +6945,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 8,
       "bonoRecuperacion": 8
@@ -6952,8 +6982,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 38,
       "bonoRecuperacion": 0
@@ -6986,8 +7016,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
       "bonoRecuperacion": 10
@@ -7022,8 +7052,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 18,
       "bonoRecuperacion": 17
@@ -7053,8 +7083,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
       "bonoRecuperacion": 5
@@ -7093,8 +7123,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
       "bonoRecuperacion": 28
@@ -7125,8 +7155,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 14,
       "bonoRecuperacion": 11
@@ -7155,8 +7185,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 66,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 68,
       "bonoRecuperacion": 0
@@ -7190,8 +7220,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 26,
       "bonoRecuperacion": 0
@@ -7223,8 +7253,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 31,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:17",
-      "fechaLlenado": "27-07-2026 10:17",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 76,
       "bonoRecuperacion": 76
@@ -7262,8 +7292,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 12,
         "NO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 174,
       "bonoRecuperacion": 169
@@ -7291,8 +7321,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -7320,8 +7350,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 0
@@ -7350,8 +7380,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 2
@@ -7382,8 +7412,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 6,
       "bonoRecuperacion": 6
@@ -7417,8 +7447,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:42",
-      "fechaLlenado": "30-07-2026 19:42",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "bonoRecuperacion": 0
     },
     {
@@ -7455,8 +7485,8 @@
         "NO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 65,
       "bonoRecuperacion": 59
@@ -7485,8 +7515,8 @@
         "POCO AFECTADOS|POCO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 5
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 8,
       "bonoRecuperacion": 8
@@ -7516,8 +7546,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
       "bonoRecuperacion": 5
@@ -7546,8 +7576,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 2
@@ -7578,8 +7608,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
       "bonoRecuperacion": 10
@@ -7607,8 +7637,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -7642,7 +7672,7 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 7
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 41,
       "bonoRecuperacion": 0
@@ -7671,7 +7701,7 @@
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
       "bonoRecuperacion": 0
@@ -7701,7 +7731,7 @@
         "MUY AFECTADOS|DESTRUIDA": 1
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
       "bonoRecuperacion": 3
@@ -7730,7 +7760,7 @@
         "MUY AFECTADOS|DESTRUIDA": 2
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 2
@@ -7770,7 +7800,7 @@
         "MUY AFECTADOS|DESTRUIDA": 1
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 103,
       "terminadasPapel": 19,
       "bonoRecuperacion": 0
@@ -7799,7 +7829,7 @@
         "POCO AFECTADOS|NO AFECTADA": 3
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
       "bonoRecuperacion": 0
@@ -7829,7 +7859,7 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
       "bonoRecuperacion": 1
@@ -7857,8 +7887,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "09:30",
-      "fechaLlenado": "25-07-2026 09:30",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
       "bonoRecuperacion": 1
@@ -7887,7 +7917,7 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 12
       },
       "hora": "10:19",
-      "fechaLlenado": "27-07-2026 10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 12,
       "bonoRecuperacion": 12
@@ -7926,8 +7956,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:18",
-      "fechaLlenado": "27-07-2026 10:18",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 103,
       "bonoRecuperacion": 103
@@ -7953,8 +7983,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:19",
-      "fechaLlenado": "27-07-2026 09:19",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 0,
       "bonoRecuperacion": 0
@@ -7980,8 +8010,8 @@
       "hombre": 0,
       "otro": 0,
       "matrizAfectacion": {},
-      "hora": "09:19",
-      "fechaLlenado": "27-07-2026 09:19",
+      "hora": "10:19",
+      "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 0,
       "bonoRecuperacion": 0
