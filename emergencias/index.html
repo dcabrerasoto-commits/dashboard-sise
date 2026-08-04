@@ -113,7 +113,7 @@ function eventoStorageKey(base){return `${base}:${eventoActual.id||eventoPredete
 function cargarReportesRegionales(){let key=eventoStorageKey('uise-reportes-regionales'),legacy=eventoActual.id==='sf-20260716'?localStorage.getItem('uise-reportes-regionales'):null;reportesRegionales=JSON.parse(localStorage.getItem(key)||legacy||'[]')}
 function guardarReportesRegionales(){localStorage.setItem(eventoStorageKey('uise-reportes-regionales'),JSON.stringify(reportesRegionales))}
 function limpiarDatosEvento(){datosSise=[];bonoRecuperacionResumen={total:0,regiones:{},comunas:{}};eventosDetectados=[];eventosInfo=[];alertasSise=[];ultimaSyncSise='';ultimaSyncSiseFecha='';historialRobot=[];combinadosCache=null}
-function actualizarEncabezadoEvento(){if(window.eventoSubtitulo)eventoSubtitulo.textContent=eventoActual.subtitulo||eventoActual.nombre||'Sistema Frontal';if(window.eventoEstado)eventoEstado.textContent=datosSise.length?`Datos cargados: ${eventoActual.nombre}`:`Sin datos publicados para ${eventoActual.nombre}`}
+function actualizarEncabezadoEvento(){if(window.eventoSubtitulo)eventoSubtitulo.textContent=eventoActual.subtitulo||eventoActual.nombre||'Sistema Frontal';if(window.eventoEstado)eventoEstado.textContent=datosSise.length?`Datos cargados: ${eventoActual.nombre}`:`Cargando datos: ${eventoActual.nombre}`}
 function esEventoSf27(){return eventoActual.id==='sf-20260727'}
 function bloquearGuardado(activo){guardandoFormulario=activo;document.documentElement.classList.toggle('saving-lock',activo);document.body.classList.toggle('saving-lock',activo);if(savingOverlayEl)savingOverlayEl.hidden=!activo}
 const fmt=n=>new Intl.NumberFormat('es-CL').format(Number(n||0));
