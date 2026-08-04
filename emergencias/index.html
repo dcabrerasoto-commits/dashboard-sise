@@ -73,7 +73,7 @@ const regionesMonitoreo=regionesChile.filter(r=>r!=='Los Lagos');
 const regionesIngresoBloqueadas=new Set(['Metropolitana de Santiago','O’Higgins','Maule','Ñuble','Biobío','La Araucanía','Los Ríos']);
 const regionesIngreso=regionesMonitoreo.filter(r=>!regionesIngresoBloqueadas.has(r));
 const regionesSiseCerradas=new Set(['METROPOLITANADESANTIAGO','OHIGGINS','MAULE','NUBLE','BIOBIO','LAARAUCANIA','LOSRIOS']);
-const eventoPredeterminado={id:'sf-20260716',nombre:'Sistema Frontal 16 de julio',subtitulo:'Sistema Frontal - 16 de julio',dataUrl:'assets/data/monitoreo-sise-sf-20260716.json',predeterminado:true};
+const eventoPredeterminado={id:'sf-20260716',nombre:'Sistema frontal Atacama- Los Ríos (inicio: 13 de julio)',subtitulo:'Sistema frontal Atacama- Los Ríos (inicio: 13 de julio)',dataUrl:'assets/data/monitoreo-sise-sf-20260716.json',predeterminado:true};
 function regionSiseCerrada(r){return regionesSiseCerradas.has(claveTexto(regionCanon(r)).replace(/[^A-Z0-9]+/g,''))}
 function encuestadoresVista(d){return regionSiseCerrada(typeof d==='string'?d:d.region)?'Evento SISE cerrado':fmt(typeof d==='number'?d:d.encuestadores)}
 const idOrdenRegion={'Atacama':'aa-03','Coquimbo':'bb-04','Valparaíso':'cc-05','Metropolitana de Santiago':'dd-13','O’Higgins':'ee-06','Maule':'ff-07','Ñuble':'gg-16','Biobío':'hh-08','La Araucanía':'ii-09','Los Ríos':'jj-14'};
