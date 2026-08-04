@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-04T16:36:05",
+  "actualizado": "2026-08-04T16:49:00",
   "busquedaEvento": "Sistema Frontal 27 de julio",
   "eventos": [
     {
@@ -564,6 +564,40 @@
     "regiones": {},
     "comunas": {}
   },
+  "ritmoDigitacion": [
+    {
+      "fechaDigitacion": "28/07/2026",
+      "terminadas": 75
+    },
+    {
+      "fechaDigitacion": "29/07/2026",
+      "terminadas": 40
+    },
+    {
+      "fechaDigitacion": "30/07/2026",
+      "terminadas": 62
+    },
+    {
+      "fechaDigitacion": "31/07/2026",
+      "terminadas": 162
+    },
+    {
+      "fechaDigitacion": "01/08/2026",
+      "terminadas": 303
+    },
+    {
+      "fechaDigitacion": "02/08/2026",
+      "terminadas": 417
+    },
+    {
+      "fechaDigitacion": "03/08/2026",
+      "terminadas": 486
+    },
+    {
+      "fechaDigitacion": "04/08/2026",
+      "terminadas": 303
+    }
+  ],
   "filas": [
     {
       "region": "Biobío",
@@ -591,8 +625,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -624,8 +658,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -655,8 +689,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -696,8 +730,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -726,8 +760,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -760,8 +794,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 25
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -797,8 +831,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 19
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -838,8 +872,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -870,8 +904,8 @@
         "MUY AFECTADOS|DESTRUIDA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 8
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -905,8 +939,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -935,8 +969,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -964,8 +998,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -993,8 +1027,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1024,8 +1058,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1067,8 +1101,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 45
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1100,8 +1134,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1134,8 +1168,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1173,8 +1207,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1214,8 +1248,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 13
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1243,8 +1277,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 23
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1278,8 +1312,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1308,8 +1342,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1340,8 +1374,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1370,8 +1404,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1406,8 +1440,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1440,8 +1474,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1473,8 +1507,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1511,8 +1545,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 78
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1546,8 +1580,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1579,8 +1613,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1611,8 +1645,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1643,8 +1677,8 @@
         "NO AFECTADOS|POCO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1675,8 +1709,8 @@
         "NO AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1705,8 +1739,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1743,8 +1777,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 20
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1779,8 +1813,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1808,8 +1842,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1838,8 +1872,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1869,8 +1903,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 10
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1907,8 +1941,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1936,8 +1970,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1971,8 +2005,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2005,8 +2039,8 @@
         "POCO AFECTADOS|NO AFECTADA": 9,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2039,8 +2073,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2075,8 +2109,8 @@
         "POCO AFECTADOS|NO AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 79
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2104,8 +2138,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2143,8 +2177,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2181,8 +2215,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2218,8 +2252,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2251,8 +2285,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2285,8 +2319,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2314,8 +2348,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 5
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2353,8 +2387,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2390,8 +2424,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2423,8 +2457,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "16:36",
-      "fechaLlenado": "04-08-2026 16:36",
+      "hora": "16:49",
+      "fechaLlenado": "04-08-2026 16:49",
       "bonoRecuperacion": 0
     }
   ]
