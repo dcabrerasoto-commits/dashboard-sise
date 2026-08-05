@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-05T12:29:22",
+  "actualizado": "2026-08-05T13:00:01",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -1201,16 +1201,6 @@
       "campo": "otro",
       "valorAnterior": 1,
       "valorActual": 0
-    },
-    {
-      "tipo": "fuente_sise_desactualizada",
-      "id": "1 ID",
-      "region": "Coquimbo",
-      "comuna": "",
-      "campo": "Actualizacion SISE",
-      "valorAnterior": "11:00",
-      "valorActual": "12:29",
-      "detalle": "Se conservan datos de una descarga anterior para estos ID: 149342."
     }
   ],
   "bonoRecuperacion": {
