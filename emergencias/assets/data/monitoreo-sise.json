@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-04T20:03:47",
+  "actualizado": "2026-08-04T21:34:12",
   "busquedaEvento": "Sistema Frontal",
   "eventos": [
     {
@@ -1110,23 +1110,23 @@
   "descargas": [
     {
       "eventoId": "149342",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260804_1946_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260804_2116_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149162",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260804_1954_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260804_2124_Reporte_BD_FIBE.xlsx"
     },
     {
       "eventoId": "149401",
-      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260804_1959_Reporte_BD_FIBE.xlsx"
+      "ruta": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260804_2129_Reporte_BD_FIBE.xlsx"
     }
   ],
   "pendientesDescarga": [],
   "congeladosDescarga": [],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260804_1954_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260804_1946_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260804_1959_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149162_20260804_2124_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149342_20260804_2116_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\149401_20260804_2129_Reporte_BD_FIBE.xlsx",
     "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\MONITOREO_SISE\\BBDD\\regiones_congeladas_vigente.xlsx"
   ],
   "advertencias": [
@@ -1513,7 +1513,7 @@
     },
     {
       "fechaDigitacion": "25/07/2026",
-      "terminadas": 907
+      "terminadas": 908
     },
     {
       "fechaDigitacion": "26/07/2026",
@@ -1549,11 +1549,11 @@
     },
     {
       "fechaDigitacion": "03/08/2026",
-      "terminadas": 2331
+      "terminadas": 2332
     },
     {
       "fechaDigitacion": "04/08/2026",
-      "terminadas": 3027
+      "terminadas": 3202
     }
   ],
   "filas": [
@@ -1566,38 +1566,38 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 1059,
+      "aplicadas": 1085,
       "anuladas": 4,
-      "terminadas": 1016,
+      "terminadas": 1041,
       "terminadasApp": 7,
-      "terminadasPapel": 1009,
+      "terminadasPapel": 1034,
       "digitacion": 25,
-      "personas": 3113,
-      "nna": 966,
-      "mayores": 457,
-      "discapacidad": 423,
-      "mujer": 1709,
-      "hombre": 1403,
+      "personas": 3189,
+      "nna": 990,
+      "mayores": 472,
+      "discapacidad": 437,
+      "mujer": 1753,
+      "hombre": 1435,
       "otro": 1,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 182,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 113,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 275,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 186,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 115,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 280,
         "MUY AFECTADOS|DESTRUIDA": 20,
-        "MUY AFECTADOS|MUY AFECTADA": 127,
+        "MUY AFECTADOS|MUY AFECTADA": 134,
         "NO AFECTADOS|MUY AFECTADA": 9,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 32,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 33,
         "NO AFECTADOS|POCO AFECTADA": 50,
         "POCO AFECTADOS|MUY AFECTADA": 28,
-        "POCO AFECTADOS|POCO AFECTADA": 148,
+        "POCO AFECTADOS|POCO AFECTADA": 154,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 11,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "NO AFECTADOS|NO AFECTADA": 8,
         "POCO AFECTADOS|NO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 4
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -1609,39 +1609,39 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 1067,
+      "aplicadas": 1071,
       "anuladas": 21,
-      "terminadas": 1011,
+      "terminadas": 1019,
       "terminadasApp": 0,
-      "terminadasPapel": 1011,
-      "digitacion": 11,
-      "personas": 3135,
-      "nna": 948,
-      "mayores": 545,
-      "discapacidad": 443,
-      "mujer": 1774,
-      "hombre": 1361,
+      "terminadasPapel": 1019,
+      "digitacion": 7,
+      "personas": 3153,
+      "nna": 951,
+      "mayores": 549,
+      "discapacidad": 446,
+      "mujer": 1787,
+      "hombre": 1366,
       "otro": 0,
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 19,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 71,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 73,
         "NO AFECTADOS|POCO AFECTADA": 119,
         "NO AFECTADOS|NO AFECTADA": 13,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 145,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 147,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 87,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 192,
         "MUY AFECTADOS|MUY AFECTADA": 99,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 12,
         "NO AFECTADOS|MUY AFECTADA": 23,
-        "POCO AFECTADOS|MUY AFECTADA": 33,
-        "POCO AFECTADOS|POCO AFECTADA": 171,
+        "POCO AFECTADOS|MUY AFECTADA": 35,
+        "POCO AFECTADOS|POCO AFECTADA": 173,
         "POCO AFECTADOS|NO AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 19,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -1680,8 +1680,8 @@
         "NO AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 63
     },
     {
@@ -1724,8 +1724,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 198
     },
     {
@@ -1764,8 +1764,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 6,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 50
     },
     {
@@ -1777,18 +1777,18 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 233,
+      "aplicadas": 234,
       "anuladas": 0,
-      "terminadas": 228,
+      "terminadas": 229,
       "terminadasApp": 0,
-      "terminadasPapel": 228,
+      "terminadasPapel": 229,
       "digitacion": 5,
-      "personas": 709,
+      "personas": 711,
       "nna": 184,
-      "mayores": 174,
+      "mayores": 175,
       "discapacidad": 132,
-      "mujer": 409,
-      "hombre": 300,
+      "mujer": 410,
+      "hombre": 301,
       "otro": 0,
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 19,
@@ -1796,7 +1796,7 @@
         "NO AFECTADOS|POCO AFECTADA": 29,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 64,
         "NO AFECTADOS|MUY AFECTADA": 11,
-        "POCO AFECTADOS|POCO AFECTADA": 19,
+        "POCO AFECTADOS|POCO AFECTADA": 20,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 18,
         "NO AFECTADOS|NO AFECTADA": 14,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 15,
@@ -1805,8 +1805,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
         "MUY AFECTADOS|DESTRUIDA": 4
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 119
     },
     {
@@ -1818,31 +1818,31 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 1390,
+      "aplicadas": 1397,
       "anuladas": 5,
-      "terminadas": 1348,
+      "terminadas": 1357,
       "terminadasApp": 38,
-      "terminadasPapel": 1310,
-      "digitacion": 31,
-      "personas": 4434,
-      "nna": 1574,
-      "mayores": 457,
-      "discapacidad": 462,
-      "mujer": 2527,
-      "hombre": 1907,
+      "terminadasPapel": 1319,
+      "digitacion": 29,
+      "personas": 4465,
+      "nna": 1581,
+      "mayores": 462,
+      "discapacidad": 464,
+      "mujer": 2543,
+      "hombre": 1922,
       "otro": 1,
       "matrizAfectacion": {
         "NO AFECTADOS|MUY AFECTADA": 13,
-        "NO AFECTADOS|POCO AFECTADA": 154,
+        "NO AFECTADOS|POCO AFECTADA": 155,
         "POCO AFECTADOS|MUY AFECTADA": 28,
-        "POCO AFECTADOS|POCO AFECTADA": 130,
+        "POCO AFECTADOS|POCO AFECTADA": 131,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 106,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 278,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 280,
         "MUY AFECTADOS|DESTRUIDA": 23,
         "MUY AFECTADOS|MUY AFECTADA": 212,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 89,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 92,
         "NO AFECTADOS|NO AFECTADA": 26,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 164,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 166,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 26,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 77,
         "MUY AFECTADOS|POCO AFECTADA": 16,
@@ -1850,8 +1850,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -1889,8 +1889,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 65
     },
     {
@@ -1902,27 +1902,27 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 325,
+      "aplicadas": 329,
       "anuladas": 0,
-      "terminadas": 320,
+      "terminadas": 324,
       "terminadasApp": 0,
-      "terminadasPapel": 320,
+      "terminadasPapel": 324,
       "digitacion": 5,
-      "personas": 993,
-      "nna": 315,
-      "mayores": 128,
-      "discapacidad": 90,
-      "mujer": 561,
-      "hombre": 432,
+      "personas": 1006,
+      "nna": 319,
+      "mayores": 129,
+      "discapacidad": 93,
+      "mujer": 568,
+      "hombre": 438,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 58,
         "MUY AFECTADOS|DESTRUIDA": 2,
         "NO AFECTADOS|POCO AFECTADA": 93,
         "POCO AFECTADOS|MUY AFECTADA": 6,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 53,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 56,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 20,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 51,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 52,
         "POCO AFECTADOS|POCO AFECTADA": 15,
         "MUY AFECTADOS|MUY AFECTADA": 13,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
@@ -1930,8 +1930,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "NO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -1973,8 +1973,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 86
     },
     {
@@ -2013,8 +2013,8 @@
         "NO AFECTADOS|NO AFECTADA": 3,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 5
     },
     {
@@ -2051,8 +2051,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 108
     },
     {
@@ -2087,8 +2087,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 45
     },
     {
@@ -2126,8 +2126,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 196
     },
     {
@@ -2166,8 +2166,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 78
     },
     {
@@ -2208,8 +2208,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 4,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 107
     },
     {
@@ -2247,8 +2247,8 @@
         "NO AFECTADOS|MUY AFECTADA": 4,
         "NO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -2260,36 +2260,36 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 393,
+      "aplicadas": 396,
       "anuladas": 0,
-      "terminadas": 386,
+      "terminadas": 390,
       "terminadasApp": 7,
-      "terminadasPapel": 379,
-      "digitacion": 7,
-      "personas": 1161,
-      "nna": 344,
-      "mayores": 169,
-      "discapacidad": 123,
-      "mujer": 649,
-      "hombre": 512,
+      "terminadasPapel": 383,
+      "digitacion": 6,
+      "personas": 1175,
+      "nna": 349,
+      "mayores": 170,
+      "discapacidad": 124,
+      "mujer": 658,
+      "hombre": 517,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 74,
+        "POCO AFECTADOS|POCO AFECTADA": 75,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
         "MUY AFECTADOS|DESTRUIDA": 6,
-        "MUY AFECTADOS|MUY AFECTADA": 62,
+        "MUY AFECTADOS|MUY AFECTADA": 63,
         "NO AFECTADOS|POCO AFECTADA": 19,
         "NO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 42,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 21,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 131,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 133,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "POCO AFECTADOS|MUY AFECTADA": 5,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 98
     },
     {
@@ -2301,25 +2301,25 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 290,
+      "aplicadas": 291,
       "anuladas": 0,
-      "terminadas": 280,
+      "terminadas": 283,
       "terminadasApp": 0,
-      "terminadasPapel": 280,
-      "digitacion": 10,
-      "personas": 813,
-      "nna": 266,
-      "mayores": 149,
-      "discapacidad": 113,
-      "mujer": 436,
-      "hombre": 376,
+      "terminadasPapel": 283,
+      "digitacion": 8,
+      "personas": 826,
+      "nna": 270,
+      "mayores": 150,
+      "discapacidad": 114,
+      "mujer": 441,
+      "hombre": 384,
       "otro": 1,
       "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 63,
+        "MUY AFECTADOS|MUY AFECTADA": 64,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 26,
-        "POCO AFECTADOS|POCO AFECTADA": 41,
+        "POCO AFECTADOS|POCO AFECTADA": 42,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 16,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 82,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 83,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "NO AFECTADOS|MUY AFECTADA": 6,
@@ -2332,8 +2332,8 @@
         "MUY AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 102
     },
     {
@@ -2372,8 +2372,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 69
     },
     {
@@ -2413,8 +2413,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 17
     },
     {
@@ -2454,8 +2454,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 49
     },
     {
@@ -2494,8 +2494,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 30
     },
     {
@@ -2532,8 +2532,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 29
     },
     {
@@ -2572,8 +2572,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -2614,8 +2614,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 37
     },
     {
@@ -2653,8 +2653,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 15
     },
     {
@@ -2666,24 +2666,24 @@
       "fechaCreacion": "19/07/2026",
       "id": "149162",
       "alfa": 0,
-      "aplicadas": 74,
+      "aplicadas": 84,
       "anuladas": 0,
-      "terminadas": 61,
+      "terminadas": 71,
       "terminadasApp": 0,
-      "terminadasPapel": 61,
+      "terminadasPapel": 71,
       "digitacion": 13,
-      "personas": 149,
-      "nna": 30,
-      "mayores": 56,
-      "discapacidad": 25,
-      "mujer": 80,
-      "hombre": 69,
+      "personas": 178,
+      "nna": 39,
+      "mayores": 65,
+      "discapacidad": 32,
+      "mujer": 93,
+      "hombre": 85,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 12,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MUY AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|POCO AFECTADA": 11,
+        "POCO AFECTADOS|POCO AFECTADA": 13,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "MUY AFECTADOS|MUY AFECTADA": 8,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 3,
@@ -2691,12 +2691,12 @@
         "NO AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2,
-        "NO AFECTADOS|NO AFECTADA": 6,
+        "NO AFECTADOS|NO AFECTADA": 10,
         "MUY AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -2732,8 +2732,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 6,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 28
     },
     {
@@ -2765,8 +2765,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 39,
         "POCO AFECTADOS|POCO AFECTADA": 11
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 13
     },
     {
@@ -2803,8 +2803,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 25
     },
     {
@@ -2837,8 +2837,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 3
     },
     {
@@ -2879,8 +2879,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 94
     },
     {
@@ -2915,8 +2915,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 26
     },
     {
@@ -2952,8 +2952,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 44
     },
     {
@@ -2986,8 +2986,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "19:54",
-      "fechaLlenado": "04-08-2026 19:54",
+      "hora": "21:24",
+      "fechaLlenado": "04-08-2026 21:24",
       "bonoRecuperacion": 0
     },
     {
@@ -3025,8 +3025,8 @@
         "NO AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 22
     },
     {
@@ -3066,8 +3066,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 142
     },
     {
@@ -3111,8 +3111,8 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 6
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 524
     },
     {
@@ -3157,8 +3157,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 3,
         "MUY AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 483
     },
     {
@@ -3198,8 +3198,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 31,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 9
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 126
     },
     {
@@ -3211,31 +3211,31 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 1337,
+      "aplicadas": 1361,
       "anuladas": 5,
-      "terminadas": 1308,
+      "terminadas": 1332,
       "terminadasApp": 59,
-      "terminadasPapel": 1249,
+      "terminadasPapel": 1273,
       "digitacion": 24,
-      "personas": 3935,
-      "nna": 967,
-      "mayores": 895,
-      "discapacidad": 430,
-      "mujer": 2273,
-      "hombre": 1662,
+      "personas": 4010,
+      "nna": 985,
+      "mayores": 917,
+      "discapacidad": 437,
+      "mujer": 2317,
+      "hombre": 1693,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|NO AFECTADA": 52,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 214,
-        "POCO AFECTADOS|POCO AFECTADA": 219,
-        "NO AFECTADOS|POCO AFECTADA": 305,
+        "NO AFECTADOS|NO AFECTADA": 55,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 217,
+        "POCO AFECTADOS|POCO AFECTADA": 223,
+        "NO AFECTADOS|POCO AFECTADA": 311,
         "NO AFECTADOS|MUY AFECTADA": 22,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 122,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 142,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 126,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 46,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 139,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 35,
         "MUY AFECTADOS|MUY AFECTADA": 72,
-        "POCO AFECTADOS|MUY AFECTADA": 29,
+        "POCO AFECTADOS|MUY AFECTADA": 30,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 19,
         "POCO AFECTADOS|NO AFECTADA": 15,
         "NO AFECTADOS|DESTRUIDA": 2,
@@ -3243,8 +3243,8 @@
         "MUY AFECTADOS|DESTRUIDA": 11,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 362
     },
     {
@@ -3285,8 +3285,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|MUY AFECTADA": 3
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 114
     },
     {
@@ -3298,18 +3298,18 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 484,
+      "aplicadas": 485,
       "anuladas": 10,
-      "terminadas": 461,
+      "terminadas": 462,
       "terminadasApp": 186,
-      "terminadasPapel": 275,
+      "terminadasPapel": 276,
       "digitacion": 13,
-      "personas": 1293,
-      "nna": 333,
+      "personas": 1296,
+      "nna": 334,
       "mayores": 311,
       "discapacidad": 116,
-      "mujer": 668,
-      "hombre": 625,
+      "mujer": 669,
+      "hombre": 627,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 55,
@@ -3317,7 +3317,7 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 49,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 100,
         "POCO AFECTADOS|POCO AFECTADA": 70,
-        "MUY AFECTADOS|MUY AFECTADA": 75,
+        "MUY AFECTADOS|MUY AFECTADA": 76,
         "MUY AFECTADOS|DESTRUIDA": 10,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 9,
         "NO AFECTADOS|MUY AFECTADA": 4,
@@ -3329,8 +3329,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 27
     },
     {
@@ -3342,27 +3342,27 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 749,
+      "aplicadas": 751,
       "anuladas": 1,
-      "terminadas": 734,
+      "terminadas": 736,
       "terminadasApp": 8,
-      "terminadasPapel": 726,
+      "terminadasPapel": 728,
       "digitacion": 14,
-      "personas": 1716,
+      "personas": 1719,
       "nna": 326,
-      "mayores": 573,
+      "mayores": 576,
       "discapacidad": 185,
-      "mujer": 929,
-      "hombre": 787,
+      "mujer": 930,
+      "hombre": 789,
       "otro": 0,
       "matrizAfectacion": {
         "NO AFECTADOS|POCO AFECTADA": 147,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 13,
         "POCO AFECTADOS|POCO AFECTADA": 130,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 23,
-        "NO AFECTADOS|NO AFECTADA": 89,
+        "NO AFECTADOS|NO AFECTADA": 90,
         "MUY AFECTADOS|MUY AFECTADA": 23,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 124,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 125,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 77,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 80,
         "POCO AFECTADOS|NO AFECTADA": 12,
@@ -3372,8 +3372,8 @@
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 0
     },
     {
@@ -3414,8 +3414,8 @@
         "NO AFECTADOS|MUY AFECTADA": 6,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 0
     },
     {
@@ -3460,8 +3460,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 187
     },
     {
@@ -3473,39 +3473,39 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 622,
+      "aplicadas": 633,
       "anuladas": 1,
-      "terminadas": 602,
+      "terminadas": 611,
       "terminadasApp": 0,
-      "terminadasPapel": 602,
-      "digitacion": 19,
-      "personas": 1490,
-      "nna": 325,
-      "mayores": 420,
+      "terminadasPapel": 611,
+      "digitacion": 21,
+      "personas": 1513,
+      "nna": 332,
+      "mayores": 423,
       "discapacidad": 206,
-      "mujer": 797,
-      "hombre": 693,
+      "mujer": 814,
+      "hombre": 699,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 156,
+        "POCO AFECTADOS|POCO AFECTADA": 159,
         "NO AFECTADOS|NO AFECTADA": 34,
-        "NO AFECTADOS|POCO AFECTADA": 83,
+        "NO AFECTADOS|POCO AFECTADA": 85,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 121,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 51,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 52,
         "MUY AFECTADOS|MUY AFECTADA": 32,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 12,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
         "POCO AFECTADOS|NO AFECTADA": 8,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 47,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 49,
+        "POCO AFECTADOS|MUY AFECTADA": 8,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 3,
         "NO AFECTADOS|MUY AFECTADA": 8,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 22,
-        "POCO AFECTADOS|MUY AFECTADA": 7,
         "MUY AFECTADOS|DESTRUIDA": 4
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 142
     },
     {
@@ -3517,29 +3517,29 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 636,
+      "aplicadas": 653,
       "anuladas": 3,
-      "terminadas": 623,
+      "terminadas": 638,
       "terminadasApp": 192,
-      "terminadasPapel": 431,
-      "digitacion": 9,
-      "personas": 1650,
-      "nna": 418,
-      "mayores": 433,
-      "discapacidad": 219,
-      "mujer": 931,
-      "hombre": 719,
+      "terminadasPapel": 446,
+      "digitacion": 11,
+      "personas": 1686,
+      "nna": 422,
+      "mayores": 447,
+      "discapacidad": 227,
+      "mujer": 950,
+      "hombre": 736,
       "otro": 1,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 105,
-        "MUY AFECTADOS|MUY AFECTADA": 45,
+        "POCO AFECTADOS|POCO AFECTADA": 62,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 111,
+        "MUY AFECTADOS|MUY AFECTADA": 46,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 104,
-        "NO AFECTADOS|POCO AFECTADA": 88,
+        "NO AFECTADOS|POCO AFECTADA": 89,
         "POCO AFECTADOS|MUY AFECTADA": 19,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 47,
-        "NO AFECTADOS|MUY AFECTADA": 16,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 50,
+        "NO AFECTADOS|MUY AFECTADA": 18,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 85,
-        "POCO AFECTADOS|POCO AFECTADA": 60,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 19,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 21,
         "POCO AFECTADOS|NO AFECTADA": 3,
@@ -3548,8 +3548,8 @@
         "MUY AFECTADOS|DESTRUIDA": 6,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 150
     },
     {
@@ -3589,8 +3589,8 @@
         "NO AFECTADOS|NO AFECTADA": 6,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 140
     },
     {
@@ -3602,23 +3602,23 @@
       "fechaCreacion": "20/07/2026",
       "id": "149342",
       "alfa": 0,
-      "aplicadas": 388,
+      "aplicadas": 393,
       "anuladas": 0,
-      "terminadas": 381,
-      "terminadasApp": 122,
+      "terminadas": 386,
+      "terminadasApp": 127,
       "terminadasPapel": 259,
       "digitacion": 7,
-      "personas": 851,
-      "nna": 164,
-      "mayores": 300,
+      "personas": 861,
+      "nna": 165,
+      "mayores": 302,
       "discapacidad": 102,
-      "mujer": 474,
-      "hombre": 377,
+      "mujer": 479,
+      "hombre": 382,
       "otro": 0,
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 39,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 25,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 118,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 123,
         "POCO AFECTADOS|POCO AFECTADA": 47,
         "NO AFECTADOS|POCO AFECTADA": 44,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 41,
@@ -3630,8 +3630,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 5,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "19:46",
-      "fechaLlenado": "04-08-2026 19:46",
+      "hora": "21:16",
+      "fechaLlenado": "04-08-2026 21:16",
       "bonoRecuperacion": 0
     },
     {
@@ -3675,8 +3675,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3688,27 +3688,27 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 978,
+      "aplicadas": 982,
       "anuladas": 31,
-      "terminadas": 937,
-      "terminadasApp": 640,
+      "terminadas": 941,
+      "terminadasApp": 644,
       "terminadasPapel": 297,
       "digitacion": 7,
-      "personas": 2445,
-      "nna": 626,
-      "mayores": 572,
+      "personas": 2455,
+      "nna": 628,
+      "mayores": 574,
       "discapacidad": 362,
-      "mujer": 1393,
-      "hombre": 1052,
+      "mujer": 1399,
+      "hombre": 1056,
       "otro": 1,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 134,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 109,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 135,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 111,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 194,
         "MUY AFECTADOS|MUY AFECTADA": 164,
         "POCO AFECTADOS|POCO AFECTADA": 97,
         "NO AFECTADOS|POCO AFECTADA": 59,
-        "NO AFECTADOS|MUY AFECTADA": 18,
+        "NO AFECTADOS|MUY AFECTADA": 19,
         "POCO AFECTADOS|MUY AFECTADA": 46,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 42,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 26,
@@ -3718,8 +3718,8 @@
         "MUY AFECTADOS|DESTRUIDA": 5,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 291
     },
     {
@@ -3731,30 +3731,30 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 1869,
+      "aplicadas": 1871,
       "anuladas": 12,
-      "terminadas": 1823,
-      "terminadasApp": 602,
-      "terminadasPapel": 1221,
-      "digitacion": 31,
-      "personas": 4888,
-      "nna": 1116,
-      "mayores": 1360,
-      "discapacidad": 762,
-      "mujer": 2763,
-      "hombre": 2125,
+      "terminadas": 1827,
+      "terminadasApp": 604,
+      "terminadasPapel": 1223,
+      "digitacion": 29,
+      "personas": 4901,
+      "nna": 1121,
+      "mayores": 1362,
+      "discapacidad": 763,
+      "mujer": 2770,
+      "hombre": 2131,
       "otro": 1,
       "matrizAfectacion": {
         "POCO AFECTADOS|MUY AFECTADA": 55,
         "MUY AFECTADOS|MUY AFECTADA": 346,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 32,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 533,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 536,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 195,
         "NO AFECTADOS|MUY AFECTADA": 29,
         "POCO AFECTADOS|POCO AFECTADA": 149,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 131,
         "NO AFECTADOS|POCO AFECTADA": 90,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 151,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 152,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 32,
         "POCO AFECTADOS|NO AFECTADA": 5,
         "MUY AFECTADOS|DESTRUIDA": 45,
@@ -3762,8 +3762,8 @@
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 338
     },
     {
@@ -3775,39 +3775,39 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 1277,
+      "aplicadas": 1298,
       "anuladas": 20,
-      "terminadas": 1226,
-      "terminadasApp": 401,
-      "terminadasPapel": 825,
+      "terminadas": 1247,
+      "terminadasApp": 415,
+      "terminadasPapel": 832,
       "digitacion": 16,
-      "personas": 3128,
-      "nna": 775,
-      "mayores": 781,
-      "discapacidad": 493,
-      "mujer": 1718,
-      "hombre": 1410,
+      "personas": 3176,
+      "nna": 789,
+      "mayores": 794,
+      "discapacidad": 499,
+      "mujer": 1745,
+      "hombre": 1431,
       "otro": 1,
       "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 270,
+        "MUY AFECTADOS|MUY AFECTADA": 275,
         "NO AFECTADOS|NO AFECTADA": 39,
-        "POCO AFECTADOS|POCO AFECTADA": 128,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 267,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 111,
+        "POCO AFECTADOS|POCO AFECTADA": 129,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 271,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 118,
         "POCO AFECTADOS|MUY AFECTADA": 28,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 77,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 85,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 88,
         "NO AFECTADOS|POCO AFECTADA": 125,
         "NO AFECTADOS|MUY AFECTADA": 27,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 23,
         "POCO AFECTADOS|NO AFECTADA": 2,
         "MUY AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 32,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 33,
         "MUY AFECTADOS|DESTRUIDA": 9
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 549
     },
     {
@@ -3819,28 +3819,28 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 355,
+      "aplicadas": 362,
       "anuladas": 2,
-      "terminadas": 345,
+      "terminadas": 354,
       "terminadasApp": 38,
-      "terminadasPapel": 307,
-      "digitacion": 9,
-      "personas": 864,
-      "nna": 183,
-      "mayores": 263,
-      "discapacidad": 120,
-      "mujer": 446,
-      "hombre": 418,
+      "terminadasPapel": 316,
+      "digitacion": 7,
+      "personas": 887,
+      "nna": 185,
+      "mayores": 268,
+      "discapacidad": 124,
+      "mujer": 458,
+      "hombre": 429,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 99,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 101,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 17,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 58,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 59,
         "NO AFECTADOS|POCO AFECTADA": 22,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 20,
         "MUY AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 26,
-        "POCO AFECTADOS|POCO AFECTADA": 68,
+        "POCO AFECTADOS|POCO AFECTADA": 74,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 6,
@@ -3853,8 +3853,8 @@
         "MUY AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3898,8 +3898,8 @@
         "MUY AFECTADOS|DESTRUIDA": 15,
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 202
     },
     {
@@ -3911,26 +3911,26 @@
       "fechaCreacion": "20/07/2026",
       "id": "149401",
       "alfa": 0,
-      "aplicadas": 1038,
+      "aplicadas": 1056,
       "anuladas": 10,
-      "terminadas": 1003,
-      "terminadasApp": 301,
-      "terminadasPapel": 702,
-      "digitacion": 21,
-      "personas": 2652,
-      "nna": 721,
-      "mayores": 574,
-      "discapacidad": 315,
-      "mujer": 1485,
-      "hombre": 1167,
+      "terminadas": 1022,
+      "terminadasApp": 318,
+      "terminadasPapel": 704,
+      "digitacion": 20,
+      "personas": 2697,
+      "nna": 729,
+      "mayores": 585,
+      "discapacidad": 323,
+      "mujer": 1514,
+      "hombre": 1183,
       "otro": 1,
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 17,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 275,
-        "MUY AFECTADOS|MUY AFECTADA": 161,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 278,
+        "MUY AFECTADOS|MUY AFECTADA": 162,
         "POCO AFECTADOS|POCO AFECTADA": 72,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 109,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 124,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 118,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 130,
         "NO AFECTADOS|POCO AFECTADA": 70,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 9,
         "NO AFECTADOS|NO AFECTADA": 12,
@@ -3942,8 +3942,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "19:59",
-      "fechaLlenado": "04-08-2026 19:59",
+      "hora": "21:29",
+      "fechaLlenado": "04-08-2026 21:29",
       "bonoRecuperacion": 354
     },
     {
