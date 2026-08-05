@@ -62,23 +62,34 @@ async function readGoogleSheetRows() {
     if (!spreadsheetId) return null;
     const token = await getGoogleAccessToken();
     if (!token) throw new Error("Falta GOOGLE_SERVICE_ACCOUNT_JSON para leer GOOGLE_SHEET_ID.");
-    let sheetName = process.env.GOOGLE_SHEET_NAME || "";
-    if (!sheetName) {
-        const metaResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}?fields=sheets.properties.title`, {
-            headers: { Authorization: `Bearer ${token}` }
-        });
-        if (!metaResponse.ok) throw new Error(`Google metadata ${metaResponse.status}: ${await metaResponse.text()}`);
-        const meta = await metaResponse.json();
-        sheetName = meta.sheets?.[0]?.properties?.title;
-    }
-    if (!sheetName) throw new Error("No se pudo determinar la hoja de Google Sheets.");
-    const range = process.env.GOOGLE_SHEET_RANGE || "A:ZZ";
-    const encodedRange = encodeURIComponent(`${sheetName}!${range}`);
-    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodedRange}`, {
+    const metaResponse = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}?fields=sheets.properties.title`, {
         headers: { Authorization: `Bearer ${token}` }
     });
-    if (!response.ok) throw new Error(`Google values ${response.status}: ${await response.text()}`);
-    const values = ((await response.json()).values || []).filter((row) => row.some((value) => String(value || "").trim()));
+    if (!metaResponse.ok) throw new Error(`Google metadata ${metaResponse.status}: ${await metaResponse.text()}`);
+    const meta = await metaResponse.json();
+    const detectedSheetName = meta.sheets?.[0]?.properties?.title || "";
+    const configuredSheetName = String(process.env.GOOGLE_SHEET_NAME || "").trim();
+    const configuredRange = String(process.env.GOOGLE_SHEET_RANGE || "").trim() || "A:ZZ";
+    const sheetCandidates = [configuredSheetName, detectedSheetName].filter(Boolean);
+    const rangeCandidates = [configuredRange, "A:ZZ"];
+    let values = [];
+
+    for (const candidateSheetName of [...new Set(sheetCandidates)]) {
+        for (const candidateRange of [...new Set(rangeCandidates)]) {
+            const encodedRange = encodeURIComponent(`${candidateSheetName}!${candidateRange}`);
+            const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodedRange}`, {
+                headers: { Authorization: `Bearer ${token}` }
+            });
+            if (!response.ok) continue;
+            const candidateValues = ((await response.json()).values || []).filter((row) => row.some((value) => String(value || "").trim()));
+            if (candidateValues.length >= 2) {
+                values = candidateValues;
+                break;
+            }
+        }
+        if (values.length >= 2) break;
+    }
+
     if (values.length < 2) return { datos: [], headers: [] };
     const headers = values[0].map((value) => String(value || "").trim());
     const datos = values.slice(1).filter((row) => row.some((value) => String(value || "").trim())).map((row) => {
