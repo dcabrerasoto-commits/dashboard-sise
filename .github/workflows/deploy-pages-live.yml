@@ -1,6 +1,8 @@
-name: Publicar GitHub Pages Live
+name: Publicar GitHub Pages Live 2
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -9,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-live
+  group: pages-live-v2
   cancel-in-progress: true
 
 jobs:
