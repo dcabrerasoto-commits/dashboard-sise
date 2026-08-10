@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-10T17:08:09",
+  "actualizado": "2026-08-10T17:22:05",
   "busquedaEvento": "Sistema Frontal 27 de julio",
   "eventos": [
     {
@@ -443,27 +443,67 @@
       "comunas": "San Nicolás"
     },
     {
-      "id": "151061; 152140",
+      "id": "151224",
       "nombre": "Sistema Frontal",
-      "region": "Ñuble",
-      "comunas": "Bulnes",
-      "estado": "Activa",
+      "region": "Biobío",
+      "comunas": "Chiguayante",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "151022",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Tomé",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "151461",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Santa Bárbara",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "152062",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Santa Juana",
+      "estado": "finalizada",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "152041",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Contulmo",
+      "estado": "finalizada",
       "fechaCreacion": "30/07/2026"
     },
     {
-      "id": "151202; 152129",
+      "id": "151861",
       "nombre": "Sistema Frontal",
-      "region": "Los Ríos",
-      "comunas": "La Unión",
-      "estado": "Activa",
+      "region": "Biobío",
+      "comunas": "Los Ángeles",
+      "estado": "activa",
       "fechaCreacion": "30/07/2026"
     },
     {
-      "id": "151501; 152181",
+      "id": "152341",
       "nombre": "Sistema Frontal",
-      "region": "Los Ríos",
-      "comunas": "Máfil",
-      "estado": "Activa",
+      "region": "Biobío",
+      "comunas": "Arauco",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152561",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Penco",
+      "estado": "activa",
       "fechaCreacion": "30/07/2026"
     },
     {
@@ -483,10 +523,50 @@
       "fechaCreacion": "30/07/2026"
     },
     {
+      "id": "152486",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Cañete",
+      "estado": "finalizada",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152481",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Tucapel",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152446",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Tomé",
+      "estado": "activa",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "152442",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Coronel",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
       "id": "152941",
       "nombre": "Sistema Frontal",
       "region": "Biobío",
       "comunas": "Mulchén",
+      "estado": "activa",
+      "fechaCreacion": "03/08/2026"
+    },
+    {
+      "id": "152901",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Concepción",
       "estado": "activa",
       "fechaCreacion": "03/08/2026"
     },
@@ -497,6 +577,14 @@
       "comunas": "Florida",
       "estado": "activa",
       "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "152761",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Curanilahue",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
     },
     {
       "id": "152683",
@@ -515,12 +603,44 @@
       "fechaCreacion": "30/07/2026"
     },
     {
+      "id": "153241",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Chiguayante",
+      "estado": "activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
       "id": "153461",
       "nombre": "Sistema Frontal",
       "region": "Biobío",
       "comunas": "Santa Bárbara",
       "estado": "activa",
       "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "152125",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Renaico",
+      "estado": "finalizada",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "151969",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Angol",
+      "estado": "finalizada",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "152424",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Cholchol",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
     },
     {
       "id": "152423",
@@ -531,11 +651,35 @@
       "fechaCreacion": "30/07/2026"
     },
     {
+      "id": "152382",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Lumaco",
+      "estado": "finalizada",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "152381",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Lumaco",
+      "estado": "finalizada",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
       "id": "152321",
       "nombre": "Sistema Frontal",
       "region": "La Araucanía",
       "comunas": "Traiguén",
       "estado": "activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "152264",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Villarrica",
+      "estado": "finalizada",
       "fechaCreacion": "30/07/2026"
     },
     {
@@ -555,10 +699,42 @@
       "fechaCreacion": "31/07/2026"
     },
     {
+      "id": "152961",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Loncoche",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "152741",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Nueva Imperial",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
       "id": "152642",
       "nombre": "Sistema Frontal",
       "region": "La Araucanía",
       "comunas": "Curacautín",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "153261",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Victoria",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "153181",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Freire",
       "estado": "activa",
       "fechaCreacion": "30/07/2026"
     },
@@ -569,6 +745,14 @@
       "comunas": "Vilcún",
       "estado": "activa",
       "fechaCreacion": "07/08/2026"
+    },
+    {
+      "id": "152263",
+      "nombre": "Sistema Frontal",
+      "region": "O’Higgins",
+      "comunas": "Marchihue",
+      "estado": "finalizada",
+      "fechaCreacion": "31/07/2026"
     },
     {
       "id": "152621",
@@ -627,12 +811,44 @@
       "fechaCreacion": "01/08/2026"
     },
     {
+      "id": "152942",
+      "nombre": "Sistema Frontal",
+      "region": "O’Higgins",
+      "comunas": "San Fernando",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
       "id": "152865",
       "nombre": "Sistema Frontal",
       "region": "O’Higgins",
       "comunas": "Nancagua",
       "estado": "activa",
       "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152801",
+      "nombre": "Sistema Frontal",
+      "region": "O’Higgins",
+      "comunas": "Paredones",
+      "estado": "activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "152682",
+      "nombre": "Sistema Frontal",
+      "region": "O’Higgins",
+      "comunas": "Placilla",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152661",
+      "nombre": "Sistema Frontal",
+      "region": "O’Higgins",
+      "comunas": "Palmilla",
+      "estado": "activa",
+      "fechaCreacion": "02/08/2026"
     },
     {
       "id": "153402",
@@ -675,372 +891,12 @@
       "fechaCreacion": "02/08/2026"
     },
     {
-      "id": "152425",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Maule",
-      "estado": "activa",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "152602",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "San Javier",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152496",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Molina",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152495",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Yerbas Buenas",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152492",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "San Clemente",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152485",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Colbún",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152482",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Romeral",
-      "estado": "activa",
-      "fechaCreacion": "02/08/2026"
-    },
-    {
-      "id": "152445",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Longaví",
-      "estado": "activa",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "153001",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Río Claro",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152645",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Talca",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "153481",
-      "nombre": "Sistema Frontal",
-      "region": "Ñuble",
-      "comunas": "Pinto",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152071; 153842",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Vilcún",
-      "estado": "Activa",
-      "fechaCreacion": "07/08/2026"
-    },
-    {
-      "id": "152381; 152382",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Lumaco",
-      "estado": "Activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "151183; 152133",
+      "id": "150844",
       "nombre": "Sistema Frontal",
       "region": "Los Ríos",
-      "comunas": "Paillaco",
-      "estado": "Activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152066; 152445",
-      "nombre": "Sistema Frontal",
-      "region": "Maule",
-      "comunas": "Longaví",
-      "estado": "Activa",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "151242; 151972",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Galvarino",
-      "estado": "Activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "151003; 152131",
-      "nombre": "Sistema Frontal",
-      "region": "Ñuble",
-      "comunas": "San Ignacio",
-      "estado": "Activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "150861; 152138",
-      "nombre": "Sistema Frontal",
-      "region": "Ñuble",
-      "comunas": "San Nicolás",
-      "estado": "Activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "151301; 152121",
-      "nombre": "Sistema Frontal",
-      "region": "Ñuble",
-      "comunas": "Ñiquén",
-      "estado": "Activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "151121; 151902",
-      "nombre": "Sistema Frontal",
-      "region": "Ñuble",
-      "comunas": "Pemuco",
-      "estado": "Activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152062",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Santa Juana",
+      "comunas": "Valdivia",
       "estado": "finalizada",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "152041",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Contulmo",
-      "estado": "finalizada",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "151861",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Los Ángeles",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152341",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Arauco",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152561",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Penco",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152486",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Cañete",
-      "estado": "finalizada",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152481",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Tucapel",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152442",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Coronel",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152901",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Concepción",
-      "estado": "activa",
-      "fechaCreacion": "03/08/2026"
-    },
-    {
-      "id": "152761",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Curanilahue",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "153241",
-      "nombre": "Sistema Frontal",
-      "region": "Biobío",
-      "comunas": "Chiguayante",
-      "estado": "activa",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "152125",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Renaico",
-      "estado": "finalizada",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "151969",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Angol",
-      "estado": "finalizada",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152424",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Cholchol",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152382",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Lumaco",
-      "estado": "finalizada",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152381",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Lumaco",
-      "estado": "finalizada",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152264",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Villarrica",
-      "estado": "finalizada",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152961",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Loncoche",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152741",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Nueva Imperial",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "153261",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Victoria",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "153181",
-      "nombre": "Sistema Frontal",
-      "region": "La Araucanía",
-      "comunas": "Freire",
-      "estado": "activa",
-      "fechaCreacion": "30/07/2026"
-    },
-    {
-      "id": "152263",
-      "nombre": "Sistema Frontal",
-      "region": "O’Higgins",
-      "comunas": "Marchihue",
-      "estado": "finalizada",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "152942",
-      "nombre": "Sistema Frontal",
-      "region": "O’Higgins",
-      "comunas": "San Fernando",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152801",
-      "nombre": "Sistema Frontal",
-      "region": "O’Higgins",
-      "comunas": "Paredones",
-      "estado": "activa",
-      "fechaCreacion": "31/07/2026"
-    },
-    {
-      "id": "152682",
-      "nombre": "Sistema Frontal",
-      "region": "O’Higgins",
-      "comunas": "Placilla",
-      "estado": "activa",
-      "fechaCreacion": "01/08/2026"
-    },
-    {
-      "id": "152661",
-      "nombre": "Sistema Frontal",
-      "region": "O’Higgins",
-      "comunas": "Palmilla",
-      "estado": "activa",
-      "fechaCreacion": "02/08/2026"
+      "fechaCreacion": "26/07/2026"
     },
     {
       "id": "152161",
@@ -1091,6 +947,22 @@
       "fechaCreacion": "31/07/2026"
     },
     {
+      "id": "151281",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Pelarco",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "151421",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Constitución",
+      "estado": "activa",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
       "id": "152136",
       "nombre": "Sistema Frontal",
       "region": "Maule",
@@ -1107,10 +979,50 @@
       "fechaCreacion": "31/07/2026"
     },
     {
+      "id": "152425",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Maule",
+      "estado": "activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "152602",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "San Javier",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
       "id": "152499",
       "nombre": "Sistema Frontal",
       "region": "Maule",
       "comunas": "Curepto",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152496",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Molina",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152495",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Yerbas Buenas",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152492",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "San Clemente",
       "estado": "activa",
       "fechaCreacion": "01/08/2026"
     },
@@ -1120,6 +1032,38 @@
       "region": "Maule",
       "comunas": "Pelluhue",
       "estado": "finalizada",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152485",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Colbún",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "152482",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Romeral",
+      "estado": "activa",
+      "fechaCreacion": "02/08/2026"
+    },
+    {
+      "id": "152445",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Longaví",
+      "estado": "activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "153001",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Río Claro",
+      "estado": "activa",
       "fechaCreacion": "01/08/2026"
     },
     {
@@ -1139,12 +1083,84 @@
       "fechaCreacion": "31/07/2026"
     },
     {
+      "id": "152645",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Talca",
+      "estado": "activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
       "id": "152461",
       "nombre": "Sistema Frontal",
       "region": "Metropolitana de Santiago",
       "comunas": "Puente Alto",
       "estado": "activa",
       "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "150981",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Fabián",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "150944",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Carlos",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "150903",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Ninhue",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "150901",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Chillán",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "150785",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "El Carmen",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "150781",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Quirihue",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "151081",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Coihueco",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "151422",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Pinto",
+      "estado": "finalizada",
+      "fechaCreacion": "26/07/2026"
     },
     {
       "id": "152222",
@@ -1211,12 +1227,60 @@
       "fechaCreacion": "31/07/2026"
     },
     {
+      "id": "153481",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Pinto",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151224; 153241",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Chiguayante",
+      "estado": "Activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
       "id": "151204; 152761",
       "nombre": "Sistema Frontal",
       "region": "Biobío",
       "comunas": "Curanilahue",
       "estado": "Activa",
       "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "151022; 152446",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Tomé",
+      "estado": "Activa",
+      "fechaCreacion": "26/07/2026"
+    },
+    {
+      "id": "151461; 153461",
+      "nombre": "Sistema Frontal",
+      "region": "Biobío",
+      "comunas": "Santa Bárbara",
+      "estado": "Activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "151242; 151972",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Galvarino",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "152071; 153842",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Vilcún",
+      "estado": "Activa",
+      "fechaCreacion": "07/08/2026"
     },
     {
       "id": "151968; 151969",
@@ -1227,10 +1291,42 @@
       "fechaCreacion": "30/07/2026"
     },
     {
+      "id": "152381; 152382",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Lumaco",
+      "estado": "Activa",
+      "fechaCreacion": "01/08/2026"
+    },
+    {
+      "id": "150844; 151802",
+      "nombre": "Sistema Frontal",
+      "region": "Los Ríos",
+      "comunas": "Valdivia",
+      "estado": "Activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
       "id": "151203; 152161",
       "nombre": "Sistema Frontal",
       "region": "Los Ríos",
       "comunas": "Futrono",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151202; 152129",
+      "nombre": "Sistema Frontal",
+      "region": "Los Ríos",
+      "comunas": "La Unión",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151183; 152133",
+      "nombre": "Sistema Frontal",
+      "region": "Los Ríos",
+      "comunas": "Paillaco",
       "estado": "Activa",
       "fechaCreacion": "30/07/2026"
     },
@@ -1251,12 +1347,212 @@
       "fechaCreacion": "30/07/2026"
     },
     {
+      "id": "151501; 152181",
+      "nombre": "Sistema Frontal",
+      "region": "Los Ríos",
+      "comunas": "Máfil",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "152066; 152445",
+      "nombre": "Sistema Frontal",
+      "region": "Maule",
+      "comunas": "Longaví",
+      "estado": "Activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "151003; 152131",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Ignacio",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "150981; 152221",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Fabián",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "150944; 151961",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Carlos",
+      "estado": "Activa",
+      "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "150903; 151971",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Ninhue",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "150901; 152042",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Chillán",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "150861; 152138",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "San Nicolás",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "150785; 152422",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "El Carmen",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "150781; 152361",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Quirihue",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151301; 152121",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Ñiquén",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
       "id": "151141; 153004",
       "nombre": "Sistema Frontal",
       "region": "Ñuble",
       "comunas": "Chillán Viejo",
       "estado": "Activa",
       "fechaCreacion": "31/07/2026"
+    },
+    {
+      "id": "151121; 151902",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Pemuco",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151081; 152222",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Coihueco",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151061; 152140",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Bulnes",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151422; 153481",
+      "nombre": "Sistema Frontal",
+      "region": "Ñuble",
+      "comunas": "Pinto",
+      "estado": "Activa",
+      "fechaCreacion": "30/07/2026"
+    },
+    {
+      "id": "151002",
+      "nombre": "SISTEMA FRONTAL DEL (27-07-2026) EN PORTEZUELO, PORTEZUELO, ?UBLE",
+      "region": "?uble",
+      "comunas": "Portezuelo",
+      "estado": "finalizada",
+      "fechaCreacion": "2026-07-27"
+    },
+    {
+      "id": "151181",
+      "nombre": "SISTEMA FRONTAL DEL (27-07-2026) EN COMUNA LOS LAGOS, LA UNI?N, LOS R?OS",
+      "region": "Los R?os",
+      "comunas": "La Uni?n",
+      "estado": "finalizada",
+      "fechaCreacion": "2026-07-27"
+    },
+    {
+      "id": "151741",
+      "nombre": "SISTEMA FRONTAL DEL (29-07-2026) EN MARIQUINA, LOS R?OS",
+      "region": "Los R?os",
+      "comunas": "Mariquina",
+      "estado": "finalizada",
+      "fechaCreacion": "2026-07-29"
+    },
+    {
+      "id": "152130",
+      "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN LAGO RANCO, LOS R?OS",
+      "region": "Los R?os",
+      "comunas": "Lago Ranco",
+      "estado": "finalizada",
+      "fechaCreacion": "2026-07-30"
+    },
+    {
+      "id": "152137",
+      "nombre": "SISTEMA FRONTAL DEL (31-07-2026) EN LICANT?N, MAULE",
+      "region": "Maule",
+      "comunas": "Licant?n",
+      "estado": "finalizada",
+      "fechaCreacion": "2026-07-31"
+    },
+    {
+      "id": "152490",
+      "nombre": "SISTEMA FRONTAL DEL (01-08-2026) EN SAN CLEMENTE, MAULE",
+      "region": "Maule",
+      "comunas": "San Clemente",
+      "estado": "finalizada",
+      "fechaCreacion": "2026-08-01"
+    },
+    {
+      "id": "152491",
+      "nombre": "SISTEMA FRONTAL DEL (01-08-2026) EN PARRAL, MAULE",
+      "region": "Maule",
+      "comunas": "Parral",
+      "estado": "activa",
+      "fechaCreacion": "2026-08-01"
+    },
+    {
+      "id": "153524",
+      "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN QUILLECO, BIOB?O",
+      "region": "Biob?o",
+      "comunas": "Quilleco",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-30"
+    },
+    {
+      "id": "153701",
+      "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN PUR?N, LA ARAUCAN?A",
+      "region": "La Araucan?a",
+      "comunas": "Pur?n",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-30"
+    },
+    {
+      "id": "153961",
+      "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN TEODORO SCHMIDT, LA ARAUCAN?A",
+      "region": "La Araucan?a",
+      "comunas": "Teodoro Schmidt",
+      "estado": "activa",
+      "fechaCreacion": "2026-07-30"
     }
   ],
   "descargas": [],
@@ -1273,52 +1569,56 @@
   },
   "ritmoDigitacion": [
     {
+      "fechaDigitacion": "27/07/2026",
+      "terminadas": 7
+    },
+    {
       "fechaDigitacion": "28/07/2026",
-      "terminadas": 75
+      "terminadas": 106
     },
     {
       "fechaDigitacion": "29/07/2026",
-      "terminadas": 40
+      "terminadas": 99
     },
     {
       "fechaDigitacion": "30/07/2026",
-      "terminadas": 63
+      "terminadas": 114
     },
     {
       "fechaDigitacion": "31/07/2026",
-      "terminadas": 164
+      "terminadas": 175
     },
     {
       "fechaDigitacion": "01/08/2026",
-      "terminadas": 302
+      "terminadas": 309
     },
     {
       "fechaDigitacion": "02/08/2026",
-      "terminadas": 421
+      "terminadas": 427
     },
     {
       "fechaDigitacion": "03/08/2026",
-      "terminadas": 870
+      "terminadas": 930
     },
     {
       "fechaDigitacion": "04/08/2026",
-      "terminadas": 1015
+      "terminadas": 1042
     },
     {
       "fechaDigitacion": "05/08/2026",
-      "terminadas": 1061
+      "terminadas": 1166
     },
     {
       "fechaDigitacion": "06/08/2026",
-      "terminadas": 773
+      "terminadas": 846
     },
     {
       "fechaDigitacion": "07/08/2026",
-      "terminadas": 1024
+      "terminadas": 1160
     },
     {
       "fechaDigitacion": "08/08/2026",
-      "terminadas": 103
+      "terminadas": 151
     },
     {
       "fechaDigitacion": "09/08/2026",
@@ -1326,10 +1626,50 @@
     },
     {
       "fechaDigitacion": "10/08/2026",
-      "terminadas": 67
+      "terminadas": 111
     }
   ],
   "filas": [
+    {
+      "region": "Biobío",
+      "comuna": "Chiguayante",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "31/07/2026",
+      "fechaOcurrencia": "31/07/2026",
+      "fechaCreacion": "04/08/2026",
+      "fechaDigitacion": "06/08/2026",
+      "id": "151224; 153241",
+      "alfa": 0,
+      "aplicadas": 12,
+      "anuladas": 0,
+      "terminadas": 12,
+      "terminadasApp": 0,
+      "terminadasPapel": 12,
+      "digitacion": 0,
+      "personas": 45,
+      "nna": 11,
+      "mayores": 7,
+      "discapacidad": 9,
+      "mujer": 22,
+      "hombre": 23,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
+        "POCO AFECTADOS|POCO AFECTADA": 2,
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "NO AFECTADOS|POCO AFECTADA": 1,
+        "POCO AFECTADOS|NO AFECTADA": 1
+      },
+      "estadosEvento": {
+        "151224": "finalizada",
+        "153241": "activa"
+      },
+      "estadoEvento": "151224: finalizada; 153241: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
     {
       "region": "Biobío",
       "comuna": "Curanilahue",
@@ -1374,8 +1714,99 @@
         "152761": "activa"
       },
       "estadoEvento": "151204: finalizada; 152761: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Biobío",
+      "comuna": "Tomé",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "26/07/2026",
+      "fechaOcurrencia": "26/07/2026",
+      "fechaCreacion": "02/08/2026",
+      "fechaDigitacion": "07/08/2026",
+      "id": "151022; 152446",
+      "alfa": 0,
+      "aplicadas": 106,
+      "anuladas": 0,
+      "terminadas": 106,
+      "terminadasApp": 0,
+      "terminadasPapel": 106,
+      "digitacion": 0,
+      "personas": 314,
+      "nna": 91,
+      "mayores": 44,
+      "discapacidad": 46,
+      "mujer": 177,
+      "hombre": 137,
+      "otro": 0,
+      "matrizAfectacion": {
+        "NO AFECTADOS|MUY AFECTADA": 4,
+        "POCO AFECTADOS|POCO AFECTADA": 20,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 13,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 14,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 6,
+        "MUY AFECTADOS|POCO AFECTADA": 3,
+        "NO AFECTADOS|POCO AFECTADA": 12,
+        "POCO AFECTADOS|NO AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 3,
+        "POCO AFECTADOS|MUY AFECTADA": 3,
+        "NO AFECTADOS|NO AFECTADA": 8,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "MUY AFECTADOS|DESTRUIDA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3
+      },
+      "estadosEvento": {
+        "151022": "finalizada",
+        "152446": "activa"
+      },
+      "estadoEvento": "151022: finalizada; 152446: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Biobío",
+      "comuna": "Santa Bárbara",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "31/07/2026",
+      "fechaOcurrencia": "31/07/2026",
+      "fechaCreacion": "05/08/2026",
+      "fechaDigitacion": "07/08/2026",
+      "id": "151461; 153461",
+      "alfa": 0,
+      "aplicadas": 85,
+      "anuladas": 1,
+      "terminadas": 83,
+      "terminadasApp": 0,
+      "terminadasPapel": 83,
+      "digitacion": 1,
+      "personas": 207,
+      "nna": 32,
+      "mayores": 45,
+      "discapacidad": 20,
+      "mujer": 111,
+      "hombre": 96,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 62,
+        "POCO AFECTADOS|POCO AFECTADA": 11,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|NO AFECTADA": 1
+      },
+      "estadosEvento": {
+        "151461": "finalizada",
+        "153461": "activa"
+      },
+      "estadoEvento": "151461: finalizada; 153461: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1385,31 +1816,41 @@
       "fechaEvento": "28/07/2026",
       "fechaOcurrencia": "28/07/2026",
       "fechaCreacion": "30/07/2026",
+      "fechaDigitacion": "07/08/2026",
       "id": "151661",
       "alfa": 0,
-      "aplicadas": 46,
-      "anuladas": 2,
-      "terminadas": 42,
+      "aplicadas": 124,
+      "anuladas": 3,
+      "terminadas": 116,
       "terminadasApp": 0,
-      "terminadasPapel": 42,
-      "digitacion": 2,
-      "personas": 132,
-      "nna": 37,
-      "mayores": 21,
-      "discapacidad": 10,
-      "mujer": 72,
-      "hombre": 60,
+      "terminadasPapel": 116,
+      "digitacion": 5,
+      "personas": 349,
+      "nna": 99,
+      "mayores": 60,
+      "discapacidad": 31,
+      "mujer": 197,
+      "hombre": 152,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 25,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 4,
+        "POCO AFECTADOS|POCO AFECTADA": 46,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|NO AFECTADA": 30,
         "NO AFECTADOS|MUY AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "NO AFECTADOS|NO AFECTADA": 3
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 21,
+        "POCO AFECTADOS|NO AFECTADA": 4,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151661": "finalizada"
+      },
+      "estadoEvento": "151661: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1419,28 +1860,35 @@
       "fechaEvento": "27/07/2026",
       "fechaOcurrencia": "27/07/2026",
       "fechaCreacion": "30/07/2026",
+      "fechaDigitacion": "06/08/2026",
       "id": "151641",
       "alfa": 0,
-      "aplicadas": 4,
+      "aplicadas": 10,
       "anuladas": 0,
-      "terminadas": 4,
+      "terminadas": 10,
       "terminadasApp": 0,
-      "terminadasPapel": 4,
+      "terminadasPapel": 10,
       "digitacion": 0,
-      "personas": 11,
-      "nna": 3,
-      "mayores": 3,
-      "discapacidad": 4,
-      "mujer": 6,
-      "hombre": 5,
+      "personas": 27,
+      "nna": 9,
+      "mayores": 4,
+      "discapacidad": 9,
+      "mujer": 15,
+      "hombre": 12,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 1
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151641": "finalizada"
+      },
+      "estadoEvento": "151641: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1474,8 +1922,8 @@
         "152063": "finalizada"
       },
       "estadoEvento": "152063: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1508,8 +1956,12 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152062": "finalizada"
+      },
+      "estadoEvento": "152062: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1546,8 +1998,12 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152041": "finalizada"
+      },
+      "estadoEvento": "152041: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1592,8 +2048,8 @@
         "151861": "activa"
       },
       "estadoEvento": "151861: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1638,8 +2094,8 @@
         "151841": "finalizada"
       },
       "estadoEvento": "151841: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1684,8 +2140,8 @@
         "151805": "finalizada"
       },
       "estadoEvento": "151805: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1727,8 +2183,8 @@
         "152341": "activa"
       },
       "estadoEvento": "152341: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1774,8 +2230,8 @@
         "152282": "activa"
       },
       "estadoEvento": "152282: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1822,8 +2278,8 @@
         "152561": "activa"
       },
       "estadoEvento": "152561: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1853,8 +2309,12 @@
         "POCO AFECTADOS|POCO AFECTADA": 3,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152494": "activa"
+      },
+      "estadoEvento": "152494: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1891,8 +2351,12 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152487": "activa"
+      },
+      "estadoEvento": "152487: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1931,8 +2395,8 @@
         "152486": "finalizada"
       },
       "estadoEvento": "152486: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -1970,8 +2434,8 @@
         "152481": "activa"
       },
       "estadoEvento": "152481: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2012,8 +2476,8 @@
         "152442": "activa"
       },
       "estadoEvento": "152442: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2045,8 +2509,12 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152941": "activa"
+      },
+      "estadoEvento": "152941: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2093,8 +2561,8 @@
         "152901": "activa"
       },
       "estadoEvento": "152901: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2129,8 +2597,12 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152841": "activa"
+      },
+      "estadoEvento": "152841: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2167,8 +2639,12 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152683": "activa"
+      },
+      "estadoEvento": "152683: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2200,83 +2676,12 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Biobío",
-      "comuna": "Chiguayante",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "31/07/2026",
-      "fechaOcurrencia": "31/07/2026",
-      "fechaCreacion": "04/08/2026",
-      "fechaDigitacion": "06/08/2026",
-      "id": "153241",
-      "alfa": 0,
-      "aplicadas": 11,
-      "anuladas": 0,
-      "terminadas": 11,
-      "terminadasApp": 0,
-      "terminadasPapel": 11,
-      "digitacion": 0,
-      "personas": 41,
-      "nna": 10,
-      "mayores": 7,
-      "discapacidad": 9,
-      "mujer": 21,
-      "hombre": 20,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
-        "POCO AFECTADOS|POCO AFECTADA": 2,
-        "NO AFECTADOS|NO AFECTADA": 1,
-        "NO AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "POCO AFECTADOS|NO AFECTADA": 1
-      },
       "estadosEvento": {
-        "153241": "activa"
+        "153262": "activa"
       },
-      "estadoEvento": "153241: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Biobío",
-      "comuna": "Santa Bárbara",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "31/07/2026",
-      "fechaOcurrencia": "31/07/2026",
-      "fechaCreacion": "05/08/2026",
-      "fechaDigitacion": "07/08/2026",
-      "id": "153461",
-      "alfa": 0,
-      "aplicadas": 77,
-      "anuladas": 1,
-      "terminadas": 75,
-      "terminadasApp": 0,
-      "terminadasPapel": 75,
-      "digitacion": 1,
-      "personas": 193,
-      "nna": 32,
-      "mayores": 40,
-      "discapacidad": 15,
-      "mujer": 105,
-      "hombre": 88,
-      "otro": 0,
-      "matrizAfectacion": {
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 55,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 10,
-        "MUY AFECTADOS|MUY AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 1
-      },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadoEvento": "153262: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2320,8 +2725,8 @@
         "151972": "activa"
       },
       "estadoEvento": "151242: finalizada; 151972: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2331,6 +2736,7 @@
       "fechaEvento": "28/07/2026",
       "fechaOcurrencia": "28/07/2026",
       "fechaCreacion": "29/07/2026",
+      "fechaDigitacion": "29/07/2026",
       "id": "151441",
       "alfa": 0,
       "aplicadas": 1,
@@ -2349,8 +2755,12 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151441": "finalizada"
+      },
+      "estadoEvento": "151441: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2386,8 +2796,8 @@
         "152202": "finalizada"
       },
       "estadoEvento": "152202: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2422,8 +2832,12 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152125": "finalizada"
+      },
+      "estadoEvento": "152125: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2457,8 +2871,13 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152071": "finalizada",
+        "153842": "activa"
+      },
+      "estadoEvento": "152071: finalizada; 153842: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2507,8 +2926,8 @@
         "152001": "finalizada"
       },
       "estadoEvento": "152001: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2556,8 +2975,8 @@
         "151968": "activa"
       },
       "estadoEvento": "151968: activa; 151969: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2567,32 +2986,40 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "06/08/2026",
       "id": "151963",
       "alfa": 0,
-      "aplicadas": 30,
+      "aplicadas": 101,
       "anuladas": 0,
-      "terminadas": 29,
+      "terminadas": 101,
       "terminadasApp": 0,
-      "terminadasPapel": 29,
-      "digitacion": 1,
-      "personas": 73,
-      "nna": 18,
-      "mayores": 17,
-      "discapacidad": 13,
-      "mujer": 41,
-      "hombre": 32,
+      "terminadasPapel": 101,
+      "digitacion": 0,
+      "personas": 269,
+      "nna": 79,
+      "mayores": 44,
+      "discapacidad": 28,
+      "mujer": 147,
+      "hombre": 122,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 10,
-        "POCO AFECTADOS|NO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 7,
-        "POCO AFECTADOS|POCO AFECTADA": 7,
-        "NO AFECTADOS|NO AFECTADA": 1,
-        "NO AFECTADOS|POCO AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 37,
+        "POCO AFECTADOS|NO AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 25,
+        "POCO AFECTADOS|POCO AFECTADA": 26,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "NO AFECTADOS|POCO AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "NO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151963": "finalizada"
+      },
+      "estadoEvento": "151963: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2629,8 +3056,8 @@
         "152424": "activa"
       },
       "estadoEvento": "152424: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2664,8 +3091,12 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152423": "activa"
+      },
+      "estadoEvento": "152423: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2697,8 +3128,13 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 14,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152382": "finalizada",
+        "152381": "finalizada"
+      },
+      "estadoEvento": "152381: finalizada; 152382: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2734,8 +3170,12 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152321": "activa"
+      },
+      "estadoEvento": "152321: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2769,8 +3209,12 @@
         "MUY AFECTADOS|MUY AFECTADA": 9,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152264": "finalizada"
+      },
+      "estadoEvento": "152264: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2808,8 +3252,12 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152583": "activa"
+      },
+      "estadoEvento": "152583: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2850,8 +3298,8 @@
         "152581": "activa"
       },
       "estadoEvento": "152581: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2881,8 +3329,12 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153024": "activa"
+      },
+      "estadoEvento": "153024: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2922,8 +3374,8 @@
         "152961": "activa"
       },
       "estadoEvento": "152961: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2958,8 +3410,8 @@
         "152741": "activa"
       },
       "estadoEvento": "152741: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -2988,8 +3440,12 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152642": "activa"
+      },
+      "estadoEvento": "152642: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3028,8 +3484,8 @@
         "153261": "activa"
       },
       "estadoEvento": "153261: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3068,8 +3524,8 @@
         "153181": "activa"
       },
       "estadoEvento": "153181: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3108,8 +3564,8 @@
         "152263": "finalizada"
       },
       "estadoEvento": "152263: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3148,8 +3604,12 @@
         "NO AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152621": "activa"
+      },
+      "estadoEvento": "152621: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3184,8 +3644,12 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152488": "activa"
+      },
+      "estadoEvento": "152488: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3215,8 +3679,12 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 35,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153061": "activa"
+      },
+      "estadoEvento": "153061: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3246,8 +3714,12 @@
         "POCO AFECTADOS|POCO AFECTADA": 4,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153025": "activa"
+      },
+      "estadoEvento": "153025: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3278,8 +3750,12 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153003": "activa"
+      },
+      "estadoEvento": "153003: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3309,8 +3785,12 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153002": "activa"
+      },
+      "estadoEvento": "153002: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3342,8 +3822,12 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152945": "activa"
+      },
+      "estadoEvento": "152945: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3378,8 +3862,8 @@
         "152942": "activa"
       },
       "estadoEvento": "152942: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3411,8 +3895,12 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152865": "activa"
+      },
+      "estadoEvento": "152865: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3451,8 +3939,8 @@
         "152801": "activa"
       },
       "estadoEvento": "152801: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3487,8 +3975,8 @@
         "152682": "activa"
       },
       "estadoEvento": "152682: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3525,8 +4013,8 @@
         "152661": "activa"
       },
       "estadoEvento": "152661: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3559,8 +4047,12 @@
         "POCO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153402": "activa"
+      },
+      "estadoEvento": "153402: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3590,8 +4082,12 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153101": "activa"
+      },
+      "estadoEvento": "153101: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3622,8 +4118,12 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153521": "activa"
+      },
+      "estadoEvento": "153521: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3652,8 +4152,12 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153501": "activa"
+      },
+      "estadoEvento": "153501: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3683,8 +4187,56 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153464": "activa"
+      },
+      "estadoEvento": "153464: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Los Ríos",
+      "comuna": "Valdivia",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "31/07/2026",
+      "fechaOcurrencia": "31/07/2026",
+      "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "05/08/2026",
+      "id": "150844; 151802",
+      "alfa": 0,
+      "aplicadas": 65,
+      "anuladas": 3,
+      "terminadas": 57,
+      "terminadasApp": 0,
+      "terminadasPapel": 57,
+      "digitacion": 4,
+      "personas": 163,
+      "nna": 37,
+      "mayores": 28,
+      "discapacidad": 17,
+      "mujer": 92,
+      "hombre": 71,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|POCO AFECTADA": 17,
+        "MUY AFECTADOS|MUY AFECTADA": 7,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 19,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 6,
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "NO AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "150844": "finalizada",
+        "151802": "finalizada"
+      },
+      "estadoEvento": "150844: finalizada; 151802: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3694,6 +4246,7 @@
       "fechaEvento": "27/07/2026",
       "fechaOcurrencia": "27/07/2026",
       "fechaCreacion": "28/07/2026",
+      "fechaDigitacion": "28/07/2026",
       "id": "151223",
       "alfa": 0,
       "aplicadas": 24,
@@ -3712,8 +4265,12 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 23
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151223": "finalizada"
+      },
+      "estadoEvento": "151223: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3753,8 +4310,8 @@
         "152161": "finalizada"
       },
       "estadoEvento": "151203: finalizada; 152161: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3764,39 +4321,46 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "05/08/2026",
       "id": "151202; 152129",
       "alfa": 0,
-      "aplicadas": 221,
+      "aplicadas": 299,
       "anuladas": 0,
-      "terminadas": 204,
+      "terminadas": 280,
       "terminadasApp": 21,
-      "terminadasPapel": 183,
-      "digitacion": 17,
-      "personas": 484,
-      "nna": 72,
-      "mayores": 141,
-      "discapacidad": 58,
-      "mujer": 259,
-      "hombre": 225,
+      "terminadasPapel": 259,
+      "digitacion": 19,
+      "personas": 653,
+      "nna": 101,
+      "mayores": 200,
+      "discapacidad": 76,
+      "mujer": 354,
+      "hombre": 299,
       "otro": 0,
       "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 6,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 20,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 23,
-        "MUY AFECTADOS|MUY AFECTADA": 75,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 36,
+        "NO AFECTADOS|POCO AFECTADA": 8,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 26,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 26,
+        "MUY AFECTADOS|MUY AFECTADA": 113,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 52,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
-        "POCO AFECTADOS|POCO AFECTADA": 20,
+        "POCO AFECTADOS|POCO AFECTADA": 25,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 3,
-        "NO AFECTADOS|NO AFECTADA": 3,
-        "MUY AFECTADOS|DESTRUIDA": 5,
-        "NO AFECTADOS|MUY AFECTADA": 2,
-        "POCO AFECTADOS|NO AFECTADA": 1
+        "NO AFECTADOS|NO AFECTADA": 4,
+        "MUY AFECTADOS|DESTRUIDA": 7,
+        "NO AFECTADOS|MUY AFECTADA": 1,
+        "POCO AFECTADOS|NO AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151202": "finalizada",
+        "152129": "finalizada"
+      },
+      "estadoEvento": "151202: finalizada; 152129: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3833,8 +4397,13 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151183": "finalizada",
+        "152133": "finalizada"
+      },
+      "estadoEvento": "151183: finalizada; 152133: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3874,8 +4443,8 @@
         "152068": "finalizada"
       },
       "estadoEvento": "151161: finalizada; 152068: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3915,8 +4484,8 @@
         "152126": "finalizada"
       },
       "estadoEvento": "151104: finalizada; 152126: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3926,30 +4495,36 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "01/08/2026",
       "id": "151501; 152181",
       "alfa": 0,
       "aplicadas": 12,
       "anuladas": 0,
-      "terminadas": 11,
+      "terminadas": 12,
       "terminadasApp": 0,
-      "terminadasPapel": 11,
-      "digitacion": 1,
-      "personas": 28,
+      "terminadasPapel": 12,
+      "digitacion": 0,
+      "personas": 29,
       "nna": 7,
-      "mayores": 6,
-      "discapacidad": 6,
+      "mayores": 7,
+      "discapacidad": 7,
       "mujer": 13,
-      "hombre": 15,
+      "hombre": 16,
       "otro": 0,
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 5,
         "NO AFECTADOS|POCO AFECTADA": 1,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151501": "finalizada",
+        "152181": "finalizada"
+      },
+      "estadoEvento": "151501: finalizada; 152181: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -3959,66 +4534,36 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "06/08/2026",
       "id": "152081",
       "alfa": 0,
-      "aplicadas": 7,
+      "aplicadas": 13,
       "anuladas": 1,
-      "terminadas": 6,
+      "terminadas": 12,
       "terminadasApp": 0,
-      "terminadasPapel": 6,
+      "terminadasPapel": 12,
       "digitacion": 0,
-      "personas": 22,
-      "nna": 10,
+      "personas": 43,
+      "nna": 20,
       "mayores": 2,
-      "discapacidad": 1,
-      "mujer": 12,
-      "hombre": 10,
-      "otro": 0,
-      "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
-      },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Los Ríos",
-      "comuna": "Valdivia",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "31/07/2026",
-      "fechaOcurrencia": "31/07/2026",
-      "fechaCreacion": "31/07/2026",
-      "fechaDigitacion": "05/08/2026",
-      "id": "151802",
-      "alfa": 0,
-      "aplicadas": 16,
-      "anuladas": 1,
-      "terminadas": 13,
-      "terminadasApp": 0,
-      "terminadasPapel": 13,
-      "digitacion": 1,
-      "personas": 39,
-      "nna": 11,
-      "mayores": 6,
-      "discapacidad": 6,
+      "discapacidad": 3,
       "mujer": 22,
-      "hombre": 17,
+      "hombre": 21,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 5,
-        "POCO AFECTADOS|POCO AFECTADA": 3,
+        "POCO AFECTADOS|POCO AFECTADA": 5,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|MUY AFECTADA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 2
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|POCO AFECTADA": 1
       },
       "estadosEvento": {
-        "151802": "finalizada"
+        "152081": "finalizada"
       },
-      "estadoEvento": "151802: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadoEvento": "152081: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4052,8 +4597,8 @@
         "152262": "finalizada"
       },
       "estadoEvento": "152262: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4086,8 +4631,45 @@
         "152582": "activa"
       },
       "estadoEvento": "152582: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Maule",
+      "comuna": "Pelarco",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "26/07/2026",
+      "fechaOcurrencia": "26/07/2026",
+      "fechaCreacion": "28/07/2026",
+      "fechaDigitacion": "31/07/2026",
+      "id": "151281",
+      "alfa": 0,
+      "aplicadas": 4,
+      "anuladas": 0,
+      "terminadas": 4,
+      "terminadasApp": 0,
+      "terminadasPapel": 4,
+      "digitacion": 0,
+      "personas": 12,
+      "nna": 3,
+      "mayores": 1,
+      "discapacidad": 1,
+      "mujer": 5,
+      "hombre": 7,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "151281": "finalizada"
+      },
+      "estadoEvento": "151281: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4129,8 +4711,8 @@
         "151241": "finalizada"
       },
       "estadoEvento": "151241: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4140,30 +4722,83 @@
       "fechaEvento": "27/07/2026",
       "fechaOcurrencia": "27/07/2026",
       "fechaCreacion": "28/07/2026",
+      "fechaDigitacion": "04/08/2026",
       "id": "151222",
       "alfa": 0,
-      "aplicadas": 17,
-      "anuladas": 0,
-      "terminadas": 17,
+      "aplicadas": 39,
+      "anuladas": 1,
+      "terminadas": 38,
       "terminadasApp": 0,
-      "terminadasPapel": 17,
+      "terminadasPapel": 38,
       "digitacion": 0,
-      "personas": 46,
-      "nna": 15,
-      "mayores": 9,
-      "discapacidad": 7,
-      "mujer": 23,
-      "hombre": 23,
+      "personas": 106,
+      "nna": 27,
+      "mayores": 25,
+      "discapacidad": 20,
+      "mujer": 56,
+      "hombre": 50,
       "otro": 0,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|POCO AFECTADA": 11,
-        "POCO AFECTADOS|POCO AFECTADA": 2,
+        "NO AFECTADOS|POCO AFECTADA": 19,
+        "POCO AFECTADOS|POCO AFECTADA": 15,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151222": "activa"
+      },
+      "estadoEvento": "151222: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Maule",
+      "comuna": "Constitución",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "26/07/2026",
+      "fechaOcurrencia": "26/07/2026",
+      "fechaCreacion": "29/07/2026",
+      "fechaDigitacion": "05/08/2026",
+      "id": "151421",
+      "alfa": 0,
+      "aplicadas": 419,
+      "anuladas": 23,
+      "terminadas": 387,
+      "terminadasApp": 0,
+      "terminadasPapel": 387,
+      "digitacion": 5,
+      "personas": 1033,
+      "nna": 224,
+      "mayores": 233,
+      "discapacidad": 72,
+      "mujer": 569,
+      "hombre": 464,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|POCO AFECTADA": 105,
+        "NO AFECTADOS|NO AFECTADA": 9,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 19,
+        "NO AFECTADOS|POCO AFECTADA": 19,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 84,
+        "MUY AFECTADOS|POCO AFECTADA": 10,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 53,
+        "POCO AFECTADOS|NO AFECTADA": 19,
+        "MUY AFECTADOS|MUY AFECTADA": 34,
+        "MUY AFECTADOS|DESTRUIDA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 10,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 8,
+        "NO AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "151421": "activa"
+      },
+      "estadoEvento": "151421: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4198,8 +4833,8 @@
         "152136": "finalizada"
       },
       "estadoEvento": "152136: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4234,8 +4869,8 @@
         "152123": "finalizada"
       },
       "estadoEvento": "152123: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4271,8 +4906,13 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152066": "finalizada",
+        "152445": "activa"
+      },
+      "estadoEvento": "152066: finalizada; 152445: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4314,8 +4954,8 @@
         "151973": "finalizada"
       },
       "estadoEvento": "151973: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4354,8 +4994,8 @@
         "151881": "finalizada"
       },
       "estadoEvento": "151881: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4391,8 +5031,12 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152425": "activa"
+      },
+      "estadoEvento": "152425: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4436,8 +5080,8 @@
         "152421": "finalizada"
       },
       "estadoEvento": "152421: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4447,29 +5091,34 @@
       "fechaEvento": "02/08/2026",
       "fechaOcurrencia": "02/08/2026",
       "fechaCreacion": "02/08/2026",
+      "fechaDigitacion": "03/08/2026",
       "id": "152603",
       "alfa": 0,
-      "aplicadas": 7,
+      "aplicadas": 8,
       "anuladas": 0,
-      "terminadas": 6,
+      "terminadas": 8,
       "terminadasApp": 0,
-      "terminadasPapel": 6,
-      "digitacion": 1,
-      "personas": 14,
-      "nna": 3,
+      "terminadasPapel": 8,
+      "digitacion": 0,
+      "personas": 20,
+      "nna": 4,
       "mayores": 7,
       "discapacidad": 2,
-      "mujer": 6,
-      "hombre": 8,
+      "mujer": 8,
+      "hombre": 12,
       "otro": 0,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
         "NO AFECTADOS|NO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "POCO AFECTADOS|POCO AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152603": "activa"
+      },
+      "estadoEvento": "152603: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4501,8 +5150,12 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 6
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152602": "activa"
+      },
+      "estadoEvento": "152602: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4512,29 +5165,34 @@
       "fechaEvento": "01/08/2026",
       "fechaOcurrencia": "01/08/2026",
       "fechaCreacion": "02/08/2026",
+      "fechaDigitacion": "07/08/2026",
       "id": "152521",
       "alfa": 0,
-      "aplicadas": 8,
+      "aplicadas": 15,
       "anuladas": 0,
-      "terminadas": 8,
+      "terminadas": 15,
       "terminadasApp": 0,
-      "terminadasPapel": 8,
+      "terminadasPapel": 15,
       "digitacion": 0,
-      "personas": 24,
-      "nna": 8,
-      "mayores": 2,
-      "discapacidad": 1,
-      "mujer": 14,
-      "hombre": 10,
+      "personas": 48,
+      "nna": 17,
+      "mayores": 6,
+      "discapacidad": 6,
+      "mujer": 26,
+      "hombre": 22,
       "otro": 0,
       "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 3,
-        "NO AFECTADOS|POCO AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 7,
+        "NO AFECTADOS|POCO AFECTADA": 5,
         "NO AFECTADOS|NO AFECTADA": 2,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152521": "activa"
+      },
+      "estadoEvento": "152521: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4570,8 +5228,8 @@
         "152499": "activa"
       },
       "estadoEvento": "152499: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4609,8 +5267,12 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|DESTRUIDA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152496": "activa"
+      },
+      "estadoEvento": "152496: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4640,8 +5302,12 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152495": "activa"
+      },
+      "estadoEvento": "152495: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4672,8 +5338,12 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152492": "activa"
+      },
+      "estadoEvento": "152492: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4714,8 +5384,8 @@
         "152489": "finalizada"
       },
       "estadoEvento": "152489: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4750,8 +5420,12 @@
         "NO AFECTADOS|DESTRUIDA": 1,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152485": "activa"
+      },
+      "estadoEvento": "152485: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4781,8 +5455,12 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152482": "activa"
+      },
+      "estadoEvento": "152482: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4792,6 +5470,7 @@
       "fechaEvento": "02/08/2026",
       "fechaOcurrencia": "02/08/2026",
       "fechaCreacion": "02/08/2026",
+      "fechaDigitacion": "02/08/2026",
       "id": "152443",
       "alfa": 0,
       "aplicadas": 3,
@@ -4811,8 +5490,12 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152443": "activa"
+      },
+      "estadoEvento": "152443: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4844,8 +5527,12 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "153001": "activa"
+      },
+      "estadoEvento": "153001: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4881,8 +5568,8 @@
         "152982": "activa"
       },
       "estadoEvento": "152982: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4922,8 +5609,8 @@
         "152701": "activa"
       },
       "estadoEvento": "152701: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4957,8 +5644,12 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152645": "activa"
+      },
+      "estadoEvento": "152645: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -4968,26 +5659,33 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "06/08/2026",
       "id": "151941",
       "alfa": 0,
-      "aplicadas": 1,
+      "aplicadas": 4,
       "anuladas": 0,
-      "terminadas": 1,
+      "terminadas": 4,
       "terminadasApp": 0,
-      "terminadasPapel": 1,
+      "terminadasPapel": 4,
       "digitacion": 0,
-      "personas": 1,
+      "personas": 5,
       "nna": 0,
-      "mayores": 0,
+      "mayores": 2,
       "discapacidad": 0,
-      "mujer": 0,
-      "hombre": 1,
+      "mujer": 3,
+      "hombre": 2,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|DESTRUIDA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "151941": "finalizada"
+      },
+      "estadoEvento": "151941: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5022,8 +5720,8 @@
         "152461": "activa"
       },
       "estadoEvento": "152461: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5065,8 +5763,189 @@
         "152131": "finalizada"
       },
       "estadoEvento": "151003: finalizada; 152131: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "San Fabián",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "06/08/2026",
+      "id": "150981; 152221",
+      "alfa": 0,
+      "aplicadas": 68,
+      "anuladas": 0,
+      "terminadas": 67,
+      "terminadasApp": 2,
+      "terminadasPapel": 65,
+      "digitacion": 1,
+      "personas": 181,
+      "nna": 44,
+      "mayores": 40,
+      "discapacidad": 22,
+      "mujer": 88,
+      "hombre": 93,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|POCO AFECTADA": 18,
+        "NO AFECTADOS|POCO AFECTADA": 15,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 13,
+        "MUY AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3
+      },
+      "estadosEvento": {
+        "150981": "finalizada",
+        "152221": "finalizada"
+      },
+      "estadoEvento": "150981: finalizada; 152221: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "San Carlos",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "31/07/2026",
+      "fechaOcurrencia": "31/07/2026",
+      "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "05/08/2026",
+      "id": "150944; 151961",
+      "alfa": 0,
+      "aplicadas": 91,
+      "anuladas": 1,
+      "terminadas": 90,
+      "terminadasApp": 0,
+      "terminadasPapel": 90,
+      "digitacion": 0,
+      "personas": 287,
+      "nna": 94,
+      "mayores": 28,
+      "discapacidad": 23,
+      "mujer": 158,
+      "hombre": 129,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
+        "POCO AFECTADOS|POCO AFECTADA": 23,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 12,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 20,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 1,
+        "NO AFECTADOS|POCO AFECTADA": 12,
+        "MUY AFECTADOS|MUY AFECTADA": 2,
+        "NO AFECTADOS|NO AFECTADA": 3,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
+        "POCO AFECTADOS|NO AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
+        "POCO AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "150944": "finalizada",
+        "151961": "finalizada"
+      },
+      "estadoEvento": "150944: finalizada; 151961: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "Ninhue",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "06/08/2026",
+      "id": "150903; 151971",
+      "alfa": 0,
+      "aplicadas": 45,
+      "anuladas": 0,
+      "terminadas": 45,
+      "terminadasApp": 0,
+      "terminadasPapel": 45,
+      "digitacion": 0,
+      "personas": 111,
+      "nna": 28,
+      "mayores": 28,
+      "discapacidad": 14,
+      "mujer": 59,
+      "hombre": 52,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|NO AFECTADA": 10,
+        "POCO AFECTADOS|POCO AFECTADA": 17,
+        "NO AFECTADOS|NO AFECTADA": 4,
+        "MUY AFECTADOS|MUY AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
+        "NO AFECTADOS|POCO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "150903": "finalizada",
+        "151971": "finalizada"
+      },
+      "estadoEvento": "150903: finalizada; 151971: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "Chillán",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "31/07/2026",
+      "fechaDigitacion": "06/08/2026",
+      "id": "150901; 152042",
+      "alfa": 0,
+      "aplicadas": 83,
+      "anuladas": 3,
+      "terminadas": 80,
+      "terminadasApp": 0,
+      "terminadasPapel": 80,
+      "digitacion": 0,
+      "personas": 247,
+      "nna": 70,
+      "mayores": 40,
+      "discapacidad": 28,
+      "mujer": 130,
+      "hombre": 117,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|POCO AFECTADA": 9,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 30,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MUY AFECTADOS|MUY AFECTADA": 5,
+        "NO AFECTADOS|POCO AFECTADA": 5,
+        "MUY AFECTADOS|DESTRUIDA": 8,
+        "NO AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
+        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|NO AFECTADA": 12,
+        "POCO AFECTADOS|NO AFECTADA": 3,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "150901": "finalizada",
+        "152042": "finalizada"
+      },
+      "estadoEvento": "150901: finalizada; 152042: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5110,8 +5989,95 @@
         "152138": "finalizada"
       },
       "estadoEvento": "150861: finalizada; 152138: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "El Carmen",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "01/08/2026",
+      "fechaDigitacion": "05/08/2026",
+      "id": "150785; 152422",
+      "alfa": 0,
+      "aplicadas": 34,
+      "anuladas": 0,
+      "terminadas": 34,
+      "terminadasApp": 0,
+      "terminadasPapel": 34,
+      "digitacion": 0,
+      "personas": 94,
+      "nna": 34,
+      "mayores": 15,
+      "discapacidad": 15,
+      "mujer": 50,
+      "hombre": 44,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 16,
+        "POCO AFECTADOS|POCO AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|DESTRUIDA": 2,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 5,
+        "MUY AFECTADOS|DESTRUIDA": 3,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2
+      },
+      "estadosEvento": {
+        "150785": "finalizada",
+        "152422": "finalizada"
+      },
+      "estadoEvento": "150785: finalizada; 152422: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "Quirihue",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "01/08/2026",
+      "fechaDigitacion": "06/08/2026",
+      "id": "150781; 152361",
+      "alfa": 0,
+      "aplicadas": 52,
+      "anuladas": 1,
+      "terminadas": 51,
+      "terminadasApp": 2,
+      "terminadasPapel": 49,
+      "digitacion": 0,
+      "personas": 125,
+      "nna": 29,
+      "mayores": 30,
+      "discapacidad": 21,
+      "mujer": 69,
+      "hombre": 56,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 10,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "MUY AFECTADOS|MUY AFECTADA": 4,
+        "NO AFECTADOS|POCO AFECTADA": 7,
+        "POCO AFECTADOS|MUY AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
+      },
+      "estadosEvento": {
+        "150781": "finalizada",
+        "152361": "finalizada"
+      },
+      "estadoEvento": "150781: finalizada; 152361: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5154,8 +6120,8 @@
         "152121": "finalizada"
       },
       "estadoEvento": "151301: finalizada; 152121: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5193,8 +6159,8 @@
         "153004": "activa"
       },
       "estadoEvento": "151141: finalizada; 153004: activa",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5238,40 +6204,8 @@
         "151902": "finalizada"
       },
       "estadoEvento": "151121: finalizada; 151902: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "Bulnes",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "30/07/2026",
-      "fechaOcurrencia": "30/07/2026",
-      "fechaCreacion": "31/07/2026",
-      "id": "151061; 152140",
-      "alfa": 0,
-      "aplicadas": 18,
-      "anuladas": 0,
-      "terminadas": 17,
-      "terminadasApp": 0,
-      "terminadasPapel": 17,
-      "digitacion": 1,
-      "personas": 47,
-      "nna": 11,
-      "mayores": 9,
-      "discapacidad": 4,
-      "mujer": 24,
-      "hombre": 23,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "MUY AFECTADOS|DESTRUIDA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 10,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2
-      },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5282,80 +6216,121 @@
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
       "fechaDigitacion": "05/08/2026",
-      "id": "152222",
+      "id": "151081; 152222",
       "alfa": 0,
-      "aplicadas": 58,
+      "aplicadas": 65,
       "anuladas": 1,
-      "terminadas": 57,
+      "terminadas": 64,
       "terminadasApp": 0,
-      "terminadasPapel": 57,
+      "terminadasPapel": 64,
       "digitacion": 0,
-      "personas": 195,
-      "nna": 67,
-      "mayores": 32,
-      "discapacidad": 5,
-      "mujer": 98,
-      "hombre": 97,
+      "personas": 224,
+      "nna": 82,
+      "mayores": 33,
+      "discapacidad": 8,
+      "mujer": 119,
+      "hombre": 105,
       "otro": 0,
       "matrizAfectacion": {
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 7,
+        "NO AFECTADOS|POCO AFECTADA": 7,
+        "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 13,
-        "POCO AFECTADOS|NO AFECTADA": 1,
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 17,
         "NO AFECTADOS|NO AFECTADA": 2,
-        "NO AFECTADOS|POCO AFECTADA": 5,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 5,
         "MUY AFECTADOS|MUY AFECTADA": 9,
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
       "estadosEvento": {
+        "151081": "finalizada",
         "152222": "finalizada"
       },
-      "estadoEvento": "152222: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadoEvento": "151081: finalizada; 152222: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
-      "comuna": "San Fabián",
+      "comuna": "Bulnes",
       "evento": "Sistema Frontal",
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "31/07/2026",
       "fechaDigitacion": "06/08/2026",
-      "id": "152221",
+      "id": "151061; 152140",
       "alfa": 0,
-      "aplicadas": 56,
-      "anuladas": 0,
-      "terminadas": 56,
-      "terminadasApp": 2,
-      "terminadasPapel": 54,
+      "aplicadas": 112,
+      "anuladas": 1,
+      "terminadas": 111,
+      "terminadasApp": 0,
+      "terminadasPapel": 111,
       "digitacion": 0,
-      "personas": 151,
-      "nna": 37,
-      "mayores": 33,
-      "discapacidad": 13,
-      "mujer": 73,
-      "hombre": 78,
+      "personas": 314,
+      "nna": 121,
+      "mayores": 24,
+      "discapacidad": 19,
+      "mujer": 193,
+      "hombre": 121,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 10,
-        "POCO AFECTADOS|POCO AFECTADA": 13,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
-        "NO AFECTADOS|POCO AFECTADA": 14,
-        "NO AFECTADOS|NO AFECTADA": 2,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 22,
+        "MUY AFECTADOS|DESTRUIDA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 19,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 6,
+        "POCO AFECTADOS|POCO AFECTADA": 40,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "NO AFECTADOS|POCO AFECTADA": 20,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
       "estadosEvento": {
-        "152221": "finalizada"
+        "151061": "finalizada",
+        "152140": "finalizada"
       },
-      "estadoEvento": "152221: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadoEvento": "151061: finalizada; 152140: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Ñuble",
+      "comuna": "Pinto",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "05/08/2026",
+      "fechaDigitacion": "06/08/2026",
+      "id": "151422; 153481",
+      "alfa": 0,
+      "aplicadas": 11,
+      "anuladas": 0,
+      "terminadas": 11,
+      "terminadasApp": 0,
+      "terminadasPapel": 11,
+      "digitacion": 0,
+      "personas": 32,
+      "nna": 8,
+      "mayores": 6,
+      "discapacidad": 6,
+      "mujer": 15,
+      "hombre": 17,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "NO AFECTADOS|NO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 6,
+        "MUY AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "151422": "finalizada",
+        "153481": "activa"
+      },
+      "estadoEvento": "151422: finalizada; 153481: activa",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5398,8 +6373,12 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "estadosEvento": {
+        "152141": "finalizada"
+      },
+      "estadoEvento": "152141: finalizada",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5442,8 +6421,8 @@
         "152139": "finalizada"
       },
       "estadoEvento": "152139: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5484,8 +6463,8 @@
         "152128": "finalizada"
       },
       "estadoEvento": "152128: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5528,94 +6507,8 @@
         "152070": "finalizada"
       },
       "estadoEvento": "152070: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "Chillán",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "30/07/2026",
-      "fechaOcurrencia": "30/07/2026",
-      "fechaCreacion": "31/07/2026",
-      "fechaDigitacion": "06/08/2026",
-      "id": "152042",
-      "alfa": 0,
-      "aplicadas": 49,
-      "anuladas": 3,
-      "terminadas": 46,
-      "terminadasApp": 0,
-      "terminadasPapel": 46,
-      "digitacion": 0,
-      "personas": 157,
-      "nna": 46,
-      "mayores": 23,
-      "discapacidad": 20,
-      "mujer": 82,
-      "hombre": 75,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 13,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
-        "NO AFECTADOS|NO AFECTADA": 12,
-        "MUY AFECTADOS|MUY AFECTADA": 3,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "POCO AFECTADOS|NO AFECTADA": 3,
-        "NO AFECTADOS|POCO AFECTADA": 4,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 4,
-        "MUY AFECTADOS|DESTRUIDA": 2
-      },
-      "estadosEvento": {
-        "152042": "finalizada"
-      },
-      "estadoEvento": "152042: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "Ninhue",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "30/07/2026",
-      "fechaOcurrencia": "30/07/2026",
-      "fechaCreacion": "31/07/2026",
-      "fechaDigitacion": "06/08/2026",
-      "id": "151971",
-      "alfa": 0,
-      "aplicadas": 41,
-      "anuladas": 0,
-      "terminadas": 41,
-      "terminadasApp": 0,
-      "terminadasPapel": 41,
-      "digitacion": 0,
-      "personas": 100,
-      "nna": 26,
-      "mayores": 26,
-      "discapacidad": 13,
-      "mujer": 55,
-      "hombre": 45,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MUY AFECTADOS|MUY AFECTADA": 2,
-        "POCO AFECTADOS|POCO AFECTADA": 15,
-        "POCO AFECTADOS|NO AFECTADA": 9,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "NO AFECTADOS|NO AFECTADA": 3,
-        "NO AFECTADOS|POCO AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
-      },
-      "estadosEvento": {
-        "151971": "finalizada"
-      },
-      "estadoEvento": "151971: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5658,89 +6551,8 @@
         "151965": "finalizada"
       },
       "estadoEvento": "151965: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "San Carlos",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "31/07/2026",
-      "fechaOcurrencia": "31/07/2026",
-      "fechaCreacion": "31/07/2026",
-      "fechaDigitacion": "05/08/2026",
-      "id": "151961",
-      "alfa": 0,
-      "aplicadas": 60,
-      "anuladas": 1,
-      "terminadas": 59,
-      "terminadasApp": 0,
-      "terminadasPapel": 59,
-      "digitacion": 0,
-      "personas": 180,
-      "nna": 59,
-      "mayores": 23,
-      "discapacidad": 14,
-      "mujer": 106,
-      "hombre": 74,
-      "otro": 0,
-      "matrizAfectacion": {
-        "NO AFECTADOS|POCO AFECTADA": 9,
-        "POCO AFECTADOS|POCO AFECTADA": 12,
-        "NO AFECTADOS|NO AFECTADA": 2,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 8,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 14,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 3,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
-        "POCO AFECTADOS|NO AFECTADA": 1
-      },
-      "estadosEvento": {
-        "151961": "finalizada"
-      },
-      "estadoEvento": "151961: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "El Carmen",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "30/07/2026",
-      "fechaOcurrencia": "30/07/2026",
-      "fechaCreacion": "01/08/2026",
-      "fechaDigitacion": "05/08/2026",
-      "id": "152422",
-      "alfa": 0,
-      "aplicadas": 13,
-      "anuladas": 0,
-      "terminadas": 13,
-      "terminadasApp": 0,
-      "terminadasPapel": 13,
-      "digitacion": 0,
-      "personas": 35,
-      "nna": 14,
-      "mayores": 7,
-      "discapacidad": 8,
-      "mujer": 16,
-      "hombre": 19,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 3,
-        "MUY AFECTADOS|DESTRUIDA": 2,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 1
-      },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5781,52 +6593,8 @@
         "152401": "finalizada"
       },
       "estadoEvento": "152401: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "Quirihue",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "30/07/2026",
-      "fechaOcurrencia": "30/07/2026",
-      "fechaCreacion": "01/08/2026",
-      "fechaDigitacion": "06/08/2026",
-      "id": "152361",
-      "alfa": 0,
-      "aplicadas": 48,
-      "anuladas": 1,
-      "terminadas": 47,
-      "terminadasApp": 2,
-      "terminadasPapel": 45,
-      "digitacion": 0,
-      "personas": 117,
-      "nna": 27,
-      "mayores": 28,
-      "discapacidad": 20,
-      "mujer": 66,
-      "hombre": 51,
-      "otro": 0,
-      "matrizAfectacion": {
-        "POCO AFECTADOS|POCO AFECTADA": 8,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
-        "NO AFECTADOS|NO AFECTADA": 2,
-        "MUY AFECTADOS|MUY AFECTADA": 4,
-        "NO AFECTADOS|POCO AFECTADA": 7,
-        "POCO AFECTADOS|MUY AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1
-      },
-      "estadosEvento": {
-        "152361": "finalizada"
-      },
-      "estadoEvento": "152361: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     },
     {
@@ -5866,40 +6634,8 @@
         "152303": "finalizada"
       },
       "estadoEvento": "152303: finalizada",
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 0
-    },
-    {
-      "region": "Ñuble",
-      "comuna": "Pinto",
-      "evento": "Sistema Frontal",
-      "fechaEvento": "30/07/2026",
-      "fechaOcurrencia": "30/07/2026",
-      "fechaCreacion": "05/08/2026",
-      "fechaDigitacion": "06/08/2026",
-      "id": "153481",
-      "alfa": 0,
-      "aplicadas": 8,
-      "anuladas": 0,
-      "terminadas": 8,
-      "terminadasApp": 0,
-      "terminadasPapel": 8,
-      "digitacion": 0,
-      "personas": 25,
-      "nna": 7,
-      "mayores": 4,
-      "discapacidad": 3,
-      "mujer": 11,
-      "hombre": 14,
-      "otro": 0,
-      "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 6,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 1
-      },
-      "hora": "10:19",
-      "fechaLlenado": "21-07-2026 10:19",
+      "hora": "16:49",
+      "fechaLlenado": "10-08-2026 16:49",
       "bonoRecuperacion": 0
     }
   ]
