@@ -1240,215 +1240,75 @@
     }
   ],
   "bonoRecuperacion": {
-    "total": 12059,
+    "total": 27567,
     "regiones": {
-      "Atacama": 2049,
-      "Biobío": 835,
-      "Coquimbo": 2722,
-      "La Araucanía": 150,
-      "Los Ríos": 30,
-      "Maule": 704,
-      "Metropolitana de Santiago": 1083,
-      "O’Higgins": 287,
-      "Valparaíso": 3742,
-      "Ñuble": 457
+      "Atacama": 7863,
+      "Coquimbo": 13167,
+      "Valparaíso": 6537
     },
     "comunas": {
       "Atacama": {
-        "Alto del Carmen": 105,
-        "Caldera": 354,
-        "Copiapo": 210,
-        "Freirina": 291,
-        "Huasco": 549,
-        "Tierra Amarilla": 202,
-        "Vallenar": 338
-      },
-      "Biobío": {
-        "Arauco": 148,
-        "Canete": 4,
-        "Chiguayante": 1,
-        "Concepcion": 72,
-        "Coronel": 47,
-        "Curanilahue": 22,
-        "Florida": 1,
-        "Hualpen": 59,
-        "Hualqui": 5,
-        "Lebu": 86,
-        "Los Angeles": 16,
-        "Los Álamos": 6,
-        "Lota": 132,
-        "Penco": 70,
-        "San Pedro de la Paz": 1,
-        "Santa Barbara": 14,
-        "Talcahuano": 65,
-        "Tomé": 58,
-        "Tucapel": 28
+        "Alto del Carmen": 329,
+        "Caldera": 761,
+        "Copiapo": 620,
+        "Freirina": 856,
+        "Huasco": 954,
+        "Tierra Amarilla": 964,
+        "Vallenar": 3379
       },
       "Coquimbo": {
-        "Andacollo": 140,
-        "Canela": 114,
-        "Combarbala": 240,
-        "Coquimbo": 524,
-        "Illapel": 150,
-        "La Higuera": 27,
-        "La Serena": 483,
-        "Los Vilos": 142,
-        "Monte Patria": 126,
-        "Ovalle": 362,
-        "Paihuano": 22,
-        "Punitaqui": 142,
-        "Rio Hurtado": 40,
-        "Salamanca": 187,
-        "Vicuna": 23
-      },
-      "La Araucanía": {
-        "Angol": 11,
-        "Cholchol": 4,
-        "Cunco": 11,
-        "Ercilla": 17,
-        "Freire": 2,
-        "Galvarino": 24,
-        "Loncoche": 28,
-        "Los Sauces": 1,
-        "Nueva Imperial": 3,
-        "Padre Las Casas": 1,
-        "Temuco": 33,
-        "Traiguen": 1,
-        "Victoria": 1,
-        "Vilcun": 3,
-        "Villarrica": 10
-      },
-      "Los Ríos": {
-        "Futrono": 4,
-        "Lanco": 7,
-        "Los Lagos": 1,
-        "Paillaco": 1,
-        "Panguipulli": 6,
-        "Río Bueno": 7,
-        "Valdivia": 4
-      },
-      "Maule": {
-        "Cauquenes": 122,
-        "Chanco": 46,
-        "Colbun": 40,
-        "Constitucion": 26,
-        "Curepto": 4,
-        "Empedrado": 25,
-        "Hualane": 7,
-        "Licanten": 11,
-        "Longavi": 3,
-        "Parral": 117,
-        "Pelarco": 9,
-        "Pelluhue": 10,
-        "Pencahue": 2,
-        "Rauco": 1,
-        "Retiro": 89,
-        "Sagrada Familia": 14,
-        "Talca": 1,
-        "Vichuquen": 12,
-        "Villa Alegre": 62,
-        "Yerbas Buenas": 103
-      },
-      "Metropolitana de Santiago": {
-        "Buin": 76,
-        "Cerrillos": 10,
-        "Cerro Navia": 169,
-        "Colina": 6,
-        "El Bosque": 46,
-        "El Monte": 4,
-        "Isla de Maipo": 8,
-        "La Florida": 4,
-        "La Pintana": 59,
-        "Lampa": 79,
-        "Macul": 1,
-        "Maipu": 27,
-        "Maria Pinto": 15,
-        "Melipilla": 29,
-        "Nunoa": 8,
-        "Padre Hurtado": 50,
-        "Penaflor": 38,
-        "Penalolen": 113,
-        "Providencia": 2,
-        "Puente Alto": 139,
-        "Recoleta": 28,
-        "San Jose de Maipo": 55,
-        "San Miguel": 36,
-        "San Pedro": 10,
-        "San Ramon": 68,
-        "Talagante": 3
-      },
-      "O’Higgins": {
-        "Donihue": 5,
-        "Graneros": 11,
-        "La Estrella": 18,
-        "Las Cabras": 45,
-        "Litueche": 84,
-        "Lolol": 8,
-        "Machali": 8,
-        "Marchihue": 11,
-        "Navidad": 31,
-        "Olivar": 2,
-        "Palmilla": 28,
-        "Paredones": 17,
-        "Placilla": 7,
-        "Pumanque": 5,
-        "Quinta de Tilcoco": 2,
-        "San Fernando": 5
+        "Andacollo": 836,
+        "Canela": 246,
+        "Combarbala": 1709,
+        "Coquimbo": 2102,
+        "Illapel": 713,
+        "Monte Patria": 1544,
+        "Ovalle": 1601,
+        "Paihuano": 53,
+        "Punitaqui": 799,
+        "Rio Hurtado": 383,
+        "Salamanca": 755,
+        "Vicuna": 650,
+        "la Higuera": 607,
+        "la Serena": 845,
+        "los Vilos": 324
       },
       "Valparaíso": {
-        "Algarrobo": 29,
-        "Cabildo": 15,
-        "Calle Larga": 78,
-        "Cartagena": 63,
-        "Casablanca": 25,
-        "Catemu": 94,
-        "Concon": 47,
-        "El Quisco": 37,
-        "El Tabo": 50,
-        "Hijuelas": 45,
-        "La Calera": 69,
-        "La Ligua": 196,
-        "Limache": 107,
-        "Llay Llay": 13,
-        "Los Andes": 65,
-        "Nogales": 86,
-        "Olmue": 110,
-        "Panquehue": 30,
+        "Algarrobo": 13,
+        "Cabildo": 97,
+        "Calle Larga": 18,
+        "Cartagena": 215,
+        "Casablanca": 43,
+        "Catemu": 89,
+        "Concon": 61,
+        "El Quisco": 12,
+        "El Tabo": 19,
+        "Hijuelas": 27,
+        "Limache": 376,
+        "Llay Llay": 152,
+        "Nogales": 230,
+        "Olmue": 443,
+        "Panquehue": 2,
         "Papudo": 26,
-        "Petorca": 17,
-        "Puchuncavi": 85,
-        "Putaendo": 49,
-        "Quillota": 119,
-        "Quilpue": 653,
-        "Quintero": 102,
-        "Rinconada": 108,
-        "San Antonio": 5,
-        "San Esteban": 44,
-        "San Felipe": 28,
-        "Santa Maria": 44,
-        "Santo Domingo": 3,
-        "Valparaiso": 501,
-        "Villa Alemana": 98,
-        "Vina del Mar": 503,
-        "Zapallar": 198
-      },
-      "Ñuble": {
-        "Chillan Viejo": 3,
-        "Cobquecura": 18,
-        "Coelemu": 5,
-        "Coihueco": 42,
-        "El Carmen": 12,
-        "Ninhue": 27,
-        "Pemuco": 33,
-        "Portezuelo": 28,
-        "Quirihue": 21,
-        "San Carlos": 67,
-        "San Fabian": 33,
-        "San Ignacio": 42,
-        "San Nicolás": 4,
-        "Treguaco": 2,
-        "Yungay": 5,
-        "Ñiquén": 115
+        "Petorca": 130,
+        "Puchuncavi": 180,
+        "Putaendo": 46,
+        "Quillota": 165,
+        "Quilpue": 715,
+        "Quintero": 237,
+        "Rinconada": 29,
+        "San Antonio": 79,
+        "San Esteban": 22,
+        "San Felipe": 60,
+        "Santo Domingo": 28,
+        "Valparaiso": 691,
+        "Villa Alemana": 436,
+        "Viña del Mar": 1310,
+        "Zapallar": 162,
+        "la Calera": 55,
+        "la Cruz": 117,
+        "la Ligua": 209,
+        "los Andes": 43
       }
     }
   },
@@ -1695,7 +1555,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 198
+      "bonoRecuperacion": 162
     },
     {
       "region": "Valparaíso",
@@ -1738,7 +1598,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 196
+      "bonoRecuperacion": 209
     },
     {
       "region": "Valparaíso",
@@ -1781,7 +1641,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 107
+      "bonoRecuperacion": 376
     },
     {
       "region": "Valparaíso",
@@ -1823,7 +1683,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 119
+      "bonoRecuperacion": 165
     },
     {
       "region": "Valparaíso",
@@ -1860,7 +1720,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 45
+      "bonoRecuperacion": 27
     },
     {
       "region": "Valparaíso",
@@ -1906,7 +1766,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 0
+      "bonoRecuperacion": 1310
     },
     {
       "region": "Valparaíso",
@@ -1950,7 +1810,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 86
+      "bonoRecuperacion": 230
     },
     {
       "region": "Valparaíso",
@@ -2034,7 +1894,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 63
+      "bonoRecuperacion": 215
     },
     {
       "region": "Valparaíso",
@@ -2080,7 +1940,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 102
+      "bonoRecuperacion": 237
     },
     {
       "region": "Valparaíso",
@@ -2210,7 +2070,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 108
+      "bonoRecuperacion": 29
     },
     {
       "region": "Valparaíso",
@@ -2244,7 +2104,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 13
+      "bonoRecuperacion": 152
     },
     {
       "region": "Valparaíso",
@@ -2288,7 +2148,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 98
+      "bonoRecuperacion": 436
     },
     {
       "region": "Valparaíso",
@@ -2328,7 +2188,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 65
+      "bonoRecuperacion": 43
     },
     {
       "region": "Valparaíso",
@@ -2370,7 +2230,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 78
+      "bonoRecuperacion": 18
     },
     {
       "region": "Valparaíso",
@@ -2411,7 +2271,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 69
+      "bonoRecuperacion": 55
     },
     {
       "region": "Valparaíso",
@@ -2454,7 +2314,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 37
+      "bonoRecuperacion": 12
     },
     {
       "region": "Valparaíso",
@@ -2492,7 +2352,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 44
+      "bonoRecuperacion": 22
     },
     {
       "region": "Valparaíso",
@@ -2534,7 +2394,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 15
+      "bonoRecuperacion": 97
     },
     {
       "region": "Valparaíso",
@@ -2573,7 +2433,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 29
+      "bonoRecuperacion": 13
     },
     {
       "region": "Valparaíso",
@@ -2612,7 +2472,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 25
+      "bonoRecuperacion": 43
     },
     {
       "region": "Valparaíso",
@@ -2655,7 +2515,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 94
+      "bonoRecuperacion": 89
     },
     {
       "region": "Valparaíso",
@@ -2696,7 +2556,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 30
+      "bonoRecuperacion": 2
     },
     {
       "region": "Valparaíso",
@@ -2738,7 +2598,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 50
+      "bonoRecuperacion": 19
     },
     {
       "region": "Valparaíso",
@@ -2818,7 +2678,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 17
+      "bonoRecuperacion": 130
     },
     {
       "region": "Valparaíso",
@@ -2894,7 +2754,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 5
+      "bonoRecuperacion": 79
     },
     {
       "region": "Valparaíso",
@@ -2932,7 +2792,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 28
+      "bonoRecuperacion": 60
     },
     {
       "region": "Valparaíso",
@@ -2974,7 +2834,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 49
+      "bonoRecuperacion": 46
     },
     {
       "region": "Valparaíso",
@@ -3013,7 +2873,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 3
+      "bonoRecuperacion": 28
     },
     {
       "region": "Valparaíso",
@@ -3058,7 +2918,7 @@
       },
       "hora": "13:51",
       "fechaLlenado": "11-08-2026 13:51",
-      "bonoRecuperacion": 0
+      "bonoRecuperacion": 117
     },
     {
       "region": "Coquimbo",
@@ -3102,7 +2962,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 142
+      "bonoRecuperacion": 324
     },
     {
       "region": "Coquimbo",
@@ -3148,7 +3008,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 524
+      "bonoRecuperacion": 2102
     },
     {
       "region": "Coquimbo",
@@ -3195,7 +3055,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 483
+      "bonoRecuperacion": 845
     },
     {
       "region": "Coquimbo",
@@ -3242,7 +3102,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 362
+      "bonoRecuperacion": 1601
     },
     {
       "region": "Coquimbo",
@@ -3282,7 +3142,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 22
+      "bonoRecuperacion": 53
     },
     {
       "region": "Coquimbo",
@@ -3325,7 +3185,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 126
+      "bonoRecuperacion": 1544
     },
     {
       "region": "Coquimbo",
@@ -3368,7 +3228,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 114
+      "bonoRecuperacion": 246
     },
     {
       "region": "Coquimbo",
@@ -3501,7 +3361,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 27
+      "bonoRecuperacion": 607
     },
     {
       "region": "Coquimbo",
@@ -3549,7 +3409,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 187
+      "bonoRecuperacion": 755
     },
     {
       "region": "Coquimbo",
@@ -3595,7 +3455,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 142
+      "bonoRecuperacion": 799
     },
     {
       "region": "Coquimbo",
@@ -3638,7 +3498,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 140
+      "bonoRecuperacion": 836
     },
     {
       "region": "Coquimbo",
@@ -3683,7 +3543,7 @@
       },
       "hora": "14:13",
       "fechaLlenado": "11-08-2026 14:13",
-      "bonoRecuperacion": 150
+      "bonoRecuperacion": 713
     },
     {
       "region": "Coquimbo",
@@ -3817,7 +3677,7 @@
       },
       "hora": "13:39",
       "fechaLlenado": "11-08-2026 13:39",
-      "bonoRecuperacion": 291
+      "bonoRecuperacion": 856
     },
     {
       "region": "Atacama",
@@ -3866,7 +3726,7 @@
       },
       "hora": "13:39",
       "fechaLlenado": "11-08-2026 13:39",
-      "bonoRecuperacion": 338
+      "bonoRecuperacion": 3379
     },
     {
       "region": "Atacama",
@@ -3911,7 +3771,7 @@
       },
       "hora": "13:39",
       "fechaLlenado": "11-08-2026 13:39",
-      "bonoRecuperacion": 549
+      "bonoRecuperacion": 954
     },
     {
       "region": "Atacama",
@@ -3959,7 +3819,7 @@
       },
       "hora": "13:39",
       "fechaLlenado": "11-08-2026 13:39",
-      "bonoRecuperacion": 0
+      "bonoRecuperacion": 329
     },
     {
       "region": "Atacama",
@@ -4006,7 +3866,7 @@
       },
       "hora": "13:39",
       "fechaLlenado": "11-08-2026 13:39",
-      "bonoRecuperacion": 202
+      "bonoRecuperacion": 964
     },
     {
       "region": "Atacama",
@@ -4052,7 +3912,7 @@
       },
       "hora": "13:39",
       "fechaLlenado": "11-08-2026 13:39",
-      "bonoRecuperacion": 354
+      "bonoRecuperacion": 761
     },
     {
       "region": "Biobío",
@@ -4092,7 +3952,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 60,
-      "bonoRecuperacion": 58
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -4128,7 +3988,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 26,
-      "bonoRecuperacion": 24
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4167,7 +4027,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 54,
-      "bonoRecuperacion": 42
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4207,7 +4067,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 112,
-      "bonoRecuperacion": 67
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4243,7 +4103,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 65,
-      "bonoRecuperacion": 65
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -4275,7 +4135,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 9,
-      "bonoRecuperacion": 9
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -4310,7 +4170,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 46,
-      "bonoRecuperacion": 46
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4348,7 +4208,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 42,
-      "bonoRecuperacion": 42
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -4381,7 +4241,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 50,
-      "bonoRecuperacion": 50
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -4411,7 +4271,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4450,7 +4310,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 155,
-      "bonoRecuperacion": 148
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4488,7 +4348,7 @@
       },
       "hora": "10:19",
       "fechaLlenado": "21-07-2026 10:19",
-      "bonoRecuperacion": 115
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4518,7 +4378,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 2
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4550,7 +4410,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 6,
-      "bonoRecuperacion": 6
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4590,7 +4450,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 74,
-      "bonoRecuperacion": 70
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4660,7 +4520,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
-      "bonoRecuperacion": 28
+      "bonoRecuperacion": 0
     },
     {
       "region": "Los Ríos",
@@ -4690,7 +4550,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4721,7 +4581,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 1,
       "terminadasPapel": 6,
-      "bonoRecuperacion": 5
+      "bonoRecuperacion": 0
     },
     {
       "region": "Los Ríos",
@@ -4750,7 +4610,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -4785,7 +4645,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
-      "bonoRecuperacion": 28
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4848,7 +4708,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
-      "bonoRecuperacion": 7
+      "bonoRecuperacion": 0
     },
     {
       "region": "Los Ríos",
@@ -4877,7 +4737,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -4911,7 +4771,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
-      "bonoRecuperacion": 11
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -4946,7 +4806,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 47,
-      "bonoRecuperacion": 47
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -4979,7 +4839,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
-      "bonoRecuperacion": 10
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -5039,7 +4899,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
-      "bonoRecuperacion": 3
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -5074,7 +4934,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 1,
       "terminadasPapel": 17,
-      "bonoRecuperacion": 18
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -5104,7 +4964,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Los Ríos",
@@ -5134,7 +4994,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 6,
-      "bonoRecuperacion": 6
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -5171,7 +5031,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 21,
-      "bonoRecuperacion": 21
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -5206,7 +5066,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 14,
-      "bonoRecuperacion": 14
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -5245,7 +5105,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 132,
-      "bonoRecuperacion": 132
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -5276,7 +5136,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
-      "bonoRecuperacion": 5
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -5316,7 +5176,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 123,
-      "bonoRecuperacion": 117
+      "bonoRecuperacion": 0
     },
     {
       "region": "Los Ríos",
@@ -5347,7 +5207,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
-      "bonoRecuperacion": 7
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -5378,7 +5238,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -5417,7 +5277,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 140,
-      "bonoRecuperacion": 139
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -5449,7 +5309,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
-      "bonoRecuperacion": 10
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -5479,7 +5339,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
-      "bonoRecuperacion": 3
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -5509,7 +5369,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 2
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -5607,7 +5467,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
-      "bonoRecuperacion": 11
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -5681,7 +5541,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 106,
-      "bonoRecuperacion": 86
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -5712,7 +5572,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -5749,7 +5609,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 22,
-      "bonoRecuperacion": 22
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -5788,7 +5648,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 82,
-      "bonoRecuperacion": 79
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -5819,7 +5679,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -5893,7 +5753,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 36,
-      "bonoRecuperacion": 36
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -5927,7 +5787,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 36,
-      "bonoRecuperacion": 25
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -5968,7 +5828,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 9,
       "terminadasPapel": 37,
-      "bonoRecuperacion": 45
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -5997,7 +5857,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -6100,7 +5960,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 31,
-      "bonoRecuperacion": 27
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -6168,7 +6028,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
-      "bonoRecuperacion": 5
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -6203,7 +6063,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 26,
       "terminadasPapel": 3,
-      "bonoRecuperacion": 29
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -6235,7 +6095,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
-      "bonoRecuperacion": 28
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -6341,7 +6201,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 35,
-      "bonoRecuperacion": 31
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -6371,7 +6231,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 4,
-      "bonoRecuperacion": 4
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -6401,7 +6261,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 2
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -6439,7 +6299,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 34,
-      "bonoRecuperacion": 33
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -6476,7 +6336,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 62,
-      "bonoRecuperacion": 62
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -6513,7 +6373,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 84,
-      "bonoRecuperacion": 84
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -6549,7 +6409,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 46,
-      "bonoRecuperacion": 46
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -6583,7 +6443,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 18,
-      "bonoRecuperacion": 18
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -6612,7 +6472,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -6680,7 +6540,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 33,
-      "bonoRecuperacion": 33
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -6719,7 +6579,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 124,
-      "bonoRecuperacion": 122
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -6754,7 +6614,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
-      "bonoRecuperacion": 28
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -6787,7 +6647,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 7,
-      "bonoRecuperacion": 7
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -6823,7 +6683,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 17,
-      "bonoRecuperacion": 17
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -6852,7 +6712,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -6885,7 +6745,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 11,
-      "bonoRecuperacion": 11
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -6951,7 +6811,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 89,
-      "bonoRecuperacion": 89
+      "bonoRecuperacion": 0
     },
     {
       "region": "Los Ríos",
@@ -6980,7 +6840,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7078,7 +6938,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 8,
-      "bonoRecuperacion": 8
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7149,7 +7009,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
-      "bonoRecuperacion": 10
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -7185,7 +7045,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 18,
-      "bonoRecuperacion": 17
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -7216,7 +7076,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
-      "bonoRecuperacion": 5
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7256,7 +7116,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 28,
-      "bonoRecuperacion": 28
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -7288,7 +7148,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 14,
-      "bonoRecuperacion": 11
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7386,7 +7246,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 76,
-      "bonoRecuperacion": 76
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7425,7 +7285,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 174,
-      "bonoRecuperacion": 169
+      "bonoRecuperacion": 0
     },
     {
       "region": "Biobío",
@@ -7454,7 +7314,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "La Araucanía",
@@ -7513,7 +7373,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 2
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7545,7 +7405,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 6,
-      "bonoRecuperacion": 6
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7618,7 +7478,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 65,
-      "bonoRecuperacion": 59
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -7648,7 +7508,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 8,
-      "bonoRecuperacion": 8
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -7679,7 +7539,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 5,
-      "bonoRecuperacion": 5
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -7709,7 +7569,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 2
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7741,7 +7601,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 10,
-      "bonoRecuperacion": 10
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -7770,7 +7630,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -7863,7 +7723,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 3,
-      "bonoRecuperacion": 3
+      "bonoRecuperacion": 0
     },
     {
       "region": "O’Higgins",
@@ -7892,7 +7752,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 2
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -7991,7 +7851,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 2,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Metropolitana de Santiago",
@@ -8020,7 +7880,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 1,
-      "bonoRecuperacion": 1
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
@@ -8049,7 +7909,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 12,
-      "bonoRecuperacion": 12
+      "bonoRecuperacion": 0
     },
     {
       "region": "Maule",
@@ -8089,7 +7949,7 @@
       "fechaLlenado": "21-07-2026 10:19",
       "terminadasApp": 0,
       "terminadasPapel": 103,
-      "bonoRecuperacion": 103
+      "bonoRecuperacion": 0
     },
     {
       "region": "Ñuble",
