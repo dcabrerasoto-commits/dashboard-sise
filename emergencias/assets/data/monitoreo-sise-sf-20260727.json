@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-11T14:52:46",
+  "actualizado": "2026-08-11T15:37:10",
   "busquedaEvento": "Sistema Frontal 27 de julio",
   "eventos": [
     {
@@ -1313,13 +1313,21 @@
       "comunas": "Teodoro Schmidt",
       "estado": "activa",
       "fechaCreacion": "2026-07-30"
+    },
+    {
+      "id": "154001",
+      "nombre": "Sistema Frontal",
+      "region": "La Araucanía",
+      "comunas": "Carahue",
+      "estado": "activa",
+      "fechaCreacion": "30/07/2026"
     }
   ],
   "descargas": [],
   "pendientesDescarga": [],
   "congeladosDescarga": [],
   "fuentes": [
-    "C:\\Pruebas_SISE_Playwright\\SF27_MONITOR\\BBDD_REDESCARGA_20260811_1435\\Reporte_BD_FIBE_Valpo-LosLagos_14.50_11-08-2026.xlsx"
+    "C:\\Pruebas_SISE_Playwright\\SF27_MONITOR\\BBDD_REDESCARGA_20260811_1435\\Reporte_BD_FIBE_Valpo-LosLagos_15.34_11-08-2026.xlsx"
   ],
   "advertencias": [],
   "bonoRecuperacion": {
@@ -1390,7 +1398,7 @@
     },
     {
       "fechaDigitacion": "11/08/2026",
-      "terminadas": 106
+      "terminadas": 124
     }
   ],
   "filas": [
@@ -1430,8 +1438,8 @@
         "153241": "activa"
       },
       "estadoEvento": "151224: finalizada; 153241: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1478,8 +1486,8 @@
         "152761": "activa"
       },
       "estadoEvento": "151204: finalizada; 152761: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1528,8 +1536,8 @@
         "152446": "finalizada"
       },
       "estadoEvento": "151022: finalizada; 152446: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1569,8 +1577,8 @@
         "153461": "activa"
       },
       "estadoEvento": "151461: finalizada; 153461: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1613,8 +1621,8 @@
         "151661": "finalizada"
       },
       "estadoEvento": "151661: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1651,8 +1659,8 @@
         "151641": "finalizada"
       },
       "estadoEvento": "151641: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1686,8 +1694,8 @@
         "152063": "finalizada"
       },
       "estadoEvento": "152063: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1724,8 +1732,8 @@
         "152062": "finalizada"
       },
       "estadoEvento": "152062: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1766,8 +1774,8 @@
         "152041": "finalizada"
       },
       "estadoEvento": "152041: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1813,8 +1821,8 @@
         "151861": "activa"
       },
       "estadoEvento": "151861: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1859,8 +1867,8 @@
         "151841": "finalizada"
       },
       "estadoEvento": "151841: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1905,8 +1913,8 @@
         "151805": "finalizada"
       },
       "estadoEvento": "151805: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1948,8 +1956,8 @@
         "152341": "finalizada"
       },
       "estadoEvento": "152341: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -1995,8 +2003,8 @@
         "152282": "activa"
       },
       "estadoEvento": "152282: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2041,8 +2049,8 @@
         "152561": "activa"
       },
       "estadoEvento": "152561: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2076,8 +2084,8 @@
         "152494": "finalizada"
       },
       "estadoEvento": "152494: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2118,8 +2126,8 @@
         "152487": "finalizada"
       },
       "estadoEvento": "152487: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2158,8 +2166,8 @@
         "152486": "finalizada"
       },
       "estadoEvento": "152486: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2197,8 +2205,8 @@
         "152481": "finalizada"
       },
       "estadoEvento": "152481: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2239,8 +2247,8 @@
         "152442": "activa"
       },
       "estadoEvento": "152442: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2276,8 +2284,8 @@
         "152941": "activa"
       },
       "estadoEvento": "152941: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2324,8 +2332,8 @@
         "152901": "activa"
       },
       "estadoEvento": "152901: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2364,8 +2372,8 @@
         "152841": "activa"
       },
       "estadoEvento": "152841: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2409,8 +2417,8 @@
         "152683": "activa"
       },
       "estadoEvento": "152683: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2446,8 +2454,8 @@
         "153262": "activa"
       },
       "estadoEvento": "153262: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2491,8 +2499,8 @@
         "151972": "activa"
       },
       "estadoEvento": "151242: finalizada; 151972: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2525,8 +2533,8 @@
         "151441": "finalizada"
       },
       "estadoEvento": "151441: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2562,8 +2570,8 @@
         "152202": "finalizada"
       },
       "estadoEvento": "152202: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2602,8 +2610,8 @@
         "152125": "activa"
       },
       "estadoEvento": "152125: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2642,8 +2650,8 @@
         "153842": "activa"
       },
       "estadoEvento": "152071: finalizada; 153842: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2692,8 +2700,8 @@
         "152001": "finalizada"
       },
       "estadoEvento": "152001: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2742,8 +2750,8 @@
         "151968": "activa"
       },
       "estadoEvento": "151968: activa; 151969: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2785,8 +2793,8 @@
         "151963": "finalizada"
       },
       "estadoEvento": "151963: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2823,8 +2831,8 @@
         "152424": "activa"
       },
       "estadoEvento": "152424: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2862,8 +2870,8 @@
         "152423": "finalizada"
       },
       "estadoEvento": "152423: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2900,8 +2908,8 @@
         "152381": "finalizada"
       },
       "estadoEvento": "152381: finalizada; 152382: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2941,8 +2949,8 @@
         "152321": "activa"
       },
       "estadoEvento": "152321: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -2980,8 +2988,8 @@
         "152264": "finalizada"
       },
       "estadoEvento": "152264: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3023,8 +3031,8 @@
         "152583": "activa"
       },
       "estadoEvento": "152583: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3065,8 +3073,8 @@
         "152581": "activa"
       },
       "estadoEvento": "152581: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3100,8 +3108,8 @@
         "153024": "activa"
       },
       "estadoEvento": "153024: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3141,8 +3149,8 @@
         "152961": "activa"
       },
       "estadoEvento": "152961: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3185,8 +3193,8 @@
         "152741": "activa"
       },
       "estadoEvento": "152741: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3219,8 +3227,8 @@
         "152642": "activa"
       },
       "estadoEvento": "152642: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3259,8 +3267,8 @@
         "153261": "activa"
       },
       "estadoEvento": "153261: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3299,8 +3307,8 @@
         "153181": "activa"
       },
       "estadoEvento": "153181: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3339,8 +3347,8 @@
         "152263": "finalizada"
       },
       "estadoEvento": "152263: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3383,8 +3391,8 @@
         "152621": "finalizada"
       },
       "estadoEvento": "152621: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3423,8 +3431,8 @@
         "152488": "finalizada"
       },
       "estadoEvento": "152488: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3458,8 +3466,8 @@
         "153061": "activa"
       },
       "estadoEvento": "153061: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3493,8 +3501,8 @@
         "153025": "activa"
       },
       "estadoEvento": "153025: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3529,8 +3537,8 @@
         "153003": "activa"
       },
       "estadoEvento": "153003: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3564,8 +3572,8 @@
         "153002": "activa"
       },
       "estadoEvento": "153002: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3601,8 +3609,8 @@
         "152945": "activa"
       },
       "estadoEvento": "152945: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3637,8 +3645,8 @@
         "152942": "activa"
       },
       "estadoEvento": "152942: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3674,8 +3682,8 @@
         "152865": "activa"
       },
       "estadoEvento": "152865: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3714,8 +3722,8 @@
         "152801": "activa"
       },
       "estadoEvento": "152801: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3750,8 +3758,8 @@
         "152682": "activa"
       },
       "estadoEvento": "152682: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3788,8 +3796,8 @@
         "152661": "activa"
       },
       "estadoEvento": "152661: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3826,8 +3834,8 @@
         "153402": "activa"
       },
       "estadoEvento": "153402: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3861,8 +3869,8 @@
         "153101": "activa"
       },
       "estadoEvento": "153101: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3897,8 +3905,8 @@
         "153521": "activa"
       },
       "estadoEvento": "153521: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3931,8 +3939,8 @@
         "153501": "activa"
       },
       "estadoEvento": "153501: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -3966,8 +3974,8 @@
         "153464": "activa"
       },
       "estadoEvento": "153464: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4010,8 +4018,8 @@
         "151802": "finalizada"
       },
       "estadoEvento": "150844: finalizada; 151802: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4044,8 +4052,8 @@
         "151223": "finalizada"
       },
       "estadoEvento": "151223: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4085,8 +4093,8 @@
         "152161": "finalizada"
       },
       "estadoEvento": "151203: finalizada; 152161: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4134,8 +4142,8 @@
         "152129": "activa"
       },
       "estadoEvento": "151202: finalizada; 152129: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4177,8 +4185,8 @@
         "152133": "finalizada"
       },
       "estadoEvento": "151183: finalizada; 152133: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4218,8 +4226,8 @@
         "152068": "finalizada"
       },
       "estadoEvento": "151161: finalizada; 152068: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4259,8 +4267,8 @@
         "152126": "finalizada"
       },
       "estadoEvento": "151104: finalizada; 152126: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4298,8 +4306,8 @@
         "152181": "finalizada"
       },
       "estadoEvento": "151501: finalizada; 152181: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4337,8 +4345,8 @@
         "152081": "finalizada"
       },
       "estadoEvento": "152081: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4372,8 +4380,8 @@
         "152262": "finalizada"
       },
       "estadoEvento": "152262: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4406,8 +4414,8 @@
         "152582": "finalizada"
       },
       "estadoEvento": "152582: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4443,8 +4451,8 @@
         "151281": "finalizada"
       },
       "estadoEvento": "151281: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4486,8 +4494,8 @@
         "151241": "finalizada"
       },
       "estadoEvento": "151241: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4524,8 +4532,8 @@
         "151222": "activa"
       },
       "estadoEvento": "151222: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4572,8 +4580,8 @@
         "151421": "finalizada"
       },
       "estadoEvento": "151421: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4608,8 +4616,8 @@
         "152136": "finalizada"
       },
       "estadoEvento": "152136: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4644,8 +4652,8 @@
         "152123": "finalizada"
       },
       "estadoEvento": "152123: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4686,8 +4694,8 @@
         "152445": "finalizada"
       },
       "estadoEvento": "152066: finalizada; 152445: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4729,8 +4737,8 @@
         "151973": "finalizada"
       },
       "estadoEvento": "151973: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4769,8 +4777,8 @@
         "151881": "finalizada"
       },
       "estadoEvento": "151881: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4810,8 +4818,8 @@
         "152425": "activa"
       },
       "estadoEvento": "152425: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4855,8 +4863,8 @@
         "152421": "finalizada"
       },
       "estadoEvento": "152421: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4892,8 +4900,8 @@
         "152603": "finalizada"
       },
       "estadoEvento": "152603: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4929,8 +4937,8 @@
         "152602": "finalizada"
       },
       "estadoEvento": "152602: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -4966,8 +4974,8 @@
         "152521": "finalizada"
       },
       "estadoEvento": "152521: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5003,8 +5011,8 @@
         "152499": "finalizada"
       },
       "estadoEvento": "152499: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5046,8 +5054,8 @@
         "152496": "finalizada"
       },
       "estadoEvento": "152496: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5081,8 +5089,8 @@
         "152495": "finalizada"
       },
       "estadoEvento": "152495: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5117,8 +5125,8 @@
         "152492": "finalizada"
       },
       "estadoEvento": "152492: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5159,8 +5167,8 @@
         "152489": "finalizada"
       },
       "estadoEvento": "152489: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5199,8 +5207,8 @@
         "152485": "finalizada"
       },
       "estadoEvento": "152485: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5234,8 +5242,8 @@
         "152482": "finalizada"
       },
       "estadoEvento": "152482: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5269,8 +5277,8 @@
         "152443": "finalizada"
       },
       "estadoEvento": "152443: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5306,8 +5314,8 @@
         "153001": "activa"
       },
       "estadoEvento": "153001: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5343,8 +5351,8 @@
         "152982": "activa"
       },
       "estadoEvento": "152982: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5384,8 +5392,8 @@
         "152701": "activa"
       },
       "estadoEvento": "152701: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5423,8 +5431,8 @@
         "152645": "activa"
       },
       "estadoEvento": "152645: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5459,8 +5467,8 @@
         "151941": "finalizada"
       },
       "estadoEvento": "151941: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5495,8 +5503,8 @@
         "152461": "activa"
       },
       "estadoEvento": "152461: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5538,8 +5546,8 @@
         "152131": "finalizada"
       },
       "estadoEvento": "151003: finalizada; 152131: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5582,8 +5590,8 @@
         "152221": "finalizada"
       },
       "estadoEvento": "150981: finalizada; 152221: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5630,8 +5638,8 @@
         "151961": "finalizada"
       },
       "estadoEvento": "150944: finalizada; 151961: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5672,8 +5680,8 @@
         "151971": "finalizada"
       },
       "estadoEvento": "150903: finalizada; 151971: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5719,8 +5727,8 @@
         "152042": "finalizada"
       },
       "estadoEvento": "150901: finalizada; 152042: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5764,8 +5772,8 @@
         "152138": "finalizada"
       },
       "estadoEvento": "150861: finalizada; 152138: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5805,8 +5813,8 @@
         "152422": "finalizada"
       },
       "estadoEvento": "150785: finalizada; 152422: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5851,8 +5859,8 @@
         "152361": "finalizada"
       },
       "estadoEvento": "150781: finalizada; 152361: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5895,8 +5903,8 @@
         "152121": "finalizada"
       },
       "estadoEvento": "151301: finalizada; 152121: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5934,8 +5942,8 @@
         "153004": "activa"
       },
       "estadoEvento": "151141: finalizada; 153004: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -5979,8 +5987,8 @@
         "151902": "finalizada"
       },
       "estadoEvento": "151121: finalizada; 151902: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6023,8 +6031,8 @@
         "152222": "finalizada"
       },
       "estadoEvento": "151081: finalizada; 152222: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6065,8 +6073,8 @@
         "152140": "activa"
       },
       "estadoEvento": "151061: finalizada; 152140: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6104,8 +6112,8 @@
         "153481": "activa"
       },
       "estadoEvento": "151422: finalizada; 153481: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6152,8 +6160,8 @@
         "152141": "finalizada"
       },
       "estadoEvento": "152141: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6196,8 +6204,8 @@
         "152139": "finalizada"
       },
       "estadoEvento": "152139: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6238,8 +6246,8 @@
         "152128": "finalizada"
       },
       "estadoEvento": "152128: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6282,8 +6290,8 @@
         "152070": "finalizada"
       },
       "estadoEvento": "152070: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6326,8 +6334,8 @@
         "151965": "finalizada"
       },
       "estadoEvento": "151965: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6368,8 +6376,8 @@
         "152401": "finalizada"
       },
       "estadoEvento": "152401: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6409,8 +6417,8 @@
         "152303": "finalizada"
       },
       "estadoEvento": "152303: finalizada",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     },
     {
@@ -6446,8 +6454,47 @@
         "153524": "activa"
       },
       "estadoEvento": "153524: activa",
-      "hora": "14:51",
-      "fechaLlenado": "11-08-2026 14:51",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "La Araucanía",
+      "comuna": "Carahue",
+      "evento": "Sistema Frontal",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "10/08/2026",
+      "fechaDigitacion": "11/08/2026",
+      "id": "154001",
+      "alfa": 0,
+      "aplicadas": 18,
+      "anuladas": 0,
+      "terminadas": 18,
+      "terminadasApp": 18,
+      "terminadasPapel": 0,
+      "digitacion": 0,
+      "personas": 44,
+      "nna": 7,
+      "mayores": 19,
+      "discapacidad": 10,
+      "mujer": 23,
+      "hombre": 21,
+      "otro": 0,
+      "matrizAfectacion": {
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "POCO AFECTADOS|POCO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9,
+        "MUY AFECTADOS|MUY AFECTADA": 2,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
+      },
+      "estadosEvento": {
+        "154001": "activa"
+      },
+      "estadoEvento": "154001: activa",
+      "hora": "15:35",
+      "fechaLlenado": "11-08-2026 15:35",
       "bonoRecuperacion": 0
     }
   ]
