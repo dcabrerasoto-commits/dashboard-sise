@@ -219,6 +219,8 @@
       .overview-grid .territory-insights,.overview-grid .chile-map-svg,.overview-grid .legend{display:none!important}
       .overview-grid #regionMap{display:grid!important;grid-template-rows:1fr auto!important;gap:8px!important;overflow:hidden!important}
       .territory-top-list{display:grid!important;gap:8px!important;align-content:start!important}
+      .territory-top-head{display:grid!important;grid-template-columns:minmax(92px,1fr) 34px minmax(70px,.72fr)!important;gap:9px!important;color:#56657A!important;font-size:9px!important;font-weight:850!important;text-transform:uppercase!important;margin-bottom:2px!important}
+      .territory-top-head span:nth-child(2){text-align:right!important}
       .overview-grid .region-block{min-height:17px!important;padding:0!important;display:grid!important;grid-template-columns:8px minmax(92px,1fr) 26px!important;gap:6px!important;background:transparent!important;border:0!important;box-shadow:none!important;color:#102A56!important}
       .overview-grid .region-rank{min-height:24px!important;grid-template-columns:minmax(92px,1fr) 34px minmax(70px,.72fr)!important;gap:9px!important;text-align:left!important}
       .overview-grid .region-block i{display:block!important;width:6px!important;height:6px!important;border-radius:50%!important;background:#60A5FA!important}

@@ -633,7 +633,7 @@
       .slice(0, 5);
     const maxAffected = Math.max(1, ...rankedRegions.map(r => r.affected));
     $("regionMap").innerHTML = rankedRegions.length
-      ? `<div class="territory-top-list">${rankedRegions.map(r => `<button type="button" class="region-block region-rank level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación, ${fmt(r.affectedRate)}%"><strong>${esc(r.region)}</strong><b>${fmt(r.affected)}</b><span class="rank-track"><i style="width:${Math.max(4, Math.round(r.affected / maxAffected * 100))}%"></i></span></button>`).join("")}</div><a class="territory-detail-link" href="#regionSummaryTable">Ver detalle regional en tabla</a>`
+      ? `<div class="territory-top-head"><span>Región</span><span>N°</span></div><div class="territory-top-list">${rankedRegions.map(r => `<button type="button" class="region-block region-rank level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación, ${fmt(r.affectedRate)}%"><strong>${esc(r.region)}</strong><b>${fmt(r.affected)}</b><span class="rank-track"><i style="width:${Math.max(4, Math.round(r.affected / maxAffected * 100))}%"></i></span></button>`).join("")}</div><a class="territory-detail-link" href="#regionSummaryTable">Ver detalle regional en tabla</a>`
       : '<div class="empty-state compact">Sin información territorial con los filtros actuales.</div>';
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
     renderChileMap(regions);
