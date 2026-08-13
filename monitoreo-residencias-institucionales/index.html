@@ -9,18 +9,18 @@
   <meta name="theme-color" content="#071b4d">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260813-09">
+  <link rel="stylesheet" href="styles.css?v=20260813-10">
   <script defer src="catalogos.js?v=20260719-03"></script>
   <script defer src="residencias-catalogo.js?v=20260719-03"></script>
   <script defer src="sync-config.js?v=20260719-03"></script>
   <script defer src="chile-time.js?v=20260719-03"></script>
-  <script defer src="app-v2.js?v=20260813-09"></script>
-  <script defer src="interface-v2.js?v=20260813-09"></script>
-  <script defer src="dashboard-fixes.js?v=20260813-09"></script>
+  <script defer src="app-v2.js?v=20260813-10"></script>
+  <script defer src="interface-v2.js?v=20260813-10"></script>
+  <script defer src="dashboard-fixes.js?v=20260813-10"></script>
   <script defer src="shared-sync.js?v=20260719-03"></script>
   <script defer src="date-normalizer.js?v=20260719-03"></script>
   <script defer src="all-services-catalog.js?v=20260719-03"></script>
-  <script defer src="unique-metrics.js?v=20260813-09"></script>
+  <script defer src="unique-metrics.js?v=20260813-10"></script>
   <script defer src="indicator-consistency.js?v=20260719-03"></script>
   <script defer src="save-safety.js?v=20260719-03"></script>
 </head>
@@ -42,6 +42,7 @@
   <nav class="toolbar" aria-label="Navegación principal">
     <div class="tabs">
       <button type="button" class="tab active" data-tab="resumen">Resumen nacional</button>
+      <button type="button" class="tab" data-tab="detalle">Detalle vigente</button>
       <button type="button" class="tab tab-entry" data-tab="ingreso">Ingreso de información</button>
       <button type="button" class="tab" data-tab="metodologia">Definiciones</button>
     </div>
@@ -60,6 +61,10 @@
       <article class="card"><div class="card-head"><div><span class="card-kicker">AFECTACIÓN</span><h3>Residencias por situación vigente</h3></div><span class="small-note">Cuenta residencias únicas según su último reporte</span></div><div id="situationBars"></div></article>
     </div>
     <article class="card table-card"><div class="card-head"><div><span class="card-kicker">RESUMEN TERRITORIAL</span><h3>Último reporte vigente por región</h3></div></div><div class="table-scroll"><table><thead><tr><th>Región</th><th>Residencias informadas</th><th>Residencias sin afectación</th><th>Residencias con afectación</th><th>Residencias sin electricidad</th><th>Residencias con aguas servidas</th><th>Residencias con electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="regionTableBody"></tbody></table></div></article>
+  </section>
+
+  <section class="panel" id="detalle">
+    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">DETALLE VIGENTE</span><h3>Último reporte disponible por residencia</h3></div><span class="small-note">Vista filtrada con los mismos criterios del resumen nacional</span></div><div class="table-scroll"><table id="detailTable"><thead><tr><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Estado</th><th>Situaciones presentes</th><th>Personas atendidas</th><th>Electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="detailTableBody"></tbody></table></div></article>
   </section>
 
   <section class="panel" id="ingreso">

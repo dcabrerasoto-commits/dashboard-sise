@@ -390,6 +390,14 @@
     renderCharacterization(data, regions, situations);
     const visible = regions.filter(r => r.total > 0);
     $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
+    renderDetail(data);
+  }
+
+  function renderDetail(data) {
+    const body = $("detailTableBody");
+    if (!body) return;
+    const rows = data.slice().sort((a, b) => key(`${a.region}${a.commune}${a.establishment}`).localeCompare(key(`${b.region}${b.commune}${b.establishment}`)));
+    body.innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.service || "")}</td><td>${esc(r.region || "")}</td><td>${esc(r.commune || "")}</td><td>${esc(r.establishment || "")}</td><td>${esc(r.status || "Sin información")}</td><td>${esc((r.situations || []).join(" | ") || "Sin situaciones reportadas")}</td><td>${fmt(Number(r.people || 0))}</td><td>${esc(r.electrodependent || "Sin información")}${r.electrodependent === "Sí" ? ` (${fmt(Number(r.electrodependentCount || 0))})` : ""}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
   }
 
   function buildRecord() {
