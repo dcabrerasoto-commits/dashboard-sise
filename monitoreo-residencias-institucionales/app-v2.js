@@ -647,7 +647,19 @@
     renderCharacterization(data, regions, situations);
     document.querySelectorAll(".mode-toggle").forEach(btn => btn.classList.toggle("active", (btn.id === "regionModePriority") === (regionTableMode === "priority")));
     const visible = sortedRegionsForTable(regions);
-    $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.affectedRate)}%</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td><td><span class="freshness">${esc(freshnessLabel(r.last))}</span></td></tr>`).join("") : '<tr><td colspan="10">Sin información disponible.</td></tr>';
+    const totalRow = visible.reduce((acc, r) => {
+      acc.total += Number(r.total || 0);
+      acc.without += Number(r.without || 0);
+      acc.affected += Number(r.affected || 0);
+      acc.electricity += Number(r.electricity || 0);
+      acc.sewage += Number(r.sewage || 0);
+      acc.electro += Number(r.electro || 0);
+      if (r.last && (!acc.last || new Date(r.last) > new Date(acc.last))) acc.last = r.last;
+      return acc;
+    }, {total:0, without:0, affected:0, electricity:0, sewage:0, electro:0, last:""});
+    const totalRate = totalRow.total ? Math.round(totalRow.affected / totalRow.total * 100) : 0;
+    const totalHtml = `<tr class="region-total-row"><td>Total nacional</td><td>${fmt(totalRow.total)}</td><td>${fmt(totalRow.without)}</td><td>${fmt(totalRow.affected)}</td><td>${fmt(totalRate)}%</td><td>${fmt(totalRow.electricity)}</td><td>${fmt(totalRow.sewage)}</td><td>${fmt(totalRow.electro)}</td><td>${esc(totalRow.last ? formatDateTime(totalRow.last) : "Sin información")}</td><td><span class="freshness">${esc(totalRow.last ? freshnessLabel(totalRow.last) : "Sin actualización")}</span></td></tr>`;
+    $("regionTableBody").innerHTML = visible.length ? totalHtml + visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.affectedRate)}%</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td><td><span class="freshness">${esc(freshnessLabel(r.last))}</span></td></tr>`).join("") : '<tr><td colspan="10">Sin información disponible.</td></tr>';
     renderDetail();
   }
 
