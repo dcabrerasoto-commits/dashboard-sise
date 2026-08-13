@@ -86,6 +86,16 @@
     return $("commune").value;
   }
 
+  function setDetailCommunes(region, selected) {
+    const select = $("detailFilterCommune");
+    if (!select) return "";
+    const official = officialRegion(region);
+    const values = (C.comunasPorRegion || {})[official] || [];
+    populate(select, values, official ? "Todas las comunas" : "Seleccione una región");
+    select.value = selected ? (values.find(value => key(value) === key(selected)) || "") : "";
+    return select.value;
+  }
+
   function officialRegion(value) {
     return (C.regiones || []).find(region => key(region) === key(value)) || "";
   }
@@ -230,6 +240,9 @@
     populate($("filterService"), C.servicios, "Todos los servicios");
     populate($("filterRegion"), C.regiones, "Todas las regiones");
     populate($("filterStatus"), C.estados, "Todos los estados");
+    populate($("detailFilterService"), C.servicios, "Todos los servicios");
+    populate($("detailFilterRegion"), C.regiones, "Todas las regiones");
+    setDetailCommunes("");
     populate($("service"), C.servicios, "Seleccione un servicio");
     populate($("region"), C.regiones, "Seleccione una región");
     populate($("status"), C.estados, "Seleccione un estado");
@@ -390,13 +403,26 @@
     renderCharacterization(data, regions, situations);
     const visible = regions.filter(r => r.total > 0);
     $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
-    renderDetail(data);
+    renderDetail();
   }
 
-  function renderDetail(data) {
+  function filteredDetail() {
+    const service = $("detailFilterService")?.value || "";
+    const region = $("detailFilterRegion")?.value || "";
+    const commune = $("detailFilterCommune")?.value || "";
+    const date = $("detailFilterDate")?.value || "";
+    return latest.filter(r =>
+      (!service || r.service === service) &&
+      (!region || r.region === region) &&
+      (!commune || r.commune === commune) &&
+      (!date || String(r.reportDate || r.createdAt || "").slice(0, 10) === date)
+    );
+  }
+
+  function renderDetail() {
     const body = $("detailTableBody");
     if (!body) return;
-    const rows = data.slice().sort((a, b) => key(`${a.region}${a.commune}${a.establishment}`).localeCompare(key(`${b.region}${b.commune}${b.establishment}`)));
+    const rows = filteredDetail().slice().sort((a, b) => key(`${a.region}${a.commune}${a.establishment}`).localeCompare(key(`${b.region}${b.commune}${b.establishment}`)));
     body.innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.service || "")}</td><td>${esc(r.region || "")}</td><td>${esc(r.commune || "")}</td><td>${esc(r.establishment || "")}</td><td>${esc(r.status || "Sin información")}</td><td>${esc((r.situations || []).join(" | ") || "Sin situaciones reportadas")}</td><td>${fmt(Number(r.people || 0))}</td><td>${esc(r.electrodependent || "Sin información")}${r.electrodependent === "Sí" ? ` (${fmt(Number(r.electrodependentCount || 0))})` : ""}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
   }
 
@@ -483,6 +509,9 @@
   function setupEvents() {
     ["filterService","filterRegion","filterStatus"].forEach(id => $(id).addEventListener("change", renderSummary));
     $("clearFilters").addEventListener("click", () => { ["filterService","filterRegion","filterStatus"].forEach(id => $(id).value = ""); renderSummary(); });
+    ["detailFilterService","detailFilterCommune","detailFilterDate"].forEach(id => $(id)?.addEventListener("change", renderDetail));
+    $("detailFilterRegion")?.addEventListener("change", e => { setDetailCommunes(e.target.value); renderDetail(); });
+    $("clearDetailFilters")?.addEventListener("click", () => { ["detailFilterService","detailFilterRegion","detailFilterCommune","detailFilterDate"].forEach(id => { if ($(id)) $(id).value = ""; }); setDetailCommunes(""); renderDetail(); });
     $("region").addEventListener("change", e => {
       const region = officialRegion(e.target.value);
       e.target.value = region;

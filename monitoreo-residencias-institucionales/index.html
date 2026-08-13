@@ -9,18 +9,18 @@
   <meta name="theme-color" content="#071b4d">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260813-10">
+  <link rel="stylesheet" href="styles.css?v=20260813-11">
   <script defer src="catalogos.js?v=20260719-03"></script>
   <script defer src="residencias-catalogo.js?v=20260719-03"></script>
   <script defer src="sync-config.js?v=20260719-03"></script>
   <script defer src="chile-time.js?v=20260719-03"></script>
-  <script defer src="app-v2.js?v=20260813-10"></script>
-  <script defer src="interface-v2.js?v=20260813-10"></script>
-  <script defer src="dashboard-fixes.js?v=20260813-10"></script>
+  <script defer src="app-v2.js?v=20260813-11"></script>
+  <script defer src="interface-v2.js?v=20260813-11"></script>
+  <script defer src="dashboard-fixes.js?v=20260813-11"></script>
   <script defer src="shared-sync.js?v=20260719-03"></script>
   <script defer src="date-normalizer.js?v=20260719-03"></script>
   <script defer src="all-services-catalog.js?v=20260719-03"></script>
-  <script defer src="unique-metrics.js?v=20260813-10"></script>
+  <script defer src="unique-metrics.js?v=20260813-11"></script>
   <script defer src="indicator-consistency.js?v=20260719-03"></script>
   <script defer src="save-safety.js?v=20260719-03"></script>
 </head>
@@ -64,6 +64,7 @@
   </section>
 
   <section class="panel" id="detalle">
+    <div class="filter-bar card"><label>Servicio<select id="detailFilterService"></select></label><label>Región<select id="detailFilterRegion"></select></label><label>Comuna<select id="detailFilterCommune"></select></label><label>Fecha<input type="date" id="detailFilterDate"></label><button type="button" class="btn btn-light" id="clearDetailFilters">Limpiar filtros</button></div>
     <article class="card table-card"><div class="card-head"><div><span class="card-kicker">DETALLE VIGENTE</span><h3>Último reporte disponible por residencia</h3></div><span class="small-note">Vista filtrada con los mismos criterios del resumen nacional</span></div><div class="table-scroll"><table id="detailTable"><thead><tr><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Estado</th><th>Situaciones presentes</th><th>Personas atendidas</th><th>Electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="detailTableBody"></tbody></table></div></article>
   </section>
 
