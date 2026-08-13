@@ -335,11 +335,11 @@
 
   function renderKpis(data) {
     const cards = [
-      ["Residencias sin afectación", data.filter(r => r.status === "Sin afectación").length, "Último reporte sin daños ni situaciones de emergencia", "", "Residencias cuyo último reporte vigente indica estado sin afectación."],
-      ["Residencias con afectación", data.filter(affected).length, "Requieren seguimiento", "alert", "Residencias cuyo último reporte vigente indica afectación o alguna situación reportada."],
-      ["Residencias sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Corte eléctrico informado", "alert", "Residencias cuyo último reporte vigente informa falta de electricidad."],
-      ["Residencias con aguas servidas", data.filter(r => hasSituation(r, "Exposición a aguas servidas")).length, "Exposición informada", "alert", "Residencias cuyo último reporte vigente informa exposición a aguas servidas."],
-      ["Residencias con electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "Personas electrodependientes informadas", "alert", "Residencias cuyo último reporte vigente informa personas electrodependientes."]
+      ["Residencias sin afectación", data.filter(r => r.status === "Sin afectación").length, "Sin daño vigente", "ok", "Residencias cuyo último reporte vigente indica estado sin afectación."],
+      ["Residencias con afectación", data.filter(affected).length, "Requieren seguimiento", "attention", "Residencias cuyo último reporte vigente indica afectación o alguna situación reportada."],
+      ["Residencias sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Corte eléctrico", "critical", "Residencias cuyo último reporte vigente informa falta de electricidad."],
+      ["Residencias con aguas servidas", data.filter(r => hasSituation(r, "Exposición a aguas servidas")).length, "Exposición informada", "critical", "Residencias cuyo último reporte vigente informa exposición a aguas servidas."],
+      ["Residencias con electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "Seguimiento especial", "info", "Residencias cuyo último reporte vigente informa personas electrodependientes."]
     ];
     $("kpiGrid").innerHTML = cards.map(([label,value,sub,klass,definition]) => `<article class="kpi ${klass}" tabindex="0" title="${esc(definition)}" data-definition="${esc(definition)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
   }
