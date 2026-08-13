@@ -133,6 +133,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .bar-fill{height:100%;background:linear-gradient(90deg,var(--primary-dark),var(--accent));min-width:0;transition:filter .18s ease;border-radius:0!important}
 .bar-row:hover .bar-fill{filter:brightness(1.12)}
 .bar-value{text-align:right;color:var(--primary-dark);font-weight:850;font-variant-numeric:tabular-nums}
+.bar-value small{display:block;color:var(--muted);font-size:10px;font-weight:700;line-height:1.1}
 .table-card{padding:0;overflow:hidden;border-top-color:var(--accent);border-radius:0!important}
 .table-card:hover{transform:none;box-shadow:6px 6px 0 rgba(21,79,85,.07);border-color:var(--border)}
 .table-card .card-head{padding:17px 18px 12px;margin:0;border-bottom:1px solid var(--border)}

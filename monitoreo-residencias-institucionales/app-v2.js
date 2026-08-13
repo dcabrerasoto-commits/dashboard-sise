@@ -374,12 +374,13 @@
       .sort((a, b) => b.value - a.value)[0];
     const totalRegions = (C.regiones || []).length || 1;
     const topSituationValue = topSituation && topSituation.value ? topSituation.value : 0;
+    const totalResidences = data.length;
     const cards = [
       ["territory", "⌖", "Cobertura territorial", `${fmt(informedRegions)} / ${fmt(totalRegions)}`, "regiones con reportes", Math.round(informedRegions / totalRegions * 100)],
-      ["people", "●", "Personas atendidas", fmt(totalPeople), "según reportes vigentes", data.length ? 100 : 0],
-      ["ratio", "%", "Tasa con afectación", `${fmt(affectedRate)}%`, "del total informado", affectedRate],
-      ["energy", "⚡", "Electrodependientes", fmt(electroPeople), "personas informadas", totalPeople ? Math.min(100, Math.round(electroPeople / totalPeople * 100)) : 0],
-      ["signal", "!", "Situación principal", topSituationValue ? topSituation.label : "Sin situaciones", topSituationValue ? `${fmt(topSituationValue)} residencias` : "sin reportes asociados", data.length ? Math.round(topSituationValue / data.length * 100) : 0],
+      ["people", "●", "Personas atendidas", fmt(totalPeople), `${fmt(totalResidences)} residencias vigentes`, data.length ? 100 : 0],
+      ["ratio", "%", "Tasa con afectación", `${fmt(affectedRate)}%`, `${fmt(affectedCount)} de ${fmt(totalResidences)} residencias`, affectedRate],
+      ["energy", "⚡", "Electrodependientes", fmt(electroPeople), `de ${fmt(totalPeople)} personas atendidas`, totalPeople ? Math.min(100, Math.round(electroPeople / totalPeople * 100)) : 0],
+      ["signal", "!", "Situación principal", topSituationValue ? topSituation.label : "Sin situaciones", topSituationValue ? `${fmt(topSituationValue)} de ${fmt(totalResidences)} residencias` : `0 de ${fmt(totalResidences)} residencias`, data.length ? Math.round(topSituationValue / data.length * 100) : 0],
       ["time", "↻", "Última actualización", lastDate ? formatDateTime(lastDate) : "Sin información", "reporte vigente más reciente", lastDate ? 100 : 0]
     ];
     grid.innerHTML = cards.map(([klass, icon, label, value, sub, percent]) => `<article class="character-item ${klass}" style="--value:${Math.max(0, Math.min(100, percent))}%"><div class="character-ring"><span class="character-icon" aria-hidden="true">${esc(icon)}</span></div><div class="character-copy"><div class="character-label">${esc(label)}</div><strong>${esc(value)}</strong><small>${esc(sub)}</small></div></article>`).join("");
@@ -398,8 +399,8 @@
       {label:"Con afectación", value:uniqueSituationBase.filter(affected).length},
       ...(C.situaciones || []).map(label => ({label, value:uniqueSituationBase.filter(r => hasSituation(r,label)).length}))
     ];
-    const max = Math.max(1, ...situations.map(x => x.value));
-    $("situationBars").innerHTML = situations.map(x => `<div class="bar-row"><div class="bar-label">${esc(x.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.value/max*100)}%"></div></div><div class="bar-value">${fmt(x.value)}</div></div>`).join("");
+    const totalForBars = Math.max(1, uniqueSituationBase.length);
+    $("situationBars").innerHTML = situations.map(x => `<div class="bar-row"><div class="bar-label">${esc(x.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.value/totalForBars*100)}%"></div></div><div class="bar-value"><b>${fmt(x.value)}</b><small>/ ${fmt(totalForBars)}</small></div></div>`).join("");
     renderCharacterization(data, regions, situations);
     const visible = regions.filter(r => r.total > 0);
     $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
