@@ -375,13 +375,13 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .history-chart .y-label{fill:#56657A;font-size:10px;text-anchor:end}
 .history-chart .x-label{fill:#56657A;font-size:10px;text-anchor:middle}
 .history-chart .point-label{fill:#102A56;font-size:11px;font-weight:800;text-anchor:middle}
-.need-row{display:grid;grid-template-columns:28px minmax(0,1fr) 58px;align-items:center;gap:10px;min-height:38px}
+.need-row{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:10px;min-height:38px}
 .need-icon{display:grid;place-items:center;width:24px;height:24px;border-radius:8px;background:#F3EFFF}
 .need-icon img{width:15px;height:15px;filter:brightness(0) saturate(100%) invert(21%) sepia(96%) saturate(2848%) hue-rotate(256deg) brightness(82%) contrast(97%)}
 .need-label{font-weight:800;color:#14213D;font-size:13px}
-.need-value{text-align:right;color:#102A56;font-variant-numeric:tabular-nums}
-.need-value b{display:block;font-size:14px}
-.need-value small{display:block;font-size:10px;color:#56657A}
+.need-value{display:inline-flex;align-items:baseline;justify-content:flex-end;gap:7px;text-align:right;color:#102A56;font-variant-numeric:tabular-nums;min-width:82px}
+.need-value b{font-size:18px;line-height:1;color:#102A56}
+.need-value small{font-size:12px;color:#5B21B6;font-weight:850}
 .recent-list{display:grid;gap:0}
 .recent-item{display:grid;grid-template-columns:auto minmax(0,1fr) minmax(190px,auto);gap:12px;align-items:center;padding:12px 0;border-top:1px solid #DCE3EC}
 .recent-item:first-child{border-top:0}
@@ -550,7 +550,7 @@ main.wrap{width:min(1500px,94%);margin:auto}
 .need-icon{width:21px;height:21px}
 .need-icon img{width:13px;height:13px}
 .need-label{font-size:12px}
-.need-value b{font-size:13px}
+.need-value b{font-size:17px}
 .people-card #peopleSummary{display:grid;grid-template-columns:minmax(160px,.6fr) minmax(0,1fr);gap:12px;align-items:center}
 .people-main{display:grid;grid-template-columns:52px minmax(0,1fr);place-items:start;text-align:left;padding:4px 0}
 .metric-icon{grid-row:1 / span 2;width:48px;height:48px;font-size:20px}

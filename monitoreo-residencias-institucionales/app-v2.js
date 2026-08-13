@@ -431,7 +431,7 @@
     if (!target) return;
     const rows = (C.necesidades || []).map(label => ({label, value:data.filter(r => (r.needs || []).some(item => key(item) === key(label))).length})).filter(row => row.value > 0).sort((a, b) => b.value - a.value);
     const total = Math.max(1, data.length);
-    target.innerHTML = rows.length ? rows.slice(0, 6).map(row => `<div class="need-row"><span class="need-icon"><img src="iconos_svg/${esc(needIcon(row.label))}" alt=""></span><span class="need-label">${esc(row.label)}</span><span class="need-value"><b>${fmt(row.value)}</b><small>/ ${fmt(total)}</small></span></div>`).join("") : '<div class="empty-state compact">Sin necesidades reportadas con los filtros actuales.</div>';
+    target.innerHTML = rows.length ? rows.slice(0, 6).map(row => `<div class="need-row"><span class="need-icon"><img src="iconos_svg/${esc(needIcon(row.label))}" alt=""></span><span class="need-label">${esc(row.label)}</span><span class="need-value"><b>${fmt(row.value)}</b><small>${fmt(Math.round(row.value / total * 100))}%</small></span></div>`).join("") : '<div class="empty-state compact">Sin necesidades reportadas con los filtros actuales.</div>';
   }
 
   function needIcon(label) {
