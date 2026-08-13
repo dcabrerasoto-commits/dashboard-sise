@@ -250,11 +250,11 @@
       .unique-metrics-section{margin:0 0 8px;padding:18px 22px;background:#FFFFFF;border:1px solid #E6ECF3;border-radius:10px;box-shadow:0 8px 22px rgba(16,42,86,.06)}
       .unique-metrics-head{display:none}
       .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
-      .unique-kpi{min-height:104px!important;display:grid!important;grid-template-columns:74px minmax(0,1fr)!important;grid-template-rows:44px 18px 32px!important;column-gap:16px!important;align-content:center!important;align-items:start!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 24px!important}
+      .unique-kpi{min-height:104px!important;display:grid!important;grid-template-columns:64px minmax(0,1fr)!important;grid-template-rows:44px 18px 32px!important;column-gap:14px!important;align-content:center!important;align-items:start!important;justify-content:start!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 18px!important}
       .unique-kpi::before{display:none!important}
-      .unique-kpi-icon{grid-row:1 / span 3;align-self:center;width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);display:grid;place-items:center}
+      .unique-kpi-icon{grid-row:1 / span 3;align-self:center;justify-self:start;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);display:grid;place-items:center}
       .unique-kpi:nth-child(3) .unique-kpi-icon,.unique-kpi:nth-child(4) .unique-kpi-icon{background:linear-gradient(135deg,#2563EB,#60A5FA)}
-      .unique-kpi-icon img{width:34px;height:34px;filter:brightness(0) invert(1)}
+      .unique-kpi-icon img{width:30px;height:30px;filter:brightness(0) invert(1)}
       .unique-kpi+.unique-kpi{border-left:1px solid #DCE3EC!important}
       .unique-kpi .kpi-value{grid-column:2!important;grid-row:1!important;display:block!important;align-self:end!important;text-align:left!important;font-size:36px!important;color:#5B21B6!important;line-height:1!important;margin:0!important;height:40px!important;font-variant-numeric:tabular-nums!important}
       .unique-kpi:nth-child(3) .kpi-value,.unique-kpi:nth-child(4) .kpi-value{color:#2563EB!important}
