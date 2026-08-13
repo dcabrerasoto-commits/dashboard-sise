@@ -9,18 +9,18 @@
   <meta name="theme-color" content="#071b4d">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260813-05">
+  <link rel="stylesheet" href="styles.css?v=20260813-06">
   <script defer src="catalogos.js?v=20260719-03"></script>
   <script defer src="residencias-catalogo.js?v=20260719-03"></script>
   <script defer src="sync-config.js?v=20260719-03"></script>
   <script defer src="chile-time.js?v=20260719-03"></script>
-  <script defer src="app-v2.js?v=20260813-05"></script>
-  <script defer src="interface-v2.js?v=20260813-05"></script>
-  <script defer src="dashboard-fixes.js?v=20260813-05"></script>
+  <script defer src="app-v2.js?v=20260813-06"></script>
+  <script defer src="interface-v2.js?v=20260813-06"></script>
+  <script defer src="dashboard-fixes.js?v=20260813-06"></script>
   <script defer src="shared-sync.js?v=20260719-03"></script>
   <script defer src="date-normalizer.js?v=20260719-03"></script>
   <script defer src="all-services-catalog.js?v=20260719-03"></script>
-  <script defer src="unique-metrics.js?v=20260813-05"></script>
+  <script defer src="unique-metrics.js?v=20260813-06"></script>
   <script defer src="indicator-consistency.js?v=20260719-03"></script>
   <script defer src="save-safety.js?v=20260719-03"></script>
 </head>
@@ -52,7 +52,6 @@
   </nav>
 
   <section class="panel active" id="resumen">
-    <div class="section-heading"><span class="section-kicker">MONITOREO NACIONAL</span><h2>Situación vigente de las residencias informadas</h2><p>El resumen considera el último reporte disponible de cada residencia.</p></div>
     <div class="filter-bar card"><label>Servicio<select id="filterService"></select></label><label>Región<select id="filterRegion"></select></label><label>Estado<select id="filterStatus"></select></label><button type="button" class="btn btn-light" id="clearFilters">Limpiar filtros</button></div>
     <div class="kpi-grid hidden" id="kpiGrid"></div>
     <article class="card characterization-card"><div class="card-head"><div><span class="card-kicker">CARACTERIZACIÓN</span><h3>Lectura general de los datos</h3></div><span class="small-note">Indicadores derivados del último reporte vigente</span></div><div class="character-grid" id="characterGrid"></div><div class="character-chart hidden" id="characterChart" aria-label="Caracterización visual de datos"></div></article>

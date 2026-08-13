@@ -6,23 +6,23 @@
     const style = document.createElement("style");
     style.id = "seguimiento-ui-styles";
     style.textContent = `
-      :root{--beige:#f5f0e7;--steel:#405d66;--indigo:#6848ff;--amber:#7c3ff2;--violet-strong:#7c3ff2;--magenta:#e7378a;--ok-soft:#edf8f3;--warn-soft:#fffde0;--danger-soft:#fff0f7}
-      #resumen{--accent:#00b7e8!important;--accent-dark:#048cc2!important;--accent-soft:#ddf7fa!important}
+      :root{--beige:#f5f0e7;--steel:#405d66;--indigo:#5f58bf;--amber:#6c55c8;--violet-strong:#6c55c8;--magenta:#c84f91;--ok-soft:#edf8f3;--warn-soft:#f3efff;--danger-soft:#fff0f7}
+      #resumen{--accent:#4f93c7!important;--accent-dark:#2c6f9c!important;--accent-soft:#e8f4fb!important}
       #resumen .section-heading{margin-bottom:22px!important}
       #resumen .filter-bar{margin-bottom:24px!important;background:#fbfdfc!important;border-color:#d9e4e1!important;box-shadow:0 8px 20px rgba(17,54,59,.05)!important}
       #resumen .kpi-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;margin-bottom:26px!important}
       #resumen .kpi{min-height:126px!important;padding:16px 15px 13px!important;border-top-width:7px!important;background:#fff!important;border-color:transparent!important;color:var(--text,#10213f)!important;box-shadow:0 12px 28px rgba(7,27,77,.10)!important}
-      #resumen .kpi.ok{border-top-color:#e7378a!important}
-      #resumen .kpi.attention,#resumen .kpi.alert{border-top-color:#7c3ff2!important}
-      #resumen .kpi.critical{border-top-color:#e54779!important}
-      #resumen .kpi.info,#resumen .kpi.primary{border-top-color:#6848ff!important}
-      #kpiGrid .kpi:first-child{grid-column:span 1!important;background:#fff!important;border-top-color:#e7378a!important;color:var(--text,#10213f)!important}
+      #resumen .kpi.ok{border-top-color:#c84f91!important}
+      #resumen .kpi.attention,#resumen .kpi.alert{border-top-color:#6c55c8!important}
+      #resumen .kpi.critical{border-top-color:#bf4f82!important}
+      #resumen .kpi.info,#resumen .kpi.primary{border-top-color:#5f58bf!important}
+      #kpiGrid .kpi:first-child{grid-column:span 1!important;background:#fff!important;border-top-color:#c84f91!important;color:var(--text,#10213f)!important}
       #resumen .kpi-label{font-size:11px!important;line-height:1.25!important;letter-spacing:.035em!important;color:#40595d!important;font-weight:800!important}
       #resumen .kpi-value{font-size:46px!important;margin-top:8px!important;text-align:center!important;width:100%!important;color:#071b4d!important;line-height:.95!important}
-      #resumen .kpi.ok .kpi-value{color:#d8247f!important}
-      #resumen .kpi.attention .kpi-value,#resumen .kpi.alert .kpi-value{color:#6730d8!important}
-      #resumen .kpi.critical .kpi-value{color:#d72769!important}
-      #resumen .kpi.info .kpi-value,#resumen .kpi.primary .kpi-value{color:#5b3df0!important}
+      #resumen .kpi.ok .kpi-value{color:#b83f82!important}
+      #resumen .kpi.attention .kpi-value,#resumen .kpi.alert .kpi-value{color:#5d48bb!important}
+      #resumen .kpi.critical .kpi-value{color:#b64278!important}
+      #resumen .kpi.info .kpi-value,#resumen .kpi.primary .kpi-value{color:#514bb2!important}
       #resumen .kpi-sub{font-size:10.5px!important;line-height:1.25!important;margin-top:8px!important;padding-top:8px!important;color:#6c7d81!important;border-top:1px solid #e5ecea!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
       #resumen .dashboard-grid .card{border-top-width:4px!important;box-shadow:0 8px 18px rgba(17,54,59,.05)!important}
       #resumen .dashboard-grid .card h3{font-size:19px!important;font-weight:720!important}
