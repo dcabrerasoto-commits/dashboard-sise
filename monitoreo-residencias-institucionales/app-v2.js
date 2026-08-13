@@ -627,7 +627,7 @@
     const data = filteredSummary();
     renderKpis(data);
     const regions = byRegión(data);
-    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block ${r.total ? "" : "no-data"} level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación, ${fmt(r.affectedRate)}%"><strong>${esc(r.region)}</strong><span class="region-values"><span><b>${fmt(r.total)}</b><small>informadas</small></span><span><b>${fmt(r.affected)}</b><small>afectadas</small></span><span><b>${fmt(r.affectedRate)}%</b><small>afectación</small></span></span></button>`).join("");
+    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block ${r.total ? "" : "no-data"} level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación, ${fmt(r.affectedRate)}%"><i aria-hidden="true"></i><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.affected)}</b></span></button>`).join("");
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
     renderChileMap(regions);
     renderTerritoryInsights(regions);

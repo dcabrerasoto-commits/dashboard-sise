@@ -253,10 +253,12 @@
       .unique-kpi{min-height:104px!important;display:grid!important;grid-template-columns:64px minmax(0,1fr)!important;grid-template-rows:42px 22px 32px!important;column-gap:14px!important;align-content:center!important;align-items:start!important;justify-content:start!important;text-align:left!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 18px!important}
       .unique-kpi::before{display:none!important}
       .unique-kpi-icon{grid-row:1 / span 3;align-self:center;justify-self:start;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);display:grid;place-items:center}
+      .unique-kpi:nth-child(2) .unique-kpi-icon{background:linear-gradient(135deg,#9D1D96,#C43D8D)}
       .unique-kpi:nth-child(3) .unique-kpi-icon,.unique-kpi:nth-child(4) .unique-kpi-icon{background:linear-gradient(135deg,#2563EB,#60A5FA)}
       .unique-kpi-icon img{width:30px;height:30px;filter:brightness(0) invert(1)}
       .unique-kpi+.unique-kpi{border-left:1px solid #DCE3EC!important}
       .unique-kpi .kpi-value{grid-column:2!important;grid-row:1!important;display:block!important;align-self:end!important;justify-self:start!important;text-align:left!important;font-size:36px!important;color:#5B21B6!important;line-height:1!important;margin:0!important;height:auto!important;font-variant-numeric:tabular-nums!important}
+      .unique-kpi:nth-child(2) .kpi-value{color:#9D1D96!important}
       .unique-kpi:nth-child(3) .kpi-value,.unique-kpi:nth-child(4) .kpi-value{color:#2563EB!important}
       .unique-kpi .kpi-label{grid-column:2!important;grid-row:2!important;color:#14213D!important;font-size:11px!important;line-height:1.1!important;align-self:center!important;justify-self:start!important;text-align:left!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
       .unique-kpi .kpi-sub{grid-column:2!important;grid-row:3!important;color:#56657A!important;font-size:10.5px!important;line-height:1.25!important;margin:2px 0 0!important;padding:0!important;border:0!important;text-align:left!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
