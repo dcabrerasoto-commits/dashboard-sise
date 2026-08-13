@@ -252,7 +252,7 @@
       .unique-metrics-head h3{margin:3px 0 0;color:#071b4d;font-size:18px;font-weight:730}
       .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
       .unique-kpi{min-height:104px!important;display:grid!important;grid-template-rows:auto 1fr auto!important;overflow:visible!important;background:#f8fcff!important;border:0!important;border-top:6px solid #00b7e8!important;border-radius:12px!important;box-shadow:none!important}
-      .unique-kpi:nth-child(2){border-top-color:#6848ff!important}.unique-kpi:nth-child(3){border-top-color:#35e978!important}.unique-kpi:nth-child(4){border-top-color:#c8ff00!important}
+      .unique-kpi:nth-child(2){border-top-color:#6848ff!important}.unique-kpi:nth-child(3){border-top-color:#e7378a!important}.unique-kpi:nth-child(4){border-top-color:#7c3ff2!important}
       .unique-kpi .kpi-value{display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;font-size:32px!important;color:#071b4d!important}
       .unique-kpi .kpi-label{color:#172a58!important;font-size:10.5px!important}
       .unique-kpi .kpi-sub{color:#66758f!important;font-size:10px!important;line-height:1.25!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
