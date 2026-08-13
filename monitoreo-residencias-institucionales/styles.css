@@ -643,6 +643,17 @@ main.wrap{width:calc(100% - 48px);max-width:1552px;margin:auto}
 .recent-card .card-head{margin-bottom:8px}
 .recent-table{min-width:0;width:100%}
 .recent-table th,.recent-table td{font-size:10.5px;padding:7px 8px}
+body{background:#EEF2F7;color:#14213D}
+.site-header,.toolbar{background:#F9FAFC}
+.logo-box{background:#F9FAFC}
+.filter-bar,.card,.unique-metrics-section{background:#F9FAFC!important;border-color:#DCE3EC!important}
+.overview-grid>.card,.zone-evolution .card{background:#F9FAFC!important}
+.people-card{background:linear-gradient(180deg,#F9FAFC 0%,#F4F1FA 100%)!important}
+.people-stats{background:#F6F4FA!important}
+.donut-ring::after{background:#F9FAFC}
+.recent-table th{background:#F9FAFC}
+.toolbar-actions .btn,.filter-bar .btn,.tab-entry,.tab[data-tab="ingreso"],.tab-entry:hover,.tab[data-tab="ingreso"]:hover,.tab-entry.active,.tab[data-tab="ingreso"].active{background:#F9FAFC!important}
+#regionSummaryTable .region-total-row td,.mode-toggle,.freshness{background:#F4F7FB}
 @media(max-width:1250px){
   .monitor-grid{grid-template-columns:1fr 1fr}
   .overview-grid{grid-template-columns:1fr 1fr}
