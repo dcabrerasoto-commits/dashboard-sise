@@ -1,13 +1,22 @@
 {
-  "base": "Base_completa_nacional_FIBE_Monitoreo_SISE_20260731_1023.xlsx",
-  "filas_base": 55338,
-  "hogares": 19670,
+  "ru": "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_JULIO\\NOMINA\\RU\\RU_SF_20260811_dcs.xlsx",
+  "filas_busqueda": 114576,
+  "hogares": 41487,
+  "claves": 11,
   "nominas": {
-    "N1": 70,
-    "N2": 3476,
-    "N3": 8513
+    "Nomina N3": 8508,
+    "Nomina N4": 27566,
+    "Nomina N2": 3476,
+    "Nomina N1": 70
   },
-  "beneficios_nomina": 12059,
-  "beneficios_cruzados": 12059,
-  "hogares_con_beneficio": 12059
+  "fechas": {
+    "Nomina N3|31-07-2026": 8508,
+    "Nomina N4|14-08-2026": 27566,
+    "Nomina N2|31-07-2026": 3476,
+    "Nomina N1|24-07-2026": 70
+  },
+  "generado": "2026-08-13T18:20:24",
+  "compresion": "gzip",
+  "bytes_plano": 92830429,
+  "bytes_comprimido": 12027701
 }
