@@ -332,14 +332,8 @@
   }
 
   function renderKpis(data) {
-    const cards = [
-      ["Residencias sin afectación", data.filter(r => r.status === "Sin afectación").length, "Sin daño vigente", "ok", "Residencias cuyo último reporte vigente indica estado sin afectación."],
-      ["Residencias con afectación", data.filter(affected).length, "Requieren seguimiento", "attention", "Residencias cuyo último reporte vigente indica afectación o alguna situación reportada."],
-      ["Residencias sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "Corte eléctrico", "critical", "Residencias cuyo último reporte vigente informa falta de electricidad."],
-      ["Residencias con aguas servidas", data.filter(r => hasSituation(r, "Exposición a aguas servidas")).length, "Exposición informada", "critical", "Residencias cuyo último reporte vigente informa exposición a aguas servidas."],
-      ["Residencias con electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "Seguimiento especial", "info", "Residencias cuyo último reporte vigente informa personas electrodependientes."]
-    ];
-    $("kpiGrid").innerHTML = cards.map(([label,value,sub,klass,definition]) => `<article class="kpi ${klass}" tabindex="0" title="${esc(definition)}" data-definition="${esc(definition)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
+    const grid = $("kpiGrid");
+    if (grid) grid.innerHTML = "";
   }
 
   function byRegión(data) {
@@ -365,23 +359,18 @@
     const topSituation = situations
       .filter(item => item.label !== "Sin situaciones reportadas (sin afectación)")
       .sort((a, b) => b.value - a.value)[0];
+    const totalRegions = (C.regiones || []).length || 1;
+    const topSituationValue = topSituation && topSituation.value ? topSituation.value : 0;
     const cards = [
-      ["territory", "Cobertura territorial", `${fmt(informedRegions)} / ${fmt((C.regiones || []).length)}`, "regiones con reportes"],
-      ["people", "Personas atendidas", fmt(totalPeople), "según reportes vigentes"],
-      ["ratio", "Tasa con afectación", `${fmt(affectedRate)}%`, "del total informado"],
-      ["energy", "Electrodependientes", fmt(electroPeople), "personas informadas"],
-      ["signal", "Situación principal", topSituation && topSituation.value ? topSituation.label : "Sin situaciones", topSituation && topSituation.value ? `${fmt(topSituation.value)} residencias` : "sin reportes asociados"],
-      ["time", "Última actualización", lastDate ? formatDateTime(lastDate) : "Sin información", "reporte vigente más reciente"]
+      ["territory", "⌖", "Cobertura territorial", `${fmt(informedRegions)} / ${fmt(totalRegions)}`, "regiones con reportes", Math.round(informedRegions / totalRegions * 100)],
+      ["people", "●", "Personas atendidas", fmt(totalPeople), "según reportes vigentes", data.length ? 100 : 0],
+      ["ratio", "%", "Tasa con afectación", `${fmt(affectedRate)}%`, "del total informado", affectedRate],
+      ["energy", "⚡", "Electrodependientes", fmt(electroPeople), "personas informadas", totalPeople ? Math.min(100, Math.round(electroPeople / totalPeople * 100)) : 0],
+      ["signal", "!", "Situación principal", topSituationValue ? topSituation.label : "Sin situaciones", topSituationValue ? `${fmt(topSituationValue)} residencias` : "sin reportes asociados", data.length ? Math.round(topSituationValue / data.length * 100) : 0],
+      ["time", "↻", "Última actualización", lastDate ? formatDateTime(lastDate) : "Sin información", "reporte vigente más reciente", lastDate ? 100 : 0]
     ];
-    grid.innerHTML = cards.map(([icon, label, value, sub]) => `<article class="character-item"><span class="character-icon ${icon}" aria-hidden="true"></span><div><div class="character-label">${esc(label)}</div><strong>${esc(value)}</strong><small>${esc(sub)}</small></div></article>`).join("");
-    const bars = [
-      ["Sin afectación", data.filter(r => r.status === "Sin afectación").length, "ok"],
-      ["Con afectación", affectedCount, "attention"],
-      ["Sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "critical"],
-      ["Electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "info"]
-    ];
-    const max = Math.max(1, ...bars.map(row => row[1]));
-    chart.innerHTML = bars.map(([label, value, klass]) => `<div class="character-bar ${klass}"><span>${esc(label)}</span><div><i style="width:${Math.round(value / max * 100)}%"></i></div><strong>${fmt(value)}</strong></div>`).join("");
+    grid.innerHTML = cards.map(([klass, icon, label, value, sub, percent]) => `<article class="character-item ${klass}" style="--value:${Math.max(0, Math.min(100, percent))}%"><div class="character-ring"><span class="character-icon" aria-hidden="true">${esc(icon)}</span></div><div class="character-copy"><div class="character-label">${esc(label)}</div><strong>${esc(value)}</strong><small>${esc(sub)}</small></div></article>`).join("");
+    chart.innerHTML = "";
   }
 
   function renderSummary() {
