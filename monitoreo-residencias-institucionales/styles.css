@@ -447,6 +447,8 @@ main.wrap{width:min(1500px,94%);margin:auto}
 .tab.active,.tab-entry.active,.tab[data-tab="ingreso"].active{background:#fff;color:#1E5AA8}
 .tab.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:#2563EB;border-radius:999px 999px 0 0}
 .tab:hover{background:#EAF3FF;color:#1E5AA8}
+.tab-entry,.tab[data-tab="ingreso"],.tab-entry:hover,.tab[data-tab="ingreso"]:hover,.tab-entry.active,.tab[data-tab="ingreso"].active{background:#fff!important;border-color:#DCE3EC!important;color:#1E5AA8!important;box-shadow:none!important}
+.tab-entry.active::after,.tab[data-tab="ingreso"].active::after{background:#2563EB!important}
 .toolbar-actions{padding-right:12px}
 .toolbar-actions .btn{border:0;color:#1E5AA8;background:#fff;font-weight:850}
 .toolbar-actions .btn::before{margin-right:7px;color:#1E5AA8}
