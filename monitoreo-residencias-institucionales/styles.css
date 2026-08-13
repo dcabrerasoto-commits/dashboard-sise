@@ -656,6 +656,14 @@ body{background:#E9EEF5;color:#14213D}
 #regionSummaryTable .region-total-row td,.mode-toggle,.freshness{background:#F4F7FB}
 .territory-top-head{display:grid;grid-template-columns:minmax(92px,1fr) 34px minmax(70px,.72fr);gap:9px;color:#56657A;font-size:9px;font-weight:850;text-transform:uppercase;margin-bottom:2px}
 .territory-top-head span:nth-child(2){text-align:right}
+.status-bad{background:rgba(139,60,128,.78)!important;color:#fff!important;border-color:rgba(139,60,128,.18)!important}
+.status-eval{background:rgba(117,151,220,.24)!important;color:#102A56!important;border-color:rgba(117,151,220,.20)!important}
+.status-good{background:rgba(96,165,250,.28)!important;color:#102A56!important;border-color:rgba(96,165,250,.22)!important}
+.status-none{background:rgba(139,60,128,.12)!important;color:#5D3B78!important;border-color:rgba(139,60,128,.16)!important}
+.status-critical,.status-badge.critical{background:rgba(165,55,103,.78)!important;color:#fff!important;border-color:rgba(165,55,103,.18)!important}
+.metric-icon{background:linear-gradient(135deg,rgba(98,60,170,.92),rgba(130,76,194,.82))!important}
+.people-main strong,.people-main small{color:#5D28A6!important}
+.inline-link,.recent-table th{color:#4B32A7!important}
 @media(max-width:1250px){
   .monitor-grid{grid-template-columns:1fr 1fr}
   .overview-grid{grid-template-columns:1fr 1fr}
