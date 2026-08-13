@@ -8,7 +8,6 @@
   let records = [];
   let latest = [];
   let previousMatch = null;
-  let detailSort = {field:"reportDate", direction:"desc"};
   let savingInProgress = false;
 
   const $ = (id) => document.getElementById(id);
@@ -228,10 +227,9 @@
   }
 
   function setupCatalogs() {
-    ["filterService","detailService","historyService"].forEach(id => populate($(id), C.servicios, "Todos los servicios"));
-    ["filterRegion","detailRegion","historyRegion"].forEach(id => populate($(id), C.regiones, "Todas las regiones"));
+    populate($("filterService"), C.servicios, "Todos los servicios");
+    populate($("filterRegion"), C.regiones, "Todas las regiones");
     populate($("filterStatus"), C.estados, "Todos los estados");
-    populate($("detailSituation"), C.situaciones, "Todas las situaciones");
     populate($("service"), C.servicios, "Seleccione un servicio");
     populate($("region"), C.regiones, "Seleccione una región");
     populate($("status"), C.estados, "Seleccione un estado");
@@ -354,6 +352,38 @@
 
   function intensity(n) { return n >= 6 ? 3 : n >= 3 ? 2 : n >= 1 ? 1 : 0; }
 
+  function renderCharacterization(data, regions, situations) {
+    const grid = $("characterGrid");
+    const chart = $("characterChart");
+    if (!grid || !chart) return;
+    const informedRegions = regions.filter(r => r.total > 0).length;
+    const totalPeople = data.reduce((sum, r) => sum + Number(r.people || 0), 0);
+    const electroPeople = data.reduce((sum, r) => sum + Number(r.electrodependentCount || 0), 0);
+    const affectedCount = data.filter(affected).length;
+    const affectedRate = data.length ? Math.round(affectedCount / data.length * 100) : 0;
+    const lastDate = data.map(r => r.reportDate || r.createdAt).filter(Boolean).sort().pop();
+    const topSituation = situations
+      .filter(item => item.label !== "Sin situaciones reportadas (sin afectación)")
+      .sort((a, b) => b.value - a.value)[0];
+    const cards = [
+      ["territory", "Cobertura territorial", `${fmt(informedRegions)} / ${fmt((C.regiones || []).length)}`, "regiones con reportes"],
+      ["people", "Personas atendidas", fmt(totalPeople), "según reportes vigentes"],
+      ["ratio", "Tasa con afectación", `${fmt(affectedRate)}%`, "del total informado"],
+      ["energy", "Electrodependientes", fmt(electroPeople), "personas informadas"],
+      ["signal", "Situación principal", topSituation && topSituation.value ? topSituation.label : "Sin situaciones", topSituation && topSituation.value ? `${fmt(topSituation.value)} residencias` : "sin reportes asociados"],
+      ["time", "Última actualización", lastDate ? formatDateTime(lastDate) : "Sin información", "reporte vigente más reciente"]
+    ];
+    grid.innerHTML = cards.map(([icon, label, value, sub]) => `<article class="character-item"><span class="character-icon ${icon}" aria-hidden="true"></span><div><div class="character-label">${esc(label)}</div><strong>${esc(value)}</strong><small>${esc(sub)}</small></div></article>`).join("");
+    const bars = [
+      ["Sin afectación", data.filter(r => r.status === "Sin afectación").length, "ok"],
+      ["Con afectación", affectedCount, "attention"],
+      ["Sin electricidad", data.filter(r => hasSituation(r, "Sin electricidad")).length, "critical"],
+      ["Electrodependientes", data.filter(r => r.electrodependent === "Sí").length, "info"]
+    ];
+    const max = Math.max(1, ...bars.map(row => row[1]));
+    chart.innerHTML = bars.map(([label, value, klass]) => `<div class="character-bar ${klass}"><span>${esc(label)}</span><div><i style="width:${Math.round(value / max * 100)}%"></i></div><strong>${fmt(value)}</strong></div>`).join("");
+  }
+
   function renderSummary() {
     const data = filteredSummary();
     renderKpis(data);
@@ -368,75 +398,9 @@
     ];
     const max = Math.max(1, ...situations.map(x => x.value));
     $("situationBars").innerHTML = situations.map(x => `<div class="bar-row"><div class="bar-label">${esc(x.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.value/max*100)}%"></div></div><div class="bar-value">${fmt(x.value)}</div></div>`).join("");
+    renderCharacterization(data, regions, situations);
     const visible = regions.filter(r => r.total > 0);
     $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
-  }
-
-  function detailValue(record, field) {
-    if (field === "situations") return (record.situations || []).join(", ");
-    if (field === "people") return Number(record.people || 0);
-    if (field === "reportDate") return new Date(record.reportDate || record.createdAt || 0).getTime() || 0;
-    return key(record[field] || "");
-  }
-
-  function sortDetailRows(rows) {
-    const factor = detailSort.direction === "asc" ? 1 : -1;
-    return rows.sort((a, b) => {
-      const av = detailValue(a, detailSort.field);
-      const bv = detailValue(b, detailSort.field);
-      if (av < bv) return -1 * factor;
-      if (av > bv) return 1 * factor;
-      return (new Date(b.reportDate || b.createdAt || 0).getTime() || 0) - (new Date(a.reportDate || a.createdAt || 0).getTime() || 0);
-    });
-  }
-
-  function renderDetailSortState() {
-    $$("#detailTable th[data-sort]").forEach(th => {
-      const active = th.dataset.sort === detailSort.field;
-      th.classList.toggle("sort-active", active);
-      th.setAttribute("aria-sort", active ? (detailSort.direction === "asc" ? "ascending" : "descending") : "none");
-      const icon = th.querySelector(".sort-icon");
-      if (icon) icon.textContent = active ? (detailSort.direction === "asc" ? "▲" : "▼") : "↕";
-    });
-  }
-
-  function renderDetail() {
-    const q = key($("detailSearch").value);
-    const data = sortDetailRows(latest.filter(r =>
-      (!$("detailService").value || r.service === $("detailService").value) &&
-      (!$("detailRegion").value || r.region === $("detailRegion").value) &&
-      (!$("detailSituation").value || hasSituation(r, $("detailSituation").value)) &&
-      (!q || [r.service,r.program,r.region,r.commune,r.establishment,r.responsible,r.contactEmail,r.contactPhone].some(v => key(v).includes(q)))
-    ));
-    $("detailTableBody").innerHTML = data.length ? data.map(r => `<tr><td>${esc(r.service)}</td><td>${esc(r.region)}</td><td>${esc(r.commune)}</td><td>${esc(r.establishment)}</td><td>${esc(r.status)}</td><td>${esc((r.situations || []).join(", ") || "Sin situaciones")}</td><td>${fmt(r.people)}</td><td>${esc(r.damageLevel || "Sin información")}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
-    renderDetailSortState();
-  }
-
-  function dailyRows() {
-    const service = $("historyService").value;
-    const region = $("historyRegion").value;
-    const from = $("historyFrom").value;
-    const to = $("historyTo").value;
-    const filtered = records.filter(r => {
-      const d = dateKey(r.reportDate || r.createdAt);
-      return (!service || r.service === service) && (!region || r.region === region) && (!from || d >= from) && (!to || d <= to);
-    });
-    const groups = new Map();
-    filtered.forEach(r => {
-      const d = dateKey(r.reportDate || r.createdAt);
-      if (!d) return;
-      if (!groups.has(d)) groups.set(d, []);
-      groups.get(d).push(r);
-    });
-    return Array.from(groups.entries()).sort((a,b) => b[0].localeCompare(a[0])).map(([date, rows]) => {
-      const current = latestRecords(rows);
-      return {date, reports:rows.length, residences:current.length, affected:current.filter(affected).length, without:current.filter(r => r.status === "Sin afectación").length, evaluation:current.filter(r => r.status === "En evaluación").length, electricity:current.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:current.filter(r => hasSituation(r,"Exposición a aguas servidas")).length, electroResidences:current.filter(r => r.electrodependent === "Sí").length, electroPeople:current.reduce((sum,r) => sum + Number(r.electrodependentCount || 0),0)};
-    });
-  }
-
-  function renderHistory() {
-    const rows = dailyRows();
-    $("historyTableBody").innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.date.split("-").reverse().join("-"))}</td><td>${fmt(r.reports)}</td><td>${fmt(r.residences)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.without)}</td><td>${fmt(r.evaluation)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electroResidences)}</td><td>${fmt(r.electroPeople)}</td></tr>`).join("") : '<tr><td colspan="10">Sin registros para el período seleccionado.</td></tr>';
   }
 
   function buildRecord() {
@@ -509,7 +473,7 @@
     setUpdateSections(true);
   }
 
-  function renderAll() { renderSummary(); renderDetail(); renderHistory(); }
+  function renderAll() { renderSummary(); }
 
   function setupTabs() {
     $$(".tab").forEach(btn => btn.addEventListener("click", () => {
@@ -522,15 +486,6 @@
   function setupEvents() {
     ["filterService","filterRegion","filterStatus"].forEach(id => $(id).addEventListener("change", renderSummary));
     $("clearFilters").addEventListener("click", () => { ["filterService","filterRegion","filterStatus"].forEach(id => $(id).value = ""); renderSummary(); });
-    ["detailService","detailRegion","detailSituation"].forEach(id => $(id).addEventListener("change", renderDetail));
-    $("detailSearch").addEventListener("input", renderDetail);
-    $$("#detailTable th[data-sort]").forEach(th => th.addEventListener("click", () => {
-      const field = th.dataset.sort;
-      detailSort = {field, direction: detailSort.field === field && detailSort.direction === "asc" ? "desc" : "asc"};
-      renderDetail();
-    }));
-    ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).addEventListener("change", renderHistory));
-    $("clearHistoryFilters").addEventListener("click", () => { ["historyService","historyRegion","historyFrom","historyTo"].forEach(id => $(id).value = ""); renderHistory(); });
     $("region").addEventListener("change", e => {
       const region = officialRegion(e.target.value);
       e.target.value = region;
