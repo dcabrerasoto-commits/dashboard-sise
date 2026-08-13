@@ -437,19 +437,19 @@ main.wrap{width:min(1500px,94%);margin:auto}
 .brand h1{margin:4px 0 8px;color:#14213D;font-size:34px;font-weight:850}
 .brand p{display:none}
 .sync-line{display:inline-flex;align-items:center;gap:20px;color:#56657A;font-size:13px}
-.sync-line::before{content:"◷";display:inline-grid;place-items:center;width:20px;height:20px;border:1px solid #A78BFA;border-radius:50%;color:#7C3AED}
+.sync-line::before{content:"◷";display:inline-grid;place-items:center;width:20px;height:20px;border:1px solid #93C5FD;border-radius:50%;color:#2563EB}
 .logo-box{border-radius:2px!important;padding:0;background:#fff}
 .logo-box img{width:134px;height:84px}
 .toolbar{top:0;width:100%;border:0;border-bottom:1px solid #DCE3EC;border-radius:0!important;box-shadow:none;margin-bottom:18px;padding:0;background:#fff}
 .tabs{gap:0;align-items:stretch}
 .tab{position:relative;padding:18px 25px;border-radius:0!important;color:#14213D;font-weight:800}
 .tab+.tab{border-left:1px solid #DCE3EC}
-.tab.active,.tab-entry.active,.tab[data-tab="ingreso"].active{background:#fff;color:#5B21B6}
-.tab.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:#5B21B6;border-radius:999px 999px 0 0}
-.tab:hover{background:#FBFAFF;color:#5B21B6}
+.tab.active,.tab-entry.active,.tab[data-tab="ingreso"].active{background:#fff;color:#1E5AA8}
+.tab.active::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:#2563EB;border-radius:999px 999px 0 0}
+.tab:hover{background:#EAF3FF;color:#1E5AA8}
 .toolbar-actions{padding-right:12px}
-.toolbar-actions .btn{border:0;color:#5B21B6;background:#fff;font-weight:850}
-.toolbar-actions .btn::before{margin-right:7px;color:#5B21B6}
+.toolbar-actions .btn{border:0;color:#1E5AA8;background:#fff;font-weight:850}
+.toolbar-actions .btn::before{margin-right:7px;color:#1E5AA8}
 #exportButton::before{content:"↓"}
 #printButton::before{content:"▣"}
 .filter-bar{box-shadow:0 8px 22px rgba(16,42,86,.06)!important;border:1px solid #E6ECF3!important;border-radius:10px!important;padding:18px 24px!important}
