@@ -215,11 +215,21 @@
       .region-values{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:9px!important;white-space:nowrap!important;background:rgba(255,255,255,.58)!important;border:0!important;padding:3px 6px!important;min-width:210px!important;width:auto!important}
       .region-values>span{display:grid!important;align-items:center!important;gap:1px!important;text-align:right!important;background:transparent!important;border:0!important;padding:0!important;min-width:48px!important}
       .region-values b{font-size:13px!important;line-height:1!important;color:#102A56!important;min-width:0!important;text-align:right!important}.region-values small{font-size:7px!important;line-height:1!important;text-transform:uppercase!important;color:#56657A!important}.region-values i{display:none!important}
+      .overview-grid #regionMap{gap:2px!important;overflow:hidden!important}
+      .overview-grid .region-block{min-height:17px!important;padding:0!important;display:grid!important;grid-template-columns:8px minmax(92px,1fr) 26px!important;gap:6px!important;background:transparent!important;border:0!important;box-shadow:none!important;color:#102A56!important}
+      .overview-grid .region-block i{display:block!important;width:6px!important;height:6px!important;border-radius:50%!important;background:#60A5FA!important}
+      .overview-grid .region-block.level-0 i{background:#DCE3EC!important}.overview-grid .region-block.level-1 i{background:#93C5FD!important}.overview-grid .region-block.level-2 i{background:#60A5FA!important}.overview-grid .region-block.level-3 i{background:#2563EB!important}.overview-grid .region-block.level-4 i{background:#1E5AA8!important}
+      .overview-grid .region-block strong{font-size:9.2px!important;color:#102A56!important;font-weight:750!important}
+      .overview-grid .region-values{display:flex!important;min-width:0!important;width:auto!important;background:transparent!important;padding:0!important;justify-content:end!important}
+      .overview-grid .region-values b{font-size:9.6px!important;color:#102A56!important}
+      .overview-grid .region-values small{display:none!important}
       #resumen .legend{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:12px!important;padding:10px 12px!important;background:#F5F7FA!important;border:1px solid #DCE3EC!important;color:#56657A!important;font-size:11px!important}
       #resumen .legend span{display:inline-flex!important;align-items:center!important;gap:6px!important;padding:4px 8px!important;background:#fff!important;border:1px solid #DCE3EC!important;font-weight:750!important}
       #resumen .legend span::before{content:"";width:12px;height:12px;border:1px solid #DCE3EC;background:#F5F7FA}
       #resumen .legend span:nth-child(1)::before{background:#DCE3EC!important;border-color:#DCE3EC!important}#resumen .legend span:nth-child(2)::before{background:#EAF3FF!important;border-color:#93C5FD!important}#resumen .legend span:nth-child(3)::before{background:#93C5FD!important;border-color:#60A5FA!important}#resumen .legend span:nth-child(4)::before{background:#3882F6!important;border-color:#3882F6!important}#resumen .legend span:nth-child(5)::before{background:#1E5AA8!important;border-color:#1E5AA8!important}
-      #situationBars,#needsBars{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;gap:9px!important}#situationBars .bar-row,#needsBars .bar-row{min-height:32px!important}.bar-fill{background:linear-gradient(90deg,#1E5AA8,#2563EB,#60A5FA)!important}.bar-label{line-height:1.25!important}.bar-value{color:#102A56!important}
+      #situationBars{display:none!important}
+      #needsBars{display:grid!important;align-content:start!important;gap:6px!important;flex:0 0 auto!important}
+      #needsBars .bar-row{min-height:24px!important}.bar-fill{background:linear-gradient(90deg,#1E5AA8,#2563EB,#60A5FA)!important}.bar-label{line-height:1.25!important}.bar-value{color:#102A56!important}
       #historico .history-entry-card{margin-top:18px!important;border-top-color:#7C3AED!important}#historico .history-entry-card .table-scroll{max-height:620px!important;overflow:auto!important}#historico .history-entry-table{min-width:1450px!important}
       @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}@media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}
     `;
