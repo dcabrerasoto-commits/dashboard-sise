@@ -428,7 +428,18 @@
     if (!target) return;
     const rows = (C.necesidades || []).map(label => ({label, value:data.filter(r => (r.needs || []).some(item => key(item) === key(label))).length})).filter(row => row.value > 0).sort((a, b) => b.value - a.value);
     const total = Math.max(1, data.length);
-    target.innerHTML = rows.length ? rows.slice(0, 6).map(row => `<div class="bar-row"><div class="bar-label">${esc(row.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(row.value / total * 100)}%"></div></div><div class="bar-value"><b>${fmt(row.value)}</b><small>/ ${fmt(total)}</small></div></div>`).join("") : '<div class="empty-state compact">Sin necesidades reportadas con los filtros actuales.</div>';
+    target.innerHTML = rows.length ? rows.slice(0, 6).map(row => `<div class="need-row"><span class="need-icon"><img src="iconos_svg/${esc(needIcon(row.label))}" alt=""></span><span class="need-label">${esc(row.label)}</span><span class="need-value"><b>${fmt(row.value)}</b><small>/ ${fmt(total)}</small></span></div>`).join("") : '<div class="empty-state compact">Sin necesidades reportadas con los filtros actuales.</div>';
+  }
+
+  function needIcon(label) {
+    const value = key(label);
+    if (value.includes("ELECTRIC")) return "electricidad.svg";
+    if (value.includes("AGUA") || value.includes("SERVIDA")) return "agua.svg";
+    if (value.includes("ELECTRO")) return "electrodependientes.svg";
+    if (value.includes("CONECT")) return "conectividad.svg";
+    if (value.includes("ALIMENT") || value.includes("ABAST") || value.includes("GAS")) return "abastecimiento.svg";
+    if (value.includes("TRASL")) return "actualizacion.svg";
+    return "informacion.svg";
   }
 
   function renderPeople(data) {
@@ -454,19 +465,25 @@
     );
     const rows = dailyRows(base).slice(-14);
     const max = Math.max(1, ...rows.map(row => row.reports));
-    target.innerHTML = rows.length ? `<svg viewBox="0 0 420 160" role="img" aria-label="Reportes por día">${rows.map((row, index) => {
-      const x = rows.length === 1 ? 210 : 18 + index * (384 / (rows.length - 1));
-      const y = 132 - row.reports / max * 100;
-      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5"><title>${esc(row.day)}: ${fmt(row.reports)} reportes</title></circle>`;
-    }).join("")}<polyline points="${rows.map((row, index) => {
-      const x = rows.length === 1 ? 210 : 18 + index * (384 / (rows.length - 1));
-      const y = 132 - row.reports / max * 100;
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    }).join(" ")}"></polyline><polygon points="18,132 ${rows.map((row, index) => {
-      const x = rows.length === 1 ? 210 : 18 + index * (384 / (rows.length - 1));
-      const y = 132 - row.reports / max * 100;
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    }).join(" ")} 402,132"></polygon></svg>` : '<div class="empty-state compact">Sin reportes para graficar.</div>';
+    const width = 620, height = 240, left = 46, right = 18, top = 24, bottom = 36;
+    const usableW = width - left - right;
+    const usableH = height - top - bottom;
+    const points = rows.map((row, index) => {
+      const x = rows.length === 1 ? left + usableW / 2 : left + index * (usableW / (rows.length - 1));
+      const y = top + usableH - row.reports / max * usableH;
+      return {row, x, y};
+    });
+    const path = points.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+    const area = `${left},${top + usableH} ${path} ${left + usableW},${top + usableH}`;
+    target.innerHTML = rows.length ? `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Reportes por día">
+      <line class="axis" x1="${left}" y1="${top}" x2="${left}" y2="${top + usableH}"></line>
+      <line class="axis" x1="${left}" y1="${top + usableH}" x2="${left + usableW}" y2="${top + usableH}"></line>
+      ${[0,.25,.5,.75,1].map(step => `<text class="y-label" x="${left - 10}" y="${(top + usableH - usableH * step + 4).toFixed(1)}">${fmt(Math.round(max * step))}</text>`).join("")}
+      <polygon points="${area}"></polygon>
+      <polyline points="${path}"></polyline>
+      ${points.map((point, index) => `<g><circle cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="5"><title>${esc(point.row.day)}: ${fmt(point.row.reports)} reportes</title></circle>${index === 0 || index === points.length - 1 || index % 2 === 1 ? `<text class="point-label" x="${point.x.toFixed(1)}" y="${(point.y - 10).toFixed(1)}">${fmt(point.row.reports)}</text>` : ""}</g>`).join("")}
+      ${points.map((point, index) => index % Math.ceil(points.length / 6 || 1) === 0 || index === points.length - 1 ? `<text class="x-label" x="${point.x.toFixed(1)}" y="${height - 8}">${esc(point.row.day.slice(5))}</text>` : "").join("")}
+    </svg>` : '<div class="empty-state compact">Sin reportes para graficar.</div>';
   }
 
   function renderRecentReports() {

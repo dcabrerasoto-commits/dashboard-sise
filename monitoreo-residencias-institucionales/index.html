@@ -9,18 +9,18 @@
   <meta name="theme-color" content="#071b4d">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260813-14">
+  <link rel="stylesheet" href="styles.css?v=20260813-15">
   <script defer src="catalogos.js?v=20260719-03"></script>
   <script defer src="residencias-catalogo.js?v=20260719-03"></script>
   <script defer src="sync-config.js?v=20260719-03"></script>
   <script defer src="chile-time.js?v=20260719-03"></script>
-  <script defer src="app-v2.js?v=20260813-14"></script>
-  <script defer src="interface-v2.js?v=20260813-14"></script>
-  <script defer src="dashboard-fixes.js?v=20260813-14"></script>
+  <script defer src="app-v2.js?v=20260813-15"></script>
+  <script defer src="interface-v2.js?v=20260813-15"></script>
+  <script defer src="dashboard-fixes.js?v=20260813-15"></script>
   <script defer src="shared-sync.js?v=20260719-03"></script>
   <script defer src="date-normalizer.js?v=20260719-03"></script>
   <script defer src="all-services-catalog.js?v=20260719-03"></script>
-  <script defer src="unique-metrics.js?v=20260813-14"></script>
+  <script defer src="unique-metrics.js?v=20260813-15"></script>
   <script defer src="indicator-consistency.js?v=20260719-03"></script>
   <script defer src="save-safety.js?v=20260719-03"></script>
 </head>
@@ -43,7 +43,6 @@
     <div class="tabs">
       <button type="button" class="tab active" data-tab="resumen">Resumen nacional</button>
       <button type="button" class="tab" data-tab="detalle">Detalle vigente</button>
-      <button type="button" class="tab" data-tab="historico">Histórico diario</button>
       <button type="button" class="tab tab-entry" data-tab="ingreso">Ingreso de información</button>
       <button type="button" class="tab" data-tab="metodologia">Definiciones</button>
     </div>
@@ -73,12 +72,6 @@
   <section class="panel" id="detalle">
     <div class="filter-bar card"><label>Servicio<select id="detailFilterService"></select></label><label>Región<select id="detailFilterRegion"></select></label><label>Comuna<select id="detailFilterCommune"></select></label><label>Fecha<input type="date" id="detailFilterDate"></label><button type="button" class="btn btn-light" id="clearDetailFilters">Limpiar filtros</button></div>
     <article class="card table-card"><div class="card-head"><div><span class="card-kicker">DETALLE VIGENTE</span><h3>Último reporte disponible por residencia</h3></div><span class="small-note">Vista filtrada con los mismos criterios del resumen nacional</span></div><div class="table-scroll"><table id="detailTable"><thead><tr><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Estado</th><th>Situaciones presentes</th><th>Personas atendidas</th><th>Electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="detailTableBody"></tbody></table></div></article>
-  </section>
-
-  <section class="panel" id="historico">
-    <div class="section-heading"><span class="section-kicker">HISTÓRICO DIARIO</span><h2>Evolución de reportes recibidos</h2><p>Serie diaria construida a partir de los ingresos guardados en la base compartida.</p></div>
-    <div class="filter-bar card"><label>Servicio<select id="historyService"></select></label><label>Región<select id="historyRegion"></select></label><label>Desde<input type="date" id="historyFrom"></label><label>Hasta<input type="date" id="historyTo"></label></div>
-    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">SERIE DIARIA</span><h3>Histórico diario de reportes</h3></div><span class="small-note">Nuevas residencias y actualizaciones por fecha</span></div><div class="table-scroll"><table class="history-table"><thead><tr><th>Fecha</th><th>Reportes recibidos</th><th>Residencias que reportaron</th><th>Nuevas residencias</th><th>Residencias actualizadas</th><th>Total acumulado</th><th>Con afectación</th><th>Sin afectación</th><th>En evaluación</th></tr></thead><tbody id="historyTableBody"></tbody></table></div></article>
   </section>
 
   <section class="panel" id="ingreso">

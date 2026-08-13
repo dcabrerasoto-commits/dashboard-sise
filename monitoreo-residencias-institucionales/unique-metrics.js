@@ -142,12 +142,12 @@
     const today = todayKey();
     const todayStats = stats.find(row => row.day === today);
     const cards = [
-      ["Residencias informadas", latest.length, "Total acumulado de residencias únicas que han reportado al menos una vez en la plataforma"],
-      ["Reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
-      ["Residencias que reportaron hoy", todayStats ? todayStats.uniqueDaily : 0, "N° de residencias que enviaron al menos un reporte hoy"],
-      ["Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"]
+      ["residencias.svg", "Residencias informadas", latest.length, "Total acumulado de residencias únicas que han reportado al menos una vez en la plataforma"],
+      ["reportes.svg", "Reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
+      ["reportadas_hoy.svg", "Residencias que reportaron hoy", todayStats ? todayStats.uniqueDaily : 0, "N° de residencias que enviaron al menos un reporte hoy"],
+      ["reportes_hoy.svg", "Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"]
     ];
-    container.innerHTML = cards.map(([label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><div class="kpi-label">${esc(label)}</div><div class="kpi-value">${fmt(value)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
+    container.innerHTML = cards.map(([icon, label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><span class="unique-kpi-icon"><img src="iconos_svg/${esc(icon)}" alt=""></span><div class="kpi-value">${fmt(value)}</div><div class="kpi-label">${esc(label)}</div><div class="kpi-sub">${esc(sub)}</div></article>`).join("");
 
   }
 
@@ -251,9 +251,10 @@
       .unique-metrics-head{display:none}
       .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
       .unique-kpi{min-height:92px!important;display:grid!important;grid-template-columns:76px minmax(0,1fr)!important;grid-template-rows:auto auto!important;column-gap:16px!important;align-content:center!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 24px!important}
-      .unique-kpi::before{content:"";grid-row:1 / span 2;width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);color:#fff;display:grid;place-items:center;margin:0;font-size:32px;font-weight:900}
-      .unique-kpi:nth-child(1)::before{content:"⌂"}.unique-kpi:nth-child(2)::before{content:"▦"}.unique-kpi:nth-child(3)::before{content:"↗"}.unique-kpi:nth-child(4)::before{content:"+"}
-      .unique-kpi:nth-child(3)::before,.unique-kpi:nth-child(4)::before{background:linear-gradient(135deg,#2563EB,#60A5FA)}
+      .unique-kpi::before{display:none!important}
+      .unique-kpi-icon{grid-row:1 / span 3;width:74px;height:74px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);display:grid;place-items:center}
+      .unique-kpi:nth-child(3) .unique-kpi-icon,.unique-kpi:nth-child(4) .unique-kpi-icon{background:linear-gradient(135deg,#2563EB,#60A5FA)}
+      .unique-kpi-icon img{width:34px;height:34px;filter:brightness(0) invert(1)}
       .unique-kpi+.unique-kpi{border-left:1px solid #DCE3EC!important}
       .unique-kpi .kpi-value{grid-column:2!important;grid-row:1!important;display:block!important;text-align:left!important;font-size:36px!important;color:#5B21B6!important;line-height:1!important;margin:0!important}
       .unique-kpi:nth-child(3) .kpi-value,.unique-kpi:nth-child(4) .kpi-value{color:#2563EB!important}
@@ -263,7 +264,7 @@
       .unique-count-note span{margin-left:8px}
       @media(max-width:900px){.unique-metrics-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.unique-metrics-head{display:block}.unique-metrics-head .small-note{display:block;margin-top:6px}}
       @media(max-width:900px){.unique-kpi:nth-child(3){border-left:0!important}.unique-kpi:nth-child(n+3){border-top:1px solid rgba(7,27,77,.09)!important;padding-top:16px!important;margin-top:12px!important}}
-      @media(max-width:520px){.unique-metrics-grid{grid-template-columns:1fr;gap:0}.unique-metrics-section{padding:17px}.unique-kpi{min-height:90px!important;padding:13px 0!important;border-left:0!important}.unique-kpi+.unique-kpi{border-left:0!important;border-top:1px solid rgba(7,27,77,.09)!important}.unique-kpi .kpi-value{font-size:30px!important}.unique-kpi::before{width:56px;height:56px;font-size:24px}.unique-count-note span{display:block;margin:5px 0 0}}
+      @media(max-width:520px){.unique-metrics-grid{grid-template-columns:1fr;gap:0}.unique-metrics-section{padding:17px}.unique-kpi{min-height:90px!important;padding:13px 0!important;border-left:0!important;grid-template-columns:58px minmax(0,1fr)!important}.unique-kpi+.unique-kpi{border-left:0!important;border-top:1px solid rgba(7,27,77,.09)!important}.unique-kpi .kpi-value{font-size:30px!important}.unique-kpi-icon{width:56px;height:56px}.unique-kpi-icon img{width:26px;height:26px}.unique-count-note span{display:block;margin:5px 0 0}}
     `;
     document.head.appendChild(style);
   }
