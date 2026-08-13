@@ -10,6 +10,8 @@
   let previousMatch = null;
   let savingInProgress = false;
   let mapSvgLoaded = false;
+  let regionTableMode = "territory";
+  let regionTableSort = {key:"region", dir:"asc"};
 
   const $ = (id) => document.getElementById(id);
   const $$ = (selector, root = document) => Array.prototype.slice.call(root.querySelectorAll(selector));
@@ -356,7 +358,8 @@
     return (C.regiones || []).map(region => {
       const rows = data.filter(r => key(r.region) === key(region));
       const dates = rows.map(r => r.reportDate || r.createdAt).sort();
-      return {region, total:rows.length, without:rows.filter(r => r.status === "Sin afectación").length, affected:rows.filter(affected).length, electricity:rows.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:rows.filter(r => hasSituation(r,"Exposición a aguas servidas")).length, electro:rows.filter(r => r.electrodependent === "Sí").length, last:dates.length ? dates[dates.length - 1] : ""};
+      const affectedCount = rows.filter(affected).length;
+      return {region, total:rows.length, without:rows.filter(r => r.status === "Sin afectación").length, affected:affectedCount, affectedRate:rows.length ? Math.round(affectedCount / rows.length * 100) : 0, electricity:rows.filter(r => hasSituation(r,"Sin electricidad")).length, sewage:rows.filter(r => hasSituation(r,"Exposición a aguas servidas")).length, electro:rows.filter(r => r.electrodependent === "Sí").length, last:dates.length ? dates[dates.length - 1] : ""};
     });
   }
 
@@ -420,7 +423,7 @@
       cursor += value / total * 100;
       return `${color} ${start}% ${cursor}%`;
     }).join(",");
-    target.innerHTML = `<div class="donut-ring" style="background:conic-gradient(${stops || "#EAF3FF 0 100%"})"><div><strong>${fmt(data.length)}</strong><span>residencias</span></div></div><div class="donut-legend">${values.map(([label, value, color]) => `<span><i style="background:${color}"></i><b>${fmt(value)}</b> ${esc(label)}</span>`).join("")}</div>`;
+    target.innerHTML = `<div class="segmented-bar" aria-hidden="true" style="background:linear-gradient(90deg,${stops || "#DCE3EC 0 100%"})"></div><div class="segment-metrics">${values.map(([label, value, color]) => `<span><i style="background:${color}"></i><b>${fmt(value)}</b><small>${esc(label)}</small></span>`).join("")}</div>`;
   }
 
   function renderNeeds(data) {
@@ -534,6 +537,14 @@
     return "#EAF3FF";
   }
 
+  function mapFill(region) {
+    if (!region.total) return "#DCE3EC";
+    if (!region.affected) return "#EAF3FF";
+    if (region.affected >= 6) return "#1E5AA8";
+    if (region.affected >= 3) return "#3882F6";
+    return "#93C5FD";
+  }
+
   function colorChileMap(regions) {
     const wrap = $("chileMapSvg");
     if (!wrap) return;
@@ -541,14 +552,52 @@
       const id = mapRegionId(region.region);
       if (!id) return;
       wrap.querySelectorAll(`#${CSS.escape(id)}`).forEach(path => {
-        path.style.fill = mapColor(region.affected);
+        path.style.fill = mapFill(region);
         path.style.stroke = "#FFFFFF";
         path.style.strokeWidth = "0.8";
         path.setAttribute("tabindex", "0");
         path.setAttribute("role", "img");
-        path.setAttribute("aria-label", `${region.region}: ${fmt(region.affected)} residencias con afectación`);
+        path.setAttribute("aria-label", `${region.region}: ${fmt(region.total)} informadas, ${fmt(region.affected)} con afectación, ${fmt(region.affectedRate)}% de afectación`);
+        path.innerHTML = `<title>${esc(region.region)}: ${fmt(region.total)} informadas, ${fmt(region.affected)} con afectación, ${fmt(region.affectedRate)}%. Última actualización: ${esc(region.last ? formatDateTime(region.last) : "Sin información")}</title>`;
       });
     });
+  }
+
+  function renderTerritoryInsights(regions) {
+    const target = $("territoryInsights");
+    if (!target) return;
+    const informed = regions.filter(r => r.total > 0);
+    const affectedRegions = regions.filter(r => r.affected > 0);
+    const top = affectedRegions.slice().sort((a, b) => b.affected - a.affected || b.total - a.total)[0];
+    const last = regions.map(r => r.last).filter(Boolean).sort().pop();
+    const totalNational = regions.reduce((sum, r) => sum + r.total, 0);
+    target.innerHTML = `<div class="territory-stat"><b>${fmt(totalNational)}</b><span>residencias informadas</span></div><div class="territory-stat"><b>${fmt(affectedRegions.length)}</b><span>regiones con afectación</span></div><div class="territory-stat"><b>${esc(top ? top.region : "Sin afectación")}</b><span>${top ? `${fmt(top.affected)} residencias con afectación` : "sin regiones priorizadas"}</span></div><div class="territory-stat"><b>${esc(last ? formatDateTime(last) : "Sin información")}</b><span>última actualización</span></div>`;
+  }
+
+  function regionPriorityScore(r) {
+    return r.affected * 1000 + (r.electricity + r.sewage) * 100 + r.electro * 10 + r.affectedRate;
+  }
+
+  function sortedRegionsForTable(regions) {
+    const rows = regions.filter(r => r.total > 0);
+    if (regionTableMode === "priority") return rows.sort((a, b) => regionPriorityScore(b) - regionPriorityScore(a));
+    const keyName = regionTableSort.key;
+    const dir = regionTableSort.dir === "desc" ? -1 : 1;
+    return rows.sort((a, b) => {
+      if (keyName === "region") return dir * (C.regiones || []).indexOf(a.region) - dir * (C.regiones || []).indexOf(b.region);
+      if (keyName === "last") return dir * ((new Date(a.last || 0).getTime() || 0) - (new Date(b.last || 0).getTime() || 0));
+      return dir * (Number(a[keyName] || 0) - Number(b[keyName] || 0));
+    });
+  }
+
+  function freshnessLabel(value) {
+    const time = new Date(value || 0).getTime();
+    if (!time) return "Sin actualización";
+    const hours = Math.max(0, Math.round((Date.now() - time) / 36e5));
+    if (hours < 6) return `Actualizado hace ${hours || 1} h`;
+    if (hours < 12) return `Actualizado hace ${hours} h`;
+    if (hours < 24) return `Sin actualización en ${hours} h`;
+    return `Más de ${Math.floor(hours / 24)} días`;
   }
 
   function renderChileMap(regions) {
@@ -573,9 +622,10 @@
     const data = filteredSummary();
     renderKpis(data);
     const regions = byRegión(data);
-    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
+    $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block ${r.total ? "" : "no-data"} level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación, ${fmt(r.affectedRate)}%"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>inf.</small><i>/</i><b>${fmt(r.affected)}</b><small>afec.</small></span></button>`).join("");
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
     renderChileMap(regions);
+    renderTerritoryInsights(regions);
     const uniqueSituationBase = latestRecords(data);
     const situations = [
       {label:"Sin situaciones reportadas (sin afectación)", value:uniqueSituationBase.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length},
@@ -590,8 +640,9 @@
     renderSummaryHistory();
     renderRecentReports();
     renderCharacterization(data, regions, situations);
-    const visible = regions.filter(r => r.total > 0);
-    $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
+    document.querySelectorAll(".mode-toggle").forEach(btn => btn.classList.toggle("active", (btn.id === "regionModePriority") === (regionTableMode === "priority")));
+    const visible = sortedRegionsForTable(regions);
+    $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.affectedRate)}%</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td><td><span class="freshness">${esc(freshnessLabel(r.last))}</span></td></tr>`).join("") : '<tr><td colspan="10">Sin información disponible.</td></tr>';
     renderDetail();
   }
 
@@ -701,6 +752,14 @@
     ["detailFilterService","detailFilterCommune","detailFilterDate"].forEach(id => $(id)?.addEventListener("change", renderDetail));
     $("detailFilterRegion")?.addEventListener("change", e => { setDetailCommunes(e.target.value); renderDetail(); });
     $("clearDetailFilters")?.addEventListener("click", () => { ["detailFilterService","detailFilterRegion","detailFilterCommune","detailFilterDate"].forEach(id => { if ($(id)) $(id).value = ""; }); setDetailCommunes(""); renderDetail(); });
+    $("regionModeTerritory")?.addEventListener("click", () => { regionTableMode = "territory"; regionTableSort = {key:"region", dir:"asc"}; renderSummary(); });
+    $("regionModePriority")?.addEventListener("click", () => { regionTableMode = "priority"; renderSummary(); });
+    document.querySelectorAll("[data-region-sort]").forEach(btn => btn.addEventListener("click", () => {
+      const next = btn.dataset.regionSort;
+      regionTableMode = "territory";
+      regionTableSort = {key:next, dir:regionTableSort.key === next && regionTableSort.dir === "desc" ? "asc" : "desc"};
+      renderSummary();
+    }));
     $("region").addEventListener("change", e => {
       const region = officialRegion(e.target.value);
       e.target.value = region;

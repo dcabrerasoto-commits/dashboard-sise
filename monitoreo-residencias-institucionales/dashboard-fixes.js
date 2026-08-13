@@ -87,9 +87,10 @@
       const total = rows.length;
       const affected = rows.filter(isAffected).length;
       const level = affected >= 6 ? 3 : affected >= 3 ? 2 : affected >= 1 ? 1 : 0;
-      return `<button type="button" class="region-block level-${level}" data-region="${esc(region)}" title="${esc(region)}: ${fmt(total)} informadas, ${fmt(affected)} con afectación">
+      const rate = total ? Math.round(affected / total * 100) : 0;
+      return `<button type="button" class="region-block ${total ? "" : "no-data"} level-${level}" data-region="${esc(region)}" title="${esc(region)}: ${fmt(total)} informadas, ${fmt(affected)} con afectación, ${fmt(rate)}%">
         <strong>${esc(region)}</strong>
-        <span class="region-values"><span><b>${fmt(total)}</b><small>informadas</small></span><span><b>${fmt(affected)}</b><small>con afectación</small></span></span>
+        <span class="region-values"><span><b>${fmt(total)}</b><small>inf.</small></span><span><b>${fmt(affected)}</b><small>afec.</small></span></span>
       </button>`;
     }).join("");
   }
@@ -217,7 +218,7 @@
       #resumen .legend{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:12px!important;padding:10px 12px!important;background:#F5F7FA!important;border:1px solid #DCE3EC!important;color:#56657A!important;font-size:11px!important}
       #resumen .legend span{display:inline-flex!important;align-items:center!important;gap:6px!important;padding:4px 8px!important;background:#fff!important;border:1px solid #DCE3EC!important;font-weight:750!important}
       #resumen .legend span::before{content:"";width:12px;height:12px;border:1px solid #DCE3EC;background:#F5F7FA}
-      #resumen .legend span:nth-child(2)::before{background:#EAF3FF;border-color:#93C5FD}#resumen .legend span:nth-child(3)::before{background:#93C5FD;border-color:#60A5FA}#resumen .legend span:nth-child(4)::before{background:#1E5AA8;border-color:#1E5AA8}
+      #resumen .legend span:nth-child(1)::before{background:#DCE3EC!important;border-color:#DCE3EC!important}#resumen .legend span:nth-child(2)::before{background:#EAF3FF!important;border-color:#93C5FD!important}#resumen .legend span:nth-child(3)::before{background:#93C5FD!important;border-color:#60A5FA!important}#resumen .legend span:nth-child(4)::before{background:#3882F6!important;border-color:#3882F6!important}#resumen .legend span:nth-child(5)::before{background:#1E5AA8!important;border-color:#1E5AA8!important}
       #situationBars,#needsBars{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;gap:9px!important}#situationBars .bar-row,#needsBars .bar-row{min-height:32px!important}.bar-fill{background:linear-gradient(90deg,#1E5AA8,#2563EB,#60A5FA)!important}.bar-label{line-height:1.25!important}.bar-value{color:#102A56!important}
       #historico .history-entry-card{margin-top:18px!important;border-top-color:#7C3AED!important}#historico .history-entry-card .table-scroll{max-height:620px!important;overflow:auto!important}#historico .history-entry-table{min-width:1450px!important}
       @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}@media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}

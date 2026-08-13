@@ -9,18 +9,18 @@
   <meta name="theme-color" content="#071b4d">
   <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
   <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260813-15">
+  <link rel="stylesheet" href="styles.css?v=20260813-16">
   <script defer src="catalogos.js?v=20260719-03"></script>
   <script defer src="residencias-catalogo.js?v=20260719-03"></script>
   <script defer src="sync-config.js?v=20260719-03"></script>
   <script defer src="chile-time.js?v=20260719-03"></script>
-  <script defer src="app-v2.js?v=20260813-15"></script>
-  <script defer src="interface-v2.js?v=20260813-15"></script>
-  <script defer src="dashboard-fixes.js?v=20260813-15"></script>
+  <script defer src="app-v2.js?v=20260813-16"></script>
+  <script defer src="interface-v2.js?v=20260813-16"></script>
+  <script defer src="dashboard-fixes.js?v=20260813-16"></script>
   <script defer src="shared-sync.js?v=20260719-03"></script>
   <script defer src="date-normalizer.js?v=20260719-03"></script>
   <script defer src="all-services-catalog.js?v=20260719-03"></script>
-  <script defer src="unique-metrics.js?v=20260813-15"></script>
+  <script defer src="unique-metrics.js?v=20260813-16"></script>
   <script defer src="indicator-consistency.js?v=20260719-03"></script>
   <script defer src="save-safety.js?v=20260719-03"></script>
 </head>
@@ -43,6 +43,7 @@
     <div class="tabs">
       <button type="button" class="tab active" data-tab="resumen">Resumen nacional</button>
       <button type="button" class="tab" data-tab="detalle">Detalle vigente</button>
+      <button type="button" class="tab" data-tab="historico">Histórico diario</button>
       <button type="button" class="tab tab-entry" data-tab="ingreso">Ingreso de información</button>
       <button type="button" class="tab" data-tab="metodologia">Definiciones</button>
     </div>
@@ -55,23 +56,39 @@
   <section class="panel active" id="resumen">
     <div class="filter-bar card"><label>Servicio<select id="filterService"></select></label><label>Región<select id="filterRegion"></select></label><label>Estado<select id="filterStatus"></select></label><button type="button" class="btn btn-light" id="clearFilters">Limpiar filtros</button></div>
     <div class="kpi-grid hidden" id="kpiGrid"></div>
+    <section class="summary-zone zone-characterization">
+    <div class="zone-heading"><span>CARACTERIZACIÓN</span><h2>Lectura general</h2><p>Situación vigente y necesidades prioritarias reportadas.</p></div>
     <div class="monitor-grid">
       <article class="card situation-card"><div class="card-head"><div><span class="card-kicker">SITUACIÓN NACIONAL</span><h3>Situación nacional actual</h3></div><span class="small-note">Último reporte vigente por residencia</span></div><div class="situation-layout"><div class="donut-chart" id="situationDonut" aria-label="Distribución nacional por estado"></div><div id="situationBars"></div></div></article>
       <article class="card needs-card"><div class="card-head"><div><span class="card-kicker">NECESIDADES</span><h3>Necesidades reportadas</h3></div><span class="small-note">Residencias únicas según reporte vigente</span></div><div id="needsBars"></div></article>
       <article class="card people-card"><div class="card-head"><div><span class="card-kicker">PERSONAS</span><h3>Personas atendidas</h3></div><span class="small-note">Capacidad y electrodependencia informada</span></div><div id="peopleSummary"></div></article>
     </div>
+    </section>
     <article class="card characterization-card"><div class="card-head"><div><span class="card-kicker">CARACTERIZACIÓN</span><h3>Lectura general de los datos</h3></div><span class="small-note">Indicadores derivados del último reporte vigente</span></div><div class="character-grid" id="characterGrid"></div><div class="character-chart hidden" id="characterChart" aria-label="Caracterización visual de datos"></div></article>
+    <section class="summary-zone zone-territory">
+    <div class="zone-heading"><span>TERRITORIO</span><h2>Distribución regional de reportes</h2><p>Residencias informadas y situación vigente por región.</p></div>
     <div class="dashboard-grid">
-      <article class="card"><div class="card-head"><div><span class="card-kicker">TERRITORIO</span><h3>Distribución territorial</h3></div><span class="small-note">Residencias con afectación por región</span></div><div class="territory-layout"><div id="chileMapSvg" class="chile-map-svg" aria-label="Mapa de Chile por región"></div><div id="regionMap" aria-label="Distribución regional de reportes"></div></div><div class="legend"><span>0</span><span>1 a 10</span><span>11 a 20</span><span>21 a 50</span><span>50 o más</span></div></article>
+      <article class="card territory-card"><div class="card-head"><div><span class="card-kicker">TERRITORIO</span><h3>Distribución territorial</h3></div><span class="small-note">Residencias con afectación por región</span></div><div class="territory-layout"><div id="chileMapSvg" class="chile-map-svg" aria-label="Mapa de Chile por región"></div><aside class="territory-insights" id="territoryInsights"></aside><div id="regionMap" aria-label="Distribución regional de reportes"></div></div><div class="legend"><span>Sin información</span><span>Sin afectación</span><span>1 a 2</span><span>3 a 5</span><span>6 o más</span></div></article>
       <article class="card history-summary-card"><div class="card-head"><div><span class="card-kicker">HISTÓRICO</span><h3>Histórico diario de reportes</h3></div><span class="small-note">Reportes recibidos por día</span></div><div class="history-chart" id="summaryHistoryChart" aria-label="Histórico diario de reportes"></div></article>
     </div>
+    </section>
+    <section class="summary-zone zone-evolution">
     <article class="card recent-card"><div class="card-head"><div><span class="card-kicker">ACTUALIZACIÓN</span><h3>Últimos reportes recibidos</h3></div><span class="small-note">Aproximadamente 5 ingresos más recientes</span></div><div class="recent-list" id="recentReports"></div></article>
-    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">RESUMEN TERRITORIAL</span><h3>Último reporte vigente por región</h3></div></div><div class="table-scroll"><table><thead><tr><th>Región</th><th>Residencias informadas</th><th>Residencias sin afectación</th><th>Residencias con afectación</th><th>Residencias sin electricidad</th><th>Residencias con aguas servidas</th><th>Residencias con electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="regionTableBody"></tbody></table></div></article>
+    </section>
+    <section class="summary-zone zone-table">
+    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">RESUMEN TERRITORIAL</span><h3>Tabla regional analítica</h3></div><div class="table-mode" role="group" aria-label="Orden de tabla regional"><button type="button" class="mode-toggle active" id="regionModeTerritory">Orden territorial</button><button type="button" class="mode-toggle" id="regionModePriority">Prioridad</button></div></div><div class="table-scroll"><table id="regionSummaryTable"><thead><tr><th><button type="button" data-region-sort="region">Región</button></th><th><button type="button" data-region-sort="total">Residencias informadas</button></th><th><button type="button" data-region-sort="without">Sin afectación</button></th><th><button type="button" data-region-sort="affected">Con afectación</button></th><th><button type="button" data-region-sort="affectedRate">% afectación</button></th><th><button type="button" data-region-sort="electricity">Sin electricidad</button></th><th><button type="button" data-region-sort="sewage">Aguas servidas</button></th><th><button type="button" data-region-sort="electro">Electrodependientes</button></th><th><button type="button" data-region-sort="last">Última actualización</button></th><th>Vigencia</th></tr></thead><tbody id="regionTableBody"></tbody></table></div></article>
+    </section>
   </section>
 
   <section class="panel" id="detalle">
     <div class="filter-bar card"><label>Servicio<select id="detailFilterService"></select></label><label>Región<select id="detailFilterRegion"></select></label><label>Comuna<select id="detailFilterCommune"></select></label><label>Fecha<input type="date" id="detailFilterDate"></label><button type="button" class="btn btn-light" id="clearDetailFilters">Limpiar filtros</button></div>
     <article class="card table-card"><div class="card-head"><div><span class="card-kicker">DETALLE VIGENTE</span><h3>Último reporte disponible por residencia</h3></div><span class="small-note">Vista filtrada con los mismos criterios del resumen nacional</span></div><div class="table-scroll"><table id="detailTable"><thead><tr><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Estado</th><th>Situaciones presentes</th><th>Personas atendidas</th><th>Electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="detailTableBody"></tbody></table></div></article>
+  </section>
+
+  <section class="panel" id="historico">
+    <div class="section-heading"><span class="section-kicker">HISTÓRICO DIARIO</span><h2>Evolución de reportes recibidos</h2><p>Serie diaria construida a partir de los ingresos guardados en la base compartida.</p></div>
+    <div class="filter-bar card"><label>Servicio<select id="historyService"></select></label><label>Región<select id="historyRegion"></select></label><label>Desde<input type="date" id="historyFrom"></label><label>Hasta<input type="date" id="historyTo"></label></div>
+    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">SERIE DIARIA</span><h3>Histórico diario de reportes</h3></div><span class="small-note">Nuevas residencias y actualizaciones por fecha</span></div><div class="table-scroll"><table class="history-table"><thead><tr><th>Fecha</th><th>Reportes recibidos</th><th>Residencias que reportaron</th><th>Nuevas residencias</th><th>Residencias actualizadas</th><th>Total acumulado</th><th>Con afectación</th><th>Sin afectación</th><th>En evaluación</th></tr></thead><tbody id="historyTableBody"></tbody></table></div></article>
   </section>
 
   <section class="panel" id="ingreso">
