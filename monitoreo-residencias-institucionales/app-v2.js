@@ -423,7 +423,7 @@
       cursor += value / total * 100;
       return `${color} ${start}% ${cursor}%`;
     }).join(",");
-    target.innerHTML = `<div class="segmented-bar" aria-hidden="true" style="background:linear-gradient(90deg,${stops || "#DCE3EC 0 100%"})"></div><div class="segment-metrics">${values.map(([label, value, color]) => `<span><i style="background:${color}"></i><b>${fmt(value)}</b><small>${esc(label)}</small></span>`).join("")}</div>`;
+    target.innerHTML = `<div class="donut-ring" aria-hidden="true" style="background:conic-gradient(${stops || "#DCE3EC 0 100%"})"><span><b>${fmt(data.length)}</b><small>Total</small></span></div><div class="donut-legend">${values.map(([label, value, color]) => `<span><i style="background:${color}"></i><b>${fmt(value)}</b><small>${esc(label)}</small></span>`).join("")}</div>`;
   }
 
   function renderNeeds(data) {
