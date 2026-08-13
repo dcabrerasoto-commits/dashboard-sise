@@ -6,37 +6,31 @@
     const style = document.createElement("style");
     style.id = "seguimiento-ui-styles";
     style.textContent = `
-      :root{--beige:#f5f0e7;--steel:#405d66;--indigo:#5f58bf;--amber:#6c55c8;--violet-strong:#6c55c8;--magenta:#c84f91;--ok-soft:#edf8f3;--warn-soft:#f3efff;--danger-soft:#fff0f7}
-      #resumen{--accent:#4f93c7!important;--accent-dark:#2c6f9c!important;--accent-soft:#e8f4fb!important}
+      :root{--beige:#F5F7FA;--steel:#56657A;--indigo:#7C3AED;--amber:#8B5CF6;--violet-strong:#7C3AED;--magenta:#C43D8D;--ok-soft:#EAF3FF;--warn-soft:#F3EFFF;--danger-soft:#F3EFFF}
+      #resumen{--accent:#7C3AED!important;--accent-dark:#5B21B6!important;--accent-soft:#F3EFFF!important}
       #resumen .section-heading{margin-bottom:22px!important}
       #resumen .filter-bar{margin-bottom:24px!important;background:#fbfdfc!important;border-color:#d9e4e1!important;box-shadow:0 8px 20px rgba(17,54,59,.05)!important}
       #resumen .kpi-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important;margin-bottom:26px!important}
       #resumen .kpi{min-height:126px!important;padding:16px 15px 13px!important;border-top-width:7px!important;background:#fff!important;border-color:transparent!important;color:var(--text,#10213f)!important;box-shadow:0 12px 28px rgba(7,27,77,.10)!important}
-      #resumen .kpi.ok{border-top-color:#c84f91!important}
-      #resumen .kpi.attention,#resumen .kpi.alert{border-top-color:#6c55c8!important}
-      #resumen .kpi.critical{border-top-color:#bf4f82!important}
-      #resumen .kpi.info,#resumen .kpi.primary{border-top-color:#5f58bf!important}
-      #kpiGrid .kpi:first-child{grid-column:span 1!important;background:#fff!important;border-top-color:#c84f91!important;color:var(--text,#10213f)!important}
+      #resumen .kpi.ok,#resumen .kpi.attention,#resumen .kpi.alert,#resumen .kpi.critical,#resumen .kpi.info,#resumen .kpi.primary{border-top-color:#7C3AED!important}
+      #kpiGrid .kpi:first-child{grid-column:span 1!important;background:#fff!important;border-top-color:#7C3AED!important;color:var(--text,#14213D)!important}
       #resumen .kpi-label{font-size:11px!important;line-height:1.25!important;letter-spacing:.035em!important;color:#40595d!important;font-weight:800!important}
-      #resumen .kpi-value{font-size:46px!important;margin-top:8px!important;text-align:center!important;width:100%!important;color:#071b4d!important;line-height:.95!important}
-      #resumen .kpi.ok .kpi-value{color:#b83f82!important}
-      #resumen .kpi.attention .kpi-value,#resumen .kpi.alert .kpi-value{color:#5d48bb!important}
-      #resumen .kpi.critical .kpi-value{color:#b64278!important}
-      #resumen .kpi.info .kpi-value,#resumen .kpi.primary .kpi-value{color:#514bb2!important}
+      #resumen .kpi-value{font-size:46px!important;margin-top:8px!important;text-align:center!important;width:100%!important;color:#102A56!important;line-height:.95!important}
+      #resumen .kpi.ok .kpi-value,#resumen .kpi.attention .kpi-value,#resumen .kpi.alert .kpi-value,#resumen .kpi.critical .kpi-value,#resumen .kpi.info .kpi-value,#resumen .kpi.primary .kpi-value{color:#102A56!important}
       #resumen .kpi-sub{font-size:10.5px!important;line-height:1.25!important;margin-top:8px!important;padding-top:8px!important;color:#6c7d81!important;border-top:1px solid #e5ecea!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
       #resumen .dashboard-grid .card{border-top-width:4px!important;box-shadow:0 8px 18px rgba(17,54,59,.05)!important}
       #resumen .dashboard-grid .card h3{font-size:19px!important;font-weight:720!important}
       #resumen .dashboard-grid .card-kicker{font-size:11px!important}
-      .toolbar-actions .definition-action{display:inline-flex!important;align-items:center!important;background:#fff!important;border:1px solid var(--border-strong,#839c98)!important;color:var(--primary,#154f55)!important;padding:10px 14px!important;font-weight:750!important;border-radius:0!important}
+      .toolbar-actions .definition-action{display:inline-flex!important;align-items:center!important;background:#fff!important;border:1px solid #DCE3EC!important;color:#5B21B6!important;padding:10px 14px!important;font-weight:750!important;border-radius:0!important}
       .toolbar-actions .definition-action:hover{background:#edf7fc!important;border-color:var(--accent-dark)!important;transform:translate(-3px,-3px)!important;box-shadow:5px 5px 0 rgba(21,79,85,.14)!important}
       .toolbar-actions .definition-action.active{background:var(--primary,#154f55)!important;border-color:var(--primary,#154f55)!important;color:#fff!important}
       #regionMap{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;width:100%!important;max-width:none!important;height:auto!important;max-height:none!important;margin:0!important;padding:0!important;overflow:visible!important;background:transparent!important;border:0!important;box-shadow:none!important}
       #regionMap .region-block{min-height:43px}
       #ingreso .form-card{border-top:8px solid var(--accent)!important;background:linear-gradient(180deg,#fff 0,#fff 170px,#f7faf9 170px)!important}
-      #ingreso .form-head{position:relative;overflow:hidden;background:linear-gradient(110deg,#0b363b 0%,#154f55 62%,#287fae 100%)!important;border-left:0!important;padding:24px 26px!important}
+      #ingreso .form-head{position:relative;overflow:hidden;background:linear-gradient(110deg,#102A56 0%,#5B21B6 100%)!important;border-left:0!important;padding:24px 26px!important}
       #ingreso .form-head::after{content:"";position:absolute;right:-46px;top:-64px;width:220px;height:220px;border:28px solid rgba(255,255,255,.09);transform:rotate(18deg)}
       #ingreso .form-head h2,#ingreso .form-head p,#ingreso .form-head .section-kicker{position:relative;z-index:1}
-      #ingreso .form-head .section-kicker{color:#bde6fa!important}
+      #ingreso .form-head .section-kicker{color:#D8CCFF!important}
       #ingreso .form-body{padding:22px!important}
       .form-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin:0 0 16px;border:1px solid #b9ccd2;background:#b9ccd2}
       .form-step{display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 13px;background:#fff;color:#35555d;font-size:12px;font-weight:750}
@@ -52,15 +46,15 @@
       .change-question p{margin:0;color:#4f6974;font-size:12px;line-height:1.45}
       #reportDateDisplay{background:#edf2f1!important;color:#506266!important;font-weight:700;cursor:not-allowed}
       #ingreso fieldset{padding:20px 18px 18px!important;border:1px solid #bfd0d1!important;border-left:7px solid var(--accent)!important;background:#f7fbfd!important;box-shadow:5px 5px 0 rgba(21,79,85,.055)!important}
-      #ingreso fieldset:nth-of-type(2){border-left-color:#8a7964!important;background:var(--beige)!important}
-      #ingreso fieldset:nth-of-type(3){border-left-color:var(--primary,#154f55)!important;background:#f3f8f7!important}
+      #ingreso fieldset:nth-of-type(2){border-left-color:#8B5CF6!important;background:var(--beige)!important}
+      #ingreso fieldset:nth-of-type(3){border-left-color:#5B21B6!important;background:#F5F7FA!important}
       #ingreso legend{padding:6px 10px!important;border:1px solid #b8cbd0;background:#fff;color:var(--primary-dark,#0b363b)!important;font-size:14px}
       #ingreso input,#ingreso select,#ingreso textarea{background:#fff!important;border-color:#a9bfc3!important}
       #ingreso input:focus,#ingreso select:focus,#ingreso textarea:focus{border-color:var(--accent-dark)!important;box-shadow:4px 4px 0 rgba(97,184,230,.20)!important}
       #ingreso .check-option{background:#fff!important;border-color:#b8c9cb!important}
       #ingreso .check-option:has(input:checked){background:var(--accent-soft)!important;border-color:var(--accent-dark)!important;box-shadow:inset 5px 0 0 var(--accent-dark)!important}
       #ingreso .form-actions{margin:18px -22px -22px;padding:17px 22px;border-top:1px solid #bfd0d1;background:#f7fbfd!important}
-      #ingreso .form-actions .btn-primary{background:var(--accent-dark)!important;border-color:var(--accent-dark)!important}
+      #ingreso .form-actions .btn-primary{background:#5B21B6!important;border-color:#5B21B6!important}
       #historico .history-table{min-width:1180px}
       #historico .table-card{border-top-color:var(--accent)!important}
       #historico tbody tr:hover{background:#eef8fd}

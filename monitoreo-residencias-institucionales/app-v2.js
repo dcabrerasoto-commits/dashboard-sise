@@ -9,6 +9,7 @@
   let latest = [];
   let previousMatch = null;
   let savingInProgress = false;
+  let mapSvgLoaded = false;
 
   const $ = (id) => document.getElementById(id);
   const $$ = (selector, root = document) => Array.prototype.slice.call(root.querySelectorAll(selector));
@@ -243,6 +244,8 @@
     populate($("detailFilterService"), C.servicios, "Todos los servicios");
     populate($("detailFilterRegion"), C.regiones, "Todas las regiones");
     setDetailCommunes("");
+    populate($("historyService"), C.servicios, "Todos los servicios");
+    populate($("historyRegion"), C.regiones, "Todas las regiones");
     populate($("service"), C.servicios, "Seleccione un servicio");
     populate($("region"), C.regiones, "Seleccione una región");
     populate($("status"), C.estados, "Seleccione un estado");
@@ -387,12 +390,175 @@
     chart.innerHTML = "";
   }
 
+  function dailyRows(input) {
+    const groups = new Map();
+    input.forEach(r => {
+      const day = dateKey(r.reportDate || r.createdAt);
+      if (!day) return;
+      groups.set(day, (groups.get(day) || 0) + 1);
+    });
+    return [...groups.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([day, reports]) => ({day, reports}));
+  }
+
+  function renderSituationDonut(data) {
+    const target = $("situationDonut");
+    if (!target) return;
+    const total = Math.max(1, data.length);
+    const without = data.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length;
+    const affectedCount = data.filter(affected).length;
+    const evaluation = data.filter(r => r.status === "En evaluación").length;
+    const other = Math.max(0, data.length - without - affectedCount - evaluation);
+    const values = [
+      ["Sin afectación reportada", without, "#93C5FD"],
+      ["Con afectación o situación", affectedCount, "#2563EB"],
+      ["En evaluación", evaluation, "#60A5FA"],
+      ["Sin clasificación", other, "#EAF3FF"]
+    ];
+    let cursor = 0;
+    const stops = values.map(([, value, color]) => {
+      const start = cursor;
+      cursor += value / total * 100;
+      return `${color} ${start}% ${cursor}%`;
+    }).join(",");
+    target.innerHTML = `<div class="donut-ring" style="background:conic-gradient(${stops || "#EAF3FF 0 100%"})"><div><strong>${fmt(data.length)}</strong><span>residencias</span></div></div><div class="donut-legend">${values.map(([label, value, color]) => `<span><i style="background:${color}"></i><b>${fmt(value)}</b> ${esc(label)}</span>`).join("")}</div>`;
+  }
+
+  function renderNeeds(data) {
+    const target = $("needsBars");
+    if (!target) return;
+    const rows = (C.necesidades || []).map(label => ({label, value:data.filter(r => (r.needs || []).some(item => key(item) === key(label))).length})).filter(row => row.value > 0).sort((a, b) => b.value - a.value);
+    const total = Math.max(1, data.length);
+    target.innerHTML = rows.length ? rows.slice(0, 6).map(row => `<div class="bar-row"><div class="bar-label">${esc(row.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(row.value / total * 100)}%"></div></div><div class="bar-value"><b>${fmt(row.value)}</b><small>/ ${fmt(total)}</small></div></div>`).join("") : '<div class="empty-state compact">Sin necesidades reportadas con los filtros actuales.</div>';
+  }
+
+  function renderPeople(data) {
+    const target = $("peopleSummary");
+    if (!target) return;
+    const people = data.reduce((sum, r) => sum + Number(r.people || 0), 0);
+    const capacity = data.reduce((sum, r) => sum + Number(r.capacity || 0), 0);
+    const electro = data.reduce((sum, r) => sum + Number(r.electrodependentCount || 0), 0);
+    const occupancy = capacity ? Math.round(people / capacity * 100) : 0;
+    target.innerHTML = `<div class="people-main"><span class="metric-icon" aria-hidden="true">●</span><strong>${fmt(people)}</strong><small>personas atendidas</small></div><div class="people-stats"><span><b>${fmt(capacity)}</b><small>capacidad informada</small></span><span><b>${fmt(occupancy)}%</b><small>ocupación referencial</small></span><span><b>${fmt(electro)}</b><small>electrodependientes</small></span></div>`;
+  }
+
+  function renderSummaryHistory() {
+    const target = $("summaryHistoryChart");
+    if (!target) return;
+    const service = $("filterService")?.value || "";
+    const region = $("filterRegion")?.value || "";
+    const status = $("filterStatus")?.value || "";
+    const base = records.filter(r =>
+      (!service || r.service === service) &&
+      (!region || r.region === region) &&
+      (!status || r.status === status)
+    );
+    const rows = dailyRows(base).slice(-14);
+    const max = Math.max(1, ...rows.map(row => row.reports));
+    target.innerHTML = rows.length ? `<svg viewBox="0 0 420 160" role="img" aria-label="Reportes por día">${rows.map((row, index) => {
+      const x = rows.length === 1 ? 210 : 18 + index * (384 / (rows.length - 1));
+      const y = 132 - row.reports / max * 100;
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5"><title>${esc(row.day)}: ${fmt(row.reports)} reportes</title></circle>`;
+    }).join("")}<polyline points="${rows.map((row, index) => {
+      const x = rows.length === 1 ? 210 : 18 + index * (384 / (rows.length - 1));
+      const y = 132 - row.reports / max * 100;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ")}"></polyline><polygon points="18,132 ${rows.map((row, index) => {
+      const x = rows.length === 1 ? 210 : 18 + index * (384 / (rows.length - 1));
+      const y = 132 - row.reports / max * 100;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ")} 402,132"></polygon></svg>` : '<div class="empty-state compact">Sin reportes para graficar.</div>';
+  }
+
+  function renderRecentReports() {
+    const target = $("recentReports");
+    if (!target) return;
+    const rows = records.slice().sort((a, b) => new Date(b.reportDate || b.createdAt || 0) - new Date(a.reportDate || a.createdAt || 0)).slice(0, 5);
+    target.innerHTML = rows.length ? `<div class="table-scroll"><table class="recent-table"><thead><tr><th>Fecha y hora</th><th>Región</th><th>Residencia</th><th>Comuna</th><th>Estado</th><th>Personas</th><th>Tipo de reporte</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td><td>${esc(r.region || "")}</td><td>${esc(r.establishment || "Residencia sin nombre")}</td><td>${esc(r.commune || "")}</td><td><span class="status-badge ${statusClass(r.status)}">${esc(r.status || "Sin información")}</span></td><td>${fmt(Number(r.people || 0))}</td><td>${esc(r.previousReport === "Sí" ? "Actualización" : "Regular")}</td></tr>`).join("")}</tbody></table></div><button type="button" class="inline-link" id="viewAllReports">Ver todos los reportes →</button>` : '<div class="empty-state compact">Sin reportes recibidos.</div>';
+  }
+
+  function statusClass(status) {
+    const value = key(status);
+    if (value === "SINAFECTACION") return "status-good";
+    if (value === "CONAFECTACION") return "status-bad";
+    if (value === "ENEVALUACION") return "status-eval";
+    return "status-none";
+  }
+
+  function mapRegionId(region) {
+    const map = {
+      ARICAYPARINACOTA:"AricaParinacota",
+      TARAPACA:"Tarapaca",
+      ANTOFAGASTA:"Antofagasta",
+      ATACAMA:"Atacama",
+      COQUIMBO:"Coquimbo",
+      VALPARAISO:"Valparaiso",
+      METROPOLITANA:"Metropolitana",
+      LIBERTADORGENERALBERNARDOOHIGGINS:"OHiggins",
+      OHIGGINS:"OHiggins",
+      MAULE:"Maule",
+      NUBLE:"Nuble",
+      BIOBIO:"Biobio",
+      ARAUCANIA:"Araucania",
+      LOSRIOS:"Los_Rios",
+      LOSLAGOS:"Los_Lagos",
+      AYSEN:"Aisen",
+      AYSENDELGENERALCARLOSIBANEZDELCAMPO:"Aisen",
+      MAGALLANES:"Magallanes",
+      MAGALLANESYLAANTARTICACHILENA:"Magallanes"
+    };
+    return map[key(region)] || "";
+  }
+
+  function mapColor(value) {
+    if (value >= 50) return "#1E5AA8";
+    if (value >= 21) return "#3882F6";
+    if (value >= 11) return "#60A5FA";
+    if (value >= 1) return "#93C5FD";
+    return "#EAF3FF";
+  }
+
+  function colorChileMap(regions) {
+    const wrap = $("chileMapSvg");
+    if (!wrap) return;
+    regions.forEach(region => {
+      const id = mapRegionId(region.region);
+      if (!id) return;
+      wrap.querySelectorAll(`#${CSS.escape(id)}`).forEach(path => {
+        path.style.fill = mapColor(region.affected);
+        path.style.stroke = "#FFFFFF";
+        path.style.strokeWidth = "0.8";
+        path.setAttribute("tabindex", "0");
+        path.setAttribute("role", "img");
+        path.setAttribute("aria-label", `${region.region}: ${fmt(region.affected)} residencias con afectación`);
+      });
+    });
+  }
+
+  function renderChileMap(regions) {
+    const wrap = $("chileMapSvg");
+    if (!wrap) return;
+    if (mapSvgLoaded) {
+      colorChileMap(regions);
+      return;
+    }
+    fetch("mapa_chile_16_regiones_vector.svg")
+      .then(response => response.ok ? response.text() : "")
+      .then(svg => {
+        if (!svg) return;
+        wrap.innerHTML = svg;
+        mapSvgLoaded = true;
+        colorChileMap(regions);
+      })
+      .catch(() => { wrap.innerHTML = ""; });
+  }
+
   function renderSummary() {
     const data = filteredSummary();
     renderKpis(data);
     const regions = byRegión(data);
     $("regionMap").innerHTML = regions.map(r => `<button type="button" class="region-block level-${intensity(r.affected)}" data-region="${esc(r.region)}" title="${esc(r.region)}: ${fmt(r.total)} informadas, ${fmt(r.affected)} con afectación"><strong>${esc(r.region)}</strong><span class="region-values"><b>${fmt(r.total)}</b><small>informadas</small><i>/</i><b>${fmt(r.affected)}</b><small>con afectación</small></span></button>`).join("");
     $$(".region-block").forEach(btn => btn.addEventListener("click", () => { $("filterRegion").value = btn.dataset.region; renderSummary(); }));
+    renderChileMap(regions);
     const uniqueSituationBase = latestRecords(data);
     const situations = [
       {label:"Sin situaciones reportadas (sin afectación)", value:uniqueSituationBase.filter(r => r.status === "Sin afectación" && !(r.situations || []).length).length},
@@ -401,6 +567,11 @@
     ];
     const totalForBars = Math.max(1, uniqueSituationBase.length);
     $("situationBars").innerHTML = situations.map(x => `<div class="bar-row"><div class="bar-label">${esc(x.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(x.value/totalForBars*100)}%"></div></div><div class="bar-value"><b>${fmt(x.value)}</b><small>/ ${fmt(totalForBars)}</small></div></div>`).join("");
+    renderSituationDonut(uniqueSituationBase);
+    renderNeeds(uniqueSituationBase);
+    renderPeople(data);
+    renderSummaryHistory();
+    renderRecentReports();
     renderCharacterization(data, regions, situations);
     const visible = regions.filter(r => r.total > 0);
     $("regionTableBody").innerHTML = visible.length ? visible.map(r => `<tr><td>${esc(r.region)}</td><td>${fmt(r.total)}</td><td>${fmt(r.without)}</td><td>${fmt(r.affected)}</td><td>${fmt(r.electricity)}</td><td>${fmt(r.sewage)}</td><td>${fmt(r.electro)}</td><td>${esc(r.last ? formatDateTime(r.last) : "Sin información")}</td></tr>`).join("") : '<tr><td colspan="8">Sin información disponible.</td></tr>';
@@ -424,7 +595,7 @@
     const body = $("detailTableBody");
     if (!body) return;
     const rows = filteredDetail().slice().sort((a, b) => key(`${a.region}${a.commune}${a.establishment}`).localeCompare(key(`${b.region}${b.commune}${b.establishment}`)));
-    body.innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.service || "")}</td><td>${esc(r.region || "")}</td><td>${esc(r.commune || "")}</td><td>${esc(r.establishment || "")}</td><td>${esc(r.status || "Sin información")}</td><td>${esc((r.situations || []).join(" | ") || "Sin situaciones reportadas")}</td><td>${fmt(Number(r.people || 0))}</td><td>${esc(r.electrodependent || "Sin información")}${r.electrodependent === "Sí" ? ` (${fmt(Number(r.electrodependentCount || 0))})` : ""}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
+    body.innerHTML = rows.length ? rows.map(r => `<tr><td>${esc(r.service || "")}</td><td>${esc(r.region || "")}</td><td>${esc(r.commune || "")}</td><td>${esc(r.establishment || "")}</td><td><span class="status-badge ${statusClass(r.status)}">${esc(r.status || "Sin información")}</span></td><td>${esc((r.situations || []).join(" | ") || "Sin situaciones reportadas")}</td><td>${fmt(Number(r.people || 0))}</td><td>${esc(r.electrodependent || "Sin información")}${r.electrodependent === "Sí" ? ` (${fmt(Number(r.electrodependentCount || 0))})` : ""}</td><td>${esc(formatDateTime(r.reportDate || r.createdAt))}</td></tr>`).join("") : '<tr><td colspan="9">Sin información disponible.</td></tr>';
   }
 
   function buildRecord() {
@@ -542,6 +713,11 @@
       const a = document.createElement("a"); a.href = url; a.download = `seguimiento_residencias_${dateKey(new Date())}.csv`; a.click(); URL.revokeObjectURL(url);
     });
     $("printButton").addEventListener("click", () => { updatePrintTimestamp(); window.print(); });
+    document.addEventListener("click", event => {
+      if (event.target?.id !== "viewAllReports") return;
+      const tab = document.querySelector('[data-tab="detalle"]');
+      if (tab) tab.click();
+    });
   }
 
   function setupSharedData() {
