@@ -78,21 +78,22 @@
     return (record.situations || []).some(value => key(value) === key(situation));
   }
 
-  function renderRegions(data) {
+function renderRegions(data) {
     const container = $("regionMap");
     const catalog = window.MONITOREO_CATALOGOS;
     if (!container || !catalog) return;
-    container.innerHTML = (catalog.regiones || []).map(region => {
+    const ranked = (catalog.regiones || []).map(region => {
       const rows = data.filter(record => key(record.region) === key(region));
       const total = rows.length;
       const affected = rows.filter(isAffected).length;
       const level = affected >= 6 ? 3 : affected >= 3 ? 2 : affected >= 1 ? 1 : 0;
       const rate = total ? Math.round(affected / total * 100) : 0;
-      return `<button type="button" class="region-block ${total ? "" : "no-data"} level-${level}" data-region="${esc(region)}" title="${esc(region)}: ${fmt(total)} informadas, ${fmt(affected)} con afectación, ${fmt(rate)}%">
-        <strong>${esc(region)}</strong>
-        <span class="region-values"><span><b>${fmt(total)}</b><small>informadas</small></span><span><b>${fmt(affected)}</b><small>afectadas</small></span><span><b>${fmt(rate)}%</b><small>afectación</small></span></span>
-      </button>`;
-    }).join("");
+      return {region, total, affected, level, rate};
+    }).filter(row => row.total > 0).sort((a, b) => b.affected - a.affected || b.total - a.total || a.region.localeCompare(b.region)).slice(0, 5);
+    const maxAffected = Math.max(1, ...ranked.map(row => row.affected));
+    container.innerHTML = ranked.length
+      ? `<div class="territory-top-head"><span>Región</span><span>N°</span></div><div class="territory-top-list">${ranked.map(row => `<button type="button" class="region-block region-rank level-${row.level}" data-region="${esc(row.region)}" title="${esc(row.region)}: ${fmt(row.total)} informadas, ${fmt(row.affected)} con afectación, ${fmt(row.rate)}%"><strong>${esc(row.region)}</strong><b>${fmt(row.affected)}</b><span class="rank-track"><i style="width:${Math.max(4, Math.round(row.affected / maxAffected * 100))}%"></i></span></button>`).join("")}</div><a class="territory-detail-link" href="#regionSummaryTable">Ver detalle regional en tabla</a>`
+      : '<div class="empty-state compact">Sin información territorial con los filtros actuales.</div>';
   }
 
   function renderSituations(data) {
@@ -110,13 +111,13 @@
     container.innerHTML = rows.map(row => `<div class="bar-row"><div class="bar-label">${esc(row.label)}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.round(row.value / total * 100)}%"></div></div><div class="bar-value"><b>${fmt(row.value)}</b><small>/ ${fmt(total)}</small></div></div>`).join("");
   }
 
-  function centerCards() {
-    document.querySelectorAll("#resumen .kpi-value").forEach(value => {
-      value.style.display = "flex";
-      value.style.alignItems = "center";
-      value.style.justifyContent = "center";
-      value.style.textAlign = "center";
-      value.style.width = "100%";
+function centerCards() {
+    document.querySelectorAll("#resumen .unique-kpi .kpi-value").forEach(value => {
+      value.style.display = "block";
+      value.style.alignItems = "";
+      value.style.justifyContent = "";
+      value.style.textAlign = "left";
+      value.style.width = "auto";
     });
   }
 
