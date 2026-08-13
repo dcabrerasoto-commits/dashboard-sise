@@ -215,14 +215,22 @@
       .region-values{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:9px!important;white-space:nowrap!important;background:rgba(255,255,255,.58)!important;border:0!important;padding:3px 6px!important;min-width:210px!important;width:auto!important}
       .region-values>span{display:grid!important;align-items:center!important;gap:1px!important;text-align:right!important;background:transparent!important;border:0!important;padding:0!important;min-width:48px!important}
       .region-values b{font-size:13px!important;line-height:1!important;color:#102A56!important;min-width:0!important;text-align:right!important}.region-values small{font-size:7px!important;line-height:1!important;text-transform:uppercase!important;color:#56657A!important}.region-values i{display:none!important}
-      .overview-grid #regionMap{gap:2px!important;overflow:hidden!important}
+      .overview-grid .territory-layout{display:grid!important;grid-template-columns:1fr!important;align-items:start!important}
+      .overview-grid .territory-insights,.overview-grid .chile-map-svg,.overview-grid .legend{display:none!important}
+      .overview-grid #regionMap{display:grid!important;grid-template-rows:1fr auto!important;gap:8px!important;overflow:hidden!important}
+      .territory-top-list{display:grid!important;gap:8px!important;align-content:start!important}
       .overview-grid .region-block{min-height:17px!important;padding:0!important;display:grid!important;grid-template-columns:8px minmax(92px,1fr) 26px!important;gap:6px!important;background:transparent!important;border:0!important;box-shadow:none!important;color:#102A56!important}
+      .overview-grid .region-rank{min-height:24px!important;grid-template-columns:minmax(92px,1fr) 34px minmax(70px,.72fr)!important;gap:9px!important;text-align:left!important}
       .overview-grid .region-block i{display:block!important;width:6px!important;height:6px!important;border-radius:50%!important;background:#60A5FA!important}
       .overview-grid .region-block.level-0 i{background:#DCE3EC!important}.overview-grid .region-block.level-1 i{background:#93C5FD!important}.overview-grid .region-block.level-2 i{background:#60A5FA!important}.overview-grid .region-block.level-3 i{background:#2563EB!important}.overview-grid .region-block.level-4 i{background:#1E5AA8!important}
       .overview-grid .region-block strong{font-size:9.2px!important;color:#102A56!important;font-weight:750!important}
       .overview-grid .region-values{display:flex!important;min-width:0!important;width:auto!important;background:transparent!important;padding:0!important;justify-content:end!important}
       .overview-grid .region-values b{font-size:9.6px!important;color:#102A56!important}
       .overview-grid .region-values small{display:none!important}
+      .overview-grid .region-rank strong{font-size:11px!important;color:#102A56!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+      .overview-grid .region-rank>b{font-size:13px!important;color:#1E5AA8!important;text-align:right!important;font-variant-numeric:tabular-nums!important}
+      .rank-track{height:7px!important;border-radius:999px!important;background:#EAF3FF!important;overflow:hidden!important}.rank-track i{display:block!important;height:100%!important;border-radius:999px!important;background:linear-gradient(90deg,#60A5FA,#2563EB)!important}
+      .territory-detail-link{align-self:end!important;color:#1E5AA8!important;font-size:11px!important;font-weight:850!important;text-decoration:none!important}.territory-detail-link:hover{text-decoration:underline!important}
       #resumen .legend{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:12px!important;padding:10px 12px!important;background:#F5F7FA!important;border:1px solid #DCE3EC!important;color:#56657A!important;font-size:11px!important}
       #resumen .legend span{display:inline-flex!important;align-items:center!important;gap:6px!important;padding:4px 8px!important;background:#fff!important;border:1px solid #DCE3EC!important;font-weight:750!important}
       #resumen .legend span::before{content:"";width:12px;height:12px;border:1px solid #DCE3EC;background:#F5F7FA}

@@ -605,11 +605,14 @@ main.wrap{width:calc(100% - 48px);max-width:1552px;margin:auto}
 .need-value b{font-size:15px}
 .need-value small{font-size:10px;color:#2563EB}
 .overview-grid .territory-layout{grid-template-columns:minmax(145px,.9fr) minmax(170px,1fr);grid-template-rows:1fr;gap:8px;align-items:center;height:193px}
-.overview-grid .territory-insights{display:none}
+.overview-grid .territory-layout{display:grid;grid-template-columns:1fr;height:193px;align-items:start}
+.overview-grid .territory-insights,.overview-grid .chile-map-svg,.overview-grid .legend{display:none!important}
 .overview-grid .chile-map-svg{grid-row:auto;min-height:193px;height:193px;overflow:visible}
 .overview-grid .chile-map-svg svg{width:132px;height:193px}
-.overview-grid #regionMap{max-height:193px!important;gap:2px!important;overflow:hidden}
+.overview-grid #regionMap{max-height:193px!important;display:grid!important;grid-template-rows:1fr auto;gap:8px!important;overflow:hidden}
+.territory-top-list{display:grid;gap:8px;align-content:start}
 .overview-grid .region-block{min-height:18px!important;padding:0!important;display:grid!important;grid-template-columns:9px minmax(98px,1fr) 28px!important;gap:7px!important;align-items:center!important;background:transparent!important;color:#102A56!important;border:0!important;box-shadow:none!important}
+.overview-grid .region-rank{min-height:24px!important;grid-template-columns:minmax(92px,1fr) 34px minmax(70px,.72fr)!important;gap:9px!important;text-align:left!important}
 .overview-grid .region-block i{display:block!important;width:6px!important;height:6px!important;border-radius:50%!important;background:#60A5FA!important}
 .overview-grid .region-block.level-0 i{background:#DCE3EC!important}
 .overview-grid .region-block.level-1 i{background:#93C5FD!important}
@@ -621,6 +624,12 @@ main.wrap{width:calc(100% - 48px);max-width:1552px;margin:auto}
 .overview-grid .region-values b{font-size:10px!important;color:#102A56!important}
 .overview-grid .region-values small{display:none!important}
 .overview-grid .legend{padding:5px 0 0!important;font-size:9px;gap:6px;justify-content:flex-start}
+.overview-grid .region-rank strong{font-size:11px!important;color:#102A56!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.overview-grid .region-rank>b{font-size:13px!important;color:#1E5AA8!important;text-align:right!important;font-variant-numeric:tabular-nums!important}
+.rank-track{height:7px;border-radius:999px;background:#EAF3FF;overflow:hidden}
+.rank-track i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#60A5FA,#2563EB)}
+.territory-detail-link{align-self:end;color:#1E5AA8;font-size:11px;font-weight:850;text-decoration:none}
+.territory-detail-link:hover{text-decoration:underline}
 .people-card #peopleSummary{height:193px;display:grid;grid-template-columns:1fr;align-content:center;gap:10px}
 .people-main{grid-template-columns:62px minmax(0,1fr);justify-content:center;align-items:center;padding:0 14px}
 .metric-icon{width:54px;height:54px;font-size:20px;border-radius:50%}
