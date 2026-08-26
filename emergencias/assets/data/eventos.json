@@ -1,10 +1,17 @@
 [
   {
+    "id": "sf-alud-20260814",
+    "nombre": "SF-Alud: inicio 14 de agosto",
+    "subtitulo": "SF-Alud: inicio 14 de agosto",
+    "dataUrl": "assets/data/monitoreo-sise-sf-alud-live.json",
+    "predeterminado": true,
+    "tema": "alud"
+  },
+  {
     "id": "sf-20260716",
     "nombre": "Sistema frontal Atacama- Los Ríos (inicio: 13 de julio)",
     "subtitulo": "Sistema frontal Atacama- Los Ríos (inicio: 13 de julio)",
-    "dataUrl": "assets/data/monitoreo-sise-sf-20260716-live.json",
-    "predeterminado": true
+    "dataUrl": "assets/data/monitoreo-sise-sf-20260716-live.json"
   },
   {
     "id": "sf-20260727",
