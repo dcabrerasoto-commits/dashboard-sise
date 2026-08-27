@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-26T21:05:08",
+  "actualizado": "2026-08-27T10:29:45",
   "busquedaEvento": "Sistema Frontal 27 de julio",
   "eventos": [
     {
@@ -1223,8 +1223,16 @@
       "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN QUILLECO, QUILLECO, BIOBÍO",
       "region": "Biobío",
       "comunas": "Quilleco",
-      "estado": "Activa",
+      "estado": "Finalizada",
       "fechaCreacion": "05/08/2026"
+    },
+    {
+      "id": "153701",
+      "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN PUREN, PURÉN, LA ARAUCANÍA",
+      "region": "La Araucanía",
+      "comunas": "Purén",
+      "estado": "Activa",
+      "fechaCreacion": "07/08/2026"
     },
     {
       "id": "153842",
@@ -1239,7 +1247,7 @@
       "nombre": "SISTEMA FRONTAL DEL (30-07-2026) EN COMUNA DE TEODORO SCHMIDT, TEODORO SCHMIDT, LA ARAUCANÍA",
       "region": "La Araucanía",
       "comunas": "Teodoro Schmidt",
-      "estado": "Activa",
+      "estado": "Finalizada",
       "fechaCreacion": "10/08/2026"
     },
     {
@@ -1255,180 +1263,190 @@
       "nombre": "SISTEMA FRONTAL DEL (11-08-2026) EN TRES PINOS, LOS ALAMOS, LOS ÁLAMOS, BIOBÍO",
       "region": "Biobío",
       "comunas": "Los Álamos",
-      "estado": "Activa",
+      "estado": "Finalizada",
       "fechaCreacion": "11/08/2026"
+    },
+    {
+      "id": "154261",
+      "nombre": "SISTEMA FRONTAL DEL (08-08-2026) EN MELIPEUCO, MELIPEUCO, LA ARAUCANÍA",
+      "region": "La Araucanía",
+      "comunas": "Melipeuco",
+      "estado": "Finalizada",
+      "fechaCreacion": "12/08/2026"
     }
   ],
   "descargas": [],
   "pendientesDescarga": [],
   "congeladosDescarga": [],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150781_20260825_1720_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150785_20260825_1720_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150844_20260825_1720_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150861_20260825_1720_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150901_20260825_1720_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150903_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150944_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150981_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151002_20260812_1020_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151003_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151022_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151061_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151081_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151104_20260825_1721_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151121_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151141_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151161_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151181_20260812_1020_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151183_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151202_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151203_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151204_20260825_1722_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151222_20260825_1723_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151223_20260825_1723_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151224_20260825_1723_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151241_20260825_1723_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151242_20260825_1723_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151281_20260825_1723_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151301_20260825_1724_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151421_20260825_1724_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151422_20260825_1724_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151441_20260825_1724_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151461_20260825_1724_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151501_20260825_1725_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151641_20260825_1725_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151661_20260825_1725_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151741_20260812_1022_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151802_20260825_1725_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151805_20260825_1725_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151841_20260825_1725_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151861_20260825_1726_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151881_20260825_1726_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151902_20260825_1726_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151941_20260825_1726_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151961_20260825_1726_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151963_20260825_1727_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151965_20260825_1727_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151968_20260825_1727_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151969_20260825_1727_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151971_20260825_1728_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151972_20260825_1728_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151973_20260825_1728_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152001_20260825_1730_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152041_20260825_1730_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152042_20260825_1730_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152062_20260825_1730_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152063_20260825_1730_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152066_20260825_1730_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152068_20260825_1731_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152070_20260825_1731_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152071_20260825_1731_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152081_20260825_1731_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152121_20260825_1731_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152123_20260825_1731_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152125_20260825_1732_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152126_20260825_1732_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152128_20260825_1732_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152129_20260825_1732_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152130_20260812_1028_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152131_20260825_1732_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152133_20260825_1732_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152136_20260825_1733_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152137_20260812_1028_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152138_20260825_1733_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152139_20260825_1733_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152140_20260825_1733_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152141_20260825_1733_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152161_20260825_1733_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152181_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152202_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152221_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152222_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152262_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152263_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152264_20260825_1734_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152282_20260825_1735_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152303_20260825_1735_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152321_20260825_1735_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152341_20260825_1735_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152361_20260825_1735_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152381_20260825_1735_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152382_20260825_1736_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152401_20260825_1736_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152421_20260825_1736_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152422_20260825_1736_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152423_20260825_1736_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152424_20260825_1737_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152425_20260825_1737_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152442_20260825_1737_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152443_20260825_1737_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152445_20260825_1737_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152446_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152461_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152481_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152482_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152485_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152486_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152487_20260825_1738_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152488_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152489_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152490_20260812_1032_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152491_20260812_1032_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152492_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152494_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152495_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152496_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152499_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152521_20260825_1739_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152561_20260825_1740_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152581_20260825_1740_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152582_20260825_1740_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152583_20260825_1740_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152602_20260825_1740_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152603_20260825_1740_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152621_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152642_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152645_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152661_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152682_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152683_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152701_20260825_1741_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152741_20260825_1742_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152761_20260825_1742_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152801_20260825_1742_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152841_20260825_1742_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152865_20260825_1742_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152901_20260825_1743_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152941_20260825_1743_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152942_20260825_1743_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152945_20260825_1743_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152961_20260825_1743_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152982_20260825_1743_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153001_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153002_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153003_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153004_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153024_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153025_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153061_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153101_20260825_1744_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153181_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153241_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153261_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153262_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153402_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153461_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153464_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153481_20260825_1745_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153501_20260825_1746_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153521_20260825_1746_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153524_20260812_1036_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153701_20260812_1036_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153842_20260825_1746_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153961_20260812_1036_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\154001_20260812_1037_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\154201_20260812_1037_Reporte_BD_FIBE.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150781_20260827_1000_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150785_20260827_1000_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150844_20260827_1000_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150861_20260827_1000_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150901_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150903_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150944_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\150981_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151002_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151003_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151022_20260827_1001_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151061_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151081_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151104_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151121_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151141_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151161_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151181_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151183_20260827_1002_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151202_20260827_1003_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151203_20260827_1003_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151204_20260827_1003_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151222_20260827_1003_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151223_20260827_1003_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151224_20260827_1004_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151241_20260827_1004_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151242_20260827_1004_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151281_20260827_1004_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151301_20260827_1004_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151421_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151422_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151441_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151461_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151501_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151641_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151661_20260827_1005_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151741_20260827_1006_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151802_20260827_1006_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151805_20260827_1006_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151841_20260827_1006_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151861_20260827_1006_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151881_20260827_1007_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151902_20260827_1007_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151941_20260827_1007_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151961_20260827_1007_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151963_20260827_1007_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151965_20260827_1008_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151968_20260827_1008_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151969_20260827_1008_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151971_20260827_1008_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151972_20260827_1009_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\151973_20260827_1009_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152001_20260827_1011_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152041_20260827_1011_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152042_20260827_1011_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152062_20260827_1011_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152063_20260827_1011_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152066_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152068_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152070_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152071_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152081_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152121_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152123_20260827_1012_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152125_20260827_1013_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152126_20260827_1013_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152128_20260827_1013_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152129_20260827_1013_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152130_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152131_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152133_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152136_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152137_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152138_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152139_20260827_1014_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152140_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152141_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152161_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152181_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152202_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152221_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152222_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152262_20260827_1015_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152263_20260827_1016_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152264_20260827_1016_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152282_20260827_1016_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152303_20260827_1016_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152321_20260827_1016_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152341_20260827_1016_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152361_20260827_1017_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152381_20260827_1017_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152382_20260827_1017_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152401_20260827_1017_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152421_20260827_1018_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152422_20260827_1018_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152423_20260827_1018_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152424_20260827_1018_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152425_20260827_1018_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152442_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152443_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152445_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152446_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152461_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152481_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152482_20260827_1019_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152485_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152486_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152487_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152488_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152489_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152490_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152491_20260827_1020_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152492_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152494_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152495_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152496_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152499_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152521_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152561_20260827_1021_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152581_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152582_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152583_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152602_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152603_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152621_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152642_20260827_1022_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152645_20260827_1023_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152661_20260827_1023_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152682_20260827_1023_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152683_20260827_1023_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152701_20260827_1023_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152741_20260827_1023_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152761_20260827_1024_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152801_20260827_1024_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152841_20260827_1024_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152865_20260827_1024_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152901_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152941_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152942_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152945_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152961_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\152982_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153001_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153002_20260827_1025_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153003_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153004_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153024_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153025_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153061_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153101_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153181_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153241_20260827_1026_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153261_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153262_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153402_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153461_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153464_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153481_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153501_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153521_20260827_1027_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153524_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153701_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153842_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\153961_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\154001_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\154201_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\154261_20260827_1028_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SISTEMAFRONTAL_27JULIO\\MONITOREO_SISE\\BBDD\\154384_20260827_1029_Reporte_BD_FIBE.xlsx"
   ],
   "advertencias": [],
   "bonoRecuperacion": {
@@ -1495,43 +1513,51 @@
     },
     {
       "fechaDigitacion": "10/08/2026",
-      "terminadas": 210
+      "terminadas": 238
     },
     {
       "fechaDigitacion": "11/08/2026",
-      "terminadas": 277
+      "terminadas": 289
     },
     {
       "fechaDigitacion": "12/08/2026",
-      "terminadas": 207
+      "terminadas": 310
     },
     {
       "fechaDigitacion": "13/08/2026",
-      "terminadas": 152
+      "terminadas": 184
     },
     {
       "fechaDigitacion": "14/08/2026",
-      "terminadas": 106
+      "terminadas": 109
     },
     {
       "fechaDigitacion": "17/08/2026",
-      "terminadas": 31
+      "terminadas": 51
     },
     {
       "fechaDigitacion": "18/08/2026",
-      "terminadas": 29
+      "terminadas": 55
     },
     {
       "fechaDigitacion": "19/08/2026",
-      "terminadas": 4
-    },
-    {
-      "fechaDigitacion": "20/08/2026",
       "terminadas": 6
     },
     {
+      "fechaDigitacion": "20/08/2026",
+      "terminadas": 9
+    },
+    {
       "fechaDigitacion": "21/08/2026",
-      "terminadas": 8
+      "terminadas": 28
+    },
+    {
+      "fechaDigitacion": "24/08/2026",
+      "terminadas": 2
+    },
+    {
+      "fechaDigitacion": "25/08/2026",
+      "terminadas": 1
     }
   ],
   "filas": [
@@ -1570,8 +1596,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 11
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1608,8 +1634,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 22
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1644,8 +1670,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1674,8 +1700,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1709,8 +1735,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1753,8 +1779,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 13
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1791,8 +1817,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1832,8 +1858,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 47
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1863,8 +1889,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1907,8 +1933,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 38
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1943,8 +1969,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 6,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -1985,8 +2011,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 33
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2019,8 +2045,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2061,8 +2087,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 12
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2092,8 +2118,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2103,7 +2129,7 @@
       "fechaEvento": "11/08/2026",
       "fechaOcurrencia": "11/08/2026",
       "fechaCreacion": "11/08/2026",
-      "estadoEvento": "Activa",
+      "estadoEvento": "Finalizada",
       "id": "154201",
       "alfa": 0,
       "aplicadas": 1,
@@ -2122,8 +2148,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2165,8 +2191,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 33
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2198,8 +2224,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2239,8 +2265,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2279,8 +2305,8 @@
         "POCO AFECTADOS|NO AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 47
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2323,8 +2349,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2354,8 +2380,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2365,30 +2391,31 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "05/08/2026",
-      "estadoEvento": "Activa",
+      "estadoEvento": "Finalizada",
       "id": "153524",
       "alfa": 0,
-      "aplicadas": 5,
+      "aplicadas": 10,
       "anuladas": 0,
-      "terminadas": 5,
+      "terminadas": 10,
       "terminadasApp": 0,
-      "terminadasPapel": 5,
+      "terminadasPapel": 10,
       "digitacion": 0,
-      "personas": 10,
-      "nna": 2,
+      "personas": 19,
+      "nna": 5,
       "mayores": 3,
       "discapacidad": 3,
-      "mujer": 9,
-      "hombre": 1,
+      "mujer": 14,
+      "hombre": 5,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "MUY AFECTADOS|MUY AFECTADA": 1,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 1
+        "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2418,8 +2445,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2454,8 +2481,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2488,8 +2515,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "POCO AFECTADOS|POCO AFECTADA": 18
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2530,8 +2557,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 51
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2563,8 +2590,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2608,8 +2635,8 @@
         "POCO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 18
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2643,8 +2670,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2676,8 +2703,8 @@
         "MUY AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2721,8 +2748,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2735,32 +2762,36 @@
       "estadoEvento": "Activa",
       "id": "154001",
       "alfa": 0,
-      "aplicadas": 57,
+      "aplicadas": 196,
       "anuladas": 0,
-      "terminadas": 57,
+      "terminadas": 193,
       "terminadasApp": 51,
-      "terminadasPapel": 6,
-      "digitacion": 0,
-      "personas": 152,
-      "nna": 29,
-      "mayores": 46,
-      "discapacidad": 18,
-      "mujer": 79,
-      "hombre": 73,
+      "terminadasPapel": 142,
+      "digitacion": 3,
+      "personas": 472,
+      "nna": 97,
+      "mayores": 128,
+      "discapacidad": 38,
+      "mujer": 252,
+      "hombre": 220,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 16,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
-        "MUY AFECTADOS|MUY AFECTADA": 22,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
-        "NO AFECTADOS|POCO AFECTADA": 2,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 20,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 4,
+        "MEDIANAMENTE AFECTADOS|NO AFECTADA": 1,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MUY AFECTADOS|MUY AFECTADA": 42,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "NO AFECTADOS|MUY AFECTADA": 2,
+        "NO AFECTADOS|NO AFECTADA": 17,
+        "NO AFECTADOS|POCO AFECTADA": 29,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
-        "POCO AFECTADOS|POCO AFECTADA": 7
+        "POCO AFECTADOS|NO AFECTADA": 5,
+        "POCO AFECTADOS|POCO AFECTADA": 60
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2795,8 +2826,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2826,8 +2857,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2859,8 +2890,8 @@
         "MUY AFECTADOS|DESTRUIDA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2889,8 +2920,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2928,8 +2959,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 26
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2964,8 +2995,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -2995,8 +3026,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3037,8 +3068,8 @@
         "POCO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 18
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3076,8 +3107,8 @@
         "POCO AFECTADOS|NO AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3113,8 +3144,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 10,
         "POCO AFECTADOS|POCO AFECTADA": 29
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3143,8 +3174,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3183,8 +3214,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 29
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3216,8 +3247,8 @@
         "NO AFECTADOS|POCO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3248,8 +3279,38 @@
         "MUY AFECTADOS|MUY AFECTADA": 7,
         "POCO AFECTADOS|POCO AFECTADA": 11
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "La Araucanía",
+      "comuna": "Melipeuco",
+      "evento": "SISTEMA FRONTAL DEL (08-08-2026) EN MELIPEUCO, MELIPEUCO, LA ARAUCANÍA",
+      "fechaEvento": "08/08/2026",
+      "fechaOcurrencia": "08/08/2026",
+      "fechaCreacion": "12/08/2026",
+      "estadoEvento": "Finalizada",
+      "id": "154261",
+      "alfa": 0,
+      "aplicadas": 1,
+      "anuladas": 0,
+      "terminadas": 1,
+      "terminadasApp": 0,
+      "terminadasPapel": 1,
+      "digitacion": 0,
+      "personas": 1,
+      "nna": 0,
+      "mayores": 1,
+      "discapacidad": 0,
+      "mujer": 0,
+      "hombre": 1,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MUY AFECTADOS|MUY AFECTADA": 1
+      },
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3291,8 +3352,8 @@
         "POCO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 59
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3326,8 +3387,43 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 44
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "La Araucanía",
+      "comuna": "Purén",
+      "evento": "SISTEMA FRONTAL DEL (30-07-2026) EN PUREN, PURÉN, LA ARAUCANÍA",
+      "fechaEvento": "30/07/2026",
+      "fechaOcurrencia": "30/07/2026",
+      "fechaCreacion": "07/08/2026",
+      "estadoEvento": "Activa",
+      "id": "153701",
+      "alfa": 0,
+      "aplicadas": 12,
+      "anuladas": 0,
+      "terminadas": 10,
+      "terminadasApp": 0,
+      "terminadasPapel": 10,
+      "digitacion": 1,
+      "personas": 31,
+      "nna": 8,
+      "mayores": 5,
+      "discapacidad": 0,
+      "mujer": 14,
+      "hombre": 17,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 3,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 3,
+        "NO AFECTADOS|POCO AFECTADA": 1,
+        "POCO AFECTADOS|NO AFECTADA": 1,
+        "POCO AFECTADOS|POCO AFECTADA": 1
+      },
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3364,8 +3460,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 79
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3410,8 +3506,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 79
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3421,25 +3517,34 @@
       "fechaEvento": "30/07/2026",
       "fechaOcurrencia": "30/07/2026",
       "fechaCreacion": "10/08/2026",
-      "estadoEvento": "Activa",
+      "estadoEvento": "Finalizada",
       "id": "153961",
       "alfa": 0,
-      "aplicadas": 2,
+      "aplicadas": 100,
       "anuladas": 0,
-      "terminadas": 0,
+      "terminadas": 100,
       "terminadasApp": 0,
-      "terminadasPapel": 0,
-      "digitacion": 2,
-      "personas": 0,
-      "nna": 0,
-      "mayores": 0,
-      "discapacidad": 0,
-      "mujer": 0,
-      "hombre": 0,
+      "terminadasPapel": 100,
+      "digitacion": 0,
+      "personas": 260,
+      "nna": 61,
+      "mayores": 50,
+      "discapacidad": 11,
+      "mujer": 141,
+      "hombre": 119,
       "otro": 0,
-      "matrizAfectacion": {},
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "matrizAfectacion": {
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 47,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
+        "MUY AFECTADOS|MUY AFECTADA": 1,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
+        "NO AFECTADOS|NO AFECTADA": 12,
+        "NO AFECTADOS|POCO AFECTADA": 2,
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
+        "POCO AFECTADOS|POCO AFECTADA": 19
+      },
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3476,8 +3581,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 8
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3512,8 +3617,8 @@
         "NO AFECTADOS|NO AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3546,8 +3651,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 11
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3576,8 +3681,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3611,8 +3716,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3642,8 +3747,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3673,8 +3778,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3705,8 +3810,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3736,8 +3841,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3767,8 +3872,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 35,
         "NO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3800,8 +3905,8 @@
         "POCO AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3836,8 +3941,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3869,8 +3974,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3903,8 +4008,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3939,8 +4044,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -3979,8 +4084,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 20
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4011,8 +4116,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4043,8 +4148,8 @@
         "NO AFECTADOS|POCO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4073,8 +4178,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4107,8 +4212,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4144,8 +4249,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4176,8 +4281,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4207,8 +4312,8 @@
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "NO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4242,8 +4347,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4275,8 +4380,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4315,8 +4420,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4358,8 +4463,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 17
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4388,8 +4493,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 23
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4419,8 +4524,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4455,8 +4560,8 @@
         "NO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4486,8 +4591,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4517,8 +4622,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4550,8 +4655,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4585,8 +4690,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4622,8 +4727,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4658,8 +4763,8 @@
         "MUY AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4688,8 +4793,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4723,8 +4828,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4755,8 +4860,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4793,8 +4898,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4828,8 +4933,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4869,8 +4974,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 113
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4905,8 +5010,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4941,8 +5046,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -4985,8 +5090,8 @@
         "POCO AFECTADOS|NO AFECTADA": 20,
         "POCO AFECTADOS|POCO AFECTADA": 106
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5018,8 +5123,8 @@
         "NO AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5052,8 +5157,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 15
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5089,8 +5194,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5122,8 +5227,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5154,8 +5259,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5187,8 +5292,8 @@
         "NO AFECTADOS|POCO AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5220,8 +5325,8 @@
         "NO AFECTADOS|POCO AFECTADA": 3,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5256,8 +5361,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5293,8 +5398,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 7
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5332,8 +5437,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5365,8 +5470,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5403,8 +5508,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5435,8 +5540,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5466,8 +5571,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5499,8 +5604,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5530,8 +5635,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5569,8 +5674,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 20
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5601,8 +5706,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5634,8 +5739,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5669,8 +5774,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 19
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5702,8 +5807,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5741,8 +5846,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5772,8 +5877,8 @@
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 1,
         "MUY AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5804,8 +5909,8 @@
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5836,8 +5941,8 @@
         "MUY AFECTADOS|DESTRUIDA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5867,8 +5972,8 @@
         "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5903,8 +6008,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 40
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5940,8 +6045,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -5981,8 +6086,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6011,8 +6116,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|DESTRUIDA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6044,8 +6149,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 4
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6086,8 +6191,8 @@
         "POCO AFECTADOS|NO AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6124,8 +6229,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 25
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6157,8 +6262,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6196,8 +6301,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 13
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6231,8 +6336,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6266,8 +6371,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6298,8 +6403,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6335,8 +6440,8 @@
         "POCO AFECTADOS|NO AFECTADA": 9,
         "POCO AFECTADOS|POCO AFECTADA": 15
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6370,8 +6475,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 3
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6409,8 +6514,8 @@
         "POCO AFECTADOS|NO AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 134
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6439,8 +6544,8 @@
       "matrizAfectacion": {
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6479,8 +6584,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 10
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6511,8 +6616,8 @@
         "NO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6543,8 +6648,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6583,8 +6688,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 9,
         "POCO AFECTADOS|POCO AFECTADA": 8
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6623,8 +6728,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|POCO AFECTADA": 15
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6655,8 +6760,8 @@
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6695,8 +6800,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 8
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6739,8 +6844,8 @@
         "POCO AFECTADOS|NO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 9
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6779,8 +6884,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 11
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6821,8 +6926,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 12
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6855,8 +6960,8 @@
         "NO AFECTADOS|POCO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 5
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6892,8 +6997,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 11,
         "POCO AFECTADOS|POCO AFECTADA": 13
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6926,8 +7031,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6962,8 +7067,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 3,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -6992,8 +7097,8 @@
       "matrizAfectacion": {
         "MUY AFECTADOS|MUY AFECTADA": 5
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -7032,8 +7137,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -7070,8 +7175,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 13,
         "POCO AFECTADOS|POCO AFECTADA": 8
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     },
     {
@@ -7107,8 +7212,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "21:05",
-      "fechaLlenado": "26-08-2026 21:05",
+      "hora": "10:29",
+      "fechaLlenado": "27-08-2026 10:29",
       "bonoRecuperacion": 0
     }
   ]
