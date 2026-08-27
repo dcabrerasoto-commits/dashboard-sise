@@ -34,12 +34,14 @@ const regiones=['Arica y Parinacota','Tarapac\u00e1','Antofagasta','Atacama','Co
 const regionesReporte=regiones;
 const alfaSenapredRegion={"Atacama":248,"Coquimbo":19479,"Valpara\u00edso":10864,"Metropolitana de Santiago":6421,"O'Higgins":1094,"Maule":453,"\u00d1uble":340,"Biob\u00edo":1994,"La Araucan\u00eda":552,"Los R\u00edos":0,"Los Lagos":0};
 const fmt=n=>new Intl.NumberFormat('es-CL').format(Number(n||0));
-const snapshot=JSON.parse(localStorage.getItem('uise-reporte-imprimible')||'null');
-let filas=snapshot&&Array.isArray(snapshot.filas)?snapshot.filas:[];
-let ritmo=snapshot&&Array.isArray(snapshot.ritmoDigitacion)?snapshot.ritmoDigitacion:[];
-const evento=snapshot&&snapshot.evento?snapshot.evento:{id:'sf-20260716',nombre:'Sistema frontal Atacama- Los R\u00edos (inicio: 13 de julio)',dataUrl:'assets/data/monitoreo-sise-sf-20260716.json'};
-const filtro=snapshot&&snapshot.filtro?snapshot.filtro:{};
-const regionesSnapshot=snapshot&&Array.isArray(snapshot.regiones)&&snapshot.regiones.length?snapshot.regiones:null;
+function leerSnapshot(){try{return JSON.parse(localStorage.getItem('uise-reporte-imprimible')||'null')}catch(e){return null}}
+const params=new URLSearchParams(location.search),eventosImprimir={'sf-alud-20260814':{id:'sf-alud-20260814',nombre:'SF-Alud: inicio 14 de agosto',subtitulo:'SF-Alud: inicio 14 de agosto',dataUrl:'assets/data/monitoreo-sise-sf-alud-live.json'},'sf-20260716':{id:'sf-20260716',nombre:'Sistema frontal Atacama- Los R\u00edos (inicio: 13 de julio)',subtitulo:'Sistema frontal Atacama- Los R\u00edos (inicio: 13 de julio)',dataUrl:'assets/data/monitoreo-sise-sf-20260716-live.json'},'sf-20260727':{id:'sf-20260727',nombre:'Sistema frontal Sur (inicio: 27 de julio)',subtitulo:'Sistema frontal Sur (inicio: 27 de julio)',dataUrl:'assets/data/monitoreo-sise-sf-20260727-live.json'}};
+const snapshot=leerSnapshot(),usarSnapshot=!params.get('evento')||(snapshot&&snapshot.evento&&snapshot.evento.id===params.get('evento'));
+let filas=usarSnapshot&&snapshot&&Array.isArray(snapshot.filas)?snapshot.filas:[];
+let ritmo=usarSnapshot&&snapshot&&Array.isArray(snapshot.ritmoDigitacion)?snapshot.ritmoDigitacion:[];
+const evento=params.get('evento')&&eventosImprimir[params.get('evento')]?eventosImprimir[params.get('evento')]:(snapshot&&snapshot.evento?snapshot.evento:eventosImprimir['sf-20260716']);
+const filtro=snapshot&&snapshot.filtro?snapshot.filtro:{alcance:params.get('alcance')||'general',region:params.get('region')||'',comuna:params.get('comuna')||'',titulo:evento.nombre};
+const regionesSnapshot=usarSnapshot&&snapshot&&Array.isArray(snapshot.regiones)&&snapshot.regiones.length?snapshot.regiones:null;
 const simple=evento.id==='sf-20260727'||evento.id==='sf-alud-20260814';
 function maniana(){let d=new Date();d.setDate(d.getDate()+1);return new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric'}).format(d).replaceAll('/','-')}
 function fechaHora(){return new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date())}
