@@ -40,7 +40,7 @@ const folioNorm=s=>String(s??'').replace(/\D/g,'').replace(/^0+/,'');
 function buscarLocal(tipo,consulta){let r=[];if(tipo==='run'){const q=runNorm(consulta),conDv=consulta.includes('-');r=APP_DATA.filas.filter(x=>conDv?x.run_busqueda===q:x.run_cuerpo===q)}else if(tipo==='folio'){const q=folioNorm(consulta);r=APP_DATA.filas.filter(x=>x.folio_busqueda===q)}else{const ts=sinAcentos(consulta).split(/\s+/);r=APP_DATA.filas.filter(x=>ts.every(t=>x.nombre_busqueda.includes(t)))}return r.slice(0,50)}
 
 const mascaraRun=v=>{const s=String(v??''),p=s.split('-'),d=p[0].replace(/\D/g,''),visible=d.slice(0,Math.max(0,d.length-2)),cuerpo=visible+'XX';return cuerpo+(p.length>1?'-X':'')};
-const mascaraFolio=v=>{const p=String(v??'').split('.');return p.length===3?`${p[0]}.${p[1]}.${p[2].slice(0,-2)}XX`:'XX.XX.XXXXXX'};
+const mascaraFolio=v=>{const p=String(v??'').split('.');return p.length===3?`${p[0]}.${p[1]}.${p[2].slice(0,-1)}X`:'XX.XX.XXXXXX'};
 const mascaraTelefono=v=>{const s=String(v??'').replace(/\D/g,'');return s?s.slice(0,-2)+'XX':'Sin información'};
 
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
