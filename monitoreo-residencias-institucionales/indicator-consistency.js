@@ -195,6 +195,11 @@
     body.innerHTML = (catalog.regiones || []).map(region => {
       const rows = data.filter(record => key(record.region) === key(region));
       const counts = countsFor(rows);
+      const electricity = rows.filter(record => hasSituation(record, "Sin electricidad")).length;
+      const sewage = rows.filter(record => key(record.situations).includes("AGUAS SERVIDAS")).length;
+      const electro = rows.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length;
+      const rate = counts.total ? Math.round(counts.affected / counts.total * 100) : 0;
+      return `<tr><td>${esc(region)}</td><td>${fmt(counts.total)}</td><td>${fmt(counts.without)}</td><td>${fmt(counts.affected)}</td><td>${fmt(rate)}%</td><td>${fmt(electricity)}</td><td>${fmt(sewage)}</td><td>${fmt(electro)}</td><td>${esc(latestDate(rows))}</td><td><span class="freshness">${esc(rows.length ? "Vigente" : "Sin actualización")}</span></td></tr>`;
       return `<tr><td>${esc(region)}</td><td>${fmt(counts.total)}</td><td>${fmt(counts.without)}</td><td>${fmt(counts.affected)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Sin electricidad")).length)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Exposición a aguas servidas")).length)}</td><td>${fmt(rows.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length)}</td><td>${esc(latestDate(rows))}</td></tr>`;
     }).join("");
   }

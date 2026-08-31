@@ -304,7 +304,7 @@ body{background:radial-gradient(circle at 88% 0,rgba(95,88,191,.06) 0 120px,tran
   .dashboard-grid{gap:12px}
 }
 
-body{background:linear-gradient(180deg,#102A56 0 150px,#F5F7FA 150px 100%)}
+body{background:linear-gradient(180deg,#102A56 0 150px,#DCEBFA 150px 100%)}
 button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(124,58,237,.34);outline-offset:2px}
 .wrap{width:min(1500px,94%);margin:auto}
 .site-header{border-bottom:0;background:#102A56}
@@ -643,7 +643,8 @@ main.wrap{width:calc(100% - 48px);max-width:1552px;margin:auto}
 .recent-card .card-head{margin-bottom:8px}
 .recent-table{min-width:0;width:100%}
 .recent-table th,.recent-table td{font-size:10.5px;padding:7px 8px}
-body{background:#E9EEF5;color:#14213D}
+body{background:#123B68;color:#14213D}
+.app-shell{background:transparent}
 .site-header,.toolbar{background:#F4F7FB}
 .logo-box{background:#F4F7FB}
 .filter-bar,.card,.unique-metrics-section{background:#F2F5FA!important;border-color:#D5DEEA!important}
