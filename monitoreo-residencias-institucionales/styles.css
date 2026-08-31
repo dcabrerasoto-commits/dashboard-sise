@@ -646,6 +646,7 @@ main.wrap{width:calc(100% - 48px);max-width:1552px;margin:auto}
 .recent-table th,.recent-table td{font-size:10.5px;padding:7px 8px}
 body{background:#123B68;color:#14213D}
 .app-shell{background:transparent}
+.site-footer{border-top-color:#60A5FA}
 .site-header,.toolbar{background:#F4F7FB}
 .logo-box{background:#F4F7FB}
 .filter-bar,.card,.unique-metrics-section{background:#F2F5FA!important;border-color:#D5DEEA!important}
