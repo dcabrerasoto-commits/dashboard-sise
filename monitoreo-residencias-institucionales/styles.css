@@ -580,7 +580,7 @@ main.wrap{width:calc(100% - 48px);max-width:1552px;margin:auto}
 .people-stats b{font-size:15px}
 .people-stats small{font-size:10px;line-height:1.2}
 .zone-overview,.zone-evolution{background:transparent;border:0;border-radius:0;padding:0;margin:0 0 8px}
-.overview-grid{display:grid;grid-template-columns:minmax(0,1.56fr) minmax(0,1.35fr) minmax(290px,.9fr);gap:8px;align-items:stretch}
+.overview-grid{display:grid;grid-template-columns:minmax(0,1.56fr) minmax(290px,.9fr);gap:8px;align-items:stretch}
 .overview-grid>.card,.zone-evolution .card{padding:14px 16px;box-shadow:0 8px 22px rgba(16,42,86,.06)}
 .overview-grid>.card{height:254px;min-height:0;overflow:hidden}
 .overview-grid .card-head{margin-bottom:10px}
