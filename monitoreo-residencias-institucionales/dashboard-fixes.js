@@ -2,6 +2,7 @@
   "use strict";
 
   const $ = id => document.getElementById(id);
+  document.querySelectorAll(".territory-card,#regionMap,.territory-top-head,.territory-top-list,.territory-detail-link").forEach(element => element.remove());
   const key = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
   const cleanKey = value => key(value).replace(/[^A-Z0-9]+/g, "");
   const esc = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
@@ -79,6 +80,7 @@
   }
 
 function renderRegions(data) {
+    return;
     const container = $("regionMap");
     const catalog = window.MONITOREO_CATALOGOS;
     if (!container || !catalog) return;
