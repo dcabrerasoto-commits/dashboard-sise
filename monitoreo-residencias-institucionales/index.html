@@ -21,7 +21,7 @@
   <script defer src="date-normalizer.js?v=20260719-03"></script>
   <script defer src="all-services-catalog.js?v=20260719-03"></script>
   <script defer src="unique-metrics.js?v=20260813-36"></script>
-  <script defer src="indicator-consistency.js?v=20260719-03"></script>
+  <script defer src="indicator-consistency.js?v=20260831-02"></script>
   <script defer src="save-safety.js?v=20260719-03"></script>
 </head>
 <body>
@@ -57,6 +57,7 @@
     <div class="filter-bar card"><label>Servicio<select id="filterService"></select></label><label>Región<select id="filterRegion"></select></label><label>Estado<select id="filterStatus"></select></label><button type="button" class="btn btn-light" id="clearFilters">Limpiar filtros</button></div>
     <div class="kpi-grid hidden" id="kpiGrid"></div>
     <section class="summary-zone zone-overview">
+    <div id="regionMap" class="hidden" aria-hidden="true"></div>
     <div class="overview-grid">
       <article class="card situation-card"><div class="card-head"><div><span class="card-kicker">SITUACIÓN NACIONAL</span><h3>Situación nacional actual</h3></div></div><div class="situation-combo"><div class="situation-layout"><div class="donut-chart" id="situationDonut" aria-label="Distribución nacional por estado"></div><div id="situationBars"></div></div><div class="needs-panel"><div class="mini-head"><h3>Necesidades reportadas</h3></div><div id="needsBars"></div></div></div></article>
       <article class="card people-card"><div class="card-head"><div><span class="card-kicker">PERSONAS</span><h3>Personas atendidas</h3></div><span class="small-note">Según reportes vigentes</span></div><div id="peopleSummary"></div></article>
