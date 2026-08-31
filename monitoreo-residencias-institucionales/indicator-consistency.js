@@ -192,7 +192,13 @@
     const body = $("regionTableBody");
     const catalog = window.MONITOREO_CATALOGOS || {};
     if (!body) return;
-    body.innerHTML = (catalog.regiones || []).map(region => {
+    const total = countsFor(data);
+    const totalElectricity = data.filter(record => hasSituation(record, "Sin electricidad")).length;
+    const totalSewage = data.filter(record => key(record.situations).includes("AGUAS SERVIDAS")).length;
+    const totalElectro = data.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length;
+    const totalRate = total.total ? Math.round(total.affected / total.total * 100) : 0;
+    const totalRow = `<tr class="region-total-row"><td>Total nacional</td><td>${fmt(total.total)}</td><td>${fmt(total.without)}</td><td>${fmt(total.affected)}</td><td>${fmt(totalRate)}%</td><td>${fmt(totalElectricity)}</td><td>${fmt(totalSewage)}</td><td>${fmt(totalElectro)}</td><td>${esc(latestDate(data))}</td><td><span class="freshness">${esc(data.length ? "Vigente" : "Sin actualización")}</span></td></tr>`;
+    body.innerHTML = totalRow + (catalog.regiones || []).map(region => {
       const rows = data.filter(record => key(record.region) === key(region));
       const counts = countsFor(rows);
       const electricity = rows.filter(record => hasSituation(record, "Sin electricidad")).length;
