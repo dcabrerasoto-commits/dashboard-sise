@@ -648,6 +648,7 @@ body{background:#123B68;color:#14213D}
 .app-shell{background:transparent}
 .site-footer{border-top-color:#60A5FA}
 #regionMap{display:none!important}
+.territory-top-head,.territory-top-list,.territory-detail-link,.region-block{display:none!important}
 #historico .section-heading{border-left-color:#60A5FA}
 #historico .section-heading h2{color:#fff}
 #historico .section-heading p{color:#D7EAFE}
