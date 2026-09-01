@@ -141,11 +141,18 @@
     const stats = dailyStats(base);
     const today = todayKey();
     const todayStats = stats.find(row => row.day === today);
+    const updated = latest.filter(record => {
+      const value = new Date(record.reportDate || record.createdAt).getTime();
+      return value && (Date.now() - value) <= 7 * 864e5;
+    }).length;
+    const updatedRate = latest.length ? Math.round(updated / latest.length * 100) : 0;
     const cards = [
       ["residencias.svg", "Residencias informadas", latest.length, "Total acumulado de residencias únicas que han reportado al menos una vez en la plataforma"],
       ["reportes.svg", "Reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
       ["reportadas_hoy.svg", "Residencias que reportaron hoy", todayStats ? todayStats.uniqueDaily : 0, "N° de residencias que enviaron al menos un reporte hoy"],
-      ["reportes_hoy.svg", "Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"]
+      ["reportes_hoy.svg", "Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"],
+      ["reportes.svg", "% datos vigentes / actualizados", `${updatedRate}%`, "Residencias con última actualización dentro de los últimos 7 días"],
+      ["reportes_hoy.svg", "% datos no vigentes / no actualizados", `${100 - updatedRate}%`, "Residencias con más de 7 días sin actualización"]
     ];
     container.innerHTML = cards.map(([icon, label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><span class="unique-kpi-icon"><img src="iconos_svg/${esc(icon)}" alt=""></span><div class="unique-kpi-copy"><div class="kpi-value">${fmt(value)}</div><div class="kpi-label">${esc(label)}</div><div class="kpi-sub">${esc(sub)}</div></div></article>`).join("");
 

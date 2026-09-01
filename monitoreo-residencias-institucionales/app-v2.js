@@ -598,11 +598,8 @@
   function freshnessLabel(value) {
     const time = new Date(value || 0).getTime();
     if (!time) return "Sin actualización";
-    const hours = Math.max(0, Math.round((Date.now() - time) / 36e5));
-    if (hours < 6) return `Actualizado hace ${hours || 1} h`;
-    if (hours < 12) return `Actualizado hace ${hours} h`;
-    if (hours < 24) return `Sin actualización en ${hours} h`;
-    return `Más de ${Math.floor(hours / 24)} días`;
+    const days = Math.max(0, Math.floor((Date.now() - time) / 864e5));
+    return days <= 7 ? "Vigente" : `No vigente: ${days} días sin actualización`;
   }
 
   function renderChileMap(regions) {

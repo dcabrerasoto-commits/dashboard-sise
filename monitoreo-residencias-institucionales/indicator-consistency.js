@@ -76,6 +76,13 @@
     return formatDateTime(values.sort((a, b) => new Date(b) - new Date(a))[0]);
   }
 
+  function freshnessLabel(rows) {
+    const values = rows.map(record => record.reportDate || record.createdAt).filter(Boolean).sort((a, b) => new Date(b) - new Date(a));
+    if (!values.length) return "Sin actualización";
+    const days = Math.max(0, Math.floor((Date.now() - new Date(values[0]).getTime()) / 864e5));
+    return days <= 7 ? "Vigente" : `No vigente: ${days} días sin actualización`;
+  }
+
   function ensureValidationMessage() {
     let message = $("indicatorValidationMessage");
     if (message) return message;
@@ -197,7 +204,7 @@
     const totalSewage = data.filter(record => key(record.situations).includes("AGUAS SERVIDAS")).length;
     const totalElectro = data.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length;
     const totalRate = total.total ? Math.round(total.affected / total.total * 100) : 0;
-    const totalRow = `<tr class="region-total-row"><td>Total nacional</td><td>${fmt(total.total)}</td><td>${fmt(total.without)}</td><td>${fmt(total.affected)}</td><td>${fmt(totalRate)}%</td><td>${fmt(totalElectricity)}</td><td>${fmt(totalSewage)}</td><td>${fmt(totalElectro)}</td><td>${esc(latestDate(data))}</td><td><span class="freshness">${esc(data.length ? "Vigente" : "Sin actualización")}</span></td></tr>`;
+    const totalRow = `<tr class="region-total-row"><td>Total nacional</td><td>${fmt(total.total)}</td><td>${fmt(total.without)}</td><td>${fmt(total.affected)}</td><td>${fmt(totalRate)}%</td><td>${fmt(totalElectricity)}</td><td>${fmt(totalSewage)}</td><td>${fmt(totalElectro)}</td><td>${esc(latestDate(data))}</td><td><span class="freshness">${esc(freshnessLabel(data))}</span></td></tr>`;
     body.innerHTML = totalRow + (catalog.regiones || []).map(region => {
       const rows = data.filter(record => key(record.region) === key(region));
       const counts = countsFor(rows);
@@ -205,7 +212,7 @@
       const sewage = rows.filter(record => key(record.situations).includes("AGUAS SERVIDAS")).length;
       const electro = rows.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length;
       const rate = counts.total ? Math.round(counts.affected / counts.total * 100) : 0;
-      return `<tr><td>${esc(region)}</td><td>${fmt(counts.total)}</td><td>${fmt(counts.without)}</td><td>${fmt(counts.affected)}</td><td>${fmt(rate)}%</td><td>${fmt(electricity)}</td><td>${fmt(sewage)}</td><td>${fmt(electro)}</td><td>${esc(latestDate(rows))}</td><td><span class="freshness">${esc(rows.length ? "Vigente" : "Sin actualización")}</span></td></tr>`;
+      return `<tr><td>${esc(region)}</td><td>${fmt(counts.total)}</td><td>${fmt(counts.without)}</td><td>${fmt(counts.affected)}</td><td>${fmt(rate)}%</td><td>${fmt(electricity)}</td><td>${fmt(sewage)}</td><td>${fmt(electro)}</td><td>${esc(latestDate(rows))}</td><td><span class="freshness">${esc(freshnessLabel(rows))}</span></td></tr>`;
       return `<tr><td>${esc(region)}</td><td>${fmt(counts.total)}</td><td>${fmt(counts.without)}</td><td>${fmt(counts.affected)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Sin electricidad")).length)}</td><td>${fmt(rows.filter(record => hasSituation(record, "Exposición a aguas servidas")).length)}</td><td>${fmt(rows.filter(record => key(record.electrodependent) === "SI" || Number(record.electrodependentCount || 0) > 0).length)}</td><td>${esc(latestDate(rows))}</td></tr>`;
     }).join("");
   }
