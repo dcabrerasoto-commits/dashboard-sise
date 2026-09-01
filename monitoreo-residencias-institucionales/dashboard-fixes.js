@@ -257,7 +257,7 @@ function centerCards() {
       .zone-evolution .card{height:205px!important}
       .history-chart,.history-summary-card svg{height:165px!important}
       .unique-kpi .vigency-reference{bottom:8px!important}
-      .situation-combo{grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr)!important;height:150px!important;gap:10px!important}
+      .situation-combo{grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr)!important;height:185px!important;gap:10px!important}
       .situation-combo .needs-panel{padding-left:12px!important}
       #needsBars{gap:7px!important;align-content:center!important}
       #needsBars .need-row{grid-template-columns:24px max-content max-content!important;justify-content:start!important;column-gap:10px!important;align-items:center!important}
