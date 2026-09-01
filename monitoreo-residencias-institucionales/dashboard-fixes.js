@@ -249,8 +249,9 @@ function centerCards() {
       #regionMap,.territory-top-head,.territory-top-list,.territory-detail-link,.region-block{display:none!important}
       .people-card #peopleSummary{grid-template-columns:minmax(180px,.85fr) minmax(0,1fr)!important;align-items:center!important}
       .people-card .people-stats{grid-template-columns:1fr!important;gap:5px!important;padding:10px 14px!important}
-      .overview-grid>.card{height:220px!important}
-      .situation-combo,.people-card #peopleSummary{height:160px!important}
+      .overview-grid>.card{height:240px!important}
+      .situation-combo{height:185px!important;align-items:stretch!important}
+      .people-card #peopleSummary{height:185px!important}
       .people-card #peopleSummary{grid-template-columns:minmax(180px,.85fr) minmax(0,1fr)!important;align-items:center!important}
       .people-card .people-stats{grid-template-columns:1fr!important;gap:5px!important;padding:10px 14px!important}
       .zone-evolution .card{height:205px!important}
@@ -258,7 +259,8 @@ function centerCards() {
       .unique-kpi .vigency-reference{bottom:8px!important}
       .situation-combo{grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr)!important;height:150px!important;gap:10px!important}
       .situation-combo .needs-panel{padding-left:12px!important}
-      #needsBars .need-row{grid-template-columns:24px max-content auto!important;justify-content:start!important;column-gap:10px!important}
+      #needsBars{gap:7px!important;align-content:center!important}
+      #needsBars .need-row{grid-template-columns:24px max-content max-content!important;justify-content:start!important;column-gap:10px!important;align-items:center!important}
       #resumen .situation-card{background:#B7D2E5!important}
       #resumen .people-card{background:#A8C4DA!important}
       #resumen .history-summary-card{background:#9FBFD5!important}
