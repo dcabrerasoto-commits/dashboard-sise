@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-01T08:17:29",
+  "actualizado": "2026-09-01T12:46:40",
   "busquedaEvento": "SF-Alud: inicio 14 de agosto",
   "eventos": [
     {
@@ -55,7 +55,7 @@
       "nombre": "SISTEMA FRONTAL DEL (17-08-2026) EN ARICA, ARICA, ARICA Y PARINACOTA",
       "region": "Arica y Parinacota",
       "comunas": "Arica",
-      "estado": "Finalizada",
+      "estado": "Activa",
       "fechaCreacion": "20/08/2026"
     },
     {
@@ -100,12 +100,11 @@
     },
     {
       "id": "155668",
-      "nombre": "SF-Alud",
+      "nombre": "SISTEMA FRONTAL DEL (17-08-2026) EN COLCHANE, COLCHANE, TARAPACÁ",
       "region": "Tarapacá",
       "comunas": "Colchane",
-      "estado": "Activo",
-      "fechaCreacion": "2026-08-25",
-      "cierreAutomatico": "2026-09-02"
+      "estado": "Activa",
+      "fechaCreacion": "25/08/2026"
     },
     {
       "id": "155225",
@@ -120,7 +119,7 @@
       "nombre": "SISTEMA FRONTAL DEL (20-08-2026) EN ANTOFAGASTA, ANTOFAGASTA, ANTOFAGASTA",
       "region": "Antofagasta",
       "comunas": "Antofagasta",
-      "estado": "Finalizada",
+      "estado": "Activa",
       "fechaCreacion": "20/08/2026"
     },
     {
@@ -160,25 +159,25 @@
   "pendientesDescarga": [],
   "congeladosDescarga": [],
   "fuentes": [
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154461_20260831_1830_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154562_20260831_1833_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154721_20260831_1831_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154861_20260831_1830_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154862_20260831_1832_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154863_20260831_1832_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154922_20260831_1831_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155024_20260831_1837_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155028_20260831_1843_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155041_20260831_1836_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155081_20260831_1840_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155122_20260831_1832_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155161_20260831_1842_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155221_20260831_1839_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155225_20260831_1839_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155361_20260831_1831_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155441_20260831_1843_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155501_20260831_1843_Reporte_BD_FIBE.xlsx",
-    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155668_20260831_1839_Reporte_BD_FIBE.xlsx"
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154461_20260901_1230_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154562_20260901_1233_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154721_20260901_1231_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154861_20260901_1230_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154862_20260901_1232_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154863_20260901_1232_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\154922_20260901_1231_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155024_20260901_1237_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155028_20260901_1244_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155041_20260901_1237_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155081_20260901_1241_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155122_20260901_1232_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155161_20260901_1244_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155221_20260901_1240_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155225_20260901_1240_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155361_20260901_1231_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155441_20260901_1245_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155501_20260901_1245_Reporte_BD_FIBE.xlsx",
+    "C:\\Users\\dcabrera\\OneDrive - Subsecretaría de Evaluación Social\\Escritorio\\UISE\\01_Emergencias\\2026\\SF_ALUD_14AGOSTO\\MONITOREO_SISE\\BBDD\\155668_20260901_1240_Reporte_BD_FIBE.xlsx"
   ],
   "advertencias": [],
   "bonoRecuperacion": {
@@ -209,39 +208,39 @@
     },
     {
       "fechaDigitacion": "20/08/2026",
-      "terminadas": 457
+      "terminadas": 455
     },
     {
       "fechaDigitacion": "21/08/2026",
-      "terminadas": 800
+      "terminadas": 799
     },
     {
       "fechaDigitacion": "22/08/2026",
-      "terminadas": 773
+      "terminadas": 769
     },
     {
       "fechaDigitacion": "23/08/2026",
-      "terminadas": 738
+      "terminadas": 746
     },
     {
       "fechaDigitacion": "24/08/2026",
-      "terminadas": 1792
+      "terminadas": 1790
     },
     {
       "fechaDigitacion": "25/08/2026",
-      "terminadas": 1940
+      "terminadas": 1939
     },
     {
       "fechaDigitacion": "26/08/2026",
-      "terminadas": 2205
+      "terminadas": 2206
     },
     {
       "fechaDigitacion": "27/08/2026",
-      "terminadas": 2081
+      "terminadas": 2090
     },
     {
       "fechaDigitacion": "28/08/2026",
-      "terminadas": 1741
+      "terminadas": 1757
     },
     {
       "fechaDigitacion": "29/08/2026",
@@ -249,11 +248,15 @@
     },
     {
       "fechaDigitacion": "30/08/2026",
-      "terminadas": 53
+      "terminadas": 54
     },
     {
       "fechaDigitacion": "31/08/2026",
-      "terminadas": 845
+      "terminadas": 1016
+    },
+    {
+      "fechaDigitacion": "01/09/2026",
+      "terminadas": 386
     }
   ],
   "filas": [
@@ -264,24 +267,24 @@
       "fechaEvento": "20/08/2026",
       "fechaOcurrencia": "20/08/2026",
       "fechaCreacion": "20/08/2026",
-      "estadoEvento": "Finalizada",
+      "estadoEvento": "Activa",
       "id": "155081",
       "alfa": 0,
-      "aplicadas": 279,
+      "aplicadas": 282,
       "anuladas": 0,
-      "terminadas": 276,
-      "terminadasApp": 241,
+      "terminadas": 279,
+      "terminadasApp": 244,
       "terminadasPapel": 35,
       "digitacion": 0,
-      "personas": 906,
-      "nna": 272,
-      "mayores": 175,
-      "discapacidad": 166,
-      "mujer": 508,
-      "hombre": 398,
+      "personas": 925,
+      "nna": 280,
+      "mayores": 176,
+      "discapacidad": 168,
+      "mujer": 516,
+      "hombre": 409,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 70,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 71,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 18,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 4,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 7,
@@ -294,10 +297,10 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 35,
         "POCO AFECTADOS|MUY AFECTADA": 11,
         "POCO AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 52
+        "POCO AFECTADOS|POCO AFECTADA": 54
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -336,8 +339,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 15
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -379,8 +382,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 82
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -393,41 +396,42 @@
       "estadoEvento": "Activa",
       "id": "155161",
       "alfa": 0,
-      "aplicadas": 4308,
+      "aplicadas": 4463,
       "anuladas": 12,
-      "terminadas": 4234,
-      "terminadasApp": 3835,
-      "terminadasPapel": 399,
-      "digitacion": 29,
-      "personas": 12128,
-      "nna": 3027,
-      "mayores": 2741,
-      "discapacidad": 1401,
-      "mujer": 6663,
-      "hombre": 5461,
+      "terminadas": 4365,
+      "terminadasApp": 3913,
+      "terminadasPapel": 452,
+      "digitacion": 40,
+      "personas": 12431,
+      "nna": 3099,
+      "mayores": 2822,
+      "discapacidad": 1440,
+      "mujer": 6817,
+      "hombre": 5610,
       "otro": 4,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 13,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 988,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 213,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1023,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 226,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 7,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 72,
-        "MUY AFECTADOS|DESTRUIDA": 68,
-        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 48,
-        "MUY AFECTADOS|MUY AFECTADA": 395,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 73,
+        "MUY AFECTADOS|DESTRUIDA": 71,
+        "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 50,
+        "MUY AFECTADOS|MUY AFECTADA": 409,
+        "MUY AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 2,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 346,
-        "NO AFECTADOS|MUY AFECTADA": 55,
-        "NO AFECTADOS|NO AFECTADA": 256,
-        "NO AFECTADOS|POCO AFECTADA": 474,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 355,
+        "NO AFECTADOS|MUY AFECTADA": 56,
+        "NO AFECTADOS|NO AFECTADA": 263,
+        "NO AFECTADOS|POCO AFECTADA": 480,
         "POCO AFECTADOS|DESTRUIDA": 2,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 474,
-        "POCO AFECTADOS|MUY AFECTADA": 85,
-        "POCO AFECTADOS|NO AFECTADA": 20,
-        "POCO AFECTADOS|POCO AFECTADA": 716
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 490,
+        "POCO AFECTADOS|MUY AFECTADA": 88,
+        "POCO AFECTADOS|NO AFECTADA": 19,
+        "POCO AFECTADOS|POCO AFECTADA": 737
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -437,7 +441,7 @@
       "fechaEvento": "17/08/2026",
       "fechaOcurrencia": "17/08/2026",
       "fechaCreacion": "20/08/2026",
-      "estadoEvento": "Finalizada",
+      "estadoEvento": "Activa",
       "id": "155122",
       "alfa": 0,
       "aplicadas": 190,
@@ -471,8 +475,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 41
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -485,27 +489,27 @@
       "estadoEvento": "Activa",
       "id": "154862",
       "alfa": 0,
-      "aplicadas": 97,
+      "aplicadas": 103,
       "anuladas": 1,
-      "terminadas": 96,
+      "terminadas": 102,
       "terminadasApp": 0,
-      "terminadasPapel": 96,
+      "terminadasPapel": 102,
       "digitacion": 0,
-      "personas": 161,
-      "nna": 26,
-      "mayores": 76,
+      "personas": 176,
+      "nna": 29,
+      "mayores": 84,
       "discapacidad": 17,
-      "mujer": 78,
-      "hombre": 83,
+      "mujer": 83,
+      "hombre": 93,
       "otro": 0,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 24,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 26,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 17,
         "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 1,
         "MUY AFECTADOS|DESTRUIDA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 7,
-        "MUY AFECTADOS|MUY AFECTADA": 15,
+        "MUY AFECTADOS|MUY AFECTADA": 18,
         "NO AFECTADOS|DESTRUIDA": 1,
         "NO AFECTADOS|MEDIANAMENTE AFECTADA": 7,
         "NO AFECTADOS|MUY AFECTADA": 4,
@@ -514,10 +518,10 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 4,
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|NO AFECTADA": 1,
-        "POCO AFECTADOS|POCO AFECTADA": 5
+        "POCO AFECTADOS|POCO AFECTADA": 6
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -559,8 +563,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 56
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -600,8 +604,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 14,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -640,8 +644,8 @@
         "POCO AFECTADOS|NO AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 12
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -678,8 +682,8 @@
         "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 13
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -716,8 +720,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 1,
         "POCO AFECTADOS|POCO AFECTADA": 2
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -758,8 +762,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 10,
         "POCO AFECTADOS|POCO AFECTADA": 38
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -772,43 +776,43 @@
       "estadoEvento": "Activa",
       "id": "155221",
       "alfa": 0,
-      "aplicadas": 2853,
+      "aplicadas": 3054,
       "anuladas": 2,
-      "terminadas": 2761,
-      "terminadasApp": 1481,
-      "terminadasPapel": 1280,
-      "digitacion": 77,
-      "personas": 8793,
-      "nna": 2371,
-      "mayores": 1514,
-      "discapacidad": 1130,
-      "mujer": 4942,
-      "hombre": 3849,
+      "terminadas": 2954,
+      "terminadasApp": 1624,
+      "terminadasPapel": 1330,
+      "digitacion": 84,
+      "personas": 9377,
+      "nna": 2505,
+      "mayores": 1635,
+      "discapacidad": 1195,
+      "mujer": 5262,
+      "hombre": 4113,
       "otro": 2,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 3,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 736,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 167,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 788,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 174,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 2,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 42,
-        "MUY AFECTADOS|DESTRUIDA": 28,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 43,
+        "MUY AFECTADOS|DESTRUIDA": 32,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 44,
-        "MUY AFECTADOS|MUY AFECTADA": 261,
+        "MUY AFECTADOS|MUY AFECTADA": 280,
         "MUY AFECTADOS|NO AFECTADA": 1,
         "MUY AFECTADOS|POCO AFECTADA": 4,
         "NO AFECTADOS|DESTRUIDA": 1,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 237,
-        "NO AFECTADOS|MUY AFECTADA": 72,
-        "NO AFECTADOS|NO AFECTADA": 84,
-        "NO AFECTADOS|POCO AFECTADA": 248,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 255,
+        "NO AFECTADOS|MUY AFECTADA": 77,
+        "NO AFECTADOS|NO AFECTADA": 86,
+        "NO AFECTADOS|POCO AFECTADA": 270,
         "POCO AFECTADOS|DESTRUIDA": 1,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 257,
-        "POCO AFECTADOS|MUY AFECTADA": 71,
-        "POCO AFECTADOS|NO AFECTADA": 16,
-        "POCO AFECTADOS|POCO AFECTADA": 486
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 279,
+        "POCO AFECTADOS|MUY AFECTADA": 76,
+        "POCO AFECTADOS|NO AFECTADA": 17,
+        "POCO AFECTADOS|POCO AFECTADA": 521
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -845,8 +849,40 @@
         "NO AFECTADOS|POCO AFECTADA": 2,
         "POCO AFECTADOS|POCO AFECTADA": 1
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
+      "bonoRecuperacion": 0
+    },
+    {
+      "region": "Tarapacá",
+      "comuna": "Colchane",
+      "evento": "SISTEMA FRONTAL DEL (17-08-2026) EN COLCHANE, COLCHANE, TARAPACÁ",
+      "fechaEvento": "17/08/2026",
+      "fechaOcurrencia": "17/08/2026",
+      "fechaCreacion": "25/08/2026",
+      "estadoEvento": "Activa",
+      "id": "155668",
+      "alfa": 0,
+      "aplicadas": 4,
+      "anuladas": 0,
+      "terminadas": 4,
+      "terminadasApp": 0,
+      "terminadasPapel": 4,
+      "digitacion": 0,
+      "personas": 7,
+      "nna": 0,
+      "mayores": 5,
+      "discapacidad": 0,
+      "mujer": 3,
+      "hombre": 4,
+      "otro": 0,
+      "matrizAfectacion": {
+        "MUY AFECTADOS|DESTRUIDA": 1,
+        "NO AFECTADOS|NO AFECTADA": 2,
+        "POCO AFECTADOS|POCO AFECTADA": 1
+      },
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -859,21 +895,21 @@
       "estadoEvento": "Activa",
       "id": "154562",
       "alfa": 0,
-      "aplicadas": 67,
+      "aplicadas": 68,
       "anuladas": 0,
-      "terminadas": 66,
+      "terminadas": 67,
       "terminadasApp": 0,
-      "terminadasPapel": 66,
+      "terminadasPapel": 67,
       "digitacion": 0,
-      "personas": 158,
+      "personas": 160,
       "nna": 37,
       "mayores": 55,
-      "discapacidad": 22,
-      "mujer": 76,
-      "hombre": 82,
+      "discapacidad": 23,
+      "mujer": 77,
+      "hombre": 83,
       "otro": 0,
       "matrizAfectacion": {
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 17,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 18,
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 2,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 5,
         "MUY AFECTADOS|MUY AFECTADA": 4,
@@ -884,8 +920,8 @@
         "POCO AFECTADOS|MUY AFECTADA": 5,
         "POCO AFECTADOS|POCO AFECTADA": 14
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -898,43 +934,43 @@
       "estadoEvento": "Activa",
       "id": "155041",
       "alfa": 0,
-      "aplicadas": 5249,
+      "aplicadas": 5492,
       "anuladas": 2,
-      "terminadas": 5104,
-      "terminadasApp": 3200,
-      "terminadasPapel": 1904,
-      "digitacion": 90,
-      "personas": 15592,
-      "nna": 3516,
-      "mayores": 4150,
-      "discapacidad": 2256,
-      "mujer": 8668,
-      "hombre": 6923,
+      "terminadas": 5348,
+      "terminadasApp": 3431,
+      "terminadasPapel": 1917,
+      "digitacion": 89,
+      "personas": 16293,
+      "nna": 3665,
+      "mayores": 4398,
+      "discapacidad": 2369,
+      "mujer": 9074,
+      "hombre": 7218,
       "otro": 1,
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|DESTRUIDA": 6,
-        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1155,
-        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 331,
+        "MEDIANAMENTE AFECTADOS|MEDIANAMENTE AFECTADA": 1193,
+        "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 349,
         "MEDIANAMENTE AFECTADOS|NO AFECTADA": 26,
-        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 136,
-        "MUY AFECTADOS|DESTRUIDA": 69,
+        "MEDIANAMENTE AFECTADOS|POCO AFECTADA": 138,
+        "MUY AFECTADOS|DESTRUIDA": 70,
         "MUY AFECTADOS|MEDIANAMENTE AFECTADA": 61,
-        "MUY AFECTADOS|MUY AFECTADA": 500,
+        "MUY AFECTADOS|MUY AFECTADA": 520,
         "MUY AFECTADOS|NO AFECTADA": 1,
-        "MUY AFECTADOS|POCO AFECTADA": 13,
+        "MUY AFECTADOS|POCO AFECTADA": 14,
         "NO AFECTADOS|DESTRUIDA": 2,
-        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 538,
-        "NO AFECTADOS|MUY AFECTADA": 120,
-        "NO AFECTADOS|NO AFECTADA": 81,
-        "NO AFECTADOS|POCO AFECTADA": 533,
+        "NO AFECTADOS|MEDIANAMENTE AFECTADA": 587,
+        "NO AFECTADOS|MUY AFECTADA": 126,
+        "NO AFECTADOS|NO AFECTADA": 83,
+        "NO AFECTADOS|POCO AFECTADA": 559,
         "POCO AFECTADOS|DESTRUIDA": 1,
-        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 614,
-        "POCO AFECTADOS|MUY AFECTADA": 148,
-        "POCO AFECTADOS|NO AFECTADA": 32,
-        "POCO AFECTADOS|POCO AFECTADA": 737
+        "POCO AFECTADOS|MEDIANAMENTE AFECTADA": 652,
+        "POCO AFECTADOS|MUY AFECTADA": 163,
+        "POCO AFECTADOS|NO AFECTADA": 35,
+        "POCO AFECTADOS|POCO AFECTADA": 762
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -966,8 +1002,8 @@
         "MUY AFECTADOS|MUY AFECTADA": 2,
         "POCO AFECTADOS|MUY AFECTADA": 1
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     },
     {
@@ -996,8 +1032,8 @@
       "matrizAfectacion": {
         "MEDIANAMENTE AFECTADOS|MUY AFECTADA": 11
       },
-      "hora": "08:17",
-      "fechaLlenado": "01-09-2026 08:17",
+      "hora": "12:46",
+      "fechaLlenado": "01-09-2026 12:46",
       "bonoRecuperacion": 0
     }
   ]
