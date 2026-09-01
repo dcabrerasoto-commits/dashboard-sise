@@ -261,6 +261,12 @@ function centerCards() {
       .situation-combo{grid-template-columns:1fr!important}
       .overview-grid .situation-card{height:205px!important}
       .overview-grid .situation-card .situation-combo{height:150px!important}
+      .overview-grid{align-items:start!important}
+      .overview-grid>.card{height:205px!important;min-height:0!important}
+      .overview-grid .situation-card .situation-combo{height:150px!important}
+      .zone-evolution .dashboard-grid{align-items:start!important}
+      .zone-evolution .card{height:205px!important;min-height:0!important}
+      .zone-evolution .history-chart,.zone-evolution .history-summary-card svg{height:155px!important}
       .situation-combo .needs-panel{padding-left:12px!important}
       #needsBars{gap:7px!important;align-content:center!important}
       #needsBars .need-row{grid-template-columns:24px max-content max-content!important;justify-content:start!important;column-gap:10px!important;align-items:center!important}
