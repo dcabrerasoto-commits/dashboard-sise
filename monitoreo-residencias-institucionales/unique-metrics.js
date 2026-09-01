@@ -150,11 +150,10 @@
       ["residencias.svg", "Residencias informadas", latest.length, "Total acumulado de residencias únicas que han reportado al menos una vez en la plataforma"],
       ["reportes.svg", "Reportes recibidos", base.length, "Total acumulado de formularios recibidos en la plataforma"],
       ["reportadas_hoy.svg", "Residencias que reportaron hoy", todayStats ? todayStats.uniqueDaily : 0, "N° de residencias que enviaron al menos un reporte hoy"],
-      ["reportes_hoy.svg", "Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"],
-      ["reportes.svg", "% datos vigentes / actualizados", `${updatedRate}%`, "Residencias con última actualización dentro de los últimos 7 días"],
-      ["reportes_hoy.svg", "% datos no vigentes / no actualizados", `${100 - updatedRate}%`, "Residencias con más de 7 días sin actualización"]
+      ["reportes_hoy.svg", "Reportes recibidos hoy", todayStats ? todayStats.reports : 0, "Total de formularios recibidos hoy"]
     ];
-    container.innerHTML = cards.map(([icon, label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><span class="unique-kpi-icon"><img src="iconos_svg/${esc(icon)}" alt=""></span><div class="unique-kpi-copy"><div class="kpi-value">${fmt(value)}</div><div class="kpi-label">${esc(label)}</div><div class="kpi-sub">${esc(sub)}</div></div></article>`).join("");
+    const vigencyNote = `Vigentes: ${updatedRate}% · No vigentes: ${100 - updatedRate}%`;
+    container.innerHTML = cards.map(([icon, label, value, sub]) => `<article class="kpi unique-kpi" tabindex="0" title="${esc(sub)}" data-definition="${esc(sub)}"><span class="unique-kpi-icon"><img src="iconos_svg/${esc(icon)}" alt=""></span><div class="unique-kpi-copy"><div class="kpi-value">${String(value).endsWith("%") ? esc(value) : fmt(value)}</div><div class="kpi-label">${esc(label)}</div><div class="kpi-sub">${esc(sub)}<span class="vigency-reference">${esc(vigencyNote)}</span></div></div></article>`).join("");
 
   }
 
@@ -256,15 +255,13 @@
     style.textContent = `
       .unique-metrics-section{margin:0 0 8px;padding:14px 20px;background:#EAF4FF;border:1px solid #93C5FD;border-radius:14px;box-shadow:0 8px 22px rgba(16,42,86,.06)}
       .unique-metrics-head{display:none}
-      .unique-metrics-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+      .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
       .unique-kpi{min-height:84px!important;display:grid!important;grid-template-columns:54px minmax(0,1fr)!important;grid-template-rows:1fr!important;column-gap:12px!important;align-content:center!important;align-items:center!important;justify-content:start!important;text-align:left!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 16px!important}
       .unique-kpi::before{display:none!important}
       .unique-kpi-icon{grid-row:1 / span 3;align-self:center;justify-self:start;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);display:grid;place-items:center}
       .unique-kpi:nth-child(2) .unique-kpi-icon{background:linear-gradient(135deg,rgba(141,45,117,.92),rgba(181,72,139,.82))}
       .unique-kpi:nth-child(3) .unique-kpi-icon,.unique-kpi:nth-child(4) .unique-kpi-icon{background:linear-gradient(135deg,#2563EB,#60A5FA)}
-      .unique-kpi:nth-child(5),.unique-kpi:nth-child(6){background:#DDF7EC!important;border-left:1px solid #93C5FD!important;border-radius:10px!important;margin:0 4px;padding:8px 12px!important}
-      .unique-kpi:nth-child(5) .unique-kpi-icon{background:linear-gradient(135deg,#087F5B,#35B779)}
-      .unique-kpi:nth-child(5) .kpi-value{color:#087F5B!important}.unique-kpi:nth-child(6){background:#FFF0F0!important}.unique-kpi:nth-child(6) .unique-kpi-icon{background:linear-gradient(135deg,#B42318,#F97068)}.unique-kpi:nth-child(6) .kpi-value{color:#B42318!important}
+      .vigency-reference{display:block;margin-top:4px;color:#A8B1BD!important;font-size:8.5px!important;line-height:1.1!important;font-weight:600!important}
       .unique-kpi-icon img{width:25px;height:25px;filter:brightness(0) invert(1)}
       .unique-kpi+.unique-kpi{border-left:1px solid #DCE3EC!important}
       .unique-kpi-copy{grid-column:2!important;grid-row:1!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;text-align:left!important;min-width:0!important;width:100%!important}
