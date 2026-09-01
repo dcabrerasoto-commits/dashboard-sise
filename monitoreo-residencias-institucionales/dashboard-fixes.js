@@ -247,6 +247,8 @@ function centerCards() {
       #historico .history-entry-card{margin-top:18px!important;border-top-color:#7C3AED!important}#historico .history-entry-card .table-scroll{max-height:620px!important;overflow:auto!important}#historico .history-entry-table{min-width:1450px!important}
       @media(max-width:900px){#resumen .dashboard-grid{grid-template-columns:1fr!important}}@media(max-width:620px){#regionMap{grid-template-columns:1fr!important}.region-values small{display:none!important}}
       #regionMap,.territory-top-head,.territory-top-list,.territory-detail-link,.region-block{display:none!important}
+      .people-card #peopleSummary{grid-template-columns:minmax(180px,.85fr) minmax(0,1fr)!important;align-items:center!important}
+      .people-card .people-stats{grid-template-columns:1fr!important;gap:5px!important;padding:10px 14px!important}
     `;
     document.head.appendChild(style);
   }
