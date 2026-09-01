@@ -259,10 +259,10 @@ function centerCards() {
       .situation-combo{grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr)!important;height:150px!important;gap:10px!important}
       .situation-combo .needs-panel{padding-left:12px!important}
       #needsBars .need-row{grid-template-columns:24px max-content auto!important;justify-content:start!important;column-gap:10px!important}
-      #resumen .situation-card{background:#BFD8EA!important}
-      #resumen .people-card{background:#C9DCEB!important}
-      #resumen .history-summary-card{background:#B8D2E6!important}
-      #resumen .recent-card{background:#C5D9E8!important}
+      #resumen .situation-card{background:#B7D2E5!important}
+      #resumen .people-card{background:#A8C4DA!important}
+      #resumen .history-summary-card{background:#9FBFD5!important}
+      #resumen .recent-card{background:#B0CBDD!important}
     `;
     document.head.appendChild(style);
   }
