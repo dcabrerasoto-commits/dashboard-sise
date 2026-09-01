@@ -256,6 +256,9 @@ function centerCards() {
       .zone-evolution .card{height:205px!important}
       .history-chart,.history-summary-card svg{height:165px!important}
       .unique-kpi .vigency-reference{bottom:8px!important}
+      .situation-combo{grid-template-columns:minmax(0,.9fr) minmax(260px,1.1fr)!important;height:150px!important;gap:10px!important}
+      .situation-combo .needs-panel{padding-left:12px!important}
+      #needsBars .need-row{grid-template-columns:24px max-content auto!important;justify-content:start!important;column-gap:10px!important}
       #resumen .situation-card{background:#BFD8EA!important}
       #resumen .people-card{background:#C9DCEB!important}
       #resumen .history-summary-card{background:#B8D2E6!important}
