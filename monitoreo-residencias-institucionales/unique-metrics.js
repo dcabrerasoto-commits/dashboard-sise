@@ -255,7 +255,7 @@
     style.textContent = `
       .unique-metrics-section{margin:0 0 8px;padding:14px 20px;background:#EAF4FF;border:1px solid #93C5FD;border-radius:14px;box-shadow:0 8px 22px rgba(16,42,86,.06)}
       .unique-metrics-head{display:none}
-      .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+      #resumen .unique-metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0}
       .unique-kpi{position:relative!important;min-height:84px!important;display:grid!important;grid-template-columns:54px minmax(0,1fr)!important;grid-template-rows:1fr!important;column-gap:12px!important;align-content:center!important;align-items:center!important;justify-content:start!important;text-align:left!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 16px!important}
       .unique-kpi::before{display:none!important}
       .unique-kpi-icon{grid-row:1 / span 3;align-self:center;justify-self:start;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#5B21B6,#8B5CF6);display:grid;place-items:center}
