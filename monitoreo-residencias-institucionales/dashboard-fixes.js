@@ -249,6 +249,13 @@ function centerCards() {
       #regionMap,.territory-top-head,.territory-top-list,.territory-detail-link,.region-block{display:none!important}
       .people-card #peopleSummary{grid-template-columns:minmax(180px,.85fr) minmax(0,1fr)!important;align-items:center!important}
       .people-card .people-stats{grid-template-columns:1fr!important;gap:5px!important;padding:10px 14px!important}
+      .overview-grid>.card{height:220px!important}
+      .situation-combo,.people-card #peopleSummary{height:160px!important}
+      .people-card #peopleSummary{grid-template-columns:minmax(180px,.85fr) minmax(0,1fr)!important;align-items:center!important}
+      .people-card .people-stats{grid-template-columns:1fr!important;gap:5px!important;padding:10px 14px!important}
+      .zone-evolution .card{height:205px!important}
+      .history-chart,.history-summary-card svg{height:165px!important}
+      .unique-kpi .vigency-reference{bottom:8px!important}
       #resumen .situation-card{background:#BFD8EA!important}
       #resumen .people-card{background:#C9DCEB!important}
       #resumen .history-summary-card{background:#B8D2E6!important}
