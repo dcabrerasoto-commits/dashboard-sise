@@ -36,8 +36,8 @@ body:has(#tipo option[value="folio"]:checked) #titular{display:none}
 let APP_DATA=null,ULTIMO_TIPO='run';
 const sinAcentos=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const runNorm=s=>String(s??'').replace(/[^0-9kK]/g,'').toLowerCase();
-const folioNorm=s=>String(s??'').replace(/\D/g,'').replace(/^0+/,'');
-function buscarLocal(tipo,consulta){let r=[];if(tipo==='run'){const q=runNorm(consulta),conDv=consulta.includes('-');r=APP_DATA.filas.filter(x=>conDv?x.run_busqueda===q:x.run_cuerpo===q)}else if(tipo==='folio'){const q=folioNorm(consulta);r=APP_DATA.filas.filter(x=>x.folio_busqueda===q)}else{const ts=sinAcentos(consulta).split(/\s+/);r=APP_DATA.filas.filter(x=>ts.every(t=>x.nombre_busqueda.includes(t)))}return r.slice(0,50)}
+const folioNorm=s=>String(s??'').replace(/\D/g,'');
+function buscarLocal(tipo,consulta){let r=[];if(tipo==='run'){const q=runNorm(consulta),cuerpo=q.length>1?q.slice(0,-1):q,conDv=/[-kK]?[0-9kK]$/.test(String(consulta).replace(/\s/g,''));r=APP_DATA.filas.filter(x=>{const b=runNorm(x.run_busqueda),c=runNorm(x.run_cuerpo);return conDv?(b===q||c===cuerpo):(b===q||c===q)})}else if(tipo==='folio'){const q=folioNorm(consulta),sinCeros=q.replace(/^0+/,'');r=APP_DATA.filas.filter(x=>{const f=folioNorm(x.folio),i=folioNorm(x.folio_busqueda);return f===q||f.replace(/^0+/,'')===sinCeros||i===q||i.replace(/^0+/,'')===sinCeros})}else{const ts=sinAcentos(consulta).split(/\s+/);r=APP_DATA.filas.filter(x=>ts.every(t=>x.nombre_busqueda.includes(t)))}return r.slice(0,50)}
 
 const mascaraRun=v=>{const s=String(v??''),p=s.split('-'),d=p[0].replace(/\D/g,''),visible=d.slice(0,Math.max(0,d.length-2)),cuerpo=visible+'XX';return cuerpo+(p.length>1?'-X':'')};
 const mascaraFolio=v=>{const p=String(v??'').split('.');return p.length===3?`${p[0]}.${p[1]}.${p[2].slice(0,-1)}X`:'XX.XX.XXXXXX'};
