@@ -85,7 +85,7 @@ const regionesAlud=['Arica y Parinacota','Tarapacá','Antofagasta','Atacama','Co
 const regionesIngresoBloqueadas=new Set(['Metropolitana de Santiago','O’Higgins','Maule','Ñuble','Biobío','La Araucanía','Los Ríos']);
 const regionesIngreso=regionesMonitoreo.filter(r=>!regionesIngresoBloqueadas.has(r));
 const regionesSiseCerradas=new Set(['METROPOLITANADESANTIAGO','OHIGGINS','MAULE','NUBLE','BIOBIO','LAARAUCANIA','LOSRIOS']);
-const eventoPredeterminado={id:'sf-alud-20260814',nombre:'SF-Alud: inicio 14 de agosto',subtitulo:'SF-Alud: inicio 14 de agosto',dataUrl:'assets/data/monitoreo-sise-sf-alud-live.json',predeterminado:true,tema:'alud'};
+const eventoPredeterminado={id:'sf-alud-20260814',nombre:'SF-Alud: inicio 14 de agosto',subtitulo:'SF-Alud: inicio 14 de agosto',dataUrl:'assets/data/monitoreo-sise-sf-alud-live-20260908.json',predeterminado:true,tema:'alud'};
 function regionSiseCerrada(r){return regionesSiseCerradas.has(claveTexto(regionCanon(r)).replace(/[^A-Z0-9]+/g,''))}
 function encuestadoresVista(d){return regionSiseCerrada(typeof d==='string'?d:d.region)?'Evento SISE cerrado':fmt(typeof d==='number'?d:d.encuestadores)}
 const idOrdenRegion={'Arica y Parinacota':'aa-15','Tarapacá':'ab-01','Antofagasta':'ac-02','Atacama':'ad-03','Coquimbo':'ae-04','Valparaíso':'af-05','Metropolitana de Santiago':'dd-13','O’Higgins':'ee-06','Maule':'ff-07','Ñuble':'gg-16','Biobío':'hh-08','La Araucanía':'ii-09','Los Ríos':'jj-14'};
