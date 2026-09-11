@@ -2,96 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <meta name="theme-color" content="#071b4d">
-  <meta name="description" content="Plataforma pública para el seguimiento de la afectación de residencias institucionales a nivel nacional.">
-  <title>Seguimiento de Residencias Institucionales</title>
-  <link rel="stylesheet" href="styles.css?v=20260901-01">
-  <script defer src="catalogos.js?v=20260719-03"></script>
-  <script defer src="residencias-catalogo.js?v=20260719-03"></script>
-  <script defer src="sync-config.js?v=20260719-03"></script>
-  <script defer src="chile-time.js?v=20260719-03"></script>
-  <script defer src="app-v2.js?v=20260901-05"></script>
-  <script defer src="interface-v2.js?v=20260813-36"></script>
-  <script defer src="dashboard-fixes.js?v=20260901-14"></script>
-  <script defer src="shared-sync.js?v=20260719-03"></script>
-  <script defer src="date-normalizer.js?v=20260719-03"></script>
-  <script defer src="all-services-catalog.js?v=20260719-03"></script>
-  <script defer src="unique-metrics.js?v=20260901-11"></script>
-  <script defer src="indicator-consistency.js?v=20260901-03"></script>
-  <script defer src="save-safety.js?v=20260719-03"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plataforma no habilitada</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f5f7fa; color: #24364b; font-family: Arial, sans-serif; }
+    main { padding: 2rem; text-align: center; }
+    p { font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.5; }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <div class="brand">
-      <span class="eyebrow">Ministerio de Desarrollo Social y Familia</span>
-      <h1>Seguimiento de Residencias Institucionales</h1>
-      <p>Afectación, continuidad operativa y necesidades prioritarias</p>
-      <div class="sync-line" id="syncLine">El tablero muestra el último reporte informado por cada residencia.</div>
-      <div class="print-timestamp" id="printTimestamp"></div>
-    </div>
-    <div class="logo-box"><img src="../logo_MDSF.png" alt="Ministerio de Desarrollo Social y Familia"></div>
-  </div>
-</header>
-
-<main class="wrap">
-  <nav class="toolbar" aria-label="Navegación principal">
-    <div class="tabs">
-      <button type="button" class="tab active" data-tab="resumen">Resumen nacional</button>
-      <button type="button" class="tab" data-tab="detalle">Detalle vigente</button>
-      <button type="button" class="tab" data-tab="historico">Histórico diario</button>
-      <button type="button" class="tab tab-entry" data-tab="ingreso">Ingreso de información</button>
-      <button type="button" class="tab" data-tab="metodologia">Definiciones</button>
-    </div>
-    <div class="toolbar-actions">
-      <button type="button" class="btn btn-light" id="exportButton">Exportar</button>
-      <button type="button" class="btn btn-light" id="printButton">Imprimir</button>
-    </div>
-  </nav>
-
-  <section class="panel active" id="resumen">
-    <div class="filter-bar card"><label>Servicio<select id="filterService"></select></label><label>Región<select id="filterRegion"></select></label><label>Estado<select id="filterStatus"></select></label><button type="button" class="btn btn-light" id="clearFilters">Limpiar filtros</button></div>
-    <div class="kpi-grid hidden" id="kpiGrid"></div>
-    <section class="summary-zone zone-overview">
-    <div id="regionMap" class="hidden" aria-hidden="true"></div>
-    <div class="overview-grid">
-      <article class="card situation-card"><div class="card-head"><div><span class="card-kicker">SITUACIÓN NACIONAL</span><h3>Situación nacional actual</h3></div></div><div class="situation-combo"><div class="situation-layout"><div class="donut-chart" id="situationDonut" aria-label="Distribución nacional por estado"></div><div id="situationBars"></div></div></div></article>
-      <article class="card people-card"><div class="card-head"><div><span class="card-kicker">PERSONAS</span><h3>Personas atendidas</h3></div><span class="small-note">Según reportes</span></div><div id="peopleSummary"></div></article>
-    </div>
-    </section>
-    <article class="card characterization-card"><div class="card-head"><div><span class="card-kicker">CARACTERIZACIÓN</span><h3>Lectura general de los datos</h3></div><span class="small-note">Indicadores derivados del último reporte vigente</span></div><div class="character-grid" id="characterGrid"></div><div class="character-chart hidden" id="characterChart" aria-label="Caracterización visual de datos"></div></article>
-    <section class="summary-zone zone-evolution">
-    <div class="dashboard-grid">
-      <article class="card history-summary-card"><div class="card-head"><div><span class="card-kicker">HISTÓRICO</span><h3>Histórico diario de reportes</h3></div><span class="small-note">Reportes recibidos por día</span></div><div class="history-chart" id="summaryHistoryChart" aria-label="Histórico diario de reportes"></div></article>
-      <article class="card recent-card"><div class="card-head"><div><span class="card-kicker">ACTUALIZACIÓN</span><h3>Últimos reportes recibidos</h3></div><span class="small-note">Aproximadamente 5 ingresos más recientes</span></div><div class="recent-list" id="recentReports"></div></article>
-    </div>
-    </section>
-    <section class="summary-zone zone-table">
-    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">RESUMEN TERRITORIAL</span><h3>Tabla regional analítica</h3></div><div class="table-mode" role="group" aria-label="Orden de tabla regional"><button type="button" class="mode-toggle active" id="regionModeTerritory">Orden territorial</button><button type="button" class="mode-toggle" id="regionModePriority">Prioridad</button></div></div><div class="table-scroll"><table id="regionSummaryTable"><thead><tr><th><button type="button" data-region-sort="region">Región</button></th><th><button type="button" data-region-sort="total">Residencias informadas</button></th><th><button type="button" data-region-sort="without">Sin afectación</button></th><th><button type="button" data-region-sort="affected">Con afectación</button></th><th><button type="button" data-region-sort="affectedRate">% afectación</button></th><th><button type="button" data-region-sort="electricity">Sin electricidad</button></th><th><button type="button" data-region-sort="sewage">Aguas servidas</button></th><th><button type="button" data-region-sort="electro">Electrodependientes</button></th><th><button type="button" data-region-sort="last">Última actualización</button></th><th>Vigencia</th></tr></thead><tbody id="regionTableBody"></tbody></table></div></article>
-    </section>
-  </section>
-
-  <section class="panel" id="detalle">
-    <div class="filter-bar card"><label>Servicio<select id="detailFilterService"></select></label><label>Región<select id="detailFilterRegion"></select></label><label>Comuna<select id="detailFilterCommune"></select></label><label>Fecha<input type="date" id="detailFilterDate"></label><button type="button" class="btn btn-light" id="clearDetailFilters">Limpiar filtros</button></div>
-    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">DETALLE VIGENTE</span><h3>Último reporte disponible por residencia</h3></div><span class="small-note">Vista filtrada con los mismos criterios del resumen nacional</span></div><div class="table-scroll"><table id="detailTable"><thead><tr><th>Servicio</th><th>Región</th><th>Comuna</th><th>Residencia</th><th>Estado</th><th>Situaciones presentes</th><th>Personas atendidas</th><th>Electrodependientes</th><th>Última actualización</th></tr></thead><tbody id="detailTableBody"></tbody></table></div></article>
-  </section>
-
-  <section class="panel" id="historico">
-    <div class="section-heading"><span class="section-kicker">HISTÓRICO DIARIO</span><h2>Evolución de reportes recibidos</h2><p>Serie diaria construida a partir de los ingresos guardados en la base compartida.</p></div>
-    <div class="filter-bar card"><label>Servicio<select id="historyService"></select></label><label>Región<select id="historyRegion"></select></label><label>Desde<input type="date" id="historyFrom"></label><label>Hasta<input type="date" id="historyTo"></label></div>
-    <article class="card table-card"><div class="card-head"><div><span class="card-kicker">SERIE DIARIA</span><h3>Histórico diario de reportes</h3></div><span class="small-note">Nuevas residencias y actualizaciones por fecha</span></div><div class="table-scroll"><table class="history-table"><thead><tr><th>Fecha</th><th>Reportes recibidos</th><th>Residencias que reportaron</th><th>Nuevas residencias</th><th>Residencias actualizadas</th><th>Total acumulado</th><th>Con afectación</th><th>Sin afectación</th><th>En evaluación</th></tr></thead><tbody id="historyTableBody"></tbody></table></div></article>
-  </section>
-
-  <section class="panel" id="ingreso">
-    <article class="card form-card"><div class="form-head"><span class="section-kicker">INGRESO DE INFORMACIÓN</span><h2>Autorreporte de residencias institucionales</h2><p>Registre información actualizada para el monitoreo nacional.</p></div><form id="reportForm" class="form-body"><div class="pilot-notice">Cada envío genera un registro histórico. El tablero utiliza el reporte más reciente por residencia.</div><div id="previousReportMessage" class="previous-report-message hidden"></div><fieldset><legend>Identificación y contacto</legend><div class="form-grid"><label>Fecha y hora del reporte<input type="text" id="reportDateDisplay" readonly></label><input type="hidden" id="reportDate"><label>Servicio responsable<select id="service" required></select></label><label>Programa o línea<input type="text" id="program" maxlength="150"></label><label>Región<select id="region" required></select></label><label>Comuna<select id="commune" required></select></label><input type="hidden" id="residenceCode"><label class="hidden" id="residenceCatalogWrap">Residencia<select id="residenceCatalog"></select></label><label>Nombre de la residencia o establecimiento<input type="text" id="establishment" maxlength="180" required></label><label>Responsable de la residencia<input type="text" id="responsible" maxlength="150" required></label><label>Correo de contacto<input type="email" id="contactEmail" maxlength="180" required></label><label>Teléfono de contacto<input type="tel" id="contactPhone" maxlength="30" required></label></div><div class="change-question hidden" id="changeQuestionWrap"><label>¿Ha habido cambios respecto del reporte anterior?<select id="hasChanges"><option value="">Seleccione</option><option value="Sí">Sí</option><option value="No">No</option></select></label><p>Si no hubo cambios, se mantendrá el estado anterior y se actualizarán la fecha y los datos de contacto.</p></div></fieldset><fieldset id="stateSection"><legend>Estado y afectación</legend><div class="form-grid"><label>Estado general<select id="status" required></select></label><label>Nivel de daño o riesgo<select id="damageLevel" required></select></label><label>Capacidad total<input type="number" id="capacity" min="0" step="1"></label><label>Personas atendidas<input type="number" id="people" min="0" step="1"></label></div><div class="field-block"><span class="field-label">Situaciones presentes</span><div class="check-grid" id="situationChecks"></div></div><div class="form-grid"><label>¿Hay personas electrodependientes?<select id="electrodependent" required><option value="">Seleccione</option><option value="Sí">Sí</option><option value="No">No</option></select></label><label class="hidden" id="electrodependentCountWrap">Número de personas electrodependientes<input type="number" id="electrodependentCount" min="1" step="1"></label></div><label>Detalle de afectación o riesgo<textarea id="damageDetail" rows="4" maxlength="1500"></textarea></label></fieldset><fieldset id="needsSection"><legend>Necesidades y respuesta</legend><div class="field-block"><span class="field-label">Necesidades prioritarias</span><div class="check-grid" id="needChecks"></div></div><label>Medidas implementadas<textarea id="measures" rows="4" maxlength="1500"></textarea></label><label>Observaciones<textarea id="observations" rows="4" maxlength="1500"></textarea></label></fieldset><div class="form-actions"><button type="reset" class="btn btn-light" id="resetForm">Limpiar</button><button type="submit" class="btn btn-primary">Guardar reporte</button></div><div id="formMessage" class="form-message" aria-live="polite"></div></form></article>
-  </section>
-
-  <section class="panel" id="metodologia"><div class="section-heading"><span class="section-kicker">DEFINICIONES</span><h2>Criterios utilizados en el seguimiento</h2></div><div class="method-grid"><article class="card"><h3>Reporte vigente</h3><p>Corresponde al ingreso más reciente de cada residencia, identificado por servicio, región, comuna y nombre del establecimiento.</p></article><article class="card"><h3>Histórico</h3><p>Cada envío se conserva como un registro independiente, aunque corresponda a una residencia informada previamente.</p></article><article class="card"><h3>Con afectación</h3><p>Incluye residencias cuyo estado es “Con afectación” o que informan al menos una situación presente.</p></article><article class="card"><h3>Electrodependencia</h3><p>Se reporta únicamente el número de personas; no deben registrarse nombres, diagnósticos ni antecedentes personales.</p></article></div></section>
-</main>
-<footer class="site-footer"><div class="wrap">Seguimiento de Residencias Institucionales</div></footer>
+  <main><p>Esta plataforma no está habilitada para su uso.</p></main>
 </body>
 </html>
