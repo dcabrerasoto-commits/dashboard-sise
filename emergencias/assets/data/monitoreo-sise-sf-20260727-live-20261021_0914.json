@@ -1464,23 +1464,23 @@
     }
   },
   "bonoRecuperacion": {
-    "total": 6979,
+    "total": 6920,
     "regiones": {
-      "Biob?O": 1716,
-      "La Araucan?A": 1940,
+      "Biobío": 1716,
+      "La Araucanía": 1940,
+      "O’Higgins": 244,
       "Los Ríos": 541,
       "Maule": 1197,
-      "Metropolitana de Santiago": 8,
-      "O’Higgins": 244,
-      "Ñuble": 1333
+      "Metropolitana de Santiago": 4,
+      "Ñuble": 1278
     },
     "comunas": {
-      "Biob?O": {
+      "Biobío": {
         "Arauco": 67,
         "Cabrero": 81,
         "Cañete": 16,
         "Chiguayante": 12,
-        "Concepcion": 110,
+        "Concepción": 110,
         "Contulmo": 33,
         "Coronel": 125,
         "Curanilahue": 302,
@@ -1488,28 +1488,28 @@
         "Hualpén": 83,
         "Hualqui": 10,
         "Lebu": 89,
-        "Los Angeles": 188,
         "Los Álamos": 3,
-        "Mulchen": 8,
+        "Los Ángeles": 188,
+        "Mulchén": 8,
         "Nacimiento": 23,
         "Negrete": 88,
         "Penco": 79,
         "Quilaco": 4,
         "Quilleco": 10,
-        "Santa Barbara": 80,
+        "Santa Bárbara": 80,
         "Santa Juana": 38,
         "Talcahuano": 114,
         "Tomé": 96,
         "Tucapel": 14,
         "Yumbel": 6
       },
-      "La Araucan?A": {
+      "La Araucanía": {
         "Angol": 426,
         "Carahue": 133,
         "Cholchol": 28,
         "Collipulli": 4,
         "Cunco": 17,
-        "Curacautin": 3,
+        "Curacautín": 3,
         "Ercilla": 99,
         "Freire": 7,
         "Galvarino": 83,
@@ -1521,62 +1521,17 @@
         "Melipeuco": 1,
         "Nueva Imperial": 233,
         "Perquenco": 66,
-        "Puren": 1,
+        "Purén": 1,
         "Renaico": 160,
         "Temuco": 330,
         "Teodoro Schmidt": 13,
-        "Traiguen": 31,
+        "Traiguén": 31,
         "Victoria": 13,
-        "Vilcun": 23,
+        "Vilcún": 23,
         "Villarrica": 51
       },
-      "Los Ríos": {
-        "Futrono": 21,
-        "La Unión": 297,
-        "Lago Ranco": 23,
-        "Lanco": 11,
-        "Los Lagos": 44,
-        "Mariquina": 12,
-        "Máfil": 12,
-        "Paillaco": 34,
-        "Panguipulli": 7,
-        "Río Bueno": 24,
-        "Valdivia": 56
-      },
-      "Maule": {
-        "Cauquenes": 294,
-        "Chanco": 23,
-        "Colbun": 18,
-        "Constitucion": 387,
-        "Curepto": 7,
-        "Curicó": 38,
-        "Empedrado": 16,
-        "Hualañé": 7,
-        "Licanten": 2,
-        "Linares": 13,
-        "Longavi": 18,
-        "Maule": 52,
-        "Molina": 56,
-        "Pelarco": 4,
-        "Pelluhue": 49,
-        "Pencahue": 13,
-        "Rauco": 3,
-        "Rio Claro": 10,
-        "Romeral": 3,
-        "Sagrada Familia": 54,
-        "San Clemente": 3,
-        "San Javier": 9,
-        "Talca": 28,
-        "Vichuquen": 4,
-        "Villa Alegre": 84,
-        "Yerbas Buenas": 2
-      },
-      "Metropolitana de Santiago": {
-        "Puente Alto": 4,
-        "San José de Maipo": 4
-      },
       "O’Higgins": {
-        "Chepica": 2,
+        "Chépica": 2,
         "Coinco": 15,
         "Coltauco": 3,
         "Graneros": 13,
@@ -1595,6 +1550,51 @@
         "San Fernando": 8,
         "Santa Cruz": 2
       },
+      "Los Ríos": {
+        "Futrono": 21,
+        "La Unión": 297,
+        "Lago Ranco": 23,
+        "Lanco": 11,
+        "Los Lagos": 44,
+        "Máfil": 12,
+        "Mariquina": 12,
+        "Paillaco": 34,
+        "Panguipulli": 7,
+        "Río Bueno": 24,
+        "Valdivia": 56
+      },
+      "Maule": {
+        "Cauquenes": 294,
+        "Chanco": 23,
+        "Colbún": 18,
+        "Constitución": 387,
+        "Curepto": 7,
+        "Curicó": 38,
+        "Empedrado": 16,
+        "Hualañé": 7,
+        "Licantén": 2,
+        "Linares": 13,
+        "Longaví": 18,
+        "Maule": 52,
+        "Molina": 56,
+        "Pelarco": 4,
+        "Pelluhue": 49,
+        "Pencahue": 13,
+        "Rauco": 3,
+        "Río Claro": 10,
+        "Romeral": 3,
+        "Sagrada Familia": 54,
+        "San Clemente": 3,
+        "San Javier": 9,
+        "Talca": 28,
+        "Vichuquén": 4,
+        "Villa Alegre": 84,
+        "Yerbas Buenas": 2
+      },
+      "Metropolitana de Santiago": {
+        "Puente Alto": 4,
+        "San José de Maipo": 0
+      },
       "Ñuble": {
         "Bulnes": 112,
         "Chillán": 60,
@@ -1604,38 +1604,176 @@
         "Coihueco": 62,
         "El Carmen": 34,
         "Ninhue": 41,
+        "Ñiquén": 259,
         "Pemuco": 133,
         "Pinto": 10,
         "Portezuelo": 47,
         "Quillón": 68,
         "Quirihue": 46,
-        "Ranquil": 41,
+        "Ránquil": 41,
         "San Carlos": 86,
-        "San Fabian": 65,
+        "San Fabián": 65,
         "San Ignacio": 37,
         "San Nicolás": 26,
-        "Trehuaco": 55,
-        "Yungay": 11,
-        "Ñiquén": 259
+        "Trehuaco": 0,
+        "Yungay": 11
       }
     }
   },
   "bonoSostenibilidad": {
     "total": 4,
     "regiones": {
-      "Biob?O": 2,
+      "Biobío": 2,
+      "La Araucanía": 0,
+      "O’Higgins": 0,
+      "Los Ríos": 0,
       "Maule": 1,
+      "Metropolitana de Santiago": 0,
       "Ñuble": 1
     },
     "comunas": {
-      "Biob?O": {
-        "Curanilahue": 2
+      "Biobío": {
+        "Arauco": 0,
+        "Cabrero": 0,
+        "Cañete": 0,
+        "Chiguayante": 0,
+        "Concepción": 0,
+        "Contulmo": 0,
+        "Coronel": 0,
+        "Curanilahue": 2,
+        "Florida": 0,
+        "Hualpén": 0,
+        "Hualqui": 0,
+        "Lebu": 0,
+        "Los Álamos": 0,
+        "Los Ángeles": 0,
+        "Mulchén": 0,
+        "Nacimiento": 0,
+        "Negrete": 0,
+        "Penco": 0,
+        "Quilaco": 0,
+        "Quilleco": 0,
+        "Santa Bárbara": 0,
+        "Santa Juana": 0,
+        "Talcahuano": 0,
+        "Tomé": 0,
+        "Tucapel": 0,
+        "Yumbel": 0
+      },
+      "La Araucanía": {
+        "Angol": 0,
+        "Carahue": 0,
+        "Cholchol": 0,
+        "Collipulli": 0,
+        "Cunco": 0,
+        "Curacautín": 0,
+        "Ercilla": 0,
+        "Freire": 0,
+        "Galvarino": 0,
+        "Lautaro": 0,
+        "Loncoche": 0,
+        "Lonquimay": 0,
+        "Los Sauces": 0,
+        "Lumaco": 0,
+        "Melipeuco": 0,
+        "Nueva Imperial": 0,
+        "Perquenco": 0,
+        "Purén": 0,
+        "Renaico": 0,
+        "Temuco": 0,
+        "Teodoro Schmidt": 0,
+        "Traiguén": 0,
+        "Victoria": 0,
+        "Vilcún": 0,
+        "Villarrica": 0
+      },
+      "O’Higgins": {
+        "Chépica": 0,
+        "Coinco": 0,
+        "Coltauco": 0,
+        "Graneros": 0,
+        "Lolol": 0,
+        "Malloa": 0,
+        "Marchihue": 0,
+        "Nancagua": 0,
+        "Palmilla": 0,
+        "Paredones": 0,
+        "Peralillo": 0,
+        "Pichidegua": 0,
+        "Placilla": 0,
+        "Pumanque": 0,
+        "Quinta De Tilcoco": 0,
+        "Rancagua": 0,
+        "San Fernando": 0,
+        "Santa Cruz": 0
+      },
+      "Los Ríos": {
+        "Futrono": 0,
+        "La Unión": 0,
+        "Lago Ranco": 0,
+        "Lanco": 0,
+        "Los Lagos": 0,
+        "Máfil": 0,
+        "Mariquina": 0,
+        "Paillaco": 0,
+        "Panguipulli": 0,
+        "Río Bueno": 0,
+        "Valdivia": 0
       },
       "Maule": {
-        "Vichuquen": 1
+        "Cauquenes": 0,
+        "Chanco": 0,
+        "Colbún": 0,
+        "Constitución": 0,
+        "Curepto": 0,
+        "Curicó": 0,
+        "Empedrado": 0,
+        "Hualañé": 0,
+        "Licantén": 0,
+        "Linares": 0,
+        "Longaví": 0,
+        "Maule": 0,
+        "Molina": 0,
+        "Pelarco": 0,
+        "Pelluhue": 0,
+        "Pencahue": 0,
+        "Rauco": 0,
+        "Río Claro": 0,
+        "Romeral": 0,
+        "Sagrada Familia": 0,
+        "San Clemente": 0,
+        "San Javier": 0,
+        "Talca": 0,
+        "Vichuquén": 1,
+        "Villa Alegre": 0,
+        "Yerbas Buenas": 0
+      },
+      "Metropolitana de Santiago": {
+        "Puente Alto": 0,
+        "San José de Maipo": 0
       },
       "Ñuble": {
-        "Quirihue": 1
+        "Bulnes": 0,
+        "Chillán": 0,
+        "Chillán Viejo": 0,
+        "Cobquecura": 0,
+        "Coelemu": 0,
+        "Coihueco": 0,
+        "El Carmen": 0,
+        "Ninhue": 0,
+        "Ñiquén": 0,
+        "Pemuco": 0,
+        "Pinto": 0,
+        "Portezuelo": 0,
+        "Quillón": 0,
+        "Quirihue": 1,
+        "Ránquil": 0,
+        "San Carlos": 0,
+        "San Fabián": 0,
+        "San Ignacio": 0,
+        "San Nicolás": 0,
+        "Trehuaco": 0,
+        "Yungay": 0
       }
     }
   },
@@ -1807,7 +1945,7 @@
       },
       "hora": "09:02",
       "fechaLlenado": "21-10-2026 09:02",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 67,
       "bonoSostenibilidad": 0
     },
     {
@@ -1846,7 +1984,7 @@
       },
       "hora": "09:05",
       "fechaLlenado": "21-10-2026 09:05",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 81,
       "bonoSostenibilidad": 0
     },
     {
@@ -1883,7 +2021,7 @@
       },
       "hora": "09:05",
       "fechaLlenado": "21-10-2026 09:05",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 16,
       "bonoSostenibilidad": 0
     },
     {
@@ -1914,7 +2052,7 @@
       },
       "hora": "08:49",
       "fechaLlenado": "21-10-2026 08:49",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -1950,7 +2088,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 11,
       "bonoSostenibilidad": 0
     },
     {
@@ -1995,7 +2133,7 @@
       },
       "hora": "09:09",
       "fechaLlenado": "21-10-2026 09:09",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 110,
       "bonoSostenibilidad": 0
     },
     {
@@ -2034,7 +2172,7 @@
       },
       "hora": "08:56",
       "fechaLlenado": "21-10-2026 08:56",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 33,
       "bonoSostenibilidad": 0
     },
     {
@@ -2076,7 +2214,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 125,
       "bonoSostenibilidad": 0
     },
     {
@@ -2108,7 +2246,7 @@
       },
       "hora": "08:49",
       "fechaLlenado": "21-10-2026 08:49",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -2153,8 +2291,8 @@
       },
       "hora": "09:09",
       "fechaLlenado": "21-10-2026 09:09",
-      "bonoRecuperacion": 0,
-      "bonoSostenibilidad": 0
+      "bonoRecuperacion": 300,
+      "bonoSostenibilidad": 2
     },
     {
       "region": "Biobío",
@@ -2190,7 +2328,7 @@
       },
       "hora": "09:09",
       "fechaLlenado": "21-10-2026 09:09",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 37,
       "bonoSostenibilidad": 0
     },
     {
@@ -2233,7 +2371,7 @@
       },
       "hora": "08:52",
       "fechaLlenado": "21-10-2026 08:52",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 83,
       "bonoSostenibilidad": 0
     },
     {
@@ -2268,7 +2406,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 10,
       "bonoSostenibilidad": 0
     },
     {
@@ -2311,7 +2449,7 @@
       },
       "hora": "08:52",
       "fechaLlenado": "21-10-2026 08:52",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 89,
       "bonoSostenibilidad": 0
     },
     {
@@ -2343,7 +2481,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -2374,7 +2512,7 @@
       },
       "hora": "09:13",
       "fechaLlenado": "21-10-2026 09:13",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -2418,7 +2556,7 @@
       },
       "hora": "08:52",
       "fechaLlenado": "21-10-2026 08:52",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 188,
       "bonoSostenibilidad": 0
     },
     {
@@ -2452,7 +2590,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 8,
       "bonoSostenibilidad": 0
     },
     {
@@ -2494,7 +2632,7 @@
       },
       "hora": "09:08",
       "fechaLlenado": "21-10-2026 09:08",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 23,
       "bonoSostenibilidad": 0
     },
     {
@@ -2535,7 +2673,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 88,
       "bonoSostenibilidad": 0
     },
     {
@@ -2580,7 +2718,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 79,
       "bonoSostenibilidad": 0
     },
     {
@@ -2612,7 +2750,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -2647,7 +2785,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 10,
       "bonoSostenibilidad": 0
     },
     {
@@ -2679,7 +2817,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -2716,7 +2854,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 73,
       "bonoSostenibilidad": 0
     },
     {
@@ -2751,7 +2889,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 38,
       "bonoSostenibilidad": 0
     },
     {
@@ -2794,7 +2932,7 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 114,
       "bonoSostenibilidad": 0
     },
     {
@@ -2828,7 +2966,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -2874,7 +3012,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 89,
       "bonoSostenibilidad": 0
     },
     {
@@ -2910,7 +3048,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 14,
       "bonoSostenibilidad": 0
     },
     {
@@ -2944,7 +3082,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 6,
       "bonoSostenibilidad": 0
     },
     {
@@ -2990,7 +3128,7 @@
       },
       "hora": "08:54",
       "fechaLlenado": "21-10-2026 08:54",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 426,
       "bonoSostenibilidad": 0
     },
     {
@@ -3033,7 +3171,7 @@
       },
       "hora": "09:13",
       "fechaLlenado": "21-10-2026 09:13",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 133,
       "bonoSostenibilidad": 0
     },
     {
@@ -3070,7 +3208,7 @@
       },
       "hora": "09:03",
       "fechaLlenado": "21-10-2026 09:03",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 28,
       "bonoSostenibilidad": 0
     },
     {
@@ -3103,7 +3241,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -3137,7 +3275,7 @@
       },
       "hora": "09:00",
       "fechaLlenado": "21-10-2026 09:00",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 17,
       "bonoSostenibilidad": 0
     },
     {
@@ -3168,7 +3306,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -3208,7 +3346,7 @@
       },
       "hora": "08:53",
       "fechaLlenado": "21-10-2026 08:53",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 99,
       "bonoSostenibilidad": 0
     },
     {
@@ -3245,7 +3383,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -3277,7 +3415,7 @@
       },
       "hora": "08:50",
       "fechaLlenado": "21-10-2026 08:50",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -3320,7 +3458,7 @@
       },
       "hora": "08:54",
       "fechaLlenado": "21-10-2026 08:54",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 81,
       "bonoSostenibilidad": 0
     },
     {
@@ -3360,7 +3498,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 28,
       "bonoSostenibilidad": 0
     },
     {
@@ -3398,7 +3536,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 57,
       "bonoSostenibilidad": 0
     },
     {
@@ -3429,7 +3567,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -3470,7 +3608,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 83,
       "bonoSostenibilidad": 0
     },
     {
@@ -3504,7 +3642,7 @@
       },
       "hora": "09:02",
       "fechaLlenado": "21-10-2026 09:02",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 25,
       "bonoSostenibilidad": 0
     },
     {
@@ -3537,7 +3675,7 @@
       },
       "hora": "09:02",
       "fechaLlenado": "21-10-2026 09:02",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 24,
       "bonoSostenibilidad": 0
     },
     {
@@ -3568,7 +3706,7 @@
       },
       "hora": "09:13",
       "fechaLlenado": "21-10-2026 09:13",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -3612,7 +3750,7 @@
       },
       "hora": "09:08",
       "fechaLlenado": "21-10-2026 09:08",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 233,
       "bonoSostenibilidad": 0
     },
     {
@@ -3648,7 +3786,7 @@
       },
       "hora": "09:03",
       "fechaLlenado": "21-10-2026 09:03",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 66,
       "bonoSostenibilidad": 0
     },
     {
@@ -3685,7 +3823,7 @@
       },
       "hora": "09:13",
       "fechaLlenado": "21-10-2026 09:13",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -3724,7 +3862,7 @@
       },
       "hora": "08:58",
       "fechaLlenado": "21-10-2026 08:58",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 160,
       "bonoSostenibilidad": 0
     },
     {
@@ -3771,7 +3909,7 @@
       },
       "hora": "08:56",
       "fechaLlenado": "21-10-2026 08:56",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 330,
       "bonoSostenibilidad": 0
     },
     {
@@ -3809,7 +3947,7 @@
       },
       "hora": "09:13",
       "fechaLlenado": "21-10-2026 09:13",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -3848,7 +3986,7 @@
       },
       "hora": "09:02",
       "fechaLlenado": "21-10-2026 09:02",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 31,
       "bonoSostenibilidad": 0
     },
     {
@@ -3885,7 +4023,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -3920,7 +4058,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 22,
       "bonoSostenibilidad": 0
     },
     {
@@ -3951,7 +4089,7 @@
       },
       "hora": "09:13",
       "fechaLlenado": "21-10-2026 09:13",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -3987,7 +4125,7 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 51,
       "bonoSostenibilidad": 0
     },
     {
@@ -4019,7 +4157,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -4051,7 +4189,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 15,
       "bonoSostenibilidad": 0
     },
     {
@@ -4084,7 +4222,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -4116,7 +4254,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -4148,7 +4286,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 35,
       "bonoSostenibilidad": 0
     },
     {
@@ -4182,7 +4320,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 6,
       "bonoSostenibilidad": 0
     },
     {
@@ -4219,7 +4357,7 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 23,
       "bonoSostenibilidad": 0
     },
     {
@@ -4253,7 +4391,7 @@
       },
       "hora": "09:09",
       "fechaLlenado": "21-10-2026 09:09",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -4288,7 +4426,7 @@
       },
       "hora": "09:08",
       "fechaLlenado": "21-10-2026 09:08",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 29,
       "bonoSostenibilidad": 0
     },
     {
@@ -4325,7 +4463,7 @@
       },
       "hora": "09:09",
       "fechaLlenado": "21-10-2026 09:09",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 15,
       "bonoSostenibilidad": 0
     },
     {
@@ -4366,7 +4504,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 48,
       "bonoSostenibilidad": 0
     },
     {
@@ -4399,7 +4537,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -4432,7 +4570,7 @@
       },
       "hora": "09:08",
       "fechaLlenado": "21-10-2026 09:08",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -4463,7 +4601,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -4498,7 +4636,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 8,
       "bonoSostenibilidad": 0
     },
     {
@@ -4536,7 +4674,7 @@
       },
       "hora": "09:05",
       "fechaLlenado": "21-10-2026 09:05",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 22,
       "bonoSostenibilidad": 0
     },
     {
@@ -4569,7 +4707,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 8,
       "bonoSostenibilidad": 0
     },
     {
@@ -4601,7 +4739,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -4637,7 +4775,7 @@
       },
       "hora": "08:49",
       "fechaLlenado": "21-10-2026 08:49",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 16,
       "bonoSostenibilidad": 0
     },
     {
@@ -4671,7 +4809,7 @@
       },
       "hora": "09:00",
       "fechaLlenado": "21-10-2026 09:00",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 5,
       "bonoSostenibilidad": 0
     },
     {
@@ -4712,7 +4850,7 @@
       },
       "hora": "08:49",
       "fechaLlenado": "21-10-2026 08:49",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 130,
       "bonoSostenibilidad": 0
     },
     {
@@ -4756,7 +4894,7 @@
       },
       "hora": "08:59",
       "fechaLlenado": "21-10-2026 08:59",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 167,
       "bonoSostenibilidad": 0
     },
     {
@@ -4787,7 +4925,7 @@
       },
       "hora": "08:49",
       "fechaLlenado": "21-10-2026 08:49",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 23,
       "bonoSostenibilidad": 0
     },
     {
@@ -4819,7 +4957,7 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 11,
       "bonoSostenibilidad": 0
     },
     {
@@ -4856,7 +4994,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 39,
       "bonoSostenibilidad": 0
     },
     {
@@ -4888,7 +5026,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 5,
       "bonoSostenibilidad": 0
     },
     {
@@ -4920,7 +5058,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -4954,7 +5092,7 @@
       },
       "hora": "09:00",
       "fechaLlenado": "21-10-2026 09:00",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 8,
       "bonoSostenibilidad": 0
     },
     {
@@ -4990,7 +5128,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 12,
       "bonoSostenibilidad": 0
     },
     {
@@ -5028,7 +5166,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 28,
       "bonoSostenibilidad": 0
     },
     {
@@ -5066,7 +5204,7 @@
       },
       "hora": "08:59",
       "fechaLlenado": "21-10-2026 08:59",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 6,
       "bonoSostenibilidad": 0
     },
     {
@@ -5097,7 +5235,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -5133,7 +5271,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 18,
       "bonoSostenibilidad": 0
     },
     {
@@ -5166,7 +5304,7 @@
       },
       "hora": "08:58",
       "fechaLlenado": "21-10-2026 08:58",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 6,
       "bonoSostenibilidad": 0
     },
     {
@@ -5205,7 +5343,7 @@
       },
       "hora": "08:46",
       "fechaLlenado": "21-10-2026 08:46",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 43,
       "bonoSostenibilidad": 0
     },
     {
@@ -5241,7 +5379,7 @@
       },
       "hora": "08:52",
       "fechaLlenado": "21-10-2026 08:52",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -5283,7 +5421,7 @@
       },
       "hora": "09:03",
       "fechaLlenado": "21-10-2026 09:03",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 294,
       "bonoSostenibilidad": 0
     },
     {
@@ -5320,7 +5458,7 @@
       },
       "hora": "08:52",
       "fechaLlenado": "21-10-2026 08:52",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 23,
       "bonoSostenibilidad": 0
     },
     {
@@ -5357,7 +5495,7 @@
       },
       "hora": "09:05",
       "fechaLlenado": "21-10-2026 09:05",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 18,
       "bonoSostenibilidad": 0
     },
     {
@@ -5402,7 +5540,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 387,
       "bonoSostenibilidad": 0
     },
     {
@@ -5436,7 +5574,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -5471,7 +5609,7 @@
       },
       "hora": "08:49",
       "fechaLlenado": "21-10-2026 08:49",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 38,
       "bonoSostenibilidad": 0
     },
     {
@@ -5509,7 +5647,7 @@
       },
       "hora": "09:08",
       "fechaLlenado": "21-10-2026 09:08",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 16,
       "bonoSostenibilidad": 0
     },
     {
@@ -5543,7 +5681,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -5576,7 +5714,7 @@
       },
       "hora": "08:59",
       "fechaLlenado": "21-10-2026 08:59",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -5610,7 +5748,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -5644,7 +5782,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 5,
       "bonoSostenibilidad": 0
     },
     {
@@ -5681,7 +5819,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -5719,7 +5857,7 @@
       },
       "hora": "09:03",
       "fechaLlenado": "21-10-2026 09:03",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 52,
       "bonoSostenibilidad": 0
     },
     {
@@ -5759,7 +5897,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 56,
       "bonoSostenibilidad": 0
     },
     {
@@ -5793,7 +5931,7 @@
       },
       "hora": "08:50",
       "fechaLlenado": "21-10-2026 08:50",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -5832,7 +5970,7 @@
       },
       "hora": "09:05",
       "fechaLlenado": "21-10-2026 09:05",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 49,
       "bonoSostenibilidad": 0
     },
     {
@@ -5865,7 +6003,7 @@
       },
       "hora": "08:58",
       "fechaLlenado": "21-10-2026 08:58",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -5897,7 +6035,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -5931,7 +6069,7 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 10,
       "bonoSostenibilidad": 0
     },
     {
@@ -5963,7 +6101,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -6003,7 +6141,7 @@
       },
       "hora": "08:50",
       "fechaLlenado": "21-10-2026 08:50",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 54,
       "bonoSostenibilidad": 0
     },
     {
@@ -6036,7 +6174,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -6070,7 +6208,7 @@
       },
       "hora": "09:07",
       "fechaLlenado": "21-10-2026 09:07",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 9,
       "bonoSostenibilidad": 0
     },
     {
@@ -6106,7 +6244,7 @@
       },
       "hora": "09:08",
       "fechaLlenado": "21-10-2026 09:08",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 28,
       "bonoSostenibilidad": 0
     },
     {
@@ -6140,8 +6278,8 @@
       },
       "hora": "09:10",
       "fechaLlenado": "21-10-2026 09:10",
-      "bonoRecuperacion": 0,
-      "bonoSostenibilidad": 0
+      "bonoRecuperacion": 4,
+      "bonoSostenibilidad": 1
     },
     {
       "region": "Maule",
@@ -6180,7 +6318,7 @@
       },
       "hora": "08:54",
       "fechaLlenado": "21-10-2026 08:54",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 84,
       "bonoSostenibilidad": 0
     },
     {
@@ -6212,7 +6350,7 @@
       },
       "hora": "09:06",
       "fechaLlenado": "21-10-2026 09:06",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -6245,7 +6383,7 @@
       },
       "hora": "09:04",
       "fechaLlenado": "21-10-2026 09:04",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 4,
       "bonoSostenibilidad": 0
     },
     {
@@ -6310,7 +6448,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -6347,7 +6485,7 @@
       },
       "hora": "09:00",
       "fechaLlenado": "21-10-2026 09:00",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 110,
       "bonoSostenibilidad": 0
     },
     {
@@ -6385,7 +6523,7 @@
       },
       "hora": "08:47",
       "fechaLlenado": "21-10-2026 08:47",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 30,
       "bonoSostenibilidad": 0
     },
     {
@@ -6427,7 +6565,7 @@
       },
       "hora": "08:56",
       "fechaLlenado": "21-10-2026 08:56",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 30,
       "bonoSostenibilidad": 0
     },
     {
@@ -6458,7 +6596,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -6492,7 +6630,7 @@
       },
       "hora": "09:11",
       "fechaLlenado": "21-10-2026 09:11",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 14,
       "bonoSostenibilidad": 0
     },
     {
@@ -6535,7 +6673,7 @@
       },
       "hora": "09:00",
       "fechaLlenado": "21-10-2026 09:00",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 79,
       "bonoSostenibilidad": 0
     },
     {
@@ -6574,7 +6712,7 @@
       },
       "hora": "08:58",
       "fechaLlenado": "21-10-2026 08:58",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 46,
       "bonoSostenibilidad": 0
     },
     {
@@ -6608,7 +6746,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 7,
       "bonoSostenibilidad": 0
     },
     {
@@ -6648,7 +6786,7 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 55,
       "bonoSostenibilidad": 0
     },
     {
@@ -6684,7 +6822,7 @@
       },
       "hora": "08:46",
       "fechaLlenado": "21-10-2026 08:46",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 21,
       "bonoSostenibilidad": 0
     },
     {
@@ -6720,7 +6858,7 @@
       },
       "hora": "09:03",
       "fechaLlenado": "21-10-2026 09:03",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 13,
       "bonoSostenibilidad": 0
     },
     {
@@ -6753,7 +6891,7 @@
       },
       "hora": "08:47",
       "fechaLlenado": "21-10-2026 08:47",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -6791,7 +6929,7 @@
       },
       "hora": "08:54",
       "fechaLlenado": "21-10-2026 08:54",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 38,
       "bonoSostenibilidad": 0
     },
     {
@@ -6827,7 +6965,7 @@
       },
       "hora": "08:50",
       "fechaLlenado": "21-10-2026 08:50",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 12,
       "bonoSostenibilidad": 0
     },
     {
@@ -6867,7 +7005,7 @@
       },
       "hora": "08:58",
       "fechaLlenado": "21-10-2026 08:58",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 247,
       "bonoSostenibilidad": 0
     },
     {
@@ -6898,7 +7036,7 @@
       },
       "hora": "08:48",
       "fechaLlenado": "21-10-2026 08:48",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 1,
       "bonoSostenibilidad": 0
     },
     {
@@ -6939,7 +7077,7 @@
       },
       "hora": "08:53",
       "fechaLlenado": "21-10-2026 08:53",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 132,
       "bonoSostenibilidad": 0
     },
     {
@@ -6972,7 +7110,7 @@
       },
       "hora": "08:51",
       "fechaLlenado": "21-10-2026 08:51",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 2,
       "bonoSostenibilidad": 0
     },
     {
@@ -7005,7 +7143,7 @@
       },
       "hora": "09:12",
       "fechaLlenado": "21-10-2026 09:12",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 8,
       "bonoSostenibilidad": 0
     },
     {
@@ -7046,7 +7184,7 @@
       },
       "hora": "08:53",
       "fechaLlenado": "21-10-2026 08:53",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 47,
       "bonoSostenibilidad": 0
     },
     {
@@ -7087,7 +7225,7 @@
       },
       "hora": "08:57",
       "fechaLlenado": "21-10-2026 08:57",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 68,
       "bonoSostenibilidad": 0
     },
     {
@@ -7120,7 +7258,7 @@
       },
       "hora": "08:46",
       "fechaLlenado": "21-10-2026 08:46",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 3,
       "bonoSostenibilidad": 0
     },
     {
@@ -7161,8 +7299,8 @@
       },
       "hora": "09:02",
       "fechaLlenado": "21-10-2026 09:02",
-      "bonoRecuperacion": 0,
-      "bonoSostenibilidad": 0
+      "bonoRecuperacion": 43,
+      "bonoSostenibilidad": 1
     },
     {
       "region": "Ñuble",
@@ -7206,7 +7344,7 @@
       },
       "hora": "09:00",
       "fechaLlenado": "21-10-2026 09:00",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 41,
       "bonoSostenibilidad": 0
     },
     {
@@ -7247,7 +7385,7 @@
       },
       "hora": "08:47",
       "fechaLlenado": "21-10-2026 08:47",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 30,
       "bonoSostenibilidad": 0
     },
     {
@@ -7290,7 +7428,7 @@
       },
       "hora": "08:53",
       "fechaLlenado": "21-10-2026 08:53",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 56,
       "bonoSostenibilidad": 0
     },
     {
@@ -7325,7 +7463,7 @@
       },
       "hora": "08:47",
       "fechaLlenado": "21-10-2026 08:47",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 11,
       "bonoSostenibilidad": 0
     },
     {
@@ -7363,7 +7501,7 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 54,
       "bonoSostenibilidad": 0
     },
     {
@@ -7398,7 +7536,7 @@
       },
       "hora": "08:47",
       "fechaLlenado": "21-10-2026 08:47",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 5,
       "bonoSostenibilidad": 0
     },
     {
@@ -7435,7 +7573,7 @@
       },
       "hora": "08:59",
       "fechaLlenado": "21-10-2026 08:59",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 32,
       "bonoSostenibilidad": 0
     },
     {
@@ -7466,7 +7604,7 @@
       },
       "hora": "08:47",
       "fechaLlenado": "21-10-2026 08:47",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 5,
       "bonoSostenibilidad": 0
     },
     {
@@ -7507,7 +7645,7 @@
       },
       "hora": "08:59",
       "fechaLlenado": "21-10-2026 08:59",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 21,
       "bonoSostenibilidad": 0
     },
     {
@@ -7584,8 +7722,188 @@
       },
       "hora": "09:01",
       "fechaLlenado": "21-10-2026 09:01",
-      "bonoRecuperacion": 0,
+      "bonoRecuperacion": 11,
       "bonoSostenibilidad": 0
     }
-  ]
+  ],
+  "beneficiosPorEmergencia": {
+    "bonoRecuperacion": {
+      "150844": 43,
+      "150903": 3,
+      "150781": 3,
+      "151121": 1,
+      "151141": 1,
+      "151161": 39,
+      "150861": 5,
+      "151061": 2,
+      "151081": 7,
+      "150785": 21,
+      "151242": 2,
+      "151104": 18,
+      "151222": 38,
+      "151003": 5,
+      "150981": 11,
+      "151202": 130,
+      "151223": 23,
+      "151241": 54,
+      "151183": 28,
+      "151203": 16,
+      "150901": 30,
+      "150944": 30,
+      "151301": 12,
+      "151224": 1,
+      "151441": 1,
+      "151204": 2,
+      "151422": 2,
+      "151501": 4,
+      "151641": 10,
+      "151661": 88,
+      "151841": 89,
+      "151022": 7,
+      "151963": 99,
+      "151973": 84,
+      "151965": 47,
+      "151281": 4,
+      "152081": 12,
+      "152063": 2,
+      "151902": 132,
+      "152071": 22,
+      "151971": 38,
+      "152121": 247,
+      "151972": 81,
+      "152131": 32,
+      "152001": 330,
+      "152138": 21,
+      "151805": 83,
+      "151802": 13,
+      "152129": 167,
+      "152128": 46,
+      "152066": 5,
+      "151421": 387,
+      "152282": 114,
+      "152042": 30,
+      "152202": 17,
+      "151881": 23,
+      "152303": 11,
+      "152181": 8,
+      "152070": 68,
+      "152140": 110,
+      "152421": 294,
+      "152446": 89,
+      "151968": 426,
+      "152443": 3,
+      "152521": 13,
+      "152581": 83,
+      "152603": 7,
+      "152481": 14,
+      "152222": 55,
+      "152126": 6,
+      "152442": 125,
+      "152321": 31,
+      "152161": 5,
+      "152062": 38,
+      "152141": 41,
+      "151461": 7,
+      "152486": 16,
+      "152361": 43,
+      "152487": 81,
+      "152263": 23,
+      "152492": 3,
+      "152621": 48,
+      "152381": 25,
+      "152139": 79,
+      "152488": 22,
+      "152221": 54,
+      "152136": 2,
+      "152489": 49,
+      "152561": 79,
+      "152133": 6,
+      "152485": 18,
+      "152499": 7,
+      "152461": 4,
+      "152123": 13,
+      "152495": 2,
+      "152682": 4,
+      "152961": 57,
+      "152341": 67,
+      "152761": 300,
+      "152661": 29,
+      "152942": 8,
+      "151961": 56,
+      "151861": 188,
+      "152683": 23,
+      "152068": 5,
+      "153004": 14,
+      "152865": 4,
+      "152701": 16,
+      "152496": 56,
+      "152445": 13,
+      "152382": 24,
+      "152422": 13,
+      "153002": 2,
+      "153025": 13,
+      "152901": 110,
+      "152801": 15,
+      "153061": 35,
+      "152841": 37,
+      "152425": 52,
+      "152041": 33,
+      "152602": 9,
+      "152941": 8,
+      "153003": 4,
+      "152125": 160,
+      "152482": 3,
+      "152945": 6,
+      "152424": 28,
+      "153001": 10,
+      "153262": 6,
+      "152982": 4,
+      "153181": 7,
+      "153101": 15,
+      "153241": 11,
+      "152582": 7,
+      "152423": 66,
+      "153261": 13,
+      "152645": 28,
+      "153521": 3,
+      "152642": 3,
+      "153402": 8,
+      "153481": 8,
+      "153024": 4,
+      "152583": 28,
+      "152262": 11,
+      "152741": 233,
+      "152264": 51,
+      "153464": 2,
+      "153461": 73,
+      "153501": 3,
+      "152494": 4,
+      "153842": 1,
+      "153524": 10,
+      "154001": 133,
+      "154201": 1,
+      "153961": 13,
+      "153701": 1,
+      "154261": 1
+    },
+    "bonoSostenibilidad": {
+      "152361": 1,
+      "152761": 2,
+      "152982": 1
+    }
+  },
+  "validacionBeneficios": {
+    "metodo": "Folio y Encuesta_id corroborados con ID_EMERGENCIA de BBDD; Emergencia_id de nomina comprobado cuando existe.",
+    "nominas": [
+      "Nómina_SF_20260727_N2.xlsx",
+      "Nómina_SF_20260728_N3.xlsx",
+      "Nómina_SF_20260809_N4.xlsx",
+      "Nómina_BR_SF_20260714_N5.xlsx",
+      "Nómina_BR_SF_20260814_N7.xlsx",
+      "Nómina_SF_20260721_N1.xlsx",
+      "Nómina_Bono_Sost_SF_20260714_N5.xlsx"
+    ],
+    "deduplicacion": "Una vez por beneficio, ID de emergencia y folio."
+  },
+  "beneficiosActualizado": "2026-10-21T10:01:07"
 }
