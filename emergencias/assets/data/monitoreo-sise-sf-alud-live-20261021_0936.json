@@ -181,13 +181,13 @@
   ],
   "advertencias": [],
   "bonoRecuperacion": {
-    "total": 19157,
+    "total": 19188,
     "regiones": {
       "Antofagasta": 5670,
       "Arica y Parinacota": 352,
       "Atacama": 0,
       "Coquimbo": 0,
-      "Tarapacá": 13135
+      "Tarapacá": 13166
     },
     "comunas": {
       "Antofagasta": {
@@ -211,11 +211,11 @@
         "Vicuña": 0
       },
       "Tarapacá": {
-        "Alto Hospicio": 6034,
+        "Alto Hospicio": 6055,
         "Camiña": 18,
         "Colchane": 22,
         "Huara": 72,
-        "Iquique": 6972,
+        "Iquique": 6982,
         "Pica": 7,
         "Pozo Almonte": 10
       }
@@ -924,7 +924,7 @@
       },
       "hora": "09:28",
       "fechaLlenado": "21-10-2026 09:28",
-      "bonoRecuperacion": 6034,
+      "bonoRecuperacion": 6055,
       "bonoSostenibilidad": 0
     },
     {
@@ -1094,7 +1094,7 @@
       },
       "hora": "08:54",
       "fechaLlenado": "21-10-2026 08:54",
-      "bonoRecuperacion": 6972,
+      "bonoRecuperacion": 6982,
       "bonoSostenibilidad": 0
     },
     {
@@ -1208,12 +1208,12 @@
     "bonoRecuperacion": {
       "154562": 72,
       "154862": 102,
-      "155041": 6972,
+      "155041": 6993,
       "155161": 4815,
       "155081": 437,
       "155122": 250,
       "154863": 10,
-      "155221": 6034,
+      "155221": 6044,
       "155501": 358,
       "155024": 18,
       "155441": 60,
@@ -1223,7 +1223,7 @@
     "bonoSostenibilidad": {}
   },
   "validacionBeneficios": {
-    "metodo": "Folio y Encuesta_id corroborados con ID_EMERGENCIA de BBDD; Emergencia_id de nomina comprobado cuando existe.",
+    "metodo": "Folio y Encuesta_id corroborados con ID_EMERGENCIA de BBDD; Emergencia_id de nomina comprobado cuando existe. Folios de otra emergencia se suman en la comuna del tablero; si la comuna o emergencia no estaba, se agrega su fila con cifras de la BBDD.",
     "nominas": [
       "Nómina_SF_20260727_N2.xlsx",
       "Nómina_SF_20260728_N3.xlsx",
@@ -1235,5 +1235,5 @@
     ],
     "deduplicacion": "Una vez por beneficio, ID de emergencia y folio."
   },
-  "beneficiosActualizado": "2026-10-21T10:01:07"
+  "beneficiosActualizado": "2026-10-21T11:13:32"
 }
